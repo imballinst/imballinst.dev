@@ -25,7 +25,6 @@
     "netlify-cms-media-library-cloudinary": "^1.3.2",
     "netlify-cms-media-library-uploadcare": "^0.5.2",
     "node-sass": "^4.11.0",
-    "prop-types": "^15.6.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
@@ -42,7 +41,7 @@
     "start": "npm run develop",
     "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier es5 --single-quote --write \"{gatsby-*.js,src/**/*.tsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
