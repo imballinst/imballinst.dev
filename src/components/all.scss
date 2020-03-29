@@ -1,4 +1,11 @@
+@import '~bulma';
 @import '~bulma/sass/utilities/initial-variables';
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap&subset=latin-ext');
+
+html,
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
 
 // Config vars
 // Kaldi logo brand color: #FD461E
@@ -141,8 +148,6 @@ $menu-label-color: $white-ter;
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 }
-
-@import '~bulma';
 
 // responsiveness
 + tablet-only {
