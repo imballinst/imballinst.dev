@@ -5,6 +5,7 @@ module.exports = {
       "This is Try Ajitiono's personal site and blog, powered by Gatsby and Netlify."
   },
   plugins: [
+    'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-sass`,
