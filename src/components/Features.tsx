@@ -1,8 +1,8 @@
 import React from 'react';
-import PreviewCompatibleImage from './PreviewCompatibleImage';
+import PreviewCompatibleImage, { Fluid } from './PreviewCompatibleImage';
 
 type Feature = {
-  image: string | object;
+  image: string | { childImageSharp: Fluid };
   text: string;
 };
 

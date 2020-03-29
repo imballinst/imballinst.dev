@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -6,8 +6,13 @@ import './all.scss';
 import useSiteMetadata from './SiteMetadata';
 import { withPrefix } from 'gatsby';
 
-const TemplateWrapper = ({ children }) => {
+type Props = {
+  children: ReactNode;
+};
+
+function TemplateWrapper({ children }: Props) {
   const { title, description } = useSiteMetadata();
+
   return (
     <div>
       <Helmet>
@@ -53,6 +58,6 @@ const TemplateWrapper = ({ children }) => {
       <Footer />
     </div>
   );
-};
+}
 
 export default TemplateWrapper;
