@@ -8,6 +8,12 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
+// Palette.
+// Dark: gray-900
+// Main: teal-900
+// Light: teal-700
+// Contrast text: white
+
 $white-ter: #fff;
 
 // Config vars
@@ -19,6 +25,33 @@ $primary: $kaldi-red;
 $primary-invert: $kaldi-red-invert;
 $body-color: #333;
 $black: #2b2523;
+
+$navbar-height: 32px;
+
+// Navbar stuff.
+.navbar {
+}
+
+.navbar-item {
+  @apply py-4;
+  @apply text-white;
+  @apply block;
+
+  &:not(:first-child) {
+    @apply ml-4;
+  }
+
+  &:hover {
+    @apply font-bold;
+  }
+}
+
+.social-icon {
+  width: 24px;
+
+  @apply block;
+  @apply fill-current;
+}
 
 .navbar .navbar-menu {
   box-shadow: none !important;

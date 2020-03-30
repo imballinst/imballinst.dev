@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import github from '../img/github-icon.svg';
 import logo from '../img/logo.svg';
+import { GitHubIcon } from '../img/GitHubIcon';
 
 function Navbar() {
   const [state, setState] = useState({
@@ -21,53 +22,26 @@ function Navbar() {
 
   return (
     <nav
-      className="navbar is-transparent px-4 py-1 bg-teal-800"
+      className="bg-teal-900 text-white px-8"
       role="navigation"
       aria-label="main-navigation"
     >
-      <div className="container">
-        <div className="navbar-brand">
-          <Link to="/" className="navbar-item" title="Logo">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </Link>
-          {/* Hamburger menu */}
-          <div
-            className={`navbar-burger burger ${state.navBarActiveClass}`}
-            data-target="navMenu"
-            onClick={toggleHamburger}
-          >
-            <span />
-            <span />
-            <span />
-          </div>
-        </div>
-        <div id="navMenu" className={`navbar-menu ${state.navBarActiveClass}`}>
-          <div className="navbar-start has-text-centered">
-            <Link className="navbar-item" to="/about">
-              About
-            </Link>
-            <Link className="navbar-item" to="/products">
-              Products
-            </Link>
+      <div id="navMenu" className={`navbar-menu ${state.navBarActiveClass}`}>
+        <div className="flex flex-row justify-between">
+          <div className="flex">
             <Link className="navbar-item" to="/blog">
               Blog
             </Link>
-            <Link className="navbar-item" to="/contact">
-              Contact
-            </Link>
-            <Link className="navbar-item" to="/contact/examples">
-              Form Examples
-            </Link>
           </div>
-          <div className="navbar-end has-text-centered">
+          <div>
             <a
               className="navbar-item"
               href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="icon">
-                <img src={github} alt="Github" />
+              <span className="social-icon">
+                <GitHubIcon fill="#fff" />
               </span>
             </a>
           </div>
