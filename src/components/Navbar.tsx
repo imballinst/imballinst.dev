@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <nav
-      className="navbar is-transparent bg-blue-500"
+      className="navbar is-transparent px-4 py-1 bg-teal-800"
       role="navigation"
       aria-label="main-navigation"
     >
