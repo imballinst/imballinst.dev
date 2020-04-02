@@ -13,6 +13,7 @@ body {
 // Main: teal-900
 // Light: teal-700
 // Contrast text: white
+// Contrast text hover: gray-400
 
 $white-ter: #fff;
 
@@ -42,7 +43,7 @@ $navbar-height: 32px;
   }
 
   &:hover {
-    @apply font-bold;
+    @apply text-gray-400;
   }
 }
 
