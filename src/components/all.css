@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap&subset=latin-ext');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: 'Titillium Web', sans-serif;
+}

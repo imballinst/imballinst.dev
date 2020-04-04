@@ -8,7 +8,7 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
           require('tailwindcss'),
@@ -77,9 +77,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
-        develop: true, // Activates purging in npm run develop
+        develop: false, // Activates purging in npm run develop
         tailwind: true,
-        purgeOnly: ['/all.scss']
+        purgeOnly: ['/all.css']
       }
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify' // make sure to keep it last in the array
