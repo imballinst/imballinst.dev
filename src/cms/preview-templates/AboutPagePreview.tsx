@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutPageTemplate } from '../../templates/AboutPage';
+import { AboutPageTemplate } from '../../templates/about-page';
 import { GetInType } from '../../common-types';
 
 type AboutPagePreviewProps = {

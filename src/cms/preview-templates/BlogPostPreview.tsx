@@ -1,5 +1,5 @@
 import React from 'react';
-import { BlogPostTemplate } from '../../templates/BlogPost';
+import { BlogPostTemplate } from '../../templates/blog-post';
 import { GetInType } from '../../common-types';
 
 type BlogPostPreviewProps = {

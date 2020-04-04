@@ -1,5 +1,5 @@
 import React from 'react';
-import { IndexPageTemplate } from '../../templates/IndexPage';
+import { IndexPageTemplate } from '../../templates/index-page';
 import { GetInType } from '../../common-types';
 
 type IndexPagePreviewProps = {
