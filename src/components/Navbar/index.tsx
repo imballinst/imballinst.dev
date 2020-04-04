@@ -56,34 +56,27 @@ const NavbarItemSpacer = styled.div`
 `;
 
 function Navbar() {
-  const [state, setState] = useState({
-    active: false,
-    navBarActiveClass: ''
-  });
-
   return (
     <nav
       className="bg-teal-900 text-white px-8 py-4 fixed top-0 w-full z-50"
       role="navigation"
       aria-label="main-navigation"
     >
-      <div id="navMenu" className={`navbar-menu ${state.navBarActiveClass}`}>
-        <div className="flex flex-row justify-between">
-          <NavbarItemSpacer>
-            <NavbarItem to="/">peepohappy</NavbarItem>
-            <NavbarItem to="/blog">blog</NavbarItem>
-            <NavbarItem to="/about">about</NavbarItem>
-          </NavbarItemSpacer>
-          <NavbarItemSpacer>
-            <NavbarItemExternal
-              href="https://github.com/Imballinst"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GitHubIcon />
-            </NavbarItemExternal>
-          </NavbarItemSpacer>
-        </div>
+      <div className="flex flex-row justify-between">
+        <NavbarItemSpacer>
+          <NavbarItem to="/">peepohappy</NavbarItem>
+          <NavbarItem to="/blog">blog</NavbarItem>
+          <NavbarItem to="/about">about</NavbarItem>
+        </NavbarItemSpacer>
+        <NavbarItemSpacer>
+          <NavbarItemExternal
+            href="https://github.com/Imballinst"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon />
+          </NavbarItemExternal>
+        </NavbarItemSpacer>
       </div>
     </nav>
   );
