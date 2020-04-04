@@ -1,10 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React, { ReactNode } from 'react';
+import kebabCase from 'lodash.kebabcase';
+import Helmet from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import Layout from '../components/Layout';
+import Content, { HTMLContent } from '../components/Content';
+
+type BlogPostTemplateProps = {
+  content: ReactNode;
+  contentComponent?: React.ElementType;
+  description: string;
+  tags: string[];
+  title: string;
+  helmet?: ReactNode;
+};
 
 export const BlogPostTemplate = ({
   content,
@@ -12,9 +20,9 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  helmet,
-}) => {
-  const PostContent = contentComponent || Content
+  helmet
+}: BlogPostTemplateProps) => {
+  const PostContent = contentComponent || Content;
 
   return (
     <section className="section">
@@ -43,19 +51,26 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object,
-}
+type BlogPostProps = {
+  data: {
+    markdownRemark: {
+      id: string;
+      html: string;
+      frontmatter: {
+        date: string;
+        title: string;
+        description: string;
+        tags: string[];
+      };
+    };
+  };
+};
 
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+const BlogPost = ({ data }: BlogPostProps) => {
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
@@ -76,16 +91,10 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
-
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -100,4 +109,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

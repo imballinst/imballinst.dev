@@ -1,17 +1,33 @@
-import React from 'react'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
-import Layout from '../../components/Layout'
+import React from 'react';
+import kebabCase from 'lodash.kebabcase';
+import Helmet from 'react-helmet';
+import { Link, graphql } from 'gatsby';
+import Layout from '../../components/Layout';
+
+type TagDataResult = {
+  data: {
+    allMarkdownRemark: {
+      group: Array<{
+        fieldValue: string;
+        totalCount: number;
+      }>;
+    };
+    site: {
+      siteMetadata: {
+        title: string;
+      };
+    };
+  };
+};
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
     site: {
-      siteMetadata: { title },
-    },
-  },
-}) => (
+      siteMetadata: { title }
+    }
+  }
+}: TagDataResult) => (
   <Layout>
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
@@ -36,9 +52,9 @@ const TagsPage = ({
       </div>
     </section>
   </Layout>
-)
+);
 
-export default TagsPage
+export default TagsPage;
 
 export const tagPageQuery = graphql`
   query TagsQuery {
@@ -54,4 +70,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`
+`;
