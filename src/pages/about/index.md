@@ -1,7 +1,7 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: About peepohappy
 ---
 
 ### Shade-grown coffee

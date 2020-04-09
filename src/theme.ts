@@ -28,5 +28,6 @@ export const peepoTheme = {
     }
   },
   topbarHeight: 56,
-  pageHorizontalSpacing: 'px-8 md:px-16 lg:px-24'
+  pageHorizontalSpacing: 'px-8 md:px-16 lg:px-24',
+  pageVerticalSpacing: 'pt-16' // due to topbar.
 };

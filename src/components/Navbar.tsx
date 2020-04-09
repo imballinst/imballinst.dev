@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 
 import { GitHubIcon } from '../img/GitHubIcon';
 import { peepoTheme } from '../theme';
+import { ExternalPeepoLink } from './Links';
 
 // Navbar item.
 function NavbarItem({ to, children }: { to: string; children: ReactNode }) {
@@ -17,7 +18,7 @@ function NavbarItem({ to, children }: { to: string; children: ReactNode }) {
   );
 }
 
-const NavbarItemIcon = styled.a`
+const NavbarItemIcon = styled(ExternalPeepoLink)`
   display: block;
   width: 1.5rem;
   height: 1.5rem;
