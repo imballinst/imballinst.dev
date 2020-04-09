@@ -2,14 +2,14 @@ import React, { ReactNode } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
-import { GitHubIcon } from '../../img/GitHubIcon';
-import { peepoTheme } from '../../theme';
+import { GitHubIcon } from '../img/GitHubIcon';
+import { peepoTheme } from '../theme';
 
 // Navbar item.
 function NavbarItem({ to, children }: { to: string; children: ReactNode }) {
   return (
     <Link
-      className={`navbar-item font-bold ${peepoTheme.palette.dark.contrastText} hover:${peepoTheme.palette.dark.contrastTextAlt}`}
+      className={`navbar-item font-bold ${peepoTheme.palette.primary.contrastText} hover:${peepoTheme.palette.primary.contrastTextAlt}`}
       to={to}
     >
       {children}
@@ -57,7 +57,7 @@ const NavbarItemSpacer = styled.div`
 function Navbar() {
   return (
     <nav
-      className="bg-teal-900 text-white px-8 py-4 fixed top-0 w-full z-50"
+      className={`bg-teal-900 text-white ${peepoTheme.pageHorizontalSpacing} py-4 fixed top-0 w-full z-50`}
       role="navigation"
       aria-label="main-navigation"
     >

@@ -1,10 +1,12 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
+import { withPrefix } from 'gatsby';
+
 import Footer from '../components/Footer';
 import Navbar from './Navbar';
 import '../all.css';
 import useSiteMetadata from './SiteMetadata';
-import { withPrefix } from 'gatsby';
+import { peepoTheme } from '../theme';
 
 type Props = {
   children: ReactNode;
@@ -54,7 +56,7 @@ function TemplateWrapper({ children }: Props) {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <div className={peepoTheme.pageHorizontalSpacing}>{children}</div>
       <Footer />
     </div>
   );
