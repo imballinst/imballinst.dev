@@ -1,11 +1,14 @@
-// Palette.
-// Dark: gray-900
-// Main: teal-900
-// Light: teal-700
-// Contrast text: white
-// Contrast text hover: gray-400
+const colors = {
+  primary: {
+    dark: '#1a202c', // bg-gray-900.
+    main: '#234e52', // bg-teal-900.
+    light: '#2c7a7b', // bg-teal-700.
+    contrastText: '#fff' // text-white.
+  }
+};
 
 export const peepoTheme = {
+  colors,
   // Follow Tailwind CSS' values.
   spacing: (spacingValue: number) => `${spacingValue / 8}rem`,
   palette: {
@@ -18,5 +21,6 @@ export const peepoTheme = {
       contrastText: 'text-white', // #fff.
       contrastTextAlt: 'text-gray-400' // #cbd5e0.
     }
-  }
+  },
+  topbarHeight: 56
 };

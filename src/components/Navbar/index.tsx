@@ -1,6 +1,5 @@
-import React, { useState, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { Link } from 'gatsby';
-import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import { GitHubIcon } from '../../img/GitHubIcon';
