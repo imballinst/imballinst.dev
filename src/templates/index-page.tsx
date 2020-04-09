@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import { ImageBlurb } from '../common-types';
+import { PeepoButton } from '../components/Button';
 
 type IndexPageTemplateProps = {
   title: string;
@@ -55,7 +56,7 @@ export const IndexPageTemplate = ({
         >
           {heading}
         </h3>
-        <button>{readBlogText}</button>
+        <PeepoButton size="medium">{readBlogText}</PeepoButton>
       </div>
     </div>
   </div>

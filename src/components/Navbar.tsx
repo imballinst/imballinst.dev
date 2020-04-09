@@ -10,7 +10,7 @@ import { ExternalPeepoLink } from './Links';
 function NavbarItem({ to, children }: { to: string; children: ReactNode }) {
   return (
     <Link
-      className={`navbar-item font-bold ${peepoTheme.palette.primary.contrastText} hover:${peepoTheme.palette.primary.contrastTextAlt}`}
+      className={`navbar-item ${peepoTheme.navbarLinkVariant('dark')}`}
       to={to}
     >
       {children}
@@ -22,13 +22,10 @@ const NavbarItemIcon = styled(ExternalPeepoLink)`
   display: block;
   width: 1.5rem;
   height: 1.5rem;
+  fill: #fff;
 
-  & > svg {
-    fill: #fff;
-
-    &:hover {
-      fill: #cbd5e0;
-    }
+  &:hover {
+    fill: #cbd5e0;
   }
 `;
 

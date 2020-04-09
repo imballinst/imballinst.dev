@@ -1,5 +1,6 @@
 import React, { AnchorHTMLAttributes, ReactNode } from 'react';
 import { Link } from 'gatsby';
+import { peepoTheme } from '../theme';
 
 type PeepoLinkProps = { to: string; children: ReactNode; withButton?: boolean };
 
@@ -7,7 +8,9 @@ export function PeepoLink({ to, children, withButton }: PeepoLinkProps) {
   let rendered;
 
   if (withButton) {
-    rendered = <button>{children}</button>;
+    rendered = (
+      <button className={peepoTheme.buttonVariant('dark')}>{children}</button>
+    );
   } else {
     rendered = children;
   }
