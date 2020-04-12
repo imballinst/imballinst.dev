@@ -1,20 +1,35 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
+import { useLocation } from '@reach/router';
 
 import { GitHubIcon } from '../img/GitHubIcon';
 import { peepoTheme } from '../theme';
 import { ExternalPeepoLink } from './Links';
 
 // Navbar item.
-function NavbarItem({ to, children }: { to: string; children: ReactNode }) {
+const NavbarGutter = styled.div`
+  height: 4px;
+`;
+
+function NavbarItem({
+  to,
+  children,
+  isActive
+}: {
+  to: string;
+  children: ReactNode;
+  isActive: boolean;
+}) {
   return (
-    <Link
-      className={`navbar-item ${peepoTheme.navbarLinkVariant('dark')}`}
-      to={to}
-    >
-      {children}
-    </Link>
+    <div className="navbar-item pb-4 relative">
+      <Link className={peepoTheme.navbarLinkVariant('dark')} to={to}>
+        {children}
+      </Link>
+      {isActive && (
+        <NavbarGutter className="absolute bottom-0 w-full border-2 border-white" />
+      )}
+    </div>
   );
 }
 
@@ -52,18 +67,36 @@ const NavbarItemSpacer = styled.div`
   }
 `;
 
+const paths = [
+  { to: '/', text: 'peepohappy' },
+  { to: '/blog', text: 'blog' },
+  { to: '/about', text: 'about' }
+];
+
+function isActive(path: string, currentPath: string) {
+  if (path === '/') {
+    return path === currentPath;
+  }
+  console.log(currentPath, path, currentPath.indexOf(path));
+  return currentPath.indexOf(path) === 0;
+}
+
 function Navbar() {
+  const pathname = useLocation().pathname;
+
   return (
     <nav
-      className={`bg-teal-900 text-white ${peepoTheme.pageHorizontalSpacing} py-4 fixed top-0 w-full z-50`}
+      className={`bg-teal-900 text-white ${peepoTheme.pageHorizontalSpacing} pt-4 fixed top-0 w-full z-50`}
       role="navigation"
       aria-label="main-navigation"
     >
       <div className="flex flex-row justify-between">
-        <NavbarItemSpacer>
-          <NavbarItem to="/">peepohappy</NavbarItem>
-          <NavbarItem to="/blog">blog</NavbarItem>
-          <NavbarItem to="/about">about</NavbarItem>
+        <NavbarItemSpacer className="flex flex-row">
+          {paths.map(path => (
+            <NavbarItem isActive={isActive(path.to, pathname)} to={path.to}>
+              {path.text}
+            </NavbarItem>
+          ))}
         </NavbarItemSpacer>
         <NavbarItemSpacer>
           <NavbarItemExternal
