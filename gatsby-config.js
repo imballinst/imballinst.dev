@@ -78,8 +78,7 @@ module.exports = {
               h5: 'text-base',
               h6: 'text-sm',
               p: 'text-base',
-              strong: 'font-semibold',
-              a: 'underline'
+              strong: 'font-semibold'
             }
           }
         ]

@@ -2,10 +2,17 @@ import React, { ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { peepoTheme } from '../theme';
 
+// References: https://www.webfx.com/blog/web-design/hyperlink-design/.
 const ContentDiv = styled.div`
-  & > p {
+  & p {
     &:not(:last-child) {
       margin-bottom: ${peepoTheme.spacing(4)};
+    }
+  }
+  & a {
+    color: ${peepoTheme.colorSets.blue.main.hex};
+    &:hover {
+      color: ${peepoTheme.colorSets.blue.dark.hex};
     }
   }
 `;

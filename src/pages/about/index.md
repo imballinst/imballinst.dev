@@ -4,7 +4,7 @@ path: /about
 title: About
 ---
 
-My name is Try Ajitiono. I do frontend engineering and creating bugs on daily basis (my main is React). I was once a semi-professional Dota 2 gamer (I competed mostly online, though), hence I love video games. Also, bunnies 🐰.
+My name is Try Ajitiono. I do frontend engineering and creating bugs on daily basis, mostly around React. I was once a semi-professional Dota 2 gamer (I competed mostly online, though), hence I love video games. Also, bunnies 🐰.
 
 ### Behind "peepohappy"
 
