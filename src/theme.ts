@@ -16,6 +16,7 @@ type ColorSet = {
 };
 type ColorSets = {
   [index: string]: ColorSet;
+  dark: ColorSet;
 };
 
 // The first array element refers to the color, the second one refers to its TailwindCSS equivalent.
@@ -29,8 +30,18 @@ const colorSets: ColorSets = {
   }
 };
 
+const textSizes = {
+  large4: 'text-3xl', // 1.875rem.
+  large3: 'text-2xl', // 1.5rem.
+  large2: 'text-xl', // 1.25rem.
+  large: 'text-lg', // 1.125rem.
+  base: 'text-base', // 1rem.
+  small: 'text-sm' // .875rem.
+};
+
 export const peepoTheme = {
   colorSets,
+  textSizes,
   /**
    * Imagine this function as TailwindCSS' margin and padding values.
    * For example, if `spacingValue` is 4, then it is `1rem`.

@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import { PeepoLink } from '../components/Links';
 import { Typography } from '../components/Typography';
+import { Paper } from '../components/Paper';
 
 type IndexPageTemplateProps = {
   title: string;
@@ -17,15 +18,17 @@ export const IndexPageTemplate = ({
   readBlogText
 }: IndexPageTemplateProps) => (
   <div className="flex flex-col align-center justify-center pt-12">
-    <Typography variant="h1" className="text-center">
-      {title}
-    </Typography>
-    <Typography variant="h3" className="text-center">
-      {heading}
-    </Typography>
-    <PeepoLink fullWidth to="/blog" withButton size="medium" className="mt-4">
-      {readBlogText}
-    </PeepoLink>
+    <Paper>
+      <Typography variant="h1" className="text-center">
+        {title}
+      </Typography>
+      <Typography variant="h3" className="text-center">
+        {heading}
+      </Typography>
+      <PeepoLink fullWidth to="/blog" withButton size="large" className="mt-12">
+        {readBlogText}
+      </PeepoLink>
+    </Paper>
   </div>
 );
 

@@ -12,10 +12,10 @@ type ButtonPaddings = {
   [index: string]: string;
 };
 
-const paddings: ButtonPaddings = {
-  small: `py-2 px-4`,
-  medium: `py-4 px-6`,
-  large: `py-6 px-8`
+const classNames: ButtonPaddings = {
+  small: `py-2 px-4 ${peepoTheme.textSizes.base}`,
+  medium: `py-4 px-6 ${peepoTheme.textSizes.large}`,
+  large: `py-6 px-8 ${peepoTheme.textSizes.large2}`
 };
 
 const StyledButton = styled.button`
@@ -27,7 +27,7 @@ export function PeepoButton({
   size = 'small',
   fullWidth
 }: PeepoButtonProps) {
-  const padding = paddings[size];
+  const padding = classNames[size];
 
   return (
     <StyledButton

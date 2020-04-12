@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
 title: Welcome to peepohappy!
-heading: I talk about software development, real life, and gaming stuff.
+heading: My name is Try Ajitiono. I talk about software development, real life, and gaming stuff.
 readBlogText: Read my ramblings
 ---

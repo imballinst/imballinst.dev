@@ -1,14 +1,15 @@
 import React, { ReactNode } from 'react';
 import { cls } from '../helpers/styles';
+import { peepoTheme } from '../theme';
 
 const variantClasses = {
-  h1: 'text-3xl font-bold', // 1.875rem.
-  h2: 'text-2xl font-bold', // 1.5rem.
-  h3: 'text-xl', // 1.25rem.
-  h4: 'text-lg', // 1.125rem.
-  h5: 'text-base', // 1rem.
-  h6: 'text-sm', // .875rem.
-  body: 'text-base'
+  h1: `${peepoTheme.textSizes.large4} font-bold`,
+  h2: `${peepoTheme.textSizes.large3} font-bold`,
+  h3: `${peepoTheme.textSizes.large2}`,
+  h4: `${peepoTheme.textSizes.large}`,
+  h5: `${peepoTheme.textSizes.base}`,
+  h6: `${peepoTheme.textSizes.small}`,
+  body: `${peepoTheme.textSizes.base}`
 };
 
 type TypographyProps = {
