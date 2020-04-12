@@ -22,11 +22,11 @@ type ColorSets = {
 // The first array element refers to the color, the second one refers to its TailwindCSS equivalent.
 const colorSets: ColorSets = {
   dark: {
-    dark: { hex: '#1a202c', twClass: 'bg-gray-900' },
-    main: { hex: '#234e52', twClass: 'bg-teal-900' },
+    dark: { hex: '#1a202c', twClass: 'bg-teal-900' },
+    main: { hex: '#234e52', twClass: 'bg-teal-800' },
     light: { hex: '#2c7a7b', twClass: 'bg-teal-700' },
     contrastText: { hex: '#fff', twClass: 'text-white' },
-    contrastTextHover: { hex: '#cbd5e0', twClass: 'text-gray-400' }
+    contrastTextHover: { hex: '#cbd5e0', twClass: 'text-gray-300' }
   }
 };
 
