@@ -5,6 +5,8 @@ import styled from '@emotion/styled';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 import { Paper } from './Paper';
 import { peepoTheme } from '../theme';
+import { cls } from '../helpers/styles';
+import { PeepoLink } from './Links';
 
 type Props = {
   data: {
@@ -28,48 +30,52 @@ function BlogRoll(props: Props) {
     <div>
       {posts &&
         posts.map(({ node: post }) => (
-          <StyledPaper>
+          <StyledPaper key={post.id}>
             {/* TODO(aji): continue here. */}
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
+            <article
+              className={cls({
+                featured: post.frontmatter.featuredpost
+              })}
+            >
+              <header>
+                {post.frontmatter.featuredimage ? (
+                  <div className="mb-2">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: post.frontmatter.featuredimage,
+                        alt: `featured image thumbnail for post ${post.frontmatter.title}`
+                      }}
+                    />
+                  </div>
+                ) : null}
+                <div>
+                  <div className="block w-full">
+                    <PeepoLink
+                      className={`${peepoTheme.textSizes.large} font-semibold`}
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    </PeepoLink>
+                  </div>
+                  <div className="block w-full">
+                    <span className={`${peepoTheme.textSizes.small} italic`}>
                       {post.frontmatter.date}
                     </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
+                  </div>
+                </div>
+              </header>
+              <p className="mt-4">
+                {post.excerpt}
+                <div className="block w-full mt-8 text-right">
+                  <PeepoLink
+                    className={`${peepoTheme.textSizes.small}`}
+                    to={post.fields.slug}
+                  >
+                    Read more →
+                  </PeepoLink>
+                </div>
+              </p>
+            </article>
           </StyledPaper>
         ))}
     </div>
@@ -93,6 +99,7 @@ export default () => (
               }
               frontmatter {
                 title
+                tags
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost

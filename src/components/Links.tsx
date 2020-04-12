@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 import { PeepoButton, PeepoButtonProps } from './Button';
+import { peepoTheme } from '../theme';
 
 interface PeepoLinkProps extends PeepoButtonProps {
   to: string;
@@ -13,6 +14,10 @@ interface PeepoLinkProps extends PeepoButtonProps {
 const StyledLink = styled(Link)`
   display: ${(props: PeepoLinkProps) => (props.fullWidth ? 'block' : 'inline')};
   width: ${(props: PeepoLinkProps) => (props.fullWidth ? '100%' : 'auto')};
+  color: ${peepoTheme.colorSets.blue.main.hex};
+  &:hover {
+    color: ${peepoTheme.colorSets.blue.dark.hex};
+  }
 `;
 
 export function PeepoLink({
