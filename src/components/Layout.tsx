@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
 import { withPrefix } from 'gatsby';
+import styled from '@emotion/styled';
 
 import Navbar from './Navbar';
 import '../all.css';
@@ -10,6 +11,11 @@ import { peepoTheme } from '../theme';
 type Props = {
   children: ReactNode;
 };
+
+const Content = styled.div`
+  height: calc(100vh - ${peepoTheme.topbarHeight}px);
+  margin-top: ${peepoTheme.topbarHeight}px;
+`;
 
 function TemplateWrapper({ children }: Props) {
   const { title, description } = useSiteMetadata();
@@ -55,11 +61,11 @@ function TemplateWrapper({ children }: Props) {
         />
       </Helmet>
       <Navbar />
-      <div
-        className={`${peepoTheme.pageHorizontalSpacing} ${peepoTheme.pageVerticalSpacing}`}
+      <Content
+        className={`${peepoTheme.pageVerticalSpacing} ${peepoTheme.pageHorizontalSpacing}`}
       >
         {children}
-      </div>
+      </Content>
     </div>
   );
 }
