@@ -51,7 +51,7 @@ function BlogRoll(props: Props) {
                 <div>
                   <div className="block w-full">
                     <PeepoLink
-                      className={`${peepoTheme.textSizes.large} font-semibold`}
+                      className={`${peepoTheme.textSizes.large2} font-semibold`}
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
