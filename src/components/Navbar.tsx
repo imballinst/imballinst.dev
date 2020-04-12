@@ -77,7 +77,7 @@ function isActive(path: string, currentPath: string) {
   if (path === '/') {
     return path === currentPath;
   }
-  console.log(currentPath, path, currentPath.indexOf(path));
+
   return currentPath.indexOf(path) === 0;
 }
 
