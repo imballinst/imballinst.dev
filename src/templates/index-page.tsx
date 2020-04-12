@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import { ImageBlurb } from '../common-types';
 import { PeepoButton } from '../components/Button';
+import { PeepoLink } from '../components/Links';
 
 type IndexPageTemplateProps = {
   title: string;
@@ -56,7 +57,9 @@ export const IndexPageTemplate = ({
         >
           {heading}
         </h3>
-        <PeepoButton size="medium">{readBlogText}</PeepoButton>
+        <PeepoLink fullWidth to="/blog" withButton size="medium">
+          {readBlogText}
+        </PeepoLink>
       </div>
     </div>
   </div>
