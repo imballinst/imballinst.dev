@@ -3,8 +3,8 @@ import { cls } from '../helpers/styles';
 import { peepoTheme } from '../theme';
 
 const variantClasses = {
-  h1: peepoTheme.textSizes.large4,
-  h2: peepoTheme.textSizes.large3,
+  h1: `${peepoTheme.textSizes.large4} font-bold`,
+  h2: `${peepoTheme.textSizes.large3} font-bold`,
   h3: peepoTheme.textSizes.large2,
   h4: peepoTheme.textSizes.large,
   h5: peepoTheme.textSizes.base,

@@ -1,4 +1,14 @@
 import React, { ReactNode } from 'react';
+import styled from '@emotion/styled';
+import { peepoTheme } from '../theme';
+
+const ContentDiv = styled.div`
+  & > p {
+    &:not(:last-child) {
+      margin-bottom: ${peepoTheme.spacing(4)};
+    }
+  }
+`;
 
 type HTMLContentProps = {
   content: string;
@@ -6,7 +16,10 @@ type HTMLContentProps = {
 };
 
 const HTMLContent = ({ content, className }: HTMLContentProps) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+  <ContentDiv
+    className={className}
+    dangerouslySetInnerHTML={{ __html: content }}
+  />
 );
 
 type ContentProps = {
@@ -15,7 +28,7 @@ type ContentProps = {
 };
 
 const Content = ({ content, className }: ContentProps) => (
-  <div className={className}>{content}</div>
+  <ContentDiv className={className}>{content}</ContentDiv>
 );
 
 export { HTMLContent };

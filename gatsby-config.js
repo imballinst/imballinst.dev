@@ -65,6 +65,22 @@ module.exports = {
             options: {
               destinationDir: 'static'
             }
+          },
+          {
+            resolve: `gatsby-remark-default-html-attrs`,
+            options: {
+              // Basic stylings that do not require frequent updates or excessive themings.
+              // This should adapt to src/components/Typography.tsx.
+              h1: 'text-3xl font-bold',
+              h2: 'text-2xl font-bold',
+              h3: 'text-xl font-semibold',
+              h4: 'text-lg font-semibold',
+              h5: 'text-base',
+              h6: 'text-sm',
+              p: 'text-base',
+              strong: 'font-semibold',
+              a: 'underline'
+            }
           }
         ]
       }

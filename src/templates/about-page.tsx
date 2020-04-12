@@ -18,17 +18,9 @@ export const AboutPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <Typography variant="h1">{title}</Typography>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
+    <section>
+      <Typography variant="h1">{title}</Typography>
+      <PageContent className="content" content={content} />
     </section>
   );
 };
