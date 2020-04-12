@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "classnames": "^2.2.6",
     "gatsby": "^2.13.31",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-emotion": "^4.2.1",
@@ -45,6 +46,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/lodash.kebabcase": "^4.1.6",
     "@types/react-helmet": "^5.0.15",
     "@types/uuid": "^7.0.2",

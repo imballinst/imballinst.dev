@@ -16,22 +16,14 @@ export const IndexPageTemplate = ({
   heading,
   readBlogText
 }: IndexPageTemplateProps) => (
-  <div className="flex flex-col align-center justify-center">
-    <Typography variant="h1">{title}</Typography>
-    <h3
-      className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-      style={{
-        boxShadow:
-          'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-        backgroundColor: 'rgb(255, 68, 0)',
-        color: 'white',
-        lineHeight: '1',
-        padding: '0.25em'
-      }}
-    >
+  <div className="flex flex-col align-center justify-center pt-12">
+    <Typography variant="h1" className="text-center">
+      {title}
+    </Typography>
+    <Typography variant="h3" className="text-center">
       {heading}
-    </h3>
-    <PeepoLink fullWidth to="/blog" withButton size="medium">
+    </Typography>
+    <PeepoLink fullWidth to="/blog" withButton size="medium" className="mt-4">
       {readBlogText}
     </PeepoLink>
   </div>

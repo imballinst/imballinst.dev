@@ -48,7 +48,7 @@ function NavbarItemExternal({
 // Navbar.
 const NavbarItemSpacer = styled.div`
   & > .navbar-item:not(:first-child) {
-    margin-left: ${peepoTheme.spacing(8)};
+    margin-left: ${peepoTheme.spacing(4)};
   }
 `;
 

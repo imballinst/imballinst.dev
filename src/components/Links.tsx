@@ -1,4 +1,4 @@
-import React, { AnchorHTMLAttributes, ReactNode } from 'react';
+import React, { AnchorHTMLAttributes } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
@@ -6,6 +6,7 @@ import { PeepoButton, PeepoButtonProps } from './Button';
 
 interface PeepoLinkProps extends PeepoButtonProps {
   to: string;
+  className?: string;
   withButton?: boolean;
 }
 
@@ -18,6 +19,7 @@ export function PeepoLink({
   to,
   children,
   withButton,
+  className,
   ...buttonProps
 }: PeepoLinkProps) {
   let rendered;
@@ -28,7 +30,11 @@ export function PeepoLink({
     rendered = children;
   }
 
-  return <StyledLink to={to}>{rendered}</StyledLink>;
+  return (
+    <StyledLink className={className} to={to}>
+      {rendered}
+    </StyledLink>
+  );
 }
 
 export function ExternalPeepoLink({

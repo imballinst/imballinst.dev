@@ -31,8 +31,12 @@ const colorSets: ColorSets = {
 
 export const peepoTheme = {
   colorSets,
-  // Follow Tailwind CSS' values.
-  spacing: (spacingValue: number) => `${spacingValue / 8}rem`,
+  /**
+   * Imagine this function as TailwindCSS' margin and padding values.
+   * For example, if `spacingValue` is 4, then it is `1rem`.
+   * Equivalently, `*-4` in Tailwind equals to `1rem`.
+   */
+  spacing: (spacingValue: number) => `${spacingValue / 4}rem`,
   buttonVariant: (mode: ThemeMode) => {
     const colorSet = colorSets[mode];
 

@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { cls } from '../helpers/styles';
 
 const variantClasses = {
   h1: 'text-3xl font-bold', // 1.875rem.
@@ -26,7 +27,7 @@ function getComponent(variant: TypographyProps['variant']) {
 
 export function Typography({ variant, className, children }: TypographyProps) {
   const Component = getComponent(variant);
-  const classNames = `${variantClasses[variant]} ${className}`;
+  const classNames = cls(variantClasses[variant], className);
 
   return <Component className={classNames}>{children}</Component>;
 }
