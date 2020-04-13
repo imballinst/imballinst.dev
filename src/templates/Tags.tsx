@@ -1,17 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby';
-import Layout from '../components/Layout';
+import { graphql } from 'gatsby';
+import Layout, { SectionWrapper } from '../components/Layout';
+import { ListBlogItem, ListBlogItemType } from '../components/BlogRoll';
+import { createGrammaticalNoun } from '../helpers/formatter';
+import { Typography } from '../components/Typography';
+import { PeepoLink } from '../components/Links';
 
 type Post = {
-  node: {
-    fields: {
-      slug: string;
-    };
-    frontmatter: {
-      title: string;
-    };
-  };
+  node: ListBlogItemType;
 };
 type TagsProps = {
   data: {
@@ -32,23 +29,18 @@ type TagsProps = {
 
 function Tags({ data, pageContext }: TagsProps) {
   const posts = data.allMarkdownRemark.edges;
-  const postLinks = posts.map(post => (
-    <li key={post.node.fields.slug}>
-      <Link to={post.node.fields.slug}>
-        <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
-      </Link>
-    </li>
-  ));
+  const postLinks = posts.map(post => <ListBlogItem post={post.node} />);
   const tag = pageContext.tag;
   const title = data.site.siteMetadata.title;
   const totalCount = data.allMarkdownRemark.totalCount;
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged with “${tag}”`;
+  const tagHeader = `${totalCount} ${createGrammaticalNoun(
+    'post',
+    totalCount
+  )} tagged with “${tag}”`;
 
   return (
     <Layout>
-      <section className="section">
+      <SectionWrapper>
         <Helmet title={`${tag} | ${title}`} />
         <div className="container content">
           <div className="columns">
@@ -56,15 +48,15 @@ function Tags({ data, pageContext }: TagsProps) {
               className="column is-10 is-offset-1"
               style={{ marginBottom: '6rem' }}
             >
-              <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-              <ul className="taglist">{postLinks}</ul>
-              <p>
-                <Link to="/tags/">Browse all tags</Link>
-              </p>
+              <Typography variant="h3" className="mb-4">
+                {tagHeader}
+              </Typography>
+              <ul className="mb-4">{postLinks}</ul>
+              <PeepoLink to="/tags/">Browse all tags</PeepoLink>
             </div>
           </div>
         </div>
-      </section>
+      </SectionWrapper>
     </Layout>
   );
 }
@@ -89,8 +81,19 @@ export const tagPageQuery = graphql`
           fields {
             slug
           }
+          id
+          excerpt(pruneLength: 400)
           frontmatter {
             title
+            date(formatString: "MMMM DD, YYYY")
+            featuredpost
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 120, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

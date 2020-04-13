@@ -1,10 +1,14 @@
 import React, { ReactNode } from 'react';
 import kebabCase from 'lodash.kebabcase';
 import Helmet from 'react-helmet';
-import { graphql, Link } from 'gatsby';
-import Layout from '../components/Layout';
+import { graphql } from 'gatsby';
+import Layout, { SectionWrapper } from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import { Typography } from '../components/Typography';
+import { peepoTheme } from '../theme';
+import { Paper } from '../components/Paper';
+import { ListItem } from '../components/List';
+import { PeepoLink } from '../components/Links';
 
 type BlogPostTemplateProps = {
   content: ReactNode;
@@ -12,6 +16,7 @@ type BlogPostTemplateProps = {
   description: string;
   tags: string[];
   title: string;
+  date: string;
   helmet?: ReactNode;
 };
 
@@ -21,29 +26,41 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
+  date,
   helmet
 }: BlogPostTemplateProps) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <section>
-      {helmet || ''}
-      <Typography variant="h1">{title}</Typography>
-      <p>{description}</p>
-      <PostContent content={content} />
-      {tags && tags.length ? (
-        <div style={{ marginTop: `4rem` }}>
-          <h4>Tags</h4>
-          <ul className="taglist">
-            {tags.map(tag => (
-              <li key={tag + `tag`}>
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
-    </section>
+    <SectionWrapper>
+      <Paper>
+        {helmet || ''}
+        <Typography variant="h1" className="leading-none">
+          {title}
+        </Typography>
+        <span className={`${peepoTheme.textSizes.small} italic`}>{date}</span>
+
+        <Typography variant="body" className="mb-4 mt-4">
+          {description}
+        </Typography>
+        <PostContent content={content} />
+        {tags && tags.length ? (
+          <div style={{ marginTop: `4rem` }}>
+            <Typography variant="h4">Tags</Typography>
+            <ul className="taglist">
+              {tags.map(tag => (
+                <ListItem
+                  className={`inline ${peepoTheme.textSizes.small}`}
+                  key={tag + `tag`}
+                >
+                  <PeepoLink to={`/tags/${kebabCase(tag)}/`}>{tag}</PeepoLink>
+                </ListItem>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      </Paper>
+    </SectionWrapper>
   );
 };
 
@@ -82,6 +99,7 @@ const BlogPost = ({ data }: BlogPostProps) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        date={post.frontmatter.date}
       />
     </Layout>
   );
