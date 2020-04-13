@@ -81,16 +81,20 @@ function isActive(path: string, currentPath: string) {
   return currentPath.indexOf(path) === 0;
 }
 
+const NavbarContent = styled.div`
+  width: ${peepoTheme.maxOptimalWidth};
+`;
+
 function Navbar() {
   const pathname = useLocation().pathname;
 
   return (
     <nav
-      className={`bg-teal-900 text-white ${peepoTheme.pageHorizontalSpacing} pt-4 fixed top-0 w-full z-50`}
+      className={`bg-teal-900 text-white ${peepoTheme.pageHorizontalSpacing} pt-4 fixed top-0 w-full z-50 flex flex-row justify-center`}
       role="navigation"
       aria-label="main-navigation"
     >
-      <div className="flex flex-row justify-between">
+      <NavbarContent className="flex flex-row justify-between">
         <NavbarItemSpacer className="flex flex-row">
           {paths.map(path => (
             <NavbarItem isActive={isActive(path.to, pathname)} to={path.to}>
@@ -98,7 +102,7 @@ function Navbar() {
             </NavbarItem>
           ))}
         </NavbarItemSpacer>
-        <NavbarItemSpacer>
+        <NavbarItemSpacer className="flex flex-row">
           <NavbarItemExternal
             href="https://github.com/Imballinst"
             target="_blank"
@@ -107,7 +111,7 @@ function Navbar() {
             <GitHubIcon />
           </NavbarItemExternal>
         </NavbarItemSpacer>
-      </div>
+      </NavbarContent>
     </nav>
   );
 }

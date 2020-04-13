@@ -1,5 +1,6 @@
 import React from 'react';
 import Img, { FluidObject } from 'gatsby-image';
+import styled from '@emotion/styled';
 
 export type Fluid = { fluid: FluidObject };
 
@@ -12,22 +13,28 @@ type Props = {
   };
 };
 
+const THUMBNAIL_IMAGE_HEIGHT = '200px';
+
+const StyledGatsbyImage = styled(Img)`
+  height: ${THUMBNAIL_IMAGE_HEIGHT};
+`;
+const StyledImage = styled.img`
+  height: ${THUMBNAIL_IMAGE_HEIGHT};
+`;
+
 const PreviewCompatibleImage = ({ imageInfo }: Props) => {
-  const imageStyle = { borderRadius: '5px' };
   const { alt = '', childImageSharp, image } = imageInfo;
 
   if (typeof image === 'object') {
-    return (
-      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
-    );
+    return <StyledGatsbyImage fluid={image.childImageSharp.fluid} alt={alt} />;
   }
 
   if (childImageSharp) {
-    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />;
+    return <StyledGatsbyImage fluid={childImageSharp.fluid} alt={alt} />;
   }
 
   if (image && typeof image === 'string') {
-    return <img style={imageStyle} src={image} alt={alt} />;
+    return <StyledImage src={image} alt={alt} />;
   }
 
   return null;

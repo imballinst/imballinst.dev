@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 
 import PreviewCompatibleImage from './PreviewCompatibleImage';
@@ -7,6 +7,7 @@ import { Paper } from './Paper';
 import { peepoTheme } from '../theme';
 import { cls } from '../helpers/styles';
 import { PeepoLink } from './Links';
+import { SectionWrapper } from './Layout';
 
 type Props = {
   data: {
@@ -27,11 +28,10 @@ function BlogRoll(props: Props) {
   const { edges: posts } = props.data.allMarkdownRemark;
 
   return (
-    <div>
+    <SectionWrapper>
       {posts &&
         posts.map(({ node: post }) => (
           <StyledPaper key={post.id}>
-            {/* TODO(aji): continue here. */}
             <article
               className={cls({
                 featured: post.frontmatter.featuredpost
@@ -78,7 +78,7 @@ function BlogRoll(props: Props) {
             </article>
           </StyledPaper>
         ))}
-    </div>
+    </SectionWrapper>
   );
 }
 
