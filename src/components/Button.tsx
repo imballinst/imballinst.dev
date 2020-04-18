@@ -1,4 +1,4 @@
-import React, { ReactNode, RefObject, Ref, forwardRef } from 'react';
+import React, { ReactNode, Ref, forwardRef } from 'react';
 import styled from '@emotion/styled';
 
 import { peepoTheme } from '../theme';
@@ -6,13 +6,12 @@ import { cls } from '../helpers/styles';
 
 type CommonButtonProps = {
   children: ReactNode;
+  type?: 'button' | 'submit';
   ref?: Ref<HTMLButtonElement>;
   onClick?: () => void;
 };
 
 export interface PeepoButtonProps extends CommonButtonProps {
-  children: ReactNode;
-  ref?: Ref<HTMLButtonElement>;
   fullWidth?: boolean;
   size?: 'small' | 'medium' | 'large';
   className?: string;
@@ -34,6 +33,7 @@ const StyledButton = styled.button`
 export function PeepoButton({
   children,
   className,
+  type = 'button',
   size = 'small',
   ...props
 }: PeepoButtonProps) {
@@ -42,6 +42,7 @@ export function PeepoButton({
   return (
     <StyledButton
       {...props}
+      type={type}
       className={cls(
         peepoTheme.buttonVariant('dark'),
         padding,
@@ -55,11 +56,12 @@ export function PeepoButton({
 }
 
 export const PeepoIconButton = forwardRef<HTMLButtonElement, CommonButtonProps>(
-  ({ children, ...props }, ref) => {
+  ({ children, type = 'button', ...props }, ref) => {
     return (
       <StyledButton
         {...props}
         ref={ref}
+        type={type}
         className={cls(
           peepoTheme.buttonVariant('dark'),
           peepoTheme.textSizes.small,

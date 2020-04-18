@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { usePopper } from 'react-popper';
 import { useTransition, animated } from 'react-spring';
 
@@ -11,11 +11,12 @@ import { peepoTheme } from '../../theme';
 import { TextField } from '../Forms/TextField';
 import { PeepoButton, PeepoIconButton } from '../Button';
 import { FilterIcon } from '../../img/FilterIcon';
-import { useNavigate, useLocation } from '@reach/router';
-import { stringify, parseQueryParams } from '../../helpers/utils';
 
 type FilterProps = {
   tags: TagCount[];
+  onChangeForm: (event: ChangeEvent<HTMLInputElement>) => void;
+  onFilterSubmit: () => void;
+  form: FormState;
 };
 
 const CheckboxSpacer = styled.div`
@@ -35,7 +36,12 @@ export type FormState = {
   filterTags: string[];
 };
 
-export function Filter({ tags }: FilterProps) {
+export function Filter({
+  tags,
+  form,
+  onChangeForm,
+  onFilterSubmit
+}: FilterProps) {
   const [buttonElement, setButtonElement] = useState<HTMLButtonElement | null>(
     null
   );
@@ -61,53 +67,10 @@ export function Filter({ tags }: FilterProps) {
     set(index === PopperState.SHOWN ? PopperState.HIDDEN : PopperState.SHOWN);
   }
 
-  const navigate = useNavigate();
-  const location = useLocation();
+  function filterResults(e: FormEvent) {
+    e.preventDefault();
 
-  const [form, setForm] = useState<FormState>(() => {
-    let filterText = '';
-    let filterTags: string[] = [];
-
-    if (location.search.length > 0) {
-      const parsed = parseQueryParams<FormState>(location.search);
-
-      filterText = parsed.filterText || '';
-      filterTags = parsed.filterTags || [];
-    }
-
-    return {
-      filterText,
-      filterTags
-    };
-  });
-
-  function onChangeForm(e: ChangeEvent<HTMLInputElement>) {
-    const { name, value } = e.target;
-    console.log(name, value);
-    if (name === 'filterText') {
-      setForm(oldForm => ({ ...oldForm, filterText: value }));
-    } else {
-      setForm(oldForm => {
-        const valueIndex = oldForm.filterTags.indexOf(value);
-        let newFilterTags = oldForm.filterTags;
-
-        if (valueIndex === -1) {
-          newFilterTags = newFilterTags.concat(value);
-        } else {
-          newFilterTags = [...newFilterTags];
-          newFilterTags.splice(valueIndex, 1);
-        }
-
-        return {
-          ...oldForm,
-          filterTags: newFilterTags
-        };
-      });
-    }
-  }
-
-  function filterResults() {
-    navigate(`${location.pathname}${stringify(form)}`);
+    onFilterSubmit();
     onTogglePopper();
   }
 
@@ -133,32 +96,36 @@ export function Filter({ tags }: FilterProps) {
           >
             <animated.div style={props}>
               <Paper>
-                <div ref={setArrowElement} style={styles.arrow} />
-                <div className="mb-4">
-                  <TextField
-                    name="filterText"
-                    label="Filter text"
-                    onChange={onChangeForm}
-                    value={form.filterText}
-                  />
-                </div>
-                <Typography variant="h6" className="font-semibold">
-                  Tags
-                </Typography>
-                <div className="mb-4">
-                  {tags.map(tag => (
-                    <CheckboxSpacer key={tag.fieldValue}>
-                      <Checkbox
-                        name="filterTags"
-                        onChange={onChangeForm}
-                        checked={form.filterTags.includes(tag.fieldValue)}
-                        value={tag.fieldValue}
-                        label={tag.fieldValue}
-                      />
-                    </CheckboxSpacer>
-                  ))}
-                </div>
-                <PeepoButton onClick={filterResults}>Filter</PeepoButton>
+                <form onSubmit={filterResults}>
+                  <div ref={setArrowElement} style={styles.arrow} />
+                  <div className="mb-4">
+                    <TextField
+                      name="filterText"
+                      label="Filter text"
+                      onChange={onChangeForm}
+                      value={form.filterText}
+                    />
+                  </div>
+                  <Typography variant="h6" className="font-semibold">
+                    Tags
+                  </Typography>
+                  <div className="mb-4">
+                    {tags.map(tag => (
+                      <CheckboxSpacer key={tag.fieldValue}>
+                        <Checkbox
+                          name="filterTags"
+                          onChange={onChangeForm}
+                          checked={form.filterTags.includes(tag.fieldValue)}
+                          value={tag.fieldValue}
+                          label={tag.fieldValue}
+                        />
+                      </CheckboxSpacer>
+                    ))}
+                  </div>
+                  <PeepoButton type="submit" fullWidth>
+                    Filter
+                  </PeepoButton>
+                </form>
               </Paper>
             </animated.div>
           </div>

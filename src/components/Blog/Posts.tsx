@@ -1,5 +1,5 @@
 // TODO: move this to under src/pages to take advantage of https://www.gatsbyjs.org/docs/graphql-api/#pagequery.
-import React from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 
@@ -10,8 +10,8 @@ import { cls } from '../../helpers/styles';
 import { PeepoLink } from '../Links';
 import { SectionWrapper } from '../Layout';
 import { Filter, FormState } from './Filter';
-import { useLocation } from '@reach/router';
-import { parseQueryParams } from '../../helpers/utils';
+import { useLocation, useNavigate } from '@reach/router';
+import { parseQueryParams, stringify } from '../../helpers/utils';
 
 export type TagCount = {
   fieldValue: string;
@@ -106,61 +106,150 @@ function Posts(props: Props) {
   const posts = allMarkdownRemark.edges;
   const tags = tagsRemark.tags;
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [form, setForm] = useState<FormState>(() => {
+    let filterText = '';
+    let filterTags: string[] = [];
+
+    if (location.search.length > 0) {
+      const parsed = parseQueryParams<FormState>(location.search);
+
+      filterText = parsed.filterText || '';
+      filterTags = parsed.filterTags || [];
+    }
+
+    return {
+      filterText,
+      filterTags
+    };
+  });
+  const [tempForm, setTempForm] = useState<FormState>({ ...form });
+
+  function onChangeForm(e: ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target;
+
+    if (name === 'filterText') {
+      setTempForm(oldForm => ({ ...oldForm, filterText: value }));
+    } else {
+      setTempForm(oldForm => {
+        const valueIndex = oldForm.filterTags.indexOf(value);
+        let newFilterTags = oldForm.filterTags;
+
+        if (valueIndex === -1) {
+          newFilterTags = newFilterTags.concat(value);
+        } else {
+          newFilterTags = [...newFilterTags];
+          newFilterTags.splice(valueIndex, 1);
+        }
+
+        return {
+          ...oldForm,
+          filterTags: newFilterTags
+        };
+      });
+    }
+  }
+
+  function onFilterSubmit() {
+    navigate(`${location.pathname}${stringify(form)}`);
+    setForm(tempForm);
+  }
+
+  const renderedPosts = posts
+    ? posts.reduce((array, { node: post }) => {
+        const { tags: postTagsRaw, title } = post.frontmatter;
+        const postTags = postTagsRaw as string[];
+
+        const includesText =
+          form.filterText !== ''
+            ? (title as string)
+                .toLowerCase()
+                .includes(form.filterText.toLowerCase())
+            : true;
+        const includesTags =
+          form.filterTags.length > 0
+            ? form.filterTags.every(tag => postTags.includes(tag))
+            : true;
+        let included;
+
+        if (!includesText && !includesTags) {
+          return array;
+        }
+
+        if (includesText) {
+          included = includesTags;
+        } else if (includesTags) {
+          included = includesText;
+        }
+
+        if (included) {
+          return array.concat(post);
+        }
+
+        return array;
+      }, [])
+    : null;
+
   return (
     <div className="flex flex-col">
       <div className="mb-4">
-        <Filter tags={tags} />
+        <Filter
+          tags={tags}
+          onFilterSubmit={onFilterSubmit}
+          form={tempForm}
+          onChangeForm={onChangeForm}
+        />
       </div>
       <SectionWrapper>
-        {posts &&
-          posts.map(({ node: post }) => (
-            <ListBlogItem key={post.id} post={post} />
-          ))}
+        {renderedPosts.map((post: any) => (
+          <ListBlogItem key={post.id} post={post} />
+        ))}
       </SectionWrapper>
     </div>
   );
 }
 
-export default () => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query PostsQuery {
-          allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-          ) {
-            edges {
-              node {
-                excerpt(pruneLength: 400)
-                id
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                  date(formatString: "MMMM DD, YYYY")
-                  featuredpost
-                  featuredimage {
-                    childImageSharp {
-                      fluid(maxWidth: 120, quality: 100) {
-                        ...GatsbyImageSharpFluid
-                      }
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query PostsQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 400)
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                date(formatString: "MMMM DD, YYYY")
+                featuredpost
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 120, quality: 100) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }
+                tags
               }
             }
           }
-          tagsRemark: allMarkdownRemark(limit: 1000) {
-            tags: group(field: frontmatter___tags) {
-              fieldValue
-              totalCount
-            }
+        }
+        tagsRemark: allMarkdownRemark(limit: 1000) {
+          tags: group(field: frontmatter___tags) {
+            fieldValue
+            totalCount
           }
         }
-      `}
-      render={data => <Posts data={data} />}
-    />
-  );
-};
+      }
+    `}
+    render={data => <Posts data={data} />}
+  />
+);
