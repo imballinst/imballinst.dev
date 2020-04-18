@@ -70,7 +70,7 @@ export function Filter({ tags }: FilterProps) {
 
     if (location.search.length > 0) {
       const parsed = parseQueryParams<FormState>(location.search);
-      console.log(parsed);
+
       filterText = parsed.filterText || '';
       filterTags = parsed.filterTags || [];
     }

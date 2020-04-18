@@ -9,8 +9,9 @@ import { peepoTheme } from '../../theme';
 import { cls } from '../../helpers/styles';
 import { PeepoLink } from '../Links';
 import { SectionWrapper } from '../Layout';
-import { Filter } from './Filter';
+import { Filter, FormState } from './Filter';
 import { useLocation } from '@reach/router';
+import { parseQueryParams } from '../../helpers/utils';
 
 export type TagCount = {
   fieldValue: string;
@@ -121,8 +122,6 @@ function Posts(props: Props) {
 }
 
 export default () => {
-  const location = useLocation();
-
   return (
     <StaticQuery
       query={graphql`
