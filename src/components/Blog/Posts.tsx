@@ -153,7 +153,7 @@ function Posts(props: Props) {
   }
 
   function onFilterSubmit() {
-    navigate(`${location.pathname}${stringify(form)}`);
+    navigate(`${location.pathname}${stringify(tempForm)}`);
     setForm(tempForm);
   }
 
