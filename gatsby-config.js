@@ -98,7 +98,13 @@ module.exports = {
         purgeOnly: ['/all.css']
       }
     },
-    'gatsby-plugin-webpack-bundle-analyzer',
+    [
+      `gatsby-plugin-webpack-size`,
+      {
+        // Set to true to show bundle sizes in development mode as well
+        development: true
+      }
+    ],
     // must be after other CSS plugins
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
