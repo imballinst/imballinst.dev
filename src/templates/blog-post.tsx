@@ -9,6 +9,7 @@ import { peepoTheme } from '../theme';
 import { Paper } from '../components/Paper';
 import { ListItem } from '../components/List';
 import { PeepoLink } from '../components/Links';
+import { stringify } from '../helpers/utils';
 
 type BlogPostTemplateProps = {
   content: ReactNode;
@@ -53,7 +54,9 @@ export const BlogPostTemplate = ({
                   className={`inline ${peepoTheme.textSizes.small}`}
                   key={tag + `tag`}
                 >
-                  <PeepoLink to={`/tags/${kebabCase(tag)}/`}>{tag}</PeepoLink>
+                  <PeepoLink to={`/blog${stringify({ filterTags: [tag] })}`}>
+                    {tag}
+                  </PeepoLink>
                 </ListItem>
               ))}
             </ul>

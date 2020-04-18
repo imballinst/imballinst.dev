@@ -14,8 +14,14 @@ export function createId(limit: number = 5) {
   return result;
 }
 
-export function stringify(obj: FormState) {
-  return qs.stringify(obj, { addQueryPrefix: true });
+export function stringify(obj: Partial<FormState>) {
+  const filterText = obj.filterText || null;
+  const filterTags = obj.filterTags || null;
+
+  return qs.stringify(
+    { filterText, filterTags },
+    { addQueryPrefix: true, skipNulls: true }
+  );
 }
 
 export function parseQueryParams<T>(queryParams: string): Partial<T> {
