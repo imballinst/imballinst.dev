@@ -97,7 +97,9 @@ module.exports = {
         tailwind: true,
         purgeOnly: ['/all.css']
       }
-    }, // must be after other CSS plugins
+    },
+    'gatsby-plugin-webpack-bundle-analyzer',
+    // must be after other CSS plugins
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 };
