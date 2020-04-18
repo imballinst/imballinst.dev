@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconProps } from './commons';
 
-export function FilterIcon({ size = 24 }: IconProps) {
+export function FilterIcon({ size = 16 }: IconProps) {
   return (
     <svg
       width={size}
