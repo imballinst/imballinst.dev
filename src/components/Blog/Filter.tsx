@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import { usePopper } from 'react-popper';
+
 import { Checkbox } from '../Forms/Checkbox';
 import { Paper } from '../Paper';
 import { TagCount } from './Posts';
@@ -20,30 +22,63 @@ const CheckboxSpacer = styled.div`
   }
 `;
 
-export const Filter = ({ tags }: FilterProps) => (
-  <Paper>
-    <div>
-      <PeepoIconButton>
-        <FilterIcon />
-      </PeepoIconButton>
+export function Filter({ tags }: FilterProps) {
+  // return <Example />;
+
+  const [buttonElement, setButtonElement] = useState<HTMLButtonElement | null>(
+    null
+  );
+  const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(
+    null
+  );
+  const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null);
+  const [isPopperOpen, setIsPopperOpen] = useState(false);
+
+  const { styles, attributes } = usePopper(buttonElement, popperElement, {
+    modifiers: [{ name: 'arrow', options: { element: arrowElement } }],
+    placement: 'bottom-start'
+  });
+
+  function onTogglePopper() {
+    setIsPopperOpen(oldState => !oldState);
+  }
+
+  return (
+    <div className="relative">
+      <div className="flex flex-row justify-end">
+        <PeepoIconButton ref={setButtonElement} onClick={onTogglePopper}>
+          <FilterIcon />
+        </PeepoIconButton>
+      </div>
+      {isPopperOpen && (
+        <div
+          ref={setPopperElement}
+          style={styles.popper}
+          {...attributes.popper}
+        >
+          <Paper>
+            <div ref={setArrowElement} style={styles.arrow} />
+            <div className="mb-4">
+              <TextField name="textFIlter" label="Filter text" />
+            </div>
+            <Typography variant="h6" className="font-semibold">
+              Tags
+            </Typography>
+            <div className="mb-4">
+              {tags.map(tag => (
+                <CheckboxSpacer key={tag.fieldValue}>
+                  <Checkbox
+                    name="tagsFilter"
+                    value={tag.fieldValue}
+                    label={tag.fieldValue}
+                  />
+                </CheckboxSpacer>
+              ))}
+            </div>
+            <PeepoButton>Filter</PeepoButton>
+          </Paper>
+        </div>
+      )}
     </div>
-    <div className="mb-4">
-      <TextField name="textFIlter" label="Filter text" />
-    </div>
-    <Typography variant="h6" className="font-semibold">
-      Tags
-    </Typography>
-    <div className="mb-4">
-      {tags.map(tag => (
-        <CheckboxSpacer>
-          <Checkbox
-            name="tagsFilter"
-            value={tag.fieldValue}
-            label={tag.fieldValue}
-          />
-        </CheckboxSpacer>
-      ))}
-    </div>
-    <PeepoButton>Filter</PeepoButton>
-  </Paper>
-);
+  );
+}

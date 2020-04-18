@@ -62,7 +62,7 @@ function NavbarItemExternal({
 
 // Navbar.
 const NavbarItemSpacer = styled.div`
-  & > .navbar-item:not(:first-child) {
+  & > .navbar-item:not(:first-of-type) {
     margin-left: ${peepoTheme.spacing(4)};
   }
 `;
@@ -97,7 +97,11 @@ function Navbar() {
       <NavbarContent className="flex flex-row justify-between">
         <NavbarItemSpacer className="flex flex-row">
           {paths.map(path => (
-            <NavbarItem isActive={isActive(path.to, pathname)} to={path.to}>
+            <NavbarItem
+              isActive={isActive(path.to, pathname)}
+              to={path.to}
+              key={path.to}
+            >
               {path.text}
             </NavbarItem>
           ))}

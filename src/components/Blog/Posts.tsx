@@ -108,9 +108,9 @@ function Posts(props: Props) {
       <div className="mb-4">
         <Filter tags={tags} />
       </div>
-      <SectionWrapper>
+      {/* <SectionWrapper>
         {posts && posts.map(({ node: post }) => <ListBlogItem post={post} />)}
-      </SectionWrapper>
+      </SectionWrapper> */}
     </div>
   );
 }
