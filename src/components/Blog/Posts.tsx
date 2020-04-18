@@ -164,12 +164,12 @@ function Posts(props: Props) {
   const location = useLocation();
 
   const [form, setForm] = useState<FormState>(parse(location.search));
-  const [tempForm, setTempForm] = useState<FormState>({ ...form });
   const [renderedPosts, setRenderedPosts] = useState(filterPosts(posts, form));
 
   useEffect(() => {
     const parsed = parse(location.search);
 
+    setForm(parsed);
     setRenderedPosts(filterPosts(posts, parsed));
   }, [posts, location.search]);
 
@@ -177,9 +177,9 @@ function Posts(props: Props) {
     const { name, value } = e.target;
 
     if (name === 'filterText') {
-      setTempForm(oldForm => ({ ...oldForm, filterText: value }));
+      setForm(oldForm => ({ ...oldForm, filterText: value }));
     } else {
-      setTempForm(oldForm => {
+      setForm(oldForm => {
         const valueIndex = oldForm.filterTags.indexOf(value);
         let newFilterTags = oldForm.filterTags;
 
@@ -199,8 +199,7 @@ function Posts(props: Props) {
   }
 
   function onFilterSubmit() {
-    navigate(`${location.pathname}${stringify(tempForm)}`);
-    setForm(tempForm);
+    navigate(`${location.pathname}${stringify(form)}`);
   }
 
   return (
@@ -209,7 +208,7 @@ function Posts(props: Props) {
         <Filter
           tags={tags}
           onFilterSubmit={onFilterSubmit}
-          form={tempForm}
+          form={form}
           onChangeForm={onChangeForm}
         />
       </div>
