@@ -1,5 +1,5 @@
 // TODO: move this to under src/pages to take advantage of https://www.gatsbyjs.org/docs/graphql-api/#pagequery.
-import React, { useState, ChangeEvent, useEffect } from 'react';
+import React, { useState, ChangeEvent, useEffect, useMemo } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 
@@ -155,6 +155,10 @@ function filterPosts(posts: any[], form: FormState) {
     : null;
 }
 
+function isFiltering(form: FormState) {
+  return form.filterTags.length > 0 && form.filterText !== '';
+}
+
 function Posts(props: Props) {
   const { allMarkdownRemark, tagsRemark } = props.data;
   const posts = allMarkdownRemark.edges;
@@ -165,6 +169,7 @@ function Posts(props: Props) {
 
   const [form, setForm] = useState<FormState>(parse(location.search));
   const [renderedPosts, setRenderedPosts] = useState(filterPosts(posts, form));
+  const numberOfPosts = useMemo(() => renderedPosts.length, [renderedPosts]);
 
   useEffect(() => {
     const parsed = parse(location.search);
@@ -203,14 +208,19 @@ function Posts(props: Props) {
   }
 
   return (
-    <div className="flex flex-col">
-      <div className="mb-4">
-        <Filter
-          tags={tags}
-          onFilterSubmit={onFilterSubmit}
-          form={form}
-          onChangeForm={onChangeForm}
-        />
+    <div className="flex flex-col relative">
+      <div className="flex flex-row mb-4">
+        <div className="flex flex-1 items-center">
+          {isFiltering(form) ? `${numberOfPosts} results found` : null}
+        </div>
+        <div className="flex flex-1 justify-end">
+          <Filter
+            tags={tags}
+            onFilterSubmit={onFilterSubmit}
+            form={form}
+            onChangeForm={onChangeForm}
+          />
+        </div>
       </div>
       <SectionWrapper>
         {renderedPosts.map((post: any) => (

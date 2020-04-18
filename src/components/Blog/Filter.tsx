@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import { usePopper } from 'react-popper';
 import { useTransition, animated } from 'react-spring';
 
@@ -74,13 +74,29 @@ export function Filter({
     onTogglePopper();
   }
 
+  useEffect(() => {
+    function onClickOutside(e: MouseEvent) {
+      const clickedElement = e.target as Element;
+
+      if (popperElement !== null) {
+        if (!popperElement.contains(clickedElement)) {
+          set(PopperState.HIDDEN);
+        }
+      }
+    }
+
+    document.addEventListener('click', onClickOutside);
+
+    return () => {
+      document.removeEventListener('click', onClickOutside);
+    };
+  }, [popperElement]);
+
   return (
-    <div className="relative">
-      <div className="flex flex-row justify-end">
-        <PeepoIconButton ref={setButtonElement} onClick={onTogglePopper}>
-          <FilterIcon />
-        </PeepoIconButton>
-      </div>
+    <div>
+      <PeepoIconButton ref={setButtonElement} onClick={onTogglePopper}>
+        <FilterIcon />
+      </PeepoIconButton>
       {transitions.map(({ item, key, props }) => {
         if (item === PopperState.HIDDEN) {
           return <animated.div key={key} style={props} />;
