@@ -34,7 +34,12 @@ export function PeepoButton({
 
   return (
     <StyledButton
-      className={cls(peepoTheme.buttonVariant('dark'), padding, className)}
+      className={cls(
+        peepoTheme.buttonVariant('dark'),
+        padding,
+        className,
+        'shadow'
+      )}
       fullWidth={fullWidth}
     >
       {children}
@@ -42,12 +47,20 @@ export function PeepoButton({
   );
 }
 
-type PeepoIconButtonProps = Omit<PeepoButtonProps, 'size' | 'className'>;
+type PeepoIconButtonProps = {
+  children: ReactNode;
+};
 
-export function PeepoIconButton({ children, fullWidth }: PeepoIconButtonProps) {
+export function PeepoIconButton({ children }: PeepoIconButtonProps) {
   return (
-    <PeepoButton className="rounded-full" fullWidth={fullWidth}>
+    <StyledButton
+      className={cls(
+        peepoTheme.buttonVariant('dark'),
+        peepoTheme.textSizes.small,
+        'p-1 shadow rounded-full'
+      )}
+    >
       {children}
-    </PeepoButton>
+    </StyledButton>
   );
 }
