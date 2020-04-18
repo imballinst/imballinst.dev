@@ -1,3 +1,6 @@
+import qs from 'qs';
+import { FormState } from '../components/Blog/Filter';
+
 export function createId(limit: number = 5) {
   const characters =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -9,4 +12,12 @@ export function createId(limit: number = 5) {
   }
 
   return result;
+}
+
+export function stringify(obj: FormState) {
+  return qs.stringify(obj, { addQueryPrefix: true });
+}
+
+export function parseQueryParams<T>(queryParams: string): Partial<T> {
+  return qs.parse(queryParams);
 }

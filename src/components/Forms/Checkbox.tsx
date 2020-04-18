@@ -1,21 +1,17 @@
-import React, { ReactNode, useRef, ChangeEvent } from 'react';
+import React from 'react';
 import { FormLabel } from './FormLabel';
-import { useInputId } from './common';
+import { useInputId, CommonInputProps } from './common';
 
-type CheckboxProps = {
-  name: string;
-  id?: string;
+interface CheckboxProps extends CommonInputProps {
   checked?: boolean;
-  value?: string;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-  label: ReactNode;
-};
+}
 
 export function Checkbox({
   name,
   checked,
   id,
   onChange,
+  value,
   label
 }: CheckboxProps) {
   const checkboxId = useInputId(id);
@@ -26,6 +22,7 @@ export function Checkbox({
         id={checkboxId}
         name={name}
         onChange={onChange}
+        value={value}
         checked={checked}
         className="mr-2 leading-tight"
         type="checkbox"

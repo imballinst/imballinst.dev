@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 
@@ -9,6 +9,7 @@ import { cls } from '../../helpers/styles';
 import { PeepoLink } from '../Links';
 import { SectionWrapper } from '../Layout';
 import { Filter } from './Filter';
+import { useLocation } from '@reach/router';
 
 export type TagCount = {
   fieldValue: string;
@@ -42,14 +43,14 @@ export type ListBlogItemType = {
 };
 
 const StyledPaper = styled(Paper)`
-  &:not(:first-child) {
+  &:not(:first-of-type) {
     margin-top: ${peepoTheme.spacing(8)};
   }
 `;
 
 export function ListBlogItem({ post }: { post: ListBlogItemType }) {
   return (
-    <StyledPaper key={post.id}>
+    <StyledPaper>
       <article
         className={cls({
           featured: post.frontmatter.featuredpost
@@ -82,8 +83,8 @@ export function ListBlogItem({ post }: { post: ListBlogItemType }) {
             </div>
           </div>
         </header>
-        <p className="mt-4">
-          {post.excerpt}
+        <div className="mt-4">
+          <p>{post.excerpt}</p>
           <div className="block w-full mt-8 text-right">
             <PeepoLink
               className={`${peepoTheme.textSizes.small}`}
@@ -92,7 +93,7 @@ export function ListBlogItem({ post }: { post: ListBlogItemType }) {
               Read more →
             </PeepoLink>
           </div>
-        </p>
+        </div>
       </article>
     </StyledPaper>
   );
@@ -109,50 +110,57 @@ function Posts(props: Props) {
         <Filter tags={tags} />
       </div>
       <SectionWrapper>
-        {posts && posts.map(({ node: post }) => <ListBlogItem post={post} />)}
+        {posts &&
+          posts.map(({ node: post }) => (
+            <ListBlogItem key={post.id} post={post} />
+          ))}
       </SectionWrapper>
     </div>
   );
 }
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query PostsQuery {
-        allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-        ) {
-          edges {
-            node {
-              excerpt(pruneLength: 400)
-              id
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                date(formatString: "MMMM DD, YYYY")
-                featuredpost
-                featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
+export default () => {
+  const location = useLocation();
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query PostsQuery {
+          allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
+            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          ) {
+            edges {
+              node {
+                excerpt(pruneLength: 400)
+                id
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                  date(formatString: "MMMM DD, YYYY")
+                  featuredpost
+                  featuredimage {
+                    childImageSharp {
+                      fluid(maxWidth: 120, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
                     }
                   }
                 }
               }
             }
           }
-        }
-        tagsRemark: allMarkdownRemark(limit: 1000) {
-          tags: group(field: frontmatter___tags) {
-            fieldValue
-            totalCount
+          tagsRemark: allMarkdownRemark(limit: 1000) {
+            tags: group(field: frontmatter___tags) {
+              fieldValue
+              totalCount
+            }
           }
         }
-      }
-    `}
-    render={data => <Posts data={data} />}
-  />
-);
+      `}
+      render={data => <Posts data={data} />}
+    />
+  );
+};

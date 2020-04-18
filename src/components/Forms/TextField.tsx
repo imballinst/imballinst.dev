@@ -1,16 +1,11 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 import { FormLabel } from './FormLabel';
-import { useInputId } from './common';
+import { useInputId, CommonInputProps } from './common';
 import { peepoTheme } from '../../theme';
 
-type TextFieldProps = {
-  name: string;
-  id?: string;
-  value?: string;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+interface TextFieldProps extends CommonInputProps {
   type?: 'inline' | 'vertical';
-  label?: string;
-};
+}
 
 export function TextField({
   name,
