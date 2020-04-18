@@ -11,6 +11,7 @@ import { peepoTheme } from '../../theme';
 import { TextField } from '../Forms/TextField';
 import { PeepoButton, PeepoIconButton } from '../Button';
 import { FilterIcon } from '../../img/FilterIcon';
+import { useNavigate, useLocation } from '@reach/router';
 
 type FilterProps = {
   tags: TagCount[];
@@ -37,6 +38,9 @@ export function Filter({ tags }: FilterProps) {
   );
   const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const { styles, attributes } = usePopper(buttonElement, popperElement, {
     modifiers: [{ name: 'arrow', options: { element: arrowElement } }],
     placement: 'bottom-start'
@@ -52,6 +56,10 @@ export function Filter({ tags }: FilterProps) {
 
   function onTogglePopper() {
     set(index === PopperState.SHOWN ? PopperState.HIDDEN : PopperState.SHOWN);
+  }
+
+  function filterResults() {
+    navigate(location.pathname);
   }
 
   return (
