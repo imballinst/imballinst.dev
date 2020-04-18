@@ -22,8 +22,11 @@ function NavbarItem({
   isActive: boolean;
 }) {
   return (
-    <div className="navbar-item pb-4 relative">
-      <Link className={peepoTheme.navbarLinkVariant('dark')} to={to}>
+    <div className="navbar-item relative">
+      <Link
+        className={`${peepoTheme.navbarLinkVariant('dark')} pb-4 pt-4 block`}
+        to={to}
+      >
         {children}
       </Link>
       {isActive && (
@@ -54,7 +57,7 @@ function NavbarItemExternal({
   children: ReactNode;
 }) {
   return (
-    <NavbarItemIcon className="navbar-item" {...props}>
+    <NavbarItemIcon className="navbar-item pt-4" {...props}>
       {children}
     </NavbarItemIcon>
   );
@@ -90,7 +93,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`bg-teal-900 text-white ${peepoTheme.pageHorizontalSpacing} pt-4 fixed top-0 w-full z-50 flex flex-row justify-center`}
+      className={`bg-teal-900 text-white ${peepoTheme.pageHorizontalSpacing} fixed top-0 w-full z-50 flex flex-row justify-center`}
       role="navigation"
       aria-label="main-navigation"
     >
