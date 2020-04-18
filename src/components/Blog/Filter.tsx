@@ -6,6 +6,7 @@ import { Typography } from '../Typography';
 import styled from '@emotion/styled';
 import { peepoTheme } from '../../theme';
 import { TextField } from '../Forms/TextField';
+import { PeepoButton } from '../Button';
 
 type FilterProps = {
   tags: TagCount[];
@@ -26,7 +27,7 @@ export const Filter = ({ tags }: FilterProps) => (
     <Typography variant="h6" className="font-semibold">
       Tags
     </Typography>
-    <div>
+    <div className="mb-4">
       {tags.map(tag => (
         <CheckboxSpacer>
           <Checkbox
@@ -37,5 +38,6 @@ export const Filter = ({ tags }: FilterProps) => (
         </CheckboxSpacer>
       ))}
     </div>
+    <PeepoButton>Filter</PeepoButton>
   </Paper>
 );
