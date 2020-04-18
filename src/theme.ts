@@ -14,14 +14,17 @@ type ColorSet = {
   contrastText: ColorSetElement;
   contrastTextHover: ColorSetElement;
 };
-type ColorSets = {
-  [index: string]: ColorSet;
-  dark: ColorSet;
-  blue: ColorSet;
+type BorderColorSet = Omit<ColorSet, 'contrastText' | 'contrastTextHover'>;
+
+type ColorSets<T> = {
+  [index: string]: T;
+  dark: T;
+  blue: T;
 };
 
 // The first array element refers to the color, the second one refers to its TailwindCSS equivalent.
-const colorSets: ColorSets = {
+// TODO: we can refactor this.
+const colorSets: ColorSets<ColorSet> = {
   dark: {
     dark: { hex: '#1a202c', twClass: 'bg-teal-900' },
     main: { hex: '#234e52', twClass: 'bg-teal-800' },
@@ -37,6 +40,18 @@ const colorSets: ColorSets = {
     contrastTextHover: { hex: '#cbd5e0', twClass: 'text-gray-300' }
   }
 };
+const borderColorSets: ColorSets<BorderColorSet> = {
+  dark: {
+    dark: { hex: '#1a202c', twClass: 'border-teal-900' },
+    main: { hex: '#234e52', twClass: 'border-teal-800' },
+    light: { hex: '#2c7a7b', twClass: 'border-teal-700' }
+  },
+  blue: {
+    dark: { hex: '#3182ce', twClass: 'border-teal-600' },
+    main: { hex: '#4299e1', twClass: 'border-teal-500' },
+    light: { hex: '#63b3ed', twClass: 'border-teal-400' }
+  }
+};
 
 const textSizes = {
   large4: 'text-3xl', // 1.875rem.
@@ -49,6 +64,7 @@ const textSizes = {
 
 export const peepoTheme = {
   colorSets,
+  borderColorSets,
   textSizes,
   /**
    * Imagine this function as TailwindCSS' margin and padding values.

@@ -2,18 +2,27 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 
-import PreviewCompatibleImage, { Fluid } from './PreviewCompatibleImage';
-import { Paper } from './Paper';
-import { peepoTheme } from '../theme';
-import { cls } from '../helpers/styles';
-import { PeepoLink } from './Links';
-import { SectionWrapper } from './Layout';
+import PreviewCompatibleImage, { Fluid } from '../PreviewCompatibleImage';
+import { Paper } from '../Paper';
+import { peepoTheme } from '../../theme';
+import { cls } from '../../helpers/styles';
+import { PeepoLink } from '../Links';
+import { SectionWrapper } from '../Layout';
+import { Filter } from './Filter';
+
+export type TagCount = {
+  fieldValue: string;
+  totalCount: number;
+};
 
 type Props = {
   data: {
     allMarkdownRemark: {
       // TODO(aji): change this with the correct form of the post.
       edges: any[];
+    };
+    tagsRemark: {
+      tags: TagCount[];
     };
   };
 };
@@ -39,7 +48,6 @@ const StyledPaper = styled(Paper)`
 `;
 
 export function ListBlogItem({ post }: { post: ListBlogItemType }) {
-  console.log(post);
   return (
     <StyledPaper key={post.id}>
       <article
@@ -90,20 +98,27 @@ export function ListBlogItem({ post }: { post: ListBlogItemType }) {
   );
 }
 
-function BlogRoll(props: Props) {
-  const { edges: posts } = props.data.allMarkdownRemark;
+function Posts(props: Props) {
+  const { allMarkdownRemark, tagsRemark } = props.data;
+  const posts = allMarkdownRemark.edges;
+  const tags = tagsRemark.tags;
 
   return (
-    <SectionWrapper>
-      {posts && posts.map(({ node: post }) => <ListBlogItem post={post} />)}
-    </SectionWrapper>
+    <div className="flex flex-col">
+      <div className="mb-4">
+        <Filter tags={tags} />
+      </div>
+      <SectionWrapper>
+        {posts && posts.map(({ node: post }) => <ListBlogItem post={post} />)}
+      </SectionWrapper>
+    </div>
   );
 }
 
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query PostsQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
@@ -130,8 +145,14 @@ export default () => (
             }
           }
         }
+        tagsRemark: allMarkdownRemark(limit: 1000) {
+          tags: group(field: frontmatter___tags) {
+            fieldValue
+            totalCount
+          }
+        }
       }
     `}
-    render={data => <BlogRoll data={data} />}
+    render={data => <Posts data={data} />}
   />
 );

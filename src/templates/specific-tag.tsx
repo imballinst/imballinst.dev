@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout, { SectionWrapper } from '../components/Layout';
-import { ListBlogItem, ListBlogItemType } from '../components/BlogRoll';
+import { ListBlogItem, ListBlogItemType } from '../components/Blog/Posts';
 import { createGrammaticalNoun } from '../helpers/formatter';
 import { Typography } from '../components/Typography';
 import { PeepoLink } from '../components/Links';
@@ -10,7 +10,7 @@ import { PeepoLink } from '../components/Links';
 type Post = {
   node: ListBlogItemType;
 };
-type TagsProps = {
+type SpecificTagProps = {
   data: {
     allMarkdownRemark: {
       totalCount: number;
@@ -27,7 +27,7 @@ type TagsProps = {
   };
 };
 
-function Tags({ data, pageContext }: TagsProps) {
+function SpecificTags({ data, pageContext }: SpecificTagProps) {
   const posts = data.allMarkdownRemark.edges;
   const postLinks = posts.map(post => <ListBlogItem post={post.node} />);
   const tag = pageContext.tag;
@@ -61,7 +61,7 @@ function Tags({ data, pageContext }: TagsProps) {
   );
 }
 
-export default Tags;
+export default SpecificTags;
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {
