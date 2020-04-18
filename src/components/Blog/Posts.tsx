@@ -1,5 +1,5 @@
 // TODO: move this to under src/pages to take advantage of https://www.gatsbyjs.org/docs/graphql-api/#pagequery.
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 
@@ -101,63 +101,25 @@ export function ListBlogItem({ post }: { post: ListBlogItemType }) {
   );
 }
 
-function Posts(props: Props) {
-  const { allMarkdownRemark, tagsRemark } = props.data;
-  const posts = allMarkdownRemark.edges;
-  const tags = tagsRemark.tags;
+function parse(search: string): FormState {
+  let filterText = '';
+  let filterTags: string[] = [];
 
-  const navigate = useNavigate();
-  const location = useLocation();
+  if (search.length > 0) {
+    const parsed = parseQueryParams<FormState>(search);
 
-  const [form, setForm] = useState<FormState>(() => {
-    let filterText = '';
-    let filterTags: string[] = [];
-
-    if (location.search.length > 0) {
-      const parsed = parseQueryParams<FormState>(location.search);
-
-      filterText = parsed.filterText || '';
-      filterTags = parsed.filterTags || [];
-    }
-
-    return {
-      filterText,
-      filterTags
-    };
-  });
-  const [tempForm, setTempForm] = useState<FormState>({ ...form });
-
-  function onChangeForm(e: ChangeEvent<HTMLInputElement>) {
-    const { name, value } = e.target;
-
-    if (name === 'filterText') {
-      setTempForm(oldForm => ({ ...oldForm, filterText: value }));
-    } else {
-      setTempForm(oldForm => {
-        const valueIndex = oldForm.filterTags.indexOf(value);
-        let newFilterTags = oldForm.filterTags;
-
-        if (valueIndex === -1) {
-          newFilterTags = newFilterTags.concat(value);
-        } else {
-          newFilterTags = [...newFilterTags];
-          newFilterTags.splice(valueIndex, 1);
-        }
-
-        return {
-          ...oldForm,
-          filterTags: newFilterTags
-        };
-      });
-    }
+    filterText = parsed.filterText || '';
+    filterTags = parsed.filterTags || [];
   }
 
-  function onFilterSubmit() {
-    navigate(`${location.pathname}${stringify(tempForm)}`);
-    setForm(tempForm);
-  }
+  return {
+    filterText,
+    filterTags
+  };
+}
 
-  const renderedPosts = posts
+function filterPosts(posts: any[], form: FormState) {
+  return posts
     ? posts.reduce((array, { node: post }) => {
         const { tags: postTagsRaw, title } = post.frontmatter;
         const postTags = postTagsRaw as string[];
@@ -191,6 +153,55 @@ function Posts(props: Props) {
         return array;
       }, [])
     : null;
+}
+
+function Posts(props: Props) {
+  const { allMarkdownRemark, tagsRemark } = props.data;
+  const posts = allMarkdownRemark.edges;
+  const tags = tagsRemark.tags;
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [form, setForm] = useState<FormState>(parse(location.search));
+  const [tempForm, setTempForm] = useState<FormState>({ ...form });
+  const [renderedPosts, setRenderedPosts] = useState(filterPosts(posts, form));
+
+  useEffect(() => {
+    const parsed = parse(location.search);
+
+    setRenderedPosts(filterPosts(posts, parsed));
+  }, [posts, location.search]);
+
+  function onChangeForm(e: ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target;
+
+    if (name === 'filterText') {
+      setTempForm(oldForm => ({ ...oldForm, filterText: value }));
+    } else {
+      setTempForm(oldForm => {
+        const valueIndex = oldForm.filterTags.indexOf(value);
+        let newFilterTags = oldForm.filterTags;
+
+        if (valueIndex === -1) {
+          newFilterTags = newFilterTags.concat(value);
+        } else {
+          newFilterTags = [...newFilterTags];
+          newFilterTags.splice(valueIndex, 1);
+        }
+
+        return {
+          ...oldForm,
+          filterTags: newFilterTags
+        };
+      });
+    }
+  }
+
+  function onFilterSubmit() {
+    navigate(`${location.pathname}${stringify(tempForm)}`);
+    setForm(tempForm);
+  }
 
   return (
     <div className="flex flex-col">
