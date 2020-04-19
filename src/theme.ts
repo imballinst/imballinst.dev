@@ -83,7 +83,7 @@ export const peepoTheme = {
     return `${colorSet.contrastText.twClass} hover:${colorSet.contrastTextHover.twClass} font-bold`;
   },
   topbarHeight: 56,
-  pageHorizontalSpacing: 'px-16 sm:px-24 md:px-32',
+  pageHorizontalSpacing: 'px-8 sm:px-16 md:px-24',
   pageVerticalSpacing: 'py-4 lg:py-8',
   maxOptimalWidth: '768px'
 };

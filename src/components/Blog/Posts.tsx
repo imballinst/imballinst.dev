@@ -31,7 +31,6 @@ type Props = {
 };
 
 export type ListBlogItemType = {
-  excerpt: string;
   id: string;
   fields: {
     slug: string;
@@ -41,6 +40,7 @@ export type ListBlogItemType = {
     date: string;
     featuredpost?: boolean;
     featuredimage: { childImageSharp: Fluid };
+    description: string;
   };
 };
 
@@ -79,22 +79,14 @@ export function ListBlogItem({ post }: { post: ListBlogItemType }) {
               </PeepoLink>
             </div>
             <div className="block w-full">
-              <span className={`${peepoTheme.textSizes.small} italic`}>
+              <span className={`${peepoTheme.textSizes.small} text-gray-600`}>
                 {post.frontmatter.date}
               </span>
             </div>
           </div>
         </header>
         <div className="mt-4">
-          <p>{post.excerpt}</p>
-          <div className="block w-full mt-8 text-right">
-            <PeepoLink
-              className={`${peepoTheme.textSizes.small}`}
-              to={post.fields.slug}
-            >
-              Read more →
-            </PeepoLink>
-          </div>
+          <p>{post.frontmatter.description}</p>
         </div>
       </article>
     </StyledPaper>
@@ -241,13 +233,13 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
               id
               fields {
                 slug
               }
               frontmatter {
                 title
+                description
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {

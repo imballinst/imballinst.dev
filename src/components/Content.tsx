@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { peepoTheme } from '../theme';
 
 // References: https://www.webfx.com/blog/web-design/hyperlink-design/.
+// Since we can't quite modify those from the Gatsby config, we override them here.
 const ContentDiv = styled.div`
   & p {
     &:not(:last-child) {
@@ -13,6 +14,13 @@ const ContentDiv = styled.div`
     color: ${peepoTheme.colorSets.blue.main.hex};
     &:hover {
       color: ${peepoTheme.colorSets.blue.dark.hex};
+    }
+  }
+  & figure {
+    & figcaption {
+      font-style: italic;
+      font-size: 0.875rem;
+      text-align: center;
     }
   }
 `;

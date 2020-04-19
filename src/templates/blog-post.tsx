@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import kebabCase from 'lodash.kebabcase';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout, { SectionWrapper } from '../components/Layout';
@@ -14,7 +13,6 @@ import { stringify } from '../helpers/utils';
 type BlogPostTemplateProps = {
   content: ReactNode;
   contentComponent?: React.ElementType;
-  description: string;
   tags: string[];
   title: string;
   date: string;
@@ -24,7 +22,6 @@ type BlogPostTemplateProps = {
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
   tags,
   title,
   date,
@@ -39,11 +36,12 @@ export const BlogPostTemplate = ({
         <Typography variant="h1" className="leading-none">
           {title}
         </Typography>
-        <span className={`${peepoTheme.textSizes.small} italic`}>{date}</span>
+        <span
+          className={`${peepoTheme.textSizes.small} mt-1 mb-8 text-gray-600`}
+        >
+          {date}
+        </span>
 
-        <Typography variant="body" className="mb-4 mt-4">
-          {description}
-        </Typography>
         <PostContent content={content} />
         {tags && tags.length ? (
           <div style={{ marginTop: `4rem` }}>
@@ -90,14 +88,10 @@ const BlogPost = ({ data }: BlogPostProps) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
+            <meta name="description" content={post.frontmatter.description} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
