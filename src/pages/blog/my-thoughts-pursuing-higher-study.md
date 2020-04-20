@@ -10,23 +10,29 @@ tags:
   - education
 ---
 
+This story is split into 3 parts. The first part is the preparation, the second part is the study itself, and the last part is the post-graduation.
+
+## Preparation
+
 The year was 2017. My father said that during his time, he didn't have the chance to pursue higher study because he lacked financial support. Now that he could afford me to pursue higher study overseas, he really wanted me to do it.
 
 Another reason that he voiced was that due to the increasing competitions, people's degrees contribute a lot when applying for jobs. However, I didn't agree with this norm (and still don't), because degrees do not necessarily ensure that one is capable of creating positive impact.
 
 There were 2 reasons why I finally decided to pursue higher study. The first one was that I respected my father's good will. The second was that I wanted to experience living abroad by myself. And so, I prepared for the upcoming enrollment in July 2018.
 
-## Looking for Options
+### Looking for Options
 
-The first thing I did was listing universities that I wanted and I could apply to. I didn't want to do another subject other than Information Technology, so I was pretty much locked on it. Computer Science came close but I threw it out of the window because I was bad at mathematics and I didn't want to relive the undergraduate pain once more.
+The first thing I did was listing universities that I wanted, I could apply, and I could afford. I didn't want to do another subject other than Information Technology, so I was pretty much locked on it. Computer Science came close but I threw it out of the window because I was bad at mathematics and I didn't want to relive the undergraduate pain once more.
 
-So, because I didn't do well in my undergraduate, my choice was a bit limited. Most universities required GPA at least 3.0 in the scale of 4. From my [search result in Top Universities in 2018](https://www.topuniversities.com/university-rankings/university-subject-rankings/2018/computer-science-information-systems), I found that University of Melbourne, which at that time ranked 14th best, had lower GPA requirement (2.75 in the scale of 4), so that's a yep.
+Most post graduate program required my undergraduate GPA to be at least 3.0 in the scale of 4. Since I didn't do well in my undergraduate, my choice was a bit limited. From my [search result in Top Universities in 2018](https://www.topuniversities.com/university-rankings/university-subject-rankings/2018/computer-science-information-systems), I found out that University of Melbourne, which at that time ranked 14th best, had lower GPA requirement (2.75 in the scale of 4), so that's a yep.
 
-University of Melbourne's Information Technology course had Human-Computer Interaction as well, which aligned with what I did at that time, which was front-end web development.
+University of Melbourne's Information Technology course had Human-Computer Interaction as well, which aligned with what I did at that time, which was front-end web development. That's another yep.
 
-Lastly, Australia also seemed to be a new whole world to me at that time, as I had never experienced four seasons in a year before. That nailed it.
+Australia also seemed to be a new whole world to me at that time, as I had never experienced four seasons in a year before. That's the third yep.
 
-## A Mountain to Climb
+Tuition fee and living cost... maybe not so much of a yep. At that time, a student could enroll in 4 subjects in a semester, with 12.5 credits each. For each 12.5 credits taken, the fee was 5.376 AUD (around 53M IDR). On top of that, apparently the living cost in Melbourne was quite high, especially when it comes to renting a place to live. I could cut this cost if I was willing to live with other people, but I valued _me-time_ so much. I couldn't afford to risk it in the long run.
+
+### A Mountain to Climb
 
 The hardest part of the preparation was passing the IELTS score needed to enroll in the University of Melbourne's School of Engineering. During that time, the minimum overall score was 6.5, with no aspect lower than 6.
 
@@ -48,7 +54,7 @@ I think it is safe to say that I did poorly in that test.
 
 One month later, the result came out. I got 7.0 (listening), 7.0 (writing), 8.0 (reading), and 6.0 (speaking), with the overall 6.5. So, yay. I passed the IELTS score requirement.
 
-## Enrollment Application and Visa Application
+### Enrollment Application and Visa Application
 
 The next step was applying to University of Melbourne, with the IELTS result attached. I applied in January 2018 and waited for the announcement after. Their website told me that the selection process would start in late March.
 
