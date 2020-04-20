@@ -22,6 +22,8 @@ There were 2 reasons why I finally decided to pursue higher study. The first one
 
 ### Looking for Options
 
+![Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.](/img/looking-for-options.jpg)
+
 The first thing I did was listing universities that I wanted, I could apply, and I could afford. I didn't want to do another subject other than Information Technology, so I was pretty much locked on it. Computer Science came close but I threw it out of the window because I was bad at mathematics and I didn't want to relive the undergraduate pain once more.
 
 Most post graduate program required my undergraduate GPA to be at least 3.0 in the scale of 4. Since I didn't do well in my undergraduate, my choice was a bit limited. From my [search result in Top Universities in 2018](https://www.topuniversities.com/university-rankings/university-subject-rankings/2018/computer-science-information-systems), I found out that University of Melbourne, which at that time ranked 14th best, had lower GPA requirement (2.75 in the scale of 4), so that's a yep.
@@ -34,13 +36,15 @@ Tuition fee and living cost... maybe not so much of a yep. At that time, a stude
 
 ### A Mountain to Climb
 
+![Sometimes it feels impossible to get to the top. Photo by Julian Zett on Unsplash.](/img/mountain-to-climb.jpg)
+
 The hardest part of the preparation was passing the IELTS score needed to enroll in the University of Melbourne's School of Engineering. During that time, the minimum overall score was 6.5, with no aspect lower than 6.
 
 The IELTS test fee itself was really expensive (215 USD ~= 2.8M IDR). To make it worse, it was a one-off. If I screwed it, I would need to re-attempt and pay for another test. I think it took around 3 months of preparation for me before I took it in December 2017.
 
 There were 4 aspects tested. They are **listening**, **writing**, **reading**, and **speaking**. My speaking test was scheduled a day after the other written tests.
 
-The test day finally came, and I thought I was doing quite well for the first three tests, so I approached the speaking test session with confidence. Long story short, the time comes, I came into the room and began the conversation with the person (who was a native speaker).
+The test day finally came, and I thought I was doing quite well for the first three tests, so I approached the speaking test session with confidence. Long story short, I came into the room where the speaking test was held and began the conversation with the native speaker.
 
 So, the [IELTS speaking test consists of three parts](https://takeielts.britishcouncil.org/take-ielts/prepare/free-ielts-practice-tests/speaking). The first part is questions around us and our family. In the second part, we will need to talk about a topic, while in the third part, we will discuss that topic with the examiner.
 
@@ -54,7 +58,7 @@ I think it is safe to say that I did poorly in that test.
 
 One month later, the result came out. I got 7.0 (listening), 7.0 (writing), 8.0 (reading), and 6.0 (speaking), with the overall 6.5. So, yay. I passed the IELTS score requirement.
 
-### Enrollment Application and Visa Application
+### Registration and Visa Application
 
 The next step was applying to University of Melbourne, with the IELTS result attached. I applied in January 2018 and waited for the announcement after. Their website told me that the selection process would start in late March.
 
@@ -66,7 +70,9 @@ During the process, I told the doctor that I once had a Tuberculosis when I was 
 
 However, fate allowed my Visa to go through, and so I departed for Australia in July 2018.
 
-![University of Melbourne Law School's Building.](/img/unimelb-law-building.jpg)
+## Hello, Melbourne!
+
+![University of Melbourne Law School's Building has a pleasant surroundings. Source: myself.](/img/unimelb-law-building.jpg)
 
 Now, just because I took a photo of the Law Building, it doesn't mean that I enrolled in it. It is simply because it is one of the good photos that I took during my 1.5 years there.
 
