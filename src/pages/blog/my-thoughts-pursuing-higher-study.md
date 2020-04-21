@@ -82,7 +82,7 @@ After all things considered, I rented [a studio apartment](https://goo.gl/maps/2
 
 I don't think I regret renting that place. Sure, the cost was high, but I saved a lot of energy. I didn't have to depart way earlier, I didn't have to spend money on transportation, and I could just roll to get into the examination venue. The park was also a good running spot. If I decided to live in the suburbs, I would have saved probably AU\$200 per month, and I'm not sure whether that amount can make up for the convenience that I had.
 
-### Living style
+### Living Style
 
 I had a boring living style. Each weekend, I went to [Queen Victoria Market](https://qvm.com.au/) to get some seafood, eggs, fruits, and veggies. There was also a pet shop, so it was a great opportunity for me to see bunnies. After that, I went to the supermarket in CBD to get products that were not available in QV Market. Or maybe, they were available but I was too lazy to find it!
 
@@ -101,3 +101,23 @@ What about food that I used to eat? Well... it was a very, very stale variation.
 | Sat  | Cereal    | Salmon sushi (or rice+salmon when lazy) | Bread variations                        |
 
 That was really boring, wasn't it? I don't know, I have a very low standard of taste, so I prepared foods that were easy to make, easy to clean, and acceptable to eat. Less time cooking, more time doing other things!
+
+### Networking
+
+I tasted the first university life during the so-called "orientation" for Masters student. At that time, I still had this "motivation" to network to as many other students as I could. Guess what? I met a person, we exchanged numbers, but after that day we never talked anymore.
+
+It was nearly the same when I was doing my undergraduate. People were encouraging to network, but it just won't happen with people who don't share a common interest with us. It's not their mistake, it's not our mistake. It's just not meant to happen.
+
+During my undergraduate study, there was a tie that bound most, if not all students in a group together (a group can be school, faculty, course, or organization). Enrollment year was the top-level tie, followed by the group name. I think these commonalities helped us (or at least, me) to relate with each other.
+
+This was not the case during my graduate study. People were not only coming from different countries, but they also had varying backgrounds. They had their own stuffs -- some had married, some were busy working part-time, and so on, and so forth. It was a completely different world. On top of that, the meeting time was very limited. If we meet a certain person in a certain class, although they were in the same stream as us, there might be a chance that we don't meet them in other classes in that semester, because they might be taking other subjects.
+
+### Quality of Content
+
+I can only speak for Information Technology course, Human-Computer Interaction stream, along with some other elective subjects. Generally speaking, I learned some new things in the classes. However, I don't think they were worth the money I had spent, as there were a lot more of things that I could have learned by myself.
+
+Most of the subject coordinators were amazing. They did tremendous amount of preparation before a class so they could deliver their teaching material in the best way possible.
+
+### Group Projects
+
+I feel like I really need to share this.
