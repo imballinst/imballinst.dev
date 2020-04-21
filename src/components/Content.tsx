@@ -23,6 +23,28 @@ const ContentDiv = styled.div`
       text-align: center;
     }
   }
+  & table {
+    &:not(:last-child) {
+      margin-bottom: ${peepoTheme.spacing(4)};
+    }
+
+    & thead {
+      border-bottom: 1px solid ${peepoTheme.borderColorSets.dark.light.hex};
+
+      & th {
+        padding: ${peepoTheme.spacing(2)};
+      }
+    }
+    & tbody {
+      & tr:not(:last-child) {
+        border-bottom: 1px solid ${peepoTheme.borderColorSets.dark.light.hex};
+      }
+
+      & td {
+        padding: ${peepoTheme.spacing(2)};
+      }
+    }
+  }
 `;
 
 type HTMLContentProps = {

@@ -49,7 +49,7 @@ export const BlogPostTemplate = ({
             <ul className="taglist">
               {tags.map(tag => (
                 <ListItem
-                  className={`inline ${peepoTheme.textSizes.small}`}
+                  className={`inline ${peepoTheme.textSizes.base}`}
                   key={tag + `tag`}
                 >
                   <PeepoLink to={`/blog${stringify({ filterTags: [tag] })}`}>

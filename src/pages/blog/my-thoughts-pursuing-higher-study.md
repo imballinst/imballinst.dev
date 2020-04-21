@@ -68,31 +68,36 @@ But, again, yay. Out of nowhere, I got the notification that my application was 
 
 During the process, I told the doctor that I once had a Tuberculosis when I was around 10 years old. Then, the doctor said that my Visa application because of it. It felt really bad after all the effort that I had done if it had to end that way.
 
-However, fate allowed my Visa to go through, and so I departed for Australia in July 2018.
+However, fate allowed my Visa to go through, and so I departed for Melbourne in July 2018.
 
 ## Hello, Melbourne!
 
-![University of Melbourne Law School's Building has a pleasant surroundings. Source: myself.](/img/unimelb-law-building.jpg)
+![University of Melbourne Law School's Building has a pleasant surroundings. Photo by me.](/img/unimelb-law-building.jpg)
 
-Now, just because I took a photo of the Law Building, it doesn't mean that I enrolled in it. It is simply because it is one of the good photos that I took during my 1.5 years there.
+Now, just because I took a photo of the Law Building, it doesn't mean that I enrolled in it. It is simply because it is one of the good photos that I took during my 1.5 years there. It is primarily because I didn't take photos frequently... and of course, because I'm not a good photographer.
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
+Right, so, I spent first 2 weeks to find permanent accommodation. I took consideration of 3 aspects, **rent fee**, **distance to university**, **distance to markets**, and **travel costs**. If I was about to live in the suburbs, I could save some money from rent fee. However, the travel cost may be quite expensive. Tram and bus fares were at AU$4.30 for 2 hours (with daily cap at AU$8.60). It could be reduced if I bought a bike, but I would require to take care of it, as well.
 
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
+After all things considered, I rented [a studio apartment](https://goo.gl/maps/2VkWnXXqXMwLdqqa9) which was 15 to 20 minutes walking time to university and supermarkets in CBD. The rent fee was at AU\$1439 per month, furnished and included electricity and water. The apartment was also equipped with free gym facilities. Just across of it, there was a big park and museum, which was coincidentally the examination venue at the end of the semester.
 
-## What the updates mean to you
+I don't think I regret renting that place. Sure, the cost was high, but I saved a lot of energy. I didn't have to depart way earlier, I didn't have to spend money on transportation, and I could just roll to get into the examination venue. The park was also a good running spot. If I decided to live in the suburbs, I would have saved probably AU\$200 per month, and I'm not sure whether that amount can make up for the convenience that I had.
 
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
+### Living style
 
-- producers
-- roasters
-- importers/exporters
-- retailers
-- manufacturers
-- baristas
+I had a boring living style. Each weekend, I went to [Queen Victoria Market](https://qvm.com.au/) to get some seafood, eggs, fruits, and veggies. There was also a pet shop, so it was a great opportunity for me to see bunnies. After that, I went to the supermarket in CBD to get products that were not available in QV Market. Or maybe, they were available but I was too lazy to find it!
 
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
+Anyways, in the supermarket, I usually bought rice, bread, chocolate spread/strawberry jam, frozen veggies, cereals, canned fish, milk, and many others. Sometimes, noodles and snacks were also on the list. Depending on the cycle, I usually spent AU\$20-30 per week for groceries in total.
 
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
+What about food that I used to eat? Well... it was a very, very stale variation. The table below represents my eating "schedule" each week. Please note that this wasn't always the case, sometimes I skewed from this table because I was bored.
 
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+| Day  | Breakfast | Lunch                                   | Dinner                                  |
+| ---- | --------- | --------------------------------------- | --------------------------------------- |
+| Sun  | Cereal    | Bread variations (sandwich/spread)      | Bread variations                        |
+| Mon  | Cereal    | Potato salad                            | Bread variations                        |
+| Tuey | Cereal    | Potato salad/bread variations           | Potato salad/bread variations           |
+| Wed  | Cereal    | Rice, egg, veggies                      | Rice, egg, veggies                      |
+| Thu  | Cereal    | Rice, egg, veggies/eat in a restaurant  | Rice, egg, veggies                      |
+| Fri  | Cereal    | Salmon sushi (or rice+salmon when lazy) | Salmon sushi (or rice+salmon when lazy) |
+| Sat  | Cereal    | Salmon sushi (or rice+salmon when lazy) | Bread variations                        |
+
+That was really boring, wasn't it? I don't know, I have a very low standard of taste, so I prepared foods that were easy to make, easy to clean, and acceptable to eat. Less time cooking, more time doing other things!
