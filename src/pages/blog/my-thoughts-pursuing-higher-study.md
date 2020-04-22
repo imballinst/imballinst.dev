@@ -116,8 +116,22 @@ This was not the case during my graduate study. People were not only coming from
 
 I can only speak for Information Technology course, Human-Computer Interaction stream, along with some other elective subjects. Generally speaking, I learned some new things in the classes. However, I don't think they were worth the money I had spent, as there were a lot more of things that I could have learned by myself.
 
-Most of the subject coordinators were amazing. They did tremendous amount of preparation before a class so they could deliver their teaching material in the best way possible.
+Most of the subject coordinators were amazing. They did tremendous amount of preparation before a class so they could deliver their teaching material in the best way possible. I also enjoyed most of the tutorials and workshops because the tutors were interactive.
 
 ### Group Projects
 
-I feel like I really need to share this.
+I feel like I really need to share this. It's almost impossible to avoid a group project when we are doing our study. So, group projects were the most painful thing that happened to me during my university life. Why?
+
+**Hierarchy was inexistent**. You know what happens when there is no hierarchy? Everyone gives their opinion and sometimes, it's really hard to decide without making them frown and making the situation uncomfortable. A group leader is not even a thing as well, as they can be easily manipulated by group members that are close to them.
+
+**Meetings were ineffective**. Some of my group meetings were held for more than 3 hours. We were really inefficient of using our time because we didn't prepare for the meeting. During the meeting, we also didn't use a timer for each agenda, resulting in extended discussion, which most of the times wasn't necessary.
+
+**Lack of tolerance**. Once, I had a group meeting that started in the afternoon and ended up in the midnight (around 3AM). The main task was to finish our report. However, again, we didn't prepare well for it before the meeting, as well as communicating it. There was a person who suddenly binned the draft document just because her part wasn't compatible with the shared document. As such, we needed to port the draft document to hers, which took some time. They didn't even ask whether I was okay getting home really late, as if as a student, going home late is normal.
+
+Having said that, there were times where I teamed up with a really solid group project where everyone covered up for each other and discussed with patience. I think the negatives cloud the positives, though.
+
+### Load of Assignments
+
+Honestly, I don't see a difference between my undergraduate assignments and graduate assignments. Subject coordinators expected top quality deliverables, and to achieve that, usually students needed to spend more time than we should. To make it worse, each subject usually had 2-3 assignments within 3 months. Hence, there are 2 ways to achieve good grades: either you are a genius or you **overwork** doing your assignments.
+
+I find it really weird when people are talking about burnout in their career, but why don't they talk about burnout in university life? I mean, when I'm getting burnout in my career, at least I'm getting paid for it. When I'm pursuing my study, however, I'm paying a lot and I'm getting burnout as a bonus. I don't think that's normal. I think it needs change.
