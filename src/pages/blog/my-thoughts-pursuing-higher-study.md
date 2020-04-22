@@ -10,7 +10,7 @@ tags:
   - education
 ---
 
-This story is split into 3 parts. The first part is the preparation, the second part is the study itself, and the last part is the post-graduation.
+This story is split into 3 parts. The first part is the preparation, the second part is the study itself, and the last part is the summary.
 
 ## Preparation
 
