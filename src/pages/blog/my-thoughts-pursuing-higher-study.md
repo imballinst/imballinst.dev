@@ -134,4 +134,14 @@ Having said that, there were times where I teamed up with a really solid group p
 
 Honestly, I don't see a difference between my undergraduate assignments and graduate assignments. Subject coordinators expected top quality deliverables, and to achieve that, usually students needed to spend more time than we should. To make it worse, each subject usually had 2-3 assignments within 3 months. Hence, there are 2 ways to achieve good grades: either you are a genius or you **overwork** doing your assignments.
 
-I find it really weird when people are talking about burnout in their career, but why don't they talk about burnout in university life? I mean, when I'm getting burnout in my career, at least I'm getting paid for it. When I'm pursuing my study, however, I'm paying a lot and I'm getting burnout as a bonus. I don't think that's normal. I think it needs change.
+I find it really weird when people are talking about burnout in their career, but why don't they talk about burnout in university life? I mean, when I'm getting burnout in my career, at least I'm getting paid for it. When I'm pursuing my study, however, I'm paying a lot and I'm getting burnout as a bonus. I don't think that's normal. I think it needs to change.
+
+### Facilities
+
+[!Ballieu Library 3rd floor. Source: https://improvision.com.au/project/university-of-melbourne-baillieu-library.](/img/ballieu-library-3rd-floor.jpg)
+
+The facilities in University of Melbourne were awesome. Libraries were the most exceptional for me. Lightning fast internet speed, individual and group spaces, and water taps were all available inside the campus. Students could access religious facilities using their Student ID card, which was really handy. Classes were also equipped with adjustable lightings, so presentations had better visibility.
+
+## Does it Worth?
+
+TBD
