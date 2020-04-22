@@ -74,7 +74,7 @@ However, fate allowed my Visa to go through, and so I departed for Melbourne in 
 
 ![University of Melbourne Law School's Building has a pleasant surroundings. Photo by me.](/img/unimelb-law-building.jpg)
 
-Now, just because I took a photo of the Law Building, it doesn't mean that I enrolled in it. It is simply because it is one of the good photos that I took during my 1.5 years there. It is primarily because I didn't take photos frequently... and of course, because I'm not a good photographer.
+Now, just because I took a photo of the Law Building, it doesn't mean that I enrolled in that course. It is simply because it is one of the good photos that I took during my 1.5 years there. It is primarily because I didn't take photos frequently... and of course, because I'm not a good photographer.
 
 Right, so, I spent first 2 weeks to find permanent accommodation. I took consideration of 3 aspects, **rent fee**, **distance to university**, **distance to markets**, and **travel costs**. If I was about to live in the suburbs, I could save some money from rent fee. However, the travel cost may be quite expensive. Tram and bus fares were at AU$4.30 for 2 hours (with daily cap at AU$8.60). It could be reduced if I bought a bike, but I would require to take care of it, as well.
 
