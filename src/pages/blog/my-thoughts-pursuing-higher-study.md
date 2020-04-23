@@ -28,7 +28,7 @@ The first thing I did was listing universities that I wanted, I could apply, and
 
 Most post graduate program required my undergraduate GPA to be at least 3.0 in the scale of 4. Since I didn't do well in my undergraduate, my choice was a bit limited. From my [search result in Top Universities in 2018](https://www.topuniversities.com/university-rankings/university-subject-rankings/2018/computer-science-information-systems), I found out that University of Melbourne, which at that time ranked 14th best, had lower GPA requirement (2.75 in the scale of 4), so that's a yep.
 
-University of Melbourne's Information Technology course had Human-Computer Interaction as well, which aligned with what I did at that time, which was front-end web development. That's another yep.
+University of Melbourne's Information Technology course had Human-Computer Interaction as well, which aligned with what I did at that time, which was front-end web development. That's another yep. Anyway, I chose Masters by Coursework instead of Masters by Research because at that time, I didn't really have an idea worth for a research.
 
 Australia also seemed to be a new whole world to me at that time, as I had never experienced four seasons in a year before. That's the third yep.
 
@@ -138,10 +138,18 @@ I find it really weird when people are talking about burnout in their career, bu
 
 ### Facilities
 
-[!Ballieu Library 3rd floor. Source: https://improvision.com.au/project/university-of-melbourne-baillieu-library.](/img/ballieu-library-3rd-floor.jpg)
+![Ballieu Library 3rd floor. Source: https://improvision.com.au/project/university-of-melbourne-baillieu-library.](/img/ballieu-library-3rd-floor.jpg)
 
 The facilities in University of Melbourne were awesome. Libraries were the most exceptional for me. Lightning fast internet speed, individual and group spaces, and water taps were all available inside the campus. Students could access religious facilities using their Student ID card, which was really handy. Classes were also equipped with adjustable lightings, so presentations had better visibility.
 
 ## Does it Worth?
 
-TBD
+It **depends**. I think pursuing higher study is really good if your objective needs proper exposure and support -- e.g. research supervisors and proper facilities/tools. For my case, however, doing Masters by Coursework in HCI probably was not the smartest move I have ever made. The money, time, and effort that I spent for the course weren't quite worth it.
+
+From my point of view, Coursework would fit you if you are more of a variety person, because you _can_ pick your own subjects. This is not possible in Research because you will be dedicating most of your time focusing on your thesis. I also think that Coursework has a lot more random factors, such as in group projects, you may team up with people who do not really "click" with you. On the other hand, it is the same as well with Research -- as you might not get the most supportive supervisor and you need to hold on over the course of your study.
+
+Other than that, I had a great time living abroad. I had a family problem since late 2017, so when I departed for Melbourne, the situation was still rough. I also kept most things to myself at that time -- I wasn't brave enough to speak up, hence I was stressed most of the time. Most of the time, I hurt myself to suppress the rage.
+
+Living abroad helped me to "break away" from my family for a bit. Although it didn't immediately make me braver to speak up, I progressed, slowly. I began to learn to let my emotions out. Finally, after I finished my study, I got the courage to start fixing myself to go to a psychologist. It's still a work in progress, but I will be forever grateful for the chance to live abroad.
+
+So, yeah. There are always positives and negatives of a choice and they differ for each person. If you are in my shoes, probably you would have experienced different things. Leverage the _possible_ good things and bad things, then decide. If you are currently thinking about this, good luck! I'm sure you will find the best of your paths.
