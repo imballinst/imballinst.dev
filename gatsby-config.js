@@ -22,14 +22,6 @@ module.exports = {
       }
     },
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/img`,
-        name: 'uploads'
-      }
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
@@ -137,7 +129,7 @@ module.exports = {
         // Not used for now.
         // display: 'standalone',
         // This path is relative to the root of the site.
-        icon: 'static/img/peepo-logo.png',
+        icon: 'src/img/peepo-logo.png',
         // An optional attribute which provides support for CORS check.
         // If you do not provide a crossOrigin option, it will skip CORS for manifest.
         // Any invalid keyword or empty string defaults to `anonymous`.
