@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import { Typography } from '../components/Typography';
-import SEO from '../components/SEO';
 
 type AboutPageTemplateProps = {
   title: string;
