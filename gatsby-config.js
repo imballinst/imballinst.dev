@@ -6,7 +6,7 @@ module.exports = {
     author: 'Try Ajitiono',
     authorTwitter: 'Ajiballinst',
     keywords: ['blog', 'tech', 'life', 'happiness'],
-    siteUrl: 'https://peepohappy.id/',
+    siteUrl: 'https://deploy-preview-2--peepohappy.netlify.app/',
     siteImage: 'static/img/peepo-metadata.jpg'
   },
   plugins: [
