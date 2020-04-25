@@ -124,7 +124,7 @@ export const pageQuery = graphql`
             }
           }
         }
-        featuredimage: featuredImageResized {
+        featuredImageResized: featuredimage {
           childImageSharp {
             resize(width: 1200) {
               src
