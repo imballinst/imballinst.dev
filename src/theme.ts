@@ -32,7 +32,7 @@ const colorSets: ColorSets<ColorSet> = {
       hex: '#234e52',
       twClass: 'bg-teal-800',
       // Hover: dark.
-      hover: { hex: '#1a202c', twClass: 'bg-teal-900' }
+      hover: { hex: '#1a202c', twClass: 'hover:bg-teal-900' }
     },
     light: { hex: '#2c7a7b', twClass: 'bg-teal-700' },
     contrastText: { hex: '#fff', twClass: 'text-white' },
@@ -44,7 +44,7 @@ const colorSets: ColorSets<ColorSet> = {
       hex: '#4299e1',
       twClass: 'bg-teal-500',
       // Hover: dark.
-      hover: { hex: '#3182ce', twClass: 'bg-teal-600' }
+      hover: { hex: '#3182ce', twClass: 'hover:bg-teal-600' }
     },
     light: { hex: '#63b3ed', twClass: 'bg-teal-400' },
     contrastText: { hex: '#000', twClass: 'text-white' },
@@ -58,7 +58,7 @@ const borderColorSets: ColorSets<BorderColorSet> = {
       hex: '#234e52',
       twClass: 'border-teal-800',
       // Hover: dark.
-      hover: { hex: '#1a202c', twClass: 'border-teal-900' }
+      hover: { hex: '#1a202c', twClass: 'hover:border-teal-900' }
     },
     light: { hex: '#2c7a7b', twClass: 'border-teal-700' }
   },
@@ -68,7 +68,7 @@ const borderColorSets: ColorSets<BorderColorSet> = {
       hex: '#4299e1',
       twClass: 'border-teal-500',
       // Hover: dark.
-      hover: { hex: '#3182ce', twClass: 'border-teal-600' }
+      hover: { hex: '#3182ce', twClass: 'hover:border-teal-600' }
     },
     light: { hex: '#63b3ed', twClass: 'border-teal-400' }
   }
