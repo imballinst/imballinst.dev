@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'peepohappy',
     description:
-      "This is Try Ajitiono's personal site and blog, built using Gatsby and Netlify.",
+      'My name is Try Ajitiono. I talk about software development, real life, and gaming stuff.',
     author: 'Try Ajitiono',
-    authorTwitter: 'Ajiballinst',
+    authorTwitter: '@Ajiballinst',
     keywords: ['blog', 'tech', 'life', 'happiness'],
     siteUrl: 'https://deploy-preview-2--peepohappy.netlify.app/'
   },
