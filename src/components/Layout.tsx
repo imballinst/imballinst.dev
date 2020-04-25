@@ -1,12 +1,11 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
-import { withPrefix } from 'gatsby';
 import styled from '@emotion/styled';
 
 import Navbar from './Navbar';
 import '../all.css';
-import useSiteMetadata from './SiteMetadata';
 import { peepoTheme } from '../theme';
+import SEO from './SEO';
 
 // Wrapper for bottom padding. When it is scrollable, the bottom-padding will not be visible.
 export const SectionWrapper = styled.section`
@@ -38,14 +37,9 @@ const Content = styled.div`
 `;
 
 function TemplateWrapper({ children }: Props) {
-  const { title, description } = useSiteMetadata();
-
   return (
     <div>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Helmet>
+      <SEO />
       <Navbar />
       <Content
         className={`${peepoTheme.pageVerticalSpacing} ${peepoTheme.pageHorizontalSpacing} flex flex-row justify-center`}

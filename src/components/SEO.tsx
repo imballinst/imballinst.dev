@@ -1,6 +1,7 @@
 import React, { DetailedHTMLProps } from 'react';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import useSiteMetadata from './SiteMetadata';
+import { ResizedImageBlurb } from '../common-types';
 
 type MetaType = DetailedHTMLProps<
   React.MetaHTMLAttributes<HTMLMetaElement>,
@@ -14,12 +15,8 @@ type SEOProps = {
     React.MetaHTMLAttributes<HTMLMetaElement>,
     HTMLMetaElement
   >[];
-  title: string;
-  image?: {
-    src: string;
-    height: number;
-    width: number;
-  };
+  title?: string;
+  image?: ResizedImageBlurb;
   pathname?: string;
 };
 
@@ -27,32 +24,17 @@ function SEO({
   description = '',
   lang = 'en',
   meta = [],
-  image: metaImage,
+  image: featuredImageResized,
   title,
   pathname
 }: SEOProps) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            keywords
-            siteUrl
-          }
-        }
-      }
-    `
-  );
+  const siteMetadata = useSiteMetadata();
 
-  const metaDescription = description || site.siteMetadata.description;
-  const image =
-    metaImage && metaImage.src
-      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-      : null;
-  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
+  const metaDescription = description || siteMetadata.description;
+  const image = featuredImageResized
+    ? `${siteMetadata.siteUrl}${featuredImageResized.childImageSharp.src}`
+    : null;
+  const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
 
   let helmetMeta: MetaType = [
     {
@@ -61,7 +43,7 @@ function SEO({
     },
     {
       name: 'keywords',
-      content: site.siteMetadata.keywords.join(',')
+      content: siteMetadata.keywords.join(',')
     },
     {
       property: `og:title`,
@@ -77,7 +59,7 @@ function SEO({
     },
     {
       name: `twitter:creator`,
-      content: site.siteMetadata.author
+      content: siteMetadata.author
     },
     {
       name: `twitter:title`,
@@ -89,7 +71,7 @@ function SEO({
     }
   ];
 
-  if (metaImage) {
+  if (featuredImageResized) {
     helmetMeta = helmetMeta.concat([
       {
         property: 'og:image',
@@ -97,11 +79,11 @@ function SEO({
       },
       {
         property: 'og:image:width',
-        content: metaImage.width
+        content: featuredImageResized.childImageSharp.width
       },
       {
         property: 'og:image:height',
-        content: metaImage.height
+        content: featuredImageResized.childImageSharp.height
       },
       {
         name: 'twitter:card',
@@ -118,7 +100,7 @@ function SEO({
         lang
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${siteMetadata.title}`}
       link={
         canonical
           ? [

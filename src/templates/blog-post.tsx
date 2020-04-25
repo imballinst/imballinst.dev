@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout, { SectionWrapper } from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
@@ -9,6 +8,8 @@ import { Paper } from '../components/Paper';
 import { ListItem } from '../components/List';
 import { PeepoLink } from '../components/Links';
 import { stringify } from '../helpers/utils';
+import SEO from '../components/SEO';
+import { ImageBlurb, ResizedImageBlurb } from '../common-types';
 
 type BlogPostTemplateProps = {
   content: ReactNode;
@@ -75,6 +76,8 @@ type BlogPostProps = {
         title: string;
         description: string;
         tags: string[];
+        featuredimage: ImageBlurb;
+        featuredImageResized: ResizedImageBlurb;
       };
     };
   };
@@ -89,10 +92,11 @@ const BlogPost = ({ data }: BlogPostProps) => {
         content={post.html}
         contentComponent={HTMLContent}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta name="description" content={post.frontmatter.description} />
-          </Helmet>
+          <SEO
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            image={post.frontmatter.featuredImageResized}
+          />
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
@@ -113,6 +117,16 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        featuredimage
+        featuredimage: featuredImageResized {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
         tags
       }
     }

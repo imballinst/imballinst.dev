@@ -6,6 +6,14 @@ export type ImageBlurb = {
   };
 };
 
+export type ResizedImageBlurb = {
+  childImageSharp: {
+    src: string;
+    width: string;
+    height: string;
+  };
+};
+
 // This is from Immutable.js.
 export type GetInType = (params: string[]) => any;
 

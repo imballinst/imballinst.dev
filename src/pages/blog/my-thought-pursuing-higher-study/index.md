@@ -3,7 +3,7 @@ templateKey: blog-post
 title: My Thoughts on Pursuing Higher Study
 date: 2016-12-17T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/unimelb-law-building.jpg
+featuredimage: unimelb-law-building.jpg
 description: I finished my Masters Degree in December 2019 and here are my thoughts after the ride.
 tags:
   - life
@@ -22,7 +22,7 @@ There were 2 reasons why I finally decided to pursue higher study. The first one
 
 ### Looking for Options
 
-![Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.](/img/looking-for-options.jpg)
+![Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.](looking-for-options.jpg)
 
 The first thing I did was listing universities that I wanted, I could apply, and I could afford. I didn't want to do another subject other than Information Technology, so I was pretty much locked on it. Computer Science came close but I threw it out of the window because I was bad at mathematics and I didn't want to relive the undergraduate pain once more.
 
@@ -36,7 +36,7 @@ Tuition fee and living cost... maybe not so much of a yep. At that time, a stude
 
 ### A Mountain to Climb
 
-![Sometimes it feels impossible to get to the top. Photo by Julian Zett on Unsplash.](/img/mountain-to-climb.jpg)
+![Sometimes it feels impossible to get to the top. Photo by Julian Zett on Unsplash.](mountain-to-climb.jpg)
 
 The hardest part of the preparation was passing the IELTS score needed to enroll in the University of Melbourne's School of Engineering. During that time, the minimum overall score was 6.5, with no aspect lower than 6.
 
@@ -72,7 +72,7 @@ However, fate allowed my Visa to go through, and so I departed for Melbourne in 
 
 ## Hello, Melbourne!
 
-![University of Melbourne Law School's Building has a pleasant surroundings. Photo by me.](/img/unimelb-law-building.jpg)
+![University of Melbourne Law School's Building has a pleasant surroundings. Photo by me.](unimelb-law-building.jpg)
 
 Now, just because I took a photo of the Law Building, it doesn't mean that I enrolled in that course. It is simply because it is one of the good photos that I took during my 1.5 years there. It is primarily because I didn't take photos frequently... and of course, because I'm not a good photographer.
 
@@ -138,7 +138,7 @@ I find it really weird when people are talking about burnout in their career, bu
 
 ### Facilities
 
-![Ballieu Library 3rd floor. Source: https://improvision.com.au/project/university-of-melbourne-baillieu-library.](/img/ballieu-library-3rd-floor.jpg)
+![Ballieu Library 3rd floor. Source: https://improvision.com.au/project/university-of-melbourne-baillieu-library.](ballieu-library-3rd-floor.jpg)
 
 The facilities in University of Melbourne were awesome. Libraries were the most exceptional for me. Lightning fast internet speed, individual and group spaces, and water taps were all available inside the campus. Students could access religious facilities using their Student ID card, which was really handy. Classes were also equipped with adjustable lightings, so presentations had better visibility.
 
