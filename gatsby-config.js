@@ -2,7 +2,10 @@ module.exports = {
   siteMetadata: {
     title: 'peepohappy',
     description:
-      "This is Try Ajitiono's personal site and blog, powered by Gatsby and Netlify."
+      "This is Try Ajitiono's personal site and blog, built using Gatsby and Netlify.",
+    author: 'Try Ajitiono',
+    keywords: ['blog', 'tech', 'life', 'happiness'],
+    siteUrl: 'https://peepohappy.id/'
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -89,6 +92,35 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.tsx`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'peepohappy',
+        short_name: 'peepohappy',
+        start_url: '/',
+        background_color: '#234e52',
+        theme_color: '#234e52',
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button).
+        // See https://developers.google.com/web/fundamentals/web-app-manifest/#display.
+        // Not used for now.
+        // display: 'standalone',
+        // This path is relative to the root of the site.
+        icon: 'src/img/peepo-logo.png',
+        // An optional attribute which provides support for CORS check.
+        // If you do not provide a crossOrigin option, it will skip CORS for manifest.
+        // Any invalid keyword or empty string defaults to `anonymous`.
+        crossOrigin: `use-credentials`,
+        cache_busting_mode: 'none'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/*']
+        }
       }
     },
     {
