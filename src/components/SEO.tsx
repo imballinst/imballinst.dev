@@ -18,6 +18,7 @@ type SEOProps = {
   title?: string;
   image?: ResizedImageBlurb;
   pathname?: string;
+  isChildRoute?: boolean;
 };
 
 function SEO({
@@ -26,14 +27,15 @@ function SEO({
   meta = [],
   image: featuredImageResized,
   title,
+  isChildRoute,
   pathname
 }: SEOProps) {
   const siteMetadata = useSiteMetadata();
 
   const metaDescription = description || siteMetadata.description;
   const image = featuredImageResized
-    ? `${siteMetadata.siteUrl}/${featuredImageResized.childImageSharp.src}`
-    : `${siteMetadata.siteUrl}/static/img/peepo-metadata.jpg`;
+    ? `${siteMetadata.siteUrl}${featuredImageResized.childImageSharp.resize.src}`
+    : `/${siteMetadata.siteImage}`;
   const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
 
   let helmetMeta: MetaType = [
@@ -68,22 +70,22 @@ function SEO({
     {
       name: `twitter:description`,
       content: metaDescription
+    },
+    {
+      property: 'og:image',
+      content: image
     }
   ];
 
   if (featuredImageResized) {
     helmetMeta = helmetMeta.concat([
       {
-        property: 'og:image',
-        content: image
-      },
-      {
         property: 'og:image:width',
-        content: featuredImageResized.childImageSharp.width
+        content: featuredImageResized.childImageSharp.resize.width
       },
       {
         property: 'og:image:height',
-        content: featuredImageResized.childImageSharp.height
+        content: featuredImageResized.childImageSharp.resize.height
       },
       {
         name: 'twitter:card',
@@ -99,8 +101,8 @@ function SEO({
       htmlAttributes={{
         lang
       }}
-      title={siteMetadata.title}
-      titleTemplate={`%s | ${siteMetadata.title}`}
+      title={title || siteMetadata.title}
+      titleTemplate={isChildRoute ? `%s | ${siteMetadata.title}` : undefined}
       link={
         canonical
           ? [

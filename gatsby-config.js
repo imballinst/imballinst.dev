@@ -6,7 +6,7 @@ module.exports = {
     author: 'Try Ajitiono',
     keywords: ['blog', 'tech', 'life', 'happiness'],
     siteUrl: 'https://peepohappy.id/',
-    siteImage: 'src/peepo-metadata.jpg'
+    siteImage: 'static/img/peepo-metadata.jpg'
   },
   plugins: [
     'gatsby-plugin-typescript',

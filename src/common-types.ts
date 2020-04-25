@@ -8,9 +8,11 @@ export type ImageBlurb = {
 
 export type ResizedImageBlurb = {
   childImageSharp: {
-    src: string;
-    width: string;
-    height: string;
+    resize: {
+      src: string;
+      width: string;
+      height: string;
+    };
   };
 };
 
@@ -23,4 +25,5 @@ export type SiteMetadata = {
   author: string;
   keywords: string[];
   siteUrl: string;
+  siteImage: string;
 };

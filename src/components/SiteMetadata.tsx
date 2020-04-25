@@ -16,6 +16,7 @@ const useSiteMetadata = (): SiteMetadata => {
             author
             keywords
             siteUrl
+            siteImage
           }
         }
       }

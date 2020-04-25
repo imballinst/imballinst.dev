@@ -85,7 +85,7 @@ type BlogPostProps = {
 
 const BlogPost = ({ data }: BlogPostProps) => {
   const { markdownRemark: post } = data;
-  console.log(data);
+  console.log(post);
   return (
     <Layout>
       <BlogPostTemplate
@@ -94,6 +94,7 @@ const BlogPost = ({ data }: BlogPostProps) => {
         helmet={
           <SEO
             title={post.frontmatter.title}
+            isChildRoute
             description={post.frontmatter.description}
             image={post.frontmatter.featuredImageResized}
           />
