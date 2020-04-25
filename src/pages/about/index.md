@@ -14,4 +14,4 @@ I have a lot of favorite emotes, such as "WutFace", "KEKWait", "OMEGALUL", and "
 
 ### Purpose
 
-The purpose of this blog is mainly to **share**. Sometimes, my posts will have this _rant_ vibes, however, I will try to make them as civil as possible. If you want to consume the less "civilized" version, perhaps you might want to visit my Twitter account instead.
+The purpose of this site is mainly to **share**. Currently, the content revolves around my posts, but in the future, this may change. Sometimes, my posts may have this _rant_ vibes, however, I will try to make them as civil as possible. If you want to consume the less "civilized" version, perhaps you might want to visit my Twitter account instead.
