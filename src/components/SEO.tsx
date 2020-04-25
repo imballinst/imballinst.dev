@@ -2,6 +2,7 @@ import React, { DetailedHTMLProps } from 'react';
 import Helmet from 'react-helmet';
 import useSiteMetadata from './SiteMetadata';
 import { ResizedImageBlurb } from '../common-types';
+import wideLogo from '../img/peepo-metadata.jpg';
 
 type MetaType = DetailedHTMLProps<
   React.MetaHTMLAttributes<HTMLMetaElement>,
@@ -36,7 +37,7 @@ function SEO({
   const metaDescription = description || siteMetadata.description;
   const image = featuredImageResized
     ? `${siteMetadata.siteUrl}${featuredImageResized.childImageSharp.resize.src}`
-    : `/${siteMetadata.siteImage}`;
+    : wideLogo;
   const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
 
   let helmetMeta: MetaType = [

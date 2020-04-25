@@ -26,5 +26,4 @@ export type SiteMetadata = {
   authorTwitter: string;
   keywords: string[];
   siteUrl: string;
-  siteImage: string;
 };
