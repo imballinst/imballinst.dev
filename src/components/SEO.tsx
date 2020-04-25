@@ -2,7 +2,7 @@ import React, { DetailedHTMLProps } from 'react';
 import Helmet from 'react-helmet';
 import useSiteMetadata from './SiteMetadata';
 import { ResizedImageBlurb } from '../common-types';
-import peepoLogo from '../img/peepo-logo-big.jpg';
+import peepoLogo from '../img/peepo-logo-medium.jpg';
 import { useLocation } from '@reach/router';
 
 type MetaType = DetailedHTMLProps<
