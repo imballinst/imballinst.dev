@@ -32,7 +32,7 @@ function SEO({
   pathname
 }: SEOProps) {
   const siteMetadata = useSiteMetadata();
-
+  console.log('a');
   const metaTitle = title || siteMetadata.title;
   const metaDescription = description || siteMetadata.description;
   const image = featuredImageResized
