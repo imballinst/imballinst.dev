@@ -32,6 +32,7 @@ function SEO({
 }: SEOProps) {
   const siteMetadata = useSiteMetadata();
 
+  const metaTitle = title || siteMetadata.title;
   const metaDescription = description || siteMetadata.description;
   const image = featuredImageResized
     ? `${siteMetadata.siteUrl}${featuredImageResized.childImageSharp.resize.src}`
@@ -50,7 +51,7 @@ function SEO({
     // OpenGraph.
     {
       property: `og:title`,
-      content: title
+      content: metaTitle
     },
     {
       property: 'og:image',
@@ -67,11 +68,11 @@ function SEO({
     // Twitter.
     {
       name: `twitter:creator`,
-      content: siteMetadata.author
+      content: siteMetadata.authorTwitter
     },
     {
       name: `twitter:title`,
-      content: title
+      content: metaTitle
     },
     {
       name: `twitter:description`,
@@ -80,6 +81,10 @@ function SEO({
     {
       name: `twitter:image`,
       content: image
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
     }
   ];
 
@@ -92,10 +97,6 @@ function SEO({
       {
         property: 'og:image:height',
         content: featuredImageResized.childImageSharp.resize.height
-      },
-      {
-        name: 'twitter:card',
-        content: 'summary_large_image'
       }
     ] as MetaType);
   } else {

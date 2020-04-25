@@ -23,6 +23,7 @@ export type SiteMetadata = {
   title: string;
   description: string;
   author: string;
+  authorTwitter: string;
   keywords: string[];
   siteUrl: string;
   siteImage: string;

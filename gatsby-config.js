@@ -4,6 +4,7 @@ module.exports = {
     description:
       "This is Try Ajitiono's personal site and blog, built using Gatsby and Netlify.",
     author: 'Try Ajitiono',
+    authorTwitter: 'Ajiballinst',
     keywords: ['blog', 'tech', 'life', 'happiness'],
     siteUrl: 'https://peepohappy.id/',
     siteImage: 'static/img/peepo-metadata.jpg'

@@ -14,6 +14,7 @@ const useSiteMetadata = (): SiteMetadata => {
             title
             description
             author
+            authorTwitter
             keywords
             siteUrl
             siteImage
