@@ -7,7 +7,7 @@ module.exports = {
     authorTwitter: 'Ajiballinst',
     keywords: ['blog', 'tech', 'life', 'happiness'],
     siteUrl: 'https://deploy-preview-2--peepohappy.netlify.app/',
-    siteImage: 'static/img/peepo-metadata.jpg'
+    siteImage: 'static/img/peepo-logo.png'
   },
   plugins: [
     'gatsby-plugin-typescript',
