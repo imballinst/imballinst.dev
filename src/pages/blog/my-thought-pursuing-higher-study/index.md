@@ -10,13 +10,13 @@ tags:
   - education
 ---
 
-This story is split into 3 parts. The first part is the preparation, the second part is the study itself, and the last part is the summary.
+This story is split into 3 parts. The first part is the preparation, the second part is the study itself, and the last part is the summary. In this post, the currency conversions are using the exchange rate on December 12, 2017 (USD to IDR) and July 12, 2018 (AUD to IDR).
 
 ## Preparation
 
 The year was 2017. My father said that during his time, he didn't have the chance to pursue higher study because he lacked financial support. Now that he could afford me to pursue higher study overseas, he really wanted me to do it.
 
-Another reason that he voiced was that due to the increasing competitions, people's degrees contribute a lot when applying for jobs. However, I didn't agree with this norm (and still don't), because degrees do not necessarily ensure that one is capable of creating positive impact.
+Another concern that he raised was with regards to the increasing competitions, academic degrees contribute a lot when applying for jobs. However, I didn't agree with this norm (and still don't), because degrees do not necessarily guarantee that one is capable of creating positive impact.
 
 There were 2 reasons why I finally decided to pursue higher study. The first one was that I respected my father's good will. The second was that I wanted to experience living abroad by myself. And so, I prepared for the upcoming enrollment in July 2018.
 
@@ -32,7 +32,7 @@ University of Melbourne's Information Technology course had Human-Computer Inter
 
 Australia also seemed to be a new whole world to me at that time, as I had never experienced four seasons in a year before. That's the third yep.
 
-Tuition fee and living cost... maybe not so much of a yep. At that time, a student could enroll in 4 subjects in a semester, with 12.5 credits each. For each 12.5 credits taken, the fee was 5.376 AUD (around 53M IDR). On top of that, apparently the living cost in Melbourne was quite high, especially when it comes to renting a place to live. I could cut this cost if I was willing to live with other people, but I valued _me-time_ so much. I couldn't afford to risk it in the long run.
+Tuition fee and living cost... maybe not so much of a yep. At that time, a student could enroll in 4 subjects in a semester, with 12.5 credits each. For each 12.5 credits taken, the fee was 5.376 AUD (around 57.2M IDR). On top of that, apparently the living cost in Melbourne was quite high, especially when it comes to renting a place to live. I could cut this cost if I was willing to live with other people, but I valued _me-time_ so much. I couldn't afford to risk it in the long run.
 
 ### A Mountain to Climb
 
@@ -40,7 +40,7 @@ Tuition fee and living cost... maybe not so much of a yep. At that time, a stude
 
 The hardest part of the preparation was passing the IELTS score needed to enroll in the University of Melbourne's School of Engineering. During that time, the minimum overall score was 6.5, with no aspect lower than 6.
 
-The IELTS test fee itself was really expensive (215 USD ~= 2.8M IDR). To make it worse, it was a one-off. If I screwed it, I would need to re-attempt and pay for another test. I think it took around 3 months of preparation for me before I took it in December 2017.
+The IELTS test fee itself was really expensive (215 USD ~= 2.91M IDR). To make it worse, it was a one-off. If I screwed it, I would need to re-attempt and pay for another test. I think it took around 3 months of preparation for me before I took it in December 2017.
 
 There were 4 aspects tested. They are **listening**, **writing**, **reading**, and **speaking**. My speaking test was scheduled a day after the other written tests.
 
@@ -76,17 +76,17 @@ However, fate allowed my Visa to go through, and so I departed for Melbourne in 
 
 Now, just because I took a photo of the Law Building, it doesn't mean that I enrolled in that course. It is simply because it is one of the good photos that I took during my 1.5 years there. It is primarily because I didn't take photos frequently... and of course, because I'm not a good photographer.
 
-Right, so, I spent first 2 weeks to find permanent accommodation. I took consideration of 3 aspects, **rent fee**, **distance to university**, **distance to markets**, and **travel costs**. If I was about to live in the suburbs, I could save some money from rent fee. However, the travel cost may be quite expensive. Tram and bus fares were at AU$4.30 for 2 hours (with daily cap at AU$8.60). It could be reduced if I bought a bike, but I would require to take care of it, as well.
+Right, so, I spent first 2 weeks to find permanent accommodation. I took consideration of 3 aspects, **rent fee**, **distance to university**, **distance to markets**, and **travel costs**. If I was about to live in the suburbs, I could save some money from rent fee. However, the travel cost may be quite expensive. Tram and bus fares were at 4.30 AUD for 2 hours (with daily cap at 8.60 AUD ~= 91k IDR). It could be reduced if I had bought a bike, but I would require to take care of it for 1.5 years. I wasn't sure the cost and effort were worth the benefits.
 
-After all things considered, I rented [a studio apartment](https://goo.gl/maps/2VkWnXXqXMwLdqqa9) which was 15 to 20 minutes walking time to university and supermarkets in CBD. The rent fee was at AU\$1439 per month, furnished and included electricity and water. The apartment was also equipped with free gym facilities. Just across of it, there was a big park and museum, which was coincidentally the examination venue at the end of the semester.
+After all things considered, I rented [a studio apartment](https://goo.gl/maps/2VkWnXXqXMwLdqqa9) which was 15 to 20 minutes walking time to university and supermarkets in CBD. The rent fee was at 1439 AUD per month (around 15.3M IDR), furnished and included electricity and water. The apartment was also equipped with free gym facilities. Just across of it, there was a big park and museum, which was coincidentally the examination venue at the end of the semester.
 
-I don't think I regret renting that place. Sure, the cost was high, but I saved a lot of energy. I didn't have to depart way earlier, I didn't have to spend money on transportation, and I could just roll to get into the examination venue. The park was also a good running spot. If I decided to live in the suburbs, I would have saved probably AU\$200 per month, and I'm not sure whether that amount can make up for the convenience that I had.
+I don't think I regret renting that place. Sure, the cost was high, but I saved a lot of energy. I didn't have to depart way earlier, I didn't have to spend money on transportation, and I could just roll to get into the examination venue. The park was also a good running spot. If I decided to live in the suburbs, I would have saved probably 200 AUD per month (around 2.13M IDR), and I'm not sure whether that amount can make up for the convenience that I had.
 
 ### Living Style
 
 I had a boring living style. Each weekend, I went to [Queen Victoria Market](https://qvm.com.au/) to get some seafood, eggs, fruits, and veggies. There was also a pet shop, so it was a great opportunity for me to see bunnies. After that, I went to the supermarket in CBD to get products that were not available in QV Market. Or maybe, they were available but I was too lazy to find it!
 
-Anyways, in the supermarket, I usually bought rice, bread, chocolate spread/strawberry jam, frozen veggies, cereals, canned fish, milk, and many others. Sometimes, noodles and snacks were also on the list. Depending on the cycle, I usually spent AU\$20-30 per week for groceries in total.
+Anyways, in the supermarket, I usually bought rice, bread, chocolate spread/strawberry jam, frozen veggies, cereals, canned fish, milk, and many others. Sometimes, noodles and snacks were also on the list. Depending on the cycle, I usually spent 20-30 AUD per week for groceries (~= 213k-319k IDR).
 
 What about food that I used to eat? Well... it was a very, very stale variation. The table below represents my eating "schedule" each week. Please note that this wasn't always the case, sometimes I skewed from this table because I was bored.
 
@@ -110,11 +110,11 @@ It was nearly the same when I was doing my undergraduate. People were encouragin
 
 During my undergraduate study, there was a tie that bound most, if not all students in a group together (a group can be school, faculty, course, or organization). Enrollment year was the top-level tie, followed by the group name. I think these commonalities helped us (or at least, me) to relate with each other.
 
-This was not the case during my graduate study. People were not only coming from different countries, but they also had varying backgrounds. They had their own stuffs -- some had married, some were busy working part-time, and so on, and so forth. It was a completely different world. On top of that, the meeting time was very limited. If we meet a certain person in a certain class, although they were in the same stream as us, there might be a chance that we don't meet them in other classes in that semester, because they might be taking other subjects.
+This was not the case during my graduate study. People were not only coming from different countries, but they also had varying backgrounds. They had their own stuffs -- some had married, some were busy working part-time, and so on, and so forth. It was a completely different world. On top of that, the meeting time was very limited. If we meet a certain person in a certain class, although they were in the same major as us, there might be a chance that we don't meet them in other classes in that semester, because they might be taking other subjects.
 
 ### Quality of Content
 
-I can only speak for Information Technology course, Human-Computer Interaction stream, along with some other elective subjects. Generally speaking, I learned some new things in the classes. However, I don't think they were worth the money I had spent, as there were a lot more of things that I could have learned by myself.
+I can only speak for Information Technology course, Human-Computer Interaction major, along with some other elective subjects. Generally speaking, I learned some new things in the classes. However, I don't think they were worth the money I had spent, as there were a lot more of things that I could have learned by myself.
 
 Most of the subject coordinators were amazing. They did tremendous amount of preparation before a class so they could deliver their teaching material in the best way possible. I also enjoyed most of the tutorials and workshops because the tutors were interactive.
 
