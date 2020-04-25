@@ -47,9 +47,14 @@ function SEO({
       name: 'keywords',
       content: siteMetadata.keywords.join(',')
     },
+    // OpenGraph.
     {
       property: `og:title`,
       content: title
+    },
+    {
+      property: 'og:image',
+      content: image
     },
     {
       property: `og:description`,
@@ -59,6 +64,7 @@ function SEO({
       property: `og:type`,
       content: `website`
     },
+    // Twitter.
     {
       name: `twitter:creator`,
       content: siteMetadata.author
@@ -72,7 +78,7 @@ function SEO({
       content: metaDescription
     },
     {
-      property: 'og:image',
+      name: `twitter:image`,
       content: image
     }
   ];
