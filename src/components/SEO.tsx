@@ -2,7 +2,7 @@ import React, { DetailedHTMLProps } from 'react';
 import Helmet from 'react-helmet';
 import useSiteMetadata from './SiteMetadata';
 import { ResizedImageBlurb } from '../common-types';
-import normalLogo from '../img/peepo-logo.png';
+import normalLogo from '../img/peepo-logo.jpg';
 
 type MetaType = DetailedHTMLProps<
   React.MetaHTMLAttributes<HTMLMetaElement>,
