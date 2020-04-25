@@ -5,7 +5,8 @@ module.exports = {
       "This is Try Ajitiono's personal site and blog, built using Gatsby and Netlify.",
     author: 'Try Ajitiono',
     keywords: ['blog', 'tech', 'life', 'happiness'],
-    siteUrl: 'https://peepohappy.id/'
+    siteUrl: 'https://peepohappy.id/',
+    siteImage: 'src/peepo-metadata.jpg'
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -136,7 +137,7 @@ module.exports = {
         // Not used for now.
         // display: 'standalone',
         // This path is relative to the root of the site.
-        icon: 'src/img/peepo-logo.png',
+        icon: 'static/img/peepo-logo.png',
         // An optional attribute which provides support for CORS check.
         // If you do not provide a crossOrigin option, it will skip CORS for manifest.
         // Any invalid keyword or empty string defaults to `anonymous`.

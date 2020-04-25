@@ -32,8 +32,8 @@ function SEO({
 
   const metaDescription = description || siteMetadata.description;
   const image = featuredImageResized
-    ? `${siteMetadata.siteUrl}${featuredImageResized.childImageSharp.src}`
-    : null;
+    ? `${siteMetadata.siteUrl}/${featuredImageResized.childImageSharp.src}`
+    : `${siteMetadata.siteUrl}/static/img/peepo-metadata.jpg`;
   const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
 
   let helmetMeta: MetaType = [
@@ -99,7 +99,7 @@ function SEO({
       htmlAttributes={{
         lang
       }}
-      title={title}
+      title={siteMetadata.title}
       titleTemplate={`%s | ${siteMetadata.title}`}
       link={
         canonical

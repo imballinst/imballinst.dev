@@ -85,7 +85,7 @@ type BlogPostProps = {
 
 const BlogPost = ({ data }: BlogPostProps) => {
   const { markdownRemark: post } = data;
-
+  console.log(data);
   return (
     <Layout>
       <BlogPostTemplate
