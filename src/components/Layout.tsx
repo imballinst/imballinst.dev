@@ -21,6 +21,7 @@ export const SectionWrapper = styled.section`
 // Layout.
 type Props = {
   children: ReactNode;
+  seoTitle?: string;
 };
 
 const Content = styled.div`
@@ -36,10 +37,10 @@ const Content = styled.div`
   }
 `;
 
-function TemplateWrapper({ children }: Props) {
+function TemplateWrapper({ children, seoTitle }: Props) {
   return (
     <div>
-      <SEO />
+      <SEO title={seoTitle} />
       <Navbar />
       <Content
         className={`${peepoTheme.pageVerticalSpacing} ${peepoTheme.pageHorizontalSpacing} flex flex-row justify-center`}

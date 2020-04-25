@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import useSiteMetadata from './SiteMetadata';
 import { ResizedImageBlurb } from '../common-types';
 import normalLogo from '../img/peepo-logo.jpg';
+import { useLocation } from '@reach/router';
 
 type MetaType = DetailedHTMLProps<
   React.MetaHTMLAttributes<HTMLMetaElement>,
@@ -19,7 +20,6 @@ type SEOProps = {
   title?: string;
   image?: ResizedImageBlurb;
   pathname?: string;
-  isChildRoute?: boolean;
 };
 
 function SEO({
@@ -28,10 +28,10 @@ function SEO({
   meta = [],
   image: featuredImageResized,
   title,
-  isChildRoute,
   pathname
 }: SEOProps) {
   const siteMetadata = useSiteMetadata();
+  const isNotRootRoute = useLocation().pathname !== '/';
 
   const metaTitle = title || siteMetadata.title;
   const metaDescription = description || siteMetadata.description;
@@ -110,7 +110,7 @@ function SEO({
         lang
       }}
       title={title || siteMetadata.title}
-      titleTemplate={isChildRoute ? `%s | ${siteMetadata.title}` : undefined}
+      titleTemplate={isNotRootRoute ? `%s | ${siteMetadata.title}` : undefined}
       link={
         canonical
           ? [

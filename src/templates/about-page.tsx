@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import { Typography } from '../components/Typography';
+import SEO from '../components/SEO';
 
 type AboutPageTemplateProps = {
   title: string;
@@ -40,7 +41,7 @@ const AboutPage = ({ data }: AboutPageProps) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout>
+    <Layout seoTitle="about">
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

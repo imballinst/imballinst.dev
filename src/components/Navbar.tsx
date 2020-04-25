@@ -40,10 +40,11 @@ const NavbarItemIcon = styled(ExternalPeepoLink)`
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  fill: #fff;
+
+  fill: ${peepoTheme.colorSets.dark.contrastText.hex};
 
   &:hover {
-    fill: #cbd5e0;
+    fill: ${peepoTheme.colorSets.dark.contrastTextHover.hex};
   }
 `;
 
@@ -57,7 +58,10 @@ function NavbarItemExternal({
   children: ReactNode;
 }) {
   return (
-    <NavbarItemIcon className="navbar-item pt-4" {...props}>
+    <NavbarItemIcon
+      className={`${peepoTheme.navbarLinkVariant('dark')} navbar-item pt-4`}
+      {...props}
+    >
       {children}
     </NavbarItemIcon>
   );
