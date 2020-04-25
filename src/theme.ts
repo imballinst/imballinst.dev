@@ -7,9 +7,10 @@ type ColorSetElement = {
   twClass: string;
   hex: string;
 };
+type ColorSetElementWithHover = ColorSetElement & { hover: ColorSetElement };
 type ColorSet = {
   dark: ColorSetElement;
-  main: ColorSetElement;
+  main: ColorSetElementWithHover;
   light: ColorSetElement;
   contrastText: ColorSetElement;
   contrastTextHover: ColorSetElement;
@@ -27,28 +28,48 @@ type ColorSets<T> = {
 const colorSets: ColorSets<ColorSet> = {
   dark: {
     dark: { hex: '#1a202c', twClass: 'bg-teal-900' },
-    main: { hex: '#234e52', twClass: 'bg-teal-800' },
+    main: {
+      hex: '#234e52',
+      twClass: 'bg-teal-800',
+      // Hover: dark.
+      hover: { hex: '#1a202c', twClass: 'bg-teal-900' }
+    },
     light: { hex: '#2c7a7b', twClass: 'bg-teal-700' },
     contrastText: { hex: '#fff', twClass: 'text-white' },
-    contrastTextHover: { hex: '#cbd5e0', twClass: 'text-gray-300' }
+    contrastTextHover: { hex: '#cbd5e0', twClass: 'hover:text-gray-300' }
   },
   blue: {
     dark: { hex: '#3182ce', twClass: 'bg-teal-600' },
-    main: { hex: '#4299e1', twClass: 'bg-teal-500' },
+    main: {
+      hex: '#4299e1',
+      twClass: 'bg-teal-500',
+      // Hover: dark.
+      hover: { hex: '#3182ce', twClass: 'bg-teal-600' }
+    },
     light: { hex: '#63b3ed', twClass: 'bg-teal-400' },
     contrastText: { hex: '#000', twClass: 'text-white' },
-    contrastTextHover: { hex: '#cbd5e0', twClass: 'text-gray-300' }
+    contrastTextHover: { hex: '#cbd5e0', twClass: 'hover:text-gray-300' }
   }
 };
 const borderColorSets: ColorSets<BorderColorSet> = {
   dark: {
     dark: { hex: '#1a202c', twClass: 'border-teal-900' },
-    main: { hex: '#234e52', twClass: 'border-teal-800' },
+    main: {
+      hex: '#234e52',
+      twClass: 'border-teal-800',
+      // Hover: dark.
+      hover: { hex: '#1a202c', twClass: 'border-teal-900' }
+    },
     light: { hex: '#2c7a7b', twClass: 'border-teal-700' }
   },
   blue: {
     dark: { hex: '#3182ce', twClass: 'border-teal-600' },
-    main: { hex: '#4299e1', twClass: 'border-teal-500' },
+    main: {
+      hex: '#4299e1',
+      twClass: 'border-teal-500',
+      // Hover: dark.
+      hover: { hex: '#3182ce', twClass: 'border-teal-600' }
+    },
     light: { hex: '#63b3ed', twClass: 'border-teal-400' }
   }
 };
@@ -75,12 +96,12 @@ export const peepoTheme = {
   buttonVariant: (mode: ThemeMode) => {
     const colorSet = colorSets[mode];
 
-    return `${colorSet.main.twClass} hover:${colorSet.dark.twClass} ${colorSet.contrastText.twClass} font-bold rounded`;
+    return `${colorSet.main.twClass} ${colorSet.main.hover.twClass} ${colorSet.contrastText.twClass} font-bold rounded`;
   },
   navbarLinkVariant: (mode: ThemeMode) => {
     const colorSet = colorSets[mode];
 
-    return `${colorSet.contrastText.twClass} hover:${colorSet.contrastTextHover.twClass} font-bold`;
+    return `${colorSet.contrastText.twClass} ${colorSet.contrastTextHover.twClass} font-bold`;
   },
   topbarHeight: 56,
   pageHorizontalSpacing: 'px-8 sm:px-16 md:px-24',
