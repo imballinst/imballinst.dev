@@ -201,4 +201,4 @@ Other than that, I had a great time living abroad. I had a family problem since 
 
 Living abroad helped me to "break away" from my family for a bit. Although it didn't immediately make me braver to speak up, I progressed, slowly. I began to learn to let my emotions out. Finally, after I finished my study, I had the courage to heal myself, starting from meeting a psychologist. It's still a work in progress, but I will be forever grateful for getting the chance to live abroad.
 
-So, yeah. There are always pros and cons of a choice and they differ for each person. If you are in my shoes, most likely you would have experienced different things. Leverage the _possible_ good things and bad things, then decide. If you are currently thinking about this, good luck! I'm sure you will find the best of your paths.
+So, yeah. There are always pros and cons of a choice and they differ for each person. If you were in my shoes, most likely you would have experienced different things. Leverage the _possible_ good things and bad things, then decide. If you are currently thinking about this, good luck! I'm sure you will find the best of your paths.
