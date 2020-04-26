@@ -6,6 +6,7 @@ import { useLocation } from '@reach/router';
 import { GitHubIcon } from '../icons/GitHubIcon';
 import { peepoTheme } from '../theme';
 import { ExternalPeepoLink } from './Links';
+import { TwitterIcon } from '../icons/TwitterIcon';
 
 // Navbar item.
 const NavbarGutter = styled.div`
@@ -53,13 +54,13 @@ function NavbarItemExternal({
   ...props
 }: {
   href: string;
-  target: string;
-  rel: string;
   children: ReactNode;
 }) {
   return (
     <NavbarItemIcon
-      className={`${peepoTheme.navbarLinkVariant('dark')} navbar-item pt-4`}
+      className={`${peepoTheme.navbarLinkVariant('dark')} navbar-item mt-4`}
+      target="_blank"
+      rel="noopener noreferrer"
       {...props}
     >
       {children}
@@ -114,11 +115,10 @@ function Navbar() {
           ))}
         </NavbarItemSpacer>
         <NavbarItemSpacer className="flex flex-row">
-          <NavbarItemExternal
-            href="https://github.com/Imballinst"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <NavbarItemExternal href="https://twitter.com/Ajiballinst">
+            <TwitterIcon />
+          </NavbarItemExternal>
+          <NavbarItemExternal href="https://github.com/Imballinst">
             <GitHubIcon />
           </NavbarItemExternal>
         </NavbarItemSpacer>

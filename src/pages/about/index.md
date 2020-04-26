@@ -10,7 +10,7 @@ My name is Try Ajitiono. I do frontend engineering and creating bugs on daily ba
 
 In [Twitch.tv](https://www.twitch.tv), there are a lot of emote types. They are **global emotes**, **channel emotes**, and **custom emotes**. Custom emotes are created by users and extendable through [BetterTTV](https://betterttv.com/) or [FrankerFaceZ](https://www.frankerfacez.com/).
 
-I have a lot of favorite emotes, such as "WutFace", "KEKWait", "OMEGALUL", and "SMOrc". However, "widepeepoHappy" tops them all. It almost always makes me smile seeing that emote appear in Twitch Chat. In addition, deeper inside me, I want to be a happy person. Therefore, I dedicate the name of this blog to "peepohappy", because widepeepohappy would be too long for a name.
+I have a lot of favorite emotes, such as [WutFace](https://knowyourmeme.com/memes/wutface), [KEKWait](https://www.rivalry.com/esports/what-does-kekwait-mean), [OMEGALUL](https://www.frankerfacez.com/emoticon/128054-OMEGALUL), and [SMOrc](https://knowyourmeme.com/memes/smorc). However, [widepeepoHappy](https://www.slanglang.net/widepeepohappy/) tops them all. It almost always makes me smile seeing that emote appear in Twitch Chat. In addition, deeper inside me, I want to be a happy person. Therefore, I dedicate the name of this site to "peepohappy", because widepeepohappy would be too long for a name.
 
 ### Purpose
 
