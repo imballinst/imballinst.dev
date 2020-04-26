@@ -86,6 +86,8 @@ I don't think I regret renting that place. Sure, the cost was high, but I saved 
 
 ### Living Style
 
+![Bunnies at the pet shop. Photo by me.](one-of-the-most-gorgeous-rabbits.jpg)
+
 I had a boring living style. Each weekend, I went to [Queen Victoria Market](https://qvm.com.au/) to get some seafood, eggs, fruits, and veggies. There was also a pet shop, so it was a great opportunity for me to see bunnies. After that, I went to the supermarket in CBD to get products that were not available in QV Market. Or maybe, they were available but I was too lazy to find it!
 
 Anyways, in the supermarket, I usually bought rice, bread, chocolate spread/strawberry jam, frozen veggies, cereals, canned fish, milk, and many others. Sometimes, noodles and snacks were also on the list. Depending on the cycle, I usually spent 20-30 AUD per week for groceries (around 213k-319k IDR).
