@@ -15,7 +15,7 @@ const StyledLink = styled(Link)`
   display: ${(props: PeepoLinkProps) => (props.fullWidth ? 'block' : 'inline')};
   width: ${(props: PeepoLinkProps) => (props.fullWidth ? '100%' : 'auto')};
   color: ${peepoTheme.colorSets.blue.main.hex};
-  line-height: 0;
+  line-height: 1.125;
 
   &:hover {
     color: ${peepoTheme.colorSets.blue.dark.hex};

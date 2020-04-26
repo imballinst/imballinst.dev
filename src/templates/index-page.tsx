@@ -25,7 +25,13 @@ export const IndexPageTemplate = ({
       <Typography variant="h3" className="text-center">
         {heading}
       </Typography>
-      <PeepoLink fullWidth to="/blog" withButton size="large" className="mt-12">
+      <PeepoLink
+        fullWidth
+        to="/blog"
+        withButton
+        size="medium"
+        className="mt-12"
+      >
         {readBlogText}
       </PeepoLink>
     </Paper>
