@@ -4,7 +4,7 @@ title: My Thoughts on Pursuing Higher Study
 date: 2020-04-25T14:39:06.797Z
 featuredpost: false
 featuredimage: unimelb-law-building.jpg
-description: I finished my Masters Degree in December 2019 and here are my thoughts after the ride.
+description: I finished my Masters in December 2019 and here are my thoughts after the ride.
 tags:
   - life
   - education
