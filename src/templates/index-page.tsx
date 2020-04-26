@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({
 }: IndexPageTemplateProps) => (
   <div className="flex flex-col align-center mt-24">
     <Paper>
-      <Typography variant="h1" className="text-center">
+      <Typography variant="h1" className="text-center leading-none mb-4">
         {title}
       </Typography>
       <Typography variant="h3" className="text-center">
