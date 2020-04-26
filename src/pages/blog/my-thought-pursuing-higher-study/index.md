@@ -193,11 +193,11 @@ The facilities in University of Melbourne were awesome. Libraries were the most 
 
 ## Does it Worth?
 
-It **depends**. I think pursuing higher study is really good if your objective needs proper exposure and support, for example, research supervisors and proper facilities/tools. For my case, however, doing Masters by Coursework in HCI probably was not the smartest move I have ever made. The money, time, and effort that I exerted for the course weren't quite worth it.
+It **depends**. I think pursuing higher study is really good if your objective needs proper exposure and support, for example, research supervisors and facilities/tools. For my case, however, doing Masters by Coursework in HCI probably was not the smartest move I have ever made. The money, time, and effort that I exerted for the course weren't quite worth it.
 
 From my point of view, Coursework would fit you if you are more of a variety person, because you _can_ pick your own subjects. This is not possible in Research because you will be dedicating most of your time focusing on your thesis. I also think that Coursework has a lot more random factors, such as in group projects, you may team up with people who do not really "click" with you. On the other hand, it is the same as well with Research -- as you might not get the most supportive supervisor and you still need to work on your thesis regardless.
 
-Other than that, I had a great time living abroad. I had a family problem since late 2017, so when I departed for Melbourne, the situation was still rough. I kept most things to myself, I wasn't brave enough to speak up, and hence I was stressed most of the time. Most of the time, I hurt myself to suppress the rage.
+Other than that, I had a great time living abroad. I had a family problem since late 2017, so when I departed for Melbourne, the situation was still rough. I kept most things to myself, I wasn't brave enough to speak up, and hence I was easily stressed. Most of the time, I hurt myself to suppress the rage.
 
 Living abroad helped me to "break away" from my family for a bit. Although it didn't immediately make me braver to speak up, I progressed, slowly. I began to learn to let my emotions out. Finally, after I finished my study, I had the courage to heal myself, starting from meeting a psychologist. It's still a work in progress, but I will be forever grateful for getting the chance to live abroad.
 
