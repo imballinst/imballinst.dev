@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { useLocation } from '@reach/router';
 
-import { GitHubIcon } from '../img/GitHubIcon';
+import { GitHubIcon } from '../icons/GitHubIcon';
 import { peepoTheme } from '../theme';
 import { ExternalPeepoLink } from './Links';
 

@@ -2,7 +2,7 @@ import React, { DetailedHTMLProps } from 'react';
 import Helmet from 'react-helmet';
 import useSiteMetadata from './SiteMetadata';
 import { ResizedImageBlurb } from '../common-types';
-import peepoLogo from '../img/peepo-logo-medium.jpg';
+import peepoLogo from '../img/peepo-logo.jpg';
 import { useLocation } from '@reach/router';
 
 type MetaType = DetailedHTMLProps<
@@ -82,15 +82,15 @@ function SEO({
     {
       name: `twitter:image`,
       content: image
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image'
     }
   ];
 
   if (featuredImageResized) {
     helmetMeta = helmetMeta.concat([
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
       {
         property: 'og:image:width',
         content: featuredImageResized.childImageSharp.resize.width

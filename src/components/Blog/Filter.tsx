@@ -10,7 +10,7 @@ import styled from '@emotion/styled';
 import { peepoTheme } from '../../theme';
 import { TextField } from '../Forms/TextField';
 import { PeepoButton, PeepoIconButton } from '../Button';
-import { FilterIcon } from '../../img/FilterIcon';
+import { FilterIcon } from '../../icons/FilterIcon';
 
 type FilterProps = {
   tags: TagCount[];
