@@ -21,6 +21,8 @@ const ContentDiv = styled.div`
       font-style: italic;
       font-size: 0.875rem;
       text-align: center;
+      white-space: normal;
+      word-wrap: break-word;
     }
   }
   & table {
