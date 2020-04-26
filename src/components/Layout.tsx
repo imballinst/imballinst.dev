@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import { Helmet } from 'react-helmet';
 import styled from '@emotion/styled';
 
 import Navbar from './Navbar';
@@ -29,11 +28,14 @@ const Content = styled.div`
   margin-top: ${peepoTheme.topbarHeight}px;
 
   & > * {
-    width: ${peepoTheme.maxOptimalWidth};
+    width: 100%;
   }
 
   @media (min-width: ${peepoTheme.maxOptimalWidth}) {
     height: calc(100vh - ${peepoTheme.topbarHeight}px - 3rem);
+    & > * {
+      width: ${peepoTheme.maxOptimalWidth};
+    }
   }
 `;
 

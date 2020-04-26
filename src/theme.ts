@@ -106,5 +106,6 @@ export const peepoTheme = {
   topbarHeight: 56,
   pageHorizontalSpacing: 'px-8 sm:px-16 md:px-24',
   pageVerticalSpacing: 'py-4 lg:py-8',
-  maxOptimalWidth: '768px'
+  maxOptimalWidth: '768px',
+  minOptimalWidth: '242px'
 };
