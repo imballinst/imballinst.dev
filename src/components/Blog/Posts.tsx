@@ -59,30 +59,24 @@ export function ListBlogItem({ post }: { post: ListBlogItemType }) {
         })}
       >
         <header>
-          {post.frontmatter.featuredimage ? (
-            <div className="mb-2">
+          <PeepoLink
+            className={`${peepoTheme.textSizes.large2} font-semibold`}
+            to={post.fields.slug}
+          >
+            {post.frontmatter.featuredimage ? (
               <PreviewCompatibleImage
                 imageInfo={{
                   image: post.frontmatter.featuredimage,
                   alt: `featured image thumbnail for post ${post.frontmatter.title}`
                 }}
               />
-            </div>
-          ) : null}
-          <div>
-            <div className="block w-full">
-              <PeepoLink
-                className={`${peepoTheme.textSizes.large2} font-semibold`}
-                to={post.fields.slug}
-              >
-                {post.frontmatter.title}
-              </PeepoLink>
-            </div>
-            <div className="block w-full">
-              <span className={`${peepoTheme.textSizes.small} text-gray-600`}>
-                {post.frontmatter.date}
-              </span>
-            </div>
+            ) : null}
+            <div className="block w-full mt-2">{post.frontmatter.title}</div>
+          </PeepoLink>
+          <div className="block w-full">
+            <span className={`${peepoTheme.textSizes.small} text-gray-600`}>
+              {post.frontmatter.date}
+            </span>
           </div>
         </header>
         <div className="mt-4">
