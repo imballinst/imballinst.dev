@@ -39,8 +39,6 @@ function NavbarItem({
 
 const NavbarItemIcon = styled(ExternalPeepoLink)`
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
 
   fill: ${peepoTheme.colorSets.dark.contrastText.hex};
 
@@ -57,14 +55,18 @@ function NavbarItemExternal({
   children: ReactNode;
 }) {
   return (
-    <NavbarItemIcon
-      className={`${peepoTheme.navbarLinkVariant('dark')} navbar-item mt-4`}
-      target="_blank"
-      rel="noopener noreferrer"
-      {...props}
-    >
-      {children}
-    </NavbarItemIcon>
+    <div className="navbar-item">
+      <NavbarItemIcon
+        className={`${peepoTheme.navbarLinkVariant(
+          'dark'
+        )} navbar-item pt-4 pb-4`}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...props}
+      >
+        {children}
+      </NavbarItemIcon>
+    </div>
   );
 }
 
@@ -116,10 +118,10 @@ function Navbar() {
         </NavbarItemSpacer>
         <NavbarItemSpacer className="flex flex-row">
           <NavbarItemExternal href="https://twitter.com/Ajiballinst">
-            <TwitterIcon />
+            <TwitterIcon size={24} />
           </NavbarItemExternal>
           <NavbarItemExternal href="https://github.com/Imballinst">
-            <GitHubIcon />
+            <GitHubIcon size={24} />
           </NavbarItemExternal>
         </NavbarItemSpacer>
       </NavbarContent>

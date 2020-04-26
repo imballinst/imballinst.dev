@@ -95,7 +95,7 @@ export function Filter({
   return (
     <div>
       <PeepoIconButton ref={setButtonElement} onClick={onTogglePopper}>
-        <FilterIcon />
+        <FilterIcon size={18} />
       </PeepoIconButton>
       {transitions.map(({ item, key, props }) => {
         if (item === PopperState.HIDDEN) {
