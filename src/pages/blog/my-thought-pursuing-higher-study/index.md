@@ -12,7 +12,7 @@ tags:
 
 This story is split into 3 parts. The first part is the preparation, the second part is the study itself, and the last part is the summary.
 
-The currency exchange rates used in the post are using the rates on **December 12, 2017** (USD, 1 USD = 13.560 IDR) and **July 12, 2018** (AUD, 1 AUD = 10.556 IDR).
+The currency exchange rates in the post are using the rates on **December 12, 2017** (USD, 1 USD = 13.560 IDR) and **July 12, 2018** (AUD, 1 AUD = 10.556 IDR).
 
 ## Preparation
 
@@ -34,7 +34,7 @@ University of Melbourne's Information Technology course had Human-Computer Inter
 
 Australia also seemed to be a new whole world to me at that time, as I had never experienced four seasons in a year before. That's the third yep.
 
-Tuition fee and living cost... maybe not so much of a yep. At that time, for each semester, a student was given 50 credits which they could use to enroll in subjects. The fee for each 12.5 credits taken was 5.376 AUD (around 57.2M IDR). On top of that, the living cost in Melbourne was one of the highest in Australia, especially when it comes to renting a place to live. I could cut this cost if I was willing to live with other people, but I valued _me-time_ so much. I couldn't afford to risk it in the long run.
+Tuition fee and living cost... maybe not so much of a yep. At that time, for each semester, a student was given 50 credits which they could use to enroll in subjects. The fee for each 12.5 credits taken was 5,376 AUD (around 57.2M IDR). On top of that, the living cost in Melbourne was one of the highest in Australia, especially when it comes to renting a place to live. I could cut this cost if I was willing to live with other people, but I valued _me-time_ so much. I couldn't afford to risk it in the long run.
 
 ### A Mountain to Climb
 
