@@ -87,7 +87,7 @@ const BlogPost = ({ data }: BlogPostProps) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout>
+    <Layout noPadding>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
