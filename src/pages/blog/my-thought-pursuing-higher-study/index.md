@@ -92,15 +92,60 @@ Anyways, in the supermarket, I usually bought rice, bread, chocolate spread/stra
 
 What about food that I used to eat? Well... it was a very, very stale variation. The table below represents my eating "schedule" each week. Please note that this wasn't always the case, sometimes I skewed from this table because I was bored.
 
-| Day  | Breakfast | Lunch                                   | Dinner                                  |
-| ---- | --------- | --------------------------------------- | --------------------------------------- |
-| Sun  | Cereal    | Bread variations (sandwich/spread)      | Bread variations                        |
-| Mon  | Cereal    | Potato salad                            | Bread variations                        |
-| Tuey | Cereal    | Potato salad/bread variations           | Potato salad/bread variations           |
-| Wed  | Cereal    | Rice, egg, veggies                      | Rice, egg, veggies                      |
-| Thu  | Cereal    | Rice, egg, veggies/eat in a restaurant  | Rice, egg, veggies                      |
-| Fri  | Cereal    | Salmon sushi (or rice+salmon when lazy) | Salmon sushi (or rice+salmon when lazy) |
-| Sat  | Cereal    | Salmon sushi (or rice+salmon when lazy) | Bread variations                        |
+<div style="overflow-x: auto; margin-bottom: 1rem;">
+  <table>
+    <thead>
+      <th>Day</th>
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sun</td>
+        <td> Cereal</td>
+        <td> Bread variations (sandwich/spread)</td>
+        <td> Bread variations</td>
+      </tr>
+      <tr>
+        <td>Mon</td>
+        <td> Cereal</td>
+        <td> Potato salad </td>
+        <td>Bread variations </td>
+      </tr>
+      <tr>
+        <td>Tue</td>
+        <td>Cereal</td>
+        <td> Potato salad/bread variations </td>
+        <td>Potato salad/bread variations</td>
+      </tr>
+      <tr>
+        <td>Wed</td>
+        <td> Cereal</td>
+        <td> Rice, egg, veggies </td>
+        <td>Rice, egg, veggies </td>
+      </tr>
+      <tr>
+        <td>Thu</td>
+        <td> Cereal</td>
+        <td> Rice, egg, veggies/eat in a restaurant </td>
+        <td>Rice, egg, veggies </td>
+      </tr>
+      <tr>
+        <td>Fri</td>
+        <td> Cereal</td>
+        <td> Salmon sushi (or rice+salmon when lazy) </td>
+        <td>Salmon sushi (or rice+salmon when lazy)</td>
+      </tr>
+      <tr>
+        <td>Sat</td>
+        <td> Cereal</td>
+        <td> Salmon sushi (or rice+salmon when lazy) </td>
+        <td>Bread variations </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 That was really boring, wasn't it? I don't know, I have a very low standard of taste, so I prepared foods that were easy to make, easy to clean, and acceptable to eat. Less time cooking, more time doing other things! Also, I kept salmon for the weekend because, you know, _save the best for last_.
 
