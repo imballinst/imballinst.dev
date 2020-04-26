@@ -5,9 +5,6 @@ import Layout from '../components/Layout';
 import { PeepoLink } from '../components/Links';
 import { Typography } from '../components/Typography';
 import { Paper } from '../components/Paper';
-import { SunIcon } from '../icons/SunICon';
-import { MoonIcon } from '../icons/MoonIcon';
-import { StarIcon } from '../icons/StarIcon';
 
 type IndexPageTemplateProps = {
   title: string;
@@ -21,9 +18,6 @@ export const IndexPageTemplate = ({
   readBlogText
 }: IndexPageTemplateProps) => (
   <div className="flex flex-col align-center mt-24">
-    <SunIcon size={100} />
-    <MoonIcon size={100} />
-    <StarIcon size={20} />
     <Paper>
       <Typography variant="h1" className="text-center">
         {title}
