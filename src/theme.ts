@@ -104,8 +104,8 @@ export const peepoTheme = {
     return `${colorSet.contrastText.twClass} ${colorSet.contrastTextHover.twClass} font-bold`;
   },
   topbarHeight: 56,
-  pageHorizontalSpacing: 'px-8 sm:px-16 md:px-24',
-  pageVerticalSpacing: 'py-4 lg:py-8',
+  pageHorizontalSpacing: 'sm:px-16 md:px-24',
+  pageVerticalSpacing: 'lg:py-8',
   maxOptimalWidth: '768px',
   minOptimalWidth: '242px'
 };

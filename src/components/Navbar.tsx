@@ -100,7 +100,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`bg-teal-900 text-white ${peepoTheme.pageHorizontalSpacing} fixed top-0 w-full z-50 flex flex-row justify-center`}
+      className={`bg-teal-900 text-white px-4 ${peepoTheme.pageHorizontalSpacing} fixed top-0 w-full z-50 flex flex-row justify-center`}
       role="navigation"
       aria-label="main-navigation"
     >
