@@ -41,6 +41,7 @@ function SEO({
   const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
 
   let helmetMeta: MetaType = [
+    // Social media metas.
     {
       name: `description`,
       content: metaDescription
