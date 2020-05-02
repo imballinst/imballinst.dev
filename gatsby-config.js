@@ -6,7 +6,7 @@ module.exports = {
     author: 'Try Ajitiono',
     authorTwitter: '@Ajiballinst',
     keywords: ['blog', 'tech', 'life', 'happiness'],
-    siteUrl: 'https://deploy-preview-2--peepohappy.netlify.app/'
+    siteUrl: 'https://peepohappy.id'
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -153,7 +153,8 @@ module.exports = {
         purgeOnly: ['/all.css']
       }
     },
-    // must be after other CSS plugins
+    'gatsby-plugin-sitemap',
+    // must be after other CSS plugins.
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 };
