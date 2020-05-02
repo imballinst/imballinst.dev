@@ -41,11 +41,6 @@ function SEO({
   const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
 
   let helmetMeta: MetaType = [
-    // Google search console meta.
-    {
-      name: 'google-site-verification',
-      content: 'iT64H_fhw7KPldvYBtdRIje-fs1DyZj-_QxfFc0As9g'
-    },
     // Social media metas.
     {
       name: `description`,
