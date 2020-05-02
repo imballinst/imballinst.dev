@@ -6,7 +6,7 @@ module.exports = {
     author: 'Try Ajitiono',
     authorTwitter: '@Ajiballinst',
     keywords: ['blog', 'tech', 'life', 'happiness'],
-    siteUrl: 'https://peepohappy.id/'
+    siteUrl: 'https://peepohappy.id'
   },
   plugins: [
     'gatsby-plugin-typescript',
