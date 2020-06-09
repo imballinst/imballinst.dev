@@ -3,7 +3,7 @@ templateKey: blog-post
 title: JSDoc, a Stairway to TypeScript
 date: 2020-04-25T14:39:06.797Z
 featuredpost: false
-featuredimage: unimelb-law-building.jpg
+featuredimage: images/platinum-route-217.png
 description: If you hate writing JSDoc syntax, you might really love TypeScript.
 tags:
   - software engineering
