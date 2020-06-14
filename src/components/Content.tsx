@@ -5,7 +5,16 @@ import { peepoTheme } from '../theme';
 // References: https://www.webfx.com/blog/web-design/hyperlink-design/.
 // Since we can't quite modify those from the Gatsby config, we override them here.
 const ContentDiv = styled.div`
-  & p {
+  & .gatsby-highlight,
+  & figure {
+    margin-left: ${peepoTheme.spacing(-4)};
+    margin-right: ${peepoTheme.spacing(-4)};
+  }
+  & hr {
+    margin-bottom: ${peepoTheme.spacing(4)};
+  }
+  & p,
+  & .gatsby-highlight {
     &:not(:last-child) {
       margin-bottom: ${peepoTheme.spacing(4)};
     }
