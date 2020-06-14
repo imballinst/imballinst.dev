@@ -1,13 +1,19 @@
 ---
 templateKey: blog-post
 title: JSDoc, a Stairway to TypeScript
-date: 2020-04-25T14:39:06.797Z
+date: 2020-07-14T14:39:06.797Z
 featuredpost: false
 featuredimage: images/platinum-route-217.png
 description: If you hate writing JSDoc syntax, you might really love TypeScript.
 tags:
   - software engineering
   - javascript
+---
+
+---
+
+_In this post, I will be using the contents of this repository: https://github.com/Imballinst/jsdoc-sample._
+
 ---
 
 I have been using TypeScript for almost 1 year and I've got to say, I really enjoy working with it every day. I feel someone -- or rather, something -- is watching me writing my code. If I have an error, it will scream next to my ear and it won't stop until I fix it. This is a blessing, well, most of the time anyways. There are times when I wanted to bang my head to the wall because there were cryptic errors that I couldn't quite solve easily.
@@ -30,10 +36,18 @@ You might have heard about [JSDoc](https://github.com/jsdoc/jsdoc), or perhaps y
 
 ```js
 // This is an inline comment.
-/** This is a comment. */
+const x = 1;
+
+/** This is a multi-line comment. When the variable is hovered, it will display this comment. */
+const y = 2;
+
 /**
  * This is a multi-line comment.
+ * When the variable is hovered, it will display this comment.
  */
+const z = 3;
+
+// Note that the output comment for `y` and `z` are the same, despite we use line break in the comment.
 ```
 
 For comments that are using the `/** {content} */` syntax, in modern IDEs, such as Visual Studio Code, they will automatically infer it as JSDoc documentation comments. This enables developers to quickly look up about the definition of a variable without changing context (e.g. open another file, scroll up/down, etc.). Without further ado, let's explore the key features of JSDoc.
