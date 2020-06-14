@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: JSDoc, a Stairway to TypeScript
-date: 2020-07-14T14:39:06.797Z
+date: 2020-06-14T09:34:13.872Z
 featuredpost: false
 featuredimage: images/platinum-route-217.png
 description: If you hate writing JSDoc syntax, you might really love TypeScript.
@@ -141,10 +141,136 @@ module.exports = { db };
 
 Here, we have defined 2 types, `Author` and `Book`. You may have noticed the brackets on the field `Author.address` and `Book.release_date`. This is used to indicate that the bracketed field is an optional field (can be left `undefined`). Let's take a look how Visual Studio interpret the `.push` method now:
 
-![There are field suggestions, with the release_date field marked with "?".](images/books-without-jsdoc.png)
+![There are field suggestions, with the optional release_date field marked with "?".](images/books-with-jsdoc.png)
 
 Cool! Now, we don't need to remember which fields are required and which fields are optional, because our IDE guides us. Remember when I mentioned about "road track" above? This is IDE's "road track", which we use to delegate the burden of recalling.
 
 ### Comparison with TypeScript
 
+So, how good is JSDoc? I'd say it's pretty good. However, for comparison purposes, let's replicate the example repository in TypeScript, shall we? This is the link to the [TypeScript playground](https://www.typescriptlang.org/play/?ssl=1&ssc=1&pln=107&pc=1#code/PTAEBMCMDoCsGcBQAXAngBwKagIIFdkALAewCdQBeUAb0VFAEtwAuUeZUhgOwHMBuOqC4BDALaZW7TrwH1h4cKUzx4Afkkdu-RAF9EKDNgBCxYgGtKNQUw3Tt9EeNtbZoJQBtMw+JgD64YWRMdTZNGV19AGNiLnYISEtaOQISUnhWAG0AXVBvXBSybIAaQUhTM3TQbNz4UBNzbN0BRBBQSOF3SLx3QLI4JAAzPC5I5AYYtjxRACYAOSnITDSACmFWLgWlotBIdc3SAEoreiVkPFIuXNAAah2BPUQhkbGJ+Cnl6E+N0UW0vZ+ltkjklQJ5kKBkMRkB1LAAGVxg3KkUjCVD-X7VKjZZr0BgDUCrUg8KaYLjIeDQTy8IiUChUWHAwT0IikYgAdyEmA5AFFkWRlgByHBEklk2pUng0+AkbrgHbYURkbBEYSXACM0AFB1cOlAmHcPkY+MJxPEYsppMlhFpVDVoAAZPbcMjUdAGPBhSjUCbReSMrCsgdGfQ5C7UJZvr94Dq9QbsCDQ17LMIRWbyTVclxUDr9PQBmQCYiGHDthKaVQU16LdTCHxGKAADygy1EOsMa7XYMhyHQ9w3CthjIMLI5wSnc6XHsde76bhBUgDYSRbAAZSmAHkAG5LdzEeTHSaiVgJglrIT7ba7c8Aw7opauejLSNLSrP0hAu+kB8Ez7QN+v-YP2vX4cweaJYnBN5RC3Hc9xYUA12g7dSF3fcqBBKCn32SpVVQA5WFwg96ERKc+3pb9EUrVFP0xKoR1zEM8VPVNSXJasrRtUAGSI7tCFZDkuC5UBeVZUhBWFU1WPFFtrWlYhZXlUBFSUCFCFVUANS1b9dX1Q0mJ9NMKTLa06VtB0nU9V13Us70U0ksV-UDLsQyRJMqH-bTY0NE9E1RZMWLFDNcO0hi8wLZYixLZsa38qtjLbRtoqtNsO2c7soRha4By9Id6Jch4XPHC4IQy9xQOaVognYfpHmGUZxkubwfFIZBuQARzwDpVgIrNLx6vCD304RQAAQioSA0pZdlOR5PkxIAAwAEmoYRdS4KE9Q6mFlsgHR5u1QQCrcTAzmKjg8EwGcWjAAAVZRwXaTpul6cgnnqmIKUQJqllarb3GWQQoLmbDljVbZpgOEp6CB+Yb3gUHwYORADu+lr2s6-7AfeMHQGmbYAGZIax0QEdxgmkZRlQfvRrriZglC4OgTCcbx0BCahw96dQ8Amex8HyeRgRUd+jGAehjdkO53mSYyFmCcDDmoK5xnMNl-m2cDQX9CgaAynMCl0DwaVlhBGxQAFNUBQ5xwJHNldiHENxVXAB2dnKAVdAOnXhAKNJoEN43Tfgi2rcEG3WAFAApYhCC4D2dAOoA). Alternatively, inside the repository, there is also the TypeScript demo file, `with-ts/all.ts`.
+
+For the file `db.js`, there is not much difference. We just translated the JSDoc syntaxes to TypeScript types:
+
+```ts
+type Author = {
+  id: string;
+  name: string;
+  address?: string;
+};
+
+type Book = {
+  id: string;
+  name: string;
+  release_date?: string;
+};
+
+const db = {
+  authors: [] as Author[],
+  books: [] as Book[]
+};
+```
+
+However, for `calculator.js`, it's a bit tricky, because function overloading and TypeScript aren't exactly the best friends.
+
+```ts
+function sum2Numbers(a: number, b: number) {
+  return a + b;
+}
+
+function sum(...numbers: number[]) {
+  let total = 0;
+  let array: number[] = [];
+
+  if (arguments.length === 0) {
+    throw new Error('Arguments length should be more than 1.');
+  } else if (arguments.length === 1 && Array.isArray(arguments[0])) {
+    array = numbers;
+  } else {
+    // highlight-next-line
+    array = arguments as any;
+  }
+
+  for (let i = 0, length = array.length; i < length; i++) {
+    total += array[i];
+  }
+
+  return total;
+}
+
+// highlight-start
+interface SumOverload {
+  sum: {
+    (a: number, b: number): number;
+    (numbers: number[]): number;
+    (...numbers: number[]): number;
+  };
+}
+// highlight-end
+
+const sumOverload: SumOverload = {
+  sum(numbers: any): any {
+    let total = 0;
+    let array: number[] = [];
+
+    if (arguments.length === 0) {
+      throw new Error('Arguments length should be more than 1.');
+    } else if (arguments.length === 1 && Array.isArray(arguments[0])) {
+      array = numbers;
+    } else {
+      array = arguments as any;
+    }
+
+    for (let i = 0, length = array.length; i < length; i++) {
+      total += array[i];
+    }
+
+    return total;
+  }
+};
+```
+
+For the `sum` function, we need to cast `arguments` to `any` because `number[]` can't be converted to type `IArguments`. On the other hand, in `sumOverload`, we can give 3 kinds of input parameter to `sumOverload.sum`: (1) 2 number parameters, (2) an array of numbers, or (3) more than 3 number parameters. As written in ["Functions Overloads" section of TypeScript documentation](https://www.typescriptlang.org/docs/handbook/functions.html#overloads), we only need to implement the function **once**, while only implementing the "interface" for all other overloads.
+
+Lastly, the `test.js` is just the same, except the function definition for `assertEqual`.
+
+```ts
+// highlight-next-line
+function assertEqual(a: any, b: any) {
+  if (a != b) {
+    throw new Error(`${a} not equal ${b}`);
+  }
+
+  return true;
+}
+
+// Test calculator functions.
+assertEqual(sum2Numbers(1, 2), sum2Numbers(1, 2));
+assertEqual(sum(1, 2, 3), sum(1, 2, 3));
+assertEqual(sumOverload.sum(1, 2, 3), sumOverload.sum(1, 2, 3));
+assertEqual(sumOverload.sum([1, 2, 3]), sumOverload.sum([1, 2, 3]));
+
+db.books.push({
+  id: '1',
+  name: 'Some random book'
+});
+db.authors.push({
+  id: '1',
+  name: 'John'
+});
+```
+
+TypeScript has the same suggestions feature, just like JSDoc. Moreover, if you put add a wrong field to, say, `db.books` array element, the IDE will show an error. This is really useful because that kind of error usually won't be visible to us until we run the code.
+
+![TypeScript shows compile-time error when we try to add an invalid property.](images/typescript-compiletime-error.png)
+
+So, what do you think? I think JSDoc really bridges the gap between "plain JavaScript" and "TypeScript". With that said, I prefer TypeScript than JSDoc, because not only the former is more expressive than the latter, but also because TypeScript is far richer in terms of features than JSDoc -- one of them is the compile-time type checks instead of runtime. For me, this is a deal breaker as I can prevent browser errors before they happen.
+
 ### Conclusion
+
+Well, that's it! We have covered the key features of JSDoc. With JSDoc, we can utilize the suggestions feature of our IDE, which lifts the burden of recalling small things. JSDoc and TypeScript share a lot of things in common -- from describing data structures to autocomplete/suggestions. However, even with JSDoc, it's quite hard to analyze TypeErrors in the code before runtime. As such, we can't quite go _autopilot_ when writing the code.
+
+This is where TypeScript goes in. Now that you have become familiar with JSDoc and its syntaxes, I _think_ you will enjoy writing TypeScript stuff, because you don't have to use multi-line comments to describe something. Moreover, you will be protected from runtime TypeError, because they all will be caught during the compile time. Now, say it with me: _"Bye-bye, runtime TypeError!"_.
+
+...wait. Unless you are using `any` in a lot of places, that is.
+
+So, yeah. Hopefully this post is useful to you in any way. Good luck!

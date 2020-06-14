@@ -45,7 +45,6 @@ code[class*='language-']::selection {
 }
 
 pre[class*='language-'] {
-  padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
   background: #1e1e1e;
@@ -213,16 +212,39 @@ pre[class*='language-'] > code[class*='language-'] {
   z-index: 1;
 }
 
-.line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  background: #f7ebc6;
-  box-shadow: inset 5px 0 0 #f7d87c;
-  z-index: 0;
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
+/**
+ * Add back the container background-color, border-radius, padding, margin
+ * and overflow that we removed from <pre>.
+ */
+.gatsby-highlight {
+  border-radius: 0.3em;
+  overflow: auto;
+}
+
+/**
+ * Remove the default PrismJS theme background-color, border-radius, margin,
+ * padding and overflow.
+ * 1. Make the element just wide enough to fit its content.
+ * 2. Always fill the visible space in .gatsby-highlight.
+ * 3. Adjust the position of the line numbers
+ */
+.gatsby-highlight pre[class*='language-'] {
+  overflow: initial;
+  padding: 1rem;
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
+
+.gatsby-highlight-code-line {
+  background-color: #555;
+  display: block;
+  border-left: 0.25rem solid #999;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.gatsby-highlight-code-line .token.operator {
+  background-color: #555;
 }
