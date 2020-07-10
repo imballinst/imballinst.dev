@@ -34,6 +34,16 @@ const ContentDiv = styled.div`
       word-wrap: break-word;
     }
   }
+  ol,
+  ul {
+    list-style: normal;
+    margin-left: ${peepoTheme.spacing(4)};
+    margin-bottom: ${peepoTheme.spacing(4)};
+
+    li {
+      padding-left: ${peepoTheme.spacing(2)};
+    }
+  }
   & table {
     &:not(:last-child) {
       margin-bottom: ${peepoTheme.spacing(4)};

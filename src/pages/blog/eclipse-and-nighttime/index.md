@@ -17,13 +17,17 @@ tags:
 
 Normally, we will have day and night take turns on a day-to-day basis. A sunny day will switch into a moonlit night. Light will shift into darkness. After the darkest of the night, universe will present us with dawn -- where shortly after, sun will rise back up.
 
-![Darkness is present during the nighttime. Cr: ForestWander Nature Photography.](images/platinum-route-217.png)
+![Darkness is present during the nighttime. Cr: ForestWander Nature Photography.](images/darkness-nighttime-forest-wander.jpg)
 
 However, darkness doesn't exist only during the night. For example, every certain period of time, in a particular location, a phenomenon called "Solar Eclipse" _can_ happen, where [a portion of the Earth is engulfed in a shadow cast by the moon, which fully or partially blocks sunlight](https://en.wikipedia.org/wiki/Solar_eclipse).
 
-![Light can be obstructed, leaving only darkness nearby. Cr: Romeo Durscher.](images/platinum-route-217.png)
+![Light can be obstructed, leaving only darkness nearby. Cr: Romeo Durscher.](images/solar-eclipse-romeo-durscher.png)
 
 How does this correlate with the real life? In this life, we surely will face a lot of struggles. There are ones that only last for a short time, however, there are also the ones that feel like it will last forever. As for the latter, our mind is really prone to negative thoughts -- it is as if there is a devil whispering to one of our ears about the darkest possible scenario that could ever happen. I **had** those thoughts, and I'm going to share my experience of having them.
+
+## Prelude
+
+Before I begin, I'd like to let you know that I'm not expecting you to feel sorry for me. I am only expecting you to simply **be kind to others**. If they react negatively to your actions, first and foremost, you should ask yourself, "Did _I_ do something wrong?" instead of "What's wrong with _you_?"
 
 ## In the Past
 
@@ -33,7 +37,7 @@ In my elementary school, I had faced similar experiences, as well. There were 2 
 
 God, I hate it so much when I was/am being a crybaby. It feels like I'm really powerless. I can't stand people with aggressive behavior, but I can't do anything about it and it hurts me even more. The more I think of it, crying for myself was probably a better way to vent out. At least I only made people irritated of my "crybaby" status. This was not the case when I was still in Junior High School, where I for the first time, let my emotions got the best of me. I am not proud of it.
 
-It was like the first month since the school started. There was a group of students behind me who repeatedly mentioned my Chinese face (my mother was born in Medan, South Sumatra with a bit of Chinese blood in her, while my father was born in Klaten, Central Java). I also faced the same situation when I was in elementary school, but you probably can guess my reaction. So, yes, back to the story in Junior High School. If they only did that occassionally, I _probably_ would not mind. However, they were constantly doing so and they were getting on my nerves. This time, I didn't cry. I turned around and swung my hand. I ended up scratching the eyelid of the student who was sitting behind me... and it bled. After that, a teacher came and separated us to ease up the commotion. I wasn't thinking clearly, and it could have been really fatal. I could have destroyed the gift of vision in his left eye.
+It was around the first month since the school started. There was a group of students behind me who repeatedly mentioned my Chinese face (my mother was born in Medan, South Sumatra with a bit of Chinese blood in her, while my father was born in Klaten, Central Java). I also faced the same situation when I was in elementary school, but you probably can guess my reaction. So, yes, back to the story in Junior High School. If they only did that occassionally, I _probably_ would not mind. However, they were constantly doing so and they were getting on my nerves. This time, I didn't cry. I turned around and swung my hand. I ended up scratching the eyelid of the student who was sitting behind me... and it bled. After that, a teacher came and separated us to ease up the commotion. I wasn't thinking clearly, and it could have been really fatal. I could have destroyed the gift of vision in his left eye.
 
 And that was perhaps my turning point. When I was really frustrated, instead of hurting other people physically, I hurt myself, though sometimes I hurt other people emotionally as well with my sudden outburst. Which leads us to recent times.
 
@@ -67,6 +71,24 @@ These triggers ultimately led to a series of dark thoughts.
 2. Another method in self-harming, such as staying up late and eating a lot of fast food. It's not a "direct impact", while at the same time it will tax my age. At that time, I was convinced that I liked this option.
 3. I wanted my father to remove my name from the family card, so there was a reason for me to "live alone".
 4. I began to question whether Islam is the religion that brings "blessings for entire world". What my mother said did not really represent Islam at all. I know that one person, or one group, does not represent the whole community, but it was really hard to take it when it came from the person who lived with you under the same roof.
-5. I began to question the need to get married, as I would be dragging my wife to my dysfunctional family. By dragging her, I would make her feel the same pain like I did. I was feeling guilty.
+5. I began to question the need to get married, as I would be dragging my wife to my dysfunctional family. By dragging her, I would make her feel the same pain like I did. Perhaps it's better to not get married at all?
 
-When I was experiencing these thoughts, it felt weird. I was alive, but I didn't feel like alive. I was stuck in a thought-loop, which consisted of negative emotions.
+When I was experiencing these thoughts, it felt weird. I was alive, but I didn't feel like alive. I was stuck in a thought-loop of negative emotions. I really wished if I could just die at that moment without feeling any pain, I would gladly do so. However, something stirred inside me. It was **empathy**.
+
+## Empathy
+
+If I chose suicide at that moment, I would not think at all about my mother's feelings. She disregarded my feelings, and that's all there is to it. What I felt was my father's sadness... as well as my soon-to-be-wife (at this time of writing). I could not stand seeing them hurting _that_ much, especially for my significant other. When we first committed to a serious relationship, I told her that I wanted to build a loving family, which provides physical and emotional support to all of its members. After that, the images of my dearest friends appeared as well... and I thought, it would really heartbreaking for them if they know that their friend died by suicide.
+
+I am still recovering at the moment. My sleep schedule is still messed up, and my work rate is still below my standard. These dark thoughts still linger, though not as strong as when the attack happened. My loved ones and my friends helped me, in a way.
+
+## Closing Words
+
+I did a lot of bad things because of the explosion of my emotions. I felt really bad -- and that was when I started taking my mental health seriously. I visited a psychologist twice (before this COVID-19 happened), read a lot of articles regarding this matter, as well as [watching some educational streams regarding mental health](https://www.twitch.tv/healthygamer_gg).
+
+I'm closing this post with what I said in the "Prelude" section. I hope this serves as a reminder for me, too.
+
+---
+
+<span style="display:block;text-align:center;font-style:italic;">**Be kind to others**. If they react negatively to your actions, first and foremost, you should ask yourself, "Did _I_ do something wrong?" instead of "What's wrong with _you_?"</span>
+
+---
