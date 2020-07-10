@@ -23,7 +23,9 @@ However, darkness doesn't exist only during the night. For example, every certai
 
 ![Light can be obstructed, leaving only darkness nearby. Cr: Romeo Durscher.](images/solar-eclipse-romeo-durscher.png)
 
-How does this correlate with the real life? In this life, we surely will face a lot of struggles. There are ones that only last for a short time, however, there are also the ones that feel like they are going to last forever. For the latter case, our mind _might_ be really prone to negative thoughts -- it is as if there is a devil whispering to one of our ears about the darkest possible scenario that could ever happen. I **had** those thoughts, and I'm going to share my experience of having them.
+How does this correlate with the real life? In this life, we surely will face a lot of struggles. There are ones that only last for a short time, however, there are also the ones that feel like they are going to last forever. For either case, our mind _might_ be really prone to negative thoughts -- it is as if there is a devil whispering to one of our ears about the darkest possible scenario that could ever happen.
+
+In my case, there was an eclipse, and right after it ended, a pitch black from nighttime followed that up.
 
 ## Prelude
 
