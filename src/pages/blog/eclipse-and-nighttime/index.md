@@ -4,14 +4,14 @@ title: Eclipse and Nighttime
 date: 2020-07-10T10:31:20.525Z
 featuredpost: false
 featuredimage: images/darkness-nighttime-forest-wander.jpg
-description: Darkness can be short but sudden, or last long while expected.
+description: Let's be kind to others.
 tags:
   - life
 ---
 
 ---
 
-<span style="display:block;text-align:center;font-style:italic;">"Darkness can be short but sudden, or last long while expected."</span>
+<span style="display:block;text-align:center;font-style:italic;">WARNING: This post **may** have some troubling parts in later sections. Proceed to read with care.</span>
 
 ---
 
