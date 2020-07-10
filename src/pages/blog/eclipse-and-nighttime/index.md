@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Eclipse and Nighttime
-date: 2020-07-05T09:34:13.872Z
+date: 2020-07-10T10:31:20.525Z
 featuredpost: false
 featuredimage: images/darkness-nighttime-forest-wander.jpg
 description: Darkness can be short but sudden, or last long while expected.
@@ -29,7 +29,7 @@ In my case, there was an eclipse, and right after it ended, a pitch black from n
 
 ## Prelude
 
-Before I begin, I'd like to let you know that I'm not expecting you to feel sorry for me. I am only expecting you to simply **be kind to others**. If they react negatively to your actions, first and foremost, you should ask yourself, "Did _I_ do something wrong?" instead of "What's wrong with _you_?"
+Before I begin, I'd like to let you know that I'm not expecting you to feel sorry for me. I am only expecting you to simply **be kind to others**. If they react negatively to your actions, first and foremost, you should ask yourself, _"Did **I** do something wrong?"_ instead of _"What's wrong with **you**?"_. Even a simple gesture such as _"Are you okay?"_ without judgmental tone is better than the latter.
 
 ## In the Past
 
@@ -69,7 +69,7 @@ She was telling that to me, her own son, who was having exactly the same problem
 
 ## Dark Thoughts
 
-These triggers ultimately led to a series of dark thoughts.
+These triggers ultimately led to a series of dark thoughts. I was feeling absolutely worthless, I thought that I didn't have a place in this world.
 
 1. I thought about killing myself. Jumping from the balcony, jumping from the stairs, and stabbing myself with scissors were amongst the options. However, I wasn't brave enough to do one of them.
 2. I considered indirect methods of self-harming, such as staying up late and eating a lot of fast food. It's not a "direct impact", but at the same time it will tax my age. At that time, I was convinced that I liked this option.
@@ -95,6 +95,6 @@ I'm closing this post with what I said in the "Prelude" section. I hope this ser
 
 ---
 
-<span style="display:block;text-align:center;font-style:italic;">**Be kind to others**. If they react negatively to your actions, first and foremost, you should ask yourself, "Did _I_ do something wrong?" instead of "What's wrong with _you_?"</span>
+<span style="display:block;text-align:center;font-style:italic;">**Be kind to others**. If they react negatively to your actions, first and foremost, you should ask yourself, _"Did **I** do something wrong?"_ instead of _"What's wrong with **you**?"_. Even a simple gesture such as _"Are you okay?"_ without judgmental tone is better than the latter.</span>
 
 ---
