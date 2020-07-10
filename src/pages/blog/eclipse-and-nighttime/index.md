@@ -23,9 +23,9 @@ However, darkness doesn't only exist during the night. For example, every certai
 
 ![Light can be obstructed, leaving only darkness nearby. Cr: Romeo Durscher.](images/solar-eclipse-romeo-durscher.png)
 
-How does this correlate with the real life? In this life, we surely will face a lot of struggles. There are ones that only last for a short time, however, there are also the ones that feel like they are going to last forever. For either case, our mind _might_ be really prone to negative thoughts -- it is as if there is a devil whispering to one of our ears about the darkest possible scenario that could ever happen.
+How does this correlate with the real life? In this life, we surely will face a lot of struggles. There are ones that only last for a short time, and there are also the ones that feel like they are going to last forever. For either case, our mind _might_ be really prone to negative thoughts -- it is as if there is a devil whispering to one of our ears about the darkest possible scenario that could ever happen.
 
-In my case, there was an eclipse, and right after it ended, a pitch black from nighttime followed that up.
+In my case, there was an eclipse, and right after it ended, a pitch black nighttime followed that up.
 
 ## Prelude
 
@@ -47,11 +47,11 @@ That was perhaps my turning point. When I was really frustrated, instead of hurt
 
 ## The Triggers
 
-I didn't have the best relationship with my mother during my childhood, and I still don't. When I finished my Masters in Australia back in December 2019, I was offered a remote full-time job from a company where I worked part-time previously for ~15 months. I thought that by being at home, I could somewhat remedy my relationship with my mother, which hopefully in turn, would repair the relationship between my father and mother as well. They are still together, but their communication is just so off. So, I decided to take up that offer and planned to work from home when I returned to Indonesia.
+I didn't have the best relationship with my mother during my childhood, and I still don't. When I finished my Masters in Australia back in December 2019, I was offered a remote full-time job from a company where I worked part-time previously for ~15 months. I thought that by being at home, I could somewhat remedy my relationship with my mother, which hopefully in turn, would repair the relationship between my father and mother as well. They are still together, but their communication is just so off. So, I decided to take up that offer and planned to work from my home in Jakarta after my graduation.
 
 Things went well, I could see that it was better. I was getting used to my mother's constant rambling. I understand that my father was not able to "contain" my mother's emotions, so I somewhat took that role. I thought everything would be just fine, but I couldn't be more wrong. When my mother rambled about 3 things, I immediately lost it.
 
-### Women is Better than Men
+### Women are Better than Men
 
 Every time my father made a mistake, she immediately rushed to the conclusion that _"All men are like that"_, then proceeded to talk how women are always better in that matter. It really hurt -- yes I am a male like my father, but it doesn't mean that she could just lump me and him together. Not only that, when we did something that wasn't according to her expectation, she shrugged it off with something like, _"If you were female you would have done this and that"_.
 
