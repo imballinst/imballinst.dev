@@ -69,7 +69,7 @@ She was telling that to me, her own son, who was having exactly the same problem
 
 ## Dark Thoughts
 
-These triggers ultimately led to a series of dark thoughts. I was feeling absolutely worthless. In my mind, at that time, I didn't have a place in the world.
+If these triggers were the eclipse, then my own mind was the nighttime. I was feeling absolutely worthless. In my mind, at that time, I didn't have a place in the world.
 
 1. I thought about killing myself. Jumping from the balcony, jumping from the stairs, and stabbing myself with scissors were amongst the options. However, I wasn't brave enough to do any of them.
 2. I considered indirect methods of self-harming, such as staying up late and eating a lot of fast food. It's not a "direct impact", but at the same time it will tax my age. At that time, I was convinced that I really liked this option.
