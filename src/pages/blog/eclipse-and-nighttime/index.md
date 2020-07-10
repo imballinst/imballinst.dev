@@ -19,7 +19,7 @@ Normally, we will have day and night take turns on a day-to-day basis. A sunny d
 
 ![Darkness is present during the nighttime. Cr: ForestWander Nature Photography.](images/darkness-nighttime-forest-wander.jpg)
 
-However, darkness doesn't exist only during the night. For example, every certain period of time, in a particular location, a phenomenon called "Solar Eclipse" _can_ happen, where [a portion of the Earth is engulfed in a shadow cast by the moon, which fully or partially blocks sunlight](https://en.wikipedia.org/wiki/Solar_eclipse).
+However, darkness doesn't only exist during the night. For example, every certain period of time, in a particular location, a phenomenon called "Solar Eclipse" _can_ happen, where [a portion of the Earth is engulfed in a shadow cast by the moon, which fully or partially blocks sunlight](https://en.wikipedia.org/wiki/Solar_eclipse).
 
 ![Light can be obstructed, leaving only darkness nearby. Cr: Romeo Durscher.](images/solar-eclipse-romeo-durscher.png)
 
