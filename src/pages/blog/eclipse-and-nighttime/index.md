@@ -4,6 +4,7 @@ title: Eclipse and Nighttime
 date: 2020-07-10T10:31:20.525Z
 featuredpost: false
 featuredimage: images/darkness-nighttime-forest-wander.jpg
+visibility: unlisted
 description: Let's be kind to others.
 tags:
   - life

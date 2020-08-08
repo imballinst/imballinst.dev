@@ -4,6 +4,7 @@ title: JSDoc, a Stairway to TypeScript
 date: 2020-06-14T09:34:13.872Z
 featuredpost: false
 featuredimage: images/platinum-route-217.png
+visibility: public
 description: If you hate writing JSDoc syntax, you might really love TypeScript.
 tags:
   - software engineering
