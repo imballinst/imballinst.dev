@@ -36,7 +36,7 @@ const ContentDiv = styled.div`
   }
   ol,
   ul {
-    list-style: normal;
+    list-style: decimal;
     margin-left: ${peepoTheme.spacing(4)};
     margin-bottom: ${peepoTheme.spacing(4)};
 
