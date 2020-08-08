@@ -223,7 +223,12 @@ export default () => (
       query PostsQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: {
+            frontmatter: {
+              templateKey: { eq: "blog-post" }
+              visibility: { eq: "public" }
+            }
+          }
         ) {
           edges {
             node {
