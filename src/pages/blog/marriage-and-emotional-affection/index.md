@@ -40,7 +40,7 @@ After that, it was a slow-but-sure ride. We got closer and closer, until we were
 
 #### Patience and Empathy
 
-When I just started being together with Hawa, one of the words that would describe me most was **rigid**. Everything was binary in my eyes. It was either **true** or **false**, there was no between. Because of that, we had some good "fights". However, we always made up after each one. We resolved them and made action plans on what to do should similar events occur in the future.
+When I just started being together with Hawa, one of the words that would describe me most was **rigid**. Everything was binary in my eyes. It was either **true** or **false**, there was no between. Because of that, we had some good "fights". However, we always made up after each one. We resolved them and made action plans on what to do should similar problems occur in the future.
 
 With that said, there were stuff that we couldn't change overnight. We could change it, but we needed to be patient with each other. We needed to understand the other person that it wasn't easy to change. Hence, we learned **patience** and **empathy** together.
 
@@ -68,7 +68,7 @@ When these 3 components exist together in a household, I believe only a harmonio
 
 ## Will it last forever?
 
-![A GIF capture of the last seconds before we entered our full 1 month of marriage.](images/married-timer.gif)
+![Duration timer since the second I got married with Hawa: https://imballinst.github.io/married/.](images/how-long-married.png)
 
 At the time of writing, it was around 1 month and 11 days since I got married to Hawa. The GIF above was made from [a website that I made specifically to count how long has it been since our wedding](https://imballinst.github.io/married). Although I know "monthversary" is not a thing, I thought it was cool seeing all the numbers change together at the same time. Now, I kind of understand about why anniversary is a big deal for some people. It is a _life milestone_.
 
