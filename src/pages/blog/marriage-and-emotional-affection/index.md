@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Marriage and Emotional Affection
-date: 2020-04-25T14:39:06.797Z
+date: 2020-08-23T13:06:42.074Z
 featuredpost: false
 featuredimage: images/putting-on-the-ring.jpg
 visibility: public
