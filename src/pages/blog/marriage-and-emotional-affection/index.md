@@ -10,7 +10,7 @@ tags:
   - life
 ---
 
-I had a question before I got married, "Will emotional affection last forever? Will a husband and a wife's chemistry deplete over time?". Tony Stark once said, ["I guess we'll find out"](https://www.imdb.com/title/tt0848228/characters/nm0000375).
+I had a question before I got married, _"Will emotional affection last forever? Will a husband and a wife's chemistry deplete over time?"_. Tony Stark once said, ["I guess we'll find out"](https://www.imdb.com/title/tt0848228/characters/nm0000375).
 
 _DISCLAIMER: [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en) was our wedding photographer. They gave us the raw pictures and the edited pictures, but for this post, I can't find the edited ones that I wanted. Therefore, I took out the raw ones and tweaked them myself. If you have keen eye for photography stuff, I'm sorry if the following pictures hurt your eyes!_
 
@@ -28,7 +28,7 @@ My wife -- her name is Hawa -- she used to drive her own car to the office. At o
 
 We started going to the office together as well, where she would pick me up from "my pickup point". During the ride, we talked with each other -- from casual topics to a more personal ones. I got to know her as a person instead of just a colleague. We discovered each other's vulnerable selves. My mind began to question, "Is this the one?"
 
-However, my paranoid self said, "Hahahaha. No. She is just like _that_ woman".
+However, my paranoid self said, "Hahahaha. No. She is just like _that_ woman, why did you even think about it?".
 
 So, yes. My paranoid self won again. Shortly after I graduated, I went to a conference called [ICoDSE 2016](https://eventegg.com/icodse-2016/). There were a lot of my friends who got into that conference as well, hence it was a great time. We went to souvenir shops, where I bought a pair of sandals as a gift for Hawa. Until this day, I didn't know why I had that idea.
 
@@ -52,13 +52,23 @@ We scheduled a weekly video call, which was a bit tricky with Melbourne being 3-
 
 In March 2019, I had a chance to go to San Francisco. It was tough for both me and Hawa, because we had never experienced 14 hours of time difference before, despite the fact that it was only for ~8-9 days. My daytime was her nighttime, and vice versa. Although we could still text each other, we couldn't do our usual weekly video call schedule, because my times and her times didn't match. To make things worse, I also bought a SIM Card that wasn't compatible with my phone. Therefore, 2G was all that I had and I needed to rely on a Wi-Fi connection.
 
-Every day, we tried to find good and matching times for both of us with no luck. However, few days before I flew back to Melbourne, I was free in the morning with a Wi-Fi connection (yay!). That was also the time she could have a video call with me, and so we did. It was a good experience for both of us.
+Every day, we tried to find good and matching times for both of us with no luck. However, few days before I flew back to Melbourne, I was free in the morning with a Wi-Fi connection (yay!). That was also the time she could have a video call with me, and so we did. All in all, it was a good experience for both of us.
 
 <!-- Talk about the build-up to wedding. -->
 
+People said that one of the hardest struggles came before the wedding event. Well, they weren't wrong. There were times where I would be emotionally broken, but Hawa was always there for me. She trusted me, even when I didn't trust myself. She was the light that [gently gave me the strength to move forward](<https://bulbapedia.bulbagarden.net/wiki/ONE_(Japanese_song)>). She was/is a strong woman, and I am the luckiest man alive to have married her.
+
 <!-- Talk about the relation between emotional affection and the 3 aspects above. -->
 
+For me, emotional affection is something that is invisible, but I can _feel_ it. It feels _warmth_. It feels _gentle_. It feels _nurturing_. The 3 aspects above, **trust**, **patience**, and **empathy** -- they are probably the most important kind of affections that made us love each other. When you are trusted, you feel good. When the other person is being patient with you, you feel good. When the other person emphatize with you, you feel good.
+
+When these 3 components exist together in a household, I believe only a harmonious family will flourish.
+
 ![A GIF capture of the last seconds before we entered our full 1 month of marriage.](images/married-timer.gif)
+
+At the time of writing, it was around 1 month and 11 days since I got married to Hawa. The GIF above was made from [a website that I made specifically to count how long has it been since our wedding](https://imballinst.github.io/married). Although I know "monthversary" is not a thing, I thought it was cool seeing all the numbers change together at the same time. Now, I kind of understand about why anniversary is a big deal for some people. It is a _life milestone_.
+
+Let's get back to the beginning of this post, which is the question: _"Will emotional affection last forever? Will a husband and a wife's chemistry deplete over time?"_. Well, that website is also made for that.
 
 - Talk about how long it's been since I've been married
 - Shameless self-promotion on https://imballinst.github.io/married
