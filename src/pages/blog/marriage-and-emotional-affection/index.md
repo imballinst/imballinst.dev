@@ -31,7 +31,7 @@ However, my paranoid self said, "Hahahaha. No. She is just like _that_ woman".
 
 So, yes. My paranoid self won again. Shortly after I graduated, I went to a conference called [ICoDSE 2016](https://eventegg.com/icodse-2016/). There were a lot of my friends who got into that conference as well, hence it was a great time. We went to souvenir shops, where I bought a pair of sandals as a gift for "someone".
 
-I got back to Bandung and took a day off (if I remember correctly). The next day, I gave Hawa the sandals. I must say, for a person who had such paranoid opening up to the opposing gender, I never saw such happiness in one's face when receiving a gift from me. I think that was the moment where my "paranoid castle" began to crumble.
+I got back to Bandung and took a day off (if I remember correctly). The next day, I gave Hawa the sandals. I must say, for a person who had such paranoid opening up to the opposing gender, I never saw such happiness in one's face when receiving a gift from me. I think that was the moment where my "paranoid castle" began to crumble, and so it did.
 
 After that, it was a slow-but-sure ride. We got closer and closer, until we were "officially" together on March 2017. I thought slow buildup to the relationship would mean that we understood each other. I couldn't be more wrong. That was the moment where I began to learn 3 important things in life: **trust**, **patience**, and **empathy**.
 
