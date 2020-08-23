@@ -65,7 +65,7 @@ Every day, we tried to find good and matching times for both of us with no luck.
 - Talk about the background of the counter, mention about affection, which we will cover in the next section
 - Tease a bit about upcoming post regarding the thought-process behind creating it. Ask questions! Ask the reader how they'd implement it and mention me in Twitter.
 
-![When we are old, will we still see each other like we did in this picture?](images/married-timer.gif)
+![When we are old, will we still see each other like we did in this picture?](images/seeing-each-other.jpg)
 
 - Talk about affection and happiness in that image
 - Throw back to the title of this post
