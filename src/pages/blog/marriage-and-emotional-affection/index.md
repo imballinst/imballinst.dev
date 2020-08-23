@@ -11,7 +11,7 @@ tags:
   - life
 ---
 
-I had a question before I got married, "Will emotional affection last forever? Will a husband and a wife's chemistry deplete over time?". Tony Stark once said, "I guess we'll find out".
+I had a question before I got married, "Will emotional affection last forever? Will a husband and a wife's chemistry deplete over time?". Tony Stark once said, ["I guess we'll find out"](https://www.imdb.com/title/tt0848228/characters/nm0000375).
 
 <Putting the ring image>
 
@@ -33,6 +33,8 @@ I had a question before I got married, "Will emotional affection last forever? W
 - Remember what Mas Didit said, regarding "it's up and down -- just like faith. Sometimes it's down, but then it'll bounce back."
 
 At the time of writing, I don't have the answer to my own question yet. But, I really hope the answer is **yes**, and I will try to make that happen.
+
+_The raw wedding images in this post are credited to [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en)._
 
 - REMEMBER:
   -- Be careful with words. It's kinda a sensitive topic. Make sure I'm being specific and not being general. Try to always use "me" instead of "you", or "we", or "us".
