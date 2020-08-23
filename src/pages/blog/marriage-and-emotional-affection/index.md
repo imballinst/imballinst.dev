@@ -76,7 +76,7 @@ Now, let's get back to the beginning of this post: _"Will emotional affection be
 
 ## Will we still see each other like we did?
 
-![When we are old, will we still see each other like we did in this picture?](images/seeing-each-other.jpg)
+![When we are old, will we still see each other like we did in this picture? Credits: Instagram @matahatigraphy.](images/seeing-each-other.jpg)
 
 For the closing words, I would like to ask myself and my wife, _"When we are old, will we still see each other like we did in this picture?"_. Again, I really want to prove that the answer is **yes**. The road will be rocky, our emotional affection towards each other may be tested, but I think the outcome is indescribable if we stay strong.
 
