@@ -15,6 +15,8 @@ I had a question before I got married, "Will emotional affection last forever? W
 
 _DISCLAIMER: [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en) was our wedding photographer. They gave us the raw pictures and the edited pictures, but for this post, I can't find the edited ones that I wanted. Therefore, I took out the raw ones and tweaked them myself. If you have keen eye for photography stuff, I'm sorry if the following pictures hurt your eyes!_
 
+<!-- What relationship is about. -->
+
 ![Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy.](putting-on-the-ring.jpg)
 
 For me, relationship is all about trust, patience, and empathy. I didn't know about that before -- I had to learn them the hard way. It sounds like an excuse, but I didn't really learn a lot about emotional intelligence in my family -- it simply didn't exist (and probably still doesn't). Anger was forbidden, sadness was forbidden, just keep up a mask of a happy face all day to prevent further problems.
@@ -29,22 +31,33 @@ We started going to the office together as well, where she would pick me up from
 
 However, my paranoid self said, "Hahahaha. No. She is just like _that_ woman".
 
-So, yes. My paranoid self won again. Shortly after I graduated, I went to a conference called [ICoDSE 2016](https://eventegg.com/icodse-2016/). There were a lot of my friends who got into that conference as well, hence it was a great time. We went to souvenir shops, where I bought a pair of sandals as a gift for "someone".
+So, yes. My paranoid self won again. Shortly after I graduated, I went to a conference called [ICoDSE 2016](https://eventegg.com/icodse-2016/). There were a lot of my friends who got into that conference as well, hence it was a great time. We went to souvenir shops, where I bought a pair of sandals as a gift for Hawa. Until this day, I didn't know why I had that idea.
 
-I got back to Bandung and took a day off (if I remember correctly). The next day, I gave Hawa the sandals. I must say, for a person who had such paranoid opening up to the opposing gender, I never saw such happiness in one's face when receiving a gift from me. I think that was the moment where my "paranoid castle" began to crumble, and so it did.
+I arrived back in Bandung and took a day off (if I remember correctly). The next day, I gave Hawa the sandals. I must say, for a person who had such paranoid opening up to the opposing gender, I never saw such happiness in one's face when receiving a gift from me. I think that was the moment where my "paranoid castle" began to crumble, and so it did.
 
 After that, it was a slow-but-sure ride. We got closer and closer, until we were "officially" together on March 2017. I thought slow buildup to the relationship would mean that we understood each other. I couldn't be more wrong. That was the moment where I began to learn 3 important things in life: **trust**, **patience**, and **empathy**.
 
-When I just started being together with Hawa, one of the words that would describe me most was **rigid**. Everything was binary in my eyes. It was either **true** or **false**, there was no between. Because of that, we had some good "fights". However, we always made up after each one. We resolved them and made action plans on what to do should similar events occur in the future. We learned **patience** and **empathy** together ove rtime.
+<!-- Empathy and patience. -->
+
+When I just started being together with Hawa, one of the words that would describe me most was **rigid**. Everything was binary in my eyes. It was either **true** or **false**, there was no between. Because of that, we had some good "fights". However, we always made up after each one. We resolved them and made action plans on what to do should similar events occur in the future.
+
+With that said, there were stuff that we couldn't change overnight. We could change it, but we needed to be patient with each other. We needed to understand the other person that it wasn't easy to change. Hence, we learned **patience** and **empathy** together.
 
 My life, which was monochrome, was beginning to have colors because of her.
 
-<!-- Talk about trust. -->
+<!-- Trust. -->
+
+Then, it was about **trust**. Thankfully, we didn't have to go through fights to learn about this. We just trusted each other when we had to maintain Long Distance Relationship (LDR), as I was about to pursue my Masters at University of Melbourne, while Hawa was about to pursue hers at Institut Teknologi Bandung.
+
+We scheduled a weekly video call, which was a bit tricky with Melbourne being 3-4 hours ahead of Bandung. There were times that I or she was busy and couldn't make it, so in that case, we scheduled the video call at a different time. Although we only did that once a week, we always kept a tab of each other every day with text chat. We made sure to respect each other's boundaries, because we both knew that each of us had a lot of stuff to do in our everyday life.
+
+In March 2019, I had a chance to go to San Francisco. It was tough for both me and Hawa, because we had never experienced 14 hours of time difference before, despite the fact that it was only for ~8-9 days. My daytime was her nighttime, and vice versa. Although we could still text each other, we couldn't do our usual weekly video call schedule, because my times and her times didn't match. To make things worse, I also bought a SIM Card that wasn't compatible with my phone. Therefore, 2G was all that I had and I needed to rely on a Wi-Fi connection.
+
+Every day, we tried to find good and matching times for both of us with no luck. However, few days before I flew back to Melbourne, I was free in the morning with a Wi-Fi connection (yay!). That was also the time she could have a video call with me, and so we did. It was a good experience for both of us.
 
 <!-- Talk about the build-up to wedding. -->
 
-- Talk about how wedding isn't the end, but rather it's just the beginning
-- Talk about the differences between the life before marriage and life after marriage
+<!-- Talk about the relation between emotional affection and the 3 aspects above. -->
 
 <Timer GIF>
 
