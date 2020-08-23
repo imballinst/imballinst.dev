@@ -34,8 +34,6 @@ I had a question before I got married, "Will emotional affection last forever? W
 
 At the time of writing, I don't have the answer to my own question yet. But, I really hope the answer is **yes**, and I will try to make that happen.
 
-_The raw wedding images in this post are credited to [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en)._
-
 - REMEMBER:
   -- Be careful with words. It's kinda a sensitive topic. Make sure I'm being specific and not being general. Try to always use "me" instead of "you", or "we", or "us".
-  -- Credit MatahatiGraphy and mention their Instagram when possible (https://www.instagram.com/matahatigraphy/?hl=en), @matahatigraphy.
+  -- Credit MatahatiGraphy and mention their Instagram when possible (https://www.instagram.com/matahatigraphy/?hl=en), or simply "Instagram @matahatigraphy".
