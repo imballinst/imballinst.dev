@@ -1,3 +1,15 @@
+---
+templateKey: blog-post
+title: Marriage and Emotional Affection
+date: 2020-08-23T13:06:42.074Z
+featuredpost: false
+featuredimage: images/putting-on-the-ring.jpg
+visibility: public
+description: I had a question before I got married, "Will emotional affection between husband and wife last forever during their lifetime?"
+tags:
+  - life
+---
+
 I had a question before I got married, _"Will emotional affection between husband and wife last forever during their lifetime?"_. Tony Stark once said, ["I guess we'll find out"](https://www.imdb.com/title/tt0848228/characters/nm0000375).
 
 _DISCLAIMER: [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en) was our wedding photographer. They gave us the raw pictures and the edited pictures, but for this post, I can't find the edited ones that I wanted. Therefore, I took out the raw ones and tweaked them myself. If you have a keen eye for photography stuff, I'm sorry if the following pictures hurt your eyes!_
@@ -8,7 +20,7 @@ _DISCLAIMER: [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en) 
 
 For me, a relationship is all about trust, patience, and empathy. I didn't know about that before -- I had to learn them the hard way. It sounds like an excuse, but I didn't really learn a lot about emotional intelligence in my family -- it simply didn't exist (and probably still doesn't). Anger was forbidden, sadness was forbidden, just keep up a mask of a happy face all day to prevent further problems.
 
-Moreover, since the "culprit" in my parents' _house_ was a woman, it was really hard for me to really open up to the opposing gender, as I was afraid of getting a person with her traits. Love was a topic that I would tread really, really carefully. Yes, I had crushes, but I kept questioning myself, "Is this love? Or is this lust?". I think I was being paranoid, while at the same time, I wanted someone who could match my puzzle piece. I was conflicting with my inner self most of the time.
+Moreover, since the "culprit" in my parents' _house_ was a woman, it was really hard for me to fully open up to the opposing gender, as I was afraid of getting a person with her traits. Love was a topic that I would tread really, really carefully. Yes, I had crushes, but I kept questioning myself, "Is this love? Or is this lust?". I think I was being paranoid, while at the same time, I wanted someone who could match my puzzle piece. I was conflicting with my inner self most of the time.
 
 Fast forward to May 2016, I got the internship that enabled me to do my thesis defense in September. Little did I know, the woman that I would fall in love with also worked in that company. It all started when I accepted the part-time offer after finishing my internship there -- I thought it was a great chance to improve my "actual real job skills" because I was mostly investing myself in my gaming career.
 
@@ -50,19 +62,17 @@ People said that one of the hardest struggles came before the wedding event. Wel
 
 ### Emotional affection and the three aspects
 
-For me, emotional affection is something that is invisible, but I can _feel_ it. It feels _warmth_. It feels _gentle_. It feels _nurturing_. The 3 aspects above, **trust**, **patience**, and **empathy** -- they are probably the most important kind of affections that made us love each other. When you are trusted, you feel good. When the other person is being patient with you, you feel good. When the other person empathizes with you, you feel good.
+For me, emotional affection is something that is invisible, but I can _feel_ it. It feels _warm_. It feels _gentle_. It feels _nurturing_. The 3 aspects above, **trust**, **patience**, and **empathy** -- they are probably the most important kind of affections that made us love each other. When you are trusted, you feel good. When the other person is being patient with you, you feel good. When the other person empathizes with you, you feel good.
 
 When these 3 components exist together in a household, I believe only a harmonious family will flourish.
 
-## Will it last forever?
+## Curiosities
 
 ![Duration timer since the second I got married to Hawa: https://imballinst.github.io/married/.](images/how-long-married.png)
 
 At the time of writing, it was around 1 month and 11 days since I got married to Hawa. The GIF above was made from [a website that I made specifically to count how long has it been since our wedding](https://imballinst.github.io/married). Although I know "monthiversary" is not a thing, I thought it was cool seeing all the numbers change together at the same time. Now, I kind of understand why anniversaries are a big deal for some people. It is a _life milestone_.
 
 Now, let's get back to the beginning of this post: _"Will emotional affection between husband and wife last forever during their lifetime?"_. Well, that website is also made for that. For me and my wife, I really want to prove that the answer is **yes**. I want to keep trusting her, I want to keep being patient with her, and I want to always empathize with her. Hopefully, only death will sever our emotional affection -- so the duration on that website will keep ticking.
-
-## Will we still see each other as we did?
 
 ![When we are old, will we still see each other as we did in this picture? Credits: Instagram @matahatigraphy.](images/seeing-each-other.jpg)
 
