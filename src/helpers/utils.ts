@@ -27,3 +27,13 @@ export function stringify(obj: Partial<FormState>) {
 export function parseQueryParams<T>(queryParams: string): Partial<T> {
   return qs.parse(queryParams, { ignoreQueryPrefix: true });
 }
+
+export function removeTrailingSlashFromSlug(slug: string) {
+  const length = slug.length;
+
+  if (slug.charAt(length - 1) === '/') {
+    return slug.slice(0, -1);
+  }
+
+  return slug;
+}
