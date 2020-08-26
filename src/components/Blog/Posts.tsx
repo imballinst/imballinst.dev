@@ -11,11 +11,7 @@ import { PeepoLink } from '../Links';
 import { SectionWrapper } from '../Layout';
 import { Filter, FormState } from './Filter';
 import { useLocation, useNavigate } from '@reach/router';
-import {
-  parseQueryParams,
-  stringify,
-  removeTrailingSlashFromSlug
-} from '../../helpers/utils';
+import { parseQueryParams, stringify } from '../../helpers/utils';
 
 export type TagCount = {
   fieldValue: string;
@@ -65,7 +61,7 @@ export function ListBlogItem({ post }: { post: ListBlogItemType }) {
         <header>
           <PeepoLink
             className={`${peepoTheme.textSizes.large2} font-semibold`}
-            to={removeTrailingSlashFromSlug(post.fields.slug)}
+            to={post.fields.slug}
           >
             {post.frontmatter.featuredimage ? (
               <PreviewCompatibleImage
