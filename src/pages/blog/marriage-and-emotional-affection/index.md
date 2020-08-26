@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Marriage and Emotional Affection
-date: 2020-08-25T14:32:40.671Z
+date: 2020-08-26T03:00:52.793Z
 featuredpost: false
 featuredimage: images/putting-on-the-ring.jpg
 visibility: public
@@ -73,7 +73,7 @@ When these 3 components exist together in a household, I believe only a harmonio
   <figcaption class="gatsby-resp-image-figcaption">Duration timer since the second I got married to Hawa.</figcaption>
 </figure>
 
-At the time of writing, it was around 1 month and 15 days since I got married to Hawa. The GIF above was made from [a website that I made specifically to count how long has it been since our wedding](https://imballinst.github.io/married). Although I know "monthiversary" is not a thing, I thought it was cool seeing all the numbers change together at the same time. Now, I kind of understand why anniversaries are a big deal for some people. It is a _life milestone_.
+At the time of writing, it was around 1 month and 14 days since I got married to Hawa. The GIF above was made from [a website that I made specifically to count how long has it been since our wedding](https://imballinst.github.io/married). Although I know "monthiversary" is not a thing, I thought it was cool seeing all the numbers change together at the same time. Now, I kind of understand why anniversaries are a big deal for some people. It is a _life milestone_.
 
 Now, let's get back to the beginning of this post: _"Will emotional affection between husband and wife last for a lifetime?"_. Well, that website is also made to keep track of it. For me and my wife, I really want to prove that the answer is **yes**. I want to keep trusting her, I want to keep being patient with her, and I want to always empathize with her. Hopefully, only death will sever our emotional affection -- so the timer on that website will keep ticking.
 
