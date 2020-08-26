@@ -34,7 +34,7 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach(edge => {
       const id = edge.node.id;
       createPage({
-        path: removeTrailingSlashFromSlug(edge.node.fields.slug),
+        path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
@@ -57,15 +57,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value: removeTrailingSlashFromSlug(value)
     });
   }
 };
 
-export function removeTrailingSlashFromSlug(slug) {
+function removeTrailingSlashFromSlug(slug) {
   const length = slug.length;
 
-  if (slug.charAt(length - 1) === '/') {
+  if (length > 1 && slug.charAt(length - 1) === '/') {
     return slug.slice(0, -1);
   }
 
