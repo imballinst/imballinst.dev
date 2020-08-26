@@ -10,7 +10,7 @@ tags:
   - life
 ---
 
-I asked myself a question before I got married, _"Will emotional affection between husband and wife last for a lifetime?"_. Tony Stark once said, ["I guess we'll find out"](https://www.imdb.com/title/tt0848228/characters/nm0000375).
+I asked myself a question before I got married, _"Will emotional affection between husband and wife last for a lifetime?"_. Tony Stark once said, _["I guess we'll find out"](https://www.imdb.com/title/tt0848228/characters/nm0000375)_.
 
 _DISCLAIMER: [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en) was our wedding photographer. They gave us the raw and the edited pictures, but for this post, I can't find images that I wanted from the latter. Therefore, I took out a few pictures from the former and tweaked them myself. If you have a keen eye for photography stuff, I'm sorry if the following pictures hurt your eyes!_
 
@@ -20,13 +20,13 @@ _DISCLAIMER: [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en) 
 
 For me, a relationship is all about trust, patience, and empathy. I didn't know that before -- I had to learn them the hard way. It sounds like an excuse, but my family didn't provide me the best environment to learn about emotional intelligence -- it simply didn't exist (and probably still doesn't). Anger was forbidden, sadness was forbidden, just keep up a mask of a happy face all day to prevent further problems.
 
-Moreover, since the "culprit" in my parents' _house_ was a woman, it was really hard for me to fully open up to the opposing gender, as I was afraid of getting a person with her traits. Love was a topic that I would tread really, really carefully. Yes, I had crushes, but I kept questioning myself, _"Is this love? Or is this lust?"_. I think I was being paranoid, while at the same time, I wanted someone who could match my puzzle piece. I was conflicting with my inner self most of the time.
+Moreover, since the "culprit" in my parents' _house_ was a woman, it was really hard for me to fully open up to the opposing gender. I was afraid of getting a person with her traits. Love was a topic that I would tread really, really carefully. Yes, I had crushes, but I kept questioning myself, _"Is this love? Or is this lust?"_. I think I was being paranoid, while at the same time, I wanted someone who could match my puzzle piece. I was conflicting with my inner self most of the time.
 
 Fast forward to May 2016, I got the internship that enabled me to do my thesis defense in September. Little did I know, the woman who I would fall in love with also worked in that company. It all started when I accepted the part-time offer after finishing my internship there. I thought it was a great chance to improve my "actual real job skills" because my gaming career was going nowhere.
 
-My wife -- her name is Hawa -- she used to drive her own car to the office. I learned that the distance between her house and my living place was not that far -- it was around 15 minutes of walk. One day, I wanted to join her on a ride back together, so she could drop me somewhere on her way home. The first one was not intentional, but soon, it became a habit. I was lucky she didn't mind.
+My wife -- her name is Hawa -- she used to drive her own car to the office. I learned that the distance between her house and my living place was not that far, it was around 15 minutes of walk. One day, I wanted to join her on a ride back together, so she could drop me somewhere on her way home. The first one was not intentional, but soon, it became a habit. I was lucky she didn't mind.
 
-We started going to the office together as well, where she would pick me up at "my pickup point". During the ride, we talked with each other -- from casual topics to more personal ones. I got to know her as a person instead of just a colleague. We discovered each other's vulnerable selves. My mind began to question, _"Is this the one?"_.
+We started going to the office together as well, where she would pick me up at "my pickup point". During the ride, we talked with each other, ranging from casual topics to more personal ones. I got to know her as a person instead of just a colleague. We discovered each other's vulnerable selves. My mind began to question, _"Is this the one?"_.
 
 However, my pessimistic side said, _"Hahahaha. No. She is just like that woman, why did you even think about it?"_.
 
