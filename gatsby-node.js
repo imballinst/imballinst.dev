@@ -57,7 +57,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value: removeTrailingSlashFromSlug(value)
     });
   }
 };
+
+function removeTrailingSlashFromSlug(slug) {
+  const length = slug.length;
+
+  if (length > 1 && slug.charAt(length - 1) === '/') {
+    return slug.slice(0, -1);
+  }
+
+  return slug;
+}
