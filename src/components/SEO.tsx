@@ -86,21 +86,24 @@ function SEO({
     }
   ];
 
-  if (featuredImageResized) {
-    helmetMeta = helmetMeta.concat([
-      {
-        name: 'twitter:card',
-        content: 'summary_large_image'
-      },
-      {
-        property: 'og:image:width',
-        content: featuredImageResized.childImageSharp.resize.width
-      },
-      {
-        property: 'og:image:height',
-        content: featuredImageResized.childImageSharp.resize.height
-      }
-    ] as MetaType);
+  if (featuredImageResized || (pathname && pathname.indexOf('/blog') === 0)) {
+    helmetMeta = helmetMeta.concat({
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    });
+
+    if (featuredImageResized) {
+      helmetMeta = helmetMeta.concat([
+        {
+          property: 'og:image:width',
+          content: featuredImageResized.childImageSharp.resize.width
+        },
+        {
+          property: 'og:image:height',
+          content: featuredImageResized.childImageSharp.resize.height
+        }
+      ]);
+    }
   } else {
     helmetMeta = helmetMeta.concat(meta);
   }
