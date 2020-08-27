@@ -67,6 +67,10 @@ function SEO({
       property: `og:type`,
       content: `website`
     },
+    {
+      property: `og:url`,
+      content: canonical || ''
+    },
     // Twitter.
     {
       name: `twitter:creator`,
