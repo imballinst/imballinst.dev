@@ -223,7 +223,7 @@ module.exports = {
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        queries: require('./src/helpers/algolia-queries.js')
+        queries: require('./src/helpers/algolia-queries')
       }
     },
     'gatsby-plugin-sitemap',
