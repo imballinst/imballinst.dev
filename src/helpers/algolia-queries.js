@@ -14,8 +14,6 @@ const pageQuery = `{
         id
         frontmatter {
           title
-          date
-          featuredimage
           description
           visibility
           tags
@@ -30,9 +28,11 @@ const pageQuery = `{
 }`;
 
 function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
+  const { visibility: _visibility, ...restFrontmatter } = frontmatter;
+
   return {
     objectID: id,
-    ...frontmatter,
+    ...restFrontmatter,
     ...fields,
     ...rest
   };

@@ -142,10 +142,6 @@ function filterPosts(posts: any[], form: FormState) {
     : null;
 }
 
-function isFiltering(form: FormState) {
-  return form.filterTags.length > 0 || form.filterText !== '';
-}
-
 function Posts(props: Props) {
   const { allMarkdownRemark, tagsRemark } = props.data;
   const posts = allMarkdownRemark.edges;

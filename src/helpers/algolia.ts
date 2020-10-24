@@ -18,7 +18,7 @@ export function useAlgolia(searchQuery: string) {
         const response = await searchIndex.current.search(searchQuery, {
           hitsPerPage: 5
         });
-        console.log(response);
+
         setSearchResults(response);
       }
     }
