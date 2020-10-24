@@ -5,6 +5,7 @@ export type CommonInputProps = {
   name: string;
   id?: string;
   value?: string;
+  placeholder?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   label: ReactNode;
 };
