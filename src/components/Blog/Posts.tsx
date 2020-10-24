@@ -154,7 +154,9 @@ function Posts(props: Props) {
   const location = useLocation();
 
   const [form, setForm] = useState<FormState>(parse(location.search));
-  const [renderedPosts, setRenderedPosts] = useState(filterPosts(posts, form));
+  const [renderedPosts, setRenderedPosts] = useState(() =>
+    filterPosts(posts, form)
+  );
   const numberOfPosts = useMemo(() => renderedPosts.length, [renderedPosts]);
 
   useEffect(() => {
@@ -197,7 +199,7 @@ function Posts(props: Props) {
     <div className="flex flex-col relative">
       <div className="flex flex-row mb-4">
         <div className="flex flex-1 items-center">
-          {isFiltering(form) ? `${numberOfPosts} results found` : null}
+          {location.search !== '' ? `${numberOfPosts} results found` : null}
         </div>
         <div className="flex flex-1 justify-end">
           <Filter
