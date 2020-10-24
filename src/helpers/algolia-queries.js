@@ -14,6 +14,7 @@ const pageQuery = `{
         id
         frontmatter {
           title
+          visibility
         }
         fields {
           slug
@@ -36,7 +37,15 @@ function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
 const queries = [
   {
     query: pageQuery,
-    transformer: ({ data }) => data.pages.edges.map(pageToAlgoliaRecord),
+    transformer: ({ data }) =>
+      data.pages.edges.reduce((array, edge) => {
+        // Filter articles with `unlisted` visibility, so they're not searchable in the Gatsby site.
+        if (edge.node.frontmatter.visibility === 'unlisted') {
+          return array;
+        }
+
+        return array.concat(pageToAlgoliaRecord(edge));
+      }, []),
     indexName,
     settings: { attributesToSnippet: [`excerpt:20`] }
   }
