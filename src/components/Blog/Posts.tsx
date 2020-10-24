@@ -12,6 +12,7 @@ import { SectionWrapper } from '../Layout';
 import { Filter, FormState } from './Filter';
 import { useLocation, useNavigate } from '@reach/router';
 import { parseQueryParams, stringify } from '../../helpers/utils';
+import { useAlgolia } from '../../helpers/algolia';
 
 export type TagCount = {
   fieldValue: string;
@@ -158,6 +159,8 @@ function Posts(props: Props) {
     filterPosts(posts, form)
   );
   const numberOfPosts = useMemo(() => renderedPosts.length, [renderedPosts]);
+
+  const searchResult = useAlgolia(form.filterText);
 
   useEffect(() => {
     const parsed = parse(location.search);

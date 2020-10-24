@@ -14,6 +14,8 @@ const pageQuery = `{
         id
         frontmatter {
           title
+          date
+          featuredimage
           description
           visibility
           tags
