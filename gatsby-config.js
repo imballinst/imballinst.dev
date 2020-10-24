@@ -218,6 +218,14 @@ module.exports = {
         purgeOnly: ['/all.css']
       }
     },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries: require('./src/helpers/algolia-queries')
+      }
+    },
     'gatsby-plugin-sitemap',
     // must be after other CSS plugins.
     'gatsby-plugin-netlify' // make sure to keep it last in the array
