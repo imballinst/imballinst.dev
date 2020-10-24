@@ -6,7 +6,9 @@ import { useLocation } from '@reach/router';
 import { GitHubIcon } from '../icons/GitHubIcon';
 import { peepoTheme } from '../theme';
 import { ExternalPeepoLink } from './Links';
+import { PeepoIconButton } from './Button';
 import { TwitterIcon } from '../icons/TwitterIcon';
+import { SearchIcon } from '../icons/SearchIcon';
 
 // Navbar item.
 const NavbarGutter = styled.div`
@@ -72,8 +74,8 @@ function NavbarItemExternal({
 
 // Navbar.
 const NavbarItemSpacer = styled.div`
-  & > .navbar-item:not(:first-of-type) {
-    margin-left: ${peepoTheme.spacing(4)};
+  & > .navbar-item:not(:first-child) {
+    margin-left: ${peepoTheme.spacing(2)};
   }
 `;
 
@@ -100,7 +102,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`bg-teal-900 text-white px-4 ${peepoTheme.pageHorizontalSpacing} fixed top-0 w-full z-50 flex flex-row justify-center`}
+      className={`${peepoTheme.colorSets.dark.main.twClass} text-white px-4 ${peepoTheme.pageHorizontalSpacing} fixed top-0 w-full z-50 flex flex-row justify-center`}
       role="navigation"
       aria-label="main-navigation"
     >
@@ -117,6 +119,11 @@ function Navbar() {
           ))}
         </NavbarItemSpacer>
         <NavbarItemSpacer className="flex flex-row">
+          <div className="flex py-4">
+            <PeepoIconButton disableBackgroundHover>
+              <SearchIcon size={24} />
+            </PeepoIconButton>
+          </div>
           <NavbarItemExternal href="https://twitter.com/Ajiballinst">
             <TwitterIcon size={24} />
           </NavbarItemExternal>
