@@ -1,7 +1,7 @@
 const escapeStringRegexp = require('escape-string-regexp');
 
-const pagePath = `src/pages`;
-const indexName = `prod_peepohappy`;
+const pagePath = 'src/pages';
+const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME;
 
 const pageQuery = `{
   pages: allMarkdownRemark(
@@ -57,7 +57,7 @@ const queries = isProductionBuild
             return array.concat(pageToAlgoliaRecord(edge));
           }, []),
         indexName,
-        settings: { attributesToSnippet: [`excerpt:20`] }
+        settings: { attributesToSnippet: ['excerpt:20'] }
       }
     ]
   : [];
