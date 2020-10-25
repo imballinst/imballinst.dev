@@ -43,20 +43,28 @@ export function Modal({
       elementRef.current.style.zIndex = '1300';
     } else {
       timeout = setTimeout(() => {
-        modalRoot.removeChild(elementRef.current);
         elementRef.current.style.zIndex = '-1';
+        modalRoot.removeChild(elementRef.current);
       }, 500);
     }
 
     modalRoot.appendChild(elementRef.current);
+
+    return () => {
+      clearTimeout(timeout);
+
+      if (modalRoot.contains(elementRef.current)) {
+        modalRoot.removeChild(elementRef.current);
+      }
+    };
   }, [isOpen]);
 
   return createPortal(
     <Fade in={isOpen}>
-      <div>
+      <>
         <Backdrop aria-hidden="true" onClick={onClose} />
         {children}
-      </div>
+      </>
     </Fade>,
     elementRef.current
   );

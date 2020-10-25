@@ -4,12 +4,15 @@ import { cls } from '../helpers/styles';
 type PaperProps = {
   children: ReactNode;
   className?: string;
+  Component?: 'div' | 'ol';
 };
 
-export function Paper({ children, className }: PaperProps) {
+export function Paper({ children, className, Component = 'div' }: PaperProps) {
   return (
-    <div className={cls('shadow-md p-4 flex flex-col bg-white', className)}>
+    <Component
+      className={cls('shadow-md p-4 flex flex-col bg-white', className)}
+    >
       {children}
-    </div>
+    </Component>
   );
 }

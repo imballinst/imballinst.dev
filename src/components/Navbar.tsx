@@ -1,4 +1,10 @@
-import React, { ChangeEvent, ReactNode, useState } from 'react';
+import React, {
+  ChangeEvent,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState
+} from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { useLocation } from '@reach/router';
@@ -9,7 +15,7 @@ import { ExternalPeepoLink } from './Links';
 import { PeepoIconButton } from './Button';
 import { TwitterIcon } from '../icons/TwitterIcon';
 import { SearchIcon } from '../icons/SearchIcon';
-import { TextField } from './Forms/TextField';
+import { TextField, TextFieldProps } from './Forms/TextField';
 import { Modal } from './Modal';
 import { SearchResults } from './SearchResults';
 
@@ -87,12 +93,8 @@ function isActive(path: string, currentPath: string) {
   return currentPath.indexOf(path) === 0;
 }
 
-const NavbarContent = styled.div`
+const NavbarContentWrapper = styled.div`
   width: ${peepoTheme.maxOptimalWidth};
-`;
-
-const AlgoliaTextField = styled(TextField)`
-  margin-top: 5px;
 `;
 
 function Navbar() {
@@ -119,7 +121,7 @@ function Navbar() {
       role="navigation"
       aria-label="main-navigation"
     >
-      <NavbarContent className="flex flex-row justify-between relative">
+      <NavbarContentWrapper className="flex flex-row justify-between relative">
         <NavbarItemSpacer className="flex flex-row">
           {paths.map(path => (
             <NavbarItem
@@ -134,16 +136,18 @@ function Navbar() {
         <NavbarItemSpacer className="flex flex-row">
           <div className="flex py-4">
             <Modal isOpen={focused} onClose={onBlur}>
-              <div className="px-24 w-full relative">
-                <AlgoliaTextField
-                  onFocus={onFocus}
-                  onBlur={onBlur}
-                  name="algoliaSearch"
-                  placeholder="Search peepohappy"
-                  className="text-black w-full"
-                  onChange={onChangeQuery}
-                />
-                <SearchResults query={query} />
+              <div className="px-24 w-full relative flex flex-col items-center">
+                <NavbarSearchWrapper onClose={onBlur}>
+                  <AlgoliaTextField
+                    focused={focused}
+                    onFocus={onFocus}
+                    name="algoliaSearch"
+                    placeholder="Search peepohappy"
+                    className="text-black"
+                    onChange={onChangeQuery}
+                  />
+                  <SearchResults query={query} />
+                </NavbarSearchWrapper>
               </div>
             </Modal>
             <PeepoIconButton
@@ -161,9 +165,65 @@ function Navbar() {
             <GitHubIcon size={24} />
           </NavbarItemExternal>
         </NavbarItemSpacer>
-      </NavbarContent>
+      </NavbarContentWrapper>
     </nav>
   );
 }
 
 export default Navbar;
+
+// Helper components.
+function NavbarSearchWrapper({
+  onClose,
+  children
+}: {
+  onClose: () => void;
+  children: ReactNode;
+}) {
+  const modalContentElement = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    function onClickOutside(e: MouseEvent) {
+      const clickedElement = e.target as Element;
+
+      if (modalContentElement.current !== null) {
+        if (!modalContentElement.current.contains(clickedElement)) {
+          onClose();
+        }
+      }
+    }
+
+    document.addEventListener('click', onClickOutside);
+
+    return () => {
+      document.removeEventListener('click', onClickOutside);
+    };
+  }, []);
+
+  return (
+    <NavbarContentWrapper ref={modalContentElement}>
+      {children}
+    </NavbarContentWrapper>
+  );
+}
+
+const NavbarTextField = styled(TextField)`
+  margin-top: 5px;
+`;
+
+function AlgoliaTextField({
+  focused,
+  ...props
+}: { focused: boolean } & TextFieldProps) {
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (inputRef.current !== null && focused) {
+        inputRef.current.focus();
+      }
+    });
+  }, [focused]);
+
+  return <NavbarTextField inputRef={inputRef} {...props} />;
+}
