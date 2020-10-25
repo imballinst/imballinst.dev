@@ -13,20 +13,27 @@ const Backdrop = styled.div`
 
 export function Modal({
   children,
-  isOpen
+  isOpen,
+  onClose
 }: {
   children: ReactNode;
   isOpen: boolean;
+  onClose?: () => void;
 }) {
   const elementRef = useRef(document.createElement('div'));
 
   useEffect(() => {
     elementRef.current.style.position = 'fixed';
-    elementRef.current.style.zIndex = '1300';
     elementRef.current.style.top = '0';
     elementRef.current.style.right = '0';
     elementRef.current.style.bottom = '0';
     elementRef.current.style.left = '0';
+
+    if (isOpen) {
+      elementRef.current.style.zIndex = '1300';
+    } else {
+      elementRef.current.style.zIndex = '-1';
+    }
 
     modalRoot.appendChild(elementRef.current);
 
@@ -35,11 +42,13 @@ export function Modal({
     };
   }, [isOpen]);
 
-  return createPortal(
-    <div>
-      <Backdrop />
-      {children}
-    </div>,
-    elementRef.current
-  );
+  return !isOpen
+    ? null
+    : createPortal(
+        <div>
+          <Backdrop aria-hidden="true" onClick={onClose} />
+          {children}
+        </div>,
+        elementRef.current
+      );
 }
