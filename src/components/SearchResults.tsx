@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { navigate } from 'gatsby';
 import styled from '@emotion/styled';
 import { useAlgolia } from '../helpers/algolia';
 import { Paper } from './Paper';
 import { peepoTheme } from '../theme';
 import { PeepoLink } from './Links';
 import { TagsIcon } from '../icons/TagsIcon';
-import { hexToRGB } from '../helpers/styles';
+import { cls, hexToRGB } from '../helpers/styles';
 
 const SearchList = styled(Paper)`
   padding: 0;
@@ -28,6 +29,7 @@ const SearchLink = styled(PeepoLink)`
   &:hover {
     color: unset;
   }
+  &.active,
   &:hover {
     background: ${hexToRGB(peepoTheme.colorSets.dark.light.hex, 0.1)};
   }
@@ -40,6 +42,7 @@ const SearchTagIconWrapper = styled.div`
 
 type Props = {
   query: string;
+  onBlur: () => void;
 };
 
 type PeepoHit = {
@@ -53,15 +56,58 @@ type PeepoHit = {
   _highlightResult: any;
 };
 
-export function SearchResults({ query }: Props) {
+export function SearchResults({ query, onBlur }: Props) {
   const searchResults = useAlgolia(query);
   const hits = (searchResults?.hits || []) as PeepoHit[];
 
+  const numOfHits = hits.length;
+
+  const [currentHitIdx, setCurrentHitIdx] = useState(0);
+
+  useEffect(() => {
+    function onKeyUpDown(e: KeyboardEvent) {
+      const key = e.key;
+
+      if (key === 'ArrowUp' || key === 'ArrowDown') {
+        setCurrentHitIdx(oldHit => {
+          const addition = key === 'ArrowUp' ? -1 : 1;
+          const nextHit = oldHit + addition;
+
+          if (nextHit === numOfHits) {
+            return 0;
+          }
+
+          if (nextHit < 0) {
+            return numOfHits - 1;
+          }
+
+          return nextHit;
+        });
+      } else if (key === 'Enter') {
+        if (hits[currentHitIdx] !== undefined) {
+          navigate(hits[currentHitIdx].slug);
+          onBlur();
+        }
+      }
+    }
+
+    // Arrow keys are only triggered on `keydown`, not `keypress`.
+    // Source: https://stackoverflow.com/a/5597114.
+    window.addEventListener('keydown', onKeyUpDown);
+
+    return () => {
+      window.removeEventListener('keydown', onKeyUpDown);
+    };
+  }, [hits, currentHitIdx, onBlur, numOfHits]);
+
   return (
     <SearchList Component="ol" className="mt-4 rounded">
-      {hits.map(hit => (
-        <SearchItem>
-          <SearchLink to={hit.slug} className="p-4">
+      {hits.map((hit, idx) => (
+        <SearchItem key={hit.slug}>
+          <SearchLink
+            to={hit.slug}
+            className={cls('p-4', currentHitIdx === idx ? 'active' : undefined)}
+          >
             <div>
               {hit._highlightResult.title ? (
                 <h2

@@ -1,6 +1,7 @@
 import React, {
   ChangeEvent,
   ReactNode,
+  useCallback,
   useEffect,
   useRef,
   useState
@@ -97,11 +98,18 @@ const NavbarContentWrapper = styled.div`
   width: ${peepoTheme.maxOptimalWidth};
 `;
 
+// This is a "hack" to store the "focused" state without needing to create a ref/another state.
+let isSearchFocused = false;
+
 function Navbar() {
   const pathname = useLocation().pathname;
 
   const [focused, setIsFocused] = useState(false);
   const [query, setQuery] = useState('');
+
+  useEffect(() => {
+    isSearchFocused = focused;
+  }, [focused]);
 
   function onChangeQuery(e: ChangeEvent<HTMLInputElement>) {
     setQuery(e.target.value);
@@ -111,9 +119,33 @@ function Navbar() {
     setIsFocused(true);
   }
 
-  function onBlur() {
+  const onBlur = useCallback(() => {
     setIsFocused(false);
-  }
+  }, []);
+
+  useEffect(() => {
+    function onKeyUpDown(e: KeyboardEvent) {
+      const key = e.key;
+
+      if (key === '/') {
+        if (!isSearchFocused) {
+          e.preventDefault();
+        }
+
+        setIsFocused(true);
+      } else if (key === 'Escape') {
+        setIsFocused(false);
+      }
+    }
+
+    // Arrow keys are only triggered on `keydown`, not `keypress`.
+    // Source: https://stackoverflow.com/a/5597114.
+    window.addEventListener('keydown', onKeyUpDown);
+
+    return () => {
+      window.removeEventListener('keydown', onKeyUpDown);
+    };
+  }, []);
 
   return (
     <nav
@@ -164,7 +196,7 @@ function Navbar() {
               className="text-black"
               onChange={onChangeQuery}
             />
-            {query !== '' && <SearchResults query={query} />}
+            {query !== '' && <SearchResults query={query} onBlur={onBlur} />}
           </NavbarSearchWrapper>
         </div>
       </Modal>
