@@ -13,6 +13,7 @@ import { PeepoButton, PeepoIconButton } from '../Button';
 import { FilterIcon } from '../../icons/FilterIcon';
 
 type FilterProps = {
+  numberOfPosts: number;
   tags: TagCount[];
   onChangeForm: (event: ChangeEvent<HTMLInputElement>) => void;
   onFilterSubmit: () => void;
@@ -40,7 +41,8 @@ export function Filter({
   tags,
   form,
   onChangeForm,
-  onFilterSubmit
+  onFilterSubmit,
+  numberOfPosts
 }: FilterProps) {
   const [buttonElement, setButtonElement] = useState<HTMLButtonElement | null>(
     null
@@ -93,60 +95,65 @@ export function Filter({
   }, [popperElement]);
 
   return (
-    <div>
-      <PeepoIconButton ref={setButtonElement} onClick={onTogglePopper}>
-        <FilterIcon size={18} />
-      </PeepoIconButton>
-      {transitions.map(({ item, key, props }) => {
-        if (item === PopperState.HIDDEN) {
-          return <animated.div key={key} style={props} />;
-        }
+    <div className="flex flex-row mb-4">
+      <div className="flex flex-1 items-center">
+        {location.search !== '' ? `${numberOfPosts} results found` : null}
+      </div>
+      <div className="flex flex-1 justify-end">
+        <PeepoIconButton ref={setButtonElement} onClick={onTogglePopper}>
+          <FilterIcon size={18} />
+        </PeepoIconButton>
+        {transitions.map(({ item, key, props }) => {
+          if (item === PopperState.HIDDEN) {
+            return <animated.div key={key} style={props} />;
+          }
 
-        return (
-          <div
-            ref={setPopperElement}
-            style={styles.popper}
-            className="z-20 shadow"
-            key={key}
-            {...attributes.popper}
-          >
-            <animated.div style={props}>
-              <Paper>
-                <form onSubmit={filterResults}>
-                  <div ref={setArrowElement} style={styles.arrow} />
-                  <div className="mb-4">
-                    <TextField
-                      name="filterText"
-                      label="Filter text"
-                      onChange={onChangeForm}
-                      value={form.filterText}
-                    />
-                  </div>
-                  <Typography variant="h6" className="font-semibold">
-                    Tags
-                  </Typography>
-                  <div className="mb-4">
-                    {tags.map(tag => (
-                      <CheckboxSpacer key={tag.fieldValue}>
-                        <Checkbox
-                          name="filterTags"
-                          onChange={onChangeForm}
-                          checked={form.filterTags.includes(tag.fieldValue)}
-                          value={tag.fieldValue}
-                          label={tag.fieldValue}
-                        />
-                      </CheckboxSpacer>
-                    ))}
-                  </div>
-                  <PeepoButton type="submit" fullWidth>
-                    Filter
-                  </PeepoButton>
-                </form>
-              </Paper>
-            </animated.div>
-          </div>
-        );
-      })}
+          return (
+            <div
+              ref={setPopperElement}
+              style={styles.popper}
+              className="z-20 shadow"
+              key={key}
+              {...attributes.popper}
+            >
+              <animated.div style={props}>
+                <Paper>
+                  <form onSubmit={filterResults}>
+                    <div ref={setArrowElement} style={styles.arrow} />
+                    <div className="mb-4">
+                      <TextField
+                        name="filterText"
+                        label="Filter text"
+                        onChange={onChangeForm}
+                        value={form.filterText}
+                      />
+                    </div>
+                    <Typography variant="h6" className="font-semibold">
+                      Tags
+                    </Typography>
+                    <div className="mb-4">
+                      {tags.map(tag => (
+                        <CheckboxSpacer key={tag.fieldValue}>
+                          <Checkbox
+                            name="filterTags"
+                            onChange={onChangeForm}
+                            checked={form.filterTags.includes(tag.fieldValue)}
+                            value={tag.fieldValue}
+                            label={tag.fieldValue}
+                          />
+                        </CheckboxSpacer>
+                      ))}
+                    </div>
+                    <PeepoButton type="submit" fullWidth>
+                      Filter
+                    </PeepoButton>
+                  </form>
+                </Paper>
+              </animated.div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

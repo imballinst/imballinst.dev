@@ -1,5 +1,5 @@
 // TODO: move this to under src/pages to take advantage of https://www.gatsbyjs.org/docs/graphql-api/#pagequery.
-import React, { useState, ChangeEvent, useEffect, useMemo } from 'react';
+import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 
@@ -9,10 +9,6 @@ import { peepoTheme } from '../../theme';
 import { cls } from '../../helpers/styles';
 import { PeepoLink } from '../Links';
 import { SectionWrapper } from '../Layout';
-// import { Filter, FormState } from './Filter';
-// import { useLocation, useNavigate } from '@reach/router';
-// import { parseQueryParams, stringify } from '../../helpers/utils';
-// import { useAlgolia } from '../../helpers/algolia';
 
 export type TagCount = {
   fieldValue: string;
@@ -88,130 +84,12 @@ export function ListBlogItem({ post }: { post: ListBlogItemType }) {
   );
 }
 
-// function parse(search: string): FormState {
-//   let filterText = '';
-//   let filterTags: string[] = [];
-
-//   if (search.length > 0) {
-//     const parsed = parseQueryParams<FormState>(search);
-
-//     filterText = parsed.filterText || '';
-//     filterTags = parsed.filterTags || [];
-//   }
-
-//   return {
-//     filterText,
-//     filterTags
-//   };
-// }
-
-// function filterPosts(posts: any[], form: FormState) {
-//   return posts
-//     ? posts.reduce((array, { node: post }) => {
-//         const { tags: postTagsRaw, title } = post.frontmatter;
-//         const postTags = postTagsRaw as string[];
-
-//         const includesText =
-//           form.filterText !== ''
-//             ? (title as string)
-//                 .toLowerCase()
-//                 .includes(form.filterText.toLowerCase())
-//             : true;
-//         const includesTags =
-//           form.filterTags.length > 0
-//             ? form.filterTags.every(tag => postTags.includes(tag))
-//             : true;
-//         let included;
-
-//         if (!includesText && !includesTags) {
-//           return array;
-//         }
-
-//         if (includesText) {
-//           included = includesTags;
-//         } else if (includesTags) {
-//           included = includesText;
-//         }
-
-//         if (included) {
-//           return array.concat(post);
-//         }
-
-//         return array;
-//       }, [])
-//     : null;
-// }
-
 function Posts(props: Props) {
   const { allMarkdownRemark } = props.data;
   const posts = allMarkdownRemark.edges;
-  // Disable this for the time being since we're using Algolia.
-  // const tags = tagsRemark.tags;
-
-  // const navigate = useNavigate();
-  // const location = useLocation();
-
-  // const [form, setForm] = useState<FormState>(parse(location.search));
-  // const [renderedPosts, setRenderedPosts] = useState(() =>
-  //   filterPosts(posts, form)
-  // );
-  // const numberOfPosts = useMemo(() => renderedPosts.length, [renderedPosts]);
-
-  // useEffect(() => {
-  //   const parsed = parse(location.search);
-
-  //   setForm(parsed);
-  //   setRenderedPosts(filterPosts(posts, parsed));
-  // }, [posts, location.search]);
-
-  // function onChangeForm(e: ChangeEvent<HTMLInputElement>) {
-  //   const { name, value } = e.target;
-
-  //   if (name === 'filterText') {
-  //     setForm(oldForm => ({ ...oldForm, filterText: value }));
-  //   } else {
-  //     setForm(oldForm => {
-  //       const valueIndex = oldForm.filterTags.indexOf(value);
-  //       let newFilterTags = oldForm.filterTags;
-
-  //       if (valueIndex === -1) {
-  //         newFilterTags = newFilterTags.concat(value);
-  //       } else {
-  //         newFilterTags = [...newFilterTags];
-  //         newFilterTags.splice(valueIndex, 1);
-  //       }
-
-  //       return {
-  //         ...oldForm,
-  //         filterTags: newFilterTags
-  //       };
-  //     });
-  //   }
-  // }
-
-  // Disable this for the time being since we're using Algolia.
-  // function onFilterSubmit() {
-  //   navigate(`${location.pathname}${stringify(form)}`);
-  // }
-
-  // const searchResult = useAlgolia(form.filterText);
 
   return (
     <div className="flex flex-col relative">
-      {/* Disable this for the time being since we're using Algolia. */}
-      {/* <div className="flex flex-row mb-4">
-        <div className="flex flex-1 items-center">
-          {location.search !== '' ? `${numberOfPosts} results found` : null}
-        </div>
-        <div className="flex flex-1 justify-end">
-          <Filter
-            tags={tags}
-            onFilterSubmit={onFilterSubmit}
-            form={form}
-            onChangeForm={onChangeForm}
-          />
-        </div>
-      </div> */}
       <SectionWrapper>
         {posts.map((post: any) => (
           <ListBlogItem key={post.node.id} post={post.node} />
