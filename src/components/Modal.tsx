@@ -9,7 +9,7 @@ import { createPortal } from 'react-dom';
 import styled from '@emotion/styled';
 import { animated, useSpring } from 'react-spring';
 
-const modalRoot = document.body;
+const modalRoot = window.document.body;
 let timeout: any;
 
 const Backdrop = styled.div`
