@@ -10,7 +10,7 @@ import styled from '@emotion/styled';
 import { animated, useSpring } from 'react-spring';
 
 const modalRoot = document.body;
-let timeout;
+let timeout: any;
 
 const Backdrop = styled.div`
   background: rgba(0, 0, 0, 0.5);

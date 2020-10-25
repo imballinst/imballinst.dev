@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ChangeEvent, ReactNode, useState } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { useLocation } from '@reach/router';
@@ -11,6 +11,7 @@ import { TwitterIcon } from '../icons/TwitterIcon';
 import { SearchIcon } from '../icons/SearchIcon';
 import { TextField } from './Forms/TextField';
 import { Modal } from './Modal';
+import { SearchResults } from './SearchResults';
 
 // Navbar item.
 function NavbarItem({
@@ -98,6 +99,11 @@ function Navbar() {
   const pathname = useLocation().pathname;
 
   const [focused, setIsFocused] = useState(false);
+  const [query, setQuery] = useState('');
+
+  function onChangeQuery(e: ChangeEvent<HTMLInputElement>) {
+    setQuery(e.target.value);
+  }
 
   function onFocus() {
     setIsFocused(true);
@@ -135,7 +141,9 @@ function Navbar() {
                   name="algoliaSearch"
                   placeholder="Search peepohappy"
                   className="text-black w-full"
+                  onChange={onChangeQuery}
                 />
+                <SearchResults query={query} />
               </div>
             </Modal>
             <PeepoIconButton
