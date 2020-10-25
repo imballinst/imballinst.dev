@@ -44,10 +44,10 @@ function NavbarItem({
 const NavbarItemIcon = styled(ExternalPeepoLink)`
   display: block;
 
-  fill: ${peepoTheme.colorSets.dark.contrastTextHover.hex};
+  color: ${peepoTheme.colorSets.dark.contrastTextHover.hex};
 
   &:hover {
-    fill: ${peepoTheme.colorSets.dark.contrastText.hex};
+    color: ${peepoTheme.colorSets.dark.contrastText.hex};
   }
 `;
 
@@ -134,30 +134,14 @@ function Navbar() {
           ))}
         </NavbarItemSpacer>
         <NavbarItemSpacer className="flex flex-row">
-          <div className="flex py-4">
-            <Modal isOpen={focused} onClose={onBlur}>
-              <div className="px-24 w-full relative flex flex-col items-center">
-                <NavbarSearchWrapper onClose={onBlur}>
-                  <AlgoliaTextField
-                    focused={focused}
-                    onFocus={onFocus}
-                    name="algoliaSearch"
-                    placeholder="Search peepohappy"
-                    className="text-black"
-                    onChange={onChangeQuery}
-                  />
-                  <SearchResults query={query} />
-                </NavbarSearchWrapper>
-              </div>
-            </Modal>
-            <PeepoIconButton
-              variant="navbar"
-              disableBackgroundHover
-              onClick={onFocus}
-            >
-              <SearchIcon size={24} />
-            </PeepoIconButton>
-          </div>
+          <PeepoIconButton
+            className="py-4"
+            variant="navbar"
+            disableBackgroundHover
+            onClick={onFocus}
+          >
+            <SearchIcon size={24} />
+          </PeepoIconButton>
           <NavbarItemExternal href="https://twitter.com/Ajiballinst">
             <TwitterIcon size={24} />
           </NavbarItemExternal>
@@ -166,6 +150,22 @@ function Navbar() {
           </NavbarItemExternal>
         </NavbarItemSpacer>
       </NavbarContentWrapper>
+
+      <Modal isOpen={focused} onClose={onBlur}>
+        <div className="px-24 w-full relative flex flex-col items-center">
+          <NavbarSearchWrapper onClose={onBlur}>
+            <AlgoliaTextField
+              focused={focused}
+              onFocus={onFocus}
+              name="algoliaSearch"
+              placeholder="Search peepohappy"
+              className="text-black"
+              onChange={onChangeQuery}
+            />
+            {query !== '' && <SearchResults query={query} />}
+          </NavbarSearchWrapper>
+        </div>
+      </Modal>
     </nav>
   );
 }
