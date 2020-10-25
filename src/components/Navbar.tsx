@@ -152,7 +152,9 @@ function Navbar() {
       </NavbarContentWrapper>
 
       <Modal isOpen={focused} onClose={onBlur}>
-        <div className="px-24 w-full relative flex flex-col items-center">
+        <div
+          className={`px-4 ${peepoTheme.pageHorizontalSpacing} w-full relative flex flex-col items-center`}
+        >
           <NavbarSearchWrapper onClose={onBlur}>
             <AlgoliaTextField
               focused={focused}
@@ -201,9 +203,9 @@ function NavbarSearchWrapper({
   }, []);
 
   return (
-    <NavbarContentWrapper ref={modalContentElement}>
+    <div className="w-full max-w-screen-md" ref={modalContentElement}>
       {children}
-    </NavbarContentWrapper>
+    </div>
   );
 }
 
