@@ -108,17 +108,34 @@ export const peepoTheme = {
     const colorSet = colorSets[mode];
 
     return cls(
-      `${colorSet.main.twClass} ${colorSet.contrastText.twClass} ${colorSet.contrastTextHover.twClass} font-bold rounded`,
+      `${colorSet.main.twClass} ${colorSet.contrastText.twClass} ${colorSet.contrastTextHover.twClass} font-bold rounded outline-none`,
       {
         // Allow disabling of background hover.
         [`${colorSet.main.hover.twClass}`]: !opts.disableBackgroundHover
       }
     );
   },
-  navbarLinkVariant: (mode: ThemeMode) => {
+  buttonNavbarVariant: (
+    mode: ThemeMode,
+    opts: ButtonVariantOptions = {
+      disableBackgroundHover: false
+    }
+  ) => {
     const colorSet = colorSets[mode];
 
-    return `${colorSet.contrastText.twClass} ${colorSet.contrastTextHover.twClass} font-bold`;
+    return cls(
+      `text-gray-300 hover:text-white ${colorSet.main.twClass} font-bold rounded outline-none`,
+      {
+        // Allow disabling of background hover.
+        [`${colorSet.main.hover.twClass}`]: !opts.disableBackgroundHover
+      }
+    );
+  },
+  navbarLinkVariant: (isActive?: boolean) => {
+    return cls(
+      `hover:text-white font-bold outline-none`,
+      isActive ? 'text-white' : 'text-gray-300'
+    );
   },
   topbarHeight: 56,
   pageHorizontalSpacing: 'sm:px-16 md:px-24',

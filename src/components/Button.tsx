@@ -59,9 +59,21 @@ export function PeepoButton({
   );
 }
 
-export const PeepoIconButton = forwardRef<HTMLButtonElement, CommonButtonProps>(
+export const PeepoIconButton = forwardRef<
+  HTMLButtonElement,
+  CommonButtonProps & {
+    variant?: 'default' | 'navbar';
+  }
+>(
   (
-    { children, type = 'button', className, disableBackgroundHover, ...props },
+    {
+      children,
+      type = 'button',
+      className,
+      disableBackgroundHover,
+      variant = 'default',
+      ...props
+    },
     ref
   ) => {
     return (
@@ -70,7 +82,9 @@ export const PeepoIconButton = forwardRef<HTMLButtonElement, CommonButtonProps>(
         ref={ref}
         type={type}
         className={cls(
-          peepoTheme.buttonVariant('dark', { disableBackgroundHover }),
+          variant === 'navbar'
+            ? peepoTheme.buttonNavbarVariant('dark', { disableBackgroundHover })
+            : peepoTheme.buttonVariant('dark'),
           peepoTheme.textSizes.small,
           'rounded-full',
           className

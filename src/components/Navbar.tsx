@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { useLocation } from '@reach/router';
@@ -9,12 +9,10 @@ import { ExternalPeepoLink } from './Links';
 import { PeepoIconButton } from './Button';
 import { TwitterIcon } from '../icons/TwitterIcon';
 import { SearchIcon } from '../icons/SearchIcon';
+import { TextField } from './Forms/TextField';
+import { Modal } from './Modal';
 
 // Navbar item.
-const NavbarGutter = styled.div`
-  height: 4px;
-`;
-
 function NavbarItem({
   to,
   children,
@@ -27,14 +25,11 @@ function NavbarItem({
   return (
     <div className="navbar-item relative">
       <Link
-        className={`${peepoTheme.navbarLinkVariant('dark')} pb-4 pt-4 block`}
+        className={`${peepoTheme.navbarLinkVariant(isActive)} py-4 px-1 block`}
         to={to}
       >
         {children}
       </Link>
-      {isActive && (
-        <NavbarGutter className="absolute bottom-0 w-full border-2 border-white" />
-      )}
     </div>
   );
 }
@@ -42,10 +37,10 @@ function NavbarItem({
 const NavbarItemIcon = styled(ExternalPeepoLink)`
   display: block;
 
-  fill: ${peepoTheme.colorSets.dark.contrastText.hex};
+  fill: ${peepoTheme.colorSets.dark.contrastTextHover.hex};
 
   &:hover {
-    fill: ${peepoTheme.colorSets.dark.contrastTextHover.hex};
+    fill: ${peepoTheme.colorSets.dark.contrastText.hex};
   }
 `;
 
@@ -59,9 +54,7 @@ function NavbarItemExternal({
   return (
     <div className="navbar-item">
       <NavbarItemIcon
-        className={`${peepoTheme.navbarLinkVariant(
-          'dark'
-        )} navbar-item pt-4 pb-4`}
+        className={`${peepoTheme.navbarLinkVariant()} navbar-item pt-4 pb-4`}
         target="_blank"
         rel="noopener noreferrer"
         {...props}
@@ -97,8 +90,22 @@ const NavbarContent = styled.div`
   width: ${peepoTheme.maxOptimalWidth};
 `;
 
+const AlgoliaTextField = styled(TextField)`
+  margin-top: 5px;
+`;
+
 function Navbar() {
   const pathname = useLocation().pathname;
+
+  const [focused, setIsFocused] = useState(false);
+
+  function onFocus() {
+    setIsFocused(true);
+  }
+
+  function onBlur() {
+    setIsFocused(false);
+  }
 
   return (
     <nav
@@ -106,7 +113,7 @@ function Navbar() {
       role="navigation"
       aria-label="main-navigation"
     >
-      <NavbarContent className="flex flex-row justify-between">
+      <NavbarContent className="flex flex-row justify-between relative">
         <NavbarItemSpacer className="flex flex-row">
           {paths.map(path => (
             <NavbarItem
@@ -120,7 +127,22 @@ function Navbar() {
         </NavbarItemSpacer>
         <NavbarItemSpacer className="flex flex-row">
           <div className="flex py-4">
-            <PeepoIconButton disableBackgroundHover>
+            <Modal isOpen={focused}>
+              <div style={{ width: '100%' }} className="px-24 relative">
+                <AlgoliaTextField
+                  onFocus={onFocus}
+                  onBlur={onBlur}
+                  name="algoliaSearch"
+                  placeholder="Search peepohappy"
+                  className="text-black w-full"
+                />
+              </div>
+            </Modal>
+            <PeepoIconButton
+              variant="navbar"
+              disableBackgroundHover
+              onClick={onFocus}
+            >
               <SearchIcon size={24} />
             </PeepoIconButton>
           </div>
