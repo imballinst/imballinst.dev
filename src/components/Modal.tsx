@@ -1,6 +1,13 @@
-import React, { ReactNode, useEffect, useRef } from 'react';
+import React, {
+  forwardRef,
+  ReactElement,
+  ReactNode,
+  useEffect,
+  useRef
+} from 'react';
 import { createPortal } from 'react-dom';
 import styled from '@emotion/styled';
+import { animated, useSpring } from 'react-spring';
 
 const modalRoot = document.body;
 
@@ -32,7 +39,9 @@ export function Modal({
     if (isOpen) {
       elementRef.current.style.zIndex = '1300';
     } else {
-      elementRef.current.style.zIndex = '-1';
+      setTimeout(() => {
+        elementRef.current.style.zIndex = '-1';
+      }, 500);
     }
 
     modalRoot.appendChild(elementRef.current);
@@ -42,13 +51,46 @@ export function Modal({
     };
   }, [isOpen]);
 
-  return !isOpen
-    ? null
-    : createPortal(
-        <div>
-          <Backdrop aria-hidden="true" onClick={onClose} />
-          {children}
-        </div>,
-        elementRef.current
-      );
+  return createPortal(
+    <Fade in={isOpen}>
+      <div>
+        <Backdrop aria-hidden="true" onClick={onClose} />
+        {children}
+      </div>
+    </Fade>,
+    elementRef.current
+  );
 }
+
+// Fade component.
+type FadeProps = {
+  children?: ReactElement;
+  in: boolean;
+  onEnter?: () => {};
+  onExited?: () => {};
+};
+
+const Fade = forwardRef<HTMLDivElement, FadeProps>(function Fade(props, ref) {
+  const { in: open, children, onEnter, onExited, ...other } = props;
+  const style = useSpring({
+    transitionDuration: '500s',
+    from: { opacity: 0 },
+    to: { opacity: open ? 1 : 0 },
+    onStart: () => {
+      if (open && onEnter) {
+        onEnter();
+      }
+    },
+    onRest: () => {
+      if (!open && onExited) {
+        onExited();
+      }
+    }
+  });
+
+  return (
+    <animated.div ref={ref} style={style} {...other}>
+      {children}
+    </animated.div>
+  );
+});
