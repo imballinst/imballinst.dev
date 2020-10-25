@@ -10,6 +10,7 @@ import styled from '@emotion/styled';
 import { animated, useSpring } from 'react-spring';
 
 const modalRoot = document.body;
+let timeout;
 
 const Backdrop = styled.div`
   background: rgba(0, 0, 0, 0.5);
@@ -30,6 +31,8 @@ export function Modal({
   const elementRef = useRef(document.createElement('div'));
 
   useEffect(() => {
+    clearTimeout(timeout);
+
     elementRef.current.style.position = 'fixed';
     elementRef.current.style.top = '0';
     elementRef.current.style.right = '0';
@@ -39,16 +42,13 @@ export function Modal({
     if (isOpen) {
       elementRef.current.style.zIndex = '1300';
     } else {
-      setTimeout(() => {
+      timeout = setTimeout(() => {
+        modalRoot.removeChild(elementRef.current);
         elementRef.current.style.zIndex = '-1';
       }, 500);
     }
 
     modalRoot.appendChild(elementRef.current);
-
-    return () => {
-      modalRoot.removeChild(elementRef.current);
-    };
   }, [isOpen]);
 
   return createPortal(

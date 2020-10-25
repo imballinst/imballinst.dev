@@ -128,7 +128,7 @@ function Navbar() {
         <NavbarItemSpacer className="flex flex-row">
           <div className="flex py-4">
             <Modal isOpen={focused} onClose={onBlur}>
-              <div style={{ width: '100%' }} className="px-24 relative">
+              <div className="px-24 w-full relative">
                 <AlgoliaTextField
                   onFocus={onFocus}
                   onBlur={onBlur}
