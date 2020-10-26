@@ -27,32 +27,41 @@ export function Modal({
   isOpen: boolean;
   onClose?: () => void;
 }) {
-  const elementRef = useRef(document.createElement('div'));
+  const elementRef = useRef(
+    window.document ? window.document.createElement('div') : undefined
+  );
 
   useEffect(() => {
     clearTimeout(timeout);
 
-    elementRef.current.style.position = 'fixed';
-    elementRef.current.style.top = '0';
-    elementRef.current.style.right = '0';
-    elementRef.current.style.bottom = '0';
-    elementRef.current.style.left = '0';
+    if (elementRef.current !== undefined) {
+      elementRef.current.style.position = 'fixed';
+      elementRef.current.style.top = '0';
+      elementRef.current.style.right = '0';
+      elementRef.current.style.bottom = '0';
+      elementRef.current.style.left = '0';
 
-    if (isOpen) {
-      elementRef.current.style.zIndex = '1300';
-    } else {
-      timeout = setTimeout(() => {
-        elementRef.current.style.zIndex = '-1';
-        window.document.body.removeChild(elementRef.current);
-      }, 500);
+      if (isOpen) {
+        elementRef.current.style.zIndex = '1300';
+      } else {
+        timeout = setTimeout(() => {
+          if (elementRef.current !== undefined) {
+            elementRef.current.style.zIndex = '-1';
+            window.document.body.removeChild(elementRef.current);
+          }
+        }, 500);
+      }
+
+      window.document.body.appendChild(elementRef.current);
     }
-
-    window.document.body.appendChild(elementRef.current);
 
     return () => {
       clearTimeout(timeout);
 
-      if (window.document.body.contains(elementRef.current)) {
+      if (
+        elementRef.current &&
+        window.document.body.contains(elementRef.current)
+      ) {
         window.document.body.removeChild(elementRef.current);
       }
     };
