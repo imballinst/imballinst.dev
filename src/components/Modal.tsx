@@ -69,6 +69,10 @@ export function Modal({
     };
   }, [isOpen]);
 
+  if (elementRef.current === undefined) {
+    return null;
+  }
+
   return createPortal(
     <Fade in={isOpen}>
       <>
