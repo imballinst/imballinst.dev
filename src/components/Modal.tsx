@@ -28,7 +28,7 @@ export function Modal({
   onClose?: () => void;
 }) {
   const elementRef = useRef(
-    window.document ? window.document.createElement('div') : undefined
+    window && window.document ? window.document.createElement('div') : undefined
   );
 
   useEffect(() => {
