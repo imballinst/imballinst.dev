@@ -27,9 +27,11 @@ export function Modal({
   isOpen: boolean;
   onClose?: () => void;
 }) {
-  const elementRef = useRef(
-    window && window.document ? window.document.createElement('div') : undefined
-  );
+  const elementRef = useRef<HTMLDivElement | undefined>(undefined);
+
+  useEffect(() => {
+    elementRef.current = window.document.createElement('div');
+  }, []);
 
   useEffect(() => {
     clearTimeout(timeout);
