@@ -9,7 +9,6 @@ import { createPortal } from 'react-dom';
 import styled from '@emotion/styled';
 import { animated, useSpring } from 'react-spring';
 
-const modalRoot = window.document.body;
 let timeout: any;
 
 const Backdrop = styled.div`
@@ -44,17 +43,17 @@ export function Modal({
     } else {
       timeout = setTimeout(() => {
         elementRef.current.style.zIndex = '-1';
-        modalRoot.removeChild(elementRef.current);
+        window.document.body.removeChild(elementRef.current);
       }, 500);
     }
 
-    modalRoot.appendChild(elementRef.current);
+    window.document.body.appendChild(elementRef.current);
 
     return () => {
       clearTimeout(timeout);
 
-      if (modalRoot.contains(elementRef.current)) {
-        modalRoot.removeChild(elementRef.current);
+      if (window.document.body.contains(elementRef.current)) {
+        window.document.body.removeChild(elementRef.current);
       }
     };
   }, [isOpen]);
