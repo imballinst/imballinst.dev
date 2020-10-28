@@ -13,7 +13,7 @@ const SearchList = styled(Paper)`
 `;
 
 const SearchItem = styled.li`
-  :not(:first-child) {
+  & + li {
     border-top: 1px solid ${peepoTheme.borderColorSets.dark.main.hex};
   }
 
