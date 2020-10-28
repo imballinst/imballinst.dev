@@ -43,7 +43,7 @@ type Props = {
 
 function TemplateWrapper({ children, seoTitle, noPadding }: Props) {
   return (
-    <div>
+    <>
       <SEO title={seoTitle} />
       <Navbar />
       <Content
@@ -57,7 +57,7 @@ function TemplateWrapper({ children, seoTitle, noPadding }: Props) {
       >
         {children}
       </Content>
-    </div>
+    </>
   );
 }
 

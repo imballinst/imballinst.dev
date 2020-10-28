@@ -1,3 +1,11 @@
+require('dotenv').config();
+
+// Manually set the index name.
+process.env.GATSBY_ALGOLIA_INDEX_NAME =
+  process.env.CONTEXT === 'production'
+    ? process.env.GATSBY_ALGOLIA_INDEX_NAME || 'prod_peepohappy'
+    : 'deploy_preview_peepohappy';
+
 module.exports = {
   siteMetadata: {
     title: 'peepohappy',
@@ -216,6 +224,14 @@ module.exports = {
         develop: false, // Activates purging in npm run develop
         tailwind: true,
         purgeOnly: ['/all.css']
+      }
+    },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries: require('./src/helpers/algolia-queries')
       }
     },
     'gatsby-plugin-sitemap',

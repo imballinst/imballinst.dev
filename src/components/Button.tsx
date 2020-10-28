@@ -6,6 +6,9 @@ import { cls } from '../helpers/styles';
 
 type CommonButtonProps = {
   children: ReactNode;
+  className?: string;
+  disableBackgroundHover?: boolean;
+  disableElevation?: boolean;
   type?: 'button' | 'submit';
   ref?: Ref<HTMLButtonElement>;
   onClick?: () => void;
@@ -14,7 +17,6 @@ type CommonButtonProps = {
 export interface PeepoButtonProps extends CommonButtonProps {
   fullWidth?: boolean;
   size?: 'small' | 'medium' | 'large';
-  className?: string;
 }
 type ButtonPaddings = {
   [index: string]: string;
@@ -35,6 +37,8 @@ export function PeepoButton({
   className,
   type = 'button',
   size = 'small',
+  disableElevation,
+  disableBackgroundHover,
   ...props
 }: PeepoButtonProps) {
   const padding = classNames[size];
@@ -44,10 +48,10 @@ export function PeepoButton({
       {...props}
       type={type}
       className={cls(
-        peepoTheme.buttonVariant('dark'),
+        peepoTheme.buttonVariant('dark', { disableBackgroundHover }),
         padding,
         className,
-        'shadow'
+        disableElevation ? 'shadow' : undefined
       )}
     >
       {children}
@@ -55,17 +59,35 @@ export function PeepoButton({
   );
 }
 
-export const PeepoIconButton = forwardRef<HTMLButtonElement, CommonButtonProps>(
-  ({ children, type = 'button', ...props }, ref) => {
+export const PeepoIconButton = forwardRef<
+  HTMLButtonElement,
+  CommonButtonProps & {
+    variant?: 'default' | 'navbar';
+  }
+>(
+  (
+    {
+      children,
+      type = 'button',
+      className,
+      disableBackgroundHover,
+      variant = 'default',
+      ...props
+    },
+    ref
+  ) => {
     return (
       <StyledButton
         {...props}
         ref={ref}
         type={type}
         className={cls(
-          peepoTheme.buttonVariant('dark'),
+          variant === 'navbar'
+            ? peepoTheme.buttonNavbarVariant('dark', { disableBackgroundHover })
+            : peepoTheme.buttonVariant('dark'),
           peepoTheme.textSizes.small,
-          'p-1 shadow rounded-full'
+          'rounded-full',
+          className
         )}
       >
         {children}
