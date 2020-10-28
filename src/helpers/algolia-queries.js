@@ -1,7 +1,7 @@
 const escapeStringRegexp = require('escape-string-regexp');
 
-const pagePath = `src/pages`;
-const indexName = `prod_peepohappy`;
+const pagePath = 'src/pages';
+const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME;
 
 const pageQuery = `{
   pages: allMarkdownRemark(
@@ -16,6 +16,7 @@ const pageQuery = `{
           title
           description
           visibility
+          tags
         }
         fields {
           slug
@@ -27,39 +28,31 @@ const pageQuery = `{
 }`;
 
 function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
+  const { visibility: _visibility, ...restFrontmatter } = frontmatter;
+
   return {
     objectID: id,
-    ...frontmatter,
+    ...restFrontmatter,
     ...fields,
     ...rest
   };
 }
 
-const isProductionBuild = process.env.CONTEXT === 'production';
+const queries = [
+  {
+    query: pageQuery,
+    transformer: ({ data }) =>
+      data.pages.edges.reduce((array, edge) => {
+        // Filter articles with `unlisted` visibility, so they're not searchable in the Gatsby site.
+        if (edge.node.frontmatter.visibility === 'unlisted') {
+          return array;
+        }
 
-if (!isProductionBuild) {
-  console.log(
-    'Current build is not within `production` context. Skipping building indices.'
-  );
-}
-
-const queries = isProductionBuild
-  ? [
-      {
-        query: pageQuery,
-        transformer: ({ data }) =>
-          data.pages.edges.reduce((array, edge) => {
-            // Filter articles with `unlisted` visibility, so they're not searchable in the Gatsby site.
-            if (edge.node.frontmatter.visibility === 'unlisted') {
-              return array;
-            }
-
-            return array.concat(pageToAlgoliaRecord(edge));
-          }, []),
-        indexName,
-        settings: { attributesToSnippet: [`excerpt:20`] }
-      }
-    ]
-  : [];
+        return array.concat(pageToAlgoliaRecord(edge));
+      }, []),
+    indexName,
+    settings: { attributesToSnippet: ['excerpt:20'] }
+  }
+];
 
 module.exports = queries;

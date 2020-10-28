@@ -2,6 +2,8 @@
 // I don't want to use CSS because Gatsby builds rather slowly for some reason when using CSS.
 // When I update `p` tag with CSS, it takes 4 seconds, while if I add a className, it takes under 1 second.
 
+import { cls } from './helpers/styles';
+
 type ThemeMode = 'dark';
 type ColorSetElement = {
   twClass: string;
@@ -83,6 +85,10 @@ const textSizes = {
   small: 'text-sm' // .875rem.
 };
 
+export type ButtonVariantOptions = {
+  disableBackgroundHover?: boolean;
+};
+
 export const peepoTheme = {
   colorSets,
   borderColorSets,
@@ -93,15 +99,43 @@ export const peepoTheme = {
    * Equivalently, `*-4` in Tailwind equals to `1rem`.
    */
   spacing: (spacingValue: number) => `${spacingValue / 4}rem`,
-  buttonVariant: (mode: ThemeMode) => {
+  buttonVariant: (
+    mode: ThemeMode,
+    opts: ButtonVariantOptions = {
+      disableBackgroundHover: false
+    }
+  ) => {
     const colorSet = colorSets[mode];
 
-    return `${colorSet.main.twClass} ${colorSet.main.hover.twClass} ${colorSet.contrastText.twClass} font-bold rounded`;
+    return cls(
+      `${colorSet.main.twClass} ${colorSet.contrastText.twClass} ${colorSet.contrastTextHover.twClass} font-bold rounded outline-none`,
+      {
+        // Allow disabling of background hover.
+        [`${colorSet.main.hover.twClass}`]: !opts.disableBackgroundHover
+      }
+    );
   },
-  navbarLinkVariant: (mode: ThemeMode) => {
+  buttonNavbarVariant: (
+    mode: ThemeMode,
+    opts: ButtonVariantOptions = {
+      disableBackgroundHover: false
+    }
+  ) => {
     const colorSet = colorSets[mode];
 
-    return `${colorSet.contrastText.twClass} ${colorSet.contrastTextHover.twClass} font-bold`;
+    return cls(
+      `text-gray-300 hover:text-white ${colorSet.main.twClass} font-bold rounded outline-none`,
+      {
+        // Allow disabling of background hover.
+        [`${colorSet.main.hover.twClass}`]: !opts.disableBackgroundHover
+      }
+    );
+  },
+  navbarLinkVariant: (isActive?: boolean) => {
+    return cls(
+      `hover:text-white font-bold outline-none`,
+      isActive ? 'text-white' : 'text-gray-300'
+    );
   },
   topbarHeight: 56,
   pageHorizontalSpacing: 'sm:px-16 md:px-24',

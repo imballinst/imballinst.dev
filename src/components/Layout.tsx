@@ -1,11 +1,16 @@
 import React, { ReactNode } from 'react';
 import styled from '@emotion/styled';
+import { CacheProvider } from '@emotion/core';
+import createCache from '@emotion/cache';
 
 import Navbar from './Navbar';
 import '../all.css';
 import { peepoTheme } from '../theme';
 import SEO from './SEO';
 import { cls } from '../helpers/styles';
+
+const emotionCache = createCache();
+emotionCache.compat = true;
 
 // Wrapper for bottom padding. When it is scrollable, the bottom-padding will not be visible.
 export const SectionWrapper = styled.section`
@@ -43,7 +48,7 @@ type Props = {
 
 function TemplateWrapper({ children, seoTitle, noPadding }: Props) {
   return (
-    <div>
+    <CacheProvider value={emotionCache}>
       <SEO title={seoTitle} />
       <Navbar />
       <Content
@@ -57,7 +62,7 @@ function TemplateWrapper({ children, seoTitle, noPadding }: Props) {
       >
         {children}
       </Content>
-    </div>
+    </CacheProvider>
   );
 }
 

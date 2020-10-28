@@ -24,6 +24,6 @@ export function stringify(obj: Partial<FormState>) {
   );
 }
 
-export function parseQueryParams<T>(queryParams: string): Partial<T> {
+export function parseQueryParams(queryParams: string): qs.ParsedQs {
   return qs.parse(queryParams, { ignoreQueryPrefix: true });
 }

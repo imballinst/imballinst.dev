@@ -1,3 +1,11 @@
+require('dotenv').config();
+
+// Manually set the index name.
+process.env.GATSBY_ALGOLIA_INDEX_NAME =
+  process.env.CONTEXT === 'production'
+    ? process.env.GATSBY_ALGOLIA_INDEX_NAME || 'prod_peepohappy'
+    : 'deploy_preview_peepohappy';
+
 module.exports = {
   siteMetadata: {
     title: 'peepohappy',
