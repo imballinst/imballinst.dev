@@ -102,48 +102,55 @@ export function SearchResults({ query, onBlur }: Props) {
 
   return (
     <SearchList Component="ol" className="mt-4 rounded">
-      {hits.map((hit, idx) => (
-        <SearchItem key={hit.slug}>
-          <SearchLink
-            to={hit.slug}
-            className={cls('p-4', currentHitIdx === idx ? 'active' : undefined)}
-          >
-            <div>
-              {hit._highlightResult.title ? (
-                <h2
-                  className="font-bold text-lg"
-                  dangerouslySetInnerHTML={{
-                    __html: hit._highlightResult.title.value
-                  }}
-                />
-              ) : (
-                hit.title
+      {hits.length === 0 ? (
+        <p className="m-0 p-4">No results found.</p>
+      ) : (
+        hits.map((hit, idx) => (
+          <SearchItem key={hit.slug}>
+            <SearchLink
+              to={hit.slug}
+              className={cls(
+                'p-4',
+                currentHitIdx === idx ? 'active' : undefined
               )}
+            >
+              <div>
+                {hit._highlightResult.title ? (
+                  <h2
+                    className="font-bold text-lg"
+                    dangerouslySetInnerHTML={{
+                      __html: hit._highlightResult.title.value
+                    }}
+                  />
+                ) : (
+                  hit.title
+                )}
 
-              {hit._highlightResult.description ? (
-                <p
-                  className="mt-2"
-                  dangerouslySetInnerHTML={{
-                    __html: hit._highlightResult.description.value
-                  }}
-                />
-              ) : (
-                hit.description
-              )}
+                {hit._highlightResult.description ? (
+                  <p
+                    className="mt-2"
+                    dangerouslySetInnerHTML={{
+                      __html: hit._highlightResult.description.value
+                    }}
+                  />
+                ) : (
+                  hit.description
+                )}
 
-              {hit.tags && (
-                <div className="flex flex-row items-center text-sm mt-4">
-                  <SearchTagIconWrapper>
-                    <TagsIcon size={12} />
-                  </SearchTagIconWrapper>
+                {hit.tags && (
+                  <div className="flex flex-row items-center text-sm mt-4">
+                    <SearchTagIconWrapper>
+                      <TagsIcon size={12} />
+                    </SearchTagIconWrapper>
 
-                  <span className="ml-1">{hit.tags.join(', ')}</span>
-                </div>
-              )}
-            </div>
-          </SearchLink>
-        </SearchItem>
-      ))}
+                    <span className="ml-1">{hit.tags.join(', ')}</span>
+                  </div>
+                )}
+              </div>
+            </SearchLink>
+          </SearchItem>
+        ))
+      )}
     </SearchList>
   );
 }

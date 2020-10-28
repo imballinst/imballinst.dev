@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import algoliasearch, { SearchIndex } from 'algoliasearch/lite';
 import { SearchResponse } from '@algolia/client-search';
+import debounce from 'lodash.debounce';
 
 export function useAlgolia(searchQuery: string) {
   const searchIndex = useRef<SearchIndex | undefined>(undefined);
@@ -13,7 +14,7 @@ export function useAlgolia(searchQuery: string) {
   }
 
   useEffect(() => {
-    async function search() {
+    const search = debounce(async () => {
       if (searchQuery !== '' && searchIndex.current !== undefined) {
         const response = await searchIndex.current.search(searchQuery, {
           hitsPerPage: 5
@@ -21,7 +22,7 @@ export function useAlgolia(searchQuery: string) {
 
         setSearchResults(response);
       }
-    }
+    }, 500);
 
     search();
   }, [searchQuery, searchIndex.current]);
