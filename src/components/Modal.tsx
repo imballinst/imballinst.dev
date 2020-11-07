@@ -15,7 +15,8 @@ const Backdrop = styled.div`
   background: rgba(0, 0, 0, 0.5);
   z-index: -1;
   position: fixed;
-  inset: 0px;
+  width: 100%;
+  height: 100%;
 `;
 
 export function Modal({
