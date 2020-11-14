@@ -53,7 +53,7 @@ However, we hit another boulder. We got stuck on Division 2 and sometimes we dro
   <iframe width="560" height="315" src="https://www.youtube.com/embed/2vFETKArHas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-While we were playing on Division 2 of joinDOTA League, we won some of the local tournaments as well. It was not much, the prize for first place was 1.5 million IDR, which was around US$110. The tournaments themselves usually were held for 2-3 days during the weekend, so it was around US$35 per day, per team, for winning first place.
+While we were playing on Division 2 of joinDOTA League, we won some of the local tournaments as well. It was not much, the prize for first place was usually around 1.5 million IDR or US$110. The tournaments themselves were typically held for 2-3 days during the weekend, so it was around US$35 per day, per team, for winning first place.
 
 ![Getting 3rd place in Indonesia Elite Super League (IESL) in 2015.](images/rtd.jpg)
 
