@@ -13,6 +13,8 @@ tags:
 
 I was first introduced to games by my brother when I was around 8 years old -- they were old Windows games, such as Solitaire, Hearts, Chips's Challenge, Rodent's Revenge, and Pinball. Later on, I also learned about other "popular" PC games, such as Need for Speed, Red Alert 2, Counter-Strike, and Warcraft III. Since we only had 1 PC at that time, we needed to take turn to play games, although most of the time, it was my brother playing and I only watched. However, sometimes we did naughty things, such as using my mother's unused laptop (which she left at home) to play LAN games together. That was before we discovered internet cafe.
 
+## Competing Against "Real" People
+
 One day, I think at that time I was around 12 years old, my brother invited me to join him playing in an internet cafe. We played some Counter-Strike games, as well as Red Alert 2 with other people there on LAN. I think that was the first time I actually faced "actual people" instead of Artificial Intelligence (will be shortened to **AI** later on), and I remember I was utterly destroyed by them. Anyways, my brother blamed me for the loss, though it did not last long. I think it showed how much he wanted to win at times.
 
 Anyway, we got home, and I think we got scolded by our parents because they thought my brother introduced bad things to me, since internet cafe did not necessarily have the best reputation amongst the elder during my childhood. So, there's that. I didn't play in internet cafe anymore until I was in Junior High School. I only played with my brother and my family happened to have quite a fortune, so my father could afford me a laptop and we could play together at home instead of in internet cafe. Probably, that was an effort to prevent me learning bad things from people out there.
@@ -31,7 +33,27 @@ Back then, Facebook was quite a thing after Friendster. People started to use it
 
 As for sudden family activities, I was perplexed by my family's communication. There were times that my parents would ask us to go out all of a sudden. It was as if I could not control my own life, because there were always stuff that could interrupt my time. What is parents' relationship with their children anyways? My life was like full of secrets and I should play guessing games, _"Oh hey, this works now. But, I don't know whether it will work again later because I don't have the information whatsoever"_. As for this, I have implemented a family calendar with regards to activities that we (I and my wife) need to do together, so we are always informed on what we are up to. This ensures that we can decide the best timings for each of our own's _me-time_.
 
-Key points:
+It changed when I started my college, where I needed to move to Bandung from Jakarta. I gained control over my life -- this included waking up, eating, taking a bath, sleeping, studying, and all that. Since I was on my own and I subscribed for a personal internet connection (I didn't share with the others in my dorm), it was also easier because I knew where to complain if there was a performance downgrade on my connection. I did not need to communicate with the others, which means less friction. Yay!
+
+It was also during my college, I started to pursue competitive gaming more seriously with my internet friends. I was not a bright student or academician at that time, so this was a huge risk. Sometimes, I felt like I was just being a passenger in my group project, because I couldn't really manage my time better. I was too fixated in becoming a good DotA 2 player. It was even worse because I decided to also took part in some organizational activities. That was probably the nail in the coffin and I had to kiss my 24 hours a day goodbye.
+
+My team did not have that kind of luck (as in getting top 3 in a competition) during our first 1-2 years, not even in small local tournaments. Our biggest achievement during that time was probably when we beat [KoaLa](https://liquipedia.net/dota2/KoaLa) who happened to be a stand-in of a team who faced us in the final qualifier round.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jRJRieUYwJU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+But, in the group stage, we didn't stand any chance either amidst the teams such as Zero Latitude.
+
+We started joining a lot more tournaments/leagues, in particular joinDOTA's Asia League. I think it was one of the best experiences in doing competitive DotA 2 for me. We started from Indonesia league (which was until Division 3), then we climbed up, up, and away until we reached the qualifier round for Division 2. When we qualified for Division 2, I was really happy because Division 2 was where all the teams across the Southeast Asia. Finally, I could represent something for my country in something I was passionate at.
+
+However, we hit another boulder. We got stuck on Division 2 and sometimes we dropped down to Division 3, back and forth. We had some of our great moments, but it was not enough to even bring us to the qualifier for Division 1.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2vFETKArHas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+While we were playing on Division 2 of joinDOTA League, we won some of the local tournaments as well. It was not much, the prize for first place was 1.5 million IDR, which was around US$110. The tournament itself usually was held for 2-3 days during the weekend, so it was around US$35 per day, per team, for winning first place.
+
+That was mostly it -- we competed in bigger Indonesian tournaments, but since we were mostly students and did not dedicate 100% of our times to "train", we were clearly behind compared with other top-tier teams from Indonesia.
+
+I have regrets over those times. I overvalued grinding and I forgot the value of watching and learning. Yes, applying what we have learned is important, but as much as putting them into practice is important, we can also get insights by watching how other players play and do their stuff. Perhaps, if I "studied" other top-tier players inside and outside Indonesia, I could have become a better player.
 
 - How I became a gamer in the first place
 - CS + DotA against AI, then against actual people
@@ -41,11 +63,15 @@ Key points:
 - Winning some prizes from online tournaments which were not much, had flashes during a local tournament and jDL Asia (image of getting 3rd in GV, video vs RvL, and video in jDL as Dark Seer)
 - Regrets -- I overvalued grinding, instead of doing it smartly. Watching+applying is more effective than just blindly trying to apply things over and over.
 
+## Turning Points
+
 - Final project, internships, and downfall from competitive gaming
 - Stopped joining tournaments, but still sometimes participated in Battle Cups, and doing ladder in World of Warcraft arena, etc.
 - Around February/March, stopped playing Dota 2 and subscribing to World of Warcraft. Played games merely just for fun, like StarCraft II and Hearthstone
 - Did not play an "actual game" since last month, because I do not have the time and drive anymore
 - Casual games such as TypeRacer is always welcome
+
+## Prospects in Esports
 
 - Prize pool is big https://dota2.prizetrac.kr/, but need consistency througout the season. One moment of lapse will cost your team the tournament.
 - Valve's official Dota 2 Major usually happens every 3 months. The prize pool for first place is 1M USD. Divide that with the team + org, each person probably gets $100k-$200k.
@@ -56,6 +82,8 @@ Key points:
 - A person should be dedicating their life and time to the game. There's a lot to sacrifice.
 - Other than winning tournaments, people can stream. But streaming is another tricky topic, because not all people can "gather" crowd and keep them interested. Also, it's not a guarantee whether non-tier 1 teams "pay" their players.
 - esports is not as stable as real sports especially in these pandemic times. A team recently released all of their players (https://twitter.com/TeamGeekFam/status/1303649355736346624).
+
+## Now, I am...
 
 - a new life as a software engineer.
 - how being software engineer could be "relaxing" at times, although there were some close calls, as well.
