@@ -45,7 +45,7 @@ My team did not have that kind of luck (as in getting top 3 in a competition) du
 
 We won against his team. However, in the group stage, we didn't stand any chance against teams such as Zero Latitude.
 
-We started joining a lot more tournaments/leagues, in particular joinDOTA's Asia League. I think it was one of the best experiences in doing competitive DotA 2 for me. We started from the Indonesia league (which was until Division 3), then we climbed up, up, and away until we reached the qualifier round for Division 2. When we qualified for Division 2, I was really happy because Division 2 was where all the semi-competitive teams across Southeast Asia gathered. Finally, I could represent something for my country in something I was passionate about.
+We started joining a lot more tournaments/leagues, in particular joinDOTA's Asia League. I think it was one of the best experiences in doing competitive DotA 2 for me. We started from the Indonesia leagues (which was until Division 3), then we climbed up, up, and away until we reached the qualifier round for Division 2. When we qualified for Division 2, I was really happy because Division 2 was where all the semi-competitive teams across Southeast Asia gathered. Finally, I could represent something for my country in something I was passionate about.
 
 However, we hit another boulder. We got stuck on Division 2 and sometimes we dropped down to Division 3, back and forth. We had some of our great moments, but it was not enough to even bring us to the qualifier for Division 1.
 
