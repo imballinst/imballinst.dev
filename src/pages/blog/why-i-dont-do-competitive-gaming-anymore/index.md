@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Why I Don't Really Play Games Anymore
+title: Why I Don't Do Competitive Gaming Anymore
 date: 2020-11-14T11:37:48.635Z
 featuredpost: false
 featuredimage: images/rtd-featuredimage-crop.jpg
