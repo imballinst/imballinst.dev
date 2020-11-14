@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Why I Don't Really Play Games Anymore
-date: 2020-04-25T14:39:06.797Z
+date: 2020-11-14T11:37:48.635Z
 featuredpost: false
 # featuredimage: unimelb-law-building.jpg
 visibility: public
@@ -55,14 +55,6 @@ That was mostly it -- we competed in bigger Indonesian tournaments, but since we
 
 I have regrets over those times. I overvalued grinding and I forgot the value of watching and learning. Yes, applying what we have learned is important, but as much as putting them into practice is important, we can also get insights by watching how other players play and do their stuff. Perhaps, if I "studied" other top-tier players inside and outside Indonesia, I could have become a better player.
 
-- How I became a gamer in the first place
-- CS + DotA against AI, then against actual people
-- There was a burning determination to be the best inside me in terms of playing games that I like
-- Things that block my path -- e.g. laggy internet, interruptions from family
-- College life -- where I had quite control of my own life, but as well as my gaming path made me quite a burden in group projects
-- Winning some prizes from online tournaments which were not much, had flashes during a local tournament and jDL Asia (image of getting 3rd in GV, video vs RvL, and video in jDL as Dark Seer)
-- Regrets -- I overvalued grinding, instead of doing it smartly. Watching+applying is more effective than just blindly trying to apply things over and over.
-
 ## Turning Points
 
 The year was 2016. I needed to apply to another internship in order to do my thesis defense because I procrastinated from working on my previous internship report. This caused my university internship supervisor was "mad" at me and I thought there was no second chance. So, I expected another 1-2 months of suffering. Everything I would do to graduate that year.
@@ -76,12 +68,6 @@ I found a really good mentor in the company. He guided me in a way so that, I co
 This job was unlike competing in tournamnets, I thought. It was chill, urgent at times, but my stress-level was not as high as when I was inside a tournament game. Also, better "salary"? Sign me up. I decided to stop doing tournaments, though sadly that also stopped my team from competing further. However, I was still playing DotA 2, in particular for Battle Cups (prior to The International event), as well as World of Warcraft for its Arena PvP.
 
 As for now, I don't play both games anymore. I only play Hearthstone during my spare time for fun and that's it, though I still follow a bit of DotA 2 and World of Warcraft from Twitch streams and/or tournaments out there. No matter how different my current job with what I did in the past, I still have a soft spot for video games.
-
-- Final project, internships, and downfall from competitive gaming
-- Stopped joining tournaments, but still sometimes participated in Battle Cups, and doing ladder in World of Warcraft arena, etc.
-- Around February/March, stopped playing Dota 2 and subscribing to World of Warcraft. Played games merely just for fun, like StarCraft II and Hearthstone
-- Did not play an "actual game" since last month, because I do not have the time and drive anymore
-- Casual games such as TypeRacer is always welcome
 
 ## Prospects in Esports
 
@@ -97,22 +83,8 @@ In esports, other than winning tournaments, a player can also try to stream thei
 
 One thing for sure, I don't think esports at the moment is as stable as real sports especially during these pandemic times. A team recently [released all of their players](https://twitter.com/TeamGeekFam/status/1303649355736346624). Also, usually Valve held DotA 2 major on-site tournaments in a year. However, due to this COVID-19 situation, there are only online tournaments and their prize pool are not as big as official Valve DotA 2 major tournaments.
 
-- Prize pool is big https://dota2.prizetrac.kr/, but need consistency througout the season. One moment of lapse will cost your team the tournament.
-- Valve's official Dota 2 Major usually happens every 3 months. The prize pool for first place is 1M USD. Divide that with the team + org, each person probably gets $100k-$200k.
-- For the last place, however, they only get US$62k. That's around $6k-10k with the same equation. So, US\$2k-3k per month, which is still good.
-
-- However, "Getting lucky" in esports is as important as "getting lucky" in real sports.
-- It's hard to be noticed by tier 2/3 team, let alone break through to tier 1 team, which usually are the prime contenders of the major.
-- A person should be dedicating their life and time to the game. There's a lot to sacrifice.
-- Other than winning tournaments, people can stream. But streaming is another tricky topic, because not all people can "gather" crowd and keep them interested. Also, it's not a guarantee whether non-tier 1 teams "pay" their players.
-- esports is not as stable as real sports especially in these pandemic times. A team recently released all of their players (https://twitter.com/TeamGeekFam/status/1303649355736346624).
-
 ## Now, I am...
 
 The year is 2020. Currently, I am working as a front-end engineer for [Tetrate.io](https://www.tetrate.io/) and I think I am quite happy with it. I have flexible working hours, I am getting experience working with people around the globe, I am getting good amount of money, and again, my stress level is not as high as when I am competing in a tournament.
 
-One day, I hope esports will become on-par with real sports. I hope families and society will adapt to this industry and accept that playing games can be a career.
-
-- a new life as a software engineer.
-- how being software engineer could be "relaxing" at times, although there were some close calls, as well.
-- creating work and life balance in marriage life.
+One day, I hope esports will become on-par with real sports. I hope families and society will adapt to this industry and accept that playing games can be a career. Now, my dream is not to become a professional gamer anymore. I dream to build a healthy family -- physically and emotionally.
