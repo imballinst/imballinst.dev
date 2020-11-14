@@ -38,7 +38,7 @@ function SEO({
   const image = featuredImageResized
     ? `${siteMetadata.siteUrl}/${featuredImageResized.childImageSharp.resize.src}`
     : `${siteMetadata.siteUrl}/${peepoLogo}`;
-  const canonical = pathname ? `${siteMetadata.siteUrl}/${pathname}` : null;
+  const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
 
   let helmetMeta: MetaType = [
     // Social media metas.
