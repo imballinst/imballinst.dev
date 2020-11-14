@@ -65,6 +65,18 @@ I have regrets over those times. I overvalued grinding and I forgot the value of
 
 ## Turning Points
 
+The year was 2016. I needed to apply to another internship in order to do my thesis defense because I procrastinated from working on my previous internship report. This caused my university internship supervisor was "mad" at me and I thought there was no second chance. So, I expected another 1-2 months of suffering. Everything I would do to graduate that year.
+
+I was so wrong when I expected my path on competitive gaming would still be the same before, during, and after the internship.
+
+Truth be told, I knew almost nothing when I first applied for the internship at [eFishery](https://www.efishery.com). My portfolio only consisted of two small sites that I worked on, [a JavaScript-based clock that changes background based on timezones](https://github.com/imballinst/javascript-timezone) and [RIP THE DREAM's static page](imballinst.github.io/rtdota2/). But, for some reason, the company accepted my application. That was the first good thing.
+
+I found a really good mentor in the company. He guided me in a way so that, I could pave my way to understand and catch-up to the newer world of web development. Slowly, I began comparing this "front-end engineer" job prospect and competitive gamer. By the end of the internship, I was offered a part-time opportunity and I took it.
+
+This job was unlike competing in tournamnets, I thought. It was chill, urgent at times, but my stress-level was not as high as when I was inside a tournament game. Also, better "salary"? Sign me up. I decided to stop doing tournaments, though sadly that also stopped my team from competing further. However, I was still playing DotA 2, in particular for Battle Cups (prior to The International event), as well as World of Warcraft for its Arena PvP.
+
+As for now, I don't play both games anymore. I only play Hearthstone during my spare time for fun and that's it, though I still follow a bit of DotA 2 and World of Warcraft from Twitch streams and/or tournaments out there. No matter how different my current job with what I did in the past, I still have a soft spot for video games.
+
 - Final project, internships, and downfall from competitive gaming
 - Stopped joining tournaments, but still sometimes participated in Battle Cups, and doing ladder in World of Warcraft arena, etc.
 - Around February/March, stopped playing Dota 2 and subscribing to World of Warcraft. Played games merely just for fun, like StarCraft II and Hearthstone
@@ -72,6 +84,18 @@ I have regrets over those times. I overvalued grinding and I forgot the value of
 - Casual games such as TypeRacer is always welcome
 
 ## Prospects in Esports
+
+Let's talk about prospects. For DotA 2 prize pool alone, [it is quite big](https://dota2.prizetrac.kr/) for a team game. In fact, The International 2019, as of July 2020, [is still the tournament with the highest prize pool](https://www.statista.com/statistics/517940/leading-esports-tournamets-worldwide-by-prize-pool/). Of course, there are also other games with big prize pools as well, such as Fortnite and League of Legends.
+
+However, most of these tournaments only come yearly. It is one shot to get the big prize. If you don't win, you don't get paid (unless your team pays you as a player). If you or your team have immense amount of talent and dedication, I think you should give it a shot. However, in esports, you also need to be lucky, just as how professional athletes in sports do.
+
+Sure, if we take a look at [some of the top football players' earnings](https://www.fourfourtwo.com/features/the-14-best-paid-footballers-in-the-world-2020), we will think that, _"Oh, it's going to be so nice to be a football player!"_. But, the road to become one of them is definitely not as easy as it looks. First, you will need to be dedicated. Then, you will need to "ramp up" in local football teams, then you hope to be noticed by leagues outside of your country. If you plan to become a Premier League player, you probably would need to play in less-competitive Europe leagues first. You need to be consistent, you need to be free from injuries, which sometimes, are career-defining for a lot of football players.
+
+Whether you are going for sports or esports, you will need to dedicate your life for it. Sometimes, it will require sacrifice. You can't get the best of all worlds when you are chasing or doing your dreams.
+
+In esports, other than winning tournaments, a player can also try to stream their gameplay. Streaming is another tricky topic. Not all famous players can gather crowd to watch their gameplay. It requires social skills and consistency [to stream on schedule]. However, if you success in both aspects, you will have your own community who will subscribe or even donate to you for making their day.
+
+One thing for sure, I don't think esports at the moment is as stable as real sports especially during these pandemic times. A team recently [released all of their players](https://twitter.com/TeamGeekFam/status/1303649355736346624). Also, usually Valve held DotA 2 major on-site tournaments in a year. However, due to this COVID-19 situation, there are only online tournaments and their prize pool are not as big as official Valve DotA 2 major tournaments.
 
 - Prize pool is big https://dota2.prizetrac.kr/, but need consistency througout the season. One moment of lapse will cost your team the tournament.
 - Valve's official Dota 2 Major usually happens every 3 months. The prize pool for first place is 1M USD. Divide that with the team + org, each person probably gets $100k-$200k.
@@ -84,6 +108,10 @@ I have regrets over those times. I overvalued grinding and I forgot the value of
 - esports is not as stable as real sports especially in these pandemic times. A team recently released all of their players (https://twitter.com/TeamGeekFam/status/1303649355736346624).
 
 ## Now, I am...
+
+The year is 2020. Currently, I am working as a front-end engineer for [Tetrate.io](https://www.tetrate.io/) and I think I am quite happy with it. I have flexible working hours, I am getting experience working with people around the globe, I am getting good amount of money, and again, my stress level is not as high as when I am competing in a tournament.
+
+One day, I hope esports will become on-par with real sports. I hope families and society will adapt to this industry and accept that playing games can be a career.
 
 - a new life as a software engineer.
 - how being software engineer could be "relaxing" at times, although there were some close calls, as well.
