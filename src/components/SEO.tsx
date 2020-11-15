@@ -37,7 +37,7 @@ function SEO({
   const metaDescription = description || siteMetadata.description;
   const image = featuredImageResized
     ? `${siteMetadata.siteUrl}${featuredImageResized.childImageSharp.resize.src}`
-    : `${siteMetadata.siteUrl}/${peepoLogo}`;
+    : `${siteMetadata.siteUrl}${peepoLogo}`;
   const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
 
   let helmetMeta: MetaType = [

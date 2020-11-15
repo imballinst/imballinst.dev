@@ -8,7 +8,7 @@ process.env.GATSBY_ALGOLIA_INDEX_NAME =
 
 const SITE_URL =
   process.env.CONTEXT === 'deploy-preview'
-    ? `https://${process.env.BUILD_ID}--peepohappy.netlify.app`
+    ? process.env.DEPLOY_PRIME_URL
     : 'https://peepohappy.id';
 
 module.exports = {
