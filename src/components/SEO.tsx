@@ -36,9 +36,9 @@ function SEO({
   const metaTitle = title || siteMetadata.title;
   const metaDescription = description || siteMetadata.description;
   const image = featuredImageResized
-    ? `${siteMetadata.siteUrl}/${featuredImageResized.childImageSharp.resize.src}`
-    : `${siteMetadata.siteUrl}/${peepoLogo}`;
-  const canonical = pathname ? `${siteMetadata.siteUrl}/${pathname}` : null;
+    ? `${siteMetadata.siteUrl}${featuredImageResized.childImageSharp.resize.src}`
+    : `${siteMetadata.siteUrl}${peepoLogo}`;
+  const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
 
   let helmetMeta: MetaType = [
     // Social media metas.
