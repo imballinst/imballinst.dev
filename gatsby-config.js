@@ -6,6 +6,11 @@ process.env.GATSBY_ALGOLIA_INDEX_NAME =
     ? process.env.GATSBY_ALGOLIA_INDEX_NAME || 'prod_peepohappy'
     : 'deploy_preview_peepohappy';
 
+const SITE_URL =
+  process.env.CONTEXT === 'deploy-preview'
+    ? `https://${process.env.BUILD_ID}--peepohappy.netlify.app`
+    : 'https://peepohappy.id';
+
 module.exports = {
   siteMetadata: {
     title: 'peepohappy',
@@ -14,7 +19,7 @@ module.exports = {
     author: 'Try Ajitiono',
     authorTwitter: '@Ajiballinst',
     keywords: ['blog', 'tech', 'life', 'happiness'],
-    siteUrl: 'https://peepohappy.id'
+    siteUrl: SITE_URL
   },
   plugins: [
     'gatsby-plugin-typescript',
