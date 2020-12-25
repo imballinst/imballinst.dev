@@ -1,19 +1,19 @@
 ---
 templateKey: blog-post
-title: My Top 3 Achievements and Frustrations in 2020
+title: My Top 3 Achievements and Struggles in 2020
 date: 2020-04-25T14:39:06.797Z
 featuredpost: false
-featuredimage: unimelb-law-building.jpg
+featuredimage: images/lobostudio-hamburg-tPIHxXNbHh4-unsplash.jpg
 visibility: public
-description: I finished my Masters in December 2019 and here are my thoughts after the ride.
+description: I ranked my top 3 achievements and struggles as I took a reflection of this rollercoaster year.
 tags:
   - life
   - education
 ---
 
-<span>Photo by <a href="https://unsplash.com/@lobostudiohamburg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">LoboStudio Hamburg</a> on <a href="https://unsplash.com/s/photos/light-dark?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+![<span>Glencoe, United Kingdom. Photo by <a href="https://unsplash.com/@lobostudiohamburg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">LoboStudio Hamburg</a> on <a href="https://unsplash.com/s/photos/light-dark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>](images/lobostudio-hamburg-tPIHxXNbHh4-unsplash.jpg)
 
-This year has been a... memorable year——in its own way, of course. It is as if yesterday was still 2019, but here we are, at the end of 2020. I encountered a lot of events this year, which is a mix of happiness and sadness inducing events. In this post, I will rank the top 3 achievements and frustrations as I paved my way throughout the year.
+This year has been a... memorable year——in its own way, of course. It is as if yesterday was still 2019, but here we are, at the end of 2020. I encountered a lot of events this year, which is a mix of happiness and sadness inducing events. In this post, I will rank the top 3 achievements and struggles as I paved my way throughout the year.
 
 ## Top 3 Achievements
 
@@ -43,7 +43,7 @@ Third attack: during house construction, some issues with mother causing me and 
 Wealth investments
 Family investments: expressing love explicitly, saying thanks and sorry
 
-## Top 3 Frustrations
+## Top 3 Struggles
 
 ### COVID-19
 
