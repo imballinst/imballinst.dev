@@ -11,9 +11,9 @@ tags:
   - education
 ---
 
-![<span>Glencoe, United Kingdom. Photo by <a href="https://unsplash.com/@lobostudiohamburg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">LoboStudio Hamburg</a> on <a href="https://unsplash.com/s/photos/light-dark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>](images/lobostudio-hamburg-tPIHxXNbHh4-unsplash.jpg)
+![<span>Glencoe, United Kingdom. Photo by <a href="https://unsplash.com/@lobostudiohamburg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">LoboStudio Hamburg</a> on <a href="https://unsplash.com/s/photos/light-dark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>](images/lobostudio-hamburg-tPIHxXNbHh4-unsplash.jpg)
 
-This year has been a... memorable year——in its own way, of course. It is as if yesterday was still 2019, but here we are, at the end of 2020. I encountered a lot of events this year, which is a mix of happiness and sadness inducing events. In this post, I will rank the top 3 achievements and struggles as I paved my way throughout the year.
+For me, 2020 has been a... memorable year—in its own way, of course. It is as if yesterday was still 2019, but here we are, at the end of 2020. I encountered a lot of events this year, which were a mix of happiness and sadness inducing events. In this post, I will rank the top 3 achievements and struggles as I paved my way throughout the year.
 
 ## Top 3 Achievements
 
@@ -29,14 +29,17 @@ I think myself in the past would have accepted the offer, which leads to me burn
 
 ### Overcoming Suicidal Thoughts
 
-There were at least 3 times where I was trapped within a vortex of myself. The first one happened around January/February——I had thought of jumped off a [footbridge](https://en.wikipedia.org/wiki/Footbridge). That was the point where I felt I needed to visit a therapist... for the first time. I was nervous because I had heard about people's experiences with therapists and mostly they had bad experiences.
+There were probably 4 times where I was trapped within a vortex of myself. The first one happened around January/February——I had thought of jumped off a [footbridge](https://en.wikipedia.org/wiki/Footbridge). That was the point where I felt I needed to visit a therapist... for the first time. I was nervous because I had heard about people's experiences with therapists and mostly they had bad experiences.
 
 It turned out to be a quite pleasant one. I binned some of my psychological garbages and learned some good teachings. The therapist said that I was stuck in my own thoughts because I didn't see that coming. To prevent that, I should be more aware of myself and feel if the "darkness" starts to creep up on me. In addition, she [the therapist] also taught me some meditation techniques, which are incredibly useful until now.
 
--- draft --
+The second one came around 1 month before my marriage. I laid on the floor the whole night until my body felt numb. I didn't check on my phone, I didn't eat. At 3AM the next day, I thought about my soon-to-be-wife (at that moment)—we were so close of being together and I didn't want to make her feel sad (although I already did by not replying to her messages). Then, I decided to order a food online to fill out my empty stomach. I didn't do well in my job for 2-3 days since the incident, but I regained my pace eventually.
 
-Second attack: house-cleaning stuff where I admitted it was my mistake and I will do better and mother went mad. I didn't eat whole night and slept on the floor all night until my body went numb.
-Third attack: during house construction, some issues with mother causing me and my wife to be on edge and I intended to walk on the bus track.
+The third attack came around 1–2 months after my marriage. I remembeer back then I just laid on a carpet breathing, but devoid of life. I looked up as I saw the ceiling and my wife crying. We were (and still are) living in an apartment and my mind was conflicting on whether I should rush to the balcony and jump or not. But again, my feelings for my wife triumphed and we spent the rest of the night comforting each other.
+
+The fourth attack was probably the weakest compared to the previous ones. I was quite stressed at that time and we decided to go along to buy some groceries. My mind was fighting between living and intentionally walking on the bus corridor, so I bought 2 sacks of rice (5 kilograms each) and I carried them to the apartment (yes, we usually walk to the nearest supermarket). This was because when I am emotionally unstable, I stabilize myself by "draining" my own energy, hoping that I don't have any energy left to harm myself. It worked and we arrived safely in our apartment.
+
+I am thankful to myself for not giving up in these fights. They were not, by any means, easy. If you are facing the same thing, please stay strong and find someone who can help you carry your "emotional burden".
 
 ### Learning About Long-term Investments
 
