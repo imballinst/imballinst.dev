@@ -8,7 +8,6 @@ visibility: public
 description: I ranked my top 3 achievements and struggles as I took a reflection of this rollercoaster year.
 tags:
   - life
-  - education
 ---
 
 ![<span>Glencoe, United Kingdom. Photo by <a href="https://unsplash.com/@lobostudiohamburg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">LoboStudio Hamburg</a> on <a href="https://unsplash.com/s/photos/light-dark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>](images/lobostudio-hamburg-tPIHxXNbHh4-unsplash.jpg)
@@ -39,12 +38,17 @@ The third attack came around 1–2 months after my marriage. I remembeer back th
 
 The fourth attack was probably the weakest compared to the previous ones. I was quite stressed at that time and we decided to go along to buy some groceries. My mind was fighting between living and intentionally walking on the bus corridor, so I bought 2 sacks of rice (5 kilograms each) and I carried them to the apartment (yes, we usually walk to the nearest supermarket). This was because when I am emotionally unstable, I stabilize myself by "draining" my own energy, hoping that I don't have any energy left to harm myself. It worked and we arrived safely in our apartment.
 
-I am thankful to myself for not giving up in these fights. They were not, by any means, easy. If you are facing the same thing, please stay strong and find someone who can help you carry your "emotional burden".
+I am thankful to myself for not giving up in these fights. They were not, by any means, easy. If you are facing the same thing, please stay strong and find someone who can help you carry your "emotional burden". I hope everything gets better for you.
 
 ### Learning About Long-term Investments
 
-Wealth investments
-Family investments: expressing love explicitly, saying thanks and sorry
+This year, I learned quite a bit about long-term investments. Investments were not necessarily my priority before—but this year, I decided to learn some. They were not only about wealth-related investments, but also family-related investments.
+
+The latter is especially most important to me. Since I got married, we [me with mywife] tried to establish a healthy family's foundations, such as saying sorry when we make a mistake, being thankful when one does a favor, and explicitly expressing our love for each other.
+
+Apoligizing when we make a mistake and thanking others who do us favor(s) are important, because we need to make that our habit. This hopefully will make us a role model for our children. I think it is essential for children to be able to look up to their parents. If parents have good attitudes, their children will most likely follow their footsteps.
+
+As for expressing our love for each other, I want our children to also know what "love" is. I was raised in a family where "love" was really subtle. This caused the boundary between kindness and dictatorship to blur. I want to teach my children what "love" is. I want them to see how close I am with them, I want to hug them when they go outside and when they get back [considering health and pandemic situations, of course]. I want it to be a routine instead of events-driven. I want our family in the future to be a happy family.
 
 ## Top 3 Struggles
 
