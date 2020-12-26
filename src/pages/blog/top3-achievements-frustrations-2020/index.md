@@ -52,6 +52,8 @@ As for expressing our love for each other, I want our children to also know what
 
 ## Top 3 Struggles
 
+Of course there would be no year without struggles as long as I am still breathing. Without further ado, here are the top 3 struggles for me this year.
+
 ### COVID-19
 
 FullStackDay cancelled
