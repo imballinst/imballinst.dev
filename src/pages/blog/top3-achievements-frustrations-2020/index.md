@@ -32,9 +32,9 @@ There were probably 4 times where I was trapped within a vortex of myself. The f
 
 It turned out to be a quite pleasant one. I binned some of my psychological garbages and learned some good teachings. The therapist said that I was stuck in my own thoughts because I didn't see that coming. To prevent that, I should be more aware of myself and feel if the "darkness" starts to creep up on me. In addition, she [the therapist] also taught me some meditation techniques, which are incredibly useful until now.
 
-The second one came around 1 month before my marriage. I laid on the floor the whole night until my body felt numb. I didn't check on my phone, I didn't eat. At 3AM the next day, I thought about my soon-to-be-wife (at that moment)—we were so close of being together and I didn't want to make her feel sad (although I already did by not replying to her messages). Then, I decided to order a food online to fill out my empty stomach. I didn't do well in my job for 2-3 days since the incident, but I regained my pace eventually.
+The second one came around June (1 month before my wedding). I laid on the floor the whole night until my body felt numb. I didn't check on my phone, I didn't eat. At 3AM the next day, I thought about my soon-to-be-wife (at that moment)—we were so close of being together and I didn't want to make her feel sad (although I already did by not replying to her messages). Then, I decided to order a food online to fill out my empty stomach. I didn't do well in my job for 2-3 days since the incident, but I regained my pace eventually.
 
-The third attack came around 1–2 months after my marriage. I remembeer back then I just laid on a carpet breathing, but devoid of life. I looked up as I saw the ceiling and my wife crying. We were (and still are) living in an apartment and my mind was conflicting on whether I should rush to the balcony and jump or not. But again, my feelings for my wife triumphed and we spent the rest of the night comforting each other.
+The third attack came around Septembeer. I remember back then I just laid on a carpet breathing, but devoid of life. I looked up as I saw the ceiling and my wife crying. We were (and still are) living in an apartment and my mind was conflicting on whether I should rush to the balcony and jump or not. But again, my feelings for my wife triumphed and we spent the rest of the night comforting each other.
 
 The fourth attack was probably the weakest compared to the previous ones. I was quite stressed at that time and we decided to go along to buy some groceries. My mind was fighting between living and intentionally walking on the bus corridor, so I bought 2 sacks of rice (5 kilograms each) and I carried them to the apartment (yes, we usually walk to the nearest supermarket). This was because when I am emotionally unstable, I stabilize myself by "draining" my own energy, hoping that I don't have any energy left to harm myself. It worked and we arrived safely in our apartment.
 
@@ -56,17 +56,23 @@ Of course there would be no year without struggles as long as I am still breathi
 
 ### COVID-19
 
-FullStackDay cancelled
-Can't really get out in peace
-People were on edge, especially in my family
+Yes, I think this hit almost everyone this year. This virus was really troublesome and still is. How can it not be? To prevent the virus from spreading, people were told to stay home, companies were told to switch to remote, and if we must to go outside, we should use face masks and keep our distances from each other.
+
+For me, one of the biggest letdowns was Full Stack Day 2020 in New Zealand getting cancelled. It was my first international, offline conference ever and I was really looking forward to it. However, COVID happened and I decided to not go because I might endanger my family and our wedding preparations.
+
+This COVID-19 also spread fear in my family, in particular my mother. There was a time where every day, I would get 3-4 news about this virus and I was so done at that time. I already knew the virus was dangerous and I stayed home everyday because my job was remote, so I did/do not get why would my mother insisted shoveling all these information to me. I was really burned out from the news at one point and I made a decision to mute all keywords related to COVID-19 in Twitter.
+
+Of course this virus also impacted our wedding plans. Initially, we wanted to hold a wedding reception. However, with this virus, we needed to change plans. Again, the hardest part was merging two families and making sure that both had their suggestions considered. We arrived at the decision that we would only invite close relatives to the reception in my in-laws' house, as 30 was the maximum number of attendees.
 
 ### Family Issues
 
-Before marriage: trying to "remedy" relationship between father and mother which definitely didn't work
-Marriage preparation: being constantly compared with older brother which had issues in his marriage
-Marriage preparation: the hardship of merging two families
-Marriage preparation: even choosing accomodation was hard 😅
-Being bought a house by parents: more responsibilities, more taxes, less freedom to live wherever we want, and even then the house's blueprint was forced to be created based on "fortune telling". My parents' house was built based on that and look at their family. Yes, the family is wealthy, but they are not happy. Look what happened to my brothers emotionally.
+Oh, yes. My life always revolves around family issues. In this post, I am going to focus on my wedding preparations only, as it was one of the big things happening in this year for me.
+
+Last year, I came back to Indonesia from Australia as [I finished my Masters degree](https://peepohappy.id/blog/my-thought-pursuing-higher-study). I steeled myself as I took a risk to continueu working remotely from my parents' house in Jakarta. I was hoping to somewhat remedy the relationship between my father and mother, which I think was not healthy. How naïve I was to be so optimistic about it. Not only it didn't work, but it also caused some mental toll on me as well.
+
+Aside from COVID-19 issues, preceding family issues also didn't help in smoothing our wedding plans. My brother had issues in his marriage, so every time I did something that against my mother's thinking, I would always be compared with my brother. She said that I would fail just like my brother if I kept my behavior. The truth is, I am NOT my brother and I knew it. On another occasion, I was _ordered_ to listen to [ulamas](https://en.wikipedia.org/wiki/Ulama) because I had different opinions with my mother. It turned out that the ulamas' opinions were the same with me. However, I was told that they [the ulamas] did not understand the religion. Wow! The constant judging was really getting on my nerves. Even choosing accommodations was hard and full of drama. I was glad there were no issues during the event.
+
+These series of events further solidify my will to create a better family.
 
 ### People Saying that "Relationship between happiness and health is still unclear"
 
@@ -79,3 +85,7 @@ It is even worse because he [and the group] didn't add the suggestion to always 
 If you know why certain people of certain families want to go outside to find happines, it's probably because they are trying to ESCAPE from their family. If you can stay happy and sane in your home, then that's good, I take it that you have a good life [and maybe a loving family]. But please, try to be considerate of people who don't have that privilege.
 
 I suffered 3 bad fevers (39°+) because I was stressed out and unhappy (1 in 2013, 2 in 2020). Those were the worst sicknesses that I ever had because of emotional issues. In other days, usually I just became dizzy, had a headache, or had trouble breathing.
+
+## Conclusion
+
+...TBD
