@@ -62,7 +62,7 @@ For me, one of the biggest letdowns was Full Stack Day 2020 in New Zealand getti
 
 This COVID-19 also spread fear in my family, in particular my mother. There was a time where every day, I would get 3-4 news about this virus and I was so done at that time. I already knew the virus was dangerous and I stayed home everyday because my job was remote, so I did/do not get why would my mother insisted shoveling all these information to me. I was really burned out from the news at one point and I made a decision to mute all keywords related to COVID-19 in Twitter.
 
-Of course this virus also impacted our wedding plans. Initially, we wanted to hold a wedding reception. However, with this virus, we needed to change plans. Again, the hardest part was merging two families and making sure that both had their suggestions considered. We arrived at the decision that we would only invite close relatives to the reception in my in-laws' house, as 30 was the maximum number of attendees.
+Of course this virus also impacted our wedding plans. Initially, we wanted to hold a wedding reception. However, with this virus, we needed to change plans. Again, the hardest part was merging two families and making sure that both had their suggestions considered. Thankfully, we arrived at the decision that we would only invite close relatives to the reception in my in-laws' house, as 30 was the maximum number of attendees.
 
 ### Family Issues
 
@@ -84,8 +84,10 @@ It is even worse because he [and the group] didn't add the suggestion to always 
 
 If you know why certain people of certain families want to go outside to find happines, it's probably because they are trying to ESCAPE from their family. If you can stay happy and sane in your home, then that's good, I take it that you have a good life [and maybe a loving family]. But please, try to be considerate of people who don't have that privilege.
 
-I suffered 3 bad fevers (39°+) because I was stressed out and unhappy (1 in 2013, 2 in 2020). Those were the worst sicknesses that I ever had because of emotional issues. In other days, usually I just became dizzy, had a headache, or had trouble breathing.
+I suffered 3 bad fevers (39°+) because I was stressed out and unhappy (1 in 2013, 2 in 2020). Those were the worst sicknesses that I ever had because of emotional issues. In other days, usually I just became dizzy, had a headache, or had trouble breathing. I don't know whether there are other people out there whose health get degraded when they are emotionally shaken, but one thing for sure, please assess your audience. Try to understand who you are talking to, because it will help us to deliver a more appropriate message with the same objective.
 
 ## Conclusion
 
-...TBD
+This is my first time writing reflection of a year. Some parts were really hard to write as I needed to dig what were buried. However, it gave me the opportunity to look back. Maybe what I did before wasn't right and I didn't realize it. By writing this post, I get the chance to retrospect and see whether what I did was the least destructive one or not.
+
+Lastly, I hope this post is useful for you. If there are inappropriate or offensive things, please let me know. Thank you for reading!
