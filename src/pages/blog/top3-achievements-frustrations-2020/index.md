@@ -5,7 +5,7 @@ date: 2020-12-31T04:28:41.094Z
 featuredpost: false
 featuredimage: images/lobostudio-hamburg-tPIHxXNbHh4-unsplash.jpg
 visibility: public
-description: I ranked my top 3 achievements and struggles as I took a reflection of this rollercoaster year.
+description: I ranked my top 3 achievements and struggles as I reflected on this rollercoaster year.
 tags:
   - life
 ---
