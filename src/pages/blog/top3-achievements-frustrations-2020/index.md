@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: My Top 3 Achievements and Struggles in 2020
-date: 2020-04-25T14:39:06.797Z
+date: 2020-12-31T04:28:41.094Z
 featuredpost: false
 featuredimage: images/lobostudio-hamburg-tPIHxXNbHh4-unsplash.jpg
 visibility: public
