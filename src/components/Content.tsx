@@ -9,11 +9,12 @@ const ContentDiv = styled.div`
   & figure {
     margin-left: ${peepoTheme.spacing(-4)};
     margin-right: ${peepoTheme.spacing(-4)};
+    margin-bottom: ${peepoTheme.spacing(4)};
   }
   & hr {
     margin-bottom: ${peepoTheme.spacing(4)};
   }
-  & p,
+  & p:not(:empty),
   & .gatsby-highlight {
     &:not(:last-child) {
       margin-bottom: ${peepoTheme.spacing(4)};
@@ -32,6 +33,10 @@ const ContentDiv = styled.div`
       text-align: center;
       white-space: normal;
       word-wrap: break-word;
+
+      & > .text-base {
+        font-size: 0.875rem !important;
+      }
     }
   }
   ol,
