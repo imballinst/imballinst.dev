@@ -84,7 +84,7 @@ It started when a public figure said that if people are happy [by going out], th
 
 If you ever live in the same house with someone who abuses you emotionally [or even physically] a lot, you will be afraid this kind of information reaches that person. They will use it to their advantage, saying that _"There is no scientific evidence that happiness can affect health. Stop being so weak, my life in the past was harder than this"_.
 
-It is even worse because he [and the group] didn't suggest to always "be kind" to each other. I know it's common sense, but when you just said something like that, you'd want to emphasize something... _human_.
+It is even worse because he [and the group] didn't suggest to always "be kind" to each other. I know it's common sense, but when you just said something like that, you'd want to emphasize something that is... _humanizing_.
 
 If you know why certain people of certain families want to go outside to find happiness, it's probably because they are trying to ESCAPE from their family. If you can stay happy and sane in your home, then that's good, I take it that you have a good life [and maybe a loving family]. But please, try to be considerate of people who don't have that privilege. Don't act like there are no dysfunctional families in Indonesia.
 
