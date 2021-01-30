@@ -14,6 +14,7 @@ const variantClasses = {
 
 type TypographyProps = {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body';
+  textSize?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body';
   className?: string;
   children: ReactNode;
 };
@@ -26,9 +27,14 @@ function getComponent(variant: TypographyProps['variant']) {
   return variant;
 }
 
-export function Typography({ variant, className, children }: TypographyProps) {
+export function Typography({
+  variant,
+  textSize = variant,
+  className,
+  children
+}: TypographyProps) {
   const Component = getComponent(variant);
-  const classNames = cls(variantClasses[variant], className);
+  const classNames = cls(variantClasses[textSize], className);
 
   return <Component className={classNames}>{children}</Component>;
 }
