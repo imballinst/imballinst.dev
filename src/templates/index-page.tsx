@@ -1,132 +1,62 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout, { SectionWrapper } from '../components/Layout';
+import Layout from '../components/Layout';
 import { PeepoLink } from '../components/Links';
 import { Typography } from '../components/Typography';
 import { Paper } from '../components/Paper';
-import { ListBlogItem, ListBlogItemType } from '../components/Blog/Posts';
-import styled from '@emotion/styled';
-import { peepoTheme } from '../theme';
-
-type IndexContent = {
-  frontmatter: {
-    title: string;
-    heading: string;
-    readBlogText: string;
-  };
-};
 
 type IndexPageTemplateProps = {
-  indexContent: IndexContent;
-  latestPosts: ListBlogItemType[];
+  title: string;
+  heading: string;
+  readBlogText: string;
 };
-
-// Alternate wrapper for ListBlogItemType.
-// The default of its wrapper is for column listing. Here, we need row listing.
-const StyledPaper = styled(Paper)`
-  @media (max-width: 1024px) {
-    &:not(:first-of-type) {
-      margin-top: ${peepoTheme.spacing(4)};
-    }
-  }
-
-  @media (min-width: 1024px) {
-    &:not(:first-of-type) {
-      margin-left: ${peepoTheme.spacing(4)};
-    }
-  }
-`;
-
-const PostRootElement = ({ children }: { children: ReactNode }) => (
-  <StyledPaper className="w-full lg:w-1/3">{children}</StyledPaper>
-);
-
-const PostTitleElement = styled.div`
-  margin-top: 0.5rem;
-
-  @media (min-width: 1024px) {
-    height: 48px;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-  }
-`;
 
 export const IndexPageTemplate = ({
-  indexContent,
-  latestPosts
-}: IndexPageTemplateProps) => {
-  const { title, heading } = indexContent.frontmatter;
-
-  return (
-    <SectionWrapper className="flex flex-col align-center">
-      <Typography variant="h3" className="font-bold leading-none">
-        Latest Blog Posts
+  title,
+  heading,
+  readBlogText
+}: IndexPageTemplateProps) => (
+  <div className="flex flex-col align-center mt-24">
+    <Paper>
+      <Typography variant="h1" className="text-center leading-none mb-4">
+        {title}
       </Typography>
-
-      <div className="flex flex-row flex-wrap lg:flex-no-wrap mt-2">
-        {latestPosts.map(post => (
-          <ListBlogItem
-            post={post}
-            WrapperComponents={{
-              Root: PostRootElement,
-              Title: PostTitleElement
-            }}
-          />
-        ))}
-      </div>
-    </SectionWrapper>
-  );
-};
+      <Typography variant="h3" className="text-center">
+        {heading}
+      </Typography>
+      <PeepoLink
+        fullWidth
+        to="/blog"
+        withButton
+        size="medium"
+        className="mt-12"
+      >
+        {readBlogText}
+      </PeepoLink>
+    </Paper>
+  </div>
+);
 
 type IndexPageProps = {
   data: {
-    markdownRemark: IndexContent;
-    allMarkdownRemark: {
-      edges: {
-        node: ListBlogItemType;
-      }[];
+    markdownRemark: {
+      frontmatter: IndexPageTemplateProps;
     };
   };
 };
 
-const HomeBanner = styled(Paper)`
-  margin-top: ${peepoTheme.topbarHeight}px;
-`;
-
-const HomeBannerContent = styled.div`
-  width: ${peepoTheme.maxOptimalWidth};
-`;
-
 const IndexPage = ({ data }: IndexPageProps) => {
-  const { markdownRemark, allMarkdownRemark } = data;
-  const latestPosts = allMarkdownRemark.edges.map(edge => edge.node);
+  const { frontmatter } = data.markdownRemark;
 
   return (
-    <>
-      <HomeBanner
-        elevation={0}
-        className={`${peepoTheme.pageHorizontalSpacing} flex flex-row justify-center`}
-      >
-        <HomeBannerContent>
-          <Typography variant="body" textSize="h1" className="leading-none">
-            {markdownRemark.frontmatter.title}
-          </Typography>
-          <Typography variant="body" textSize="h3">
-            {markdownRemark.frontmatter.heading}
-          </Typography>
-        </HomeBannerContent>
-      </HomeBanner>
-      <Layout noMargin>
-        <IndexPageTemplate
-          indexContent={markdownRemark}
-          latestPosts={latestPosts}
-        />
-      </Layout>
-    </>
+    <Layout>
+      <IndexPageTemplate
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        readBlogText={frontmatter.readBlogText}
+      />
+    </Layout>
   );
 };
 
@@ -139,37 +69,6 @@ export const pageQuery = graphql`
         title
         heading
         readBlogText
-      }
-    }
-    allMarkdownRemark(
-      limit: 3
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: {
-        frontmatter: {
-          templateKey: { eq: "blog-post" }
-          visibility: { eq: "public" }
-        }
-      }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            description
-            date(formatString: "MMMM DD, YYYY")
-            featuredimage {
-              childImageSharp {
-                fluid(maxWidth: 300, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
       }
     }
   }
