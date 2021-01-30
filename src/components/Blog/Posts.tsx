@@ -1,10 +1,10 @@
 // TODO: move this to under src/pages to take advantage of https://www.gatsbyjs.org/docs/graphql-api/#pagequery.
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import styled, { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
 
 import PreviewCompatibleImage, { Fluid } from '../PreviewCompatibleImage';
-import { Paper, PaperProps } from '../Paper';
+import { Paper } from '../Paper';
 import { peepoTheme } from '../../theme';
 import { cls } from '../../helpers/styles';
 import { PeepoLink } from '../Links';
@@ -42,32 +42,14 @@ export type ListBlogItemType = {
 };
 
 const StyledPaper = styled(Paper)`
-  flex-direction: column;
-
   &:not(:first-of-type) {
     margin-top: ${peepoTheme.spacing(8)};
   }
 `;
 
-const DefaultTitleElement = ({ children }: { children: ReactNode }) => (
-  <div className="block w-full mt-2">{children}</div>
-);
-
-export function ListBlogItem({
-  post,
-  WrapperComponents
-}: {
-  post: ListBlogItemType;
-  WrapperComponents?: {
-    Root?: any;
-    Title?: any;
-  };
-}) {
-  const { Root = StyledPaper, Title = DefaultTitleElement } =
-    WrapperComponents || {};
-
+export function ListBlogItem({ post }: { post: ListBlogItemType }) {
   return (
-    <Root>
+    <StyledPaper>
       <article
         className={cls({
           featured: post.frontmatter.featuredpost
@@ -86,7 +68,7 @@ export function ListBlogItem({
                 }}
               />
             ) : null}
-            <Title>{post.frontmatter.title}</Title>
+            <div className="block w-full mt-2">{post.frontmatter.title}</div>
           </PeepoLink>
           <div className="block w-full">
             <span className={`${peepoTheme.textSizes.small} text-gray-600`}>
@@ -98,7 +80,7 @@ export function ListBlogItem({
           <p>{post.frontmatter.description}</p>
         </div>
       </article>
-    </Root>
+    </StyledPaper>
   );
 }
 
