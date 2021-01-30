@@ -63,35 +63,20 @@ export const IndexPageTemplate = ({
 
   return (
     <SectionWrapper className="flex flex-col align-center">
-      <Paper>
-        <Typography
-          variant="body"
-          textSize="h1"
-          className="text-center leading-none mb-4"
-        >
-          {title}
-        </Typography>
-        <Typography variant="body" textSize="h3" className="text-center">
-          {heading}
-        </Typography>
-      </Paper>
+      <Typography variant="h3" className="font-bold leading-none">
+        Latest Blog Posts
+      </Typography>
 
-      <div className="mt-8">
-        <Typography variant="h3" className="font-bold leading-none">
-          Latest Blog Posts
-        </Typography>
-
-        <div className="flex flex-row flex-wrap lg:flex-no-wrap mt-2">
-          {latestPosts.map(post => (
-            <ListBlogItem
-              post={post}
-              WrapperComponents={{
-                Root: PostRootElement,
-                Title: PostTitleElement
-              }}
-            />
-          ))}
-        </div>
+      <div className="flex flex-row flex-wrap lg:flex-no-wrap mt-2">
+        {latestPosts.map(post => (
+          <ListBlogItem
+            post={post}
+            WrapperComponents={{
+              Root: PostRootElement,
+              Title: PostTitleElement
+            }}
+          />
+        ))}
       </div>
     </SectionWrapper>
   );
@@ -108,17 +93,40 @@ type IndexPageProps = {
   };
 };
 
+const HomeBanner = styled(Paper)`
+  margin-top: ${peepoTheme.topbarHeight}px;
+`;
+
+const HomeBannerContent = styled.div`
+  width: ${peepoTheme.maxOptimalWidth};
+`;
+
 const IndexPage = ({ data }: IndexPageProps) => {
   const { markdownRemark, allMarkdownRemark } = data;
   const latestPosts = allMarkdownRemark.edges.map(edge => edge.node);
 
   return (
-    <Layout>
-      <IndexPageTemplate
-        indexContent={markdownRemark}
-        latestPosts={latestPosts}
-      />
-    </Layout>
+    <>
+      <HomeBanner
+        elevation={0}
+        className={`${peepoTheme.pageHorizontalSpacing} flex flex-row justify-center`}
+      >
+        <HomeBannerContent>
+          <Typography variant="body" textSize="h1" className="leading-none">
+            {markdownRemark.frontmatter.title}
+          </Typography>
+          <Typography variant="body" textSize="h3">
+            {markdownRemark.frontmatter.heading}
+          </Typography>
+        </HomeBannerContent>
+      </HomeBanner>
+      <Layout noMargin>
+        <IndexPageTemplate
+          indexContent={markdownRemark}
+          latestPosts={latestPosts}
+        />
+      </Layout>
+    </>
   );
 };
 
