@@ -53,7 +53,9 @@ exports.createPages = ({ actions, graphql }) => {
       .sort((a, b) => {
         const date1 = new Date(a.node.frontmatter.date);
         const date2 = new Date(b.node.frontmatter.date);
-
+        console.log(a.node.fields.slug, date1);
+        console.log(b.node.fields.slug, date2);
+        console.log('-----------------------');
         return date2.valueOf() - date1.valueOf();
       });
     console.log(latestBlogPosts.map(el => el.node.fields.slug));
