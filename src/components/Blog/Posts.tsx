@@ -42,6 +42,8 @@ export type ListBlogItemType = {
 };
 
 const StyledPaper = styled(Paper)`
+  flex-direction: column;
+
   &:not(:first-of-type) {
     margin-top: ${peepoTheme.spacing(8)};
   }
