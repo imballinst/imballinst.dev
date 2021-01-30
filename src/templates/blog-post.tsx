@@ -32,7 +32,7 @@ export const BlogPostTemplate = ({
 
   return (
     <SectionWrapper>
-      <Paper>
+      <Paper className="flex-col">
         {helmet || ''}
         <Typography variant="h1" className="leading-none">
           {title}
