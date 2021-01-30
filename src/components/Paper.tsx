@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { cls } from '../helpers/styles';
 
-type PaperProps = {
+export type PaperProps = {
   children: ReactNode;
   className?: string;
   Component?: 'div' | 'ol';
