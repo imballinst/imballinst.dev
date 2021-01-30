@@ -48,26 +48,25 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
 
-    // TODO(imballinst): enable when we are sure this does not break the other stuff, e.g. images.
     // Add `/latest` redirect link.
-    // const latestBlogPost = posts
-    //   .filter(post => post.node.frontmatter.templateKey === 'blog-post')
-    //   .sort((a, b) => {
-    //     const date1 = new Date(a.node.frontmatter.date);
-    //     const date2 = new Date(b.node.frontmatter.date);
+    const latestBlogPost = posts
+      .filter(post => post.node.frontmatter.templateKey === 'blog-post')
+      .sort((a, b) => {
+        const date1 = new Date(a.node.frontmatter.date);
+        const date2 = new Date(b.node.frontmatter.date);
 
-    //     return date2.valueOf() - date1.valueOf();
-    //   })[0];
+        return date2.valueOf() - date1.valueOf();
+      })[0];
 
-    // createPage({
-    //   path: '/latest-post',
-    //   tags: latestBlogPost.node.frontmatter.tags,
-    //   component: path.resolve(`src/templates/latest-blog-post.tsx`),
-    //   // additional data can be passed via context
-    //   context: {
-    //     id: latestBlogPost.node.id
-    //   }
-    // });
+    createPage({
+      path: '/latest-post',
+      tags: latestBlogPost.node.frontmatter.tags,
+      component: path.resolve(`src/templates/latest-blog-post.tsx`),
+      // additional data can be passed via context
+      context: {
+        id: latestBlogPost.node.id
+      }
+    });
   });
 };
 

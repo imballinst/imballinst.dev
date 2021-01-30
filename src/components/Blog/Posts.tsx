@@ -1,10 +1,10 @@
 // TODO: move this to under src/pages to take advantage of https://www.gatsbyjs.org/docs/graphql-api/#pagequery.
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import styled from '@emotion/styled';
+import styled, { StyledComponent } from '@emotion/styled';
 
 import PreviewCompatibleImage, { Fluid } from '../PreviewCompatibleImage';
-import { Paper } from '../Paper';
+import { Paper, PaperProps } from '../Paper';
 import { peepoTheme } from '../../theme';
 import { cls } from '../../helpers/styles';
 import { PeepoLink } from '../Links';
@@ -42,14 +42,32 @@ export type ListBlogItemType = {
 };
 
 const StyledPaper = styled(Paper)`
+  flex-direction: column;
+
   &:not(:first-of-type) {
     margin-top: ${peepoTheme.spacing(8)};
   }
 `;
 
-export function ListBlogItem({ post }: { post: ListBlogItemType }) {
+const DefaultTitleElement = ({ children }: { children: ReactNode }) => (
+  <div className="block w-full mt-2">{children}</div>
+);
+
+export function ListBlogItem({
+  post,
+  WrapperComponents
+}: {
+  post: ListBlogItemType;
+  WrapperComponents?: {
+    Root?: any;
+    Title?: any;
+  };
+}) {
+  const { Root = StyledPaper, Title = DefaultTitleElement } =
+    WrapperComponents || {};
+
   return (
-    <StyledPaper>
+    <Root>
       <article
         className={cls({
           featured: post.frontmatter.featuredpost
@@ -68,7 +86,7 @@ export function ListBlogItem({ post }: { post: ListBlogItemType }) {
                 }}
               />
             ) : null}
-            <div className="block w-full mt-2">{post.frontmatter.title}</div>
+            <Title>{post.frontmatter.title}</Title>
           </PeepoLink>
           <div className="block w-full">
             <span className={`${peepoTheme.textSizes.small} text-gray-600`}>
@@ -80,7 +98,7 @@ export function ListBlogItem({ post }: { post: ListBlogItemType }) {
           <p>{post.frontmatter.description}</p>
         </div>
       </article>
-    </StyledPaper>
+    </Root>
   );
 }
 
