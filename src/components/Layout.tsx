@@ -21,7 +21,8 @@ export const SectionWrapper = styled.section`
 // Layout.
 const Content = styled.div`
   height: calc(100vh - ${peepoTheme.topbarHeight}px - 2rem);
-  margin-top: ${peepoTheme.topbarHeight}px;
+  margin-top: ${(props: Props) =>
+    props.noMargin ? 0 : peepoTheme.topbarHeight}px;
 
   & > * {
     width: 100%;
@@ -39,14 +40,16 @@ type Props = {
   children: ReactNode;
   seoTitle?: string;
   noPadding?: boolean;
+  noMargin?: boolean;
 };
 
-function TemplateWrapper({ children, seoTitle, noPadding }: Props) {
+function TemplateWrapper({ children, seoTitle, noPadding, noMargin }: Props) {
   return (
     <>
       <SEO title={seoTitle} />
       <Navbar />
       <Content
+        noMargin={noMargin}
         className={cls(
           `${peepoTheme.pageVerticalSpacing} ${peepoTheme.pageHorizontalSpacing} flex flex-row justify-center`,
           {

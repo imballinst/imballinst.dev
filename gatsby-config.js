@@ -216,14 +216,7 @@ module.exports = {
         cache_busting_mode: 'none'
       }
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        workboxConfig: {
-          globPatterns: ['**/*']
-        }
-      }
-    },
+    'gatsby-plugin-remove-serviceworker',
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {

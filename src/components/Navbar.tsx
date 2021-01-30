@@ -33,7 +33,7 @@ function NavbarItem({
   return (
     <div className="navbar-item relative">
       <Link
-        className={`${peepoTheme.navbarLinkVariant(isActive)} py-4 px-1 block`}
+        className={`${peepoTheme.navbarLinkVariant(isActive)} py-4 block`}
         to={to}
       >
         {children}
@@ -76,7 +76,7 @@ function NavbarItemExternal({
 // Navbar.
 const NavbarItemSpacer = styled.div`
   & > * + * {
-    margin-left: ${peepoTheme.spacing(2)};
+    margin-left: ${peepoTheme.spacing(4)};
   }
 `;
 
