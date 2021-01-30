@@ -49,17 +49,14 @@ exports.createPages = ({ actions, graphql }) => {
     });
 
     // Add `/latest` redirect link.
-    const latestBlogPosts = posts
+    const latestBlogPost = posts
       .filter(post => post.node.frontmatter.templateKey === 'blog-post')
       .sort((a, b) => {
         const date1 = new Date(a.node.frontmatter.date);
         const date2 = new Date(b.node.frontmatter.date);
-        console.log(a.node.fields.slug, date1);
-        console.log(b.node.fields.slug, date2);
-        console.log('-----------------------');
+
         return date2.valueOf() - date1.valueOf();
-      });
-    console.log(latestBlogPosts.map(el => el.node.fields.slug));
+      })[0];
 
     createPage({
       path: '/latest-post',
