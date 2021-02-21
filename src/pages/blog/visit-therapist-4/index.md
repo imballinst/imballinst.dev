@@ -10,7 +10,7 @@ tags:
   - life
 ---
 
-_"Woah, woah, woah, hold on! This is the first post about therapist visit and you are telling me that this is part 4? Where are the previous 3 parts?"_ Unfortunately, for the first therapist visit, I was really all over the place. According to the therapist, my stories back then were unordered [timeline-wise], which is true, because I didn't know where to start. For the second and third visit, I did have a note but I forget where did I put it... so, yeah. Anyway!
+_"Woah, woah, woah, hold on! This is the first post about therapist visit and you are telling me that this is part 4? Where are the previous 3 parts?"_ Unfortunately, for the first therapist visit, I was really all over the place. According to my therapist, my stories back then were unordered [timeline-wise], which is true, because I didn't know where to start. For the second and third visit, I did have a note but I forget where did I put it... so, yeah. Anyway!
 
 ## Topics
 
@@ -24,7 +24,9 @@ Two weeks since, I was still hesitating to go to hospital because of the pandemi
 
 <!-- Give picture here for the lab test. -->
 
-With regards to this, the therapist said something about the relation between stress and platelet count. She said that she also faced the same thing in her life. In February, two years in a row, she was sick but the doctors couldn't figure out what the sickness was. What she knew was that her platelet count was lower than usual, but it was the same like me—neither it was typhus or dengue fever.
+---
+
+With regards to this, my therapist said something about the relation between stress and platelet count. She said that she also faced the same thing in her life. In February, two years in a row, she was sick but the doctors couldn't figure out what the sickness was. What she knew was that her platelet count was lower than usual, but it was the same like me—neither it was typhus or dengue fever.
 
 She figured out that during these times, her life was quite stressful. After that, in a conference related to psychology, she said that she met with Carl Jung's grandchild [if I remember correctly] and they told her that mental stress can impact blood cells, in particular platelets. So, probably that was the case for me twice last year (February and October).
 
@@ -92,15 +94,31 @@ I turned off my phone for 1 day. I could only remember having "numb" feeling the
 
 After that, I tried to turn my phone back on and recognized that my mother had created a group that consisted of her, me, my wife, my oldest brother and his wife, and my brother (who was living in Japan). The group's purpose was mostly to talk about the condition of my father and insurance stuff. I was mostly just silent reading the group. Sometimes, I needed help from my wife to "decipher" what was going on in the group because my brain was still screwed up.
 
-Fast forward few days later, my father was transported to another hospital that had an ICU room available (there were no available ICU rooms in the current hospital where he stayed in the emergency room). After that, we could relax a bit, because my father would receive a proper care. At this moment, I and my wife decided to visit the therapist.
+Fast forward few days later, my father was transported to another hospital that had an ICU room available (there were no available ICU rooms in the current hospital where he stayed in the emergency room). After that, we could relax a bit, because my father would receive a proper care. At this moment, I and my wife decided it was the right time to visit the therapist.
 
-<!-- Give things that we have learned from the therapist. -->
+---
 
-## Some "Techniques" to Combat Anxiety/Panic Attacks
+My therapist said that I was conflicted when I learned my father was positive because there wasn't enough emotional bond between me and him... which was true. Sometimes, I hoped my father would be assertive towards my mother when she did something wrong. That wasn't the case, he let things go on, he told us to keep our [me and my brothers] mouths shut. As such, there were "unresolved feelings" inside us... or at least, inside myself.
+
+I also felt as if my father and my oldest brother were lying to me. Before my marriage, they said something along the lines, "After you get married, you will be free". However, we do not really live "free". We still feel my mother's grasp. Even she forced to cancel the apartment unit that I had rented in favor of the apartment unit that she chose... just because its rate was cheaper. Yes, it is cheaper, but its interior is inferior than the one that I chose. The stove's height is really low, as well as the kitchen sink. Every time I did the dishes, my waist always hurt because I needed to bend my back. Still, my father did nothing.
+
+Freedom is really all about the parenting standards, my therapist said, and is quite common in Indonesia. For a child to be free from their parents' dictation, they must break through their parents' standards, which _can_ include: having more wealth than them, making a living for them, having more children than them, having higher degree than them, and many others, perhaps.
+
+As with my mother restricting my father from his phone, my therapist said that COVID-19 patients, to the contrary, should be allowed to use their phone—though with care. She said that COVID-19 patients are really having a tough time. They are sick and people can't visit them. Phone is the only thing that makes them reachable and in turn, make them feel "less alone".
+
+## Some "techniques" and/or "tools" that I learned
+
+- Mindfulness
+- Usage of essential oils
+- Narrating (from 3rd PoV, a bit different from journaling)
+- Learn to be assertive
+- Facing guilt is worse than facing hardship
+- Set boundaries
+- Paraphrasing
 
 ## About my father
 
-Since admitted to the ICU room, everything went upwards. We could ask about his condition from the nurse via phone, and I didn't realize how happy I was when I could hear him talk normally again when he was permitted to receive phone calls inside the room.
+Since he was admitted to the ICU room, everything went better. We could ask about his condition from the nurse via phone, and I didn't realize how happy I was when I could hear him talk normally again when he was permitted to receive phone calls inside the room.
 
 When my father was tested negative, the hospital gave him the green light to go back home to self-isolate and recover. However, one day after, he and my mother had a debate. My mother thought that he shouldn't use his phone because it would cause him stress. My father thought otherwise—he needed it to have "fun". My mother threatened: if he wouldn't give up his phone, then my mother would go. My father didn't want to give up his phone, and so my mother went. My brother (who was already living in his own home), came to pick him up so his family could take care of him.
 
