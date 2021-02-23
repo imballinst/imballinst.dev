@@ -88,6 +88,8 @@ Yes, speaking of which, during my panic attack on January 11, she also sent me t
 
 Guess what? The next night, from my mother's story, his body temperature rose to 37°C. The next day, he was brought to the emergency room in a hospital. The doctors/nurses did tests (including roentgen) and showed us the result. What I could say is, what people posted on social media weren't lies. There were a lot of "white stuff" on my father's lungs. His blood-oxygen saturation was around 70% when he arrived, so he needed some machines to help him breath. We could only pray from that moment, and unfortunately, I went home with my mother along with my father's driver. Along the road, she quoted again this "Doctor Ronal" and it made me sick. I just stayed quiet and hoped I wouldn't lose my temper.
 
+This was why I was really mad when there was a doctor who said that [there relationship between health and happiness aren't confirmed scientifically yet](https://www.instagram.com/p/CFEyUDcnstM/). If what he said reached my mother, who knew what she could have done. Maybe she would have treated my father worse, using the doctor's argument as an excuse.
+
 The next day, my brother asked me to go to my parents' house to get my father's luggage (which he prepared the day before going to the emergency room) and his phone. However, when I told my mother so, my mother said lines like, "Why do we need his phone? Your brother is just the same like your father, he won't listen to me. He's heading towards insolence". The "insolence" word was what triggered my panic attack, again. I had been threatened with "insolence" words in the past, so reading that word again from her really spiked my stress levels up.
 
 I turned off my phone for 1 day. I could only remember having "numb" feeling the whole day. I didn't feel like living.
@@ -108,17 +110,19 @@ As with my mother restricting my father from his phone, my therapist said that C
 
 ## Some "techniques" and/or "tools" that I learned
 
-- Mindfulness
-- Usage of essential oils
-- Narrating (from 3rd PoV, a bit different from journaling)
-- Learn to be assertive
-- Facing guilt is worse than facing hardship
-- Set boundaries
-- Paraphrasing
+On top of getting explanation on my screw ups, I also learned about things that could possibly help me when facing similar challenges in the future.
 
-## About my father
+1. **Mindfulness**: This is mostly about knowing my limit. I should be aware when I'm starting to get stressed. After I realize that it [the anxiety thing] is happening, as soon as possible I need to find/do things that could drop my stress levels.
+1. **Usage of essential oils**: I think this is a good suggestion and there's a supporting argument in [this article](https://www.healthline.com/health/anxiety/essential-oils-for-anxiety) as well, _"Aromatherapy is often used as a natural remedy to relieve anxiety and stress"_. I and my wife have been using aromatherapy since I recovered from the viral infection in November, but we only use it in our bedroom. Probably it would be good if we use it in the living room as well because definitely anxiety and stress don't care about the location of occurrence.
+1. **Narrating from third point of view**: I thought this is similar to journaling—it is not. When we do journaling, we tend to do it from _our_ point of view. Narrating, on the other hand, is done in the third point of view. By doing this, we increase the chance to see the issue that we are currently facing _from the outside_, which eliminates some bits of subjectivity in the process.
+1. **Learn to be assertive**: The reason I was a silent reader in my family group was because my mother and my oldest brother were both dominant and I didn't want to take collateral damage from their debate (not to mention it was really tough to decipher their discussion). It is okay for me to declare that I don't want to be dragged into the middle of a "war".
+1. **Facing guilt is worse than facing hardship**: With the previous reason said, there are times where I should probably have voiced my arguments as well, for example, when I truly wanted to contribute but hesistated because of the heated discussion. My therapist told me that facing guilt is worse than facing hardship. This is really true, because I felt like I should contribute, but because I didn't want to be a victim of war, I shut myself up... at the cost of me second-guessed my decision the whole day.
+1. **Set boundaries**: Boundaries are really important. We should explicitly say "yes" to everything that is okay to us and "no" to everything that isn't. Sometimes, people without empathy think that silence means "yes"... which is often not the case. This also means there are things that we can't control. As such, we should focus on what we can control instead. For example, I can't control other people attitude, but I can control my reactions to their attitude. This is really hard for me because I think I'm a people pleaser type-of-person. Sometimes I do forget about it... and this is something that I need to work on.
+1. **Paraphrasing**: As I wrote in the previous point, I am this kind-of people pleaser. This makes me an easy victim for my mother. Whenever she bombarded me with gazillion of messages, I foolishly always tried to read and decipher them all. This led to me getting emotionally exhausted, because most of her messages have only one core... which was hidden—whether it was in the long wall of text, or it hadn't come out yet. [Paraphrasing](https://www.scribbr.com/citing-sources/how-to-paraphrase/) is a technique where we repeat what the others have said in our own words. From what my therapist told me, by paraphrasing, I can "pull out" the core of my mother's message without needing to think extra hard to decipher her message. Basically, just reply with her own words and let her re-think what she said before. Eventually, she will reach the core of the message herself.
 
-Since he was admitted to the ICU room, everything went better. We could ask about his condition from the nurse via phone, and I didn't realize how happy I was when I could hear him talk normally again when he was permitted to receive phone calls inside the room.
+## The aftermath
+
+Since my father was admitted to the ICU room, everything went better. We could ask about his condition from the nurse via phone, and I didn't realize how happy I was when I could hear him talk normally again when he was permitted to receive phone calls inside the room.
 
 When my father was tested negative, the hospital gave him the green light to go back home to self-isolate and recover. However, one day after, he and my mother had a debate. My mother thought that he shouldn't use his phone because it would cause him stress. My father thought otherwise—he needed it to have "fun". My mother threatened: if he wouldn't give up his phone, then my mother would go. My father didn't want to give up his phone, and so my mother went. My brother (who was already living in his own home), came to pick him up so his family could take care of him.
 
@@ -131,3 +135,5 @@ I had never cried so hard when I recited a verse of Quran during a prayer before
 At the moment, my father is recovering well. He said to me that what improves the recovery process is the peace of mind. Although my brother's house isn't as big as his, there is peace in it. Probably it's because there is no one to yell and dictate him around. Please include him in your prayers so that he can get back to his tip-top condition.
 
 ## Closing words
+
+Hopefully this post is useful. Whoever, whenever, wherever you are, if you are currently facing a hardship, I'm hoping that God makes it easier for you to face it. If you are currently living a good life, please don't forget to lend a hand to those who need it.
