@@ -21,6 +21,11 @@ const ContentDiv = styled.div`
     /* TODO(imballinst): refactor this. */
     padding: ${peepoTheme.spacing(4)} ${peepoTheme.spacing(4)}
       ${peepoTheme.spacing(4)} ${peepoTheme.spacing(8)};
+
+    & p::before,
+    & p::after {
+      content: '"';
+    }
   }
   & p:not(:empty),
   & .gatsby-highlight {
