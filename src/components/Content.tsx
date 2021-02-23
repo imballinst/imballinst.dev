@@ -14,6 +14,19 @@ const ContentDiv = styled.div`
   & hr {
     margin-bottom: ${peepoTheme.spacing(4)};
   }
+  & blockquote {
+    background: #f7f7f7;
+    font-style: italic;
+    margin: 0 ${peepoTheme.spacing(-4)} ${peepoTheme.spacing(4)};
+    /* TODO(imballinst): refactor this. */
+    padding: ${peepoTheme.spacing(4)} ${peepoTheme.spacing(4)}
+      ${peepoTheme.spacing(4)} ${peepoTheme.spacing(8)};
+
+    & p::before,
+    & p::after {
+      content: '"';
+    }
+  }
   & p:not(:empty),
   & .gatsby-highlight {
     &:not(:last-child) {
@@ -47,6 +60,10 @@ const ContentDiv = styled.div`
 
     li {
       padding-left: ${peepoTheme.spacing(2)};
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
   & table {
