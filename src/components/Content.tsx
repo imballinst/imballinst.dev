@@ -15,7 +15,7 @@ const ContentDiv = styled.div`
     margin-bottom: ${peepoTheme.spacing(4)};
   }
   & blockquote {
-    background: #eee;
+    background: #f7f7f7;
     font-style: italic;
     margin: 0 ${peepoTheme.spacing(-4)} ${peepoTheme.spacing(4)};
     /* TODO(imballinst): refactor this. */

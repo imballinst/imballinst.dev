@@ -36,37 +36,25 @@ She figured out that during these times, her life was quite stressful. After tha
 
 Although what she said validates my concerns that mental health can affect physical health, which fed my ego because back then [there were people who said happiness doesn't affect health](https://peepohappy.id/blog/top3-achievements-frustrations-2020), I will still try to find references to ensure that what she said was valid. Bear in mind that I am not an expert in this field, so my thinking below **could** be wrong... and you don't have to agree with me.
 
-Instead of finding facts that back up my therapist's argument, I found that [mental stress raises platelet activity](https://link.springer.com/article/10.1007/s11481-020-09945-4)... which is probably a good thing? I spent some time looking for more references and I learned about [thrombocytopenia](https://www.mayoclinic.org/diseases-conditions/thrombocytopenia/symptoms-causes/syc-20378293), a condition in which someone has a low platelet count.
+Instead of finding facts that back up my therapist's argument, I found that [mental stress raises platelet activity](https://link.springer.com/article/10.1007/s11481-020-09945-4)... which is probably a good thing? I spent some time looking for more references and I learned about [thrombocytopenia](https://www.mayoclinic.org/diseases-conditions/thrombocytopenia/symptoms-causes/syc-20378293), a condition in which someone has a low platelet count. The following is a direct quote from that article.
 
 > Thrombocytopenia might occur as a result of a bone marrow disorder such as leukemia or an immune system problem. Or it can be a side effect of taking certain medications. It affects both children and adults.
 >
 > Thrombocytopenia can be mild and cause few signs or symptoms. In rare cases, the number of platelets can be so low that dangerous internal bleeding occurs. Treatment options are available.
 
-In my case, thankfully my platelet count didn't drop too low to the extent that internal bleeding occurred. Since I didn't have bone marrow disorder, I looked upon [what might cause a problem on my immune system](https://www.webmd.com/balance/stress-management/news/20180619/severe-stress-may-send-immune-system-into-overdrive).
+In my case, thankfully my platelet count didn't drop too low to the extent that internal bleeding occurred. Since I didn't have bone marrow disorder, I looked upon [what might cause a problem on my immune system](https://www.webmd.com/balance/stress-management/news/20180619/severe-stress-may-send-immune-system-into-overdrive). While the writer remarked that stress was tied to a 36 percent greater risk of developing 41 autoimmune diseases, I don't think I was carrying an autoimmune disease.
 
-> Comparing more than 106,000 people who had stress disorders with more than 1 million people without them, researchers found that stress was tied to a 36 percent greater risk of developing 41 autoimmune diseases, including rheumatoid arthritis, psoriasis, Crohn's disease, and celiac disease.
+I went back to the Mayo Clinic's article and figured out that viral infection can also contribute to lower platelet production. This aligns with what my doctor said, which led to the next question: _"How did the virus infect my body if I had an immune system?"_
 
-After looking up on the list of autoimmune diseases... I don't think it fits my cases back then, as that list of diseases seems scarier than what I suffered. Back to the Mayo Clinic article:
+I know that when we are healthy viruses can't break through our body's immune system, so I searched possible factors that may weaken the immune system. I discovered this article ["Stress, Illness and the Immune System"](https://www.simplypsychology.org/stress-immune.html), which its writer claimed, _"When we’re stressed, the immune system’s ability to fight off antigens is reduced. That is why we are more susceptible to infections"_.
 
-> Platelets are produced in your bone marrow. Factors that can decrease platelet production include:
->
-> - Leukemia and other cancers
-> - Some types of anemia
-> - Viral infections, such as hepatitis C or HIV
-> - Chemotherapy drugs and radiation therapy
-> - Heavy alcohol consumption
-
-Viral infections seem more like it, as my doctor said it was probably a viral infection when I was getting my infusion. I know that viruses can't break through our body's immune system unless it is weaker than the virus, so I searched for more references and found the article, ["Stress, Illness and the Immune System"](https://www.simplypsychology.org/stress-immune.html).
-
-> When we’re stressed, the immune system’s ability to fight off antigens is reduced. That is why we are more susceptible to infections.
-
-I also discovered a similar fact from Healthline, ["Effects of Anxiety on the Body"](https://www.healthline.com/health/anxiety/effects-on-body#Immune-system).
+I also discovered a similar fact from Healthline, ["Effects of Anxiety on the Body"](https://www.healthline.com/health/anxiety/effects-on-body#Immune-system). The following is a direct quote from the article.
 
 > In the short term, this increases your pulse and breathing rate, so your brain can get more oxygen. This prepares you to respond appropriately to an intense situation. Your immune system may even get a brief boost. With occasional stress, your body returns to normal functioning when the stress passes.
 >
 > But if you repeatedly feel anxious and stressed or it lasts a long time, your body never gets the signal to return to normal functioning. This can weaken your immune system, leaving you more vulnerable to viral infections and frequent illnesses. Also, your regular vaccines may not work as well if you have anxiety.
 
-I think this was also what my therapist said to me during our session (but I forgot to write it down). So, I guess, "mental health impacts physical health" is a valid argument? Maybe. But, even if you don't think it is because there hasn't been any thorough research about it, I suggest you be kind to people, that's all. It's simple, really. What does it cost for you to be good to people? None.
+I think this was also what my therapist said to me during our session (but I forgot to write it down). So, I guess, "mental health impacts physical health" is a valid argument? Maybe. But, even if you don't think it is because there hasn't been any thorough research about it, I suggest you to be kind to other people, that's all. It's simple, really. What does it cost for you to be good to people? None.
 
 ### The calm before the storm
 
@@ -96,7 +84,7 @@ The next day, my brother asked me to go to my parents' house to get my father's 
 
 I turned off my phone for 1 day. I could only remember having a "numb" feeling the whole day. I didn't feel like living.
 
-After that, I tried to turn my phone back on and recognized that my mother had created a group that consisted of her, me, my wife, my oldest brother and his wife, and my brother (who was living in Japan). The group's purpose was mostly to talk about the condition of my father and insurance. Most of the time, I was just silent reading the group. Sometimes, I needed help from my wife to "decipher" what was going on in the group because my brain was still screwed up.
+After that, I tried to turn my phone back on and recognized that my mother had created a group that consisted of her, me, my wife, my oldest brother and his wife, and my older brother (who was living in Japan). The group's purpose was mostly to talk about the condition of my father and insurance. Most of the time, I was just silent reading the group. Sometimes, I needed help from my wife to "decipher" what was going on in the group because my brain was still screwed up.
 
 Fast forward a few days later, my father was transported to another hospital that had an ICU room available (there were no available ICU rooms in the current hospital where he stayed in the emergency room). After that, we could relax a bit, because my father would receive proper care. At this moment, I and my wife decided it was the right time to visit the therapist.
 
@@ -104,18 +92,18 @@ Fast forward a few days later, my father was transported to another hospital tha
 
 My therapist said that I was conflicted when I learned my father was positive because there wasn't enough emotional bond between me and him... which was true. Sometimes, I hoped my father would be assertive towards my mother when she did something wrong. That wasn't the case, he let things go on, he told us to keep our [me and my brothers] mouths shut. As such, there were "unresolved feelings" inside us... or at least, inside myself.
 
-I also felt as if my father and my oldest brother were lying to me. Before my marriage, they said something along the lines, _"After you get married, you will be free"_. However, we do not really live "free". We still feel my mother's grasp. Even she forced me to cancel the apartment unit that I had rented in favor of the apartment unit that she chose... just because its rate was cheaper. Yes, it is cheaper, but its interior is inferior to the one that I chose. The stove's height is really low, as well as the kitchen sink. Every time I did the dishes, my waist always hurt because I needed to bend my back. Still, my father did nothing.
+I also felt as if my father and my oldest brother were lying to me. Before my marriage, they said something along the lines, _"After you get married, you will be free"_. However, we do not really live "free". We still feel my mother's grasp. Even she forced me to cancel the apartment unit that I had paid its down payment in favor of the apartment unit that she chose... just because its rate was cheaper. Yes, it is cheaper, but its interior is inferior to the one that I chose. The stove's height is really low, as well as the kitchen sink. Every time I did the dishes, my waist always hurt because I needed to bend my back. Still, my father did nothing.
 
 Freedom is all about the parenting standards, my therapist said and is quite common in Indonesia. For a child to be free from their parents' dictation, they must break through their parents' standards, which _can_ include: having more wealth than them, making a living for them, having more children than them, having higher degrees than them, and many others, perhaps.
 
 As with my mother restricting my father from his phone, my therapist said that COVID-19 patients, to the contrary, should be allowed to use their phone—though with care. She said that COVID-19 patients are really having a tough time. They are sick and people can't visit them. The phone is the only thing that makes them reachable and in turn, makes them feel "less alone".
 
-## Some "techniques" and/or "tools" that I learned
+## Some techniques, approaches, or tools that I learned
 
 On top of getting explanations on my screw-ups, I also learned about things that could help me when facing similar challenges in the future.
 
 1. **Mindfulness**: This is mostly about knowing my limit. I should be aware when I'm starting to get stressed. After I realize that it [the anxiety thing] is happening, as soon as possible I need to find/do things that could drop my stress levels.
-1. **Usage of essential oils**: I think this is a good suggestion and there's a supporting argument in [this article](https://www.healthline.com/health/anxiety/essential-oils-for-anxiety) as well, _"Aromatherapy is often used as a natural remedy to relieve anxiety and stress"_. I and my wife have been using aromatherapy since I recovered from the viral infection in November, but we only use it in our bedroom. Probably it would be good if we use it in the living room as well because anxiety and stress don't care about the location of occurrence.
+1. **Usage of essential oils**: I think this is a good suggestion and there's a supporting argument in [this Healthline article](https://www.healthline.com/health/anxiety/essential-oils-for-anxiety) as well, _"Aromatherapy is often used as a natural remedy to relieve anxiety and stress"_. I and my wife have been using aromatherapy since I recovered from the viral infection in November, but we only use it in our bedroom. Probably it would be good if we use it in the living room as well because anxiety and stress don't care about the location of occurrence.
 1. **Narrating from the third point of view**: I thought this is similar to journaling—it is not. When we do journaling, we tend to do it from _our_ point of view. Narrating, on the other hand, is done from the third point of view. By doing this, we increase the chance to see the issue that we are currently facing _from the outside_, which eliminates some bits of subjectivity in the process.
 1. **Learn to be assertive**: The reason I was a silent reader in my family group was that my mother and my oldest brother were both dominant and I didn't want to take collateral damage from their debate (not to mention it was really tough to decipher their discussion). It is okay for me to declare that I don't want to be dragged into the middle of a "war".
 1. **Facing guilt is worse than facing hardship**: With the previous reason said, there are times where I should probably have voiced my arguments as well, for example, when I truly wanted to contribute but hesitated because of the heated discussion. My therapist told me that facing guilt is worse than facing hardship. This is true because I felt like I should contribute, but because I didn't want to be a victim of war, I shut myself up... at the cost of me second-guessed my decision the whole day.
