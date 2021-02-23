@@ -24,6 +24,8 @@ Two weeks since, I was still hesitating to go to hospital because of the pandemi
 
 <!-- Give picture here for the lab test. -->
 
+![My full blood test on November 1, 2020. Red blood cell count was lower than it should, whereas platelet count was at the low-end of the normal range.](images/lab-blood-test.jpg)
+
 ---
 
 With regards to this, my therapist said something about the relation between stress and platelet count. She said that she also faced the same thing in her life. In February, two years in a row, she was sick but the doctors couldn't figure out what the sickness was. What she knew was that her platelet count was lower than usual, but it was the same like me—neither it was typhus or dengue fever.
@@ -58,7 +60,7 @@ Viral infections seem more like it, as my doctor said it was probably viral infe
 
 I also discovered similar fact from Healthline, ["Effects of Anxiety on the Body"](https://www.healthline.com/health/anxiety/effects-on-body#Immune-system).
 
-<!-- Insert the image from Heathline here. -->
+![Twelve issues in our body that can be caused by anxiety: a sense of doom, panic attacks, depression, headaches, irritability, pounding heart, breathing problems, loss of libido, upset stomach, extreme fatigue, increase in blood pressure, and muscle aches. Source: Healthline.](images/anxiety-effects-pinterest-cropped-healthline.jpg)
 
 > In the short term, this increases your pulse and breathing rate, so your brain can get more oxygen. This prepares you to respond appropriately to an intense situation. Your immune system may even get a brief boost. With occasional stress, your body returns to normal functioning when the stress passes.
 >
@@ -130,7 +132,7 @@ I don't usually write religious things here, but during a prayer that night, I c
 
 > Allah does not burden a soul but to the extent of their ability; for it is what it has earned (positive degrees), and upon it what it has earned (negative degrees).
 
-I had never cried so hard when I recited a verse of Quran during a prayer before. I thought of my father. He just got back home from a severe illness and was on the process of recovery, but his wife didn't treat him well, threatened to leave him, and finally left him. I genuinely can't imagine how it feels like.
+I had never cried so hard when I recited a verse of Quran during a prayer before. I thought of my father. He just got back home from a severe illness and was on the process of recovery, but his wife didn't treat him well, threatened to leave him, and finally left him. I genuinely couldn't imagine how it felt. I just trusted God at that time that He knew my father was a strong person and he would be okay.
 
 At the moment, my father is recovering well. He said to me that what improves the recovery process is the peace of mind. Although my brother's house isn't as big as his, there is peace in it. Probably it's because there is no one to yell and dictate him around. Please include him in your prayers so that he can get back to his tip-top condition.
 
