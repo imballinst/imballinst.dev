@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
 title: Visit to Therapist, Part 4
-date: 2020-12-31T04:28:41.094Z
+date: 2021-02-23T07:14:56.835Z
 featuredpost: false
-featuredimage: images/lobostudio-hamburg-tPIHxXNbHh4-unsplash.jpg
+featuredimage: images/dan-meyers-hluOJZjLVXc-unsplash.jpg
 visibility: public
 description: Despite having visited the same therapist four times in the span of 1 year, somehow I was still able to learn new things.
 tags:
