@@ -10,6 +10,8 @@ tags:
   - life
 ---
 
+![<span>Photo by <a href="https://unsplash.com/@dmey503?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Meyers</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>.](images/dan-meyers-hluOJZjLVXc-unsplash.jpg)
+
 _"Woah, woah, woah, hold on! This is the first post about therapist visit and you are telling me that this is part 4? Where are the previous 3 parts?"_ Unfortunately, for the first therapist visit, I was really all over the place. According to my therapist, my stories back then were unordered [timeline-wise], which is true, because I didn't know where to start. For the second and third visit, I did have a note but I forget where did I put it... so, yeah. Anyway!
 
 ## Topics
@@ -60,7 +62,7 @@ Viral infections seem more like it, as my doctor said it was probably viral infe
 
 I also discovered similar fact from Healthline, ["Effects of Anxiety on the Body"](https://www.healthline.com/health/anxiety/effects-on-body#Immune-system).
 
-![Twelve issues in our body that can be caused by anxiety: a sense of doom, panic attacks, depression, headaches, irritability, pounding heart, breathing problems, loss of libido, upset stomach, extreme fatigue, increase in blood pressure, and muscle aches. Source: Healthline.](images/anxiety-effects-pinterest-cropped-healthline.jpg)
+![Twelve issues in our body that can be caused by anxiety: a sense of doom, panic attacks, depression, headaches, irritability, pounding heart, breathing problems, loss of libido, upset stomach, extreme fatigue, increase in blood pressure, and muscle aches. Source: Healthline.](images/healthline-anxiety-effects-pinterest-cropped.jpg)
 
 > In the short term, this increases your pulse and breathing rate, so your brain can get more oxygen. This prepares you to respond appropriately to an intense situation. Your immune system may even get a brief boost. With occasional stress, your body returns to normal functioning when the stress passes.
 >
