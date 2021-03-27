@@ -1,7 +1,9 @@
 import React, { DetailedHTMLProps } from 'react';
 import Helmet from 'react-helmet';
+import { getImage } from 'gatsby-plugin-image';
+
 import useSiteMetadata from './SiteMetadata';
-import { ResizedImageBlurb } from '../common-types';
+import { ImageBlurb } from '../common-types';
 import peepoLogo from '../img/peepo-logo.jpg';
 import { useLocation } from '@reach/router';
 
@@ -18,7 +20,7 @@ type SEOProps = {
     HTMLMetaElement
   >[];
   title?: string;
-  image?: ResizedImageBlurb;
+  image?: ImageBlurb;
   pathname?: string;
 };
 
@@ -36,10 +38,10 @@ function SEO({
   const metaTitle = title || siteMetadata.title;
   const metaDescription = description || siteMetadata.description;
   const image = featuredImageResized
-    ? `${siteMetadata.siteUrl}${featuredImageResized.childImageSharp.resize.src}`
+    ? getImage(featuredImageResized)
     : `${siteMetadata.siteUrl}${peepoLogo}`;
   const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
-
+  console.log(image);
   let helmetMeta: MetaType = [
     // Social media metas.
     {
@@ -56,8 +58,8 @@ function SEO({
       content: metaTitle
     },
     {
-      property: 'og:image',
-      content: image
+      property: 'og:image'
+      // content: image
     },
     {
       property: `og:description`,
@@ -81,8 +83,8 @@ function SEO({
       content: metaDescription
     },
     {
-      name: `twitter:image`,
-      content: image
+      name: `twitter:image`
+      // content: image
     }
   ];
 
@@ -93,12 +95,12 @@ function SEO({
         content: 'summary_large_image'
       },
       {
-        property: 'og:image:width',
-        content: featuredImageResized.childImageSharp.resize.width
+        property: 'og:image:width'
+        // content: featuredImageResized.childImageSharp.resize.width
       },
       {
-        property: 'og:image:height',
-        content: featuredImageResized.childImageSharp.resize.height
+        property: 'og:image:height'
+        // content: featuredImageResized.childImageSharp.resize.height
       }
     ] as MetaType);
   } else {

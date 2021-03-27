@@ -9,7 +9,7 @@ import { ListItem } from '../components/List';
 import { PeepoLink } from '../components/Links';
 import { stringify } from '../helpers/utils';
 import SEO from '../components/SEO';
-import { ImageBlurb, ResizedImageBlurb } from '../common-types';
+import { ImageBlurb } from '../common-types';
 
 type BlogPostTemplateProps = {
   content: ReactNode;
@@ -77,7 +77,6 @@ type BlogPostProps = {
         description: string;
         tags: string[];
         featuredimage: ImageBlurb;
-        featuredImageResized: ResizedImageBlurb;
       };
     };
   };
@@ -95,7 +94,7 @@ const BlogPost = ({ data }: BlogPostProps) => {
           <SEO
             title={post.frontmatter.title}
             description={post.frontmatter.description}
-            image={post.frontmatter.featuredImageResized}
+            image={post.frontmatter.featuredimage}
           />
         }
         tags={post.frontmatter.tags}
@@ -119,18 +118,12 @@ export const pageQuery = graphql`
         description
         featuredimage {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         featuredImageResized: featuredimage {
           childImageSharp {
-            resize(width: 1200) {
-              src
-              height
-              width
-            }
+            gatsbyImageData(width: 1200, placeholder: BLURRED)
           }
         }
         tags

@@ -1,14 +1,15 @@
 // TODO: move this to under src/pages to take advantage of https://www.gatsbyjs.org/docs/graphql-api/#pagequery.
 import React, { ReactNode } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import styled, { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import PreviewCompatibleImage, { Fluid } from '../PreviewCompatibleImage';
-import { Paper, PaperProps } from '../Paper';
+import { Paper } from '../Paper';
 import { peepoTheme } from '../../theme';
 import { cls } from '../../helpers/styles';
 import { PeepoLink } from '../Links';
 import { SectionWrapper } from '../Layout';
+import { ImageBlurb } from '../../common-types';
 
 export type TagCount = {
   fieldValue: string;
@@ -36,7 +37,7 @@ export type ListBlogItemType = {
     title: string;
     date: string;
     featuredpost?: boolean;
-    featuredimage: { childImageSharp: Fluid };
+    featuredimage: ImageBlurb;
     description: string;
   };
 };
@@ -65,6 +66,7 @@ export function ListBlogItem({
 }) {
   const { Root = StyledPaper, Title = DefaultTitleElement } =
     WrapperComponents || {};
+  const image = getImage(post.frontmatter.featuredimage);
 
   return (
     <Root>
@@ -78,12 +80,10 @@ export function ListBlogItem({
             className={`${peepoTheme.textSizes.large2} font-semibold`}
             to={post.fields.slug}
           >
-            {post.frontmatter.featuredimage ? (
-              <PreviewCompatibleImage
-                imageInfo={{
-                  image: post.frontmatter.featuredimage,
-                  alt: `featured image thumbnail for post ${post.frontmatter.title}`
-                }}
+            {image ? (
+              <GatsbyImage
+                image={image}
+                alt={`featured image thumbnail for post ${post.frontmatter.title}`}
               />
             ) : null}
             <Title>{post.frontmatter.title}</Title>
@@ -143,9 +143,7 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 300, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(width: 300, placeholder: BLURRED)
                   }
                 }
                 tags

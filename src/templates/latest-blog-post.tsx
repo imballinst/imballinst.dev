@@ -55,11 +55,7 @@ export const pageQuery = graphql`
         description
         featuredImageResized: featuredimage {
           childImageSharp {
-            resize(width: 1200) {
-              src
-              height
-              width
-            }
+            gatsbyImageData(width: 1200, placeholder: BLURRED)
           }
         }
         tags

@@ -163,9 +163,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 300, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 300, placeholder: BLURRED)
               }
             }
           }
