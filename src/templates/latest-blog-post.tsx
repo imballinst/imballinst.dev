@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import { ImageBlurb, ResizedImageBlurb } from '../common-types';
+import { ImageBlurb } from '../common-types';
 import useSiteMetadata from '../components/SiteMetadata';
 
 type BlogPostProps = {
@@ -12,7 +12,7 @@ type BlogPostProps = {
       frontmatter: {
         title: string;
         description: string;
-        featuredImageResized: ResizedImageBlurb;
+        featuredImageResized: ImageBlurb;
       };
       fields: {
         slug: string;
@@ -55,7 +55,7 @@ export const pageQuery = graphql`
         description
         featuredImageResized: featuredimage {
           childImageSharp {
-            gatsbyImageData(width: 1200, placeholder: BLURRED)
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         tags

@@ -82,6 +82,7 @@ export function ListBlogItem({
           >
             {image ? (
               <GatsbyImage
+                style={{ height: 200 }}
                 image={image}
                 alt={`featured image thumbnail for post ${post.frontmatter.title}`}
               />
@@ -143,7 +144,7 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    gatsbyImageData(width: 300, placeholder: BLURRED)
+                    gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
                   }
                 }
                 tags

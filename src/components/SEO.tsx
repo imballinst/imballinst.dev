@@ -1,6 +1,6 @@
 import React, { DetailedHTMLProps } from 'react';
 import Helmet from 'react-helmet';
-import { getImage } from 'gatsby-plugin-image';
+import { getSrc } from 'gatsby-plugin-image';
 
 import useSiteMetadata from './SiteMetadata';
 import { ImageBlurb } from '../common-types';
@@ -38,7 +38,7 @@ function SEO({
   const metaTitle = title || siteMetadata.title;
   const metaDescription = description || siteMetadata.description;
   const image = featuredImageResized
-    ? getImage(featuredImageResized)
+    ? `${siteMetadata.siteUrl}${getSrc(featuredImageResized)}`
     : `${siteMetadata.siteUrl}${peepoLogo}`;
   const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
   console.log(image);
@@ -58,8 +58,8 @@ function SEO({
       content: metaTitle
     },
     {
-      property: 'og:image'
-      // content: image
+      property: 'og:image',
+      content: image
     },
     {
       property: `og:description`,
@@ -83,8 +83,8 @@ function SEO({
       content: metaDescription
     },
     {
-      name: `twitter:image`
-      // content: image
+      name: `twitter:image`,
+      content: image
     }
   ];
 
@@ -95,12 +95,12 @@ function SEO({
         content: 'summary_large_image'
       },
       {
-        property: 'og:image:width'
-        // content: featuredImageResized.childImageSharp.resize.width
+        property: 'og:image:width',
+        content: featuredImageResized.width
       },
       {
-        property: 'og:image:height'
-        // content: featuredImageResized.childImageSharp.resize.height
+        property: 'og:image:height',
+        content: featuredImageResized.height
       }
     ] as MetaType);
   } else {
