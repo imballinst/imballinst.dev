@@ -22,6 +22,9 @@ module.exports = {
     siteUrl: SITE_URL
   },
   plugins: [
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-emotion`,
@@ -48,18 +51,10 @@ module.exports = {
         name: 'images'
       }
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads'
-            }
-          },
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -158,12 +153,6 @@ module.exports = {
             }
           }
         ]
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.tsx`
       }
     },
     {

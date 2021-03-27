@@ -1,7 +1,9 @@
 import React, { DetailedHTMLProps } from 'react';
 import Helmet from 'react-helmet';
+import { getSrc } from 'gatsby-plugin-image';
+
 import useSiteMetadata from './SiteMetadata';
-import { ResizedImageBlurb } from '../common-types';
+import { ImageBlurb } from '../common-types';
 import peepoLogo from '../img/peepo-logo.jpg';
 import { useLocation } from '@reach/router';
 
@@ -18,7 +20,7 @@ type SEOProps = {
     HTMLMetaElement
   >[];
   title?: string;
-  image?: ResizedImageBlurb;
+  image?: ImageBlurb;
   pathname?: string;
 };
 
@@ -36,10 +38,10 @@ function SEO({
   const metaTitle = title || siteMetadata.title;
   const metaDescription = description || siteMetadata.description;
   const image = featuredImageResized
-    ? `${siteMetadata.siteUrl}${featuredImageResized.childImageSharp.resize.src}`
+    ? `${siteMetadata.siteUrl}${getSrc(featuredImageResized)}`
     : `${siteMetadata.siteUrl}${peepoLogo}`;
   const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
-
+  console.log(image);
   let helmetMeta: MetaType = [
     // Social media metas.
     {
@@ -94,11 +96,11 @@ function SEO({
       },
       {
         property: 'og:image:width',
-        content: featuredImageResized.childImageSharp.resize.width
+        content: featuredImageResized.width
       },
       {
         property: 'og:image:height',
-        content: featuredImageResized.childImageSharp.resize.height
+        content: featuredImageResized.height
       }
     ] as MetaType);
   } else {

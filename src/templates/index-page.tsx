@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react';
 import { graphql } from 'gatsby';
 
 import Layout, { SectionWrapper } from '../components/Layout';
-import { PeepoLink } from '../components/Links';
 import { Typography } from '../components/Typography';
 import { Paper } from '../components/Paper';
 import { ListBlogItem, ListBlogItemType } from '../components/Blog/Posts';
@@ -59,8 +58,6 @@ export const IndexPageTemplate = ({
   indexContent,
   latestPosts
 }: IndexPageTemplateProps) => {
-  const { title, heading } = indexContent.frontmatter;
-
   return (
     <SectionWrapper className="flex flex-col align-center">
       <Typography variant="h3" className="font-bold leading-none">
@@ -163,9 +160,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 300, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(quality: 40, placeholder: BLURRED)
               }
             }
           }

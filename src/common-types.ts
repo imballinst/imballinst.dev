@@ -1,20 +1,10 @@
-import { FluidObject } from 'gatsby-image';
+import {
+  FileNode,
+  IGatsbyImageDataParent
+} from 'gatsby-plugin-image/dist/src/components/hooks';
+import { IGatsbyImageData } from 'gatsby-plugin-image/dist/src/components/gatsby-image.browser';
 
-export type ImageBlurb = {
-  childImageSharp: {
-    fluid: FluidObject;
-  };
-};
-
-export type ResizedImageBlurb = {
-  childImageSharp: {
-    resize: {
-      src: string;
-      width: string;
-      height: string;
-    };
-  };
-};
+export type ImageBlurb = FileNode | IGatsbyImageDataParent | IGatsbyImageData;
 
 // This is from Immutable.js.
 export type GetInType = (params: string[]) => any;
