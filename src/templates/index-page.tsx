@@ -160,7 +160,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             featuredimage {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
+                gatsbyImageData(quality: 40, placeholder: BLURRED)
               }
             }
           }

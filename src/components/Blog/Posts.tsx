@@ -144,7 +144,11 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+                    gatsbyImageData(
+                      layout: FULL_WIDTH
+                      quality: 40
+                      placeholder: BLURRED
+                    )
                   }
                 }
                 tags
