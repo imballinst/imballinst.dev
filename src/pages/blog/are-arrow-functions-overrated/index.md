@@ -23,11 +23,19 @@ function sum(a: number, b: number) {
   return a + b;
 }
 
-// `sum` in arrow function expression.
+doSomething(function(result) {
+  console.log(result);
+});
+
+// Arrow function expression equivalent.
 const sum = (a: number, b: number) => a + b;
+
+doSomething(result => {
+  console.log(result);
+});
 ```
 
-Cool, right? Sure! Why not? It's compressing 3 lines of a simple function into one line, who doesn't love that? Alright, what's next? Have you ever gotten stuck in a `this` situation?
+Cool, right? Sure! Why not? It's compressing 3 lines of a simple function into one line, who doesn't love that? Also, when it comes to unnamed functions (usually callback functions), we can cut the `function` syntax. Alright, what's next? Let's see—have you ever gotten stuck in a `this` situation?
 
 ```ts
 const obj = {
@@ -181,7 +189,7 @@ Now that we have covered some of the advantages and disadvantages of using arrow
 
 ### Arrow functions are shorter
 
-Well, yes, as I have written above, arrow functions can surely be shorter if the function is a one-liner. But, consider this case:
+Well, yes, as I have written above, arrow functions can surely be shorter if the function is a one-liner or is used for a callback function. But, consider this case:
 
 ```ts
 function handleSubmit(e: React.FormEvent) {
@@ -201,7 +209,7 @@ const handleSubmit = (e: React.FormEvent) => {
 };
 ```
 
-The normal function expression has 4 less characters (108) than the arrow function expression one (112). So, it's not _always_ shorter. The funny thing is, there are people who spread propaganda about lesser line of codes, yet they use arrow function expressions without knowing the context. Isn't that ironic?
+The normal function expression uses 4 less characters (108) than the arrow function expression one (112). So, it's not _always_ shorter. The funny thing is, there are people who spread propaganda about lesser line of codes, yet they use arrow function expressions without knowing the context. Isn't that ironic?
 
 ### Arrow functions are better
 
@@ -209,4 +217,4 @@ I agree for the reasons that I have written above, such as for function binding 
 
 ## Closing words
 
-There are more about arrow function expressions that I don't cover in this post. Please visit the MDN Docs for more information—it's worth the read. Lastly, if you frequently say that "arrow functions are shorter" and you are using it 24/7, hopefully this post can make you turn to the right path 😛. If you have comments about this post, feel free to mention or send me a DM on Twitter.
+There are more about arrow function expressions that I don't cover in this post. Please visit the MDN Docs for more information—it's worth the read. Lastly, if you frequently say that "arrow functions are shorter" and you are using it 24/7, hopefully this post can make you turn to the right path 😛. If you have comments or feedback about this post, feel free to mention or send me a DM on Twitter. Thanks for reading!
