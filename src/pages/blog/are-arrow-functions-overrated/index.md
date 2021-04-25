@@ -1,15 +1,17 @@
 ---
 templateKey: blog-post
 title: Are arrow functions overrated?
-date: 2021-02-23T07:14:56.835Z
+date: 2021-04-25T04:52:53.642Z
 featuredpost: false
-featuredimage: images/dan-meyers-hluOJZjLVXc-unsplash.jpg
+featuredimage: images/nick-fewings-zF_pTLx_Dkg-unsplash.jpg
 visibility: public
 description: I think they are really useful, but sometimes they are just overused in the defense of "it's shorter".
 tags:
   - software engineering
   - javascript
 ---
+
+![<span>Photo by <a href="https://unsplash.com/@jannerboy62?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nick Fewings</a> on <a href="https://unsplash.com/images/things/arrow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>.](images/nick-fewings-zF_pTLx_Dkg-unsplash.jpg)
 
 Hello, it's the tech side of me again! It has been awhile, my latest tech-related post here was ["JSDoc, a Stairway to TypeScript"](https://peepohappy.id/blog/jsdoc-stairway-to-typescript), which was almost 10 months ago? Anyway... in this post, I'm going to write something about [arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
