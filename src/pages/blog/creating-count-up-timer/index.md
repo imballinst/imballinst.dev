@@ -45,7 +45,7 @@ As seen from the screenshot aboev, inside the drawer, there will be a "selection
 
 Now, we have 3 important information here. The first one is the content of the tag `datetime`, the second one is the `title` (which shows up when we hover on the date element), and the last one is the actual shown text, "10w", which stands for 10 weeks ago. Since our objective is to get the timestamp, `2021-04-19T13:01:01.000Z` is the text that we need to take. That text is a representation of date in [ISO 8601](https://www.w3.org/TR/NOTE-datetime) string.
 
-That was how I got the post date of the recorded event. I moved to the second problem. When did the chief confirmed our marriage? When was the exact time? So, given the initial timestamp, I saw the recorded video's duration. I thought, maybe I could count from behind until the second in the video where the chief confirmed. I did just that and finally I got the timestamp that I wanted.
+That was how I got the post date of the recorded event. I moved to the second problem (pun not intended). When did the chief confirmed our marriage? When was the exact time? So, given the initial timestamp, I saw the recorded video's duration. I thought, maybe I could count from behind until the second in the video where the chief confirmed. I did just that and finally I got the timestamp that I wanted.
 
 Now, let's get to the site building part!
 
