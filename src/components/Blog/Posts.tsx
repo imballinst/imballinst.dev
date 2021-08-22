@@ -69,7 +69,7 @@ export function ListBlogItem({
   const image = getImage(post.frontmatter.featuredimage);
 
   return (
-    <Root>
+    <Root border>
       <article
         className={cls({
           featured: post.frontmatter.featuredpost

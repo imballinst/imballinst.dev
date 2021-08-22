@@ -38,7 +38,9 @@ const StyledPaper = styled(Paper)`
 `;
 
 const PostRootElement = ({ children }: { children: ReactNode }) => (
-  <StyledPaper className="w-full lg:w-1/3">{children}</StyledPaper>
+  <StyledPaper border className="w-full lg:w-1/3">
+    {children}
+  </StyledPaper>
 );
 
 const PostTitleElement = styled.div`
