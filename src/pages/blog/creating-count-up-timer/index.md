@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
 title: Creating Count Up Timer
-date: 2021-02-23T07:14:56.835Z
+date: 2021-08-22T04:33:45.247Z
 featuredpost: false
-featuredimage: images/dan-meyers-hluOJZjLVXc-unsplash.jpg
+featuredimage: images/neonbrand-KYxXMTpTzek-unsplash.jpg
 visibility: public
 description: In this post, I will be sharing a bit about creating a count up timer.
 tags:
@@ -11,31 +11,35 @@ tags:
   - life
 ---
 
-What is a count up timer? A count up timer is the opposite of the countdown timer. Instead of counting **to zero**, this timer counts **from zero**. It can serve multiple purposes, such as for counting the duration of a workout, duration of screen usages in a day or week, or... for my case, counting the duration since I got married. In this post, I will be sharing a bit about the process in creating a count up timer.
+![A ticking hourglass, where the sands on the top are almost spent. <span>Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NeONBRAND</a> on <a href="https://unsplash.com/images/things/clock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>](images/neonbrand-KYxXMTpTzek-unsplash.jpg)
+
+What is a count up timer? A count up timer is the opposite of the countup timer. Instead of counting **to zero**, this timer counts **from zero**. It can serve multiple purposes, such as for counting the duration of a workout, duration of screen usages in a day or week, or... for my case, counting the duration since I got married. In this post, I will be sharing a bit about the process in creating a count up timer.
 
 ## Defining the "start time"
 
 The first thing we need to do is to define the "zero point"—everything has to start somewhere. For me, I defined the start time as the second I got married to my wife ([link to the count up site](https://imballinst.github.io/married)). Up to second? But, how?
 
-<!-- Insert the married timer here. -->
+![A countup timer screenshot that shows "1 year, 1 month, 10 days, 1 hour, 21 minutes, and 56 seconds" since I officially got married.](images/countup-timer.png)
 
-This part is a bit tricky. My wedding event was live on my wife's Instagram account and hence it was stored on her Instagram TV (we didn't use fancy recordings with timestamps). Now, Instagram has this "posted date" on every post. However, there are 2 problems here. The first one is the UI does not show the exact timestamp (it only shows something like "July 12, 2021" or "2 weeks ago") and the second one is, because of the first problem, I could not know the exact timestamp the chief said "confirmed" (or in Indonesian, "sah").
+This part is a bit tricky. My wedding event was live on my wife's Instagram account and hence it was stored on her Instagram TV (we didn't use fancy recordings with timestamps). Now, Instagram has this "posted date" on every post. However, there are 2 problems here. The first one is the UI does not show the exact timestamp (it only shows how long since the post was published, such as "2w") and the second one is, because of the first problem, I could not know the exact timestamp when the chief said "confirmed" (or in Indonesian, "sah").
 
-<!-- Insert the Instagram picture (without tab open) -->
+I will try to explain these issues using an example post from one of [ffxiv's Instagram post](https://www.instagram.com/p/CQRCJgqF-vB/). The screenshot can be seen below.
 
-I tried to search the solution in Google and I [found out](https://www.followchain.org/exact-time-instagram-post) that there was a way to do it! We don't need to install anything, we can just use Firefox or Chrome in our PC. OK, so what we need to do is, we right click on the date (in my example above, it was "July 12"), then click "Inspect". It will open some kind of drawer in your browser like the picture below.
+![Example post on Instagram. It shows the character Estinien from Final Fantasy XIV. Below the post, there is a text containing relative date (by distance) since the post was published. The text is "9w", which stands for 9 weeks. Source: <a href="https://www.instagram.com/p/CQRCJgqF-vB/">ffxiv's Instagram post</a>.](images/ffxiv-estinien.png)
 
-<!-- Insert the Instagram picture (with tab open) -->
+From the screenshot above, it is known that the post was posted 9 weeks ago (shortened to "9w"). That still doesn't explain the exact date and time. I tried to search the solution in Google and I found out that [there was a way to extract these information](https://www.followchain.org/exact-time-instagram-post)! We don't need to install anything, we can just use our favorite browser in our PC. What we need to do is, we right click on the date (in my example above, it was "9w"), then click "Inspect". It will open some kind of drawer in your browser like the picture below.
 
-Inside the drawer, there will be a "selection" (indicated by the blue color). This is the element that we chose to inspect before. The content is as the following:
+![A drawer will open in your browser with possibly varying position (depending on the browser's configuration). The "9w" text is highlighted on the page. Inside the drawer (on the right), there is a <code>time</code> tag with <code>datetime</code> attribute. This attribute contains the ISO8601 string of the publish date and time. Source: <a href="https://www.instagram.com/p/CQRCJgqF-vB/">ffxiv Instagram post</a>.](images/ffxiv-estinien-devtools.png)
+
+As seen from the screenshot aboev, inside the drawer, there will be a "selection" (indicated by the blue color). This is the element that we chose to inspect before. The content is as the following:
 
 ```html
 <time
   class="FH9sR Nzb55"
-  datetime="2021-04-19T13:01:01.000Z"
-  title="Apr 19, 2021"
+  datetime="2021-06-18T15:13:38.000Z"
+  title="Jun 18, 2021"
 >
-  10w
+  9w
 </time>
 ```
 
@@ -206,6 +210,25 @@ Finally, we have it. Then, we just import it with `<script>` tag and run the `ca
 </script>
 ```
 
-<!-- Insert GIF here. -->
+What we are doing with the snippet above is that, first, we import the `date.js` that we have in the same directory. After that, after the page has finished loading, we run the JavaScript to first immediately render the result to the page. After that, we set a one-second interval to automatically update the numbers on the screen. The result can be seen in the GIF below.
 
-There you have it. The difference timer is finished. I hope you enjoy reading this tutorial. If you have any feedback, please feel free to reach me on my Twitter (you can visit it from the navigation bar above). Thanks!
+<figure class="gatsby-resp-image-figure" style="margin-bottom: 1rem; display: flex; flex-direction: column; align-items: center;">
+  <img src="images/timer-wedding.gif">
+  <figcaption class="gatsby-resp-image-figcaption">The finished countup timer. It ticks from "1 year, 1 month, 10 days, 1 hour, 23 minutes, 1 second" to "1 year, 1 month, 10 days, 1 hour, 23 minutes, 10 seconds".</figcaption>
+</figure>
+
+There you have it. The countup timer is finished. If you want to change the start date, you can change `WEDDING_DATE` to anything that that you want. For demonstration purposes, what if we use the Final Fantasy XIV post above? Let's try changing the initial date to the one specified in the post: `2021-06-18T15:13:38.000Z`. Note that when initializing with `new Date`, the month starts at 0 (January) and ends at 11 (December).
+
+```diff-javascript
+- const WEDDING_DATE = new Date(2020, 6 /* July */, 12, 9, 43, 33);
++ const POST_DATE = new Date(2021, 5 /* June */, 18, 15, 13, 38);
+```
+
+<figure class="gatsby-resp-image-figure" style="margin-bottom: 1rem; display: flex; flex-direction: column; align-items: center;">
+  <img src="images/timer-post.gif">
+  <figcaption class="gatsby-resp-image-figcaption">The timer since the post was published on the Final Fantasy XIV Instagram account. It ticks from "0 years, 2 months, 4 days, 20 hours, 48 minutes, 9 seconds" to "0 years, 2 months, 4 days, 20 hours, 48 minutes, 16 seconds".</figcaption>
+</figure>
+
+## Closing words
+
+I hope you enjoy reading this tutorial. If you have any feedback, please feel free to reach me on my Twitter (you can visit it from the navigation bar above). Thanks!
