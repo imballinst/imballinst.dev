@@ -12,13 +12,14 @@ export function Paper({
   children,
   className,
   Component = 'div',
-  elevation = 1
+  elevation = 0
 }: PaperProps) {
   return (
     <Component
       className={cls(
-        'p-4 flex bg-white',
-        elevation === 1 ? 'shadow-md' : undefined,
+        'p-4 flex',
+        elevation > 0 ? 'shadow-md' : undefined,
+        elevation === 0 ? 'border rounded' : undefined,
         className
       )}
     >

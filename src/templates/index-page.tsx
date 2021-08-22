@@ -90,7 +90,7 @@ type IndexPageProps = {
   };
 };
 
-const HomeBanner = styled(Paper)`
+const HomeBanner = styled.div`
   margin-top: ${peepoTheme.topbarHeight}px;
 `;
 
@@ -105,8 +105,7 @@ const IndexPage = ({ data }: IndexPageProps) => {
   return (
     <>
       <HomeBanner
-        elevation={0}
-        className={`${peepoTheme.pageHorizontalSpacing} flex flex-row justify-center`}
+        className={`p-4 ${peepoTheme.pageHorizontalSpacing} flex flex-row justify-center`}
       >
         <HomeBannerContent>
           <Typography variant="body" textSize="h1" className="leading-none">
