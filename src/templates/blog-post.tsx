@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react';
 import { graphql } from 'gatsby';
+import styled from '@emotion/styled';
+
 import Layout, { SectionWrapper } from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import { Typography } from '../components/Typography';
@@ -17,8 +19,17 @@ type BlogPostTemplateProps = {
   tags: string[];
   title: string;
   date: string;
+  modifiedDate: string;
   helmet?: ReactNode;
 };
+
+const DateContent = styled.div`
+  margin-bottom: ${peepoTheme.spacing(4)};
+`;
+const Separator = styled.span`
+  margin-left: ${peepoTheme.spacing(2)};
+  margin-right: ${peepoTheme.spacing(2)};
+`;
 
 export const BlogPostTemplate = ({
   content,
@@ -26,6 +37,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   date,
+  modifiedDate,
   helmet
 }: BlogPostTemplateProps) => {
   const PostContent = contentComponent || Content;
@@ -37,11 +49,17 @@ export const BlogPostTemplate = ({
         <Typography variant="h1" className="leading-none">
           {title}
         </Typography>
-        <span
+        <DateContent
           className={`${peepoTheme.textSizes.small} mt-1 mb-8 text-gray-600`}
         >
-          {date}
-        </span>
+          <span>{date}</span>
+          {date !== modifiedDate && (
+            <>
+              <Separator>|</Separator>
+              <span>Last modified {modifiedDate}</span>
+            </>
+          )}
+        </DateContent>
 
         <PostContent content={content} />
         {tags && tags.length ? (
@@ -71,6 +89,9 @@ type BlogPostProps = {
     markdownRemark: {
       id: string;
       html: string;
+      fields: {
+        modifiedDate: string;
+      };
       frontmatter: {
         date: string;
         title: string;
@@ -100,6 +121,7 @@ const BlogPost = ({ data }: BlogPostProps) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         date={post.frontmatter.date}
+        modifiedDate={post.fields.modifiedDate}
       />
     </Layout>
   );
@@ -112,6 +134,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        modifiedDate(formatString: "MMMM DD, YYYY")
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

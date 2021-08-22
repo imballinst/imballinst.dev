@@ -1,6 +1,7 @@
 const _ = require('lodash');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
+const { execSync } = require('child_process');
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -78,6 +79,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value: removeTrailingSlashFromSlug(value)
+    });
+
+    const modifiedDate = execSync(
+      `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`
+    ).toString();
+    createNodeField({
+      name: `modifiedDate`,
+      node,
+      value: modifiedDate
     });
   }
 };
