@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Are arrow functions overrated?
+title: Are Arrow Functions Overrated?
 date: 2021-04-25T04:52:53.642Z
 featuredpost: false
 featuredimage: images/nick-fewings-zF_pTLx_Dkg-unsplash.jpg

@@ -41,7 +41,7 @@ function SEO({
     ? `${siteMetadata.siteUrl}${getSrc(featuredImageResized)}`
     : `${siteMetadata.siteUrl}${peepoLogo}`;
   const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
-  console.log(image);
+
   let helmetMeta: MetaType = [
     // Social media metas.
     {

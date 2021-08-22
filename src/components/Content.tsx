@@ -41,6 +41,7 @@ const ContentDiv = styled.div`
   }
   & figure {
     & figcaption {
+      padding: 0 1rem;
       font-style: italic;
       font-size: 0.875rem;
       text-align: center;
@@ -49,6 +50,11 @@ const ContentDiv = styled.div`
 
       & > .text-base {
         font-size: 0.875rem !important;
+
+        & > code {
+          font-size: 0.75rem !important;
+          font-weight: 700;
+        }
       }
     }
   }
