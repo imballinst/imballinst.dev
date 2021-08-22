@@ -29,7 +29,7 @@ I will try to explain these issues using an example post from one of [ffxiv's In
 
 From the screenshot above, it is known that the post was posted 9 weeks ago (shortened to "9w"). That still doesn't explain the exact date and time. I tried to search the solution in Google and I found out that [there was a way to extract these information](https://www.followchain.org/exact-time-instagram-post)! We don't need to install anything, we can just use our favorite browser in our PC. What we need to do is, we right click on the date (in my example above, it was "9w"), then click "Inspect". It will open some kind of drawer in your browser like the picture below.
 
-![A drawer will open in your browser with possibly varying position (depending on the browser's configuration). The "9w" text is highlighted on the page. Inside the drawer (on the right), there is a <code>time</code> tag with <code>datetime</code> attribute. This attribute contains the ISO8601 string of the publish date and time. Source: <a href="https://www.instagram.com/p/CQRCJgqF-vB/">ffxiv Instagram post</a>.](images/ffxiv-estinien-devtools.png)
+![A drawer will open in your browser with possibly varying position (depending on the browser's configuration). The "9w" text is highlighted on the page. Inside the drawer (on the right), there is a <code>time</code> tag with <code>datetime</code> attribute. This attribute contains the ISO8601 string of the publish date and time. Source: <a href="https://www.instagram.com/p/CQRCJgqF-vB/">ffxiv's Instagram post</a>.](images/ffxiv-estinien-devtools.png)
 
 As seen from the screenshot aboev, inside the drawer, there will be a "selection" (indicated by the blue color). This is the element that we chose to inspect before. The content is as the following:
 
