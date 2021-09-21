@@ -12,10 +12,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@vanilla-extract/css": "1.6.0",
-    "@vanilla-extract/snowpack-plugin": "2.0.0",
     "astro": "0.20.7",
-    "patch-package": "6.4.7",
     "prettier": "2.4.1"
   }
 }
