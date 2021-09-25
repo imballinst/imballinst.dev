@@ -3,7 +3,7 @@ title: My Thoughts on Pursuing Higher Study
 description: I finished my Masters in December 2019 and here are my thoughts after the ride.
 publishDate: 2020-04-25T14:39:06.797Z
 heroImage: /assets/blog/my-thoughts-pursuing-higher-study/unimelb-law-building.jpg
-alt: University of Melbourne Law building
+alt: University of Melbourne Law building, which casts off a reflection of the surrounding sky.
 layout: '../../layouts/BlogPost.astro'
 ---
 
