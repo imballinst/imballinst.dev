@@ -27,7 +27,7 @@ const FRONTMATTER_MAP = {
     const fullPathToPost = `${PATH_TO_POSTS}/${slug}`;
 
     await Promise.all([
-      (async () => {
+      async () => {
         const file = await fs.readFile(`${fullPathToPost}/${slug}.md`, 'utf-8');
         const [, frontmatter, content] = file.split('---\n');
 
@@ -52,7 +52,7 @@ const FRONTMATTER_MAP = {
         ].join('\n');
 
         return fs.writeFile(`${fullPathToPost}.md`, newMarkdown);
-      })(),
+      },
       fs.copy(`${fullPathToPost}/images`, `${PATH_TO_BLOG_ASSETS}/${slug}`)
     ]);
   });
