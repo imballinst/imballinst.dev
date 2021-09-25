@@ -16,7 +16,9 @@ const FRONTMATTER_MAP = {
   date: 'publishDate',
   featuredimage: 'heroImage'
 };
-const IMAGE_EXTENSIONS = ['gif', 'png', 'jpg'](async () => {
+const IMAGE_EXTENSIONS = ['gif', 'png', 'jpg'];
+
+async function main() {
   const entries = await fs.readdir(PATH_TO_POSTS, {
     withFileTypes: true,
     encoding: 'utf-8'
@@ -50,7 +52,7 @@ const IMAGE_EXTENSIONS = ['gif', 'png', 'jpg'](async () => {
             if (hasImagesFolder) {
               pushedValue = pushedValue.replace(
                 'images/',
-                `/assets/blog/${slug}`
+                `/assets/blog/${slug}/`
               );
             } else {
               contentRegex = /\(([\w\d-]+\.(png|jpg|gif))\)/g;
@@ -97,4 +99,6 @@ const IMAGE_EXTENSIONS = ['gif', 'png', 'jpg'](async () => {
       return fs.writeFile(`${fullPathToPostDir}.md`, newMarkdown);
     })
   );
-})();
+}
+
+main();
