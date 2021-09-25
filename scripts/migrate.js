@@ -15,45 +15,52 @@ const DEFAULT_BLOG_FRONTMATTERS = {
 const FRONTMATTER_MAP = {
   date: 'publishDate',
   featuredimage: 'heroImage'
-}(async () => {
+};
+
+(async () => {
   const entries = await fs.readdir(PATH_TO_POSTS, {
     withFileTypes: true,
     encoding: 'utf-8'
   });
   const directories = entries.filter((entry) => entry.isDirectory());
 
-  const filesAndPaths = directories.map(async (directory) => {
-    const slug = directory.name;
-    const fullPathToPost = `${PATH_TO_POSTS}/${slug}`;
+  const filesAndPaths = await Promise.all(
+    directories.map(async (directory) => {
+      const slug = directory.name;
+      const fullPathToPost = `${PATH_TO_POSTS}/${slug}`;
 
-    await Promise.all([
-      async () => {
-        const file = await fs.readFile(`${fullPathToPost}/${slug}.md`, 'utf-8');
-        const [, frontmatter, content] = file.split('---\n');
+      await Promise.all([
+        async () => {
+          const file = await fs.readFile(
+            `${fullPathToPost}/${slug}.md`,
+            'utf-8'
+          );
+          const [, frontmatter, content] = file.split('---\n');
 
-        const frontmatterArray = frontmatter.split('\n');
-        const newFrontmatters = [];
+          const frontmatterArray = frontmatter.split('\n');
+          const newFrontmatters = [];
 
-        for (const item of frontmatterArray) {
-          const [key, value] = item.split(/:\s?/);
-          const mappedKey = FRONTMATTER_MAP[key] || key;
+          for (const item of frontmatterArray) {
+            const [key, value] = item.split(/:\s?/);
+            const mappedKey = FRONTMATTER_MAP[key] || key;
 
-          if (DEFAULT_BLOG_FRONTMATTERS[mappedKey] !== undefined) {
-            const pushedValue = DEFAULT_BLOG_FRONTMATTERS[mappedKey] || value;
-            newFrontmatters.push(`${mappedKey}: ${pushedValue}`);
+            if (DEFAULT_BLOG_FRONTMATTERS[mappedKey] !== undefined) {
+              const pushedValue = DEFAULT_BLOG_FRONTMATTERS[mappedKey] || value;
+              newFrontmatters.push(`${mappedKey}: ${pushedValue}`);
+            }
           }
-        }
 
-        const newMarkdown = [
-          '---',
-          frontmatter.join('\n'),
-          '---',
-          content
-        ].join('\n');
+          const newMarkdown = [
+            '---',
+            frontmatter.join('\n'),
+            '---',
+            content
+          ].join('\n');
 
-        return fs.writeFile(`${fullPathToPost}.md`, newMarkdown);
-      },
-      fs.copy(`${fullPathToPost}/images`, `${PATH_TO_BLOG_ASSETS}/${slug}`)
-    ]);
-  });
+          return fs.writeFile(`${fullPathToPost}.md`, newMarkdown);
+        },
+        fs.copy(`${fullPathToPost}/images`, `${PATH_TO_BLOG_ASSETS}/${slug}`)
+      ]);
+    })
+  );
 })();
