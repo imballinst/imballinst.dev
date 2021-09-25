@@ -1,10 +1,14 @@
 ---
+templateKey: blog-post
 title: My Thoughts on Pursuing Higher Study
+date: 2020-04-25T14:39:06.797Z
+featuredpost: false
+featuredimage: unimelb-law-building.jpg
+visibility: public
 description: I finished my Masters in December 2019 and here are my thoughts after the ride.
-publishDate: 2020-04-25T14:39:06.797Z
-heroImage: /assets/blog/my-thoughts-pursuing-higher-study/unimelb-law-building.jpg
-alt: University of Melbourne Law building, which casts off a reflection of the surrounding sky.
-layout: '../../layouts/BlogPost.astro'
+tags:
+  - life
+  - education
 ---
 
 This story is split into 3 parts. The first part is the preparation, the second part is the study itself, and the last part is the summary.
@@ -21,7 +25,7 @@ There were 2 reasons that contributed to my final decision to pursue higher stud
 
 ### Looking for Options
 
-![Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.](/assets/blog/my-thoughts-pursuing-higher-study/looking-for-options.jpg)
+![Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.](looking-for-options.jpg)
 
 The first thing I did was listing universities that I wanted, I could apply, and I could afford. I didn't want to do another subject other than Information Technology, so I was pretty much locked on it. Computer Science came close but I threw it out of the window because I couldn't really do mathematics and didn't want to relive the undergraduate pain once more.
 
@@ -35,7 +39,7 @@ Tuition fee and living cost... maybe not so much of a yep. At that time, for eac
 
 ### A Mountain to Climb
 
-![Mountain... or mountains? Photo by Julian Zett on Unsplash.](/assets/blog/my-thoughts-pursuing-higher-study/mountain-to-climb.jpg)
+![Mountain... or mountains? Photo by Julian Zett on Unsplash.](mountain-to-climb.jpg)
 
 The hardest part of the preparation was passing the IELTS score needed to enroll in the University of Melbourne's School of Engineering. During that time, the minimum overall score was 6.5, with no aspect lower than 6.
 
@@ -71,7 +75,7 @@ However, fate allowed my Visa to go through, and so I departed for Melbourne in 
 
 ## Hello, Melbourne!
 
-![University of Melbourne Law School's Building has a pleasant surroundings. Photo by me.](/assets/blog/my-thoughts-pursuing-higher-study/unimelb-law-building.jpg)
+![University of Melbourne Law School's Building has a pleasant surroundings. Photo by me.](unimelb-law-building.jpg)
 
 Now, just because I took a photo of the Law Building, it doesn't mean that I was enrolled in that course. Actually, it is one of the good photos that I took during my stay there. This is because I didn't take photos quite often... and of course, I'm not a good photographer either.
 
@@ -83,7 +87,7 @@ I don't think I regret renting that place. Sure, the cost was high, but I saved 
 
 ### Living Style
 
-![Bunnies at the pet shop. Photo by me.](/assets/blog/my-thoughts-pursuing-higher-study/one-of-the-most-gorgeous-rabbits.jpg)
+![Bunnies at the pet shop. Photo by me.](one-of-the-most-gorgeous-rabbits.jpg)
 
 I had a boring living style. Each weekend, I went to [Queen Victoria Market](https://qvm.com.au/) to get some seafood, eggs, fruits, and veggies. There was also a pet shop, so it was a great opportunity for me to see bunnies. After that, I went to the supermarket in CBD to get products that were not available in QV Market. Or maybe, they were available but I was too lazy to find it!
 
@@ -186,7 +190,7 @@ I find it really weird when people are talking about burnout in their career, bu
 
 ### Facilities
 
-![Ballieu Library 3rd floor. Source: https://improvision.com.au/project/university-of-melbourne-baillieu-library.](/assets/blog/my-thoughts-pursuing-higher-study/ballieu-library-3rd-floor.jpg)
+![Ballieu Library 3rd floor. Source: https://improvision.com.au/project/university-of-melbourne-baillieu-library.](ballieu-library-3rd-floor.jpg)
 
 The facilities in University of Melbourne were awesome. Libraries were the most exceptional for me. Lightning fast internet speed, individual and group spaces, and water taps were all available inside the building. Students could access religious facilities using their Student ID card, which was really handy. Classes were also equipped with adjustable lightings, so presentations had better visibility.
 
