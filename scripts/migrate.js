@@ -13,8 +13,8 @@ const DEFAULT_BLOG_FRONTMATTERS = {
   layout: '../../layouts/BlogPost.astro'
 };
 const FRONTMATTER_MAP = {
-  date: 'publishDate',
-  featuredimage: 'heroImage'
+  publishDate: 'date',
+  heroImage: 'featuredimage'
 };
 const IMAGE_EXTENSIONS = ['gif', 'png', 'jpg'];
 
@@ -33,39 +33,50 @@ async function main() {
       const file = await fs.readFile(`${fullPathToPostDir}/index.md`, 'utf-8');
       const [, frontmatter, content] = file.split('---\n');
 
-      const frontmatterArray = frontmatter.split('\n');
+      const previousFrontmatter = Object.fromEntries(
+        frontmatter
+          .split('\n')
+          .map((item) => item.split(': '))
+          .filter((arr) => arr.length === 2)
+      );
       const newFrontmatters = [];
       // By default, we expect previous blog posts have `images/` folder.
       let hasImagesFolder = true;
       let contentRegex = /\(images\/([\w\d-]+\.(png|jpg|gif))\)/g;
 
-      for (const item of frontmatterArray) {
-        const [key, value] = item.split(/:\s?/);
-        const mappedKey = FRONTMATTER_MAP[key] || key;
+      for (const key in DEFAULT_BLOG_FRONTMATTERS) {
+        const previousFrontmatterValue = previousFrontmatter[key];
+        const portedKey = FRONTMATTER_MAP[key];
+        let pushedFrontmatter;
 
-        if (DEFAULT_BLOG_FRONTMATTERS[mappedKey] !== undefined) {
-          let pushedValue = DEFAULT_BLOG_FRONTMATTERS[mappedKey] || value;
+        if (portedKey !== undefined) {
+          pushedFrontmatter = previousFrontmatter[portedKey];
 
-          if (key === 'featuredimage') {
-            hasImagesFolder = value.startsWith('images/');
+          if (portedKey === 'featuredimage') {
+            hasImagesFolder = pushedFrontmatter.startsWith('images/');
 
             if (hasImagesFolder) {
-              pushedValue = pushedValue.replace(
+              pushedFrontmatter = pushedFrontmatter.replace(
                 'images/',
                 `/assets/blog/${slug}/`
               );
             } else {
               contentRegex = /\(([\w\d-]+\.(png|jpg|gif))\)/g;
-              pushedValue = `/assets/blog/${pushedValue}`;
+              pushedFrontmatter = `/assets/blog/${slug}/${pushedFrontmatter}`;
             }
           }
+        } else {
+          pushedFrontmatter =
+            previousFrontmatterValue || DEFAULT_BLOG_FRONTMATTERS[key];
+        }
 
-          newFrontmatters.push(`${mappedKey}: ${pushedValue}`);
+        if (pushedFrontmatter !== undefined) {
+          newFrontmatters.push(`${key}: ${pushedFrontmatter}`);
         }
       }
 
       if (hasImagesFolder) {
-        fs.copy(
+        await fs.copy(
           `${fullPathToPostDir}/images`,
           `${PATH_TO_BLOG_ASSETS}/${slug}`
         );
@@ -93,12 +104,15 @@ async function main() {
         '---',
         newFrontmatters.join('\n'),
         '---',
-        content.replace(contentRegex, `/assets/blog/$1`)
+        content.replace(contentRegex, `(/assets/blog/${slug}/$1)`)
       ].join('\n');
 
-      return fs.writeFile(`${fullPathToPostDir}.md`, newMarkdown);
+      return await Promise.all([
+        fs.writeFile(`${fullPathToPostDir}.md`, newMarkdown),
+        fs.rm(fullPathToPostDir, { recursive: true })
+      ]);
     })
   );
 }
 
-main();
+(async () => await main())();
