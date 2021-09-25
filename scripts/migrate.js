@@ -37,11 +37,11 @@ async function main() {
       const newFrontmatters = [];
       // By default, we expect previous blog posts have `images/` folder.
       let hasImagesFolder = true;
+      let contentRegex = /\(images\/([\w\d-]+\.(png|jpg|gif))\)/g;
 
       for (const item of frontmatterArray) {
         const [key, value] = item.split(/:\s?/);
         const mappedKey = FRONTMATTER_MAP[key] || key;
-        let contentRegex = /\(images\/([\w\d-]+\.(png|jpg|gif))\)/g;
 
         if (DEFAULT_BLOG_FRONTMATTERS[mappedKey] !== undefined) {
           let pushedValue = DEFAULT_BLOG_FRONTMATTERS[mappedKey] || value;
@@ -83,7 +83,7 @@ async function main() {
           images.map((image) =>
             fs.copy(
               `${fullPathToPostDir}/${image.name}`,
-              `${PATH_TO_BLOG_ASSETS}/${slug}`
+              `${PATH_TO_BLOG_ASSETS}/${slug}/${image.name}`
             )
           )
         );
@@ -93,7 +93,7 @@ async function main() {
         '---',
         newFrontmatters.join('\n'),
         '---',
-        content.replace(/images\/([\w\d-]+\.(png|jpg|gif))/g, `/assets/blog/$1`)
+        content.replace(contentRegex, `/assets/blog/$1`)
       ].join('\n');
 
       return fs.writeFile(`${fullPathToPostDir}.md`, newMarkdown);
