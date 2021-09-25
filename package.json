@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "astro": "0.20.7",
+    "fs-extra": "10.0.0",
     "prettier": "2.4.1",
     "tailwindcss": "2.2.15"
   }
