@@ -45,7 +45,7 @@ Since excessive work hours were out of the window, probably it was something rel
 
 ## Closing words
 
-Burnout is not a nice thing to experience. Although burnout is sometimes (if not often) caused by work-life imbalance, other factors can also contribute to making it happen, such as unfit culture and excessive workload (which resulted in energy depletion). There is a subtle but clear boundary between frustration and burnout, so don't forget to try practicing mindfulness to sense the "danger". Delegation and saying "no" can also be utilized to maintain our sanity.
+Burnout is not a nice thing to experience. Although burnout is sometimes (if not often) caused by work-life imbalance, other factors can also contribute to making it happen, such as unfit culture and excessive workload (which resulted in energy depletion). There is a subtle but clear line between frustration and burnout, so don't forget to try practicing mindfulness to sense the "danger". Delegation and saying "no" can also be utilized to maintain our sanity.
 
 If you are a manager, don't forget to put yourselves in your team members' shoes. Try to see if there is a flaw in the team. If we don't admit there is a problem, we won't be able to fix it because we are actively denying it. Telling our team to "assume positive intent" doesn't help if they have been facing the problem for more than a year and they don't see noticeable improvements.
 
