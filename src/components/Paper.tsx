@@ -16,7 +16,6 @@ export function Paper({
   elevation = 0,
   border
 }: PaperProps) {
-  console.log(border);
   return (
     <Component
       className={cls(
