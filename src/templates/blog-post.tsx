@@ -41,7 +41,7 @@ export const BlogPostTemplate = ({
   helmet
 }: BlogPostTemplateProps) => {
   const PostContent = contentComponent || Content;
-
+  
   return (
     <SectionWrapper>
       <Paper className="flex-col">
@@ -53,7 +53,7 @@ export const BlogPostTemplate = ({
           className={`${peepoTheme.textSizes.small} mt-1 mb-8 text-gray-600`}
         >
           <span>{date}</span>
-          {date !== modifiedDate && (
+          {modifiedDate !== 'Invalid date' && date !== modifiedDate && (
             <>
               <Separator>|</Separator>
               <span>Last modified {modifiedDate}</span>
