@@ -13,7 +13,9 @@ tags:
 
 ![<span>A campfire, with the fire slowly becoming smaller which eventually will extinguish. Photo by <a href="https://unsplash.com/@justinchvnl?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Justin Chavanelle</a> on <a href="https://unsplash.com/s/photos/flame-snuff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>](images/justin-chavanelle-qp-IzdXgKDs-unsplash.jpg)
 
-Well, it's time. There were around 4 warnings this year and 1 warning last year where I felt the "burnout" slowly crept up on me. However, they were mostly just frustrations and I still had my motivation running (although I admit it was not as high as I usually had). However, recently, I felt very, very unmotivated. I turned on my personal laptop in the morning before my work hours, browsed Twitter, browsed YouTube, browsed Reddit, felt empty, then I went to sleep (again). It wasn't even "unproductive", I probably would classify it as counter-productive.
+Well, it's time. There were around 4 warnings this year and 1 warning last year where I felt the "burnout" slowly crept up on me. However, they were mostly just frustrations and I still had my motivation running (although I admit it was not as high as I usually had).
+
+Recently, I felt very, very unmotivated. I turned on my personal laptop in the morning before my work hours, browsed Twitter, browsed YouTube, browsed Reddit, felt empty, then I went to sleep (again). It wasn't even "unproductive", I probably would classify it as counter-productive.
 
 There were times where I felt frustrated and there were times I thought I was burned out. Now, I know the difference between these two. Or, at least I think I know.
 
