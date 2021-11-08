@@ -8,7 +8,7 @@ visibility: public
 description: This post covers a step-by-step guide to publish a library to the NPM registry, as well as things to consider before doing so.
 tags:
   - software engineering
-  - javascript2
+  - javascript
 ---
 
 ![A cardboard with the NPM logo. Also, yes, hopefully, I won't hurt your eyes with my photo editing skills.](images/npm-package.jpg)
