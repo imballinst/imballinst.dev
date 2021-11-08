@@ -11,7 +11,7 @@ tags:
   - javascript
 ---
 
-![A cardboard with the NPM logo. Also, yes, hopefully, I won't hurt your eyes with my photo editing skills.](images/npm-package.jpg)
+![A cardboard with the NPM logo. Also, yes, hopefully, I don't hurt your eyes with my photo editing skills.](images/npm-package.jpg)
 
 Hey! So, you want to publish your library to the NPM registry? Nice! Publishing a library to a public registry has a lot of positives and probably 0 negatives, as long as your library doesn't contain malicious code. The positives are as the following (this list is not exhaustive):
 
