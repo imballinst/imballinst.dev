@@ -46,7 +46,7 @@ After finishing all that, you can log in in your CLI by doing `npm login`:
 ```shell{outputLines: 2-6}
 npm login
 Username: your-username
-Password: 
+Password:
 Email: (this IS public) your-username@gmail.com
 Enter one-time password from your authenticator app: 123456
 Logged in as your-username on https://registry.npmjs.org/.
@@ -114,7 +114,7 @@ Publishing your library to NPM registry is quite straightforward. All you need t
 npm publish
 ```
 
-If that command is successful, the next time you do `yarn add test-sum` in a project (with `package.json` inside it), it will fetch the `test-sum` library from the NPM registry. There you have it, your own library!
+If that command is successful, the next time you do `yarn add test-sum` in a project (with `package.json` inside it), it will fetch the `test-sum` library from the NPM registry. There you have it, your own library published!
 
 # Advanced steps
 
@@ -145,7 +145,7 @@ Let's say that there have been N commits since last year (where the maintainer d
 
 When clicked, we will be shown the repository state when that version was published.
 
-![After we click on the version link, we will be shown a page where we can browse the repository. However, instead of showing the current state of files, it will show the files that were present when that version was published.](images/nextjs-repo-browse-files.jpg)
+![After we click on the version link, we will be shown a page where we can browse the repository. However, instead of showing the current state of files, it will show the files that were present when that version was published.](images/nextjs-repo-revisit.jpg)
 
 Using the same fashion, using Git CLI, we can also do the same to browse the files in version `9.3.6` locally:
 
@@ -163,10 +163,10 @@ However, sometimes we want to cut down the uploaded package even more. Ideally, 
   examples/
 + docs/
 + notes/
-+ 
++
 + .prettierignore
 + .prettierrc
-+ 
++
 + jest.config.js
 ```
 
@@ -179,57 +179,57 @@ For further reading on `.npmignore`, go to ["Keeping files out of your package" 
 To check whether our `.npmignore` will result the package that matches our expectation, we can do `npm publish --dry-run`. For example, if I execute that command in [`count-up-down`](https://github.com/imballinst/count-up-down), I will get this as an output:
 
 ```
-npm notice 
+npm notice
 npm notice 📦
-npm notice === Tarball Contents === 
-npm notice 1.1kB LICENSE                               
-npm notice 202B  babel.config.js                       
-npm notice 3.7kB dist/cjs/common/calculate.js          
-npm notice 3.6kB dist/esm/common/calculate.js          
-npm notice 666B  dist/count-up-down-node-esm.min.js    
-npm notice 837B  dist/count-up-down-node.min.js        
-npm notice 1.5kB dist/count-up-down.min.js             
-npm notice 536B  dist/cjs/browser/index.js             
-npm notice 274B  dist/cjs/node/index.js                
-npm notice 438B  dist/esm/browser/index.js             
-npm notice 49B   dist/esm/node/index.js                
-npm notice 1.7kB dist/cjs/browser/render.js            
-npm notice 1.5kB dist/esm/browser/render.js            
-npm notice 77B   dist/cjs/common/types.js              
-npm notice 11B   dist/esm/common/types.js              
-npm notice 1.7kB package.json                          
-npm notice 388B  tsconfig.build-cjs.json               
-npm notice 396B  tsconfig.build-esm.json               
-npm notice 500B  tsconfig.json                         
-npm notice 3.0kB README.md                             
-npm notice 756B  plugins/browserslist.ts               
-npm notice 346B  scripts/build/node/build-esm.ts       
-npm notice 412B  scripts/build/browser/build.ts        
-npm notice 342B  scripts/build/node/build.ts           
-npm notice 575B  dist/types/common/calculate.d.ts      
+npm notice === Tarball Contents ===
+npm notice 1.1kB LICENSE
+npm notice 202B  babel.config.js
+npm notice 3.7kB dist/cjs/common/calculate.js
+npm notice 3.6kB dist/esm/common/calculate.js
+npm notice 666B  dist/count-up-down-node-esm.min.js
+npm notice 837B  dist/count-up-down-node.min.js
+npm notice 1.5kB dist/count-up-down.min.js
+npm notice 536B  dist/cjs/browser/index.js
+npm notice 274B  dist/cjs/node/index.js
+npm notice 438B  dist/esm/browser/index.js
+npm notice 49B   dist/esm/node/index.js
+npm notice 1.7kB dist/cjs/browser/render.js
+npm notice 1.5kB dist/esm/browser/render.js
+npm notice 77B   dist/cjs/common/types.js
+npm notice 11B   dist/esm/common/types.js
+npm notice 1.7kB package.json
+npm notice 388B  tsconfig.build-cjs.json
+npm notice 396B  tsconfig.build-esm.json
+npm notice 500B  tsconfig.json
+npm notice 3.0kB README.md
+npm notice 756B  plugins/browserslist.ts
+npm notice 346B  scripts/build/node/build-esm.ts
+npm notice 412B  scripts/build/browser/build.ts
+npm notice 342B  scripts/build/node/build.ts
+npm notice 575B  dist/types/common/calculate.d.ts
 npm notice 5.3kB src/common/__tests__/calculate.test.ts
-npm notice 3.6kB src/common/calculate.ts               
-npm notice 197B  scripts/constants.ts                  
-npm notice 500B  dist/types/browser/index.d.ts         
-npm notice 49B   dist/types/node/index.d.ts            
-npm notice 76B   scripts/build/index.ts                
-npm notice 528B  src/browser/index.ts                  
-npm notice 49B   src/node/index.ts                     
-npm notice 796B  dist/types/browser/render.d.ts        
-npm notice 1.6kB src/browser/render.ts                 
-npm notice 312B  dist/types/common/types.d.ts          
-npm notice 300B  src/common/types.ts                   
-npm notice 768B  scripts/ci/validate-docs.ts           
-npm notice 258B  .github/workflows/validate-docs.yml   
-npm notice === Tarball Details === 
-npm notice name:          count-up-down                           
-npm notice version:       0.2.0                                   
-npm notice package size:  10.7 kB                                 
-npm notice unpacked size: 39.0 kB                                 
+npm notice 3.6kB src/common/calculate.ts
+npm notice 197B  scripts/constants.ts
+npm notice 500B  dist/types/browser/index.d.ts
+npm notice 49B   dist/types/node/index.d.ts
+npm notice 76B   scripts/build/index.ts
+npm notice 528B  src/browser/index.ts
+npm notice 49B   src/node/index.ts
+npm notice 796B  dist/types/browser/render.d.ts
+npm notice 1.6kB src/browser/render.ts
+npm notice 312B  dist/types/common/types.d.ts
+npm notice 300B  src/common/types.ts
+npm notice 768B  scripts/ci/validate-docs.ts
+npm notice 258B  .github/workflows/validate-docs.yml
+npm notice === Tarball Details ===
+npm notice name:          count-up-down
+npm notice version:       0.2.0
+npm notice package size:  10.7 kB
+npm notice unpacked size: 39.0 kB
 npm notice shasum:        fcf0ef5db00cedeb1ed46bd6df3739e5aa68a017
 npm notice integrity:     sha512-QWvrS22qHyG0/[...]AnWolfiyjsOmQ==
-npm notice total files:   39                                      
-npm notice 
+npm notice total files:   39
+npm notice
 + count-up-down@0.2.0
 ```
 

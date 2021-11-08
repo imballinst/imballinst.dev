@@ -14,6 +14,13 @@ const ContentDiv = styled.div`
   & hr {
     margin-bottom: ${peepoTheme.spacing(4)};
   }
+  & h1,
+  h2,
+  h3 {
+    & > code {
+      font-size: unset;
+    }
+  }
   & blockquote {
     background: #f7f7f7;
     font-style: italic;
