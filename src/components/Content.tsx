@@ -69,7 +69,7 @@ const ContentDiv = styled.div`
   ol,
   ul {
     list-style: decimal;
-    margin-left: ${peepoTheme.spacing(4)};
+    margin-left: ${peepoTheme.spacing(8)};
     margin-bottom: ${peepoTheme.spacing(4)};
 
     li {
