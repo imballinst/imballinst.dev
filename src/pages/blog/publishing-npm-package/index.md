@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: How to Publish Your Library to NPM Registry
-date: 2021-11-07T01:06:48.075Z
+date: 2021-11-08T11:27:52.899Z
 featuredpost: false
 featuredimage: images/npm-package.jpg
 visibility: public
