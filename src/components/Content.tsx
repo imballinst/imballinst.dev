@@ -44,6 +44,7 @@ const ContentDiv = styled.div`
     color: ${peepoTheme.colorSets.blue.main.hex};
     &:hover {
       color: ${peepoTheme.colorSets.blue.dark.hex};
+      text-decoration: underline;
     }
   }
   & figure {
