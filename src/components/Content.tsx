@@ -14,6 +14,13 @@ const ContentDiv = styled.div`
   & hr {
     margin-bottom: ${peepoTheme.spacing(4)};
   }
+  & h1,
+  h2,
+  h3 {
+    & > code {
+      font-size: unset;
+    }
+  }
   & blockquote {
     background: #f7f7f7;
     font-style: italic;
@@ -37,6 +44,7 @@ const ContentDiv = styled.div`
     color: ${peepoTheme.colorSets.blue.main.hex};
     &:hover {
       color: ${peepoTheme.colorSets.blue.dark.hex};
+      text-decoration: underline;
     }
   }
   & figure {
@@ -44,6 +52,7 @@ const ContentDiv = styled.div`
       padding: 0 1rem;
       font-style: italic;
       font-size: 0.875rem;
+      color: rgba(0, 0, 0, 0.6);
       text-align: center;
       white-space: normal;
       word-wrap: break-word;
@@ -61,7 +70,7 @@ const ContentDiv = styled.div`
   ol,
   ul {
     list-style: decimal;
-    margin-left: ${peepoTheme.spacing(4)};
+    margin-left: ${peepoTheme.spacing(8)};
     margin-bottom: ${peepoTheme.spacing(4)};
 
     li {
@@ -93,6 +102,12 @@ const ContentDiv = styled.div`
         padding: ${peepoTheme.spacing(2)};
       }
     }
+  }
+  & a > code[class*='language-'] {
+    padding: 0.1em 0.3em;
+    border-radius: 0;
+    color: inherit;
+    background: #f9f2f4;
   }
 `;
 
