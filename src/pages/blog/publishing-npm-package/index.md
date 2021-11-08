@@ -172,7 +172,7 @@ However, sometimes we want to cut down the size of the uploaded package even mor
 
 Why did I exclude all of these files? Because these files are only for development and documentation purposes. The published package only needs the entry file and files linked to it. It doesn't need all of the development-enhancing things (such as Prettier and Jest configurations) and examples.
 
-For further reading on `.npmignore`, go to ["Keeping files out of your package" in NPM documentation](https://docs.npmjs.com/cli/v7/using-npm/developers#keeping-files-out-of-your-package).
+For further reading on `.npmignore`, you can visit ["Keeping files out of your package" in NPM documentation](https://docs.npmjs.com/cli/v7/using-npm/developers#keeping-files-out-of-your-package).
 
 ## Do `npm publish --dry-run`
 
@@ -246,7 +246,7 @@ $ find node_modules/count-up-down -type f | wc -l
 39
 ```
 
-Since the result is the same (39), then we can verify that whatever shows up in `npm publish --dry-run` will also exist after we install our dependencies. For further reading on `--dry-run` flag, go to the [`npm publish` documentation](https://docs.npmjs.com/cli/v7/commands/npm-publish#dry-run).
+Since the result is the same (39), then we can verify that whatever shows up in `npm publish --dry-run` will also exist after we install our dependencies. For further reading on `--dry-run` flag, you can visit the [`npm publish` documentation](https://docs.npmjs.com/cli/v7/commands/npm-publish#dry-run).
 
 ## Do `yarn link`
 
@@ -261,7 +261,7 @@ $ yarn link package-name
 
 You can replace `package-name` with the `name` field of the `package.json`. For example, if we do `yarn link` on the folder where the `package.json` has the name `test-sum`, then in another project, we will need to do `yarn link test-sum`. What this will do is that, it will install the linked project without changing both `package.json` and `yarn.lock`. This way, we can do a quick smoke test locally before publishing our library.
 
-For further reading on the `yarn link` command, go to the [`yarn link` documentation](https://classic.yarnpkg.com/en/docs/cli/link). The `npm` version of the command, `npm link`, also has the same behavior.
+For further reading on the `yarn link` command, you can visit the [`yarn link` documentation](https://classic.yarnpkg.com/en/docs/cli/link). The `npm` version of the command, `npm link`, also has the same behavior.
 
 # Closing words
 

@@ -52,6 +52,7 @@ const ContentDiv = styled.div`
       padding: 0 1rem;
       font-style: italic;
       font-size: 0.875rem;
+      color: rgba(0, 0, 0, 0.6);
       text-align: center;
       white-space: normal;
       word-wrap: break-word;
@@ -101,6 +102,12 @@ const ContentDiv = styled.div`
         padding: ${peepoTheme.spacing(2)};
       }
     }
+  }
+  & a > code[class*='language-'] {
+    padding: 0.1em 0.3em;
+    border-radius: 0;
+    color: inherit;
+    background: #f9f2f4;
   }
 `;
 
