@@ -15,9 +15,9 @@ tags:
 
 Hey! So, you want to publish your library to the NPM registry? Nice! Publishing a library to a public registry has a lot of positives and probably 0 negatives, as long as your library doesn't contain malicious code. The positives are as the following (this list is not exhaustive):
 
-- You can use your library in your projects without having to copy-paste them locally
-- You build your brand (if it's a public library) because it will be linked to your public Git repository
-- You can practice doing [semantic versioning](https://semver.org/) (if you plan to maintain it)
+- You can use your library in your projects without having to copy-paste them locally.
+- You build your brand (if it's a public library) because it will be linked to your public Git repository.
+- You can practice doing [semantic versioning](https://semver.org/) (if you plan to maintain it).
 
 You probably don't have to worry about having to maintain it, because you don't have an obligation to maintain it. It's like what they said about side projects, a lot of them are unfinished and that's okay.
 
@@ -259,7 +259,7 @@ $ yarn link
 $ yarn link package-name
 ```
 
-You can replace `package-name` with the `name` field of the `package.json`. For example, if we do `yarn link` on the folder where the `package.json` has the name `test-sum`, then in another project, we will need to do `yarn link test-sum`.
+You can replace `package-name` with the `name` field of the `package.json`. For example, if we do `yarn link` on the folder where the `package.json` has the name `test-sum`, then in another project, we will need to do `yarn link test-sum`. What this will do is that, it will install the linked project without changing both `package.json` and `yarn.lock`. This way, we can do a quick smoke test locally before publishing our library.
 
 For further reading on the `yarn link` command, go to the [`yarn link` documentation](https://classic.yarnpkg.com/en/docs/cli/link). The `npm` version of the command, `npm link`, also has the same behavior.
 
