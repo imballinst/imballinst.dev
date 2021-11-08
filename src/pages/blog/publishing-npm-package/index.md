@@ -172,29 +172,97 @@ However, sometimes we want to cut down the uploaded package even more. Ideally, 
 
 Why did I exclude all of these files? Because these files are only for development and documentation purposes. The published package only needs the entry file and files linked to it. It doesn't need all of the development-enhancing things (such as Prettier and Jest configurations) and examples.
 
-For further reading on `.npmignore`, please read more about ["Keeping files out of your package" in NPM documentation](https://docs.npmjs.com/cli/v7/using-npm/developers#keeping-files-out-of-your-package).
+For further reading on `.npmignore`, go to ["Keeping files out of your package" in NPM documentation](https://docs.npmjs.com/cli/v7/using-npm/developers#keeping-files-out-of-your-package).
 
 ## Do `npm publish --dry-run`
 
-Before publishing, perhaps it can be a good idea to take a look to your project folder. What if you accidentally included a sensitive information in an environment file, say, `.env` and you forgot to include it in `.gitignore`?
+To check whether our `.npmignore` will result the package that matches our expectation, we can do `npm publish --dry-run`. For example, if I execute that command in [`count-up-down`](https://github.com/imballinst/count-up-down), I will get this as an output:
 
-<!-- TODO -->
+```
+npm notice 
+npm notice 📦
+npm notice === Tarball Contents === 
+npm notice 1.1kB LICENSE                               
+npm notice 202B  babel.config.js                       
+npm notice 3.7kB dist/cjs/common/calculate.js          
+npm notice 3.6kB dist/esm/common/calculate.js          
+npm notice 666B  dist/count-up-down-node-esm.min.js    
+npm notice 837B  dist/count-up-down-node.min.js        
+npm notice 1.5kB dist/count-up-down.min.js             
+npm notice 536B  dist/cjs/browser/index.js             
+npm notice 274B  dist/cjs/node/index.js                
+npm notice 438B  dist/esm/browser/index.js             
+npm notice 49B   dist/esm/node/index.js                
+npm notice 1.7kB dist/cjs/browser/render.js            
+npm notice 1.5kB dist/esm/browser/render.js            
+npm notice 77B   dist/cjs/common/types.js              
+npm notice 11B   dist/esm/common/types.js              
+npm notice 1.7kB package.json                          
+npm notice 388B  tsconfig.build-cjs.json               
+npm notice 396B  tsconfig.build-esm.json               
+npm notice 500B  tsconfig.json                         
+npm notice 3.0kB README.md                             
+npm notice 756B  plugins/browserslist.ts               
+npm notice 346B  scripts/build/node/build-esm.ts       
+npm notice 412B  scripts/build/browser/build.ts        
+npm notice 342B  scripts/build/node/build.ts           
+npm notice 575B  dist/types/common/calculate.d.ts      
+npm notice 5.3kB src/common/__tests__/calculate.test.ts
+npm notice 3.6kB src/common/calculate.ts               
+npm notice 197B  scripts/constants.ts                  
+npm notice 500B  dist/types/browser/index.d.ts         
+npm notice 49B   dist/types/node/index.d.ts            
+npm notice 76B   scripts/build/index.ts                
+npm notice 528B  src/browser/index.ts                  
+npm notice 49B   src/node/index.ts                     
+npm notice 796B  dist/types/browser/render.d.ts        
+npm notice 1.6kB src/browser/render.ts                 
+npm notice 312B  dist/types/common/types.d.ts          
+npm notice 300B  src/common/types.ts                   
+npm notice 768B  scripts/ci/validate-docs.ts           
+npm notice 258B  .github/workflows/validate-docs.yml   
+npm notice === Tarball Details === 
+npm notice name:          count-up-down                           
+npm notice version:       0.2.0                                   
+npm notice package size:  10.7 kB                                 
+npm notice unpacked size: 39.0 kB                                 
+npm notice shasum:        fcf0ef5db00cedeb1ed46bd6df3739e5aa68a017
+npm notice integrity:     sha512-QWvrS22qHyG0/[...]AnWolfiyjsOmQ==
+npm notice total files:   39                                      
+npm notice 
++ count-up-down@0.2.0
+```
 
-## Do `npm link`
+Notice the number of files in the package is `39`. Now, let's verify it! I will be using this [`examples/node`](https://github.com/imballinst/count-up-down/tree/main/examples/node) folder of the same repository. First, let's do this command to install the dependencies:
 
-<!-- TODO -->
+```shell
+yarn
+```
 
-- [ ] You'll need a NPM creds, log in or create one
-- [ ] `npm init` or `yarn init`, probably doesn't matter. As long as there is `package.json` (and optionally lockfile if you use deps)
-- [ ] Create `index.js`
-- [ ] In the index file, set `main`
-- [ ] Set LICENSE
-- [ ] Set version with `npm version x.x.x` (this will also create a new tag), then `npm publish`
-- [ ] Push to your Git repository the code and also `git push <remote> --tags` to push the tag
-- [ ] Optionally, create a release note from the pushed tag
+After that, we will execute this command to get the number of files in the `node_modules/count-up-down` folder:
 
-Things to look out for:
+```shell{outputLines: 2}
+find node_modules/count-up-down -type f | wc -l
+39
+```
 
-- [ ] Check `.npmignore` to reduce unpacked library size
-- [ ] Do `npm publish --dry-run` to see which files and folders are uploaded to the registry. Not all files and folders need to be uploaded
-- [ ] Do `npm link` or `yarn link` to test the package locally
+Since the result is the same (39), then we can verify that whatever shows up in `npm publish --dry-run` will also exist after we install our dependencies. For further reading on `--dry-run` flag, go to the [`npm publish` documentation](https://docs.npmjs.com/cli/v7/commands/npm-publish#dry-run).
+
+## Do `yarn link`
+
+The `yarn link` is used to link a package locally to be used in another project. The set of commands is as the following:
+
+```shell
+# In the package folder, do this:
+yarn link
+# In another project (a project is a folder with `package.json`), do this:
+yarn link package-name
+```
+
+You can replace `package-name` with the `name` field of the `package.json`. For example, if we do `yarn link` on the folder where the `package.json` has the name `test-sum`, then in another project, we will need to do `yarn link test-sum`.
+
+For further reading on `yarn link` command, go to the [`yarn link` documentation](https://classic.yarnpkg.com/en/docs/cli/link). The `npm` version of the command, `npm link`, also has the same behavior.
+
+# Closing words
+
+I hope this guide is useful for you. If there are things that are not correct or need clarification, feel free to contact me through my social accounts. Thanks for reading!
