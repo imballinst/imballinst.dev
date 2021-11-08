@@ -1,19 +1,19 @@
 ---
 templateKey: blog-post
-title: How to Publish Your Library to NPM Registry
+title: How to Publish Your Library to npm Registry
 date: 2021-11-08T11:27:52.899Z
 featuredpost: false
 featuredimage: images/npm-package.jpg
 visibility: public
-description: This post covers a step-by-step guide to publish a library to the NPM registry, as well as things to consider before doing so.
+description: This post covers a step-by-step guide to publish a library to the npm registry, as well as things to consider before doing so.
 tags:
   - software engineering
   - javascript
 ---
 
-![A cardboard with the NPM logo. Also, yes, hopefully, I don't hurt your eyes with my photo editing skills.](images/npm-package.jpg)
+![A cardboard with the npm logo. Also, yes, hopefully, I don't hurt your eyes with my photo editing skills.](images/npm-package.jpg)
 
-Hey! So, you want to publish your library to the NPM registry? Nice! Publishing a library to a public registry has a lot of positives and probably 0 negatives, as long as your library doesn't contain malicious code. The positives are as the following (this list is not exhaustive):
+Hey! So, you want to publish your library to the npm registry? Nice! Publishing a library to a public registry has a lot of positives and probably 0 negatives, as long as your library doesn't contain malicious code. The positives are as the following (this list is not exhaustive):
 
 - You can use your library in your projects without having to copy-paste them locally.
 - You build your brand (if it's a public library) because it will be linked to your public Git repository.
@@ -37,7 +37,7 @@ For this post, I will be using Git CLI, Visual Studio Code, GitHub, and Yarn in 
 
 The following sections will contain the steps to publish your library. Let's get started!
 
-## Log in to NPM
+## Log in to npm
 
 First, if you haven't registered yet, you need to do so at https://www.npmjs.com/signup. After that, it is recommended that you also set up two-factor authentication (2FA) in your account. To do so, click on your profile picture on the top-right, then choose "Account". You will be redirected to your account page and you will see the "Two Factor Authentication" section on the right column, just below the "Email & Password" section.
 
@@ -52,11 +52,11 @@ Enter one-time password from your authenticator app: 123456
 Logged in as your-username on https://registry.npmjs.org/.
 ```
 
-Use the details that you used when registering: username, password, and email. If you have also set up 2FA in the previous step, then you will need to also input it. If all of these details are correct, then you will be logged in to NPM in your CLI.
+Use the details that you used when registering: username, password, and email. If you have also set up 2FA in the previous step, then you will need to also input it. If all of these details are correct, then you will be logged in to npm in your CLI.
 
 ## Create the library
 
-To publish a "library" in the NPM registry, we must first define, _"What is a library?"_ A library is as simple as an `index.js` and a `package.json`, which contains at least `name`, `version`, and `main` fields in it. Before we start, let's create a Git repository in GitHub. After that, clone your repository to your local.
+To publish a "library" in the npm registry, we must first define, _"What is a library?"_ A library is as simple as an `index.js` and a `package.json`, which contains at least `name`, `version`, and `main` fields in it. Before we start, let's create a Git repository in GitHub. After that, clone your repository to your local.
 
 We are going to start with creating `index.js`. Let's say we are going to publish a sum function. Note that this is only for the sake of example.
 
@@ -80,9 +80,9 @@ Then, for the `package.json`:
 }
 ```
 
-Here, you can replace the `test-sum` with any kind of name that you want. However, that name should be unique in the NPM registry. To check its availability, you can search for the package name here: https://www.npmjs.com/package/test-sum. At the time of writing, it showed me this page:
+Here, you can replace the `test-sum` with any kind of name that you want. However, that name should be unique in the npm registry. To check its availability, you can search for the package name here: https://www.npmjs.com/package/test-sum. At the time of writing, it showed me this page:
 
-![When looking for a nonexistent library in the NPM registry, a 404 page will show up. In this case, the package that is looked up to is "test-sum".](images/npm-package-not-found.jpg)
+![When looking for a nonexistent library in the npm registry, a 404 page will show up. In this case, the package that is looked up to is "test-sum".](images/npm-package-not-found.jpg)
 
 As a heads up, the repository name in GitHub doesn't have to be the same as the `name` field in `package.json`.
 
@@ -96,7 +96,7 @@ const sum = require('test-sum');
 
 What's happening is that we are looking at `node_modules/test-sum/package.json` and reading its `main` field. Then, it will find the entry file: `index.js`. Since our `index.js` exports a function, then the `sum` variable will contain the `sum` function from the `test-sum` library.
 
-The next 3 fields, `repository`, `author`, and `license`, are more or less metadata. Read more about `package.json` in the [NPM `package.json` documentation](https://docs.npmjs.com/cli/v7/configuring-npm/package-json). However, if you are adding the `license` field in the `package.json`, please ensure that you read the next section, too.
+The next 3 fields, `repository`, `author`, and `license`, are more or less metadata. Read more about `package.json` in the [npm `package.json` documentation](https://docs.npmjs.com/cli/v7/configuring-npm/package-json). However, if you are adding the `license` field in the `package.json`, please ensure that you read the next section, too.
 
 ## Add a license
 
@@ -106,15 +106,15 @@ A `LICENSE` file is important so that engineers who want to use your library kno
 
 In this guide, we are going to go with an MIT license instead. [This website](https://choosealicense.com/) explains all kinds of licenses perfectly. In the case of the MIT license, it is (quoted as-is), _"lets people do almost anything they want with your project, like making and distributing closed source versions"_.
 
-## Publish to NPM registry
+## Publish to npm registry
 
-Publishing your library to the NPM registry is quite straightforward. All you need to do is to execute this command:
+Publishing your library to the npm registry is quite straightforward. All you need to do is to execute this command:
 
 ```shell
 $ npm publish
 ```
 
-If that command is successful, the next time you do `yarn add test-sum` in a project (with `package.json` inside it), it will fetch the `test-sum` library from the NPM registry. There you have it, your library published!
+If that command is successful, the next time you do `yarn add test-sum` in a project (with `package.json` inside it), it will fetch the `test-sum` library from the npm registry. There you have it, your library published!
 
 # Advanced steps
 
@@ -172,7 +172,7 @@ However, sometimes we want to cut down the size of the uploaded package even mor
 
 Why did I exclude all of these files? Because these files are only for development and documentation purposes. The published package only needs the entry file and files linked to it. It doesn't need all of the development-enhancing things (such as Prettier and Jest configurations) and examples.
 
-For further reading on `.npmignore`, you can visit ["Keeping files out of your package" in NPM documentation](https://docs.npmjs.com/cli/v7/using-npm/developers#keeping-files-out-of-your-package).
+For further reading on `.npmignore`, you can visit ["Keeping files out of your package" in npm documentation](https://docs.npmjs.com/cli/v7/using-npm/developers#keeping-files-out-of-your-package).
 
 ## Do `npm publish --dry-run`
 
