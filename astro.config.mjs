@@ -10,4 +10,13 @@
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Enable the React renderer to support React JSX components.
   renderers: ['@astrojs/renderer-react'],
+  markdownOptions: {
+    render: [
+      '@astrojs/markdown-remark',
+      {
+        remarkPlugins: [],
+        rehypePlugins: []
+      }
+    ]
+  }
 });

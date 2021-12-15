@@ -1,0 +1,105 @@
+---
+import BaseHead from './base/Head.astro';
+import { Text } from '../components/Typography';
+import { DarkModeToggler } from '../components/Layout';
+import { Link } from '../components/Links';
+import { BreadcrumbHeader } from '../components/BreadcrumbHeader';
+
+const { title, description, content = {}, pages = [] } = Astro.props;
+const {
+  title: contentTitle,
+  description: contentDescription,
+  permalink,
+  heroImage
+} = content;
+
+const effectiveTitle = title || contentTitle;
+const effectiveDescription =
+  description || contentDescription || 'The personal site of Try Ajitiono.';
+
+const pageTitlePrefix = effectiveTitle ? `${effectiveTitle} | ` : '';
+const pageTitle = pageTitlePrefix + 'How long';
+
+// TODO(imballinst): add toggle format.
+---
+
+<html lang={content.lang || 'en'}>
+  <head>
+    <BaseHead
+      title={pageTitle}
+      description={effectiveDescription}
+      {permalink}
+      {heroImage}
+    />
+
+    <script>
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+
+  <body class="flex flex-col min-h-screen dark:bg-gray-800 transition-colors">
+    <header
+      class="shadow-sm flex flex-row justify-center fixed top-0 w-full z-10 bg-white dark:bg-gray-800"
+    >
+      <div
+        class="flex flex-row justify-between items-center px-3 py-2 w-full md:w-wmd lg:w-wlg xl:w-wxl"
+      >
+        <div class="flex flex-row font-semibold">
+          <Link href="/">
+            <div
+              class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors"
+            >
+              <img
+                alt="How long logo"
+                src="/apple-touch-icon.png"
+                class="w-6 h-6"
+                width="24"
+                height="24"
+              />
+            </div>
+          </Link>
+
+          <Link href="/blog">
+            <div class="p-2 rounded-lg">
+              <span>blog</span>
+            </div>
+          </Link>
+        </div>
+
+        <div>
+          <DarkModeToggler client:visible />
+        </div>
+      </div>
+    </header>
+
+    <main class="flex flex-1 p-4 flex-row justify-center">
+      <div class="w-full md:w-wmd lg:w-wlg xl:w-wxl flex flex-col">
+        <div class="-ml-2 mb-4 flex-0">
+          <BreadcrumbHeader {pages} />
+        </div>
+
+        <div class="flex-1">
+          <slot />
+        </div>
+      </div>
+    </main>
+
+    <footer class="flex flex-initial flex-row p-2 mt-4 justify-center w-full">
+      <Text
+        as="div"
+        colorScheme="gray"
+        class="sm:w-full md:w-wmd lg:w-wlg xl:w-wxl"
+      >
+        <p class="font-bold text-center text-sm">&copy; 2021 Try Ajitiono</p>
+      </Text>
+    </footer>
+  </body>
+</html>
