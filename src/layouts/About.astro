@@ -1,18 +1,18 @@
 ---
-import { Markdown } from 'astro/components';
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import About from '../components/About.astro';
 
-const {content} = Astro.props;
-const {title, description} = content;
+const { content } = Astro.props;
+const { title, description } = content;
 
 const url = Astro.request.canonicalURL;
 const permalink = url.href;
 ---
-<html lang={ content.lang || 'en' }>
+
+<html lang={content.lang || 'en'}>
   <head>
-    <BaseHead title={title} description={description} permalink={permalink} />
+    <BaseHead {title} {description} {permalink} />
     <link rel="stylesheet" href="/blog.css" />
   </head>
 
@@ -23,4 +23,3 @@ const permalink = url.href;
     </About>
   </body>
 </html>
-

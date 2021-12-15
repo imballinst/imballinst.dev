@@ -2,11 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { HOME_BREADCRUMBS } from '../helpers/paths';
 
-let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md');
+let allPosts = await Astro.fetchContent('./*.md');
+console.log(allPosts);
+/*
 allPosts = allPosts.sort(
   (a, b) =>
     new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
 );
+*/
 ---
 
 <BaseLayout
@@ -15,6 +18,6 @@ allPosts = allPosts.sort(
   description="The home page of Try Ajitiono's personal site."
 >
   <pre>
-    {JSON.stringify(allPosts, null, 2)}
+    hello world
   </pre>
 </BaseLayout>
