@@ -1,25 +1,21 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
-import About from '../components/About.astro';
+import BaseLayout from './BaseLayout.astro';
+import { HOME_BREADCRUMBS } from '../helpers/paths';
+import { Text } from '../components/Typography';
 
-const { content } = Astro.props;
-const { title, description } = content;
-
-const url = Astro.request.canonicalURL;
-const permalink = url.href;
+/*
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+);
+*/
 ---
 
-<html lang={content.lang || 'en'}>
-  <head>
-    <BaseHead {title} {description} {permalink} />
-    <link rel="stylesheet" href="/blog.css" />
-  </head>
-
-  <body>
-    <BlogHeader />
-    <About title="About">
-      <slot />
-    </About>
-  </body>
-</html>
+<BaseLayout
+  pages={HOME_BREADCRUMBS}
+  title="Home"
+  description="The home page of Try Ajitiono's personal site."
+  currentMenu="/about"
+>
+  <slot />
+</BaseLayout>

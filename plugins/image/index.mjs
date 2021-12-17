@@ -18,8 +18,6 @@ import { toString } from 'mdast-util-to-string';
 export default function imageCaptionPlugin() {
   return (tree) => {
     visit(tree, 'ParagraphNode', (node) => {
-      // console.log(node);
-
       if (node.children && node.children.length === 2) {
         const [caption, source] = node.children;
 

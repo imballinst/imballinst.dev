@@ -1,6 +1,5 @@
 ---
 title: 'About peepohappy'
-description: "We're excited to announce Astro as a new way to build static websites and deliver lightning-fast performance without sacrificing a modern developer experience."
 layout: '../layouts/About.astro'
 ---
 

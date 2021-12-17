@@ -3,7 +3,10 @@ const config = require('tailwindcss/defaultConfig');
 
 module.exports = {
   mode: 'jit',
-  purge: ['./public/**/*.html', './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}'],
+  content: [
+    './plugins/**/*.mjs',
+    './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}'
+  ],
   darkMode: 'class',
   theme: {
     colors: {

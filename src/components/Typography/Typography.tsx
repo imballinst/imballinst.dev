@@ -1,4 +1,10 @@
-import { ElementType, ReactNode } from 'react';
+import { ReactNode } from 'react';
+import {
+  changeTextColorScheme,
+  DEFAULT_ATTRS,
+  DEFAULT_MARGINS,
+  TEXT_COLOR
+} from '../../helpers/tag-styles';
 
 export function Text({
   as: Element = 'p',
@@ -6,15 +12,20 @@ export function Text({
   className = '',
   colorScheme = 'black'
 }: {
-  as?: ElementType;
+  as?: keyof typeof DEFAULT_ATTRS;
   children: ReactNode;
   className?: string;
   colorScheme?: 'black' | 'gray';
 }) {
-  let classNames = 'text-black dark:text-gray-200';
+  let classNames = DEFAULT_ATTRS[Element] || TEXT_COLOR;
 
-  if (colorScheme === 'gray') {
-    classNames = 'text-gray-500 dark:text-gray-400';
+  if (colorScheme !== 'black') {
+    classNames = changeTextColorScheme(classNames, colorScheme);
+  }
+
+  // Remove unnecessary margins, if overridden.
+  if (/m[a-z]?-\d/g.test(className)) {
+    classNames = classNames.replace(DEFAULT_MARGINS[Element] || '', '');
   }
 
   return (

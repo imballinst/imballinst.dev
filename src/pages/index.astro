@@ -1,23 +1,49 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { HOME_BREADCRUMBS } from '../helpers/paths';
+import { Text } from '../components/Typography';
+import { Card } from '../components/Card';
 
-let allPosts = await Astro.fetchContent('./*.md');
-console.log(allPosts);
-/*
-allPosts = allPosts.sort(
-  (a, b) =>
-    new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
-);
-*/
+let allPosts = await Astro.fetchContent('./posts/*.md');
+allPosts = allPosts
+  .sort(
+    (a, b) =>
+      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+  )
+  .slice(0, 3);
 ---
 
 <BaseLayout
   pages={HOME_BREADCRUMBS}
   title="Home"
   description="The home page of Try Ajitiono's personal site."
+  currentMenu="/"
 >
-  <pre>
-    hello world
-  </pre>
+  <Text as="h1" className="text-center mt-0 mb-0">Welcome to peepohappy!</Text>
+
+  <Text as="p" className="text-xl text-center">
+    My name is Try Ajitiono. I write about software development, real life, and
+    gaming stuff.
+  </Text>
+
+  <Text as="h2">My latest posts</Text>
+
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {allPosts.map((post, idx) => (
+      <li key={idx}>
+        <Card
+          title={post.title}
+          date={post.publishDate}
+          text={post.description}
+          img={post.heroImage}
+          href={post.url}
+          className="h-full"
+        />
+      </li>
+    ))}
+  </ul>
+
+  <Text as="h2">My projects</Text>
+
+  <Text as="h2">My latest activity</Text>
 </BaseLayout>

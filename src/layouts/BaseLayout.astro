@@ -5,7 +5,13 @@ import { DarkModeToggler } from '../components/Layout';
 import { Link } from '../components/Links';
 import { BreadcrumbHeader } from '../components/BreadcrumbHeader';
 
-const { title, description, content = {}, pages = [] } = Astro.props;
+const {
+  title,
+  description,
+  content = {},
+  pages = [],
+  currentMenu
+} = Astro.props;
 const {
   title: contentTitle,
   description: contentDescription,
@@ -18,7 +24,7 @@ const effectiveDescription =
   description || contentDescription || 'The personal site of Try Ajitiono.';
 
 const pageTitlePrefix = effectiveTitle ? `${effectiveTitle} | ` : '';
-const pageTitle = pageTitlePrefix + 'How long';
+const pageTitle = pageTitlePrefix + 'peepohappy';
 
 // TODO(imballinst): add toggle format.
 ---
@@ -50,27 +56,28 @@ const pageTitle = pageTitlePrefix + 'How long';
       class="shadow-sm flex flex-row justify-center fixed top-0 w-full z-10 bg-white dark:bg-gray-800"
     >
       <div
-        class="flex flex-row justify-between items-center px-3 py-2 w-full md:w-wmd lg:w-wlg xl:w-wxl"
+        class="-ml-2 flex flex-row justify-between items-center px-3 py-2 w-full md:w-wmd lg:w-wlg xl:w-wxl"
       >
-        <div class="flex flex-row font-semibold">
-          <Link href="/">
-            <div
-              class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors"
-            >
-              <img
-                alt="How long logo"
-                src="/apple-touch-icon.png"
-                class="w-6 h-6"
-                width="24"
-                height="24"
-              />
-            </div>
+        <div class="flex flex-row">
+          <Link
+            href="/"
+            className={currentMenu === '/' ? 'font-semibold' : undefined}
+          >
+            <div class="p-2 rounded-lg">peepohappy</div>
           </Link>
 
-          <Link href="/blog">
-            <div class="p-2 rounded-lg">
-              <span>blog</span>
-            </div>
+          <Link
+            href="/blog"
+            className={currentMenu === '/blog' ? 'font-semibold' : undefined}
+          >
+            <div class="p-2 rounded-lg">blog</div>
+          </Link>
+
+          <Link
+            href="/about"
+            className={currentMenu === '/about' ? 'font-semibold' : undefined}
+          >
+            <div class="p-2 rounded-lg">about</div>
           </Link>
         </div>
 
@@ -82,11 +89,7 @@ const pageTitle = pageTitlePrefix + 'How long';
 
     <main class="flex flex-1 p-4 flex-row justify-center">
       <div class="w-full md:w-wmd lg:w-wlg xl:w-wxl flex flex-col">
-        <div class="-ml-2 mb-4 flex-0">
-          <BreadcrumbHeader {pages} />
-        </div>
-
-        <div class="flex-1">
+        <div class="flex-1 py-2 px-4">
           <slot />
         </div>
       </div>

@@ -4,14 +4,14 @@ export interface Page {
 }
 
 // Static paths.
-const HOME_BREADCRUMB: Page = { title: 'How Long', href: '/' };
+const HOME_BREADCRUMB: Page = { title: 'Home', href: '/' };
 const BLOG_BREADCRUMB: Page = {
   title: 'Blog',
   href: '/blog'
 };
 const ABOUT_BREADCRUMB: Page = {
-  title: 'Since',
-  href: '/since'
+  title: 'About',
+  href: '/about'
 };
 
 export const HOME_BREADCRUMBS: Page[] = [HOME_BREADCRUMB];
