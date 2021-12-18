@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { HOME_BREADCRUMBS } from '../helpers/paths';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
 
@@ -12,7 +11,6 @@ allPosts = allPosts.sort(
 ---
 
 <BaseLayout
-  pages={HOME_BREADCRUMBS}
   title="Blog"
   description="List of blog posts written by Try Ajitiono."
   currentMenu="/blog"

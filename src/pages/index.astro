@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { HOME_BREADCRUMBS } from '../helpers/paths';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
 
@@ -14,7 +13,6 @@ allPosts = allPosts
 ---
 
 <BaseLayout
-  pages={HOME_BREADCRUMBS}
   title="Home"
   description="The home page of Try Ajitiono's personal site."
   currentMenu="/"

@@ -100,6 +100,8 @@ async function main() {
         );
       }
 
+      // TODO(imballinst): make the first image to be placed as the `heroImage`, as well
+      // as the alt in it.
       const newMarkdown = [
         '---',
         newFrontmatters.join('\n'),

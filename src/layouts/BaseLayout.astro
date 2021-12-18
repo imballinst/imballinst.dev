@@ -3,13 +3,11 @@ import BaseHead from './base/Head.astro';
 import { Text } from '../components/Typography';
 import { DarkModeToggler } from '../components/Layout';
 import { Link } from '../components/Links';
-import { BreadcrumbHeader } from '../components/BreadcrumbHeader';
 
 const {
   title,
   description,
   content = {},
-  pages = [],
   currentMenu
 } = Astro.props;
 const {
@@ -67,7 +65,7 @@ const NAVS_WITH_CLASSES = NAVS.map(nav => ({
   </head>
 
   <body class="flex flex-col min-h-screen dark:bg-gray-800 transition-colors">
-    <header
+    <nav
       class="shadow-sm flex flex-row justify-center fixed top-0 w-full z-10 bg-white dark:bg-gray-800"
     >
       <div
@@ -89,7 +87,7 @@ const NAVS_WITH_CLASSES = NAVS.map(nav => ({
           <DarkModeToggler client:visible />
         </div>
       </div>
-    </header>
+    </nav>
 
     <main class="flex flex-1 p-4 flex-row justify-center">
       <div class="w-full md:w-wmd lg:w-wlg xl:w-wxl flex flex-col">

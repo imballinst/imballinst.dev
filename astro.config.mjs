@@ -20,7 +20,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
       '@astrojs/markdown-remark',
       {
         remarkPlugins: [
-          // { default: imageCaptionPlugin },
+          { default: imageCaptionPlugin },
           { default: htmlClassnamesPlugin }
         ],
         rehypePlugins: []

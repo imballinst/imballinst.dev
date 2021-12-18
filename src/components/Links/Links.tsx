@@ -21,7 +21,7 @@ export function Link({
     href,
     className: `text-teal-600 dark:text-teal-300 ${
       disableUnderline ? '' : 'hover:underline'
-    } transition-colors break-all ${className}`
+    } break-all ${className}`
   };
   let additionalChildren: ReactNode | undefined;
 
