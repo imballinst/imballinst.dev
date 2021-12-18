@@ -27,6 +27,21 @@ const pageTitlePrefix = effectiveTitle ? `${effectiveTitle} | ` : '';
 const pageTitle = pageTitlePrefix + 'peepohappy';
 
 // TODO(imballinst): add toggle format.
+const BASE_NAV_CLASSES = 'pb-1 border-teal-600 dark:border-teal-300';
+const NAVS = [{
+  path: '/',
+  title: 'peepohappy'
+}, {
+  path: '/blog',
+  title: 'blog'
+}, {
+  path: '/about',
+  title: 'about'
+}];
+const NAVS_WITH_CLASSES = NAVS.map(nav => ({
+  ...nav,
+  className: `${BASE_NAV_CLASSES} ${currentMenu === nav.path ? 'border-b-2' : 'hover:border-b-2'}`
+}))
 ---
 
 <html lang={content.lang || 'en'}>
@@ -58,27 +73,16 @@ const pageTitle = pageTitlePrefix + 'peepohappy';
       <div
         class="-ml-2 flex flex-row justify-between items-center px-3 py-2 w-full md:w-wmd lg:w-wlg xl:w-wxl"
       >
-        <div class="flex flex-row">
-          <Link
-            href="/"
-            className={currentMenu === '/' ? 'font-semibold' : undefined}
-          >
-            <div class="p-2 rounded-lg">peepohappy</div>
-          </Link>
-
-          <Link
-            href="/blog"
-            className={currentMenu === '/blog' ? 'font-semibold' : undefined}
-          >
-            <div class="p-2 rounded-lg">blog</div>
-          </Link>
-
-          <Link
-            href="/about"
-            className={currentMenu === '/about' ? 'font-semibold' : undefined}
-          >
-            <div class="p-2 rounded-lg">about</div>
-          </Link>
+        <div class="flex flex-row font-semibold">
+          {
+            NAVS_WITH_CLASSES.map(nav => (
+              <Link href={nav.path} className="p-2" disableUnderline>
+                <div class={nav.className}>
+                  {nav.title}
+                </div>
+              </Link>    
+            ))
+          }
         </div>
 
         <div>

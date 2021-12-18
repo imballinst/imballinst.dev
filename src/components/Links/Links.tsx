@@ -5,6 +5,7 @@ export interface LinkProps {
   children: ReactNode;
   isExternal?: boolean;
   className?: string;
+  disableUnderline?: boolean;
 }
 
 const ADDITIONAL_EXTERNAL_PROPS = { target: '_blank', rel: 'noopener' };
@@ -13,11 +14,14 @@ export function Link({
   href,
   children,
   isExternal,
-  className = ''
+  className = '',
+  disableUnderline = false
 }: LinkProps) {
   const anchorProps: AnchorHTMLAttributes<HTMLAnchorElement> = {
     href,
-    className: `text-teal-600 dark:text-teal-300 hover:underline transition-colors break-all ${className}`
+    className: `text-teal-600 dark:text-teal-300 ${
+      disableUnderline ? '' : 'hover:underline'
+    } transition-colors break-all ${className}`
   };
   let additionalChildren: ReactNode | undefined;
 
