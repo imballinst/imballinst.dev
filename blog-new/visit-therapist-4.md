@@ -2,9 +2,8 @@
 title: A Visit to a Therapist, Part 4
 description: Despite having visited the same therapist four times in the last year, somehow I was still able to learn new things.
 publishDate: 2021-02-23T07:14:56.835Z
-heroImage: /assets/blog/visit-therapist-4/dan-meyers-hluOJZjLVXc-unsplash.jpg
-alt: Photo by Dan Meyers on Unsplash.
-caption: <span>Photo by <a href="https://unsplash.com/@dmey503?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Meyers</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>.
+image: /assets/blog/visit-therapist-4/dan-meyers-hluOJZjLVXc-unsplash.jpg
+imageAlt: Photo by Dan Meyers on Unsplash.
 tags: life
 visibility: public
 layout: ../../layouts/BlogPost.astro

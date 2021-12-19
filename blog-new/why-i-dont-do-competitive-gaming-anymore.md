@@ -2,9 +2,8 @@
 title: Why I Don't Do Competitive Gaming Anymore
 description: I was still a competitive gamer back in 2016. Then, I slowly walked away from it.
 publishDate: 2020-11-14T11:37:48.635Z
-heroImage: /assets/blog/why-i-dont-do-competitive-gaming-anymore/rtd-featuredimage-crop.jpg
-alt: Getting 3rd place in Jakarta Qualifier of Indonesia Elite Super League (IESL) in 2015.
-caption: Getting 3rd place in Jakarta Qualifier of Indonesia Elite Super League (IESL) in 2015.
+image: /assets/blog/why-i-dont-do-competitive-gaming-anymore/rtd-featuredimage-crop.jpg
+imageAlt: Getting 3rd place in Jakarta Qualifier of Indonesia Elite Super League (IESL) in 2015.
 tags: life, gaming
 visibility: public
 layout: ../../layouts/BlogPost.astro

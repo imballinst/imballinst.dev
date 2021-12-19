@@ -14,16 +14,15 @@ const DEFAULT_BLOG_FRONTMATTERS = {
   title: '',
   description: '',
   publishDate: '',
-  heroImage: '',
-  alt: '',
-  caption: '',
+  image: '',
+  imageAlt: '',
   tags: '',
   visibility: '',
   layout: '../../layouts/BlogPost.astro'
 };
 const FRONTMATTER_MAP = {
   publishDate: 'date',
-  heroImage: 'featuredimage'
+  image: 'featuredimage'
 };
 const IMAGE_EXTENSIONS = ['gif', 'png', 'jpg'];
 
@@ -158,9 +157,8 @@ function parseMarkdown(content) {
         const imageAlt = line.slice(2, startIndex);
         const $ = cheerio.load(imageAlt);
 
-        obj.frontmatter.alt = $.text();
-        obj.frontmatter.caption = imageAlt;
-        obj.frontmatter.heroImage = imagePath;
+        obj.frontmatter.imageAlt = $.text();
+        obj.frontmatter.image = imagePath;
         obj.content = array.slice(i + 2).join('\n');
 
         break;

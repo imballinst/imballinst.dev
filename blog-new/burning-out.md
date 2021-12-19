@@ -2,9 +2,8 @@
 title: Burning Out
 description: In this post, I'll be sharing my experiences with burnout. It will be mostly about how did it feel and its comparison with frustration.
 publishDate: 2021-10-21T04:49:08.901Z
-heroImage: /assets/blog/burning-out/justin-chavanelle-qp-IzdXgKDs-unsplash.jpg
-alt: A campfire, with the fire slowly becoming smaller which eventually will extinguish. Photo by Justin Chavanelle on Unsplash.
-caption: <span>A campfire, with the fire slowly becoming smaller which eventually will extinguish. Photo by <a href="https://unsplash.com/@justinchvnl?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Justin Chavanelle</a> on <a href="https://unsplash.com/s/photos/flame-snuff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>
+image: /assets/blog/burning-out/justin-chavanelle-qp-IzdXgKDs-unsplash.jpg
+imageAlt: A campfire, with the fire slowly becoming smaller which eventually will extinguish. Photo by Justin Chavanelle on Unsplash.
 tags: life, work
 visibility: public
 layout: ../../layouts/BlogPost.astro

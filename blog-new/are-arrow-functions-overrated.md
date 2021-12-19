@@ -2,9 +2,8 @@
 title: Are Arrow Functions Overrated?
 description: I think they are really useful, but sometimes they are just overused in the defense of "it's shorter".
 publishDate: 2021-04-25T04:52:53.642Z
-heroImage: /assets/blog/are-arrow-functions-overrated/nick-fewings-zF_pTLx_Dkg-unsplash.jpg
-alt: Photo by Nick Fewings on Unsplash.
-caption: <span>Photo by <a href="https://unsplash.com/@jannerboy62?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nick Fewings</a> on <a href="https://unsplash.com/images/things/arrow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>.
+image: /assets/blog/are-arrow-functions-overrated/nick-fewings-zF_pTLx_Dkg-unsplash.jpg
+imageAlt: Photo by Nick Fewings on Unsplash.
 tags: software engineering, javascript
 visibility: public
 layout: ../../layouts/BlogPost.astro

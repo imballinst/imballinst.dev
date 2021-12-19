@@ -2,9 +2,8 @@
 title: My Thoughts on Pursuing Higher Study
 description: I finished my Masters in December 2019 and here are my thoughts after the ride.
 publishDate: 2020-04-25T14:39:06.797Z
-heroImage: /assets/blog/my-thought-pursuing-higher-study/unimelb-law-building.jpg
-alt: Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.
-caption: Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.
+image: /assets/blog/my-thought-pursuing-higher-study/unimelb-law-building.jpg
+imageAlt: Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.
 tags: life, education
 visibility: public
 layout: ../../layouts/BlogPost.astro

@@ -2,9 +2,8 @@
 title: My Top 3 Achievements and Struggles in 2020
 description: I ranked my top 3 achievements and struggles as I reflected on this rollercoaster year.
 publishDate: 2020-12-31T04:28:41.094Z
-heroImage: /assets/blog/top3-achievements-frustrations-2020/lobostudio-hamburg-tPIHxXNbHh4-unsplash.jpg
-alt: Glencoe, United Kingdom. Photo by LoboStudio Hamburg on Unsplash.
-caption: <span>Glencoe, United Kingdom. Photo by <a href="https://unsplash.com/@lobostudiohamburg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">LoboStudio Hamburg</a> on <a href="https://unsplash.com/s/photos/light-dark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>
+image: /assets/blog/top3-achievements-frustrations-2020/lobostudio-hamburg-tPIHxXNbHh4-unsplash.jpg
+imageAlt: Glencoe, United Kingdom. Photo by LoboStudio Hamburg on Unsplash.
 tags: life
 visibility: public
 layout: ../../layouts/BlogPost.astro

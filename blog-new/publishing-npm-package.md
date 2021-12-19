@@ -2,9 +2,8 @@
 title: How to Publish Your Library to npm Registry
 description: This post covers a step-by-step guide to publish a library to the npm registry, as well as things to consider before doing so.
 publishDate: 2021-11-08T11:27:52.899Z
-heroImage: /assets/blog/publishing-npm-package/npm-package.jpg
-alt: A cardboard with the npm logo. Also, yes, hopefully, I don't hurt your eyes with my photo editing skills.
-caption: A cardboard with the npm logo. Also, yes, hopefully, I don't hurt your eyes with my photo editing skills.
+image: /assets/blog/publishing-npm-package/npm-package.jpg
+imageAlt: A cardboard with the npm logo. Also, yes, hopefully, I don't hurt your eyes with my photo editing skills.
 tags: software engineering, javascript
 visibility: public
 layout: ../../layouts/BlogPost.astro

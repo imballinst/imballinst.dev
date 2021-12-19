@@ -2,9 +2,8 @@
 title: Marriage and Emotional Affection
 description: I asked myself a question before I got married, "Will emotional affection between husband and wife last for a lifetime?"
 publishDate: 2020-08-26T03:00:52.793Z
-heroImage: /assets/blog/marriage-and-emotional-affection/putting-on-the-ring.jpg
-alt: Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy.
-caption: Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy.
+image: /assets/blog/marriage-and-emotional-affection/putting-on-the-ring.jpg
+imageAlt: Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy.
 tags: life
 visibility: public
 layout: ../../layouts/BlogPost.astro

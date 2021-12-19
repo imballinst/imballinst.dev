@@ -2,9 +2,8 @@
 title: Creating Count-Up Timer
 description: In this post, I will be sharing a bit about creating a count-up timer.
 publishDate: 2021-08-22T04:33:45.247Z
-heroImage: /assets/blog/creating-count-up-timer/neonbrand-KYxXMTpTzek-unsplash.jpg
-alt: A ticking hourglass, where the sands on the top are almost spent. Photo by NeONBRAND on Unsplash.
-caption: A ticking hourglass, where the sands on the top are almost spent. <span>Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NeONBRAND</a> on <a href="https://unsplash.com/images/things/clock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>
+image: /assets/blog/creating-count-up-timer/neonbrand-KYxXMTpTzek-unsplash.jpg
+imageAlt: A ticking hourglass, where the sands on the top are almost spent. Photo by NeONBRAND on Unsplash.
 tags: software engineering, life
 visibility: public
 layout: ../../layouts/BlogPost.astro
