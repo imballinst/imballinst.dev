@@ -50,13 +50,13 @@ export default function imageCaptionPlugin() {
           // The current one is good enough. Later we will think about viewports stuff.
           // Another good reference: https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/.
           firstChild.value = `
-            <figure class="resp-image-figure">
-              <span class="resp-image-wrapper">
-                <a class="resp-image-link" href="${url}" target="_blank" rel="noopener">
-                  <img class="resp-image-image" alt="${altString}" src="${url}" loading="lazy">
+            <figure class="flex flex-col items-center justify-center mt-3 mb-4">
+              <span>
+                <a href="${url}" target="_blank" rel="noopener">
+                  <img alt="${altString}" src="${url}" loading="lazy">
                 </a>
               </span>
-              <figcaption class="resp-image-figcaption text-sm text-center mt-1 ${TEXT_COLOR}">${htmlString}</figcaption>
+              <figcaption class="text-sm text-center mt-1 ${TEXT_COLOR}">${htmlString}</figcaption>
             </figure>
           `.trim();
           firstChild.type = 'html';

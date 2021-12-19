@@ -12,7 +12,7 @@ const DEFAULT_ATTRS = {
   h4: `${TEXT_COLOR} text-lg font-semibold`,
   h5: `${TEXT_COLOR} text-base`,
   h6: `${TEXT_COLOR} text-sm`,
-  p: `${TEXT_COLOR} mt-2 mb-3 first:mt-0 last:mb-0`,
+  p: `${TEXT_COLOR} mt-3 mb-4 first:mt-0 last:mb-0`,
   strong: `${TEXT_COLOR} font-semibold`
 };
 
