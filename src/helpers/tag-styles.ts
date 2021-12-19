@@ -1,6 +1,6 @@
 export const TEXT_COLOR = 'text-black dark:text-gray-200';
 const ALTERNATIVE_TEXT_COLORS = {
-  gray: 'text-gray-500 dark:text-gray-400'
+  gray: 'text-gray-600 dark:text-gray-400'
 };
 
 export const DEFAULT_ATTRS = {

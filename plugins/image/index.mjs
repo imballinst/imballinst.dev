@@ -1,41 +1,34 @@
 import cheerio from 'cheerio';
-import { toString } from 'mdast-util-to-string';
 
-const TEXT_COLOR = 'text-gray-400 dark:text-gray-200';
+const TEXT_COLOR = 'text-gray-600 dark:text-gray-400';
 
 export default function imageCaptionPlugin() {
   return (tree) => {
     for (const firstChild of tree.children) {
+      if (firstChild.type !== 'paragraph') {
+        continue;
+      }
+
       for (const child of firstChild.children) {
         if (child.type === 'image') {
           const { url, alt } = child;
-          const altString = toString(alt);
-
           const $ = cheerio.load(alt);
-          const cheerioChildren = $('body')[0].children;
-          let htmlContent = '';
+          const altString = $('body').text();
+          let htmlString = '';
 
-          if (cheerioChildren) {
-            for (const cheerioChild of cheerioChildren) {
-              const { type, name, attribs } = cheerioChild;
-
-              if (type === 'text') {
-                htmlContent += cheerioChild.data;
-              } else if (type === 'tag' && name === 'a') {
-                htmlContent += generateAnchorTag({
-                  href: attribs.href,
-                  text: $(cheerioChild).text()
+          $('body').each((_i, el) => {
+            for (const altChild of el.children) {
+              if (altChild.type === 'tag' && altChild.name === 'a') {
+                htmlString += generateAnchorTag({
+                  href: altChild.attribs.href,
+                  text: $(altChild).text()
                 });
+              } else {
+                htmlString += altChild.data;
               }
             }
-          }
+          });
 
-          // for (const c of $(a['0'].children)) {
-          //   console.log($(c).text());
-          // }
-
-          firstChild.type = 'html';
-          firstChild.children = undefined;
           // Previous Gatsby output:
           //
           //   <figure class="gatsby-resp-image-figure" style="">
@@ -55,6 +48,7 @@ export default function imageCaptionPlugin() {
           //
           // The current one is good enough. Later we will think about viewports stuff.
           // Another good reference: https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/.
+
           firstChild.value = `
             <figure class="resp-image-figure">
               <span class="resp-image-wrapper">
@@ -62,9 +56,11 @@ export default function imageCaptionPlugin() {
                   <img class="resp-image-image" alt="${altString}" src="${url}" loading="lazy">
                 </a>
               </span>
-              <figcaption class="resp-image-figcaption text-base ${TEXT_COLOR}">${htmlContent}</figcaption>
+              <figcaption class="resp-image-figcaption text-sm text-center mt-1 ${TEXT_COLOR}">${htmlString}</figcaption>
             </figure>
           `.trim();
+          firstChild.type = 'html';
+          firstChild.children = undefined;
 
           break;
         }
@@ -80,15 +76,15 @@ function generateAnchorTag({ href, text }) {
     icon = `
 <svg
   viewBox="0 0 24 24"
-  className="ml-0.5 mb-1 h-3 w-3 inline-block"
+  class="ml-0.25 mb-2 h-3 w-3 inline-block"
   focusable="false"
   aria-hidden="true"
 >
   <g
     fill="none"
     stroke="currentColor"
-    strokeLinecap="round"
-    strokeWidth="2"
+    stroke-linecap="round"
+    stroke-width="2"
   >
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
     <path d="M15 3h6v6"></path>
@@ -99,7 +95,7 @@ function generateAnchorTag({ href, text }) {
   }
 
   return `
-<a class="text-teal-600 dark:text-teal-300 hover:underline break-all inline" target="_blank" rel="noopener" href="${href}">
+<a class="text-teal-600 dark:text-teal-300 hover:underline break-all inline-block" target="_blank" rel="noopener" href="${href}">
   ${text} ${icon}
 </a>
   `.trim();

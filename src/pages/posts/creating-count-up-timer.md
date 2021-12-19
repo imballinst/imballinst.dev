@@ -4,12 +4,11 @@ description: In this post, I will be sharing a bit about creating a count-up tim
 publishDate: 2021-08-22T04:33:45.247Z
 image: /assets/blog/creating-count-up-timer/neonbrand-KYxXMTpTzek-unsplash.jpg
 imageAlt: A ticking hourglass, where the sands on the top are almost spent. Photo by NeONBRAND on Unsplash.
+imageCaption: A ticking hourglass, where the sands on the top are almost spent. Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NeONBRAND</a> on <a href="https://unsplash.com/images/things/clock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
 tags: software engineering, life
 visibility: public
 layout: ../../layouts/BlogPost.astro
 ---
-
-![A ticking hourglass, where the sands on the top are almost spent. <span>Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NeONBRAND</a> on <a href="https://unsplash.com/images/things/clock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>](/assets/blog/creating-count-up-timer/images/)
 
 What is a count-up timer? A count-up timer is the opposite of a count-down timer. Instead of counting **to zero**, this timer counts **from zero**. It can serve multiple purposes, such as for counting the duration of a workout, duration of screen usages in a day or week, or... in my case, counting the duration since I got married. In this post, I will be sharing a bit about the process of creating a count-up timer.
 
@@ -17,17 +16,17 @@ What is a count-up timer? A count-up timer is the opposite of a count-down timer
 
 The first thing we need to do is to define the "zero point"—everything has to start somewhere. For me, I defined the start time as the second I got married to my wife ([click to visit the count up site](https://imballinst.github.io/married)). Up to second? But, how?
 
-![A count-up timer screenshot that shows "1 year, 1 month, 10 days, 1 hour, 21 minutes, and 56 seconds" since I officially got married.](/assets/blog/creating-count-up-timer/images/)
+![A count-up timer screenshot that shows "1 year, 1 month, 10 days, 1 hour, 21 minutes, and 56 seconds" since I officially got married.](/assets/blog/creating-count-up-timer/countup-timer.png)
 
 This part was a bit tricky. My wedding event was live on my wife's Instagram account and hence it was stored on her Instagram TV (we didn't use fancy recordings with timestamps). Now, Instagram has this "posted date" on every post. However, there were 2 problems here. The first one was the UI does not show the exact timestamp (it only shows how long since the post was published, such as "2w") and the second one was, because of the first problem, I could not know the exact timestamp when the chief said, "confirmed" (or in Indonesian, "sah").
 
 I will try to explain these issues using [an example post from ffxiv's Instagram](https://www.instagram.com/p/CQRCJgqF-vB/). The screenshot can be seen below.
 
-![Example post on Instagram. It shows the character Estinien from Final Fantasy XIV. Below the post, there is a text containing the relative date (by distance) since the post was published. The text is "9w", which stands for 9 weeks. Source: <a href="https://www.instagram.com/p/CQRCJgqF-vB/">ffxiv's Instagram post</a>.](/assets/blog/creating-count-up-timer/images/)
+![Example post on Instagram. It shows the character Estinien from Final Fantasy XIV. Below the post, there is a text containing the relative date (by distance) since the post was published. The text is "9w", which stands for 9 weeks. Source: <a href="https://www.instagram.com/p/CQRCJgqF-vB/">ffxiv's Instagram post</a>.](/assets/blog/creating-count-up-timer/ffxiv-estinien.png)
 
 From the screenshot above, it is known that the post was posted 9 weeks ago (shortened to "9w"). That still doesn't explain the exact date and time. I tried to search the solution in Google and I found out that [there was a way to extract this information](https://www.followchain.org/exact-time-instagram-post)! We don't need to install anything, we can just use our favorite browser on our PC. What we need to do is, do mouse right click on the date (in my example above, it was "9w"), then click "Inspect". It will open some kind of drawer in your browser like the picture below.
 
-![A drawer will open in your browser with possibly varying position (depending on the browser's configuration). The "9w" text is highlighted on the page. Inside the drawer (on the right), there is a <code>time</code> tag with <code>datetime</code> attribute. This attribute contains the ISO8601 string of the publish date and time. Source: <a href="https://www.instagram.com/p/CQRCJgqF-vB/">ffxiv's Instagram post</a>.](/assets/blog/creating-count-up-timer/images/)
+![A drawer will open in your browser with possibly varying position (depending on the browser's configuration). The "9w" text is highlighted on the page. Inside the drawer (on the right), there is a <code>time</code> tag with <code>datetime</code> attribute. This attribute contains the ISO8601 string of the publish date and time. Source: <a href="https://www.instagram.com/p/CQRCJgqF-vB/">ffxiv's Instagram post</a>.](/assets/blog/creating-count-up-timer/ffxiv-estinien-devtools.png)
 
 As seen from the screenshot above, inside the drawer, there will be a "selection" (indicated by the blue color). This is the element that we chose to inspect before. The content is as the following:
 

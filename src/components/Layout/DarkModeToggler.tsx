@@ -6,9 +6,7 @@ export function DarkModeToggler() {
   const { sendEvent } = useAnalytics();
 
   useEffect(() => {
-    setMode(
-      document.documentElement.classList.contains('dark') ? 'dark' : 'light'
-    );
+    setMode(localStorage.theme || 'dark');
   }, []);
 
   let rendered;

@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
 
-let allPosts = await Astro.fetchContent('../posts/*.md');
+let allPosts = await Astro.fetchContent('./posts/*.md');
 allPosts = allPosts
   .sort(
     (a, b) =>
@@ -33,7 +33,8 @@ allPosts = allPosts
           title={post.title}
           date={post.publishDate}
           text={post.description}
-          img={post.heroImage}
+          img={post.image}
+          imgAlt={post.imageAlt}
           href={post.url}
           className="h-full"
         />

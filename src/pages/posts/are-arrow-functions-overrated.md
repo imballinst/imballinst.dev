@@ -4,12 +4,11 @@ description: I think they are really useful, but sometimes they are just overuse
 publishDate: 2021-04-25T04:52:53.642Z
 image: /assets/blog/are-arrow-functions-overrated/nick-fewings-zF_pTLx_Dkg-unsplash.jpg
 imageAlt: Photo by Nick Fewings on Unsplash.
+imageCaption: Photo by <a href="https://unsplash.com/@jannerboy62?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nick Fewings</a> on <a href="https://unsplash.com/images/things/arrow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
 tags: software engineering, javascript
 visibility: public
 layout: ../../layouts/BlogPost.astro
 ---
-
-![<span>Photo by <a href="https://unsplash.com/@jannerboy62?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nick Fewings</a> on <a href="https://unsplash.com/images/things/arrow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>.](/assets/blog/are-arrow-functions-overrated/images/)
 
 Hello, it's the tech side of me again! It has been awhile, my latest tech-related post here was ["JSDoc, a Stairway to TypeScript"](https://peepohappy.id/blog/jsdoc-stairway-to-typescript), which was almost 10 months ago? Anyway... in this post, I'm going to write something about [arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 

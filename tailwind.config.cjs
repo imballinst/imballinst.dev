@@ -5,6 +5,7 @@ module.exports = {
   mode: 'jit',
   content: [
     './plugins/**/*.mjs',
+    './public/assets/common-images/*.svg',
     './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}'
   ],
   darkMode: 'class',

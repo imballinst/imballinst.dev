@@ -1,17 +1,73 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-import { Markdown } from 'astro/components';
-import BaseHead from '../components/BaseHead.astro';
-import BlogPost from '../components/BlogPost.astro';
+import BlogPostHeader from '../components/BlogPostHeader.astro';
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt } =
-  content;
+const {
+  title,
+  description,
+  publishDate,
+  author,
+  image,
+  permalink,
+  imageAlt,
+  imageCaption
+} = content;
 ---
 
 <BaseLayout {title} {description} currentMenu="/blog">
-  <BlogPost {title} {author} {heroImage} {publishDate} {alt}>
-    <slot />
-  </BlogPost>
+  <article class="content">
+    <BlogPostHeader
+      {image}
+      {imageAlt}
+      {imageCaption}
+      {title}
+      {author}
+      {publishDate}
+    />
+
+    <div>
+      <slot />
+    </div>
+  </article>
 </BaseLayout>
+
+<style>
+  .author {
+    margin-bottom: 0.75rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid var(--theme-divider);
+  }
+
+  .title,
+  .author,
+  .publish-date {
+    margin: 0;
+  }
+
+  .publish-date,
+  .author {
+    color: var(--theme-text-lighter);
+  }
+
+  .title {
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+</style>

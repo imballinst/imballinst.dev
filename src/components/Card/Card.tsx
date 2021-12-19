@@ -9,6 +9,7 @@ import styles from './Card.module.css';
 export interface CardProps {
   href?: string;
   img?: string;
+  imgAlt?: string;
   title: string;
   // ISO8601 date string.
   date: string;
@@ -18,18 +19,24 @@ export interface CardProps {
 
 export function Card(props: CardProps) {
   const className = props.className || '';
+  let cardImage =
+    props.img !== undefined ? (
+      <img
+        src={props.img}
+        alt={props.imgAlt}
+        className={`${styles['featured-image']} mb-4`}
+      />
+    ) : undefined;
+
+  if (cardImage !== undefined && props.href !== undefined) {
+    cardImage = <a href={props.href}>{cardImage}</a>;
+  }
 
   return (
     <div
       className={`border rounded-lg border-gray-200 hover:border-teal-500 dark:hover:border-teal-200 p-4 transition-colors ${className}`}
     >
-      {props.img && (
-        <img
-          src={props.img}
-          alt={`Featured image for ${props.title}.`}
-          className={`${styles['featured-image']} mb-4`}
-        />
-      )}
+      {cardImage}
 
       <CardHeading href={props.href}>{props.title}</CardHeading>
 

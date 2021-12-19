@@ -58,8 +58,10 @@ const NAVS_WITH_CLASSES = NAVS.map(nav => ({
           window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
         document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
       } else {
         document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
       }
     </script>
   </head>
@@ -78,7 +80,7 @@ const NAVS_WITH_CLASSES = NAVS.map(nav => ({
                 <div class={nav.className}>
                   {nav.title}
                 </div>
-              </Link>    
+              </Link>
             ))
           }
         </div>
@@ -89,9 +91,9 @@ const NAVS_WITH_CLASSES = NAVS.map(nav => ({
       </div>
     </nav>
 
-    <main class="flex flex-1 p-4 flex-row justify-center">
+    <main class="flex flex-1 py-4 flex-row justify-center">
       <div class="w-full md:w-wmd lg:w-wlg xl:w-wxl flex flex-col">
-        <div class="flex-1 py-2 px-4">
+        <div class="flex-1 pb-2 px-4">
           <slot />
         </div>
       </div>

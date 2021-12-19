@@ -7,7 +7,7 @@ import yaml from 'yaml';
 const url = new URL(import.meta.url);
 
 const PATH_TO_POSTS = path.join(url.pathname, '../../blog-backup');
-const PATH_TO_NEW_POSTS = path.join(url.pathname, '../../src/posts');
+const PATH_TO_NEW_POSTS = path.join(url.pathname, '../../src/pages/posts');
 const PATH_TO_BLOG_ASSETS = path.join(url.pathname, '../../public/assets/blog');
 
 const DEFAULT_BLOG_FRONTMATTERS = {
@@ -16,6 +16,7 @@ const DEFAULT_BLOG_FRONTMATTERS = {
   publishDate: '',
   image: '',
   imageAlt: '',
+  imageCaption: '',
   tags: '',
   visibility: '',
   layout: '../../layouts/BlogPost.astro'
@@ -63,7 +64,6 @@ async function migratePost(directory) {
 
       if (portedKey === 'featuredimage') {
         hasImagesFolder = pushedFrontmatter.startsWith('images/');
-
         if (hasImagesFolder) {
           pushedFrontmatter = pushedFrontmatter.replace(
             'images/',
@@ -86,6 +86,19 @@ async function migratePost(directory) {
       newFrontmatters[key] = pushedFrontmatter;
     }
   }
+
+  // Replace <span> tags inside images.
+  const contentArray = content.split('\n');
+
+  contentArray.forEach((line, idx) => {
+    if (line.startsWith('![') && line.includes('<span>')) {
+      contentArray[idx] = contentArray[idx]
+        .replace('<span>', '')
+        .replace('</span>', '');
+    }
+  });
+
+  const cleanedContent = contentArray.join('\n');
 
   if (hasImagesFolder) {
     await fs.copy(
@@ -118,7 +131,7 @@ async function migratePost(directory) {
       .map((k) => `${k}: ${newFrontmatters[k]}`)
       .join('\n'),
     '---\n',
-    content.replace(CONTENT_REGEX, `(/assets/blog/${slug}/$1)`)
+    cleanedContent.replace(CONTENT_REGEX, `(/assets/blog/${slug}/$2)`)
   ].join('\n');
 
   await fs.mkdir(PATH_TO_NEW_POSTS, { recursive: true });
@@ -159,7 +172,10 @@ function parseMarkdown(content) {
 
         obj.frontmatter.imageAlt = $.text();
         obj.frontmatter.image = imagePath;
-        obj.content = array.slice(i).join('\n');
+        obj.frontmatter.imageCaption = imageAlt
+          .replace('<span>', '')
+          .replace('</span>', '');
+        obj.content = array.slice(i + 2).join('\n');
 
         break;
       }
