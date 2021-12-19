@@ -7,7 +7,7 @@ import yaml from 'yaml';
 const url = new URL(import.meta.url);
 
 const PATH_TO_POSTS = path.join(url.pathname, '../../blog-backup');
-const PATH_TO_NEW_POSTS = path.join(url.pathname, '../../blog-new');
+const PATH_TO_NEW_POSTS = path.join(url.pathname, '../../src/posts');
 const PATH_TO_BLOG_ASSETS = path.join(url.pathname, '../../public/assets/blog');
 
 const DEFAULT_BLOG_FRONTMATTERS = {
