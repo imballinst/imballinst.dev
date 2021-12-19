@@ -38,7 +38,7 @@ const z = 3;
 // Note that the output comment for `y` and `z` are the same, despite we use line break in the comment.
 ```
 
-For comments that are following the `/** {content} */` syntax, in modern IDEs, such as Visual Studio Code, they will automatically infer it as JSDoc documentation comments. This enables developers to quickly look up about the definition of a variable without changing context (e.g. open another file, scroll up/down, etc.). For example, if we hover on variable `z` in Visual Studio code, it will show a tooltip as the following:
+For comments that are following the `/** content */` syntax, in modern IDEs, such as Visual Studio Code, they will automatically infer it as JSDoc documentation comments. This enables developers to quickly look up about the definition of a variable without changing context (e.g. open another file, scroll up/down, etc.). For example, if we hover on variable `z` in Visual Studio code, it will show a tooltip as the following:
 
 ![Modern IDEs are capable of showing JSDoc comments on a variable when hovered.](/assets/blog/jsdoc-stairway-to-typescript/referencing-variable-with-jsdoc.png)
 
