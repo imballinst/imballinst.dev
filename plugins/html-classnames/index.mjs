@@ -1,5 +1,8 @@
 import { toString } from 'mdast-util-to-string';
 
+import { toHast } from 'mdast-util-to-hast';
+import { toHtml } from 'hast-util-to-html';
+
 // TODO(imballinst): ensure these are consistent.
 const TEXT_COLOR = 'text-black dark:text-gray-200';
 const DEFAULT_ATTRS = {
@@ -17,15 +20,12 @@ export default function htmlClassnamesPlugin() {
   return (tree) => {
     for (const child of tree.children) {
       if (child.type === 'paragraph') {
-        const str = toString(child);
+        const hast = toHast(child);
+        hast.properties.class = DEFAULT_ATTRS.p;
 
         child.type = 'html';
         child.children = undefined;
-        child.value = `
-          <p class="${DEFAULT_ATTRS.p}">
-            ${str}
-          </p>
-        `;
+        child.value = toHtml(hast);
       } else if (child.type === 'heading') {
         const str = toString(child);
         const tag = `h${child.depth}`;
@@ -37,6 +37,18 @@ export default function htmlClassnamesPlugin() {
             ${str}
           </${tag}>
         `;
+      } else if (child.type === 'list') {
+        const hast = toHast(child);
+        hast.properties.class = `${TEXT_COLOR} list-decimal pl-4`;
+        for (const el of hast.children) {
+          el.properties = { class: 'pl-1' };
+        }
+
+        const html = toHtml(hast);
+
+        child.type = 'html';
+        child.value = html;
+        child.children = undefined;
       }
     }
   };

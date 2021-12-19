@@ -13,7 +13,8 @@ export default function imageCaptionPlugin() {
         if (child.type === 'image') {
           const { url, alt } = child;
           const $ = cheerio.load(alt);
-          const altString = $('body').text();
+          // Need to strip the quotes otherwise it will break the anchor tag.
+          const altString = $('body').text().replace(/['"]+/g, '');
           let htmlString = '';
 
           $('body').each((_i, el) => {
@@ -48,7 +49,6 @@ export default function imageCaptionPlugin() {
           //
           // The current one is good enough. Later we will think about viewports stuff.
           // Another good reference: https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/.
-
           firstChild.value = `
             <figure class="resp-image-figure">
               <span class="resp-image-wrapper">
