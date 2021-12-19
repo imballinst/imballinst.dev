@@ -19,7 +19,9 @@ const DEFAULT_BLOG_FRONTMATTERS = {
   imageCaption: '',
   tags: '',
   visibility: '',
-  layout: '../../layouts/BlogPost.astro'
+  setup: ` |
+  import Layout from '../../layouts/BlogPost.astro'
+  `.trim()
 };
 const FRONTMATTER_MAP = {
   publishDate: 'date',

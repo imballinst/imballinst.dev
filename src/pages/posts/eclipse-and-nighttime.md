@@ -3,11 +3,11 @@ title: Eclipse and Nighttime
 description: Let's be kind to others.
 publishDate: 2020-07-10T10:31:20.525Z
 image: /assets/blog/eclipse-and-nighttime/darkness-nighttime-forest-wander.jpg
-imageAlt: "Darkness is present during the nighttime. Cr: ForestWander Nature Photography."
-imageCaption: "Darkness is present during the nighttime. Cr: ForestWander Nature Photography."
+imageAlt: 'Darkness is present during the nighttime. Cr: ForestWander Nature Photography.'
+imageCaption: 'Darkness is present during the nighttime. Cr: ForestWander Nature Photography.'
 tags: life
 visibility: unlisted
-layout: ../../layouts/BlogPost.astro
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
 However, darkness doesn't only exist during the night. For example, every certain period of time, in a particular location, a phenomenon called "Solar Eclipse" _can_ happen, where [a portion of the Earth is engulfed in a shadow cast by the moon, which fully or partially blocks sunlight](https://en.wikipedia.org/wiki/Solar_eclipse).

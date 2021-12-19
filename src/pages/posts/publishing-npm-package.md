@@ -7,7 +7,7 @@ imageAlt: A cardboard with the npm logo. Also, yes, hopefully, I don't hurt your
 imageCaption: A cardboard with the npm logo. Also, yes, hopefully, I don't hurt your eyes with my photo editing skills.
 tags: software engineering, javascript
 visibility: public
-layout: ../../layouts/BlogPost.astro
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
 Hey! So, you want to publish your library to the npm registry? Nice! Publishing a library to a public registry has a lot of positives and probably 0 negatives, as long as your library doesn't contain malicious code. The positives are as the following (this list is not exhaustive):

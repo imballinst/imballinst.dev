@@ -7,7 +7,7 @@ imageAlt: Getting 3rd place in Jakarta Qualifier of Indonesia Elite Super League
 imageCaption: Getting 3rd place in Jakarta Qualifier of Indonesia Elite Super League (IESL) in 2015.
 tags: life, gaming
 visibility: public
-layout: ../../layouts/BlogPost.astro
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
 That was mostly it -- we competed in bigger Indonesian tournaments, but since we were mostly students and did not dedicate 100% of our time to "train", we were clearly behind compared with other top-tier teams from Indonesia.

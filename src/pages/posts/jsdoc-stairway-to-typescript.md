@@ -7,7 +7,7 @@ imageAlt: Route 217, Pokémon Platinum.
 imageCaption: Route 217, Pokémon Platinum.
 tags: software engineering, javascript
 visibility: public
-layout: ../../layouts/BlogPost.astro
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
 Imagine walking on a road. In a normal, sunny day, you will be able to see the road track, which keeps you on the road and prevents you from getting lost. Now, let's say there is a blizzard. Then, the road track is buried deep beneath the snow. It is now harder to find the way to your destination. You can brute force your way by going in all possible directions, but how long will it take?

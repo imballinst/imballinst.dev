@@ -7,7 +7,7 @@ imageAlt: A campfire, with the fire slowly becoming smaller which eventually wil
 imageCaption: A campfire, with the fire slowly becoming smaller which eventually will extinguish. Photo by <a href="https://unsplash.com/@justinchvnl?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Justin Chavanelle</a> on <a href="https://unsplash.com/s/photos/flame-snuff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
 tags: life, work
 visibility: public
-layout: ../../layouts/BlogPost.astro
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
 Well, it's time. There were around 4 warnings this year and 1 warning last year where I felt the "burnout" slowly crept up on me. However, they were mostly just frustrations and I still had my motivation running (although I admit it was not as high as I usually had).

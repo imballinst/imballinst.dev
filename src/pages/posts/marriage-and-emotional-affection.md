@@ -3,11 +3,11 @@ title: Marriage and Emotional Affection
 description: I asked myself a question before I got married, "Will emotional affection between husband and wife last for a lifetime?"
 publishDate: 2020-08-26T03:00:52.793Z
 image: /assets/blog/marriage-and-emotional-affection/putting-on-the-ring.jpg
-imageAlt: "Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy."
-imageCaption: "Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy."
+imageAlt: 'Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy.'
+imageCaption: 'Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy.'
 tags: life
 visibility: public
-layout: ../../layouts/BlogPost.astro
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
 For me, a relationship is all about trust, patience, and empathy. I didn't know that before -- I had to learn them the hard way. It sounds like an excuse, but my family didn't provide me the best environment to learn about emotional intelligence -- it simply didn't exist (and probably still doesn't). Anger was forbidden, sadness was forbidden, just keep up a mask of a happy face all day to prevent further problems.

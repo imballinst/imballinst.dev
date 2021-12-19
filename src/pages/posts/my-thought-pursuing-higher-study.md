@@ -3,11 +3,11 @@ title: My Thoughts on Pursuing Higher Study
 description: I finished my Masters in December 2019 and here are my thoughts after the ride.
 publishDate: 2020-04-25T14:39:06.797Z
 image: /assets/blog/my-thought-pursuing-higher-study/unimelb-law-building.jpg
-imageAlt: "Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/."
-imageCaption: "Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/."
+imageAlt: 'Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.'
+imageCaption: 'Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.'
 tags: life, education
 visibility: public
-layout: ../../layouts/BlogPost.astro
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
 The first thing I did was listing universities that I wanted, I could apply, and I could afford. I didn't want to do another subject other than Information Technology, so I was pretty much locked on it. Computer Science came close but I threw it out of the window because I couldn't really do mathematics and didn't want to relive the undergraduate pain once more.
