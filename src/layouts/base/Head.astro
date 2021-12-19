@@ -67,6 +67,20 @@ const env = import.meta.env.PUBLIC_VERCEL_ENV;
   />
 ))}
 
+<!-- Prevent FOUC. Source: https://github.com/withastro/astro/blob/6e3b11ec22530abe89821422751c0a870d657c24/docs/src/components/HeadCommon.astro#L22-L31. -->
+<script>
+  const root = document.documentElement;
+  const theme = localStorage.getItem('theme');
+  if (
+    theme === 'dark' ||
+    (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    root.classList.add('theme-dark');
+  } else {
+    root.classList.remove('theme-dark');
+  }
+</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics on prod only -->
 {env === 'production' ? (
   <script
