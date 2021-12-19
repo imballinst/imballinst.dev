@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
 
-let allPosts = await Astro.fetchContent('./posts/creating-count-up-time.md');
+let allPosts = await Astro.fetchContent('./posts/*.md');
 allPosts = allPosts
   .sort(
     (a, b) =>
