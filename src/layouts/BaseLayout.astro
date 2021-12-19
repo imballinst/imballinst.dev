@@ -7,21 +7,15 @@ import { Link } from '../components/Links';
 const {
   title,
   description,
-  content = {},
-  currentMenu
-} = Astro.props;
-const {
-  title: contentTitle,
-  description: contentDescription,
+  currentMenu,
   permalink,
   heroImage
-} = content;
+} = Astro.props;
 
-const effectiveTitle = title || contentTitle;
 const effectiveDescription =
-  description || contentDescription || 'The personal site of Try Ajitiono.';
+  description || 'The personal site of Try Ajitiono.';
 
-const pageTitlePrefix = effectiveTitle ? `${effectiveTitle} | ` : '';
+const pageTitlePrefix = title ? `${title} | ` : '';
 const pageTitle = pageTitlePrefix + 'peepohappy';
 
 // TODO(imballinst): add toggle format.
@@ -42,7 +36,7 @@ const NAVS_WITH_CLASSES = NAVS.map(nav => ({
 }))
 ---
 
-<html lang={content.lang || 'en'}>
+<html lang='en'>
   <head>
     <BaseHead
       title={pageTitle}

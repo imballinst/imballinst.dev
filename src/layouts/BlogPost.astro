@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPostHeader from '../components/BlogPostHeader.astro';
 
-const { content } = Astro.props;
+const { content = {} } = Astro.props;
 const {
   title,
   description,
