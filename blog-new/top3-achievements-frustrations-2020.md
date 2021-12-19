@@ -9,6 +9,8 @@ visibility: public
 layout: ../../layouts/BlogPost.astro
 ---
 
+![<span>Glencoe, United Kingdom. Photo by <a href="https://unsplash.com/@lobostudiohamburg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">LoboStudio Hamburg</a> on <a href="https://unsplash.com/s/photos/light-dark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>](/assets/blog/top3-achievements-frustrations-2020/images/)
+
 For me, 2020 has been a... memorable year—in its way, of course. It is as if yesterday was still 2019, but here we are, at the end of 2020. I encountered a lot of events this year, which were a mix of happiness and sadness inducing events. In this post, I will rank the top 3 achievements and struggles as I paved my way throughout the year.
 
 ## Top 3 Achievements

@@ -9,6 +9,8 @@ visibility: public
 layout: ../../layouts/BlogPost.astro
 ---
 
+![A ticking hourglass, where the sands on the top are almost spent. <span>Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NeONBRAND</a> on <a href="https://unsplash.com/images/things/clock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>](/assets/blog/creating-count-up-timer/images/)
+
 What is a count-up timer? A count-up timer is the opposite of a count-down timer. Instead of counting **to zero**, this timer counts **from zero**. It can serve multiple purposes, such as for counting the duration of a workout, duration of screen usages in a day or week, or... in my case, counting the duration since I got married. In this post, I will be sharing a bit about the process of creating a count-up timer.
 
 ## Defining the "start time"

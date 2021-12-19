@@ -9,6 +9,8 @@ visibility: public
 layout: ../../layouts/BlogPost.astro
 ---
 
+![Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.](/assets/blog/my-thought-pursuing-higher-study/)
+
 The first thing I did was listing universities that I wanted, I could apply, and I could afford. I didn't want to do another subject other than Information Technology, so I was pretty much locked on it. Computer Science came close but I threw it out of the window because I couldn't really do mathematics and didn't want to relive the undergraduate pain once more.
 
 Most post-graduate program required my undergraduate GPA to be at least 3.0 in the scale of 4.0. Since I didn't do well in my undergraduate, my choice was a bit limited. From my [search result in Top Universities in 2018](https://www.topuniversities.com/university-rankings/university-subject-rankings/2018/computer-science-information-systems), I found out that University of Melbourne, which at that time ranked 14th best, had lower GPA requirement (2.75 in the scale of 4), so that's a yep.

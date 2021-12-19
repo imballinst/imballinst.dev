@@ -159,7 +159,7 @@ function parseMarkdown(content) {
 
         obj.frontmatter.imageAlt = $.text();
         obj.frontmatter.image = imagePath;
-        obj.content = array.slice(i + 2).join('\n');
+        obj.content = array.slice(i).join('\n');
 
         break;
       }

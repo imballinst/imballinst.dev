@@ -9,6 +9,8 @@ visibility: public
 layout: ../../layouts/BlogPost.astro
 ---
 
+![A cardboard with the npm logo. Also, yes, hopefully, I don't hurt your eyes with my photo editing skills.](/assets/blog/publishing-npm-package/images/)
+
 Hey! So, you want to publish your library to the npm registry? Nice! Publishing a library to a public registry has a lot of positives and probably 0 negatives, as long as your library doesn't contain malicious code. The positives are as the following (this list is not exhaustive):
 
 - You can use your library in your projects without having to copy-paste them locally.

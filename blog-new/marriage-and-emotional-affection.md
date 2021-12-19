@@ -9,6 +9,8 @@ visibility: public
 layout: ../../layouts/BlogPost.astro
 ---
 
+![Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy.](/assets/blog/marriage-and-emotional-affection/images/)
+
 For me, a relationship is all about trust, patience, and empathy. I didn't know that before -- I had to learn them the hard way. It sounds like an excuse, but my family didn't provide me the best environment to learn about emotional intelligence -- it simply didn't exist (and probably still doesn't). Anger was forbidden, sadness was forbidden, just keep up a mask of a happy face all day to prevent further problems.
 
 Moreover, since the "culprit" in my parents' _house_ was a woman, it was really hard for me to fully open up to the opposing gender. I was afraid of getting a person with her traits. Love was a topic that I would tread really, really carefully. Yes, I had crushes, but I kept questioning myself, _"Is this love? Or is this lust?"_. I think I was being paranoid, while at the same time, I wanted someone who could match my puzzle piece. I was conflicting with my inner self most of the time.

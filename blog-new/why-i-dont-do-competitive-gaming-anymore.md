@@ -9,6 +9,8 @@ visibility: public
 layout: ../../layouts/BlogPost.astro
 ---
 
+![Getting 3rd place in Jakarta Qualifier of Indonesia Elite Super League (IESL) in 2015.](/assets/blog/why-i-dont-do-competitive-gaming-anymore/images/)
+
 That was mostly it -- we competed in bigger Indonesian tournaments, but since we were mostly students and did not dedicate 100% of our time to "train", we were clearly behind compared with other top-tier teams from Indonesia.
 
 I have regrets over those times. I overvalued grinding and I forgot the value of watching and learning. Yes, applying what we have learned is important, but as much as putting them into practice is important, we can also get insights by watching how other players play and do their stuff. Perhaps, if I "studied" other top-tier players inside and outside Indonesia, I could have become a better player.

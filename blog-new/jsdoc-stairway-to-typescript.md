@@ -9,6 +9,8 @@ visibility: public
 layout: ../../layouts/BlogPost.astro
 ---
 
+![Route 217, Pokémon Platinum.](/assets/blog/jsdoc-stairway-to-typescript/images/)
+
 Imagine walking on a road. In a normal, sunny day, you will be able to see the road track, which keeps you on the road and prevents you from getting lost. Now, let's say there is a blizzard. Then, the road track is buried deep beneath the snow. It is now harder to find the way to your destination. You can brute force your way by going in all possible directions, but how long will it take?
 
 When you can see the road track, **you don't really have to think**. You just follow that track and eventually it will get you somewhere. If you are lost, then you can go back, using the same road track to your previous checkpoint.
