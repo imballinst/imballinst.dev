@@ -212,22 +212,16 @@ Finally, we have it. Then, we just import it with `<script>` tag and run the `ca
 
 What we are doing with the snippet above is that, first, we import the `date.js` that we have in the same directory. After that, after the page has finished loading, we run the JavaScript to first immediately render the result to the page. After that, we set a one-second interval to automatically update the numbers on the screen. The result can be seen in the GIF below.
 
-<figure class="gatsby-resp-image-figure" style="margin-bottom: 1rem; display: flex; flex-direction: column; align-items: center;">
-  <img src="images/timer-wedding.gif">
-  <figcaption class="gatsby-resp-image-figcaption">The finished countup timer. It ticks from "1 year, 1 month, 10 days, 1 hour, 23 minutes, 1 second" to "1 year, 1 month, 10 days, 1 hour, 23 minutes, 10 seconds".</figcaption>
-</figure>
+![The finished countup timer. It ticks from "1 year, 1 month, 10 days, 1 hour, 23 minutes, 1 second" to "1 year, 1 month, 10 days, 1 hour, 23 minutes, 10 seconds".](images/timer-wedding.gif)
 
 There you have it. The count-up timer is finished. If you want to change the start date, you can change `WEDDING_DATE` to anything that you want. For demonstration purposes, what if we use the Final Fantasy XIV post above? Let's try changing the initial date to the one specified in the post: `2021-06-18T15:13:38.000Z`. Note that when initializing with `new Date`, the month starts at 0 (January) and ends at 11 (December).
 
-```diff-javascript
+```diff
 - const WEDDING_DATE = new Date(2020, 6 /* July */, 12, 9, 43, 33);
 + const POST_DATE = new Date(2021, 5 /* June */, 18, 15, 13, 38);
 ```
 
-<figure class="gatsby-resp-image-figure" style="margin-bottom: 1rem; display: flex; flex-direction: column; align-items: center;">
-  <img src="images/timer-post.gif">
-  <figcaption class="gatsby-resp-image-figcaption">The timer since the post was published on the Final Fantasy XIV Instagram account. It ticks from "0 years, 2 months, 4 days, 20 hours, 48 minutes, 9 seconds" to "0 years, 2 months, 4 days, 20 hours, 48 minutes, 16 seconds".</figcaption>
-</figure>
+![The timer since the post was published on the Final Fantasy XIV Instagram account. It ticks from "0 years, 2 months, 4 days, 20 hours, 48 minutes, 9 seconds" to "0 years, 2 months, 4 days, 20 hours, 48 minutes, 16 seconds".](images/timer-post.gif)
 
 ## Closing words
 

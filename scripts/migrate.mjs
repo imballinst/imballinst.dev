@@ -83,7 +83,9 @@ async function migratePost(directory) {
     }
 
     if (pushedFrontmatter !== undefined) {
-      newFrontmatters[key] = pushedFrontmatter;
+      newFrontmatters[key] = /:\s+/g.test(pushedFrontmatter)
+        ? `"${pushedFrontmatter}"`
+        : pushedFrontmatter;
     }
   }
 

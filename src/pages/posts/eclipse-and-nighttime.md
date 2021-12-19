@@ -3,8 +3,8 @@ title: Eclipse and Nighttime
 description: Let's be kind to others.
 publishDate: 2020-07-10T10:31:20.525Z
 image: /assets/blog/eclipse-and-nighttime/darkness-nighttime-forest-wander.jpg
-imageAlt: Darkness is present during the nighttime. Cr: ForestWander Nature Photography.
-imageCaption: Darkness is present during the nighttime. Cr: ForestWander Nature Photography.
+imageAlt: "Darkness is present during the nighttime. Cr: ForestWander Nature Photography."
+imageCaption: "Darkness is present during the nighttime. Cr: ForestWander Nature Photography."
 tags: life
 visibility: unlisted
 layout: ../../layouts/BlogPost.astro

@@ -68,10 +68,7 @@ When these 3 components exist together in a household, I believe only a harmonio
 
 ## Curiosities
 
-<figure class="gatsby-resp-image-figure" style="margin-bottom: 1rem; display: flex; flex-direction: column; align-items: center;  ">
-  <img src="images/how-long-married-3.gif">
-  <figcaption class="gatsby-resp-image-figcaption">Duration timer since the second I got married to Hawa.</figcaption>
-</figure>
+![Duration timer since the second I got married to Hawa.](images/how-long-married-3.gif)
 
 At the time of writing, it was around 1 month and 14 days since I got married to Hawa. The GIF above was made from [a website that I made specifically to count how long has it been since our wedding](https://imballinst.github.io/married). Although I know "monthiversary" is not a thing, I thought it was cool seeing all the numbers change together at the same time. Now, I kind of understand why anniversaries are a big deal for some people. It is a _life milestone_.
 

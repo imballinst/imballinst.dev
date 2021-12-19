@@ -25,14 +25,14 @@ function sum(a: number, b: number) {
   return a + b;
 }
 
-doSomething(function(result) {
+doSomething(function (result) {
   console.log(result);
 });
 
 // Arrow function expression equivalent.
 const sum = (a: number, b: number) => a + b;
 
-doSomething(result => {
+doSomething((result) => {
   console.log(result);
 });
 ```
@@ -111,7 +111,7 @@ TypeError: can't access property "counter", this.state is undefined
 
 What does this mean? One thing for sure, `this.state` is `undefined`. How come is it `undefined`? We can render it just fine in the `render` function using `this.state.counter`. Well, the truth is, `this` inside the `handleClick` is not within the `App` component scope. We can investigate this by doing `console.log(this)` inside the function and immediately we know that the `Window` object is printed instead of the `App` component. As far as I can understand, most (if not all) DOM events happen within the `Window` scope. With that out of the way, how do we fix it?
 
-```tsx{5, 30}
+```tsx
 // Use explicit `bind`.
 class App extends React.Component {
   constructor() {
@@ -220,7 +220,7 @@ function handleSubmit(e) {
   }
 }
 
-const handleSubmit = e => {
+const handleSubmit = (e) => {
   try {
     // Update...
   } catch {

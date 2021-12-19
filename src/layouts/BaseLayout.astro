@@ -50,20 +50,6 @@ const NAVS_WITH_CLASSES = NAVS.map(nav => ({
       {permalink}
       {heroImage}
     />
-
-    <script>
-      if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark');
-        localStorage.theme = 'dark';
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.theme = 'light';
-      }
-    </script>
   </head>
 
   <body class="flex flex-col min-h-screen dark:bg-gray-800 transition-colors">
