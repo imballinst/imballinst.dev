@@ -1,5 +1,6 @@
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
+import remarkGfm from 'remark-gfm';
 
 import imageCaptionPlugin from './plugins/image/index.mjs';
 import htmlClassnamesPlugin from './plugins/html-classnames/index.mjs';
@@ -20,6 +21,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
       '@astrojs/markdown-remark',
       {
         remarkPlugins: [
+          { default: remarkGfm },
           { default: imageCaptionPlugin },
           { default: htmlClassnamesPlugin }
         ],

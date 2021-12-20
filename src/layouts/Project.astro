@@ -7,17 +7,17 @@ const { title, description, publishDate, githubLink, author } = content;
 ---
 
 <BaseLayout {title} {description} currentMenu="/projects">
-  <article class="content">
+  <article class="project">
     <ProjectHeader {title} {author} {publishDate} {githubLink} />
 
-    <div>
+    <div class="mt-4">
       <slot />
     </div>
   </article>
 </BaseLayout>
 
 <style>
-  .content {
+  .project {
     display: flex;
     flex-direction: column;
   }

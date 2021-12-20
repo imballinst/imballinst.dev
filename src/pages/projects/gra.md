@@ -1,7 +1,7 @@
 ---
 title: gra
 description: gra is a remote address getter for a particular URL.
-publishDate: 2021-12-20T10:00:00.000Z
+publishDate: 2021-05-27T10:39:00.000Z
 githubLink: https://github.com/Imballinst/gra
 setup: import Layout from '../../layouts/Project.astro'
 ---
@@ -19,3 +19,5 @@ $ curl --request POST \
 }'
 {"data":{"ip":"172.217.164.142"}}
 ```
+
+This project was made using [Express](http://expressjs.com) and deployed in Heroku. Underneath, it uses the built-in `dns` package which is used to resolve the remote address.

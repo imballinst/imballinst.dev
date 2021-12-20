@@ -32,6 +32,7 @@ export function DarkModeToggler() {
   }, [mode]);
 
   let rendered;
+  let toggleLabel = 'dark';
 
   if (mode === 'light') {
     rendered = (
@@ -41,6 +42,7 @@ export function DarkModeToggler() {
       ></path>
     );
   } else {
+    toggleLabel = 'light';
     rendered = (
       <g
         strokeLinejoin="round"
@@ -73,7 +75,7 @@ export function DarkModeToggler() {
     <button
       onClick={onButtonClick}
       className="hover:bg-gray-200 dark:hover:bg-gray-500 p-2 rounded-full transition-colors"
-      aria-label={`Toggle ${mode === 'dark' ? 'light' : 'dark'} mode`}
+      aria-label={`Toggle ${toggleLabel} mode`}
     >
       <svg
         viewBox="0 0 24 24"

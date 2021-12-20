@@ -12,8 +12,6 @@ export interface Props {
   author: string;
 }
 
-const TEXT_COLOR = 'text-gray-600 dark:text-gray-400';
-
 function generateAnchorTag({ href, text }) {
   let icon = '';
 
@@ -21,7 +19,7 @@ function generateAnchorTag({ href, text }) {
     icon = `
 <svg
   viewBox="0 0 24 24"
-  class="ml-0.25 mb-2 h-3 w-3 inline-block"
+  class="ml-1 mb-2 h-3 w-3 inline-block"
   focusable="false"
   aria-hidden="true"
 >
@@ -73,11 +71,9 @@ $('body').each((_i, el) => {
 
   {image && (
     <figure class="flex flex-col items-center justify-center mt-3 mb-4">
-      <div class="border border-gray-200 dark:border-gray-600">
-        <a href={image} target="_blank" rel="noopener">
-          <img alt={imageAlt} src={image} loading="lazy">
-        </a>
-      </div>
+      <a href={image} target="_blank" rel="noopener" class="w-full border border-gray-200 dark:border-gray-600">
+        <img alt={imageAlt} src={image} loading="lazy" class="resp-image-image w-full">
+      </a>
       <figcaption class="text-sm text-center mt-1 text-gray-600 dark:text-gray-400">{htmlString}</figcaption>
     </figure>
   )}

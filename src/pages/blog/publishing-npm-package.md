@@ -131,10 +131,13 @@ A good example of this is [Next.js upgrade guide](https://nextjs.org/docs/upgrad
 
 A version in software consists of multiple changesets. These "changesets" are "commits" in Git terms. When we have released a lot of versions, it may not be feasible to read through the entire Git commit history. It is for this purpose that we create "release notes" to combine the commits. Consider this case:
 
-**User:** _"Hey, I found this bug where the X function is not working properly when given the input Y."_<br/>
-**Maintainer:** _"Thanks for reporting! Could you tell me which version is this?"_<br/>
-**User:** _"I am using the version that was released last year: 2.11.0."_<br/>
-**Maintainer:** _"Sure! I'll look into it."_
+> **User:** _"Hey, I found this bug where the X function is not working properly when given the input Y."_
+
+> **Maintainer:** _"Thanks for reporting! Could you tell me which version is this?"_
+
+> **User:** _"I am using the version that was released last year: 2.11.0."_
+
+> **Maintainer:** _"Sure! I'll look into it."_
 
 Let's say that there have been N commits since last year (where the maintainer doesn't know the exact number of N), it will not be easy to pinpoint the commit that belongs to version `2.11.0`. However, with proper release notes, we can find the exact version along with the changes that came along with it. For example, in the same Next.js repository, if we want to look back to a particular version, say, `v9.3.6`, we can just visit this link: https://github.com/vercel/next.js/releases/tag/v9.3.6 and see the list of commits there. If we want to debug further, we can click the "v9.3.6" link (see screenshot below).
 

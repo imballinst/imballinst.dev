@@ -76,7 +76,7 @@ function generateAnchorTag({ href, text }) {
     icon = `
 <svg
   viewBox="0 0 24 24"
-  class="ml-0.25 mb-2 h-3 w-3 inline-block"
+  class="ml-1 mb-2 h-3 w-3 inline-block"
   focusable="false"
   aria-hidden="true"
 >

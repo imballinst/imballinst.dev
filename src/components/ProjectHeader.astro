@@ -19,9 +19,7 @@ const { title, publishDate, author, githubLink } = Astro.props;
   <Text as="h1" className="text-xl text-center my-0">{title}</Text>
 
   <div class="text-center my-0">
-    <Link href={githubLink} disableUnderline className="inline-flex"
-      >View on GitHub</Link
-    >
+    <Link href={githubLink} className="inline-flex">View on GitHub</Link>
 
     <Text as="span" colorScheme="gray" className="mx-2">&bull;</Text>
 

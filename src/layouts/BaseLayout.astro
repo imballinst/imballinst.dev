@@ -2,15 +2,10 @@
 import BaseHead from './base/Head.astro';
 import { Text } from '../components/Typography';
 import { DarkModeToggler } from '../components/Layout';
-import { Link } from '../components/Links';
+// TODO(imballinst): not sure the prettier complains when I used `Link` instead of `ComponentLink`.
+import { Link as ComponentLink } from '../components/Links';
 
-const {
-  title,
-  description,
-  currentMenu,
-  permalink,
-  heroImage
-} = Astro.props;
+const { title, description, currentMenu, permalink, heroImage } = Astro.props;
 
 const effectiveDescription =
   description || 'The personal site of Try Ajitiono.';
@@ -20,26 +15,48 @@ const pageTitle = pageTitlePrefix + 'peepohappy';
 
 // TODO(imballinst): add toggle format.
 const BASE_NAV_CLASSES = 'pb-1 border-teal-600 dark:border-teal-300';
-const NAVS = [{
-  path: '/',
-  title: 'peepohappy'
-}, {
-  path: '/blog',
-  title: 'blog'
-}, {
-  path: '/projects',
-  title: 'projects'
-}, {
-  path: '/about',
-  title: 'about'
-}];
-const NAVS_WITH_CLASSES = NAVS.map(nav => ({
+const NAVS = [
+  {
+    path: '/',
+    title: 'peepohappy'
+  },
+  {
+    path: '/blog',
+    title: 'blog'
+  },
+  {
+    path: '/projects',
+    title: 'projects'
+  },
+  {
+    path: '/about',
+    title: 'about'
+  }
+];
+const NAVS_WITH_CLASSES = NAVS.map((nav) => ({
   ...nav,
-  className: `${BASE_NAV_CLASSES} ${currentMenu === nav.path ? 'border-b-2' : 'hover:border-b-2'}`
-}))
+  className: `${BASE_NAV_CLASSES} ${
+    currentMenu === nav.path ? 'border-b-2' : 'hover:border-b-2'
+  }`
+}));
+
+const SOCIAL_LINKS = [
+  {
+    href: 'https://github.com/imballinst',
+    title: 'GitHub'
+  },
+  {
+    href: 'https://twitter.com/Ajiballinst',
+    title: 'Twitter'
+  },
+  {
+    href: 'https://www.linkedin.com/in/try-ajitiono',
+    title: 'LinkedIn'
+  }
+];
 ---
 
-<html lang='en'>
+<html lang="en">
   <head>
     <BaseHead
       title={pageTitle}
@@ -57,15 +74,11 @@ const NAVS_WITH_CLASSES = NAVS.map(nav => ({
         class="-ml-2 flex flex-row justify-between items-center px-3 py-2 w-full md:w-wmd lg:w-wlg xl:w-wxl"
       >
         <div class="flex flex-row font-semibold">
-          {
-            NAVS_WITH_CLASSES.map(nav => (
-              <Link href={nav.path} className="p-2" disableUnderline>
-                <div class={nav.className}>
-                  {nav.title}
-                </div>
-              </Link>
-            ))
-          }
+          {NAVS_WITH_CLASSES.map((nav) => (
+            <ComponentLink href={nav.path} className="p-2" disableUnderline>
+              <div class={nav.className}>{nav.title}</div>
+            </ComponentLink>
+          ))}
         </div>
 
         <div>
@@ -89,6 +102,19 @@ const NAVS_WITH_CLASSES = NAVS.map(nav => ({
         class="sm:w-full md:w-wmd lg:w-wlg xl:w-wxl"
       >
         <p class="font-bold text-center text-sm">&copy; 2021 Try Ajitiono</p>
+
+        <div class="text-center text-sm mt-1">
+          {SOCIAL_LINKS.map((social) => (
+            <ComponentLink
+              href={social.href}
+              className="px-2"
+              disableExternalIcon
+              isExternal
+            >
+              {social.title}
+            </ComponentLink>
+          ))}
+        </div>
       </Text>
     </footer>
   </body>

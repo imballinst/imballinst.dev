@@ -11,6 +11,12 @@ allPosts = allPosts
       new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
   )
   .slice(0, 3);
+
+let allProjects = await Astro.fetchContent('./projects/*.md');
+allProjects = allProjects.sort(
+  (a, b) =>
+    new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+);
 ---
 
 <BaseLayout
@@ -25,25 +31,45 @@ allPosts = allPosts
     gaming stuff.
   </Text>
 
-  <Text as="h2">My latest posts</Text>
+  <div class="mt-8 mb-4">
+    <Text as="h2">My latest posts</Text>
 
-  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    {allPosts.map((post, idx) => (
-      <li key={idx}>
-        <Card
-          title={post.title}
-          date={post.publishDate}
-          text={post.description}
-          img={post.image}
-          imgAlt={post.imageAlt}
-          href={post.url}
-          className="h-full"
-        />
-      </li>
-    ))}
-  </ul>
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {allPosts.map((post, idx) => (
+        <li key={idx}>
+          <Card
+            title={post.title}
+            date={post.publishDate}
+            text={post.description}
+            img={post.image}
+            imgAlt={post.imageAlt}
+            href={post.url}
+            className="h-full"
+          />
+        </li>
+      ))}
+    </ul>
+  </div>
 
-  <Text as="h2">Latest projects</Text>
+  <div class="mt-8 mb-4">
+    <Text as="h2">Latest projects</Text>
 
-  <Text as="h2">My latest activity</Text>
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {allProjects.map((project, idx) => (
+        <li key={idx}>
+          <Card
+            title={project.title}
+            date={project.publishDate}
+            text={project.description}
+            href={project.url}
+            className="h-full"
+          />
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="mt-8 mb-4">
+    <Text as="h2">My latest activity</Text>
+  </div>
 </BaseLayout>
