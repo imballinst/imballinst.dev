@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectHeader from '../components/ProjectHeader.astro';
+
+const { content = {} } = Astro.props;
+const { title, description, publishDate, githubLink, author } = content;
+---
+
+<BaseLayout {title} {description} currentMenu="/projects">
+  <article class="content">
+    <ProjectHeader {title} {author} {publishDate} {githubLink} />
+
+    <div>
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

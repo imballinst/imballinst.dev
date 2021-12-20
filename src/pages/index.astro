@@ -3,8 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
 
-let allPosts = await Astro.fetchContent('./posts/*.md');
+let allPosts = await Astro.fetchContent('./blog/*.md');
 allPosts = allPosts
+  .filter((p) => p.visibility === 'public')
   .sort(
     (a, b) =>
       new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
@@ -14,7 +15,7 @@ allPosts = allPosts
 
 <BaseLayout
   title="Home"
-  description="The home page of Try Ajitiono's personal site."
+  description="The home page of my personal site."
   currentMenu="/"
 >
   <Text as="h1" className="text-center mt-0 mb-0">Welcome to peepohappy!</Text>
@@ -42,7 +43,7 @@ allPosts = allPosts
     ))}
   </ul>
 
-  <Text as="h2">My projects</Text>
+  <Text as="h2">Latest projects</Text>
 
   <Text as="h2">My latest activity</Text>
 </BaseLayout>

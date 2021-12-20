@@ -3,16 +3,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
 
-let allPosts = await Astro.fetchContent('./posts/*.md');
-allPosts = allPosts.sort(
-  (a, b) =>
-    new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
-);
+let allPosts = await Astro.fetchContent('./blog/*.md');
+allPosts = allPosts
+  .filter((p) => p.visibility === 'public')
+  .sort(
+    (a, b) =>
+      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+  );
 ---
 
 <BaseLayout
   title="Blog"
-  description="List of blog posts written by Try Ajitiono."
+  description="List of blog posts written by me."
   currentMenu="/blog"
 >
   <ul class="grid grid-cols-1 gap-8">

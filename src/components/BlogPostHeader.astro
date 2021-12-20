@@ -72,20 +72,13 @@ $('body').each((_i, el) => {
   </Text>
 
   {image && (
-    <figure class="resp-image-figure my-4">
-      <span class="resp-image-wrapper">
-        <a class="resp-image-link" href={image} target="_blank" rel="noopener">
-          <img
-            class="resp-image-image w-full"
-            alt={imageAlt}
-            src={image}
-            loading="lazy"
-          />
+    <figure class="flex flex-col items-center justify-center mt-3 mb-4">
+      <div class="border border-gray-200 dark:border-gray-600">
+        <a href={image} target="_blank" rel="noopener">
+          <img alt={imageAlt} src={image} loading="lazy">
         </a>
-      </span>
-      <figcaption class="resp-image-figcaption text-sm text-center mt-1 text-gray-600 dark:text-gray-400">
-        {htmlString}
-      </figcaption>
+      </div>
+      <figcaption class="text-sm text-center mt-1 text-gray-600 dark:text-gray-400">{htmlString}</figcaption>
     </figure>
   )}
 </header>

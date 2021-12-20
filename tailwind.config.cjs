@@ -6,7 +6,7 @@ module.exports = {
   content: [
     './plugins/**/*.mjs',
     './public/assets/common-images/*.svg',
-    './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}'
+    './src/**/*.{astro,js,md,ts,tsx}'
   ],
   darkMode: 'class',
   theme: {

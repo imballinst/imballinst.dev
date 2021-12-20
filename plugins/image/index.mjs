@@ -51,7 +51,7 @@ export default function imageCaptionPlugin() {
           // Another good reference: https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/.
           firstChild.value = `
             <figure class="flex flex-col items-center justify-center mt-3 mb-4">
-              <div class="border border-gray-200">
+              <div class="border border-gray-200 dark:border-gray-600">
                 <a href="${url}" target="_blank" rel="noopener">
                   <img alt="${altString}" src="${url}" loading="lazy">
                 </a>
