@@ -79,6 +79,7 @@ export default function htmlClassnamesPlugin() {
         const hast = toHast(child);
         hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} italic p-4 border border-gray-200 dark:border-gray-600 rounded`;
 
+        // TODO(imballinst): ensure there is a way to create a proper newlines in blockquotes.
         const html = toHtml(hast);
 
         child.type = 'html';
