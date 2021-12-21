@@ -1,4 +1,6 @@
 import { formatDistanceToNowStrict } from 'date-fns';
+import { AnchorHTMLAttributes, ReactNode } from 'react';
+import { ExternalLinkIcon } from '../Links';
 
 import { Text } from '../Typography';
 
@@ -25,9 +27,21 @@ export function Card(props: CardProps) {
         className={`${styles['featured-image']} rounded-t-lg`}
       />
     ) : undefined;
+  const anchorProps: AnchorHTMLAttributes<HTMLAnchorElement> = {};
+  let titleChildren: ReactNode | undefined = undefined;
+
+  if (
+    props.href !== undefined &&
+    (props.href.includes('http://') || props.href.includes('https://'))
+  ) {
+    anchorProps.target = '_blank';
+    anchorProps.rel = 'noopener';
+
+    titleChildren = <ExternalLinkIcon />;
+  }
 
   return (
-    <a href={props.href!}>
+    <a href={props.href!} {...anchorProps}>
       <div
         className={`border rounded-lg border-gray-200 hover:border-teal-500 dark:border-gray-600 dark:hover:border-teal-200 transition-colors ${className}`}
       >
@@ -40,6 +54,7 @@ export function Card(props: CardProps) {
             colorScheme="teal"
           >
             {props.title}
+            {titleChildren}
           </Text>
 
           <div className="flex flex-row items-center mb-1 text-sm text-gray-600 dark:text-gray-400">

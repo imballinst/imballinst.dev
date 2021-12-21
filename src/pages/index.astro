@@ -17,6 +17,9 @@ allProjects = allProjects.sort(
   (a, b) =>
     new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
 );
+
+const allRepoActivitiesStr = await Astro.resolve('../static/activity.json');
+const allRepoActivities = (await import(allRepoActivitiesStr)).default;
 ---
 
 <BaseLayout
@@ -32,7 +35,7 @@ allProjects = allProjects.sort(
   </Text>
 
   <div class="mt-8 mb-4">
-    <Text as="h2">My latest posts</Text>
+    <Text as="h2">Latest posts</Text>
 
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {allPosts.map((post, idx) => (
@@ -70,6 +73,20 @@ allProjects = allProjects.sort(
   </div>
 
   <div class="mt-8 mb-4">
-    <Text as="h2">My latest activity</Text>
+    <Text as="h2">Latest GitHub activities</Text>
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {allRepoActivities.map((repo, idx) => (
+        <li key={idx}>
+          <Card
+            title={repo.name}
+            date={repo.lastUpdate}
+            text={repo.description}
+            href={repo.url}
+            className="h-full"
+          />
+        </li>
+      ))}
+    </ul>
   </div>
 </BaseLayout>
