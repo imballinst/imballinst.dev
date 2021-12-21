@@ -58,7 +58,7 @@ export default function htmlClassnamesPlugin() {
         `;
       } else if (child.type === 'list') {
         const hast = toHast(child);
-        hast.properties.class = `${TEXT_COLOR} list-decimal pl-4`;
+        hast.properties.class = `${TEXT_COLOR} list-decimal pl-8`;
         for (const el of hast.children) {
           el.properties = { class: 'pl-1' };
         }

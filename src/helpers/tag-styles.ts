@@ -1,6 +1,8 @@
 export const TEXT_COLOR = 'text-black dark:text-gray-200';
 const ALTERNATIVE_TEXT_COLORS = {
-  gray: 'text-gray-600 dark:text-gray-400'
+  black: 'text-black dark:text-gray-200',
+  gray: 'text-gray-600 dark:text-gray-400',
+  teal: 'text-teal-600 dark:text-teal-300'
 };
 
 export const DEFAULT_ATTRS = {
@@ -25,6 +27,11 @@ export const DEFAULT_MARGINS = {
   strong: ``
 };
 
-export function changeTextColorScheme(classnames: string, colorScheme: 'gray') {
+export type ColorSchemes = 'black' | keyof typeof ALTERNATIVE_TEXT_COLORS;
+
+export function changeTextColorScheme(
+  classnames: string,
+  colorScheme: ColorSchemes
+) {
   return classnames.replace(TEXT_COLOR, ALTERNATIVE_TEXT_COLORS[colorScheme]);
 }

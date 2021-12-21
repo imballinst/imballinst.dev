@@ -3,7 +3,8 @@ import {
   changeTextColorScheme,
   DEFAULT_ATTRS,
   DEFAULT_MARGINS,
-  TEXT_COLOR
+  TEXT_COLOR,
+  ColorSchemes
 } from '../../helpers/tag-styles';
 
 export function Text({
@@ -15,7 +16,7 @@ export function Text({
   as?: keyof typeof DEFAULT_ATTRS;
   children: ReactNode;
   className?: string;
-  colorScheme?: 'black' | 'gray';
+  colorScheme?: ColorSchemes;
 }) {
   let classNames = DEFAULT_ATTRS[Element] || TEXT_COLOR;
 
