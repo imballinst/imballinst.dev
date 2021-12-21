@@ -3,12 +3,26 @@ title: My Thoughts on Pursuing Higher Study
 description: I finished my Masters in December 2019 and here are my thoughts after the ride.
 publishDate: 2020-04-25T14:39:06.797Z
 image: /assets/blog/my-thought-pursuing-higher-study/unimelb-law-building.jpg
-imageAlt: 'Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.'
-imageCaption: 'Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.'
+imageAlt: 'University of Melbourne Law Building in Pelham Street.'
+imageCaption: 'University of Melbourne Law Building in Pelham Street.'
 tags: life, education
 visibility: public
 setup: import Layout from '../../layouts/BlogPost.astro'
 ---
+
+This story is split into 3 parts. The first part is the preparation, the second part is the study itself, and the last part is the summary. The currency exchange rates in the post are using the rates on **December 12, 2017** (USD, 1 USD = 13.560 IDR) and **July 12, 2018** (AUD, 1 AUD = 10.556 IDR).
+
+## Preparation
+
+The year was 2017. My father said that during his time, he didn't have the chance to pursue higher study because he lacked financial support. Now that he could afford me to pursue higher study overseas, he really wanted me to do it.
+
+Another concern that he raised was with regards to the increasing competitions, academic degrees contribute a lot when applying for jobs. However, I didn't agree with this norm (and still don't), because degrees do not necessarily guarantee that one is capable of creating positive impact.
+
+There were 2 reasons that contributed to my final decision to pursue higher study. The first one was because I respected my father's good will. The second was I wanted to experience living abroad by myself. And so, I prepared for the upcoming enrollment in July 2018.
+
+### Looking for Options
+
+![Limited choices. Source: https://studentabroadmagazine.wordpress.com/2011/07/08/british-students-looking-at-foreign-options-to-avoid-large-fees/.](/assets/blog/my-thought-pursuing-higher-study/looking-for-options.jpg)
 
 The first thing I did was listing universities that I wanted, I could apply, and I could afford. I didn't want to do another subject other than Information Technology, so I was pretty much locked on it. Computer Science came close but I threw it out of the window because I couldn't really do mathematics and didn't want to relive the undergraduate pain once more.
 
@@ -78,60 +92,15 @@ Anyways, in the supermarket, I usually bought rice, bread, chocolate spread/stra
 
 What about food that I used to eat? Well... it was a very, very stale variation. The table below represents my eating "schedule" each week. Please note that this wasn't always the case, sometimes I skewed from this table because I was bored.
 
-<div style="overflow-x: auto; margin-bottom: 1rem;">
-  <table>
-    <thead>
-      <th>Day</th>
-      <th>Breakfast</th>
-      <th>Lunch</th>
-      <th>Dinner</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Sun</td>
-        <td> Cereal</td>
-        <td> Bread variations (sandwich/spread)</td>
-        <td> Bread variations</td>
-      </tr>
-      <tr>
-        <td>Mon</td>
-        <td> Cereal</td>
-        <td> Potato salad </td>
-        <td>Bread variations </td>
-      </tr>
-      <tr>
-        <td>Tue</td>
-        <td>Cereal</td>
-        <td> Potato salad/bread variations </td>
-        <td>Potato salad/bread variations</td>
-      </tr>
-      <tr>
-        <td>Wed</td>
-        <td> Cereal</td>
-        <td> Rice, egg, veggies </td>
-        <td>Rice, egg, veggies </td>
-      </tr>
-      <tr>
-        <td>Thu</td>
-        <td> Cereal</td>
-        <td> Rice, egg, veggies/eat in a restaurant </td>
-        <td>Rice, egg, veggies </td>
-      </tr>
-      <tr>
-        <td>Fri</td>
-        <td> Cereal</td>
-        <td> Salmon sushi (or rice+salmon when lazy) </td>
-        <td>Salmon sushi (or rice+salmon when lazy)</td>
-      </tr>
-      <tr>
-        <td>Sat</td>
-        <td> Cereal</td>
-        <td> Salmon sushi (or rice+salmon when lazy) </td>
-        <td>Bread variations </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+| Day | Breakfast | Lunch                                   | Dinner                                  |
+| --- | --------- | --------------------------------------- | --------------------------------------- |
+| Sun | Cereal    | Bread variations (sandwich/spread)      | Bread variations                        |
+| Mon | Cereal    | Potato salad                            | Bread variations                        |
+| Tue | Cereal    | Potato salad/bread variations           | Potato salad/bread variations           |
+| Wed | Cereal    | Rice, egg, veggies                      | Rice, egg, veggies                      |
+| Thu | Cereal    | Rice, egg, veggies/eat in a restaurant  | Rice, egg, veggies                      |
+| Fri | Cereal    | Salmon sushi (or rice+salmon when lazy) | Salmon sushi (or rice+salmon when lazy) |
+| Sat | Cereal    | Salmon sushi (or rice+salmon when lazy) | Bread variations                        |
 
 That was really boring, wasn't it? I don't know, I have a very low standard of taste, so I prepared foods that were easy to make, easy to clean, and acceptable to eat. Less time cooking, more time doing other things! Also, I kept salmon for the weekend because, you know, _save the best for last_.
 

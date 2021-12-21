@@ -12,7 +12,7 @@ setup: |
   import { Text } from '../../components/Typography'
 ---
 
-<Text className="text-center italic py-2 border-y dark:border-gray-600" colorScheme="gray">
+<Text className="text-center italic py-2 border-y border-gray-200 dark:border-gray-600" colorScheme="gray">
   WARNING: This post contains troubling parts in later sections. Proceed to read with care.
 </Text>
 

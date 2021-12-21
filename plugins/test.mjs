@@ -8,21 +8,27 @@ main();
 async function main() {
   const file = await remark()
     .use(remarkGfm)
-    .use(imageCaptionPlugin)
+    // .use(imageCaptionPlugin)
     .use(htmlClassnamesPlugin)
     .process(
       `
-# test
+> henlo \`test\`
+> test
 
-https://en.wikipedia.org/wiki/Solar_eclipse
+> henlo \`test\`
+>
+> test
 
-> henlo
-
-\`test\`
-
-1. \`test\`
-2. \`test\`
-    `.trim()
+| Day | Breakfast | Lunch                                   | Dinner                                  |
+| --- | --------- | --------------------------------------- | --------------------------------------- |
+| Sun | Cereal    | Bread variations (sandwich/spread)      | Bread variations                        |
+| Mon | Cereal    | Potato salad                            | Bread variations                        |
+| Tue | Cereal    | Potato salad/bread variations           | Potato salad/bread variations           |
+| Wed | Cereal    | Rice, egg, veggies                      | Rice, egg, veggies                      |
+| Thu | Cereal    | Rice, egg, veggies/eat in a restaurant  | Rice, egg, veggies                      |
+| Fri | Cereal    | Salmon sushi (or rice+salmon when lazy) | Salmon sushi (or rice+salmon when lazy) |
+| Sat | Cereal    | Salmon sushi (or rice+salmon when lazy) | Bread variations                        |
+`.trim()
     );
 
   console.error(String(file));

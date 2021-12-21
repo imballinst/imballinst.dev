@@ -123,11 +123,10 @@ pre[class*='language-'] {
 }
 
 :not(.dark) code:not([class*='language']) {
-  @apply text-sm px-1 py-0.5 rounded text-red-500 bg-gray-200;
+  @apply text-sm px-1 py-0.5 rounded text-red-500;
 }
 
 .dark code:not([class*='language']) {
-  background: #282c34;
   @apply text-sm px-1 py-0.5 rounded text-red-300;
 }
 

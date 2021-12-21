@@ -5,6 +5,12 @@ import { toHtml } from 'hast-util-to-html';
 
 // TODO(imballinst): ensure these are consistent.
 const TEXT_COLOR = 'text-black dark:text-gray-200';
+const ALTERNATIVE_TEXT_COLORS = {
+  black: 'text-black dark:text-gray-200',
+  gray: 'text-gray-600 dark:text-gray-400',
+  teal: 'text-teal-600 dark:text-teal-300'
+};
+
 const DEFAULT_ATTRS = {
   h1: `${TEXT_COLOR} text-3xl font-bold my-6`,
   h2: `${TEXT_COLOR} text-2xl font-bold my-4`,
@@ -59,6 +65,7 @@ export default function htmlClassnamesPlugin() {
       } else if (child.type === 'list') {
         const hast = toHast(child);
         hast.properties.class = `${TEXT_COLOR} list-decimal pl-8`;
+
         for (const el of hast.children) {
           el.properties = { class: 'pl-1' };
         }
@@ -70,12 +77,74 @@ export default function htmlClassnamesPlugin() {
         child.children = undefined;
       } else if (child.type === 'blockquote') {
         const hast = toHast(child);
-        hast.properties.class = `${TEXT_COLOR} italic pl-4`;
+        hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} italic p-4 border border-gray-200 dark:border-gray-600 rounded`;
 
         const html = toHtml(hast);
 
         child.type = 'html';
         child.value = html;
+        child.children = undefined;
+      } else if (child.type === 'thematicBreak') {
+        const hast = toHast(child);
+        hast.properties.class = `border-gray-200 dark:border-gray-600`;
+
+        const html = toHtml(hast);
+
+        child.type = 'html';
+        child.value = html;
+        child.children = undefined;
+      } else if (child.type === 'table') {
+        const hast = toHast(child);
+        hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} border-gray-200 dark:border-gray-600 w-full text-sm`;
+
+        const head = hast.children.find((e) => e.tagName === 'thead');
+        const body = hast.children.find((e) => e.tagName === 'tbody');
+
+        for (const tr of head.children) {
+          if (tr.tagName !== 'tr') continue;
+
+          if (tr.properties === undefined) {
+            tr.properties = {};
+          }
+
+          tr.properties.class =
+            'font-bold border-b-2 border-gray-200 dark:border-gray-600';
+
+          for (const th of tr.children) {
+            if (th.tagName !== 'th') continue;
+
+            if (th.properties === undefined) {
+              th.properties = {};
+            }
+
+            th.properties.class = 'p-2';
+          }
+        }
+
+        for (const tr of body.children) {
+          if (tr.tagName !== 'tr') continue;
+
+          if (tr.properties === undefined) {
+            tr.properties = {};
+          }
+
+          tr.properties.class = 'border-b border-gray-200 dark:border-gray-600';
+
+          for (const td of tr.children) {
+            if (td.tagName !== 'td') continue;
+
+            if (td.properties === undefined) {
+              td.properties = {};
+            }
+
+            td.properties.class = 'p-2';
+          }
+        }
+
+        const html = toHtml(hast);
+
+        child.type = 'html';
+        child.value = `<div class="overflow-x-auto my-4">${html}</div>`;
         child.children = undefined;
       }
     }
