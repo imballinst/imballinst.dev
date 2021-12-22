@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "node scripts/activity.js",
     "build": "PUBLIC_ASTRO_ENV=production astro build",
     "postbuild": "node scripts/optimize-image/sharp.js",
     "preview": "astro preview"
