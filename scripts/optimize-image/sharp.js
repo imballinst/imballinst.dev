@@ -8,57 +8,52 @@ const PATH_TO_PUBLIC_ASSETS = path.join(__dirname, '../../', 'public/assets');
 
 main();
 
+const IMAGE_WIDTHS = [512, 1024, 2048];
+
 async function main() {
   const files = await getAllFileSizes(PATH_TO_PUBLIC_ASSETS);
+  const promises = [];
 
   for (const file of files) {
     const uncompressed = await fs.readFile(file.path);
-    const fileExtension = path.extname(file.path);
+    let buffers;
 
-    let buffer;
-
-    if (fileExtension === '.jpg' || fileExtension === '.jpeg') {
-      buffer = await jpeg(uncompressed, file.size);
-    } else if (fileExtension === '.png') {
-      buffer = await png(uncompressed, file.size);
+    if (file.ext === '.jpg' || file.ext === '.jpeg') {
+      buffers = await Promise.all(
+        IMAGE_WIDTHS.map((width) => jpeg(uncompressed, width))
+      );
+    } else if (file.ext === '.png') {
+      buffers = await Promise.all(
+        IMAGE_WIDTHS.map((width) => png(uncompressed, width))
+      );
     }
 
-    if (buffer) {
-      await fs.writeFile(file.distPath, buffer, 'utf-8');
+    if (buffers) {
+      promises.push(
+        ...[
+          fs.rm(`${file.distPath}${file.ext}`),
+          ...buffers.map((buffer, idx) =>
+            fs.writeFile(
+              `${file.distPath}--${IMAGE_WIDTHS[idx]}w${file.ext}`,
+              buffer,
+              'utf-8'
+            )
+          )
+        ]
+      );
     }
   }
+
+  await Promise.all(promises);
 }
 
-function getQualityOptimization(fileSize) {
-  if (fileSize < 400) {
-    return 80;
-  } else if (fileSize >= 400 && fileSize < 600) {
-    return 70;
-  } else if (fileSize >= 600 && fileSize < 800) {
-    return 65;
-  }
-
-  return 60;
-}
-
-async function jpeg(uncompressed, fileSize) {
+async function jpeg(uncompressed, imageWidth) {
   return sharp(uncompressed)
-    .jpeg({ mozjpeg: true, quality: getQualityOptimization(fileSize) })
+    .resize(imageWidth)
+    .jpeg({ mozjpeg: true, quality: 80 })
     .toBuffer();
 }
 
-async function png(uncompressed, fileSize) {
-  return sharp(uncompressed)
-    .png({ quality: getQualityOptimization(fileSize) })
-    .toBuffer();
-}
-
-async function doesPathExist(path) {
-  try {
-    await fs.stat(path);
-
-    return true;
-  } catch (err) {
-    return false;
-  }
+async function png(uncompressed, imageWidth) {
+  return sharp(uncompressed).resize(imageWidth).png({ quality: 80 }).toBuffer();
 }

@@ -3,6 +3,7 @@ import path from 'path';
 
 const TEXT_COLOR = 'text-gray-600 dark:text-gray-400';
 const COMPRESSED_EXTS = ['.jpeg', '.jpg', '.png'];
+const IMAGE_WIDTHS = [512, 1024, 2048];
 
 export default function imageCaptionPlugin() {
   return (tree) => {
@@ -32,15 +33,27 @@ export default function imageCaptionPlugin() {
             }
           });
 
-          let effectiveUrl = url;
+          const imgProps = {
+            alt: altString,
+            loading: 'lazy',
+            src: url
+          };
 
-          if (process.env.ASTRO_ENV === 'production') {
+          if (process.env.PUBLIC_ASTRO_ENV === 'production') {
             const ext = path.extname(url);
 
             if (COMPRESSED_EXTS.includes(ext)) {
-              effectiveUrl = url.slice(0, -ext.length) + '--compressed' + ext;
+              const withoutExt = url.slice(0, -ext.length);
+
+              imgProps.srcset = IMAGE_WIDTHS.map(
+                (width) => `${withoutExt}--${width}w${ext}`
+              ).join(', ');
+              // Set the effective URL to the biggest image.
+              imgProps.src = `${withoutExt}--${IMAGE_WIDTHS[2]}w${ext}`;
             }
           }
+
+          const imgTag = generateImageTag(imgProps);
 
           // Previous Gatsby output:
           //
@@ -64,8 +77,8 @@ export default function imageCaptionPlugin() {
           firstChild.value = `
             <figure class="flex flex-col items-center justify-center mt-3 mb-4">
               <div class="border border-gray-200 dark:border-gray-600">
-                <a href="${url}" target="_blank" rel="noopener">
-                  <img alt="${altString}" src="${effectiveUrl}" loading="lazy">
+                <a href="${imgProps.src}" target="_blank" rel="noopener">
+                  ${imgTag}
                 </a>
               </div>
               <figcaption class="text-sm text-center mt-1 ${TEXT_COLOR}">${htmlString}</figcaption>
@@ -79,6 +92,16 @@ export default function imageCaptionPlugin() {
       }
     }
   };
+}
+
+function generateImageTag(props) {
+  let attrs = '';
+
+  for (const prop in props) {
+    attrs += `${prop}="${props[prop]}" `;
+  }
+
+  return `<img ${attrs}/>`;
 }
 
 function generateAnchorTag({ href, text }) {

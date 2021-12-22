@@ -1,6 +1,7 @@
 import { formatDistanceToNowStrict } from 'date-fns';
 import { AnchorHTMLAttributes, ReactNode } from 'react';
 import { ExternalLinkIcon } from '../Links';
+import { getImageProps } from '../../helpers/image';
 
 import { Text } from '../Typography';
 
@@ -20,10 +21,9 @@ export interface CardProps {
 export function Card(props: CardProps) {
   const className = props.className || '';
   const cardImage =
-    props.img !== undefined ? (
+    props.img !== undefined && props.imgAlt !== undefined ? (
       <img
-        src={props.img}
-        alt={props.imgAlt}
+        {...getImageProps({ src: props.img, alt: props.imgAlt })}
         className={`${styles['featured-image']} rounded-t-lg`}
       />
     ) : undefined;

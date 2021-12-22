@@ -35,7 +35,8 @@ async function recursivelyGetAllFileSizes(
 
       files.push({
         path: entryFullPath,
-        distPath: `${distPublicAssets}${entryPath}/${basename}--compressed${ext}`,
+        distPath: `${distPublicAssets}${entryPath}/${basename}`,
+        ext,
         // Convert to KB.
         size: stat.size / 1024
       });
