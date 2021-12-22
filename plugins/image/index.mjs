@@ -37,8 +37,6 @@ export default function imageCaptionPlugin() {
             alt: altString,
             loading: 'lazy',
             src: url,
-            width: 512,
-            height: 288,
             sizes: [
               ...IMAGE_WIDTHS.map(
                 (width) => `(max-width: ${width}px) ${width}px`
