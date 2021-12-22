@@ -78,7 +78,7 @@ const imgProps = {
   {imgProps.src && (
     <figure class="flex flex-col items-center justify-center mt-3 mb-4">
       <a href={imgProps.src} target="_blank" rel="noopener" class="w-full border border-gray-200 dark:border-gray-600">
-        <img class="resp-image-image w-full" {...imgProps}>
+        <img class="resp-image-image w-full" {...imgProps} height="450" width="800">
       </a>
       <figcaption class="text-sm text-center mt-1 text-gray-600 dark:text-gray-400">{htmlString}</figcaption>
     </figure>
@@ -91,7 +91,7 @@ const imgProps = {
   }
 
   .resp-image-image {
-    max-height: 450px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
   }
 </style>
