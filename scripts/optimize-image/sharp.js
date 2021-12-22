@@ -50,10 +50,10 @@ async function main() {
 async function jpeg(uncompressed, imageWidth) {
   return sharp(uncompressed)
     .resize(imageWidth)
-    .jpeg({ mozjpeg: true, quality: 80 })
+    .jpeg({ mozjpeg: true, quality: 70 })
     .toBuffer();
 }
 
 async function png(uncompressed, imageWidth) {
-  return sharp(uncompressed).resize(imageWidth).png({ quality: 80 }).toBuffer();
+  return sharp(uncompressed).resize(imageWidth).png({ quality: 70 }).toBuffer();
 }
