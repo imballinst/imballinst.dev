@@ -16,7 +16,7 @@
   "devDependencies": {
     "@octokit/rest": "18.12.0",
     "@types/react": "17.0.37",
-    "astro": "0.21.12",
+    "astro": "0.21.13",
     "autoprefixer": "10.4.0",
     "cheerio": "1.0.0-rc.10",
     "fs-extra": "10.0.0",
