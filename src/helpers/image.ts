@@ -12,8 +12,10 @@ export function getImageProps({ alt, src }: { alt: string; src: string }) {
   } = {
     alt,
     src,
-    sizes:
-      '(max-width: 768px) 736px, (max-width: 960px) 928px, (max-width: 1152px) 1120px, 2048px'
+    sizes: [
+      ...IMAGE_WIDTHS.map((width) => `(max-width: ${width}px) ${width}px`),
+      '2048px'
+    ].join(', ')
   };
 
   if ((import.meta as any).env.MODE === 'production') {
