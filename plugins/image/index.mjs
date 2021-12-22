@@ -37,6 +37,9 @@ export default function imageCaptionPlugin() {
             alt: altString,
             loading: 'lazy',
             src: url,
+            height: '450',
+            width: '800',
+            class: 'w-full aspect-video object-cover',
             sizes: [
               ...IMAGE_WIDTHS.map(
                 (width) => `(max-width: ${width}px) ${width}px`
@@ -82,11 +85,9 @@ export default function imageCaptionPlugin() {
           // Another good reference: https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/.
           firstChild.value = `
             <figure class="flex flex-col items-center justify-center mt-3 mb-4">
-              <div class="border border-gray-200 dark:border-gray-600">
-                <a href="${imgProps.src}" target="_blank" rel="noopener">
-                  ${imgTag}
-                </a>
-              </div>
+              <a href="${imgProps.src}" target="_blank" rel="noopener" class="w-full border border-gray-200 dark:border-gray-600">
+                ${imgTag}
+              </a>
               <figcaption class="text-sm text-center mt-1 ${TEXT_COLOR}">${htmlString}</figcaption>
             </figure>
           `.trim();
