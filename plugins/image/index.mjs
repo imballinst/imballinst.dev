@@ -39,7 +39,7 @@ export default function imageCaptionPlugin() {
             src: url,
             height: '450',
             width: '800',
-            class: 'w-full aspect-video object-cover',
+            class: 'w-full',
             sizes: [
               ...IMAGE_WIDTHS.map(
                 (width) => `(max-width: ${width}px) ${width}px`

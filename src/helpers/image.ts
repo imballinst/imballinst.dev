@@ -14,6 +14,8 @@ export function getImageProps({ alt, src }: { alt: string; src: string }) {
   } = {
     alt,
     src,
+    width: 800,
+    height: 450,
     sizes: [
       ...IMAGE_WIDTHS.map((width) => `(max-width: ${width}px) ${width}px`),
       '2048px'
