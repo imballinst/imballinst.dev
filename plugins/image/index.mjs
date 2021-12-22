@@ -1,6 +1,8 @@
 import cheerio from 'cheerio';
+import path from 'path';
 
 const TEXT_COLOR = 'text-gray-600 dark:text-gray-400';
+const COMPRESSED_EXTS = ['.jpeg', '.jpg', '.png'];
 
 export default function imageCaptionPlugin() {
   return (tree) => {
@@ -30,6 +32,16 @@ export default function imageCaptionPlugin() {
             }
           });
 
+          let effectiveUrl = url;
+
+          if (process.env.ASTRO_ENV === 'production') {
+            const ext = path.extname(url);
+
+            if (COMPRESSED_EXTS.includes(ext)) {
+              effectiveUrl = url.slice(0, -ext.length) + '--compressed' + ext;
+            }
+          }
+
           // Previous Gatsby output:
           //
           //   <figure class="gatsby-resp-image-figure" style="">
@@ -53,7 +65,7 @@ export default function imageCaptionPlugin() {
             <figure class="flex flex-col items-center justify-center mt-3 mb-4">
               <div class="border border-gray-200 dark:border-gray-600">
                 <a href="${url}" target="_blank" rel="noopener">
-                  <img alt="${altString}" src="${url}" loading="lazy">
+                  <img alt="${altString}" src="${effectiveUrl}" loading="lazy">
                 </a>
               </div>
               <figcaption class="text-sm text-center mt-1 ${TEXT_COLOR}">${htmlString}</figcaption>

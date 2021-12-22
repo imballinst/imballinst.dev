@@ -3,31 +3,18 @@ import remarkGfm from 'remark-gfm';
 import htmlClassnamesPlugin from './html-classnames/index.mjs';
 import imageCaptionPlugin from './image/index.mjs';
 
+process.env.ASTRO_ENV = 'production';
+
 main();
 
 async function main() {
   const file = await remark()
     .use(remarkGfm)
-    // .use(imageCaptionPlugin)
+    .use(imageCaptionPlugin)
     .use(htmlClassnamesPlugin)
     .process(
       `
-> henlo \`test\`
-> test
-
-> henlo \`test\`
->
-> test
-
-| Day | Breakfast | Lunch                                   | Dinner                                  |
-| --- | --------- | --------------------------------------- | --------------------------------------- |
-| Sun | Cereal    | Bread variations (sandwich/spread)      | Bread variations                        |
-| Mon | Cereal    | Potato salad                            | Bread variations                        |
-| Tue | Cereal    | Potato salad/bread variations           | Potato salad/bread variations           |
-| Wed | Cereal    | Rice, egg, veggies                      | Rice, egg, veggies                      |
-| Thu | Cereal    | Rice, egg, veggies/eat in a restaurant  | Rice, egg, veggies                      |
-| Fri | Cereal    | Salmon sushi (or rice+salmon when lazy) | Salmon sushi (or rice+salmon when lazy) |
-| Sat | Cereal    | Salmon sushi (or rice+salmon when lazy) | Bread variations                        |
+      ![The finished countup timer. It ticks from "1 year, 1 month, 10 days, 1 hour, 23 minutes, 1 second" to "1 year, 1 month, 10 days, 1 hour, 23 minutes, 10 seconds".](/assets/blog/creating-count-up-timer/timer-wedding.jpg)
 `.trim()
     );
 

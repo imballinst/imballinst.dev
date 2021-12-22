@@ -10,7 +10,7 @@ import htmlClassnamesPlugin from './plugins/html-classnames/index.mjs';
 // helpful tooltips, and warnings if your exported object is invalid.
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
-// console.log(imageCaptionPlugin);
+process.env.ASTRO_TS = new Date().toISOString();
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
