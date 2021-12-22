@@ -7,10 +7,13 @@ export function getImageProps({ alt, src }: { alt: string; src: string }) {
   const imgProps: {
     alt: string;
     src: string;
+    sizes: string;
     srcset?: string;
   } = {
     alt,
-    src
+    src,
+    sizes:
+      '(max-width: 768px) 736px, (max-width: 960px) 928px, (max-width: 1152px) 1120px, 2048px'
   };
 
   if ((import.meta as any).env.MODE === 'production') {
