@@ -26,7 +26,7 @@ const octokit = new Octokit();
 
     activities[repo] = {
       name: repo,
-      url: repoResponse.url,
+      url: repoResponse.data.html_url,
       description: repoResponse.data.description,
       lastUpdate: response.data.find((el) => el.repo.name === repoName)
         .created_at

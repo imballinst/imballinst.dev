@@ -25,7 +25,7 @@ export function Card(props: CardProps) {
     props.img !== undefined && props.imgAlt !== undefined ? (
       <img
         {...getImageProps({ src: props.img, alt: props.imgAlt })}
-        className="object-cover rounded-t-lg md:pl-[40%] w-full h-full"
+        className="object-cover rounded-t-lg lg:pl-[40%] w-full h-full"
       />
     ) : null;
   const anchorProps: AnchorHTMLAttributes<HTMLAnchorElement> = {};
@@ -45,10 +45,10 @@ export function Card(props: CardProps) {
   if (cardImage) {
     cardContent = (
       <>
-        <div className="md:mr-[-10%] h-[300px] md:h-[200px]">{cardImage}</div>
+        <div className="lg:mr-[-10%] h-[300px] lg:h-[200px]">{cardImage}</div>
 
         <div
-          className={`absolute bottom-0 p-4 pt-12 md:pr-12 lg:pr-14 md:pt-4 w-full md:w-1/2 md:h-full ${styles['card-detail']} flex flex-col justify-end md:justify-center`}
+          className={`absolute bottom-0 p-4 pt-12 lg:pr-12 lg:pt-4 w-full lg:w-1/2 lg:h-full ${styles['card-detail']} flex flex-col justify-end md:justify-center`}
         >
           <CardDetail
             title={props.title}

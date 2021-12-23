@@ -20,7 +20,7 @@
   );
 }
 
-@media (max-width: 48em) {
+@media (max-width: 1024px) {
   :global(:not(.dark)) .card-detail {
     background: linear-gradient(
       to top,
@@ -40,7 +40,7 @@
   );
 }
 
-@media (max-width: 48em) {
+@media (max-width: 1024px) {
   :global(.dark) .card-detail {
     background: linear-gradient(
       to top,

@@ -9,8 +9,7 @@ allPosts = allPosts
   .sort(
     (a, b) =>
       new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
-  )
-  .slice(0, 3);
+  );
 
 let allProjects = await Astro.fetchContent('./projects/*.md');
 allProjects = allProjects
@@ -40,62 +39,46 @@ const allRepoActivities = (await import(allRepoActivitiesStr)).default.slice(
     gaming stuff.
   </Text>
 
-  <div class="mt-8 mb-4">
-    <Text as="h2">Latest posts</Text>
+  <div class="mt-8">
+    <Text as="h2">Latest post</Text>
 
-    <ul class="grid grid-cols-1 gap-4">
-      {allPosts.map((post, idx) => (
-        <li key={idx}>
-          <Card
-            title={post.title}
-            titleHeadingElement="h3"
-            date={post.publishDate}
-            text={post.description}
-            img={post.image}
-            imgAlt={post.imageAlt}
-            href={post.url}
-            className="h-full"
-          />
-        </li>
-      ))}
-    </ul>
+    <Card
+      title={allPosts[0].title}
+      titleHeadingElement="h3"
+      date={allPosts[0].publishDate}
+      text={allPosts[0].description}
+      img={allPosts[0].image}
+      imgAlt={allPosts[0].imageAlt}
+      href={allPosts[0].url}
+      className="h-full"
+    />
   </div>
 
-  <div class="mt-8 mb-4">
-    <Text as="h2">Latest projects</Text>
+  <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <Text as="h2" class="mb-4">Latest project</Text>
 
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {allProjects.map((project, idx) => (
-        <li key={idx}>
-          <Card
-            titleHeadingElement="h3"
-            title={project.title}
-            date={project.publishDate}
-            text={project.description}
-            href={project.url}
-            className="h-full"
-          />
-        </li>
-      ))}
-    </ul>
-  </div>
+      <Card
+        titleHeadingElement="h3"
+        title={allProjects[0].title}
+        date={allProjects[0].publishDate}
+        text={allProjects[0].description}
+        href={allProjects[0].url}
+        className="h-full"
+      />
+    </div>
 
-  <div class="mt-8 mb-4">
-    <Text as="h2">Latest GitHub activities</Text>
+    <div>
+      <Text as="h2" class="mb-4">Latest GitHub activity</Text>
 
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {allRepoActivities.map((repo, idx) => (
-        <li key={idx}>
-          <Card
-            titleHeadingElement="h3"
-            title={repo.name}
-            date={repo.lastUpdate}
-            text={repo.description}
-            href={repo.url}
-            className="h-full"
-          />
-        </li>
-      ))}
-    </ul>
+      <Card
+        titleHeadingElement="h3"
+        title={allRepoActivities[0].name}
+        date={allRepoActivities[0].lastUpdate}
+        text={allRepoActivities[0].description}
+        href={allRepoActivities[0].url}
+        className="h-full"
+      />
+    </div>
   </div>
 </BaseLayout>
