@@ -24,11 +24,12 @@ export function Card(props: CardProps) {
     props.img !== undefined && props.imgAlt !== undefined ? (
       <img
         {...getImageProps({ src: props.img, alt: props.imgAlt })}
-        className={`${styles['featured-image']} rounded-t-lg`}
+        className="object-cover rounded-t-lg md:pl-[40%] w-full h-full"
       />
-    ) : undefined;
+    ) : null;
   const anchorProps: AnchorHTMLAttributes<HTMLAnchorElement> = {};
   let titleChildren: ReactNode | undefined = undefined;
+  let cardContent: ReactNode | undefined = undefined;
 
   if (
     props.href !== undefined &&
@@ -40,36 +41,78 @@ export function Card(props: CardProps) {
     titleChildren = <ExternalLinkIcon />;
   }
 
+  if (cardImage) {
+    cardContent = (
+      <>
+        <div className="md:mr-[-10%] h-[300px] md:h-[200px]">{cardImage}</div>
+
+        <div
+          className={`absolute bottom-0 p-4 pt-10 md:pr-10 md:pt-4 w-full md:w-1/2 md:h-full ${styles['card-detail']} flex flex-col justify-end md:justify-center`}
+        >
+          <CardDetail
+            title={props.title}
+            text={props.text}
+            date={props.date}
+            titleChildren={titleChildren}
+          />
+        </div>
+      </>
+    );
+  } else {
+    cardContent = (
+      <div className="p-4">
+        <CardDetail
+          title={props.title}
+          text={props.text}
+          date={props.date}
+          titleChildren={titleChildren}
+        />
+      </div>
+    );
+  }
+
   return (
     <a href={props.href!} {...anchorProps}>
       <div
-        className={`border rounded-lg border-gray-200 hover:border-teal-500 dark:border-gray-600 dark:hover:border-teal-200 transition-colors ${className}`}
+        className={`border rounded-lg border-gray-200 hover:border-teal-500 dark:border-gray-600 dark:hover:border-teal-200 transition-colors relative overflow-hidden ${className}`}
       >
-        {cardImage}
-
-        <div className="p-4">
-          <Text
-            className="font-semibold leading-tight truncate text-lg"
-            as="h4"
-            colorScheme="teal"
-          >
-            {props.title}
-            {titleChildren}
-          </Text>
-
-          <div className="flex flex-row items-center mb-1 text-sm text-gray-600 dark:text-gray-400">
-            {formatDistanceToNowStrict(new Date(props.date), {
-              addSuffix: true
-            })}
-          </div>
-
-          <div
-            className={`flex mt-2 items-center flex-col ${styles['card-text']}`}
-          >
-            <Text>{props.text}</Text>
-          </div>
-        </div>
+        {cardContent}
       </div>
     </a>
+  );
+}
+
+function CardDetail({
+  title,
+  titleChildren,
+  date,
+  text
+}: {
+  title: string;
+  titleChildren?: ReactNode;
+  date: string;
+  text: string;
+}) {
+  return (
+    <>
+      <Text
+        className="font-semibold leading-tight truncate text-lg"
+        as="h4"
+        colorScheme="teal"
+      >
+        {title}
+        {titleChildren}
+      </Text>
+
+      <div className="flex flex-row items-center mb-1 text-sm text-gray-600 dark:text-gray-400">
+        {formatDistanceToNowStrict(new Date(date), {
+          addSuffix: true
+        })}
+      </div>
+
+      <div className={`flex mt-2 items-center flex-col ${styles['card-text']}`}>
+        <Text className="text-base">{text}</Text>
+      </div>
+    </>
   );
 }

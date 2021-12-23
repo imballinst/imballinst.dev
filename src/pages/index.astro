@@ -26,6 +26,7 @@ const allRepoActivities = (await import(allRepoActivitiesStr)).default;
   title="Home"
   description="The home page of my personal site."
   currentMenu="/"
+  disableWidthLimitation
 >
   <Text as="h1" className="text-center mt-0 mb-0">Welcome to peepohappy!</Text>
 
@@ -37,7 +38,7 @@ const allRepoActivities = (await import(allRepoActivitiesStr)).default;
   <div class="mt-8 mb-4">
     <Text as="h2">Latest posts</Text>
 
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <ul class="grid grid-cols-1 gap-4">
       {allPosts.map((post, idx) => (
         <li key={idx}>
           <Card

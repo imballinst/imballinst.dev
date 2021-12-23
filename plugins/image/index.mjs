@@ -39,13 +39,7 @@ export default function imageCaptionPlugin() {
             src: url,
             height: '450',
             width: '800',
-            class: 'w-full',
-            sizes: [
-              ...IMAGE_WIDTHS.map(
-                (width) => `(max-width: ${width}px) ${width}px`
-              ),
-              '2048px'
-            ].join(', ')
+            class: 'w-full'
           };
 
           if (process.env.PUBLIC_ASTRO_ENV === 'production') {
@@ -59,6 +53,12 @@ export default function imageCaptionPlugin() {
               ).join(', ');
               // Set the effective URL to the biggest image.
               imgProps.src = `${withoutExt}--${IMAGE_WIDTHS[2]}w${ext}`;
+              imgProps.sizes = [
+                ...IMAGE_WIDTHS.map(
+                  (width) => `(max-width: ${width}px) ${width}px`
+                ),
+                '2048px'
+              ].join(', ');
             }
           }
 

@@ -10,3 +10,23 @@
   width: 100%;
   object-fit: cover;
 }
+
+.card-detail {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@media (max-width: 48em) {
+  .card-detail {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+}
