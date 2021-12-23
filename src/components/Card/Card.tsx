@@ -48,7 +48,7 @@ export function Card(props: CardProps) {
         <div className="md:mr-[-10%] h-[300px] md:h-[200px]">{cardImage}</div>
 
         <div
-          className={`absolute bottom-0 p-4 pt-12 md:pr-12 md:pt-4 w-full md:w-1/2 md:h-full ${styles['card-detail']} flex flex-col justify-end md:justify-center`}
+          className={`absolute bottom-0 p-4 pt-12 md:pr-12 lg:pr-14 md:pt-4 w-full md:w-1/2 md:h-full ${styles['card-detail']} flex flex-col justify-end md:justify-center`}
         >
           <CardDetail
             title={props.title}
