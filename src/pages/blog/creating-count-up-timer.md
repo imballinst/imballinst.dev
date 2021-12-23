@@ -222,4 +222,4 @@ There you have it. The count-up timer is finished. If you want to change the sta
 
 ## Closing words
 
-I hope you enjoy reading this tutorial. If you have any feedback, please feel free to reach me on my Twitter (you can visit it from the navigation bar above). Thanks!
+I hope you enjoy reading this tutorial. If you have any feedback, please feel free to reach me on my Twitter. Thanks!

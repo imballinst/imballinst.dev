@@ -55,30 +55,34 @@ const allRepoActivities = (await import(allRepoActivitiesStr)).default.slice(
   </div>
 
   <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div>
+    <div class="flex flex-col">
       <Text as="h2" class="mb-4">Latest project</Text>
 
-      <Card
-        titleHeadingElement="h3"
-        title={allProjects[0].title}
-        date={allProjects[0].publishDate}
-        text={allProjects[0].description}
-        href={allProjects[0].url}
-        className="h-full"
-      />
+      <div class="relative flex-1">
+        <Card
+          titleHeadingElement="h3"
+          title={allProjects[0].title}
+          date={allProjects[0].publishDate}
+          text={allProjects[0].description}
+          href={allProjects[0].url}
+          className="h-full"
+        />
+      </div>
     </div>
 
-    <div>
+    <div class="flex flex-col">
       <Text as="h2" class="mb-4">Latest GitHub activity</Text>
 
-      <Card
-        titleHeadingElement="h3"
-        title={allRepoActivities[0].name}
-        date={allRepoActivities[0].lastUpdate}
-        text={allRepoActivities[0].description}
-        href={allRepoActivities[0].url}
-        className="h-full"
-      />
+      <div class="relative flex-1">
+        <Card
+          titleHeadingElement="h3"
+          title={allRepoActivities[0].name}
+          date={allRepoActivities[0].lastUpdate}
+          text={allRepoActivities[0].description}
+          href={allRepoActivities[0].url}
+          className="h-full"
+        />
+      </div>
     </div>
   </div>
 </BaseLayout>
