@@ -71,7 +71,7 @@ const imgProps = {
 
 <header class="header">
   <Text as="h1" className="text-xl text-center my-0">{title}</Text>
-  <Text as="p" className="text-center my-0" colorScheme="gray">
+  <Text as="p" className="text-center my-0" colorScheme="gray" client:visible>
     Published at {format(new Date(publishDate), 'MMMM dd, yyyy, HH:mm O')}
   </Text>
 
