@@ -26,6 +26,7 @@ export function Card(props: CardProps) {
       <img
         {...getImageProps({ src: props.img, alt: props.imgAlt })}
         className="object-cover rounded-t-lg lg:pl-[40%] w-full h-full"
+        loading="lazy"
       />
     ) : null;
   const anchorProps: AnchorHTMLAttributes<HTMLAnchorElement> = {};
