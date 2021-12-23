@@ -12,7 +12,11 @@ const octokit = new Octokit();
   const repoNames = Array.from(
     new Set(
       response.data
-        .filter((el) => el.type === 'PushEvent')
+        // Exclude non-push events and events for this repository.
+        .filter(
+          (el) =>
+            el.type === 'PushEvent' && el.repo.name !== `imballinst/peepohappy`
+        )
         .map((el) => el.repo.name)
     )
   );
