@@ -7,17 +7,19 @@ import {
   ColorSchemes
 } from '../../helpers/tag-styles';
 
+export interface TextProps {
+  as?: keyof typeof DEFAULT_ATTRS;
+  children: ReactNode;
+  className?: string;
+  colorScheme?: ColorSchemes;
+}
+
 export function Text({
   as: Element = 'p',
   children,
   className = '',
   colorScheme = 'black'
-}: {
-  as?: keyof typeof DEFAULT_ATTRS;
-  children: ReactNode;
-  className?: string;
-  colorScheme?: ColorSchemes;
-}) {
+}: TextProps) {
   let classNames = DEFAULT_ATTRS[Element] || TEXT_COLOR;
 
   if (colorScheme !== 'black') {

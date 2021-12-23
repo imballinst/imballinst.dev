@@ -13,13 +13,18 @@ allPosts = allPosts
   .slice(0, 3);
 
 let allProjects = await Astro.fetchContent('./projects/*.md');
-allProjects = allProjects.sort(
-  (a, b) =>
-    new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
-);
+allProjects = allProjects
+  .sort(
+    (a, b) =>
+      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+  )
+  .slice(0, 3);
 
 const allRepoActivitiesStr = await Astro.resolve('../static/activity.json');
-const allRepoActivities = (await import(allRepoActivitiesStr)).default;
+const allRepoActivities = (await import(allRepoActivitiesStr)).default.slice(
+  0,
+  3
+);
 ---
 
 <BaseLayout
@@ -43,6 +48,7 @@ const allRepoActivities = (await import(allRepoActivitiesStr)).default;
         <li key={idx}>
           <Card
             title={post.title}
+            titleHeadingElement="h3"
             date={post.publishDate}
             text={post.description}
             img={post.image}
@@ -62,6 +68,7 @@ const allRepoActivities = (await import(allRepoActivitiesStr)).default;
       {allProjects.map((project, idx) => (
         <li key={idx}>
           <Card
+            titleHeadingElement="h3"
             title={project.title}
             date={project.publishDate}
             text={project.description}
@@ -80,6 +87,7 @@ const allRepoActivities = (await import(allRepoActivitiesStr)).default;
       {allRepoActivities.map((repo, idx) => (
         <li key={idx}>
           <Card
+            titleHeadingElement="h3"
             title={repo.name}
             date={repo.lastUpdate}
             text={repo.description}

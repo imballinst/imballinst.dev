@@ -3,7 +3,7 @@ import { AnchorHTMLAttributes, ReactNode } from 'react';
 import { ExternalLinkIcon } from '../Links';
 import { getImageProps } from '../../helpers/image';
 
-import { Text } from '../Typography';
+import { Text, TextProps } from '../Typography';
 
 import styles from './Card.module.css';
 
@@ -16,6 +16,7 @@ export interface CardProps {
   date: string;
   text: string;
   className?: string;
+  titleHeadingElement: TextProps['as'];
 }
 
 export function Card(props: CardProps) {
@@ -47,25 +48,27 @@ export function Card(props: CardProps) {
         <div className="md:mr-[-10%] h-[300px] md:h-[200px]">{cardImage}</div>
 
         <div
-          className={`absolute bottom-0 p-4 pt-10 md:pr-10 md:pt-4 w-full md:w-1/2 md:h-full ${styles['card-detail']} flex flex-col justify-end md:justify-center`}
+          className={`absolute bottom-0 p-4 pt-12 md:pr-12 md:pt-4 w-full md:w-1/2 md:h-full ${styles['card-detail']} flex flex-col justify-end md:justify-center`}
         >
           <CardDetail
             title={props.title}
             text={props.text}
             date={props.date}
             titleChildren={titleChildren}
+            titleHeadingElement={props.titleHeadingElement}
           />
         </div>
       </>
     );
   } else {
     cardContent = (
-      <div className="p-4">
+      <div className="p-4 bg-white dark:bg-transparent h-full">
         <CardDetail
           title={props.title}
           text={props.text}
           date={props.date}
           titleChildren={titleChildren}
+          titleHeadingElement={props.titleHeadingElement}
         />
       </div>
     );
@@ -85,19 +88,21 @@ export function Card(props: CardProps) {
 function CardDetail({
   title,
   titleChildren,
+  titleHeadingElement,
   date,
   text
 }: {
   title: string;
   titleChildren?: ReactNode;
+  titleHeadingElement: CardProps['titleHeadingElement'];
   date: string;
   text: string;
 }) {
   return (
     <>
       <Text
-        className="font-semibold leading-tight truncate text-lg"
-        as="h4"
+        className="font-semibold leading-tight truncate text-lg my-0"
+        as={titleHeadingElement}
         colorScheme="teal"
       >
         {title}

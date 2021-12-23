@@ -17,10 +17,13 @@ allPosts = allPosts
   description="List of blog posts written by me."
   currentMenu="/blog"
 >
+  <Text as="h1" className="mb-4">Blog</Text>
+
   <ul class="grid grid-cols-1 gap-8">
     {allPosts.map((post, idx) => (
       <li key={idx}>
         <Card
+          titleHeadingElement="h2"
           title={post.title}
           date={post.publishDate}
           text={post.description}

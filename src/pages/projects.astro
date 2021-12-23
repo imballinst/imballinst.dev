@@ -15,10 +15,13 @@ allProjects = allProjects.sort(
   description="List of software projects that I contributed to or built."
   currentMenu="/projects"
 >
+  <Text as="h1" className="mb-4">Projects</Text>
+
   <ul class="grid grid-cols-1 gap-8">
     {allProjects.map((project, idx) => (
       <li key={idx}>
         <Card
+          titleHeadingElement="h2"
           title={project.title}
           date={project.publishDate}
           text={project.description}

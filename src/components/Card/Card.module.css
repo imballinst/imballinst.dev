@@ -11,7 +11,27 @@
   object-fit: cover;
 }
 
-.card-detail {
+:global(:not(.dark)) .card-detail {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 90%,
+    rgba(255, 255, 255, 0)
+  );
+}
+
+@media (max-width: 48em) {
+  :global(:not(.dark)) .card-detail {
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 0)
+    );
+  }
+}
+
+:global(.dark) .card-detail {
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 1) 0%,
@@ -21,7 +41,7 @@
 }
 
 @media (max-width: 48em) {
-  .card-detail {
+  :global(.dark) .card-detail {
     background: linear-gradient(
       to top,
       rgba(0, 0, 0, 1) 0%,
