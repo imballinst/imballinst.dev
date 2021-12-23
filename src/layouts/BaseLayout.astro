@@ -73,7 +73,7 @@ const SOCIAL_LINKS = [
       class="shadow-sm flex flex-row justify-center fixed top-0 w-full z-10 bg-gray-50 dark:bg-gray-800"
     >
       <div
-        class="-ml-2 flex flex-row justify-between items-center px-3 py-2 w-full md:w-wmd lg:w-wlg xl:w-wxl"
+        class="-ml-2 flex flex-row justify-between items-center px-3 py-2 w-full md:w-wmd lg:w-wlg"
       >
         <div class="flex flex-row font-semibold">
           {NAVS_WITH_CLASSES.map((nav) => (
@@ -90,7 +90,7 @@ const SOCIAL_LINKS = [
     </nav>
 
     <main class="flex flex-1 py-4 flex-row justify-center">
-      <div class="w-full md:w-wmd lg:w-wlg xl:w-wxl flex flex-col">
+      <div class="w-full md:w-wmd lg:w-wlg flex flex-col">
         <div class="flex-1 pb-2 px-4">
           <slot />
         </div>
@@ -98,11 +98,7 @@ const SOCIAL_LINKS = [
     </main>
 
     <footer class="flex flex-initial flex-row p-2 mt-4 justify-center w-full">
-      <Text
-        as="div"
-        colorScheme="gray"
-        class="sm:w-full md:w-wmd lg:w-wlg xl:w-wxl"
-      >
+      <Text as="div" colorScheme="gray" class="sm:w-full md:w-wmd lg:w-wlg">
         <p class="font-bold text-center text-sm">&copy; 2021 Try Ajitiono</p>
 
         <div class="text-center text-sm mt-1">

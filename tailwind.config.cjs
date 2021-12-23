@@ -38,8 +38,7 @@ module.exports = {
     extend: {
       width: {
         wmd: '48rem',
-        wlg: '60rem',
-        wxl: '72rem'
+        wlg: '60rem'
       }
     }
   }
