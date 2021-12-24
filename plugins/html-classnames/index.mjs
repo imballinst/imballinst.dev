@@ -30,6 +30,10 @@ const NEW_LINE = {
   type: '__token__',
   value: '__NEW_LINE__'
 };
+const BLOCKQUOTE_PARAGRAPH_CLASS = DEFAULT_ATTRS.p.replace(
+  `${TEXT_COLOR} `,
+  ''
+);
 
 export default function htmlClassnamesPlugin() {
   return (tree) => {
@@ -86,52 +90,73 @@ export default function htmlClassnamesPlugin() {
         child.children = undefined;
       } else if (child.type === 'blockquote') {
         const hast = toHast(child);
-        // console.log(JSON.stringify(hast, null, 2), '\n');
 
         const pureTextArray = [];
+        let numberOfParagraphs = 0;
 
         // TODO(imballinst): change \n to <p> tags.
         for (const hastChild of hast.children) {
           if (hastChild.type === 'element' && hastChild.tagName === 'p') {
             pureTextArray.push(NEW_PARAGRAPH);
+            numberOfParagraphs += 1;
 
             for (const hastGrandChild of hastChild.children) {
-              const arr = [];
-              const spl = hastGrandChild.value.split('\n');
+              if (hastGrandChild.value) {
+                const spl = hastGrandChild.value.split('\n');
 
-              for (const item of spl) {
-                arr.push(item, NEW_LINE);
+                for (let i = 0; i < spl.length; i++) {
+                  pureTextArray.push({ type: 'text', value: spl[i] });
+
+                  if (i + 1 < spl.length) {
+                    pureTextArray.push(NEW_LINE);
+                  }
+                }
+              } else {
+                pureTextArray.push(hastGrandChild);
               }
-
-              pureTextArray.push(
-                ...arr.map((el) => ({
-                  type: 'text',
-                  value: el
-                }))
-              );
             }
           }
         }
 
         const pureHast = [];
+        let lastParagraph;
 
         for (const el of pureTextArray) {
-          const properties = { class: DEFAULT_ATTRS.p };
+          const properties = {};
 
-          if (el !== NEW_PARAGRAPH) {
-            properties.class = TEXT_COLOR;
+          if (el === NEW_LINE) {
+            // New line token.
+            lastParagraph = {
+              type: 'element',
+              tagName: 'p',
+              properties,
+              children: []
+            };
+
+            pureHast.push(lastParagraph);
+            continue;
           }
 
-          pureHast.push({
-            type: 'element',
-            tagName: 'p',
-            properties: { class: DEFAULT_ATTRS.p },
-            children: []
-          });
+          if (el === NEW_PARAGRAPH) {
+            // New paragraph token.
+            properties.class =
+              numberOfParagraphs > 1 ? BLOCKQUOTE_PARAGRAPH_CLASS : undefined;
+
+            lastParagraph = {
+              type: 'element',
+              tagName: 'p',
+              properties,
+              children: []
+            };
+            pureHast.push(lastParagraph);
+          } else {
+            // Text.
+            lastParagraph.children.push(el);
+          }
         }
-        console.log(pureTextArray);
 
         hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} italic p-4 border border-gray-200 dark:border-gray-600 rounded`;
+        hast.children = pureHast;
         // TODO(imballinst): ensure there is a way to create a proper newlines in blockquotes.
         const html = toHtml(hast);
 
