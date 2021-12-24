@@ -1,0 +1,14 @@
+---
+import { format } from 'date-fns';
+import { Text } from '../components/Typography';
+
+export interface Props {
+  date: string;
+}
+
+const { date } = Astro.props;
+---
+
+<Text as="p" className="text-center my-0" colorScheme="gray">
+  Published at {format(new Date(date), 'MMMM dd, yyyy, HH:mm O')}
+</Text>

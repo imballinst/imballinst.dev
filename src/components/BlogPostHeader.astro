@@ -2,6 +2,8 @@
 import cheerio from 'cheerio';
 import path from 'path';
 import { format } from 'date-fns';
+
+import BlogPostPublishTime from './BlogPostPublishTime.astro';
 import { Text } from '../components/Typography';
 import { getImageProps } from '../helpers/image';
 
@@ -71,9 +73,7 @@ const imgProps = {
 
 <header class="header">
   <Text as="h1" className="text-xl text-center my-0">{title}</Text>
-  <Text as="p" className="text-center my-0" colorScheme="gray" client:visible>
-    Published at {format(new Date(publishDate), 'MMMM dd, yyyy, HH:mm O')}
-  </Text>
+  <BlogPostPublishTime date={publishDate} client:visible />
 
   {imgProps.src ? (
     <figure class="flex flex-col items-center justify-center mt-3 mb-4">
