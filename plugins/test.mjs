@@ -14,12 +14,12 @@ async function main() {
     .use(htmlClassnamesPlugin)
     .process(
       `
----
-abc: qwe
-zxc: heh
----
+> test
+> test2
 
-# hello
+> test3
+>
+> test4
 `.trim()
     );
 

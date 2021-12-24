@@ -22,6 +22,15 @@ const DEFAULT_ATTRS = {
   strong: `${TEXT_COLOR} font-semibold`
 };
 
+const NEW_PARAGRAPH = {
+  type: '__token__',
+  value: '__NEW_PARAGRAPH__'
+};
+const NEW_LINE = {
+  type: '__token__',
+  value: '__NEW_LINE__'
+};
+
 export default function htmlClassnamesPlugin() {
   return (tree) => {
     for (const child of tree.children) {
@@ -77,8 +86,52 @@ export default function htmlClassnamesPlugin() {
         child.children = undefined;
       } else if (child.type === 'blockquote') {
         const hast = toHast(child);
-        hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} italic p-4 border border-gray-200 dark:border-gray-600 rounded`;
+        // console.log(JSON.stringify(hast, null, 2), '\n');
 
+        const pureTextArray = [];
+
+        // TODO(imballinst): change \n to <p> tags.
+        for (const hastChild of hast.children) {
+          if (hastChild.type === 'element' && hastChild.tagName === 'p') {
+            pureTextArray.push(NEW_PARAGRAPH);
+
+            for (const hastGrandChild of hastChild.children) {
+              const arr = [];
+              const spl = hastGrandChild.value.split('\n');
+
+              for (const item of spl) {
+                arr.push(item, NEW_LINE);
+              }
+
+              pureTextArray.push(
+                ...arr.map((el) => ({
+                  type: 'text',
+                  value: el
+                }))
+              );
+            }
+          }
+        }
+
+        const pureHast = [];
+
+        for (const el of pureTextArray) {
+          const properties = { class: DEFAULT_ATTRS.p };
+
+          if (el !== NEW_PARAGRAPH) {
+            properties.class = TEXT_COLOR;
+          }
+
+          pureHast.push({
+            type: 'element',
+            tagName: 'p',
+            properties: { class: DEFAULT_ATTRS.p },
+            children: []
+          });
+        }
+        console.log(pureTextArray);
+
+        hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} italic p-4 border border-gray-200 dark:border-gray-600 rounded`;
         // TODO(imballinst): ensure there is a way to create a proper newlines in blockquotes.
         const html = toHtml(hast);
 
