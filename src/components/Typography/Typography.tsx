@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import {
   changeTextColorScheme,
   DEFAULT_ATTRS,
@@ -7,9 +6,12 @@ import {
   ColorSchemes
 } from '../../helpers/tag-styles';
 
+type Child = JSX.Element | string | undefined;
+
 export interface TextProps {
   as?: keyof typeof DEFAULT_ATTRS;
-  children: ReactNode;
+  id?: string;
+  children: Child | Child[];
   className?: string;
   colorScheme?: ColorSchemes;
 }
@@ -18,7 +20,8 @@ export function Text({
   as: Element = 'p',
   children,
   className = '',
-  colorScheme = 'black'
+  colorScheme = 'black',
+  ...htmlProps
 }: TextProps) {
   let classNames = DEFAULT_ATTRS[Element] || TEXT_COLOR;
 
@@ -32,7 +35,7 @@ export function Text({
   }
 
   return (
-    <Element className={`${classNames} ${className} w-full`}>
+    <Element className={`${classNames} ${className} w-full`} {...htmlProps}>
       {children}
     </Element>
   );

@@ -1,8 +1,8 @@
-import { AnchorHTMLAttributes, ReactNode } from 'react';
+import type { JSX } from 'preact';
 
 export interface LinkProps {
   href: string;
-  children: ReactNode;
+  children: JSX.Element;
   isExternal?: boolean;
   className?: string;
   disableUnderline?: boolean;
@@ -19,13 +19,13 @@ export function Link({
   disableUnderline = false,
   disableExternalIcon = false
 }: LinkProps) {
-  const anchorProps: AnchorHTMLAttributes<HTMLAnchorElement> = {
+  const anchorProps: JSX.HTMLAttributes<HTMLAnchorElement> = {
     href,
     className: `text-teal-600 dark:text-teal-300 ${
       disableUnderline ? '' : 'hover:underline'
     } break-all ${className}`
   };
-  let additionalChildren: ReactNode | undefined;
+  let additionalChildren: JSX.Element | undefined;
 
   if (isExternal) {
     anchorProps.target = ADDITIONAL_EXTERNAL_PROPS.target;

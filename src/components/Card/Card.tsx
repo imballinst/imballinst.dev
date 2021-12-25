@@ -1,5 +1,6 @@
 import { formatDistanceToNowStrict } from 'date-fns';
-import { AnchorHTMLAttributes, ReactNode } from 'react';
+import type { JSX } from 'preact';
+
 import { ExternalLinkIcon } from '../Links';
 import { getImageProps } from '../../helpers/image';
 
@@ -29,9 +30,9 @@ export function Card(props: CardProps) {
         loading="lazy"
       />
     ) : null;
-  const anchorProps: AnchorHTMLAttributes<HTMLAnchorElement> = {};
-  let titleChildren: ReactNode | undefined = undefined;
-  let cardContent: ReactNode | undefined = undefined;
+  const anchorProps: JSX.HTMLAttributes<HTMLAnchorElement> = {};
+  let titleChildren: JSX.Element | undefined = undefined;
+  let cardContent: JSX.Element | undefined = undefined;
 
   if (
     props.href !== undefined &&
@@ -94,7 +95,7 @@ function CardDetail({
   text
 }: {
   title: string;
-  titleChildren?: ReactNode;
+  titleChildren?: JSX.Element;
   titleHeadingElement: CardProps['titleHeadingElement'];
   date: string;
   text: string;
