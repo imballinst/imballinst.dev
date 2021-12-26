@@ -134,7 +134,7 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #5c6370;
+  color: #9ca3af;
 }
 
 .token.punctuation {
@@ -234,7 +234,7 @@ pre.line-numbers > code {
 
 .line-numbers-rows > span:before {
   content: counter(linenumber);
-  color: #5c6370;
+  color: #9ca3af;
   display: block;
   padding-right: 0.8rem;
   text-align: right;
