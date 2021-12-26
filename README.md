@@ -1,42 +1,44 @@
-# Welcome to [Astro](https://astro.build)
+# peepohappy
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/snowpackjs/astro/tree/latest/examples/starter)
+This is my personal site, mostly for curating blog posts and projects. This project is built using [Astro](https://astro.build) as the static site builder, [tailwindcss](https://tailwindcss.com) for the CSS utility classes, and some sprinkles of scripts for the prebuild and postbuild steps.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Development
 
-## 🚀 Project Structure
+### Prerequisites
 
-Inside of your Astro project, you'll see the following folders and files:
+1. [Yarn](https://yarnpkg.com/) Classic (v1)
+2. [Node.js®](https://nodejs.org/) LTS (at least v14)
 
-```
-/
-├── public/
-│   ├── robots.txt
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Tour.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+After that, on root project, do this to install the dependencies:
+
+```bash
+yarn
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Running the server
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+# Get the list of activities (the JSON file is ignored).
+yarn prebuild
+# Run the dev server.
+yarn dev
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+Then, go to http://localhost:3000 to open the site.
 
-## 🧞 Commands
+### Remark plugins
 
-All commands are run from the root of the project, from a terminal:
+This site uses 2 custom remark plugins:
 
-| Command         | Action                                      |
-|:----------------|:--------------------------------------------|
-| `npm install`   | Installs dependencies                       |
-| `npm run dev`   | Starts local dev server at `localhost:3000` |
-| `npm run build` | Build your production site to `./dist/`     |
+1. [`html-classnames`](plugins/html-classnames): this is the plugin to add utility classes to the resulting HTML tags. It reads the MDAST (Markdown Abstract Syntax Tree), converts it to HAST (Hypertext Abstract Syntax Tree), then converts it to raw HTML string. This **should be** the last plugin in the pipeline, because it will exhaust the MDAST.
+2. [`image`](plugins/image): this is the plugin to add utility classes to images (beyond the main image of a blog post), as well as adding captions below them. On top of that, this plugin also adds `srcset` and `sizes` attributes to the `img` tag, hence it will allow for more responsive images and better performance. Although this plugin exhausts the MDAST as well, it will only exhaust the MDAST related to images, so normal paragraphs are ignored.
 
-## 👀 Want to learn more?
+To test the plugins, do `node plugins/test.mjs` (adjust the contents of the `test.mjs` accordingly).
 
-Feel free to check [our documentation](https://github.com/snowpackjs/astro) or jump into our [Discord server](https://astro.build/chat).
+## Contributing
+
+Feel free to submit pull requests about anything—be it for typo fixes or improvements. If you want to submit improvement pull request, please also describe the parts that are improved (e.g. before and after state). Thank you!
+
+## License
+
+MIT
