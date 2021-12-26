@@ -18,6 +18,8 @@ setup: |
 
 I have been using TypeScript for almost 1 year and I've got to say, I really enjoy working with it every day. I feel someone -- or rather, something -- is watching me writing my code. If I have an error, it will scream next to my ear and it won't stop until I fix it. This is a blessing, well, most of the time anyways. There were times when I wanted to bang my head to the wall because there were cryptic errors that I couldn't quite solve easily.
 
+While that's happening, I also have been reading other developers' thoughts on TypeScript. Some are afraid to try it because it is intimidating, while some other really love it. Well, people have their own opinions. For me, why do I love TypeScript? It **guides** me.
+
 Imagine walking on a road. In a normal, sunny day, you will be able to see the road track, which keeps you on the road and prevents you from getting lost. Now, let's say there is a blizzard. Then, the road track is buried deep beneath the snow. It is now harder to find the way to your destination. You can brute force your way by going in all possible directions, but how long will it take?
 
 When you can see the road track, **you don't really have to think**. You just follow that track and eventually it will get you somewhere. If you are lost, then you can go back, using the same road track to your previous checkpoint.
