@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Text } from '../components/Typography';
+import { Card } from '../components/Card';
+
+let allPosts = await Astro.fetchContent('./blog/*.md');
+allPosts = allPosts
+  .filter((p) => p.visibility === 'public')
+  .sort(
+    (a, b) =>
+      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+  );
+
+let allProjects = await Astro.fetchContent('./projects/*.md');
+allProjects = allProjects
+  .sort(
+    (a, b) =>
+      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+  )
+  .slice(0, 3);
+
+const allRepoActivitiesStr = await Astro.resolve('../static/activity.json');
+const allRepoActivities = (await import(allRepoActivitiesStr)).default.slice(
+  0,
+  3
+);
+---
+
+<BaseLayout
+  title="Home"
+  description="The home page of my personal site."
+  currentMenu="/"
+  disableWidthLimitation
+>
+  <Text as="h1" className="text-center mt-0 mb-0">Welcome to peepohappy!</Text>
+
+  <Text as="p" className="text-xl text-center">
+    My name is Try Ajitiono. I write about software development, real life, and
+    gaming stuff.
+  </Text>
+
+  <div class="mt-8">
+    <Text as="h2">Latest post</Text>
+
+    <Card
+      title={allPosts[0].title}
+      titleHeadingElement="h3"
+      date={allPosts[0].publishDate}
+      text={allPosts[0].description}
+      img={allPosts[0].image}
+      imgAlt={allPosts[0].imageAlt}
+      href={allPosts[0].url}
+      className="h-full"
+    />
+  </div>
+
+  <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="flex flex-col">
+      <Text as="h2" className="mb-4">Latest project</Text>
+
+      <div class="relative flex-1">
+        <Card
+          titleHeadingElement="h3"
+          title={allProjects[0].title}
+          date={allProjects[0].publishDate}
+          text={allProjects[0].description}
+          href={allProjects[0].url}
+          className="h-full"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <Text as="h2" className="mb-4">Latest GitHub activity</Text>
+
+      <div class="relative flex-1">
+        <Card
+          titleHeadingElement="h3"
+          title={allRepoActivities[0].name}
+          date={allRepoActivities[0].lastUpdate}
+          text={allRepoActivities[0].description}
+          href={allRepoActivities[0].url}
+          className="h-full"
+        />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

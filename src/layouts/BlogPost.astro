@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPostHeader from '../components/BlogPostHeader.astro';
+
+const { content = {} } = Astro.props;
+const {
+  title,
+  description,
+  publishDate,
+  author,
+  image,
+  permalink,
+  imageAlt,
+  imageCaption
+} = content;
+---
+
+<BaseLayout {title} {description} currentMenu="/blog">
+  <article class="content">
+    <BlogPostHeader
+      {image}
+      {imageAlt}
+      {imageCaption}
+      {title}
+      {author}
+      {publishDate}
+    />
+
+    <div class="mt-4">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
