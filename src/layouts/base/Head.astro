@@ -8,17 +8,18 @@ export interface Props {
   image?: string;
 }
 
-const DEFAULT_IMAGE = '/assets/common-images/peepo-metadata.jpg';
-const { title, description, permalink, image = DEFAULT_IMAGE } = Astro.props;
+const {
+  title,
+  description,
+  permalink,
+  image = '/assets/common-images/peepo-metadata.jpg'
+} = Astro.props;
 
 const url = Astro.request.url;
 const origin = url.origin;
 let imageUrl = `${origin}${image}`;
 
-if (
-  import.meta.env.PUBLIC_ASTRO_ENV === 'production' &&
-  image !== DEFAULT_IMAGE
-) {
+if (import.meta.env.PUBLIC_ASTRO_ENV === 'production') {
   const ext = path.extname(imageUrl);
   imageUrl = imageUrl.slice(0, -ext.length) + '--512w' + ext;
 }
