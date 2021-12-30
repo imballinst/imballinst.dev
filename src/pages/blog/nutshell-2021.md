@@ -54,4 +54,6 @@ It was surprisingly a correct decision, I think. Just before I resigned, I didn'
 
 I contributed to some fun projects, such as [password-ga](https://github.com/ans-4175/password-ga) and [random-gofood](https://github.com/ans-4175/random-gofood). I also had the chance to create stuff myself, for example, [count-up-down](https://github.com/imballinst/count-up-down), [how-long](https://github.com/imballinst/how-long), and reworked [this site](https://github.com/imballinst/peepohappy).
 
+It became even better with the release of [Final Fantasy XIV: Endwalker](https://na.finalfantasyxiv.com/endwalker). My God, what a game. I cried a lot when I was playing the Main Scenario Quests (MSQ). The plot, the character developments, the stakes... it's just too good. Some of the events really resonated with me because I also had the "pleasure" to feel utter darkness and despair. This game reminded me that I am [not alone (WARNING: quest spoiler)](https://consolegameswiki.com/wiki/You%27re_Not_Alone), as there are other people also struggle with their own problems.
+
 Hopefully, in 2022, I can get back on the journey. Wishing you all a great year ahead!
