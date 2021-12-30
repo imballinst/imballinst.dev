@@ -1,16 +1,28 @@
 ---
+import path from 'path';
+
 export interface Props {
   title: string;
   description: string;
   permalink: string;
   image?: string;
 }
+
 const {
   title,
   description,
   permalink,
-  image = '/android-chrome-512x512.png'
+  image = '/assets/common-images/peepo-metadata.jpg'
 } = Astro.props;
+
+const url = Astro.request.url;
+const origin = url.origin;
+let imageUrl = `${origin}${image}`;
+
+if (import.meta.env.PUBLIC_ASTRO_ENV === 'production') {
+  const ext = path.extname(imageUrl);
+  imageUrl = imageUrl.slice(0, -ext.length) + '--512w' + ext;
+}
 
 const env = import.meta.env.PUBLIC_VERCEL_ENV;
 ---
@@ -35,14 +47,14 @@ const env = import.meta.env.PUBLIC_VERCEL_ENV;
 <meta property="og:url" content={permalink} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={image} />
+<meta property="og:image" content={imageUrl} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={permalink} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={image} />
+<meta property="twitter:image" content={imageUrl} />
 
 <link
   rel="stylesheet"
