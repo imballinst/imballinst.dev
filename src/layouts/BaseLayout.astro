@@ -5,7 +5,7 @@ import { DarkModeToggler } from '../components/Layout';
 // TODO(imballinst): not sure the prettier complains when I used `Link` instead of `ComponentLink`.
 import { Link as ComponentLink } from '../components/Links';
 
-const { title, description, currentMenu, heroImage } = Astro.props;
+const { title, description, currentMenu, image } = Astro.props;
 let permalink = Astro.request.canonicalURL.toString();
 
 if (permalink.endsWith('/')) {
@@ -67,7 +67,7 @@ const SOCIAL_LINKS = [
       title={pageTitle}
       description={effectiveDescription}
       {permalink}
-      {heroImage}
+      {image}
     />
   </head>
 
