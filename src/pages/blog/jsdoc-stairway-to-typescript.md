@@ -7,14 +7,12 @@ imageAlt: Route 217, Pokémon Platinum.
 imageCaption: Route 217, Pokémon Platinum.
 tags: software engineering, javascript
 visibility: public
-setup: |
-  import Layout from '../../layouts/BlogPost.astro'
-  import { Text } from '../../components/Typography'
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
-<Text className="text-center italic py-2 border-y border-gray-200 dark:border-gray-600" colorScheme="gray">
-  In this post, I will be using the contents of this repository: https://github.com/Imballinst/jsdoc-sample.
-</Text>
+:::
+In this post, I will be using the contents of this repository: https://github.com/Imballinst/jsdoc-sample.
+:::
 
 I have been using TypeScript for almost 1 year and I've got to say, I really enjoy working with it every day. I feel someone -- or rather, something -- is watching me writing my code. If I have an error, it will scream next to my ear and it won't stop until I fix it. This is a blessing, well, most of the time anyways. There were times when I wanted to bang my head to the wall because there were cryptic errors that I couldn't quite solve easily.
 
