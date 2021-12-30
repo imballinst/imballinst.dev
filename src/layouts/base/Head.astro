@@ -7,20 +7,20 @@ export interface Props {
   permalink: string;
   image?: string;
 }
-const {
-  title,
-  description,
-  permalink,
-  image = '/assets/common-images/peepo-logo.svg'
-} = Astro.props;
+
+const DEFAULT_IMAGE = '/assets/common-images/peepo-logo.svg';
+const { title, description, permalink, image = DEFAULT_IMAGE } = Astro.props;
 
 const url = Astro.request.url;
 const origin = url.origin;
 let imageUrl = `${origin}${image}`;
 
-if (import.meta.env.PUBLIC_ASTRO_ENV === 'production') {
+if (
+  import.meta.env.PUBLIC_ASTRO_ENV === 'production' &&
+  imageUrl !== DEFAULT_IMAGE
+) {
   const ext = path.extname(imageUrl);
-  imageUrl = imageUrl.slice(0, ext.length) + '--512w' + ext;
+  imageUrl = imageUrl.slice(0, -ext.length) + '--512w' + ext;
 }
 
 const env = import.meta.env.PUBLIC_VERCEL_ENV;
