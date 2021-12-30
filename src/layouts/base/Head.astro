@@ -17,7 +17,7 @@ let imageUrl = `${origin}${image}`;
 
 if (
   import.meta.env.PUBLIC_ASTRO_ENV === 'production' &&
-  imageUrl !== DEFAULT_IMAGE
+  image !== DEFAULT_IMAGE
 ) {
   const ext = path.extname(imageUrl);
   imageUrl = imageUrl.slice(0, -ext.length) + '--512w' + ext;
