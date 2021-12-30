@@ -7,14 +7,12 @@ imageAlt: 'Hopefully my first and last wedding ring. Credits: Instagram @matahat
 imageCaption: 'Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy.'
 tags: life
 visibility: public
-setup: |
-  import Layout from '../../layouts/BlogPost.astro'
-  import { Text } from '../../components/Typography'
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
-<Text className="text-center italic py-2 border-y border-gray-200 dark:border-gray-600" colorScheme="gray">
-  DISCLAIMER: [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en) was our wedding photographer. They gave us the raw and the edited pictures, but for this post, I can't find images that I wanted from the latter. Therefore, I took out a few pictures from the former and tweaked them myself. If you have a keen eye for photography stuff, I'm sorry if the following pictures hurt your eyes!
-</Text>
+:::
+DISCLAIMER: [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en) was our wedding photographer. They gave us the raw and the edited pictures, but for this post, I can't find images that I wanted from the latter. Therefore, I took out a few pictures from the former and tweaked them myself. If you have a keen eye for photography stuff, I'm sorry if the following pictures hurt your eyes!
+:::
 
 I asked myself a question before I got married, _"Will emotional affection between husband and wife last for a lifetime?"_. Tony Stark once said, _["I guess we'll find out"](https://www.imdb.com/title/tt0848228/characters/nm0000375)_.
 

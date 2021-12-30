@@ -16,6 +16,12 @@ process.env.ASTRO_TS = new Date().toISOString();
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Enable the React renderer to support React JSX components.
   renderers: ['@astrojs/renderer-preact'],
+  buildOptions: {
+    site:
+      process.env.CONTEXT === 'production'
+        ? process.env.URL
+        : process.env.DEPLOY_PRIME_URL
+  },
   markdownOptions: {
     render: [
       '@astrojs/markdown-remark',

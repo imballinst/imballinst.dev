@@ -7,14 +7,12 @@ imageAlt: 'Darkness is present during the nighttime. Cr: ForestWander Nature Pho
 imageCaption: 'Darkness is present during the nighttime. Cr: ForestWander Nature Photography.'
 tags: life
 visibility: unlisted
-setup: |
-  import Layout from '../../layouts/BlogPost.astro'
-  import { Text } from '../../components/Typography'
+setup: import Layout from '../../layouts/BlogPost.astro'
 ---
 
-<Text className="text-center italic py-2 border-y border-gray-200 dark:border-gray-600" colorScheme="gray">
-  WARNING: This post contains troubling parts in later sections. Proceed to read with care.
-</Text>
+:::
+WARNING: This post contains troubling parts in later sections. Proceed to read with care.
+:::
 
 Normally, we will have day and night take turns on a day-to-day basis. A sunny day will switch into a moonlit night. Light will shift into darkness. After the darkest of the night, universe will present us with dawn -- where shortly after, sun will rise back up.
 
@@ -92,6 +90,6 @@ I did a lot of bad things because of the explosion of my emotions. I felt really
 
 I'm closing this post with what I said in the "Prelude" section. I hope this serves as a reminder for me, too.
 
-<Text className="text-center italic py-2 border-y dark:border-gray-600" colorScheme="gray">
-  Be kind to others. If they react negatively to your actions, first and foremost, you might want to ask yourself, "Did I do something wrong?" instead of asking the other party, "What's wrong with you?" with judgmental tone.
-</Text>
+:::
+Be kind to others. If they react negatively to your actions, first and foremost, you might want to ask yourself, "Did I do something wrong?" instead of asking the other party, "What's wrong with you?" with judgmental tone.
+:::

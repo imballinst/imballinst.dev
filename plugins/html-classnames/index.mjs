@@ -43,8 +43,22 @@ export default function htmlClassnamesPlugin() {
         hast.properties.class = DEFAULT_ATTRS.p;
 
         // Check if the paragraph has links.
-        if (child.children) {
+        if (hast.children) {
+          const firstChild = hast.children[0];
+          const lastChild = hast.children[hast.children.length - 1];
+
+          // Process `:::` for centered, gray texts.
+          if (
+            firstChild.value?.startsWith(':::') &&
+            lastChild.value?.endsWith(':::')
+          ) {
+            hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} text-center italic py-2 mb-8 last:mb-0 border-y border-gray-200 dark:border-gray-600`;
+            firstChild.value = firstChild.value.slice(3);
+            lastChild.value = lastChild.value.slice(0, -3);
+          }
+
           for (const paragraphChild of hast.children) {
+            // Process others.
             if (
               paragraphChild.tagName === 'a' &&
               paragraphChild.children?.length === 1 &&

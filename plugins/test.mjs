@@ -14,14 +14,9 @@ async function main() {
     .use(htmlClassnamesPlugin)
     .process(
       `
-> **User:** "Hey, I found this bug where the X function is not working properly when given the input Y."
-> **Maintainer:** "Thanks for reporting! Could you tell me which version is this?"
-> **User:** "I am using the version that was released last year: 2.11.0."
-> **Maintainer:** "Sure! I'll look into it."
-
-> Thrombocytopenia might occur as a result of a bone marrow disorder such as leukemia or an immune system problem. Or it can be a side effect of taking certain medications. It affects both children and adults.
->
-> Thrombocytopenia can be mild and cause few signs or symptoms. In rare cases, the number of platelets can be so low that dangerous internal bleeding occurs. Treatment options are available.
+:::
+DISCLAIMER: [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en) was our wedding photographer. They gave us the raw and the edited pictures, but for this post, I can't find images that I wanted from the latter. Therefore, I took out a few pictures from the former and tweaked them myself. If you have a keen eye for photography stuff, I'm sorry if the following pictures hurt your eyes!
+:::
 `.trim()
     );
 
