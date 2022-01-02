@@ -59,6 +59,7 @@ const SOCIAL_LINKS = [
     title: 'LinkedIn'
   }
 ];
+const CURRENT_YEAR = new Date().getFullYear();
 ---
 
 <html lang="en">
@@ -104,7 +105,9 @@ const SOCIAL_LINKS = [
 
     <footer class="flex flex-initial flex-row p-2 mt-4 justify-center w-full">
       <Text as="div" colorScheme="gray" className="sm:w-full md:w-wmd lg:w-wlg">
-        <p class="font-bold text-center text-sm">&copy; 2021 Try Ajitiono</p>
+        <p class="font-bold text-center text-sm">
+          &copy; 2020-{CURRENT_YEAR} Try Ajitiono
+        </p>
 
         <div class="text-center text-sm mt-1">
           {SOCIAL_LINKS.map((social) => (
