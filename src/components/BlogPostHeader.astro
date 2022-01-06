@@ -70,7 +70,10 @@ const imgProps = {
 
 <header class="header">
   <Text as="h1" className="text-xl text-center my-0">{title}</Text>
-  <FormattedDate {publishDate} client:visible />
+
+  <div class="text-center">
+    <FormattedDate {publishDate} client:visible />
+  </div>
 
   {imgProps.src ? (
     <figure class="flex flex-col items-center justify-center mt-3 mb-4">

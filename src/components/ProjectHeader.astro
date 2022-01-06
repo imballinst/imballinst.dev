@@ -1,5 +1,6 @@
 ---
 import { format } from 'date-fns';
+import { FormattedDate } from '../components/Date';
 import { Text } from '../components/Typography';
 import { Link } from '../components/Links';
 
@@ -23,9 +24,7 @@ const { title, publishDate, author, githubLink } = Astro.props;
 
     <Text as="span" colorScheme="gray" className="mx-2">&bull;</Text>
 
-    <Text as="span" colorScheme="gray">
-      Published at {format(new Date(publishDate), 'MMMM dd, yyyy, HH:mm O')}
-    </Text>
+    <FormattedDate {publishDate} />
   </div>
 </header>
 

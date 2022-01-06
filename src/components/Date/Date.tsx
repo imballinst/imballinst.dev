@@ -13,12 +13,7 @@ export function FormattedDate({ publishDate }: { publishDate: string }) {
   }, [publishDate]);
 
   return (
-    <Text
-      as="p"
-      className="text-center my-0"
-      colorScheme="gray"
-      id="publish-date"
-    >
+    <Text as="span" colorScheme="gray">
       Published at {formatted}
     </Text>
   );
