@@ -24,7 +24,9 @@ func handlerServeHTTP(w http.ResponseWriter, req *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "application/json")
 
-	resp := "{message: Hello, world!}"
+	resp := make(map[string]string)
+	resp["message"] = "Hello world"
+
 	jsonResp, err := json.Marshal(resp)
 	if err != nil {
 		log.Fatalf("Error happened in JSON marshal. Err: %s", err)
