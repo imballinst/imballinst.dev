@@ -16,9 +16,9 @@ import (
 
 // Reference on the tags: https://dev.to/faruq2/how-to-build-a-crud-rest-api-with-go-gin-and-fauna-37o6.
 type Comment struct {
-	Slug     string    `json:"slug" fauna:"slug"`
-	Content  string    `json:"content" fauna:"content"`
-	Datetime time.Time `json:"datetime" fauna:"datetime"`
+	Slug     string `json:"slug" fauna:"slug"`
+	Content  string `json:"content" fauna:"content"`
+	Datetime string `json:"datetime" fauna:"datetime"`
 }
 
 type HttpError struct {
@@ -116,36 +116,40 @@ func sendResponse(body interface{}, httpError HttpError, defaultStatusCode int) 
 	}, nil
 }
 
+// Source: https://stackoverflow.com/a/57006724.
+var timeFormat = time.Now().Format("2006-01-02T15:04:05.999Z")
+
 // GET.
 func listComments(request events.APIGatewayProxyRequest) ([]Comment, HttpError) {
-	res, err := client.
-		Query(
-			f.Select("data",
-				f.
-					Map(f.
-						Paginate(f.
-							Match(f.
-								Index("all_comments"))), f.
-						Lambda("x", f.Select("data", f.Get(f.Var("x")))))),
-		)
+	// Reusable refs.
+	commentRef := f.Get(f.Var("commentRef"))
 
+	// Lambdas.
+	// Filter comments from certain days from now.
+	filterLambda := f.GTE(f.ToTime(f.Select(f.Arr{"data", "datetime"}, commentRef)), f.TimeSubtract(f.Now(), 10, "days"))
+	// Flatten the comment object. Take the pure "comment" object and discard the refs, ts, etc.
+	// Also, we replace the `datetime` with a pure string, like we do.
+	commentLambda := f.Lambda("commentRef", f.Merge(
+		f.Select("data", commentRef),
+		f.Obj{
+			"datetime": f.ToString(f.Select(f.Arr{"data", "datetime"}, commentRef)),
+		},
+	))
+
+	matchIndex := f.Paginate(f.Filter(f.Match(f.Index("all_comments")), f.Lambda("commentRef", filterLambda)))
+	mapExpression := f.Map(matchIndex, commentLambda)
+
+	res, err := client.
+		Query(f.Select("data", mapExpression))
+	fmt.Println(res, err)
 	if err != nil {
 		return nil, HttpError{code: 500, err: err}
 	}
 
 	marshalled, err := f.MarshalJSON(res)
 
-	r := strings.NewReader(string(marshalled))
-
 	var c []Comment
-	err = json.NewDecoder(r).Decode(&c)
-	fmt.Println(res, string(marshalled), c)
-	// err = json.Unmarshal(marshalled, &c)
-	// fmt.Println(res, string(marshalled), c)
-
-	// if err != nil {
-	// 	return nil, HttpError{code: 500, err: err}
-	// }
+	err = json.Unmarshal(marshalled, &c)
 
 	return c, HttpError{code: 0, err: nil}
 }
@@ -159,14 +163,16 @@ func postComments(request events.APIGatewayProxyRequest) (Comment, HttpError) {
 		return c, HttpError{code: 500, err: err}
 	}
 
-	c.Datetime = time.Now()
+	faunaTime := time.Now()
+	c.Datetime = faunaTime.UTC().String()
+
 	_, err = client.Query(
 		f.Create(
 			f.Collection("comments"),
 			f.Obj{"data": f.Obj{
 				"slug":     c.Slug,
 				"content":  c.Content,
-				"datetime": c.Datetime,
+				"datetime": faunaTime,
 			}}))
 
 	if err != nil {
