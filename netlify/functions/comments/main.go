@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"os"
 	"strings"
@@ -141,7 +140,7 @@ func listComments(request events.APIGatewayProxyRequest) ([]Comment, HttpError) 
 
 	res, err := client.
 		Query(f.Select("data", mapExpression))
-	fmt.Println(res, err)
+
 	if err != nil {
 		return nil, HttpError{code: 500, err: err}
 	}
