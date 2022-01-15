@@ -44,13 +44,7 @@ export function DarkModeToggler() {
   } else {
     toggleLabel = 'light';
     rendered = (
-      <g
-        strokeLinejoin="round"
-        strokeLinecap="round"
-        strokeWidth="2"
-        fill="none"
-        stroke="currentColor"
-      >
+      <g stroke-width="2" fill="none" stroke="currentColor">
         <circle cx="12" cy="12" r="5"></circle>
         <path d="M12 1v2"></path>
         <path d="M12 21v2"></path>
@@ -74,7 +68,7 @@ export function DarkModeToggler() {
   return (
     <button
       onClick={onButtonClick}
-      className="hover:bg-gray-200 dark:hover:bg-gray-500 p-2 rounded-full transition-colors"
+      className="hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded-full transition-colors"
       aria-label={`Toggle ${toggleLabel} mode`}
     >
       <svg

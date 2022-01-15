@@ -41,5 +41,6 @@ module.exports = {
         wlg: '60rem'
       }
     }
-  }
+  },
+  plugins: [require('@tailwindcss/forms')]
 };

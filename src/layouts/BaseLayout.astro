@@ -111,12 +111,7 @@ const CURRENT_YEAR = new Date().getFullYear();
 
         <div class="text-center text-sm mt-1">
           {SOCIAL_LINKS.map((social) => (
-            <ComponentLink
-              href={social.href}
-              className="px-2"
-              disableExternalIcon
-              isExternal
-            >
+            <ComponentLink href={social.href} className="px-2" isExternal>
               {social.title}
             </ComponentLink>
           ))}
