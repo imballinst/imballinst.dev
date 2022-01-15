@@ -1,3 +1,4 @@
+import type { JSX } from 'preact';
 import {
   changeTextColorScheme,
   DEFAULT_ATTRS,

@@ -1,5 +1,5 @@
 import { formatDistanceToNowStrict } from 'date-fns';
-import type { JSX } from 'preact';
+import { JSX } from 'preact';
 
 import { ExternalLinkIcon } from '../Links';
 import { getImageProps } from '../../helpers/image';
