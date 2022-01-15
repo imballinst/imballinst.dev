@@ -25,7 +25,7 @@ export function FeedbackModal({ slug }: FeedbackModalProps) {
   const [formError, setFormError] = useState<FeedbackFormError>({
     content: undefined
   });
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [fetchState, setFetchState] = useState<
     'idle' | 'fetching' | 'success' | 'error'
   >('idle');
