@@ -29,10 +29,11 @@
     "vfile-reporter": "7.0.3",
     "yaml": "1.10.2"
   },
+  "peerDependencies": {
+    "preact": "^10.6.4"
+  },
   "dependencies": {
     "@tailwindcss/forms": "0.4.0",
-    "date-fns": "2.27.0",
-    "preact": "10.6.4",
-    "preact-render-to-string": "5.1.19"
+    "date-fns": "2.27.0"  
   }
 }
