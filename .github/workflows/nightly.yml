@@ -19,8 +19,10 @@ jobs:
           node-version: 16.x
           cache: yarn
       - run: yarn
-      - run: yarn build
-      - run: yarn netlify deploy --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID
+      - run: yarn netlify build
+      - run: yarn netlify deploy --prod --dir=dist
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          FAUNA_SECRET: ${{ secrets.FAUNA_SECRET }}
+          GO_VERSION: ${{ secrets.GO_VERSION }}
