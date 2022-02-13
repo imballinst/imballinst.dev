@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "prebuild": "node scripts/activity.js",
-    "build": "PUBLIC_ASTRO_ENV=production astro build",
+    "build": "PUBLIC_ASTRO_ENV=production astro build && yarn go:build",
+    "go:build": "cd netlify/functions/comments-go && GOOS=linux GOARCH=amd64 go build -o ../comments comments.go",
     "postbuild": "node scripts/optimize-image/sharp.js",
     "preview": "astro preview"
   },
@@ -19,6 +20,7 @@
     "autoprefixer": "10.4.0",
     "cheerio": "1.0.0-rc.10",
     "fs-extra": "10.0.0",
+    "netlify-cli": "9.4.0",
     "prettier": "2.4.1",
     "prettier-plugin-astro": "0.0.11",
     "remark": "14.0.2",
@@ -34,6 +36,6 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "0.4.0",
-    "date-fns": "2.27.0"  
+    "date-fns": "2.27.0"
   }
 }
