@@ -10,9 +10,9 @@
     "start": "astro dev",
     "prebuild": "node scripts/activity.js",
     "build": "PUBLIC_ASTRO_ENV=production astro build && yarn build:go",
-    "build:go": "cd netlify/functions/comments && GOOS=linux GOARCH=amd64 go build comments.go",
+    "build:go": "cd netlify/functions/comments-go && GOOS=linux GOARCH=amd64 go build comments.go",
     "postbuild": "node scripts/optimize-image/sharp.js && yarn postbuild:go",
-    "postbuild:go": "mv netlify/functions/comments/comments netlify/functions/comments",
+    "postbuild:go": "mv netlify/functions/comments-go/comments netlify/functions/comments",
     "preview": "astro preview"
   },
   "devDependencies": {
