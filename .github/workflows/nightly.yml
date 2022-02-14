@@ -1,4 +1,4 @@
-name: build-test
+name: nightly
 
 on:
   schedule:
@@ -20,7 +20,7 @@ jobs:
           cache: yarn
       - run: yarn
       - run: yarn netlify build
-      - run: yarn netlify deploy --prod
+      - run: yarn netlify deploy --prod --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
