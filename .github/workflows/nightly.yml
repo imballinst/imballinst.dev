@@ -7,6 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
+    env:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      FAUNA_SECRET: ${{ secrets.FAUNA_SECRET }}
+      GO_VERSION: ${{ secrets.GO_VERSION }}
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1
@@ -19,10 +24,5 @@ jobs:
           node-version: 16.x
           cache: yarn
       - run: yarn
-      - run: yarn netlify build
+      - run: yarn netlify build --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN
       - run: yarn netlify deploy --prod --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          FAUNA_SECRET: ${{ secrets.FAUNA_SECRET }}
-          GO_VERSION: ${{ secrets.GO_VERSION }}
