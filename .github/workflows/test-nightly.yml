@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
+      - run: yarn
       - run: yarn netlify link --id $NETLIFY_SITE_ID
       - run: yarn netlify build
       - run: yarn netlify deploy --prod
