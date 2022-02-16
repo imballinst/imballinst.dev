@@ -5,7 +5,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  build:
+  nightly:
     runs-on: ubuntu-20.04
     env:
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -24,5 +24,6 @@ jobs:
           node-version: 16.x
           cache: yarn
       - run: yarn
-      - run: yarn netlify build --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN
-      - run: yarn netlify deploy --prod --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN
+      - run: yarn netlify link --id $NETLIFY_SITE_ID
+      - run: yarn netlify build
+      - run: yarn netlify deploy --prod
