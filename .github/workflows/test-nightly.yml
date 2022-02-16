@@ -1,12 +1,18 @@
-name: nightly
+name: test-nightly
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  pull_request:
+    branches:
+      - main
 
 jobs:
   nightly:
     runs-on: ubuntu-20.04
+    env:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      FAUNA_SECRET: ${{ secrets.FAUNA_SECRET }}
+      GO_VERSION: ${{ secrets.GO_VERSION }}
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1
@@ -18,11 +24,6 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-      - run: yarn
+      - run: yarn netlify link --id $NETLIFY_SITE_ID
       - run: yarn netlify build
       - run: yarn netlify deploy --prod
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          FAUNA_SECRET: ${{ secrets.FAUNA_SECRET }}
-          GO_VERSION: ${{ secrets.GO_VERSION }}
