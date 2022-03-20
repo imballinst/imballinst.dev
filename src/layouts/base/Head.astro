@@ -17,14 +17,13 @@ const {
 
 const url = Astro.request.url;
 const origin = url.origin;
+const env = import.meta.env.PUBLIC_ASTRO_ENV;
 let imageUrl = `${origin}${image}`;
 
-if (import.meta.env.PUBLIC_ASTRO_ENV === 'production') {
+if (env === 'production') {
   const ext = path.extname(imageUrl);
   imageUrl = imageUrl.slice(0, -ext.length) + '--512w' + ext;
 }
-
-const env = import.meta.env.PUBLIC_VERCEL_ENV;
 ---
 
 <!-- Global Metadata -->
