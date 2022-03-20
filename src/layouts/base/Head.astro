@@ -24,6 +24,8 @@ if (env === 'production') {
   const ext = path.extname(imageUrl);
   imageUrl = imageUrl.slice(0, -ext.length) + '--512w' + ext;
 }
+
+const injectAnalytics = import.meta.env.PUBLIC_INJECT_ANALYTICS === 'true';
 ---
 
 <!-- Global Metadata -->
@@ -93,13 +95,13 @@ if (env === 'production') {
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics on prod only -->
-{env === 'production' ? (
+{injectAnalytics ? (
   <script
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-TPYW0LG5LL"
   />
 ) : null}
-{env === 'production' ? <script>
+{injectAnalytics ? <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);

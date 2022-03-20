@@ -8,5 +8,9 @@
   # located at the absolute path "root/project/build-output"
   publish = "dist/"
 
+[context.production]
+  [context.production.environment]
+    PUBLIC_INJECT_ANALYTICS = "true"
+
 [functions]
   directory = "netlify/functions"

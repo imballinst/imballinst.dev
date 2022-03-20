@@ -12,6 +12,7 @@ jobs:
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
       FAUNA_SECRET: ${{ secrets.FAUNA_SECRET }}
       GO_VERSION: ${{ secrets.GO_VERSION }}
+      PUBLIC_INJECT_ANALYTICS: true
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1
