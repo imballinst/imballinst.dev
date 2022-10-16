@@ -21,7 +21,8 @@ export const DEFAULT_ATTRS = {
   h5: `${TEXT_COLOR} text-base`,
   h6: `${TEXT_COLOR} text-sm`,
   p: `${TEXT_COLOR} my-2 first:mt-0 last:mb-0`,
-  strong: `${TEXT_COLOR} font-semibold`
+  strong: `${TEXT_COLOR} font-semibold`,
+  div: ''
 };
 
 export const DEFAULT_MARGINS = {
@@ -32,7 +33,8 @@ export const DEFAULT_MARGINS = {
   h5: ``,
   h6: ``,
   p: `my-2 first:mt-0 last:mb-0`,
-  strong: ``
+  strong: ``,
+  div: ''
 };
 
 export type ColorSchemes = 'black' | keyof typeof ALTERNATIVE_TEXT_COLORS;

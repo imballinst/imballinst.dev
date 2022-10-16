@@ -3,7 +3,6 @@ title: solar-beam
 description: solar-beam is a project to get the sunrise and sunset time given latitude and longitude.
 publishDate: 2020-05-10T08:46:00.000Z
 githubLink: https://github.com/imballinst/solar-beam
-setup: import Layout from '../../layouts/Project.astro'
 ---
 
 I built `solar-beam` back then in order to create an animation of sunrise and sunset. However, at the end I didn't manage to do it. I only managed to do the "calculator"... as the animation part was very tricky, considering screen sizes and all that. This package was built by following the calculations from [Solar Calculation Details from Global Monitoring Laboratory](https://gml.noaa.gov/grad/solcalc/calcdetails.html).

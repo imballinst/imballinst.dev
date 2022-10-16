@@ -21,6 +21,7 @@
     "cheerio": "1.0.0-rc.10",
     "fs-extra": "10.0.0",
     "netlify-cli": "9.4.0",
+    "postcss": "8.4.18",
     "prettier": "2.4.1",
     "prettier-plugin-astro": "0.5.5",
     "remark": "14.0.2",
@@ -31,11 +32,10 @@
     "vfile-reporter": "7.0.3",
     "yaml": "1.10.2"
   },
-  "peerDependencies": {
-    "preact": "^10.6.4"
-  },
   "dependencies": {
+    "@astrojs/preact": "1.2.0",
     "@tailwindcss/forms": "0.4.0",
-    "date-fns": "2.27.0"
+    "date-fns": "2.27.0",
+    "preact": "10.11.2"
   }
 }

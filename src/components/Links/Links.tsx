@@ -2,7 +2,7 @@ import type { JSX } from 'preact';
 
 export interface LinkProps {
   href: string;
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[] | string;
   isExternal?: boolean;
   className?: string;
   disableUnderline?: boolean;

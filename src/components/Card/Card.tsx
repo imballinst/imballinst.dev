@@ -6,7 +6,7 @@ import { getImageProps } from '../../helpers/image';
 
 import { Text, TextProps } from '../Typography';
 
-import styles from './Card.module.css';
+import './Card.css';
 
 export interface CardProps {
   href?: string;
@@ -50,7 +50,7 @@ export function Card(props: CardProps) {
         <div className="lg:mr-[-10%] h-[300px] lg:h-[200px]">{cardImage}</div>
 
         <div
-          className={`absolute bottom-0 p-4 pt-12 lg:pr-16 lg:pt-4 w-full lg:w-1/2 lg:h-full ${styles['card-detail']} flex flex-col justify-end md:justify-center`}
+          className={`absolute bottom-0 p-4 pt-12 lg:pr-16 lg:pt-4 w-full lg:w-1/2 lg:h-full card-detail flex flex-col justify-end md:justify-center`}
         >
           <CardDetail
             title={props.title}
@@ -117,7 +117,7 @@ function CardDetail({
         })}
       </div>
 
-      <div className={`flex mt-2 items-center flex-col ${styles['card-text']}`}>
+      <div className={`flex mt-2 items-center flex-col card-text`}>
         <Text className="text-base">{text}</Text>
       </div>
     </>

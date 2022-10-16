@@ -7,7 +7,7 @@ imageAlt: 'University of Melbourne Law Building in Pelham Street.'
 imageCaption: 'University of Melbourne Law Building in Pelham Street.'
 tags: life, education
 visibility: public
-setup: import Layout from '../../layouts/BlogPost.astro'
+layout: '../../layouts/BlogPost.astro'
 ---
 
 This story is split into 3 parts. The first part is the preparation, the second part is the study itself, and the last part is the summary. The currency exchange rates in the post are using the rates on **December 12, 2017** (USD, 1 USD = 13.560 IDR) and **July 12, 2018** (AUD, 1 AUD = 10.556 IDR).

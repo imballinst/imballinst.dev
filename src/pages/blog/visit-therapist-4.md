@@ -7,7 +7,7 @@ imageAlt: Photo by Dan Meyers on Unsplash.
 imageCaption: Photo by <a href="https://unsplash.com/@dmey503?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Meyers</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
 tags: life
 visibility: public
-setup: import Layout from '../../layouts/BlogPost.astro'
+layout: '../../layouts/BlogPost.astro'
 ---
 
 _"Woah, woah, woah, hold on! This is the first post about therapist visits and you are telling me that this is part 4? Where are the previous 3 parts?"_ Unfortunately, for the first therapist visit, I was all over the place. According to my therapist, my stories back then were unordered [timeline-wise], which is true, because I didn't know where to start, I didn't know what my problems were, and I didn't know how to explain them. For the second and third visit, I did have a note but I forget where did I put it... so, yeah. Anyway!

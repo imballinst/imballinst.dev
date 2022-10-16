@@ -7,7 +7,7 @@ imageAlt: 'Hopefully my first and last wedding ring. Credits: Instagram @matahat
 imageCaption: 'Hopefully my first and last wedding ring. Credits: Instagram @matahatigraphy.'
 tags: life
 visibility: public
-setup: import Layout from '../../layouts/BlogPost.astro'
+layout: '../../layouts/BlogPost.astro'
 ---
 
 :::

@@ -11,7 +11,7 @@ export function Button({
   className = '',
   ...props
 }: {
-  children: JSX.Element | string;
+  children: JSX.Element | JSX.Element[] | string;
   colorScheme?: ButtonColorSchemes;
   className?: string;
   id?: string;

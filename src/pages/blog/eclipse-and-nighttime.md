@@ -7,7 +7,7 @@ imageAlt: 'Darkness is present during the nighttime. Cr: ForestWander Nature Pho
 imageCaption: 'Darkness is present during the nighttime. Cr: ForestWander Nature Photography.'
 tags: life
 visibility: unlisted
-setup: import Layout from '../../layouts/BlogPost.astro'
+layout: '../../layouts/BlogPost.astro'
 ---
 
 :::

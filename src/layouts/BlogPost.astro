@@ -19,13 +19,13 @@ const {
   imageCaption
 } = content;
 
-const editPage = `https://github.com/imballinst/peepohappy/edit/main/src/pages${Astro.request.url.pathname}.md`;
-const slug = Astro.request.url.pathname;
+const slug = Astro.url.pathname;
+const editPage = `https://github.com/imballinst/peepohappy/edit/main/src/pages${slug}.md`;
 ---
 
 <BaseLayout {title} {description} {image} currentMenu="/blog">
   <article class="content">
-    <FeedbackModal {slug} client:only>test</FeedbackModal>
+    <FeedbackModal slug={slug} client:visible>test</FeedbackModal>
 
     <BlogPostHeader
       {image}
@@ -59,7 +59,7 @@ const slug = Astro.request.url.pathname;
         href={editPage}
         className="flex flex-row items-center ml-1"
         isExternal
-        hideExternalIcon
+        disableExternalIcon
       >
         <EditIcon className="h-4 w-4" />
 

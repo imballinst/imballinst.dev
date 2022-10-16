@@ -3,27 +3,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
 
-let allPosts = await Astro.fetchContent('./blog/*.md');
+import allRepoActivities from '../static/activity.json';
+
+let allPosts = await Astro.glob('./blog/*.md');
 allPosts = allPosts
-  .filter((p) => p.visibility === 'public')
+  .filter((p) => p.frontmatter.visibility === 'public')
   .sort(
     (a, b) =>
-      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
   );
 
-let allProjects = await Astro.fetchContent('./projects/*.md');
+let allProjects = await Astro.glob('./projects/*.md');
 allProjects = allProjects
   .sort(
     (a, b) =>
-      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
   )
   .slice(0, 3);
-
-const allRepoActivitiesStr = await Astro.resolve('../static/activity.json');
-const allRepoActivities = (await import(allRepoActivitiesStr)).default.slice(
-  0,
-  3
-);
 ---
 
 <BaseLayout
@@ -43,12 +41,12 @@ const allRepoActivities = (await import(allRepoActivitiesStr)).default.slice(
     <Text as="h2">Latest post</Text>
 
     <Card
-      title={allPosts[0].title}
+      title={allPosts[0].frontmatter.title}
       titleHeadingElement="h3"
-      date={allPosts[0].publishDate}
-      text={allPosts[0].description}
-      img={allPosts[0].image}
-      imgAlt={allPosts[0].imageAlt}
+      date={allPosts[0].frontmatter.publishDate}
+      text={allPosts[0].frontmatter.description}
+      img={allPosts[0].frontmatter.image}
+      imgAlt={allPosts[0].frontmatter.imageAlt}
       href={allPosts[0].url}
       className="h-full"
     />
@@ -61,9 +59,9 @@ const allRepoActivities = (await import(allRepoActivitiesStr)).default.slice(
       <div class="relative flex-1">
         <Card
           titleHeadingElement="h3"
-          title={allProjects[0].title}
-          date={allProjects[0].publishDate}
-          text={allProjects[0].description}
+          title={allProjects[0].frontmatter.title}
+          date={allProjects[0].frontmatter.publishDate}
+          text={allProjects[0].frontmatter.description}
           href={allProjects[0].url}
           className="h-full"
         />

@@ -7,7 +7,7 @@ imageAlt: Glencoe, United Kingdom. Photo by LoboStudio Hamburg on Unsplash.
 imageCaption: Glencoe, United Kingdom. Photo by <a href="https://unsplash.com/@lobostudiohamburg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">LoboStudio Hamburg</a> on <a href="https://unsplash.com/s/photos/light-dark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
 tags: life
 visibility: public
-setup: import Layout from '../../layouts/BlogPost.astro'
+layout: '../../layouts/BlogPost.astro'
 ---
 
 :::

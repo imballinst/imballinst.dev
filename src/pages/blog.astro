@@ -3,12 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
 
-let allPosts = await Astro.fetchContent('./blog/*.md');
+let allPosts = await Astro.glob('./blog/*.md');
 allPosts = allPosts
-  .filter((p) => p.visibility === 'public')
+  .filter((p) => p.frontmatter.visibility === 'public')
   .sort(
     (a, b) =>
-      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
   );
 ---
 
@@ -20,19 +21,21 @@ allPosts = allPosts
   <Text as="h1" className="mb-4">Blog</Text>
 
   <ul class="grid grid-cols-1 gap-8">
-    {allPosts.map((post, idx) => (
-      <li key={idx}>
-        <Card
-          titleHeadingElement="h2"
-          title={post.title}
-          date={post.publishDate}
-          text={post.description}
-          img={post.image}
-          imgAlt={post.imageAlt}
-          href={post.url}
-          className="h-full"
-        />
-      </li>
-    ))}
+    {
+      allPosts.map((post, idx) => (
+        <li>
+          <Card
+            titleHeadingElement="h2"
+            title={post.frontmatter.title}
+            date={post.frontmatter.publishDate}
+            text={post.frontmatter.description}
+            img={post.frontmatter.image}
+            imgAlt={post.frontmatter.imageAlt}
+            href={post.url}
+            className="h-full"
+          />
+        </li>
+      ))
+    }
   </ul>
 </BaseLayout>

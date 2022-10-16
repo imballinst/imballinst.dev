@@ -7,7 +7,7 @@ imageAlt: Route 217, Pokémon Platinum.
 imageCaption: Route 217, Pokémon Platinum.
 tags: software engineering, javascript
 visibility: public
-setup: import Layout from '../../layouts/BlogPost.astro'
+layout: '../../layouts/BlogPost.astro'
 ---
 
 :::

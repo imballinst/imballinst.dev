@@ -3,10 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
 
-let allProjects = await Astro.fetchContent('./projects/*.md');
+let allProjects = await Astro.glob('./projects/*.md');
 allProjects = allProjects.sort(
   (a, b) =>
-    new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
 );
 ---
 
@@ -18,17 +19,19 @@ allProjects = allProjects.sort(
   <Text as="h1" className="mb-4">Projects</Text>
 
   <ul class="grid grid-cols-1 gap-8">
-    {allProjects.map((project, idx) => (
-      <li key={idx}>
-        <Card
-          titleHeadingElement="h2"
-          title={project.title}
-          date={project.publishDate}
-          text={project.description}
-          href={project.url}
-          className="h-full"
-        />
-      </li>
-    ))}
+    {
+      allProjects.map((project) => (
+        <li>
+          <Card
+            titleHeadingElement="h2"
+            title={project.frontmatter.title}
+            date={project.frontmatter.publishDate}
+            text={project.frontmatter.description}
+            href={project.url}
+            className="h-full"
+          />
+        </li>
+      ))
+    }
   </ul>
 </BaseLayout>

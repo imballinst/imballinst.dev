@@ -7,7 +7,7 @@ imageAlt: Getting 3rd place in Jakarta Qualifier of Indonesia Elite Super League
 imageCaption: Getting 3rd place in Jakarta Qualifier of Indonesia Elite Super League (IESL) in 2015.
 tags: life, gaming
 visibility: public
-setup: import Layout from '../../layouts/BlogPost.astro'
+layout: '../../layouts/BlogPost.astro'
 ---
 
 I was first introduced to games by my brother when I was around 8 years old -- they were old Windows games, such as Solitaire, Hearts, Chip's Challenge, Rodent's Revenge, and Pinball. Later on, I also learned about other "popular" PC games, such as Need for Speed, Red Alert 2, Counter-Strike, and Warcraft III. Since we only had 1 PC at that time, we needed to take turns to play games, although most of the time, it was my brother playing with me watching. However, sometimes we did naughty things, such as using my mother's unused laptop, which she left at home, to play games together on Local Area Network (will be shortened to LAN later on). That was before we discovered internet cafes.

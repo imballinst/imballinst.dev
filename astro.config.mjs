@@ -1,5 +1,6 @@
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
+import preact from '@astrojs/preact'
 import remarkGfm from 'remark-gfm';
 
 import imageCaptionPlugin from './plugins/image/index.mjs';
@@ -13,24 +14,16 @@ import htmlClassnamesPlugin from './plugins/html-classnames/index.mjs';
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Enable the React renderer to support React JSX components.
-  renderers: ['@astrojs/renderer-preact'],
-  buildOptions: {
-    site:
-      process.env.CONTEXT === 'production'
-        ? process.env.URL
-        : process.env.DEPLOY_PRIME_URL
-  },
-  markdownOptions: {
-    render: [
-      '@astrojs/markdown-remark',
-      {
-        remarkPlugins: [
-          { default: remarkGfm },
-          { default: imageCaptionPlugin },
-          { default: htmlClassnamesPlugin }
-        ],
-        rehypePlugins: []
-      }
-    ]
+  integrations: [preact()],
+  base: process.env.CONTEXT === 'production'
+    ? process.env.URL
+    : process.env.DEPLOY_PRIME_URL,
+  markdown: {
+    remarkPlugins: [
+      remarkGfm,
+      imageCaptionPlugin,
+      htmlClassnamesPlugin
+    ],
+    rehypePlugins: []
   }
 });

@@ -7,7 +7,7 @@ imageAlt: An image with gray background color, with the bright-colored text, "No
 imageCaption: An image with gray background color, with the bright-colored text, "Not good enough. What then?"
 tags: life, software engineering
 visibility: public
-setup: import Layout from '../../layouts/BlogPost.astro'
+layout: '../../layouts/BlogPost.astro'
 ---
 
 All my life, I feel like I am dedicating it to prove myself, to make myself recognized. Something that I didn't quite get during my childhood and teenage years, I suppose, which I tried to actualize in another thing.

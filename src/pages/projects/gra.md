@@ -3,7 +3,6 @@ title: gra
 description: gra is a remote address getter for a particular URL.
 publishDate: 2021-05-27T10:39:00.000Z
 githubLink: https://github.com/Imballinst/gra
-setup: import Layout from '../../layouts/Project.astro'
 ---
 
 `gra` stands for "Get Remote Address". The motivation of this project was to get the remote address of a DNS that is generated with Elastic Load Balancing (ELB) from Amazon Web Services (AWS), such as https://somerandomstring.us-east-1.elb.amazonaws.com. More information about Elastic Load Balancing can be seen here: https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-internet-facing-load-balancers.html.

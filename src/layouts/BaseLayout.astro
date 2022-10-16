@@ -6,11 +6,7 @@ import { DarkModeToggler } from '../components/Layout';
 import { Link as ComponentLink } from '../components/Links';
 
 const { title, description, currentMenu, image } = Astro.props;
-let permalink = Astro.request.canonicalURL.toString();
-
-if (permalink.endsWith('/')) {
-  permalink = permalink.slice(0, -1);
-}
+const permalink = Astro.url.href;
 
 const effectiveDescription =
   description || 'The personal site of Try Ajitiono.';
@@ -67,7 +63,7 @@ const CURRENT_YEAR = new Date().getFullYear();
     <BaseHead
       title={pageTitle}
       description={effectiveDescription}
-      {permalink}
+      permalink={permalink}
       {image}
     />
   </head>
@@ -82,11 +78,13 @@ const CURRENT_YEAR = new Date().getFullYear();
         class="-ml-2 flex flex-row justify-between items-center px-3 py-2 w-full md:w-wmd lg:w-wlg"
       >
         <div class="flex flex-row font-semibold">
-          {NAVS_WITH_CLASSES.map((nav) => (
-            <ComponentLink href={nav.path} className="p-2" disableUnderline>
-              <div class={nav.className}>{nav.title}</div>
-            </ComponentLink>
-          ))}
+          {
+            NAVS_WITH_CLASSES.map((nav) => (
+              <ComponentLink href={nav.path} className="p-2" disableUnderline>
+                <div class={nav.className}>{nav.title}</div>
+              </ComponentLink>
+            ))
+          }
         </div>
 
         <div>
@@ -104,17 +102,19 @@ const CURRENT_YEAR = new Date().getFullYear();
     </main>
 
     <footer class="flex flex-initial flex-row p-2 mt-4 justify-center w-full">
-      <Text as="div" colorScheme="gray" className="sm:w-full md:w-wmd lg:w-wlg">
+      <Text as="p" colorScheme="gray" className="sm:w-full md:w-wmd lg:w-wlg">
         <small class="block w-full font-bold text-center text-sm">
           &copy; 2020-{CURRENT_YEAR} Try Ajitiono
         </small>
 
         <div class="text-center text-sm mt-1">
-          {SOCIAL_LINKS.map((social) => (
-            <ComponentLink href={social.href} className="px-2" isExternal>
-              {social.title}
-            </ComponentLink>
-          ))}
+          {
+            SOCIAL_LINKS.map((social) => (
+              <ComponentLink href={social.href} className="px-2" isExternal>
+                {social.title}
+              </ComponentLink>
+            ))
+          }
         </div>
       </Text>
     </footer>

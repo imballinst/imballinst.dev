@@ -3,7 +3,6 @@ title: count-up-down
 description: count-up-down is a npm package to calculate the data required for a countdown or count-up timer.
 publishDate: 2021-12-05T12:57:00.000Z
 githubLink: https://github.com/imballinst/count-up-down
-setup: import Layout from '../../layouts/Project.astro'
 ---
 
 `count-up-down` is a npm package that we can use to get the units required to construct a countdown or count-up timer, such as years, months, days, hours, minutes, and seconds. A demo can be seen here: https://imballinst.github.io/count-up-down. At the time of writing, it is a count down to 2022. After 2022 kicks in, then it will become a count-up.

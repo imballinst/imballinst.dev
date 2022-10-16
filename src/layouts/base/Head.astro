@@ -1,5 +1,6 @@
 ---
 import path from 'path';
+import '../../styles/globals.css';
 
 export interface Props {
   title: string;
@@ -15,7 +16,7 @@ const {
   image = '/assets/common-images/peepo-metadata.jpg'
 } = Astro.props;
 
-const url = Astro.request.url;
+const url = Astro.url;
 const origin = url.origin;
 const env = import.meta.env.PUBLIC_ASTRO_ENV;
 let imageUrl = `${origin}${image}`;
@@ -57,28 +58,24 @@ const injectAnalytics = import.meta.env.PUBLIC_INJECT_ANALYTICS === 'true';
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={imageUrl} />
 
-<link
-  rel="stylesheet"
-  type="text/css"
-  href={Astro.resolve('../../styles/globals.css')}
-/>
-
 <!-- Fonts -->
-{[
-  'Barlow-Regular.woff2',
-  'Barlow-Italic.woff2',
-  'Barlow-Medium.woff2',
-  'Barlow-Bold.woff2',
-  'IBMPlexMono-Regular.woff2'
-].map((font) => (
-  <link
-    rel="preload"
-    href={`/fonts/${font}`}
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
-))}
+{
+  [
+    'Barlow-Regular.woff2',
+    'Barlow-Italic.woff2',
+    'Barlow-Medium.woff2',
+    'Barlow-Bold.woff2',
+    'IBMPlexMono-Regular.woff2'
+  ].map((font) => (
+    <link
+      rel="preload"
+      href={`/fonts/${font}`}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  ))
+}
 
 <!-- Prevent FOUC. Source: https://github.com/withastro/astro/blob/6e3b11ec22530abe89821422751c0a870d657c24/docs/src/components/HeadCommon.astro#L22-L31. -->
 <script>
@@ -95,18 +92,12 @@ const injectAnalytics = import.meta.env.PUBLIC_INJECT_ANALYTICS === 'true';
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics on prod only -->
-{injectAnalytics ? (
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-TPYW0LG5LL"
-  />
-) : null}
-{injectAnalytics ? <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-
-  gtag('config', 'G-TPYW0LG5LL');
-</script>: null}
+{
+  injectAnalytics ? (
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TPYW0LG5LL"
+    />
+  ) : null
+}
+{injectAnalytics ? <script async src="/scripts/gtag.js" /> : null}
