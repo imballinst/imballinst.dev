@@ -15,9 +15,6 @@ import htmlClassnamesPlugin from './plugins/html-classnames/index.mjs';
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Enable the React renderer to support React JSX components.
   integrations: [preact()],
-  base: process.env.CONTEXT === 'production'
-    ? process.env.URL
-    : process.env.DEPLOY_PRIME_URL,
   markdown: {
     remarkPlugins: [
       remarkGfm,
