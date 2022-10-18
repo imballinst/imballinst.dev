@@ -16,10 +16,9 @@ const {
   image = '/assets/common-images/peepo-metadata.jpg'
 } = Astro.props;
 
-const url = Astro.url;
-const origin = url.origin;
+const url = Astro.site.href;
 const env = import.meta.env.PUBLIC_ASTRO_ENV;
-let imageUrl = `${origin}${image}`;
+let imageUrl = `${url}${image}`;
 
 if (env === 'production') {
   const ext = path.extname(imageUrl);
