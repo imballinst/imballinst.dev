@@ -1,8 +1,8 @@
 {
-  "name": "peepohappy",
+  "name": "imballinst.dev",
   "version": "2.0.0",
   "description": "Try Ajitiono's personal blog",
-  "repository": "git@github.com:imballinst/peepohappy.git",
+  "repository": "git@github.com:imballinst/imballinst.dev.git",
   "author": "Try Ajitiono <ballinst@gmail.com>",
   "license": "MIT",
   "scripts": {

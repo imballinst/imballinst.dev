@@ -18,7 +18,7 @@ For this achievements section, I want to dedicate it to my efforts—not necessa
 
 ### Being Kinder to Myself
 
-I think I did a lot of favor to myself this year. Previously, I was somewhat "hungry"—hungry for recognition, hungry for praise, hungry for more money, and all that. However, this year (especially after COVID-19 landed in Indonesia), I tried to take things more slowly for the sake of [my long-term vision](https://peepohappy.id/blog/marriage-and-emotional-affection). I can't be a good father if I am not alive, so there's that.
+I think I did a lot of favor to myself this year. Previously, I was somewhat "hungry"—hungry for recognition, hungry for praise, hungry for more money, and all that. However, this year (especially after COVID-19 landed in Indonesia), I tried to take things more slowly for the sake of [my long-term vision](https://imballinst.dev/blog/marriage-and-emotional-affection). I can't be a good father if I am not alive, so there's that.
 
 During the early stages of COVID-19 in Indonesia, I was asked if I wanted to volunteer in an independent group to monitor the COVID-19 progress in Indonesia. It was around March if I remember correctly. I asked my soon-to-be-wife (at that time) whether I should join or not. We arrived at the decision that preparing for our wedding planning had a bigger priority and if I wanted to accept it, I should consider whether I would be able to juggle between my job, volunteering, and wedding preparations. I didn't think I could, so I didn't join the volunteering group.
 
@@ -66,7 +66,7 @@ Of course, this virus also impacted our wedding plans. Initially, we wanted to h
 
 My life always revolves around my parents' family issues.
 
-Last year, I came back to Indonesia from Australia as [I finished my Master's degree](https://peepohappy.id/blog/my-thought-pursuing-higher-study). I steeled myself as I took a risk to continue working remotely from my parents' house in Jakarta. I was hoping to somewhat remedy the relationship between my father and mother, which I think was not healthy. How naïve I was to be so optimistic about it. Not only it didn't work, but it caused some mental toll on me as well.
+Last year, I came back to Indonesia from Australia as [I finished my Master's degree](https://imballinst.dev/blog/my-thought-pursuing-higher-study). I steeled myself as I took a risk to continue working remotely from my parents' house in Jakarta. I was hoping to somewhat remedy the relationship between my father and mother, which I think was not healthy. How naïve I was to be so optimistic about it. Not only it didn't work, but it caused some mental toll on me as well.
 
 Aside from COVID-19 issues, preceding family issues also didn't help in smoothing our wedding plans. My brother had issues in his marriage, so every time I did something that was against my mother's thinking, I would always be compared with my brother. She said that I would fail just like my brother if I kept my behavior. I was quite baffled because I and my brother had different personalities.
 

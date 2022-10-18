@@ -1,4 +1,4 @@
-# peepohappy
+# imballinst.dev
 
 This is my personal site, mostly for curating blog posts and projects. This project is built using [Astro](https://astro.build) as the static site builder, [tailwindcss](https://tailwindcss.com) for the CSS utility classes, and some sprinkles of scripts for the prebuild and postbuild steps.
 

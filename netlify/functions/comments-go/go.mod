@@ -1,4 +1,4 @@
-module peepohappy.id/comments
+module imballinst.dev/comments
 
 go 1.17
 

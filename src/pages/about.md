@@ -1,16 +1,20 @@
 ---
-title: 'About peepohappy'
+title: 'About me'
 layout: '../layouts/About.astro'
 ---
 
-My name is Try Ajitiono. I do frontend engineering and creating bugs on daily basis, mostly around React. I was once a semi-professional Dota 2 gamer (I competed mostly online, though), hence I love video games. Also, bunnies 🐰.
+I am a frontend engineer who specializes in React and Node.js®. I eat TypeScript for breakfast, although I am still allergic to complex generic types. Below are my primary technical skills:
 
-## Behind "peepohappy"
+- **HTML/CSS**: SASS, CSS-in-JS, and utility-first CSS libs (e.g. Tailwind)
+- **Javascript/TypeScript**: 5+ years of React and Node.js® (2+ years TypeScript)
+- **Web frameworks**: CRA, Next.js, Storybook, Remix
+- **Modern bundlers**: Webpack, esbuild, Vite, Parcel
+- **Testing tools**: Jest/mocha, React Testing Library, Cypress
+- Git, CI/CD, Unix-like scripting, a11y, and static site generators (e.g. Astro)
 
-In [Twitch.tv](https://www.twitch.tv), there are a lot of emote types. They are **global emotes**, **channel emotes**, and **custom emotes**. Custom emotes are created by users and extendable through [BetterTTV](https://betterttv.com/) or [FrankerFaceZ](https://www.frankerfacez.com/).
+Aside from the things listed above, I also have some knowledge regarding Docker, Kubernetes, Envoy, nginx, SQL, NoSQL, Golang, Python, PHP, and Google Analytics. Here are some of the things that I want to learn (or learn further) in 2022:
 
-I have a lot of favorite emotes, such as [WutFace](https://knowyourmeme.com/memes/wutface), [KEKWait](https://www.rivalry.com/esports/what-does-kekwait-mean), [OMEGALUL](https://www.frankerfacez.com/emoticon/128054-OMEGALUL), and [SMOrc](https://knowyourmeme.com/memes/smorc). However, [widepeepoHappy](https://www.slanglang.net/widepeepohappy/) tops them all. It almost always makes me smile seeing that emote appear in Twitch Chat. In addition, deeper inside me, I want to be a happy person. Therefore, I dedicate the name of this site to "peepohappy", because widepeepohappy would be too long for a name.
-
-## Purpose
-
-The purpose of this site is mainly to **share**. Currently, the content revolves around my posts, but in the future, this may change. Sometimes, my posts may have this _rant_ vibes, however, I will try to make them as civil as possible. If you want to consume the less "civilized" version, perhaps you might want to visit my Twitter account instead.
+- **Compiled language**: I realize that I am a bit crippled when it comes to a compiled language because my knowledge revolves around JavaScript, but hopefully that's going to change this year! I think I will be learning Golang more.
+- **Web frameworks**: I would like to deep-dive more into Next.js, Storybook, and Remix. I have been a bit out of touch with Next.js best practices, as well as the latest add-ons from Storybook. As for Remix, well, I only tried it once in late January, so I haven't really given it a proper deep-dive.
+- **Modern bundlers**: I have been living and breathing with Webpack since 2016. I did use esbuild in [count-up-down](https://github.com/imballinst/count-up-down), although it was just for building a library. I would like to learn more to Vite and Parcel—Vite especially, because I want to try a bundler that doesn't depend on Babel.
+- **Mindfulness**: In 2012, I lived apart from my parents as I went to college in Bandung. During my journey there, I realized that I was a "fake" at home. I realized that I had a lot of feelings that I buried deep beneath me, making me an incomplete person... which resulted me in sometimes hurting myself (physically) or others (emotionally). I did a lot better now after a lot of therapy sessions and it has been a while since my last panic attack, but I am still going to practice more mindfulness!
