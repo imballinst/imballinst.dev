@@ -11,7 +11,7 @@
     "prebuild": "node scripts/activity.js",
     "build": "PUBLIC_ASTRO_ENV=production astro build && yarn go:build",
     "go:build": "cd netlify/functions/comments-go && GOOS=linux GOARCH=amd64 go build -o ../comments comments.go",
-    "postbuild": "node scripts/optimize-image/sharp.js",
+    "postbuild": "node scripts/optimize-image/sharp.js && cp _redirects dist/_redirects",
     "preview": "astro preview"
   },
   "devDependencies": {
