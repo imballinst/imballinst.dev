@@ -13,10 +13,10 @@ const {
   title,
   description,
   permalink,
-  image = '/assets/common-images/peepo-metadata.jpg'
+  image = '/assets/common-images/imballinst-dev-metadata.jpg'
 } = Astro.props;
 
-const url = Astro.site.href;
+const url = Astro.site?.href || '';
 const env = import.meta.env.PUBLIC_ASTRO_ENV;
 let imageUrl = `${url}${image}`;
 
