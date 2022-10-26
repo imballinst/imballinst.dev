@@ -19,6 +19,7 @@
     "astro": "1.5.0",
     "autoprefixer": "10.4.0",
     "cheerio": "1.0.0-rc.10",
+    "cssnano": "5.1.13",
     "fs-extra": "10.0.0",
     "netlify-cli": "9.4.0",
     "postcss": "8.4.18",
