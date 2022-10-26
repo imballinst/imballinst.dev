@@ -15,7 +15,8 @@ const octokit = new Octokit();
         // Exclude non-push events and events for this repository.
         .filter(
           (el) =>
-            el.type === 'PushEvent' && el.repo.name !== `imballinst/peepohappy`
+            el.type === 'PushEvent' &&
+            el.repo.name !== `imballinst/imballinst.dev`
         )
         .map((el) => el.repo.name)
     )

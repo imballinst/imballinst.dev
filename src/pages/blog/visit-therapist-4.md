@@ -32,7 +32,7 @@ With regards to this, my therapist said something about the relationship between
 
 Later on, she recognized that her life was quite stressful when she got sick. After that, in a conference related to psychology, she met with Carl Jung's grandchild [if I remember correctly] and he/she told her that mental stress can impact blood cells, in particular platelets. So, probably that was the case for me twice last year (February and October).
 
-Although what she said validates my concerns that mental health can affect physical health—which fed my ego because back then [there were people who said happiness doesn't affect health](https://peepohappy.id/blog/top3-achievements-frustrations-2020)—I would still try to find references to ensure that what she said was valid. Bear in mind that I am not an expert in this field, so my thinking below **could** be wrong... and you don't have to agree with me.
+Although what she said validates my concerns that mental health can affect physical health—which fed my ego because back then [there were people who said happiness doesn't affect health](https://imballinst.dev/blog/top3-achievements-frustrations-2020)—I would still try to find references to ensure that what she said was valid. Bear in mind that I am not an expert in this field, so my thinking below **could** be wrong... and you don't have to agree with me.
 
 Instead of finding facts that back up my therapist's argument, I found that [mental stress raises platelet activity](https://link.springer.com/article/10.1007/s11481-020-09945-4)... which is probably a good thing? Not satisfied with what I found, I spent more time looking for more references and I learned about [thrombocytopenia](https://www.mayoclinic.org/diseases-conditions/thrombocytopenia/symptoms-causes/syc-20378293), a condition in which someone has a low platelet count. The following is a direct quote from that article.
 
@@ -58,7 +58,7 @@ I think this was also what my therapist said to me during our session (but I for
 
 In December, I and my wife planned to go to Bandung to visit my in-laws. We prepared that intensely—we decided that we would isolate ourselves in the hotel for 2 weeks and do [PCR test](https://en.wikipedia.org/wiki/Polymerase_chain_reaction)—just to ensure we wouldn't be a spreader.
 
-Before traveling to Bandung, we visited my parents first for a quick catch-up. At that time, I hadn't seen my mother for like 3 months because I didn't have the best relationship with her (see ["Marriage and Emotional Affection"](https://peepohappy.id/blog/marriage-and-emotional-affection)). Again, thankfully no dramas were produced during that occasion. Our plans went as we expected: we went to the hotel, we isolated ourselves, got ourselves PCR-tested, and then we went to our in-laws' house.
+Before traveling to Bandung, we visited my parents first for a quick catch-up. At that time, I hadn't seen my mother for like 3 months because I didn't have the best relationship with her (see ["Marriage and Emotional Affection"](https://imballinst.dev/blog/marriage-and-emotional-affection)). Again, thankfully no dramas were produced during that occasion. Our plans went as we expected: we went to the hotel, we isolated ourselves, got ourselves PCR-tested, and then we went to our in-laws' house.
 
 ### The storm
 

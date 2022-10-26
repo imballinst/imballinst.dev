@@ -1,8 +1,8 @@
 {
-  "name": "peepohappy",
+  "name": "imballinst.dev",
   "version": "2.0.0",
   "description": "Try Ajitiono's personal blog",
-  "repository": "git@github.com:imballinst/peepohappy.git",
+  "repository": "git@github.com:imballinst/imballinst.dev.git",
   "author": "Try Ajitiono <ballinst@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -19,6 +19,7 @@
     "astro": "1.5.0",
     "autoprefixer": "10.4.0",
     "cheerio": "1.0.0-rc.10",
+    "cssnano": "5.1.13",
     "fs-extra": "10.0.0",
     "netlify-cli": "9.4.0",
     "postcss": "8.4.18",
@@ -26,7 +27,7 @@
     "prettier-plugin-astro": "0.5.5",
     "remark": "14.0.2",
     "sharp": "0.29.3",
-    "tailwindcss": "3.0.7",
+    "tailwindcss": "3.2.1",
     "typescript": "4.5.4",
     "typescript-plugin-css-modules": "3.4.0",
     "vfile-reporter": "7.0.3",

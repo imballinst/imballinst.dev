@@ -5,7 +5,7 @@ publishDate: 2020-05-10T08:46:00.000Z
 githubLink: https://github.com/imballinst/minmax
 ---
 
-In Indonesia, sometimes there are "coupons" for promotions that have maximum amount of discounts. Because I am lazy, I built this `minmax` tool ([link to the app](https://minmax.peepohappy.id/)) that will help me calculate the expense "steps", along with their respecting discounts and total expense (after discount). For example, take this data:
+In Indonesia, sometimes there are "coupons" for promotions that have maximum amount of discounts. Because I am lazy, I built this `minmax` tool ([link to the app](https://minmax.imballinst.dev/)) that will help me calculate the expense "steps", along with their respecting discounts and total expense (after discount). For example, take this data:
 
 - **Minimum expense**: 40.000
 - **Discount percentage**: 35%

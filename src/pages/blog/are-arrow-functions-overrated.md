@@ -10,7 +10,7 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Hello, it's the tech side of me again! It has been awhile, my latest tech-related post here was ["JSDoc, a Stairway to TypeScript"](https://peepohappy.id/blog/jsdoc-stairway-to-typescript), which was almost 10 months ago? Anyway... in this post, I'm going to write something about [arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Hello, it's the tech side of me again! It has been awhile, my latest tech-related post here was ["JSDoc, a Stairway to TypeScript"](https://imballinst.dev/blog/jsdoc-stairway-to-typescript), which was almost 10 months ago? Anyway... in this post, I'm going to write something about [arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ## What is an arrow function expression?
 
