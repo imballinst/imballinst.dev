@@ -16,7 +16,11 @@ const {
   image = '/assets/common-images/imballinst-dev-metadata.jpg'
 } = Astro.props;
 
-const url = Astro.site?.href || '';
+let url = Astro.site?.href || '';
+if (url.endsWith('/')) {
+  url = url.slice(0, -1)
+}
+
 const env = import.meta.env.PUBLIC_ASTRO_ENV;
 let imageUrl = `${url}${image}`;
 
