@@ -24,15 +24,15 @@ Now, back to mental health. When something happens and it distresses you, you wi
 
 ## Let's talk about "damage"
 
-Let's gamify it a bit.
+I am going to gamify it a bit.
 
-- There is a distressing event
-- The event deals damage to us, depending on how hard it hits our weak point
-- The way we cope determines whether the damage stops at that or it will continue rolling
+- There is a distressing event.
+- The event deals damage to us, depending on how hard it hits our weak point.
+- The way we cope determines whether the damage stops at that or it will continue rolling.
 
 ![Our response to an event determines how long will we get affected by a "debuff". An event deals damage to us and leaves a debuff. What we do after determines whether we will add other debuffs or we clean ourselves from the debuff.](/assets/blog/are-you-healing/damage-control.png)
 
-At the time of writing, if someone forced me to meet my mother, I would be _slightly_ distressed (as I am still trying to keep my distance). This was not the case back then. I remember clearly a lot of times I was losing my mind. I would be less productive, I decided not to eat as I normally would, and it went up to a point where I thought it would be better if I intentionally made myself sick rather than having to meet my mother. This was _not_ a good way of coping for me. With that said, having experienced it firsthand, I would have understood if there are people who are currently going through the same period and still finding their balance.
+At the time of writing, if someone forced me to meet my mother, I would be _slightly_ distressed (as I am still trying to keep my distance from her). This was not the case back then. I remember clearly a lot of times I was losing my mind. I would be less productive, I decided not to eat as I normally would, and it went up to a point where I thought it would be better if I intentionally made myself sick rather than having to meet my mother. This was _not_ a good way of coping for me. With that said, having experienced it firsthand, I would have understood if there are people who are currently going through the same period and still finding their balance.
 
 Back to the topic of "damage", I consider the event of myself getting forced to meet my mother as damage. However, my coping approach made the damage bigger than it should have. I was _unintentionally_ [griefing](https://www.urbandictionary.com/define.php?term=griefing) myself. Or maybe I did that intentionally? One thing is for sure, I lost control of myself, which caused the damage to continue rolling.
 
@@ -49,7 +49,7 @@ I also disagree with the stereotype that going to therapy makes people more depr
 Secondly, I was a mess on January 2020. Visiting a therapist helped me discover (or re-discover) myself and get to know myself deeper. Sometimes, I found it a bit hard to understand myself because of my personal bias. However, when my therapist pointed that out to me, it all started to make sense. Previously, everything was only a dot representing an event, but after the session, I somewhat could see lines forming. I realized that the _"don't argue with mother and be a good child"_ advice from my father was causing all bad events happening in my parents' house to go unprocessed, which eventually would explode when other events "touched" it.
 
 :::
-One of the most important parts of my therapy sessions was looking back at the old scars and digging into unprocessed events. Tangled emotions were untangled.
+One of the most important parts of my therapy sessions was looking back at the old scars and digging into unprocessed events. From these sessions, untangled emotions were untangled.
 :::
 
 Back to the "ignoring as a coping mechanism", I want to emphasize that it's not necessarily bad. However, it might be good to process the event at the time it happened or at the end of the day it happened. This is so that the unprocessed emotions don't become a time bomb that will explode at any time in the future. Unearthing the unprocessed emotions may lead you to the answer, _"what caused me to react this/that way?"_.
