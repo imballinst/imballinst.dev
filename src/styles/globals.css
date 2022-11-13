@@ -61,8 +61,8 @@ header {
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-code[class*='language-'],
-pre[class*='language-'] {
+code[class='astro-code'],
+pre[class='astro-code'] {
   color: #abb2bf;
   background: none;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -81,53 +81,53 @@ pre[class*='language-'] {
   hyphens: none;
 }
 
-pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection,
-code[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection {
+pre[class='astro-code']::-moz-selection,
+pre[class='astro-code'] ::-moz-selection,
+code[class='astro-code']::-moz-selection,
+code[class='astro-code'] ::-moz-selection {
   text-shadow: none;
   background: #383e49;
 }
 
-pre[class*='language-']::selection,
-pre[class*='language-'] ::selection,
-code[class*='language-']::selection,
-code[class*='language-'] ::selection {
+pre[class='astro-code']::selection,
+pre[class='astro-code'] ::selection,
+code[class='astro-code']::selection,
+code[class='astro-code'] ::selection {
   text-shadow: none;
   background: #9aa2b1;
 }
 
 @media print {
-  code[class*='language-'],
-  pre[class*='language-'] {
+  code[class='astro-code'],
+  pre[class='astro-code'] {
     text-shadow: none;
   }
 }
 /* Code blocks */
-pre[class*='language-'] {
+pre[class='astro-code'] {
   padding: 1rem;
   margin: 0.5em 0;
   overflow: auto;
 }
 
-:not(pre) > code[class*='language-'],
-pre[class*='language-'] {
+:not(pre) > code[class='astro-code'],
+pre[class='astro-code'] {
   background: #282c34;
 }
 
 /* Inline code */
-:not(pre) > code[class*='language-'] {
+:not(pre) > code[class='astro-code'] {
   padding: 0.1rem;
   border-radius: 0.3rem;
   white-space: normal;
 }
 
 :not(.dark) code:not([class*='language']) {
-  @apply text-sm px-1 py-0.5 rounded text-red-600;
+  @apply text-sm rounded text-red-600;
 }
 
 .dark code:not([class*='language']) {
-  @apply text-sm px-1 py-0.5 rounded text-red-300;
+  @apply text-sm rounded text-red-300;
 }
 
 .token.comment,
@@ -167,7 +167,7 @@ pre[class*='language-'] {
 .token.operator,
 .token.entity,
 .token.url,
-.language-css .token.string,
+.astro-codecss .token.string,
 .style .token.string {
   color: #56b6c2;
 }

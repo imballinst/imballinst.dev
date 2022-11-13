@@ -24,7 +24,7 @@ const { title, publishDate, author, githubLink } = Astro.props;
 
     <Text as="span" colorScheme="gray" className="mx-2">&bull;</Text>
 
-    <FormattedDate {publishDate} />
+    <FormattedDate publishDate={publishDate} client:visible />
   </div>
 </header>
 

@@ -3,7 +3,12 @@ title: chrome-ext-slack-linkedin-users-download
 description: chrome-ext-slack-linkedin-users-download is a Chrome browser extensions to download Slack workspace users and LinkedIn connections.
 publishDate: 2020-12-17T10:49:00.000Z
 githubLink: https://github.com/imballinst/chrome-ext-slack-linkedin-users-download
+layout: '../../layouts/Project.astro'
 ---
+
+:::
+This project has been discontinued, since this is risky (especially on LinkedIn end) of causing one's account to be locked.
+:::
 
 `chrome-ext-slack-linkedin-users-download` is a tool that I built for an ex-colleague in my past job. Initially, the extension was only created to scrape the users of a Slack workspace. However, it later was expanded to also scrape LinkedIn connections when a profile is visited.
 

@@ -3,6 +3,7 @@ title: minmax
 description: minmax is a small app to calculate the required expense to get the maximum discount.
 publishDate: 2020-05-10T08:46:00.000Z
 githubLink: https://github.com/imballinst/minmax
+layout: '../../layouts/Project.astro'
 ---
 
 In Indonesia, sometimes there are "coupons" for promotions that have maximum amount of discounts. Because I am lazy, I built this `minmax` tool ([link to the app](https://minmax.imballinst.dev/)) that will help me calculate the expense "steps", along with their respecting discounts and total expense (after discount). For example, take this data:

@@ -3,6 +3,7 @@ title: todocoop
 description: todocoop is a collaborative to-do list app that requires no login.
 publishDate: 2021-08-1T05:27:00.000Z
 githubLink: https://github.com/imballinst/todocoop
+layout: '../../layouts/Project.astro'
 ---
 
 One of the issues that I saw from most collaborative to-do list applications was they require accounts. Although accounts are good for preserving history and all that, I think they are nuisance when I just want to create a short term to-do lists. With that, I initiated `todocoop`.

@@ -1,5 +1,7 @@
 ---
-import cheerio from 'cheerio';
+import { load, Node, Element } from 'cheerio';
+import { isTag, isText } from 'domhandler';
+
 import { Text } from '../components/Typography';
 import { FormattedDate } from '../components/Date';
 import { getImageProps } from '../helpers/image';
@@ -13,7 +15,7 @@ export interface Props {
   author: string;
 }
 
-function generateAnchorTag({ href, text }) {
+function generateAnchorTag({ href, text }: { href: string; text: string }) {
   let icon = '';
 
   if (href.includes('https://')) {
@@ -47,17 +49,17 @@ function generateAnchorTag({ href, text }) {
 
 const { image, imageAlt, imageCaption, title, publishDate, author } =
   Astro.props;
-const $ = cheerio.load(imageCaption);
+const $ = load(imageCaption);
 let htmlString = '';
 
 $('body').each((_i, el) => {
   for (const altChild of el.children) {
-    if (altChild.type === 'tag' && altChild.name === 'a') {
+    if (isTag(altChild)) {
       htmlString += generateAnchorTag({
         href: altChild.attribs.href,
         text: $(altChild).text()
       });
-    } else {
+    } else if (isText(altChild)) {
       htmlString += altChild.data;
     }
   }
@@ -72,24 +74,27 @@ const imgProps = {
   <Text as="h1" className="text-xl text-center my-0">{title}</Text>
 
   <div class="text-center">
-    <FormattedDate {publishDate} client:visible />
+    <FormattedDate publishDate={publishDate} client:visible />
   </div>
 
-  {imgProps.src ? (
-    <figure class="flex flex-col items-center justify-center mt-3 mb-4">
-      <a
-        href={imgProps.src}
-        target="_blank"
-        rel="noopener"
-        class="w-full border border-gray-200 dark:border-gray-600"
-      >
-        <img class="w-full max-h-[400px] object-cover" {...imgProps} />
-      </a>
-      <figcaption class="text-sm text-center mt-1 text-gray-600 dark:text-gray-400">
-        {htmlString}
-      </figcaption>
-    </figure>
-  ) : null}
+  {
+    imgProps.src ? (
+      <figure class="flex flex-col items-center justify-center mt-3 mb-4">
+        <a
+          href={imgProps.src}
+          target="_blank"
+          rel="noopener"
+          class="w-full border border-gray-200 dark:border-gray-600"
+        >
+          <img class="w-full max-h-[400px] object-cover" {...imgProps} />
+        </a>
+        <figcaption
+          class="text-sm text-center mt-1 text-gray-600 dark:text-gray-400"
+          set:html={htmlString}
+        />
+      </figure>
+    ) : null
+  }
 </header>
 
 <style>

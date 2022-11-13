@@ -3,6 +3,7 @@ title: how-long
 description: how-long is a project to store collection of events.
 publishDate: 2021-12-13T04:35:00.000Z
 githubLink: https://github.com/imballinst/how-long
+layout: '../../layouts/Project.astro'
 ---
 
 I built `how-long` with the initial motivation to track some of the issues in Indonesia, such as rape cases from police officers or nonsense from some politicians. However, I thought it would be good as well if it is used to track other stuff, such as ["How long until it is 2022?"](https://how-long.imballinst.dev/until/it-is/2022-in-indonesia/). I even tracked ["How long since Arsenal last won a match?"](https://how-long.imballinst.dev/since/arsenal/last-won-a-match/).
