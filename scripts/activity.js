@@ -2,7 +2,9 @@ const { Octokit } = require('@octokit/rest');
 const { writeFile } = require('fs-extra');
 const path = require('path');
 
-const octokit = new Octokit();
+const octokit = new Octokit({
+  auth: process.env.GITHUB_TOKEN 
+});
 
 (async () => {
   const response = await octokit.activity.listPublicEventsForUser({
