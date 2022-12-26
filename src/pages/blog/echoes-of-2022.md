@@ -39,15 +39,10 @@ Overthinking was also my theme of the last year. This year, I think I managed to
 
 See, that kind of overthinking kept me shackled. But this year, I fully removed that shackle by keeping my distance. Last year, I still gave her the chance to reach me out. However, this year, I totally cut off all means of communication with her. Sometimes I still asked my father how was my mother and I'd still pray for her health after my daily prayers, but these are my limits. My brain power is limited and it would be best for me to remove variables that might cause unproductive thoughts to go inside.
 
-## Regaining motivation
-
 ## 2023
 
-- Recovering burnout from last year
-- How FFXIV helps
-- Jobhunt in January/February, rejections
-- Getting offer from AccelByte in March
-- Less overthinking because of less variables
-- Regaining motivation
-- Thoughts on current workplace
-- What I'll try to aim in 2023
+Working in AccelByte has been a blast so far. I am not sure if this is still considered honeymoon effect (given that I'm still ~9 months here), but there are so many positives working here, I lost count. The people are great, the salary is good (for me, at least), and there are a lot of challenges to be solved (which in turn will help me grow).
+
+As of the time of writing, I am pretty happy on my current state. I regained my motivation in software engineering and I cut down communication with people who heavily drains my mental capacity. The latter part kinda affects me directly because when I am in a "vortex of thoughts", I just can't operate at all. Even playing games feels numb to me.
+
+In 2023, hopefully I will be able to keep them going and produce a lot more technical stuff, be it inside work or outside work. As long as I keep myself grounded and be mindful, [I'll be fine](https://www.thoughtco.com/daijoubu-simple-japanese-phrases-2028353).
