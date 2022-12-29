@@ -1,7 +1,7 @@
 ---
 title: Echoes of 2022
 description: Year-end post, as usual.
-publishDate: 2022-12-29T00:15:20.841Z
+publishDate: 2022-12-29T13:09:42.343Z
 image: /assets/blog/echoes-of-2022/blogpost-background.png
 imageAlt: An image with the text "Echoes of 2022" at the center, with other faded "2022" words all over the place.
 imageCaption: An image with the text "Echoes of 2022" at the center, with other faded "2022" words all over the place.
@@ -10,7 +10,7 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Here we are again, at the edge of the year. The other end. It felt like I just started 2022, and it's December 26th already, it's unbelievable.
+Here we are again, at the edge of the year. The other end. It felt like I just started 2022, and it's December 29th already, it's unbelievable.
 
 This time, last year, I was still on a career break. I remember the moment when I got up and started playing around 8-9 am and I had this one friend in-game who was also online. They asked me whether I would be going to work or not, but I told them that I was currently unemployed and was on a career break. At that time, it was still hard for me to continuously get motivated to be productive on a day-to-day basis.
 
