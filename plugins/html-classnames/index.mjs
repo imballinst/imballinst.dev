@@ -247,7 +247,7 @@ export default function htmlClassnamesPlugin() {
 // Function helpers.
 function modifyAnchorNode({ node }) {
   node.properties.class =
-    'text-teal-600 dark:text-teal-300 hover:underline break-all inline';
+    'text-teal-600 dark:text-teal-300 hover:underline break-words inline';
 
   if (
     node.properties.href.includes('https://') ||
