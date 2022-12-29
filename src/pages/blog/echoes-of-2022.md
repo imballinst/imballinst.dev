@@ -1,10 +1,10 @@
 ---
 title: Echoes of 2022
 description: Year end's post, as usual.
-publishDate: 2022-10-28T17:10:14.982Z
-image: /assets/blog/are-you-healing/are-you-healing.png
-imageAlt: An image containing a stick figure with lots of debuffs, trying to heal itself. It heals itself for 0.
-imageCaption: An image containing a stick figure with lots of debuffs, trying to heal itself. It heals itself for 0.
+publishDate: 2022-12-29T00:15:20.841Z
+image: /assets/blog/echoes-of-2022/blogpost-background.png
+imageAlt: An image with the text "Echoes of 2022" at the center, with other faded "2022" words all over the place.
+imageCaption: An image with the text "Echoes of 2022" at the center, with other faded "2022" words all over the place.
 tags: life
 visibility: public
 layout: '../../layouts/BlogPost.astro'
@@ -14,7 +14,7 @@ Here we are again, at the edge of the year. The other end. It felt like I just s
 
 This time, last year, I was still on a career break. I remember the moment where I got up and started playing around 8-9am and I had this one friend in-game who was also online. They asked me whether I would be going to work or not, but I told them that I was currently unemployed and was on a career break. At that time, it was still hard for me to continuously get motivated to be productive on a daily basis.
 
-<!-- Insert ffxiv Mare Lamentorum, Etheirys screenshot -->
+![Mare Lamentorum from Final Fantasy XIV.](/assets/blog/echoes-of-2022/ffxiv_12072021_183147_148.png)
 
 It might sound a bit cheesy, but FFXIV did help me get through that phase. I met and played together with new friends, which now looking back, I think it was shocking because I thought I could never open up to a new gaming circle anymore. But, I did at the end. On top of that, the latest expansion, [Endwalker](https://na.finalfantasyxiv.com/endwalker), was a fitting game for me to play last year. The theme of the expansion was ranging from despair to finding the meaning of life, crafted and wrapped beautifully.
 
@@ -32,7 +32,7 @@ My wife and I also visited our psychologist (again) around the midyear. Same the
 2. Marriage is merging two families with different cultures and habits. In my family that when there were "too many foods", my mother would scold whoever brought it, so I learned to buy food little by little whenever possible. My wife's family, on the other hand, is the opposite. When I bought some food (which I thought would be sufficient), turned out it didn't. Our psychologist explained this beautifully to us that fate is very unexpected: my wife, whose family is very flexible, got married to me, whose family is rigid, so that she could learn about structure whereas I could learn about flexibility.
 
 :::
-For readers who love their mothers and don't have a chance to tell them anymore, I'm sorry, I really am. The following paragraphs might really hurt you. If you wish to skip them, feel free to jump to the next section heading.
+For readers who love their mothers and don't have a chance to tell them anymore, I'm sorry, I really am. The following paragraphs might really hurt you. If you wish to skip them, feel free to jump to the next section.
 :::
 
 Overthinking was also my theme of the last year. This year, I think I managed to do it better because I simply removed the variables which caused me to overthink. I used to feel guilty for my mother's feelings. This is because, you know, people in my religion say that [heaven is below mothers' feet](https://www.abuaminaelias.com/dailyhadithonline/2012/07/19/jannah-is-under-her-feet/), which is sometimes "misused" as a weapon for mothers to defend themselves. So, I _thought_ if my mother was angry, then I would not go to paradise. But then, she would most of the times aggressive with people who didn't share the same thought as hers. Does that mean I will never be able to go to paradise? I guess. Maybe, it's my fate to go to hell.

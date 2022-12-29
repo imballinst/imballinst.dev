@@ -52,7 +52,7 @@ export default function htmlClassnamesPlugin() {
             firstChild.value?.startsWith(':::') &&
             lastChild.value?.endsWith(':::')
           ) {
-            hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} text-center italic py-2 mb-8 last:mb-0 border-y border-gray-200 dark:border-gray-600`;
+            hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} text-center italic py-2 mt-3 mb-4 first:mt-0 last:mb-0 border-y border-gray-200 dark:border-gray-600`;
             firstChild.value = firstChild.value.slice(3);
             lastChild.value = lastChild.value.slice(0, -3);
           }
