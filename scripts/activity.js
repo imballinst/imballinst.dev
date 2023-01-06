@@ -3,7 +3,7 @@ const { writeFile } = require('fs-extra');
 const path = require('path');
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN 
+  auth: process.env.GITHUB_TOKEN
 });
 
 (async () => {
@@ -26,18 +26,23 @@ const octokit = new Octokit({
 
   for (const repoName of repoNames) {
     const [owner, repo] = repoName.split('/');
-    const repoResponse = await octokit.repos.get({
-      owner,
-      repo
-    });
 
-    activities[repo] = {
-      name: repo,
-      url: repoResponse.data.html_url,
-      description: repoResponse.data.description,
-      lastUpdate: response.data.find((el) => el.repo.name === repoName)
-        .created_at
-    };
+    try {
+      const repoResponse = await octokit.repos.get({
+        owner,
+        repo
+      });
+
+      activities[repo] = {
+        name: repo,
+        url: repoResponse.data.html_url,
+        description: repoResponse.data.description,
+        lastUpdate: response.data.find((el) => el.repo.name === repoName)
+          .created_at
+      };
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   await writeFile(
