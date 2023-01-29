@@ -41,7 +41,7 @@ How cool is that? I think a lot of us (if not all) have seen this kind of code b
 </ProviderA>
 ```
 
-Now, borrowing the example code from nanostores with React above, we could do this instead:
+Now, borrowing the example code from nanostores with React above, we could do this instead with our DIY-store:
 
 ```jsx
 function ComponentA() {
@@ -115,10 +115,8 @@ function useStore<State>(store: StoreContent<State>) {
     return () => {
       const idx = store.subscribers.findIndex((i) => i === listener);
       if (idx > -1) {
-        const newsubscribers = store.subscribers
-          .slice(0, idx)
-          .concat(store.subscribers.slice(idx + 1));
-        store.subscribers = newsubscribers;
+        const newSubscribers = store.subscribers.splice(idx)
+        store.subscribers = newSubscribers;
       }
     };
   }, [store]);
@@ -131,8 +129,6 @@ function useStore<State>(store: StoreContent<State>) {
       for (let i = 0; i < store.subscribers.length; i++) {
         store.subscribers[i].setState(newState);
       }
-
-      setState(store.state);
     },
     [store]
   );
