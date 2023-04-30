@@ -45,7 +45,7 @@ So, yeah, after that internship, I upped my web development skills a little bit.
 
 I feel like I have told this story a lot of times before, but I almost had a paid internship with a startup based in Jakarta. However, back then I was still in love with Bandung due to me having so much freedom there, especially since I could play games with my own internet and wouldn't get random lags. I turned down the internship in Jakarta while trying my best to get an internship in Bandung. Desperately.
 
-Fate would have it that... I got an internship as a front-end engineer at [eFishery](https://efishery.com/en/), which was based in Bandung. It was not paid, but I took it nonetheless because of my reason above. Anyway, I learned a lot there and my mentor there was super good (and I'm forever grateful). At the end of my internship, I got offered a part-time job, which I accepted and I converted to full-time after I graduated on October 2016.
+Fate would have it that... I got an internship as a frontend engineer at [eFishery](https://efishery.com/en/), which was based in Bandung. It was not paid, but I took it nonetheless because of my reason above. Anyway, I learned a lot there and my mentor there was super good (and I'm forever grateful). At the end of my internship, I got offered a part-time job, which I accepted and I converted to full-time after I graduated on October 2016.
 
 And that's the end of my college chapter. What's the lesson here? I think if you don't have work/internship experience or shining academic scores yet you want to do a breakthrough, try learning that area and combine it with the thing that you love. For example, back then I was really in love with Dota 2 tournaments. So, I made these 2 repositories:
 
