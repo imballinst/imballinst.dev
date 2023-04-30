@@ -16,7 +16,7 @@ Hey folks, hope you are doing well! In this post, I am going to share a bit abou
 
 Since the parts below are pretty long, here is the summary:
 
-1. **Be curious**: don't be satisfied without knowing the root cause if you have no more pressing matters.
+1. **Be curious**: don't be satisfied without knowing the root cause (provided that you have the time to investigate it further).
 2. **Be proactive**: don't let your manager chase you, but instead you should feed your manager with information.
 3. **Build portfolio from things that you are interested**: one of the most questions I often got when people just started web development was, "Where do I start?" Well, I think we can start by combining web development to create something that we love. In my case, I made small websites about Dota 2 tournaments and my team's landing page.
 4. **Expand knowledge outside the frontend area**: added value can be big when so that we could stand out to other candidates when we are applying for a position. Every frontend engineer probably knows about HTML/CSS/JavaScript in the browser, so it's a good idea as well to learn about other things, such as Node.js®, CI/CD, Docker, Kubernetes, npm, or even simple things like writing documentation!
@@ -31,7 +31,7 @@ I went on the path of informatics engineering during my college times. Before th
 
 Anyway, I loved gaming and I spent a lot of time in front of computers, so informatics engineering should fit for me, right? Right......?
 
-[!Future me to the past me: "It's not all fun and games".](/assets/blog/leveling-up-as-frontend-engineer/how-do-we-tell-him-meme.jpg)
+![Future me to the past me: "It's not all fun and games".](/assets/blog/leveling-up-as-frontend-engineer/how-do-we-tell-him-meme.jpg)
 
 ## College
 
