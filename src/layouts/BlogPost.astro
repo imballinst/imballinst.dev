@@ -4,9 +4,8 @@ import BlogPostHeader from '../components/BlogPostHeader.astro';
 
 import { Text } from '../components/Typography';
 import { Link } from '../components/Links';
-import { Button } from '../components/Button';
 import { FeedbackModal } from '../components/Modal';
-import { FeedbackIcon, EditIcon } from '../components/Icons';
+import { EditIcon } from '../components/Icons';
 
 const { content = {} } = Astro.props;
 const {
@@ -19,7 +18,11 @@ const {
   imageCaption
 } = content;
 
-const slug = Astro.url.pathname;
+let slug = Astro.url.pathname;
+if (slug.endsWith('/')) {
+  slug = slug.slice(0, -1);
+}
+
 const editPage = `https://github.com/imballinst/imballinst.dev/edit/main/src/pages${slug}.md`;
 ---
 
