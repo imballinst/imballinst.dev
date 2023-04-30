@@ -10,7 +10,7 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Hey folks, hope you are doing well! In this post, I am going to share a bit about my journey as a frontend engineer, where now I am a Senior Software Engineer 1 at [AccelByte](https://accelbyte.io). Bear in mind that levels vary between organizations, so there's a chance that my actual level might be lower than yours. With that out of the way, [listen to my story](https://www.youtube.com/watch?v=d7M1_gjqqws&pp=ygUWZmZ4IGxpc3RlbiB0byBteSBzdG9yeQ%3D%3D) (yeah I'm a bit crazy to Final Fantasy X at the moment).
+Hey folks, hope you are doing well! In this post, I am going to share a bit about my journey as a frontend engineer, where now I am a Senior Software Engineer 1 at [AccelByte](https://accelbyte.io). Bear in mind that levels vary between organizations, so there's a chance that my actual level might be lower than yours.
 
 ## TL;DR
 
@@ -22,6 +22,8 @@ Since the parts below are pretty long, here is the summary:
 4. **Expand knowledge outside the frontend area**: added value can be big when so that we could stand out to other candidates when we are applying for a position. Every frontend engineer probably knows about HTML/CSS/JavaScript in the browser, so it's a good idea as well to learn about other things, such as Node.js®, CI/CD, Docker, Kubernetes, npm, or even simple things like writing documentation!
 5. **Practice communication**: this covers both asynchronous communication and synchronous communication. Better asynchronous communication reduces the need for synchronous communication, and better synchronous communication reduces the time spent between the stakeholders.
 6. **Build, build, build**: there are no better ways to learn something than to put it into practice. Back then I created my blog using Gatsby, then I tried migrating to Astro. These experiences can be useful be it in the workplace or an interview.
+
+With that out of the way, [listen to my story](https://www.youtube.com/watch?v=d7M1_gjqqws&pp=ygUWZmZ4IGxpc3RlbiB0byBteSBzdG9yeQ%3D%3D) (yeah I'm a bit crazy to Final Fantasy X at the moment).
 
 ## Pre-college
 
