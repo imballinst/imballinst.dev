@@ -91,15 +91,15 @@ By the end of my time at Tetrate, I was a Frontend Engineer.
 I started working at AccelByte in March 2022. It seemed like a dream at first, but almost everything that I had learned previously was applicable here:
 
 - **Building and experimenting with various tools**: I remember during my AccelByte interview, the interviewee asked me about Gatsby. Since I used Gatsby for my previous blog site, I could easily explain to them my experience in using Gatsby and why I switched to Astro.
-- **Documentation**: Although AccelByte is based in Yogyakarta (Indonesia), it's kinda a distributed company as well since there are people from all over the globe. So, that covers PR descriptions as well as internal articles.
+- **Documentation**: Although AccelByte is based in Yogyakarta (Indonesia), it's kinda a distributed company as well since there are people from all over the globe. So, that covers pull request descriptions as well as internal articles. By doing them, I'm hoping to reduce the need of someone asking me about the thing that I am doing. The clearer I write, then the more understanding the readers will have. Everything will be self service.
 - **DevOps stuff**: I had the chance to learn about Kubernetes before at Tetrate and that knowledge is very useful at AccelByte. I ended up writing a guide for other engineers to do various `kubectl` commands so that they could try it on their own.
 - **CI stuff**: With my prior knowledge in CI/CD, I am pretty comfortable with scripting in CI. It definitely helps a lot in case the DevOps team is a bit short on resources, so I could help lift their burden a bit.
-- **Communicating in English**: Asynchronous and synchronous communication. Two things that I learned a lot when working at Tetrate, when doing my Masters, and when working on open source stuff (only asynchronous, though).
-- **npm related stuff**: This includes publishing and maintaining npm dependencies. Since I still maintain my datatable library, I could share my knowledge about semantic versioning and some bits about module types (UMD/CJS/ESM) with my colleagues.
+- **Communicating in English**: Asynchronous and synchronous communication. Two things that I learned a lot when working at Tetrate, when doing my Masters, and when working on open source stuff (only asynchronous, though). These definitely make me easier going through my daily tasks.
+- **npm related stuff**: This includes publishing and maintaining npm dependencies. Since I still maintain my datatable library, I could share my knowledge about semantic versioning and some bits about module types (UMD/CJS/ESM) with my colleagues. This week (at the time of writing), this knowledge even helped me to fix an urgent task.
 
 AccelByte appreciates curiosity and proactivity _a lot_. One of the feedback that I got after my probation was that my team lead didn't have to always monitor me and they could trust me in what I did, so that was really awesome to hear. I wouldn't have known that these 2 traits I developed during my eFishery internship times would be a major factor in my career now.
 
-I have been working for more than 1 year now at AccelByte. If there is one thing I had never done before, it was probably I now share things more frequently. I want to help my colleagues grow together with me. That, and now I feel like I am more comfortable with giving people feedback.
+I have been working for more than 1 year now at AccelByte. If there is one thing I have never done before, it was probably I now share things more frequently. I want to help my colleagues grow together with me. That, and now I feel like I am more comfortable with giving people feedback.
 
 At the time of writing, I am a Senior Software Engineer 1. I know it's not much since it's my 7th year in web development. But, considering my shaky start to the journey, I think it's enough and I'm hungry for more!
 
