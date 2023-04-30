@@ -14,9 +14,8 @@ async function main() {
     .use(htmlClassnamesPlugin)
     .process(
       `
-:::
-DISCLAIMER: [@matahatigraphy](https://www.instagram.com/matahatigraphy/?hl=en) was our wedding photographer. They gave us the raw and the edited pictures, but for this post, I can't find images that I wanted from the latter. Therefore, I took out a few pictures from the former and tweaked them myself. If you have a keen eye for photography stuff, I'm sorry if the following pictures hurt your eyes!
-:::
+- [Indonesian Dota 2 Tournaments List](https://github.com/imballinst/d2l): This was a website that "scrapes" from Ligagame forums, where people usually posted tournaments and events. I built it with jQuery, Bootstrap, and Angular.
+- [RTD Dota 2 Team Profile](https://github.com/imballinst/rtdota2): This was a website that I built for fun, so on top of the Facebook fan page (back then), my team could have a somewhat poor man's landing page.
 `.trim()
     );
 

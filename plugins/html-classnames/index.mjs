@@ -95,6 +95,18 @@ export default function htmlClassnamesPlugin() {
 
         for (const el of hast.children) {
           el.properties = { class: 'pl-1' };
+
+          if (el.children) {
+            for (const listChild of el.children) {
+              if (
+                listChild.tagName === 'a' &&
+                listChild.children?.length === 1 &&
+                listChild.children?.[0].type === 'text'
+              ) {
+                modifyAnchorNode({ node: listChild });
+              }
+            }
+          }
         }
 
         const html = toHtml(hast);
