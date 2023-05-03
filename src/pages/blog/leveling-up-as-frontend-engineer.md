@@ -52,19 +52,19 @@ And that's the end of my college chapter. What's the lesson here? I think if you
 - [Indonesian Dota 2 Tournaments List](https://github.com/imballinst/d2l): This was a website that "scrapes" from Ligagame forums, where people usually posted tournaments and events. I built it with jQuery, Bootstrap, and Angular.
 - [RTD Dota 2 Team Profile](https://github.com/imballinst/rtdota2): This was a website that I built for fun, so on top of the Facebook fan page (back then), my team could have a somewhat poor man's landing page.
 
-Sure, the quality may not be that good, but they were a good experience for me and I could add them to my portfolio! In fact, I believe I added these 2 websites to my CV when I applied for an internship at eFishery.
+Sure, the quality may not be that good, but they were a good experience for me and I could add them to my portfolio! In fact, I believe I added these 2 websites to my CV when I applied for the internship at eFishery.
 
 There are 2 things that I encourage "fresh" frontend engineers to do: **curiosity** and **proactivity**. Being curious is very important because if we get stuck or find a problem, we don't want to "just let it be". It's best if we can try to find the root cause. That way, we can learn from it and better, we can share it with others. As for proactivity, it's important in the sense of helping our manager so they don't need to constantly monitor us. We feed them information instead of them chasing us, which helps in creating a faster feedback loop.
 
 ## Post-college: eFishery
 
-After I graduated in October 2016, I converted to full-time frontend engineer at eFishery. I worked there until June 2018. During that time, I learned a lot about Node.js®, CI/CD, Docker, npm, and even simple things like writing documentation! stuff (the server-side thingy), CI/CD, bundlers (we used Webpack), React, and npm.
+After I graduated in October 2016, I converted to full-time frontend engineer at eFishery. I worked there until June 2018. During that time, I learned a lot about Node.js® stuff (the server-side thingy), CI/CD, bundlers (we used Webpack), React, npm, and even simple things like writing documentation!
 
 Back then, I didn't realize that me learning CI/CD at eFishery would have a big impact on my career development. Initially, we were required to build the UI assets locally before we pushed them to the repository. In other words, the static files were stored in Git. This wasn't really efficient in terms of time since the build itself could take 1-2 minutes. At some point, I tried to develop a mechanism (utilizing [Git bare repository](https://www.geeksforgeeks.org/bare-repositories-in-git)) that would allow the CI to synchronize the static assets to the server, and lo and behold, it worked and we didn't have to build before push anymore.
 
 The last one was perhaps the most important for me until now. So, back then I published [react-bs-datatable](https://github.com/imballinst/react-bs-datatable), which was used in our internal dashboard. Until now, I have learned about semantic versioning, documentation, as well as open source community where I collaborated with people who I have never met before (e.g. folks who submit feedback through GitHub issues). Some of them were also being so kind by sponsoring me on GitHub.
 
-With the open-source experience that I had from my library, I contributed to some other open-source repositories as well on GitHub, the biggest one I think was [date-fns](https://github.com/date-fns/date-fns/pulls?q=is%3Apr+author%3A%40me+is%3Aclosed), where I helped create some standard format functions. On top of that, with the publishing experience, I learned about JS module types, such as UMD, CJS, and ESM.
+With the open-source experience that I had from my library, I contributed to some other open-source repositories as well on GitHub, the biggest one I think was [date-fns](https://github.com/date-fns/date-fns/pulls?q=is%3Apr+author%3Aimballinst+is%3Aclosed), where I helped create some standard format functions. On top of that, with the publishing experience, I learned about JS module types, such as UMD, CJS, and ESM.
 
 By the end of my time at eFishery, I was a Frontend Engineer.
 
@@ -103,4 +103,4 @@ I have been working for more than 1 year now at AccelByte. If there is one thing
 
 At the time of writing, I am a Senior Software Engineer 1. I know it's not much since it's my 7th year in web development. But, considering my shaky start to the journey, I think it's enough and I'm hungry for more!
 
-Hopefully, this post is useful and as always, feel free to send me a message if you have any feedback!
+Hopefully, this post is useful and as always, feel free to send me a message if you have any feedback. Take care!
