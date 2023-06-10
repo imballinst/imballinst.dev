@@ -70,7 +70,7 @@ By the end of my time at eFishery, I was a Frontend Engineer.
 
 ## Post-college: Tetrate
 
-I started working remotely at [Tetrate](https://tetrate.io) in September 2018, where I was still doing my Master's in Melbourne, Australia. It was a part-time role, since, well, I was still studying and I didn't want to screw up (I almost did). I worked part-time at Tetrate until December 2019 and then I converted to full-time until October 2022.
+I started working remotely at [Tetrate](https://tetrate.io) in September 2018, where I was still doing my Master's in Melbourne, Australia. It was a part-time role, since, well, I was still studying and I didn't want to screw up (I almost did). I worked part-time at Tetrate until December 2019 and then I converted to full-time until October 2021.
 
 I joined Tetrate without really knowing an inch about the Cloud Native area. I didn't know a thing about Kubernetes, I didn't know a thing about Envoy, I didn't know a thing about Istio, and all that. It was all alien to me.
 
