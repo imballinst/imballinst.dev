@@ -13,6 +13,7 @@ jobs:
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
       FAUNA_SECRET: ${{ secrets.FAUNA_SECRET }}
       GO_VERSION: ${{ secrets.GO_VERSION }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PUBLIC_INJECT_ANALYTICS: true
     steps:
       - name: Cancel Previous Runs
