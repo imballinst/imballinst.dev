@@ -82,22 +82,22 @@ Lastly, as I mentioned above, Tetrate was a distributed company (at the time of 
 
 Folks at Tetrate were amazing professionals. When I just started, I was very hesitant in communicating in public channels since, you know, I felt inferior to them. However, as time went on, I realized that I had to be more outspoken so I could stand on my own two feet. I _think_ I did that part okay and I have felt the positive effect since. That was perhaps my second-best learning at Tetrate.
 
-I _probably_ could have learned to give feedback to my colleagues directly. I had this bad habit back then where I hesitated from giving feedback to people directly that I needed help from my colleague to "bridge" the feedback for me. I realize now that this was counterproductive. There is nothing wrong in giving feedback, as well as we keep the tone friendly. No need to feel guilty or whatever.
+I _probably_ could have learned to give feedback to my colleagues directly. I had this bad habit back then where I hesitated from giving feedback to people directly to the point I needed help from my colleague to "bridge" my feedback to them. I realize now that this was counterproductive. There is nothing wrong in giving feedback, as long as we keep the tone friendly. No need to feel guilty or whatever.
 
 By the end of my time at Tetrate, I was a Frontend Engineer.
 
 ## Post-college: AccelByte
 
-I started working at AccelByte in March 2022. It seemed like a dream at first, but almost everything that I had learned previously was applicable here:
+I started working for AccelByte in March 2022. It seemed like a dream at first, but almost everything that I had learned previously was applicable here:
 
 - **Building and experimenting with various tools**: I remember during my AccelByte interview, the interviewee asked me about Gatsby. Since I used Gatsby for my previous blog site, I could easily explain to them my experience in using Gatsby and why I switched to Astro.
-- **Documentation**: Although AccelByte is based in Yogyakarta (Indonesia), it's kinda a distributed company as well since there are people from all over the globe. So, that covers pull request descriptions as well as internal articles. By doing them, I'm hoping to reduce the need of someone asking me about the thing that I am doing. The clearer I write, then the more understanding the readers will have. Everything will be self service.
-- **DevOps stuff**: I had the chance to learn about Kubernetes before at Tetrate and that knowledge is very useful at AccelByte. I ended up writing a guide for other engineers to do various `kubectl` commands so that they could try it on their own.
+- **Documentation**: Although AccelByte is based in Yogyakarta (Indonesia), it's kinda a distributed company as well since there are people from all over the globe. So, I wrote sufficient pull request descriptions and internal articles. By doing them, I'm hoping to increase clarity on the work that I am doing. The clearer I write, then the more understanding the readers will have. Everything will be self service.
+- **DevOps stuff**: I had the chance to learn about Kubernetes before at Tetrate and that knowledge is very useful at AccelByte. I ended up writing a guide for other frontend engineers to do various `kubectl` commands so that they could try it on their own.
 - **CI stuff**: With my prior knowledge in CI/CD, I am pretty comfortable with scripting in CI. It definitely helps a lot in case the DevOps team is a bit short on resources, so I could help lift their burden a bit.
-- **Communicating in English**: Asynchronous and synchronous communication. Two things that I learned a lot when working at Tetrate, when doing my Masters, and when working on open source stuff (only asynchronous, though). These definitely make me easier going through my daily tasks.
+- **Communicating in English**: Asynchronous and synchronous communication. Two things that I learned a lot when working at Tetrate, when doing my Masters, and when working on open source stuff (only asynchronous, though). These definitely play a part in making my daily tasks easier.
 - **npm related stuff**: This includes publishing and maintaining npm dependencies. Since I still maintain my datatable library, I could share my knowledge about semantic versioning and some bits about module types (UMD/CJS/ESM) with my colleagues. This week (at the time of writing), this knowledge even helped me to fix an urgent task.
 
-AccelByte appreciates curiosity and proactivity _a lot_. One of the feedback that I got after my probation was that my team lead didn't have to always monitor me and they could trust me in what I did, so that was really awesome to hear. I wouldn't have known that these 2 traits I developed during my eFishery internship times would be a major factor in my career now.
+AccelByte appreciates curiosity and proactivity _a lot_. One of the feedback that I got after my probation was that my team lead didn't have to always monitor me and they could trust me in what I did, so that was really awesome to hear. I wouldn't have known that these 2 traits I developed during eFishery internship would be a major factor in my career now.
 
 I have been working for more than 1 year now at AccelByte. If there is one thing I have never done before, it was probably I now share things more frequently. I want to help my colleagues grow together with me. That, and now I feel like I am more comfortable with giving people feedback.
 
