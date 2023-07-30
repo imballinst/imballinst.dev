@@ -1,3 +1,4 @@
+// @ts-check
 import { toString } from "mdast-util-to-string";
 
 import { toHast } from "mdast-util-to-hast";
@@ -104,6 +105,12 @@ export default function htmlClassnamesPlugin() {
                 listChild.children?.[0].type === "text"
               ) {
                 modifyAnchorNode({ node: listChild });
+              } else if (
+                listChild.tagName === "code" &&
+                listChild.children?.length === 1 &&
+                listChild.children?.[0].type === "text"
+              ) {
+                listChild.children[0].value = `\`${listChild.children[0].value}\``;
               }
             }
           }
