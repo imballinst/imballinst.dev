@@ -3,8 +3,8 @@ title: Thoughts on Contributing to Open Source Projects
 description: In this post, I will share what I gained from my small steps in contributing to open source projects.
 publishDate: 2023-07-30T14:11:48.089Z
 image: /assets/blog/benefits-contributing-open-source/background-benefits-contributing-open-source.png
-imageAlt: An image with the text "Thoughts on Contributing to Open Source Projects" at the center.
-imageCaption: An image with the text "Thoughts on Contributing to Open Source Projects" at the center.
+imageAlt: An image with 3 texts, Issues, Pull Requests, Discussions, each linked with an arrow towards a Repository.
+imageCaption: An image with 3 texts, Issues, Pull Requests, Discussions, each linked with an arrow towards a Repository.
 tags: software engineering
 visibility: public
 layout: '../../layouts/BlogPost.astro'
