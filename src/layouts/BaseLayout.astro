@@ -47,7 +47,7 @@ const SOCIAL_LINKS = [
     title: 'GitHub'
   },
   {
-    href: 'https://twitter.com/Ajiballinst',
+    href: 'https://twitter.com/imballinst',
     title: 'Twitter'
   },
   {
@@ -110,7 +110,7 @@ const CURRENT_YEAR = new Date().getFullYear();
         <div class="text-center text-xs mt-1">
           {
             SOCIAL_LINKS.map((social) => (
-              <ComponentLink href={social.href} className="px-0.5" isExternal>
+              <ComponentLink href={social.href} className="px-0.5">
                 {social.title}
               </ComponentLink>
             ))
