@@ -26,6 +26,7 @@
   },
   "packageManager": "yarn@3.6.4",
   "devDependencies": {
+    "@astrojs/check": "0.2.1",
     "@octokit/rest": "20.0.2",
     "@types/node": "20.8.9",
     "remark": "15.0.1",
