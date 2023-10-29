@@ -1,0 +1,52 @@
+.card-text > p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.featured-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+html:not(.dark) .card-detail {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 90%,
+    rgba(255, 255, 255, 0)
+  );
+}
+
+@media (max-width: 1024px) {
+  html:not(.dark) .card-detail {
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 0)
+    );
+  }
+}
+
+html.dark .card-detail {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@media (max-width: 1024px) {
+  html.dark .card-detail {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+}

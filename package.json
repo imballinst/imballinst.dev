@@ -7,12 +7,22 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prebuild": "node scripts/activity.mjs",
+    "postbuild": "node scripts/optimize-image/sharp.js && cp _redirects dist/_redirects"
   },
   "dependencies": {
     "@astrojs/preact": "^3.0.1",
+    "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.4.0",
-    "preact": "^10.6.5"
+    "preact": "^10.6.5",
+    "tailwindcss": "^3.0.24"
   },
-  "packageManager": "yarn@3.6.4"
+  "packageManager": "yarn@3.6.4",
+  "devDependencies": {
+    "@octokit/rest": "20.0.2",
+    "@types/node": "20.8.9",
+    "remark": "15.0.1",
+    "remark-gfm": "4.0.0"
+  }
 }

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Text } from '../components/Typography';
+import { Card } from '../components/Card';
+
+let allProjects = await Astro.glob('./projects/*.md');
+allProjects = allProjects.sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
+);
+---
+
+<BaseLayout
+  title="Projects"
+  description="List of software projects that I contributed to or built."
+  currentMenu="/projects"
+>
+  <Text as="h1" className="mb-4">Projects</Text>
+
+  <ul class="grid grid-cols-1 gap-8">
+    {
+      allProjects.map((project) => (
+        <li>
+          <Card
+            titleHeadingElement="h2"
+            title={project.frontmatter.title}
+            date={project.frontmatter.publishDate}
+            text={project.frontmatter.description}
+            href={project.url}
+            className="h-full"
+          />
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

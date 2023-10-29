@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Text } from '../components/Typography';
+import { Card } from '../components/Card';
+
+let allPosts = await Astro.glob('./blog/*.md');
+allPosts = allPosts
+  .filter((p) => p.frontmatter.visibility === 'public')
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
+  );
+---
+
+<BaseLayout
+  title="Blog"
+  description="List of blog posts written by me."
+  currentMenu="/blog"
+>
+  <Text as="h1" className="mb-4">Blog</Text>
+
+  <ul class="grid grid-cols-1 gap-8">
+    {
+      allPosts.map((post, idx) => (
+        <li>
+          <Card
+            titleHeadingElement="h2"
+            title={post.frontmatter.title}
+            date={post.frontmatter.publishDate}
+            text={post.frontmatter.description}
+            img={post.frontmatter.image}
+            imgAlt={post.frontmatter.imageAlt}
+            href={post.url}
+            className="h-full"
+          />
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
