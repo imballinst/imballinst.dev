@@ -1,42 +1,15 @@
 {
-  "name": "imballinst.dev",
-  "version": "2.0.0",
-  "description": "Try Ajitiono's personal blog",
-  "repository": "git@github.com:imballinst/imballinst.dev.git",
-  "author": "Try Ajitiono <ballinst@gmail.com>",
-  "license": "MIT",
+  "name": "new-site",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "node scripts/activity.js",
-    "build": "PUBLIC_ASTRO_ENV=production astro build && yarn go:build",
-    "go:build": "cd netlify/functions/comments-go && GOOS=linux GOARCH=amd64 go build -o ../comments comments.go",
-    "postbuild": "node scripts/optimize-image/sharp.js && cp _redirects dist/_redirects",
-    "preview": "astro preview"
-  },
-  "devDependencies": {
-    "@octokit/rest": "18.12.0",
-    "astro": "1.5.0",
-    "autoprefixer": "10.4.0",
-    "cheerio": "1.0.0-rc.10",
-    "cssnano": "5.1.13",
-    "fs-extra": "10.0.0",
-    "netlify-cli": "9.4.0",
-    "postcss": "8.4.18",
-    "prettier": "2.4.1",
-    "prettier-plugin-astro": "0.5.5",
-    "remark": "14.0.2",
-    "sharp": "0.29.3",
-    "tailwindcss": "3.2.1",
-    "typescript": "4.5.4",
-    "typescript-plugin-css-modules": "3.4.0",
-    "vfile-reporter": "7.0.3",
-    "yaml": "1.10.2"
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/preact": "1.2.0",
-    "@tailwindcss/forms": "0.4.0",
-    "date-fns": "2.27.0",
-    "preact": "10.11.2"
+    "astro": "^3.4.0"
   }
 }

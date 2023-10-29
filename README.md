@@ -1,44 +1,54 @@
-# imballinst.dev
+# Astro Starter Kit: Basics
 
-This is my personal site, mostly for curating blog posts and projects. This project is built using [Astro](https://astro.build) as the static site builder, [tailwindcss](https://tailwindcss.com) for the CSS utility classes, and some sprinkles of scripts for the prebuild and postbuild steps.
-
-## Development
-
-### Prerequisites
-
-1. [Yarn](https://yarnpkg.com/) Classic (v1)
-2. [Node.js®](https://nodejs.org/) LTS (at least v14)
-
-After that, on root project, do this to install the dependencies:
-
-```bash
-yarn
+```sh
+npm create astro@latest -- --template basics
 ```
 
-### Running the server
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-```bash
-# Get the list of activities (the JSON file is ignored).
-yarn prebuild
-# Run the dev server.
-yarn dev
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-Then, go to http://localhost:3000 to open the site.
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-### Remark plugins
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-This site uses 2 custom remark plugins:
+Any static assets, like images, can be placed in the `public/` directory.
 
-1. [`html-classnames`](plugins/html-classnames): this is the plugin to add utility classes to the resulting HTML tags. It reads the MDAST (Markdown Abstract Syntax Tree), converts it to HAST (Hypertext Abstract Syntax Tree), then converts it to raw HTML string. This **should be** the last plugin in the pipeline, because it will exhaust the MDAST.
-2. [`image`](plugins/image): this is the plugin to add utility classes to images (beyond the main image of a blog post), as well as adding captions below them. On top of that, this plugin also adds `srcset` and `sizes` attributes to the `img` tag, hence it will allow for more responsive images and better performance. Although this plugin exhausts the MDAST as well, it will only exhaust the MDAST related to images, so normal paragraphs are ignored.
+## 🧞 Commands
 
-To test the plugins, do `node plugins/test.mjs` (adjust the contents of the `test.mjs` accordingly).
+All commands are run from the root of the project, from a terminal:
 
-## Contributing
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-Feel free to submit pull requests about anything—be it for typo fixes or improvements. If you want to submit improvement pull request, please also describe the parts that are improved (e.g. before and after state). Thank you!
+## 👀 Want to learn more?
 
-## License
-
-MIT
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
