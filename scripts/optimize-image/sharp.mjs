@@ -1,10 +1,10 @@
-const sharp = require('sharp');
-const fs = require('fs/promises');
-const path = require('path');
+import sharp from 'sharp';
+import fs from 'fs/promises';
+import path from 'path';
 
-const { getAllFileSizes } = require('./file-size');
+import { getAllFileSizes } from './file-size.mjs';
 
-const PATH_TO_PUBLIC_ASSETS = path.join(__dirname, '../../', 'public/assets');
+const PATH_TO_PUBLIC_ASSETS = path.join(process.cwd(), 'public/assets');
 
 main();
 

@@ -1,9 +1,7 @@
-const path = require('path');
-const fs = require('fs/promises');
+import path from 'path';
+import fs from 'fs/promises';
 
-module.exports = { getAllFileSizes };
-
-async function getAllFileSizes(pathToPublicAssets) {
+export async function getAllFileSizes(pathToPublicAssets) {
   const distPublicAssets = pathToPublicAssets.replace(/\/public\//, '/dist/');
   const files = await recursivelyGetAllFileSizes(
     pathToPublicAssets,
