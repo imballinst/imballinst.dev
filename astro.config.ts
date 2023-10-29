@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import preact from '@astrojs/preact';
-import remarkGfm from 'remark-gfm';
 import tailwind from '@astrojs/tailwind';
 
 import imageCaptionPlugin from './plugins/image/index.mjs';
