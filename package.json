@@ -10,7 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.4.0"
+    "@astrojs/preact": "^3.0.1",
+    "astro": "^3.4.0",
+    "preact": "^10.6.5"
   },
   "packageManager": "yarn@3.6.4"
 }

@@ -53,6 +53,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/preact@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@astrojs/preact@npm:3.0.1"
+  dependencies:
+    "@babel/plugin-transform-react-jsx": ^7.22.5
+    "@babel/plugin-transform-react-jsx-development": ^7.22.5
+    "@preact/preset-vite": ^2.5.0
+    "@preact/signals": ^1.2.1
+    babel-plugin-transform-hook-names: ^1.0.2
+    preact-render-to-string: ^6.2.1
+  peerDependencies:
+    preact: ^10.6.5
+  checksum: 021b6f0d2a63380b929a25370064c88abc1769ec3ff391b33e512dfdbf454754f4728819734ab2b9c6edfa2b3f262338ba54c1b5749d594f68823686fc8b33ca
+  languageName: node
+  linkType: hard
+
 "@astrojs/prism@npm:^3.0.0":
   version: 3.0.0
   resolution: "@astrojs/prism@npm:3.0.0"
@@ -94,7 +110,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.22.10":
+"@babel/core@npm:^7.22.1, @babel/core@npm:^7.22.10":
   version: 7.23.2
   resolution: "@babel/core@npm:7.23.2"
   dependencies:
@@ -289,7 +305,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-jsx@npm:^7.22.5":
+"@babel/plugin-transform-react-jsx-development@npm:^7.22.5":
+  version: 7.22.5
+  resolution: "@babel/plugin-transform-react-jsx-development@npm:7.22.5"
+  dependencies:
+    "@babel/plugin-transform-react-jsx": ^7.22.5
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 36bc3ff0b96bb0ef4723070a50cfdf2e72cfd903a59eba448f9fe92fea47574d6f22efd99364413719e1f3fb3c51b6c9b2990b87af088f8486a84b2a5f9e4560
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-react-jsx@npm:^7.22.15, @babel/plugin-transform-react-jsx@npm:^7.22.5":
   version: 7.22.15
   resolution: "@babel/plugin-transform-react-jsx@npm:7.22.15"
   dependencies:
@@ -764,6 +791,92 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@preact/preset-vite@npm:^2.5.0":
+  version: 2.6.0
+  resolution: "@preact/preset-vite@npm:2.6.0"
+  dependencies:
+    "@babel/plugin-transform-react-jsx": ^7.22.15
+    "@babel/plugin-transform-react-jsx-development": ^7.22.5
+    "@prefresh/vite": ^2.4.1
+    "@rollup/pluginutils": ^4.1.1
+    babel-plugin-transform-hook-names: ^1.0.2
+    debug: ^4.3.4
+    kolorist: ^1.8.0
+    resolve: ^1.22.8
+  peerDependencies:
+    "@babel/core": 7.x
+    vite: 2.x || 3.x || 4.x
+  checksum: d2a14f5b7abd1ab6bcb49d19043043d8896ee564a903c6117185dc22b1d24bac55a31207f34d61ded3d7e2011c47a402d1d55207964b2563dd243aa0a77ad512
+  languageName: node
+  linkType: hard
+
+"@preact/signals-core@npm:^1.4.0":
+  version: 1.5.0
+  resolution: "@preact/signals-core@npm:1.5.0"
+  checksum: af94ccd3add2dfd36a84b8535e3512db5e2425b4cb832d4460940c53b4493489b88055e633a0d1f76a663bcfa604ad08c4dd7d2d4d369f564f73720d878be5bc
+  languageName: node
+  linkType: hard
+
+"@preact/signals@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@preact/signals@npm:1.2.1"
+  dependencies:
+    "@preact/signals-core": ^1.4.0
+  peerDependencies:
+    preact: 10.x
+  checksum: 169e0fc2e8d8d933bf10ad76bc495b5c311ad98780bdd7f972fe5570126e027d63ed01aef370c6582798d75a165285125abacf194ff5e4e899d4587fa649e24e
+  languageName: node
+  linkType: hard
+
+"@prefresh/babel-plugin@npm:0.5.0":
+  version: 0.5.0
+  resolution: "@prefresh/babel-plugin@npm:0.5.0"
+  checksum: 6cbe85226ff7797d631d2ae71b49292b96a297da2b7f6c5effb97fee7cf7e1b85b105b66836c1640fa1a96a0a5ea8d590d4d2a448834b412eea6cbc67c5cf2bc
+  languageName: node
+  linkType: hard
+
+"@prefresh/core@npm:^1.5.1":
+  version: 1.5.2
+  resolution: "@prefresh/core@npm:1.5.2"
+  peerDependencies:
+    preact: ^10.0.0
+  checksum: f8959d005990d295ed73d15775c1900fb503f238993304dad3cb5a931fc5b0539eb62776efa01eb7e0c712ee032cb85a913cd13c45c069923c7b20dbd270e378
+  languageName: node
+  linkType: hard
+
+"@prefresh/utils@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@prefresh/utils@npm:1.2.0"
+  checksum: 003bb710a6d5ca5e4886a29eb7245332d4f605a90de4eb7b77df35884a842c29143f827f6aa088e69cc2ea07f70d89148d4a730f56549640425177e24d14a60e
+  languageName: node
+  linkType: hard
+
+"@prefresh/vite@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "@prefresh/vite@npm:2.4.1"
+  dependencies:
+    "@babel/core": ^7.22.1
+    "@prefresh/babel-plugin": 0.5.0
+    "@prefresh/core": ^1.5.1
+    "@prefresh/utils": ^1.2.0
+    "@rollup/pluginutils": ^4.2.1
+  peerDependencies:
+    preact: ^10.4.0
+    vite: ">=2.0.0"
+  checksum: 8921fe2aea1432f700c7a6da5dd811c442a5ca4faf3f55f95b783cd0d0ce94c85cbe850fe3d0370d9c6adb123dd8d4ce793d4c0f9ec67a9183958e3dc024b11c
+  languageName: node
+  linkType: hard
+
+"@rollup/pluginutils@npm:^4.1.1, @rollup/pluginutils@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "@rollup/pluginutils@npm:4.2.1"
+  dependencies:
+    estree-walker: ^2.0.1
+    picomatch: ^2.2.2
+  checksum: 6bc41f22b1a0f1efec3043899e4d3b6b1497b3dea4d94292d8f83b4cf07a1073ecbaedd562a22d11913ff7659f459677b01b09e9598a98936e746780ecc93a12
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.20.1":
   version: 7.20.3
   resolution: "@types/babel__core@npm:7.20.3"
@@ -1092,6 +1205,15 @@ __metadata:
   version: 1.6.4
   resolution: "b4a@npm:1.6.4"
   checksum: 81b086f9af1f8845fbef4476307236bda3d660c158c201db976f19cdce05f41f93110ab6b12fd7a2696602a490cc43d5410ee36a56d6eef93afb0d6ca69ac3b2
+  languageName: node
+  linkType: hard
+
+"babel-plugin-transform-hook-names@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "babel-plugin-transform-hook-names@npm:1.0.2"
+  peerDependencies:
+    "@babel/core": ^7.12.10
+  checksum: d48d513569261fd6c8b2da29ce899ac7bd59dcc32593044b1c79953aed51d4f68a7dbbf5c1dfd35c65192d82df82d13009581c7e0499799fc687d87b6211b148
   languageName: node
   linkType: hard
 
@@ -1837,6 +1959,13 @@ __metadata:
     esparse: ./bin/esparse.js
     esvalidate: ./bin/esvalidate.js
   checksum: b45bc805a613dbea2835278c306b91aff6173c8d034223fa81498c77dcbce3b2931bf6006db816f62eacd9fd4ea975dfd85a5b7f3c6402cfd050d4ca3c13a628
+  languageName: node
+  linkType: hard
+
+"estree-walker@npm:^2.0.1":
+  version: 2.0.2
+  resolution: "estree-walker@npm:2.0.2"
+  checksum: 6151e6f9828abe2259e57f5fd3761335bb0d2ebd76dc1a01048ccee22fabcfef3c0859300f6d83ff0d1927849368775ec5a6d265dde2f6de5a1be1721cd94efc
   languageName: node
   linkType: hard
 
@@ -2673,6 +2802,13 @@ __metadata:
   version: 4.1.5
   resolution: "kleur@npm:4.1.5"
   checksum: 1dc476e32741acf0b1b5b0627ffd0d722e342c1b0da14de3e8ae97821327ca08f9fb944542fb3c126d90ac5f27f9d804edbe7c585bf7d12ef495d115e0f22c12
+  languageName: node
+  linkType: hard
+
+"kolorist@npm:^1.8.0":
+  version: 1.8.0
+  resolution: "kolorist@npm:1.8.0"
+  checksum: b056de671acc8a17f1e78d6d46c47dae3e06481eabc9fed213dd9079a7454fd3a7ea1226ec718df81c9208877f7475d038ac27a400958fec278d975839e33643
   languageName: node
   linkType: hard
 
@@ -3590,7 +3726,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "new-site@workspace:."
   dependencies:
+    "@astrojs/preact": ^3.0.1
     astro: ^3.4.0
+    preact: ^10.6.5
   languageName: unknown
   linkType: soft
 
@@ -3876,7 +4014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.3.1":
+"picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.2.2, picomatch@npm:^2.3.1":
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 050c865ce81119c4822c45d3c84f1ced46f93a0126febae20737bd05ca20589c564d6e9226977df859ed5e03dc73f02584a2b0faad36e896936238238b0446cf
@@ -3907,6 +4045,24 @@ __metadata:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: 1d8611341b073143ad90486fcdfeab49edd243377b1f51834dc4f6d028e82ce5190e4f11bb2633276864503654fb7cab28e67abdc0fbf9d1f88cad4a0ff0beea
+  languageName: node
+  linkType: hard
+
+"preact-render-to-string@npm:^6.2.1":
+  version: 6.2.2
+  resolution: "preact-render-to-string@npm:6.2.2"
+  dependencies:
+    pretty-format: ^3.8.0
+  peerDependencies:
+    preact: ">=10"
+  checksum: 0121d1fc21811f75dce55f789822e92b9d28e6f3d26c43ad5545c8ca000ce3e50bbe34ee79dbd07529027fc290bd24780037cb10e6e9b4b234ec128c53e8cc1f
+  languageName: node
+  linkType: hard
+
+"preact@npm:^10.6.5":
+  version: 10.18.1
+  resolution: "preact@npm:10.18.1"
+  checksum: 691030149fdbd026cac7c07147756f48c6cb8cdea6a8af8c0f383e4c31f5bce48cdc751e4bccf8826560a0d2db77ada401c0308f2bcae2961d16972c26c95607
   languageName: node
   linkType: hard
 
@@ -3941,6 +4097,13 @@ __metadata:
     path-exists: ^4.0.0
     which-pm: 2.0.0
   checksum: d66019f36765c4e241197cd34e2718c03d7eff953b94dacb278df9326767ccc2744d4e0bcab265fd9bb036f704ed5f3909d02594cd5663bd640a160fe4c1446c
+  languageName: node
+  linkType: hard
+
+"pretty-format@npm:^3.8.0":
+  version: 3.8.0
+  resolution: "pretty-format@npm:3.8.0"
+  checksum: 21a114d43ef06978f8f7f6212be4649b0b094f05d9b30e14e37550bf35c8ca24d8adbca9e5adc4cc15d9eaf7a1e7a30478a4dc37b30982bfdf0292a5b385484c
   languageName: node
   linkType: hard
 
@@ -4146,7 +4309,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.22.4":
+"resolve@npm:^1.22.4, resolve@npm:^1.22.8":
   version: 1.22.8
   resolution: "resolve@npm:1.22.8"
   dependencies:
@@ -4159,7 +4322,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@^1.22.4#~builtin<compat/resolve>":
+"resolve@patch:resolve@^1.22.4#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.8#~builtin<compat/resolve>":
   version: 1.22.8
   resolution: "resolve@patch:resolve@npm%3A1.22.8#~builtin<compat/resolve>::version=1.22.8&hash=c3c19d"
   dependencies:
