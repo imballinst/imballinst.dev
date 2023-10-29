@@ -61,8 +61,8 @@ header {
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-code[class='astro-code'],
-pre[class='astro-code'] {
+code.astro-code,
+pre.astro-code {
   color: #abb2bf;
   background: none;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -81,52 +81,52 @@ pre[class='astro-code'] {
   hyphens: none;
 }
 
-pre[class='astro-code']::-moz-selection,
-pre[class='astro-code'] ::-moz-selection,
-code[class='astro-code']::-moz-selection,
-code[class='astro-code'] ::-moz-selection {
+pre.astro-code::-moz-selection,
+pre.astro-code ::-moz-selection,
+code.astro-code::-moz-selection,
+code.astro-code ::-moz-selection {
   text-shadow: none;
   background: #383e49;
 }
 
-pre[class='astro-code']::selection,
-pre[class='astro-code'] ::selection,
-code[class='astro-code']::selection,
-code[class='astro-code'] ::selection {
+pre.astro-code::selection,
+pre.astro-code::selection,
+code.astro-code::selection,
+code.astro-code::selection {
   text-shadow: none;
   background: #9aa2b1;
 }
 
 @media print {
-  code[class='astro-code'],
-  pre[class='astro-code'] {
+  code.astro-code,
+  pre.astro-code {
     text-shadow: none;
   }
 }
 /* Code blocks */
-pre[class='astro-code'] {
+pre.astro-code {
   padding: 1rem;
   margin: 0.5em 0;
   overflow: auto;
 }
 
-:not(pre) > code[class='astro-code'],
-pre[class='astro-code'] {
+:not(pre) > code.astro-code,
+pre.astro-code {
   background: #282c34;
 }
 
 /* Inline code */
-:not(pre) > code[class='astro-code'] {
+:not(pre) > code.astro-code {
   padding: 0.1rem;
   border-radius: 0.3rem;
   white-space: normal;
 }
 
-:not(.dark) code:not([class*='language']) {
+:not(.dark) :not(pre) > code:not([class*='language']) {
   @apply text-sm rounded text-red-600;
 }
 
-.dark code:not([class*='language']) {
+.dark :not(pre) > code:not([class*='language']) {
   @apply text-sm rounded text-red-300;
 }
 

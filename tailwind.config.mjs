@@ -42,6 +42,5 @@ export default {
         wlg: '60rem'
       }
     }
-  },
-  plugins: [require('@tailwindcss/forms')]
+  }
 };

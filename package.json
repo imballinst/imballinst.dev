@@ -15,6 +15,12 @@
     "@astrojs/preact": "^3.0.1",
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.4.0",
+    "cheerio": "1.0.0-rc.12",
+    "date-fns": "2.30.0",
+    "domhandler": "5.0.3",
+    "hast-util-to-html": "9.0.0",
+    "mdast-util-to-hast": "13.0.2",
+    "mdast-util-to-string": "4.0.0",
     "preact": "^10.6.5",
     "tailwindcss": "^3.0.24"
   },

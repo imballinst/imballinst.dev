@@ -14,7 +14,7 @@ export default defineConfig({
       ? process.env.URL
       : process.env.DEPLOY_PRIME_URL,
   markdown: {
-    remarkPlugins: [remarkGfm, imageCaptionPlugin, htmlClassnamesPlugin],
+    remarkPlugins: [imageCaptionPlugin, htmlClassnamesPlugin],
     rehypePlugins: []
   }
 });
