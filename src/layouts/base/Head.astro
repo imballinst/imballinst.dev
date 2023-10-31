@@ -21,15 +21,13 @@ if (url.endsWith('/')) {
   url = url.slice(0, -1)
 }
 
-const env = import.meta.env.PUBLIC_ASTRO_ENV;
+const isProd = import.meta.env.PROD;
 let imageUrl = `${url}${image}`;
 
-if (env === 'production') {
+if (isProd) {
   const ext = path.extname(imageUrl);
   imageUrl = imageUrl.slice(0, -ext.length) + '--512w' + ext;
 }
-
-const injectAnalytics = import.meta.env.PUBLIC_INJECT_ANALYTICS === 'true';
 ---
 
 <!-- Global Metadata -->
@@ -96,11 +94,8 @@ const injectAnalytics = import.meta.env.PUBLIC_INJECT_ANALYTICS === 'true';
 
 <!-- Global site tag (gtag.js) - Google Analytics on prod only -->
 {
-  injectAnalytics ? (
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TPYW0LG5LL"
-    />
+  isProd ? (
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164562762-1"></script>
   ) : null
 }
-{injectAnalytics ? <script async src="/scripts/gtag.js" /> : null}
+{isProd ? <script async src="/scripts/gtag.js" /> : null}

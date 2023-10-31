@@ -1,15 +1,15 @@
 {
-  "name": "new-site",
+  "name": "imballinst.dev",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "yarn build:activity && astro check && astro build && yarn build:images",
     "preview": "astro preview",
     "astro": "astro",
-    "prebuild": "node scripts/activity.mjs",
-    "postbuild": "node scripts/optimize-image/sharp.mjs"
+    "build:activity": "node scripts/activity.mjs",
+    "build:images": "node scripts/optimize-image/sharp.mjs"
   },
   "dependencies": {
     "@astrojs/preact": "3.0.1",

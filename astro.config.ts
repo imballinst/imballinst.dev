@@ -7,7 +7,7 @@ import htmlClassnamesPlugin from './plugins/html-classnames/index.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [preact(), tailwind()],
+  integrations: [preact(), tailwind({ applyBaseStyles: false })],
   site:
     process.env.CONTEXT === 'production'
       ? process.env.URL
