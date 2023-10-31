@@ -1,13 +1,14 @@
 const colors = require('tailwindcss/colors');
 const config = require('tailwindcss/defaultConfig');
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
   content: [
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     './plugins/**/*.mjs',
-    './public/assets/common-images/*.svg',
-    './src/**/*.{astro,js,md,ts,tsx}'
+    './public/assets/common-images/*.svg'
   ],
+  mode: 'jit',
   darkMode: 'class',
   theme: {
     colors: {
@@ -41,6 +42,5 @@ module.exports = {
         wlg: '60rem'
       }
     }
-  },
-  plugins: [require('@tailwindcss/forms')]
+  }
 };
