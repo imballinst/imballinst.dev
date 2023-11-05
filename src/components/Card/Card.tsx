@@ -1,4 +1,4 @@
-import { formatDistanceToNowStrict } from 'date-fns';
+import { format } from 'date-fns';
 import { JSX } from 'preact';
 
 import { ExternalLinkIcon } from '../Links';
@@ -112,9 +112,7 @@ function CardDetail({
       </Text>
 
       <div className="flex flex-row items-center mb-1 text-sm text-gray-600 dark:text-gray-400">
-        {formatDistanceToNowStrict(new Date(date), {
-          addSuffix: true
-        })}
+        {format(new Date(date), 'MMM dd, yyyy')}
       </div>
 
       <div className={`flex mt-2 items-center flex-col card-text`}>
