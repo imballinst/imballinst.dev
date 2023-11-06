@@ -47,6 +47,8 @@ const octokit = new Octokit({
     }
   }
 
+  console.info('activities', activities);
+
   await writeFile(
     path.join(process.cwd(), '/src/static/activity.json'),
     JSON.stringify(Object.values(activities), null, 2)
