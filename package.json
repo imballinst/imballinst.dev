@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "yarn build:activity && astro check && astro build && yarn build:images",
+    "build": "yarn build:activity && astro check && astro build",
+    "build:fixbuildimageslater": "yarn build:activity && astro check && astro build && yarn build:images",
     "preview": "astro preview",
     "astro": "astro",
     "build:activity": "node scripts/activity.mjs",
