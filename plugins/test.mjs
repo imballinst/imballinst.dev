@@ -3,7 +3,7 @@ import remarkGfm from 'remark-gfm';
 import htmlClassnamesPlugin from './html-classnames/index.mjs';
 import imageCaptionPlugin from './image/index.mjs';
 
-process.env.PUBLIC_ASTRO_ENV = 'production';
+process.env.NODE_ENV = 'production';
 
 main();
 

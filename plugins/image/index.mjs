@@ -39,10 +39,10 @@ export default function imageCaptionPlugin() {
             src: url,
             height: '450',
             width: '800',
-            class: 'w-full'
+            class: 'w-full border border-gray-200 dark:border-gray-600'
           };
 
-          if (process.env.PUBLIC_ASTRO_ENV === 'production') {
+          if (process.env.NODE_ENV === 'production') {
             const ext = path.extname(url);
 
             if (COMPRESSED_EXTS.includes(ext)) {
@@ -53,12 +53,6 @@ export default function imageCaptionPlugin() {
               ).join(', ');
               // Set the effective URL to the biggest image.
               imgProps.src = `${withoutExt}--${IMAGE_WIDTHS[2]}w${ext}`;
-              imgProps.sizes = [
-                ...IMAGE_WIDTHS.map(
-                  (width) => `(max-width: ${width}px) ${width}px`
-                ),
-                '2048px'
-              ].join(', ');
             }
           }
 
@@ -85,9 +79,8 @@ export default function imageCaptionPlugin() {
           // Another good reference: https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/.
           firstChild.value = `
             <figure class="flex flex-col items-center justify-center mt-3 mb-4">
-              <a href="${imgProps.src}" target="_blank" rel="noopener" class="w-full border border-gray-200 dark:border-gray-600">
-                ${imgTag}
-              </a>
+              ${imgTag}
+              
               <figcaption class="text-sm text-center mt-1 ${TEXT_COLOR}">${htmlString}</figcaption>
             </figure>
           `.trim();
