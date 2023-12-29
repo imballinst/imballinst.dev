@@ -3,8 +3,8 @@ title: Wrapping 2k23
 description: It's another year passing by.
 publishDate: 2023-12-29T12:26:50.255Z
 image: /assets/blog/wrapping-2k23/blogpost-background.png
-imageAlt: An image depicting the word "2k23" is getting wrapped inside a box.
-imageCaption: An image depicting the word "2k23" is getting wrapped inside a box.
+imageAlt: An image depicting the word "2k23" is getting wrapped inside a box. The best box I have ever drawn.
+imageCaption: An image depicting the word "2k23" is getting wrapped inside a box. The best box I have ever drawn.
 tags: life
 visibility: public
 layout: '../../layouts/BlogPost.astro'
