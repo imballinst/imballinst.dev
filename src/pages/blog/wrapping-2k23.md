@@ -43,9 +43,9 @@ If you told me a few years ago that I would become a team lead at some point in 
 
 Personally, I don't mind managing people (well, I mind a little bit since I'm antisocial), but it's the tidbits that come with it that I am concerned with. I have issues with the routine of this so-called Scrum-thingy. Backlog grooming and sprint planning are so boring. I'm okay with sprint retrospectives because I love retrospectives and getting better. But for backlog grooming and sprint planning... I feel like most of it can be done asynchronously.
 
-Imagine if everyone collaborates asynchronously before backlog grooming and sprint planning and then in the meeting, we just ask, "Are we good?" and if we are good, then we lock them and leave the meeting. Wow! That's probably my main dislike about scrum—it is heavy on the "synchronous" part.
+Imagine if everyone collaborates asynchronously before backlog grooming and sprint planning and then in the meeting, we just ask, "Are we good?" and if we are good, then we lock them and leave the meeting. Wow! That's probably my main dislike about Scrum—it is heavy on the "synchronous" part.
 
-I wonder why there is no one proposing this "semi-asynchronous mode" of scrum, considering we are in the age where remote work is beginning to become popular.
+I wonder why there is no one proposing this "semi-asynchronous mode" of Scrum, considering we are in the age where remote work is beginning to become popular.
 
 ## Learning more about making a compromise
 
