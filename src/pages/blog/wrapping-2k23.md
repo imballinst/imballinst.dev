@@ -45,7 +45,7 @@ Personally, I don't mind managing people (well, I mind a little bit since I'm an
 
 Imagine if everyone collaborates asynchronously before backlog grooming and sprint planning and then in the meeting, we just ask, "Are we good?" and if we are good, then we lock them and leave the meeting. Wow! That's probably my main dislike about Scrum—it is heavy on the "synchronous" part.
 
-I wonder why there is no one proposing this "semi-asynchronous mode" of Scrum, considering we are in the age where remote work is beginning to become popular.
+I wonder why there is no one proposing this "semi-asynchronous mode" of Scrum, considering we are in the age where remote work is beginning to become popular. Or maybe it is popular, just not yet in Indonesia. I guess.
 
 ## Learning more about making a compromise
 
