@@ -51,7 +51,7 @@ I wonder why there is no one proposing this "semi-asynchronous mode" of Scrum, c
 
 This one is perhaps for more about my personal life—maybe a bit at work, too. The cases that I remember were (1) when I was arguing with my wife about something and (2) when I was being a somewhat "moderator" in an asynchronous discussion at work. Both were about reaching a consensus.
 
-Reaching consensus is hard because sometimes there are people who _maybe_ don't want to see reason. In my cases above, I was lucky that I discussed with people who were able to see the light.
+Reaching consensus is hard because sometimes there are people who _maybe_ don't want to see reason. In my cases above, I was lucky that I discussed with people who were not arrogant.
 
 In me and my wife's case, it's about improvements, mostly. Let's say that there are numbers 1—10. Me and my wife were at extreme ends, 1 and 10. I wanted her to move from 1 to 5, but since it was a bit too extreme, she was only able to move bit-by-bit, say, to 3. In the meantime, I also tried to move from 10 to say, 7. The intention was so it could be perceived that both I and my wife are trying (and not only her). 
 
