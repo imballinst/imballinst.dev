@@ -1,7 +1,7 @@
 ---
 title: Wrapping 2k23
 description: It's another year passing by.
-publishDate: 2022-12-29T13:09:42.343Z
+publishDate: 2023-12-29T12:26:50.255Z
 image: /assets/blog/wrapping-2k23/blogpost-background.png
 imageAlt: An image depicting the word "2k23" is getting wrapped inside a box.
 imageCaption: An image depicting the word "2k23" is getting wrapped inside a box.
