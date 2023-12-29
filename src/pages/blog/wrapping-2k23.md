@@ -49,7 +49,7 @@ I wonder why there is no one proposing this "semi-asynchronous mode" of Scrum, c
 
 ## Learning more about making a compromise
 
-This one is perhaps for more about my personal life—maybe a bit at work, too. The cases that I remember were when I was arguing with my wife about something and when I was being a somewhat "moderator" in a discussion in my workplace. Both were about reaching a consensus.
+This one is perhaps for more about my personal life—maybe a bit at work, too. The cases that I remember were (1) when I was arguing with my wife about something and (2) when I was being a somewhat "moderator" in an asynchronous discussion at work. Both were about reaching a consensus.
 
 Reaching consensus is hard because sometimes there are people who _maybe_ don't want to see reason. In my cases above, I was lucky that I discussed with people who were able to see the light.
 
