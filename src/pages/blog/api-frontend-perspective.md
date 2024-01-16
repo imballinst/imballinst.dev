@@ -24,25 +24,25 @@ How about a UI framework? We all have different opinions on frameworks such as A
 
 How about frontend component libraries? Surely we use tons of them. Bootstrap, Material UI, Chakra UI, and Ant Design, to name a few. Then, try to recall, have you had difficulties when using them? How is the experience when modifying color tokens, how is the experience when we want to override a certain style in a certain element, and so on.
 
-These paragraphs above converge into one conclusion: API is not only about HTTP endpoints but almost everything that we use daily.
+These paragraphs above converge into one conclusion: API is not only about HTTP endpoints but almost everything that we use daily and we can take lessons from them.
 
 ## API from a creator perspective
 
-We have discussed APIs from the consumer perspective. When we learn about a variety of APIs, we will begin to appreciate more about good APIs.
+We have discussed APIs from the consumer perspective. When we learn about a variety of APIs, we will be able to recognize and appreciate good APIs.
 
-The first time I used Chakra UI, I was so impressed by it. Back then, I mostly used Material UI, which was pretty tricky to style, especially for child components. Chakra UI's API was a breath of fresh air. [Compound components](https://www.smashingmagazine.com/2021/08/compound-components-react/) and all components somewhat "extend" the Box props (such as `m` for margin, `p` for padding), styling has never been easier.
+The first time I used Chakra UI, I was so impressed by it. Back then, I mostly used Material UI, which was pretty tricky to style, especially for child components. Chakra UI's API was a breath of fresh air. [Compound components](https://www.smashingmagazine.com/2021/08/compound-components-react/) approach and all components "extend" the base Box props (such as `m` for margin, `p` for padding), styling has never been easier.
 
-Then came Tailwind with the IDE IntelliSense. Developer experience instantly skyrocketed. Previously we always had to remember the class names, but with the utility classes from Tailwind, we _almost_ don't need them anymore (except for a few special cases).
+Then, Tailwind arrived with the IDE IntelliSense. Developer experience instantly skyrocketed. Previously we always had to remember the class names, but with the utility classes from Tailwind, we _almost_ don't need them anymore (except for a few special cases).
 
 So, how do we make good APIs? From what I think, at least:
 
 1. Do research on the current pain points. What are the problems that we need to solve? Are those problems really impacting productivity?
-2. "Steal ideas" from existing software. What do we need to follow, what do we not want to follow? I know people will be somewhat salty when we steal ideas from others, but if those ideas are good, why don't we adopt them?
-3. Try our own APIs. Are they painful to use? Do they solve the previous pain points? Are they flexible? Do they add layers of complexity to our thing?
-4. Lastly, of course, practice, practice, practice. We all have been a victim of a "super component" (a component that accepts too many props) and then we realized that it was not good, so we decided to split them into [compound components](https://www.smashingmagazine.com/2021/08/compound-components-react/).
+2. "Steal ideas" from existing software. What do we need to follow, what do we not want to follow? I know people will be somewhat salty when we steal ideas from others, but if those ideas are good, why don't we adopt them? If we do, I recommend crediting the original work for the ideas.
+3. Try our own APIs. Are they painful to use? Do they solve the previous pain points? Are they flexible? Do they add layers of complexity that may compromise maintainability?
+4. Lastly, of course, practice, practice, practice. We all have been a victim of a "super component" (a component that accepts too many props) and then we realized that it was not good, so we decided to split them into compound components.
 
 ## Closing words
 
-So, yeah, there's that. Hopefully, this post is useful. The primary audience is for frontend engineers, but of course, it also applies to non-frontend engineers as well, because APIs are for everyone.
+So, yeah, there's that. Hopefully, this post is useful. The primary audience is frontend engineers, but of course, it also applies to non-frontend engineers as well, because APIs are for everyone.
 
 Take care and see you on the next one!
