@@ -22,3 +22,5 @@ pnpm-debug.log*
 
 # Local Netlify folder
 .netlify
+
+.yarn/install-state.gz
