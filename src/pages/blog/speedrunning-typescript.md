@@ -182,7 +182,14 @@ function isValidStruct(value: StructOne & StructTwo) {
 }
 ```
 
-Now, compared to intersection, we don't need common fields to get the fields intersected by these two types, `StructOne` and `StructTwo`. Much simpler than union, right? That concludes the bits about union and intersection.
+Now, compared to union, we don't need common fields to get the fields intersected by these two types, `StructOne` and `StructTwo`. All fields from those 2 types are "merged" and accessible without `kind` field check. Much simpler than union, right?
+
+With that in mind, here's the rule of thumb on when to choose union and intersection.
+
+1. Use union when the semantic is "OR". For example, if we have class such as "Fish" or "Cat", then we should use union.
+2. Use intersection when the semantic is "AND". For example, when we want to merge all fields from the given types, then we should use intersection.
+
+Well, that concludes the bits about union and intersection.
 
 ## Utility types
 
