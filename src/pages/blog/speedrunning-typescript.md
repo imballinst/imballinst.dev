@@ -108,6 +108,82 @@ So, by default, my rule of thumb is: use `interface` unless we need to use utili
 
 ## Union and intersection
 
+Okay, so let's say that we want to "combine" two or more types together. How can we do it? There are 2 ways to do it in TypeScript: we can use union _or_ intersection. Before we go further, it's a good idea to learn [how union and intersection works in a Venn diagram](https://www.mathsisfun.com/sets/venn-diagrams.html).
+
+The syntax of union is `|`. It might be easier express the usage with examples.
+
+```ts
+type TestUnion = string | number | boolean
+// ^ type TestUnion = string | number | boolean
+
+const isValidTestUnionType = (value: TestUnion) => true
+
+isValidTestUnionType('') // no error
+isValidTestUnionType(123) // no error
+isValidTestUnionType(true) // no error
+isValidTestUnionType({})
+// ^ Argument of type '{}' is not assignable to parameter of type 'TestUnion'.
+```
+
+In the above example, we could see that in our IDE that there is a TypeError when we do `isValidTestUnionType({})`. This is the power of union, so that we can have multiple types as an input. There is a catch, though. Union can be used as an "OR" operation for structs, too. For example:
+
+```ts
+interface StructOne {
+  hello: string
+}
+
+interface StructTwo {
+  world: string
+}
+
+function isValidStruct(value: StructOne | StructTwo) {
+  // the `value` here will not have an autocomplete
+}
+```
+
+In the `isValidStruct` function, if we type `value.`, then it will not provide field access suggestions. No `hello` and no `world`. This is because TypeScript does not detect "common fields" between them. So, in order to make `value` to be able to derive the actual fields, we need to add common fields to these 2 structs.
+
+```ts
+interface StructOne {
+  kind: "struct-one"
+  hello: string
+}
+
+interface StructTwo {
+  kind: "struct-two"
+  world: string
+}
+
+function isValidStruct(value: StructOne | StructTwo) {
+  if (value.kind === "struct-one") {
+    return value.hello
+  }
+
+  return value.world
+}
+```
+
+From the snippet above, notice that we add a common field called `kind`. Ensure that `StructOne` and `StructTwo` have different `kind`. With this approach, inside `isValidStruct` function, we could check the value from `kind`. From there, TypeScript would be able to infer whether `value` is of type `StructOne` or `StructTwo`.
+
+Now, let's get to intersection. Intersection can be done by using `&`. Example is as follows.
+
+```ts
+interface StructOne {
+  hello: string
+}
+
+interface StructTwo {
+  world: string
+}
+
+function isValidStruct(value: StructOne & StructTwo) {
+  return value.hello
+  // or return value.world
+}
+```
+
+Now, compared to intersection, we don't need common fields to get the fields intersected by these two types, `StructOne` and `StructTwo`. Much simpler than union, right? That concludes the bits about union and intersection.
+
 ## Utility types
 
 ## Generic types
