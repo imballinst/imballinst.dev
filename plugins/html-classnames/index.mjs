@@ -15,7 +15,7 @@ const ALTERNATIVE_TEXT_COLORS = {
 const DEFAULT_ATTRS = {
   h1: `${TEXT_COLOR} text-3xl font-bold my-6`,
   h2: `${TEXT_COLOR} text-2xl font-bold my-4`,
-  h3: `${TEXT_COLOR} text-xl mt-4 my-2`,
+  h3: `${TEXT_COLOR} text-xl font-medium mt-4 my-2`,
   h4: `${TEXT_COLOR} text-lg`,
   h5: `${TEXT_COLOR} text-base`,
   h6: `${TEXT_COLOR} text-sm`,
