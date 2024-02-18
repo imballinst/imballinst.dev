@@ -193,4 +193,164 @@ Well, that concludes the bits about union and intersection.
 
 ## Utility types
 
+TypeScript has built-in utility types that can be useful. Let's explore them! For the full list, you can visit the [TypeScript docs](https://www.typescriptlang.org/docs/handbook/utility-types.html).
+
+### Exclude
+
+`Exclude` is used to remove a union value. This is useful if you want to narrow down a union type from a union.
+
+```ts
+type SampleUnion = "hello" | "world";
+type OmittedWorld = Exclude<SampleUnion, "world">;
+// ^ type OmittedWorld = "hello"
+```
+
+### Omit
+
+`Exclude` is used to remove a field from a struct. This is useful if you want to create a new type with less fields compared to the original one.
+
+```ts
+interface SampleObject {
+  hello: string;
+  world: string;
+}
+type SampleObjectWithoutWorld = Omit<SampleObject, "world">;
+// ^ type SampleObjectWithoutWorld = {
+//     hello: string;
+//   }
+```
+
+### Pick
+
+`Pick` is the reverse of `Omit`. It takes a union of fields from the original object type.
+
+```ts
+interface SampleObject {
+  hello: string;
+  world: string;
+}
+type SampleObjectWithoutWorld = Pick<SampleObject, "hello">;
+// ^ type SampleObjectWithoutWorld = {
+//     hello: string;
+//   }
+```
+
+### ReturnType
+
+`ReturnType` is used to get the return type of a function. This is useful when you don't want to create an explicit return type for the function and you want to derive it from the function instead.
+
+```ts
+function sum(x: number, y: number) {
+  return x + y;
+}
+
+type SumFunctionReturnType = ReturnType<typeof sum>;
+// ^ type SumFunctionReturnType = number
+```
+
+### Record
+
+`Record` is used to create a key-value pairs.
+
+```ts
+const record: Record<string, string> = {};
+record.a = 'b';
+record.c = 1;
+// ^ Type 'number' is not assignable to type 'string'.
+```
+
+Similarly, `Map` is also used to create a key-value map.
+
+```ts
+let map: Map<string, string>;
+map = new Map<string, string>();
+map.set('test', 'hello');
+map.set('world', 1);
+// ^ Argument of type 'number' is not assignable to parameter of type 'string'
+```
+
+### Partial
+
+`Partial` is used to create all fields in an object type to be optional.
+
+```ts
+interface SampleObject {
+  hello: string;
+  world: string;
+}
+type SampleObjectWithoutWorld = Partial<SampleObject>;
+// ^ type SampleObjectWithoutWorld = {
+//     hello?: string | undefined;
+//     world?: string | undefined;
+//   }
+```
+
+### Required
+
+`Required` is the opposite of `Partial`. It makes all fields required.
+
+```ts
+interface SampleObject {
+  hello?: string | undefined;
+  world?: string | undefined;
+}
+type SampleObjectWithoutWorld = Required<SampleObject>;
+// ^ type SampleObjectWithoutWorld = {
+//     hello: string;
+//     world: string;
+//   }
+```
+
 ## Generic types
+
+A way to understand generic types is to take examples from utility types in previous section. A type is generic when it has the `<>` syntax. Inside the `<>` syntax, you can put a TypeScript type and it should match the type argument requirement, if any. Consider this example.
+
+```ts
+type IsString<TypeArg> = TypeArg extends string ? true : false;
+
+type TestValue = IsString<string>;
+// ^ true
+type TestValue2 = IsString<number>;
+// ^ false
+```
+
+In the snippet above, we create a generic type `IsString`, which accepts a type argument `TypeArg`. The type derives from `TypeArg`. If `TypeArg` extends the type string, then it will return `true`, otherwise `false`.
+
+The `extends` keyword can also be used to detect parts of an object type. Take this example.
+
+```ts
+type IsFish<TypeArg> = TypeArg extends { swim(): void } ? true : false;
+
+interface Fish {
+  swim(): void
+}
+interface Cat {
+  walk(): void
+}
+
+type TestValue = IsFish<Fish>;
+// ^ true
+type TestValue2 = IsFish<Cat>;
+// ^ false
+```
+
+In the above example, we want to check if `TypeArg` is of type `Fish` or not. We do that by checking if the given object type has the method `swim`. As we could see above, `Cat` does not have the method `swim`, so the return type is `false`.
+
+### Inferring type
+
+With the `extends` keyword, we can also take advantage of `infer` keyword. What is `infer`, exactly? The `infer` syntax is used to "extract" a value from another extended generic type. Take the following example.
+
+```ts
+type ExtractTypeFromPromise<TypeArg> = TypeArg extends Promise<infer PromiseType> ? PromiseType : never;
+
+async function test() {
+  return 123;
+}
+
+type FunctionReturnType = ReturnType<typeof test>;
+// ^ Promise<number>
+type FunctionReturnTypeWithoutPromise = ExtractTypeFromPromise<FunctionReturnType>;
+// ^ number
+```
+
+As we could see below, the `infer PromiseType` in `TypeArg extends Promise<infer PromiseType>` means it is extracting the `number` value from `Promise<number>`. This is the same result as the [utility type Awaited](https://www.typescriptlang.org/docs/handbook/utility-types.html#awaitedtype).
