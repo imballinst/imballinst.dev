@@ -1,7 +1,7 @@
 ---
 title: Speedrunning TypeScript
 description: Let's do a quick review of TypeScript basics and some bits beyond that you might use often.
-publishDate: 2024-01-16T01:01:35.585Z
+publishDate: 2024-02-18T01:07:00.000Z
 image: /assets/blog/speedrunning-typescript/speedrunning-typescript.png
 imageAlt: An image containing the text, "Speedrunning TypeScript".
 imageCaption: An image containing the text, "Speedrunning TypeScript".
