@@ -1,9 +1,9 @@
 import type { JSX } from 'preact';
 import {
-  ButtonColorSchemes,
   BUTTON_COLOR_SCHEMES,
   changeButtonColorScheme
 } from '../../helpers/tag-styles';
+import type { ButtonColorSchemes } from '../../helpers/tag-styles';
 
 export function Button({
   children,

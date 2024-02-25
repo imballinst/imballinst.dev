@@ -239,3 +239,27 @@ pre.line-numbers > code {
   padding-right: 0.8rem;
   text-align: right;
 }
+
+/* Make scrolls to not "headbutt". */
+/* Reference: https://css-tricks.com/hash-tag-links-padding. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  scroll-margin-top: 64px;
+  scroll-snap-margin-top: 64px; /* iOS 11 and older */
+}
+
+/* If the browser supports the property... */
+@supports (scroll-margin-top: 0) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: 64px;
+  }
+}

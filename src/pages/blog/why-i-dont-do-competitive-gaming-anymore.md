@@ -84,10 +84,10 @@ Whether you are going for sports or esports, you will need to dedicate your life
 
 In esports, other than winning tournaments, one can also try to stream their gameplay. Streaming is another tricky topic. Not all famous players can gather crowds to watch their gameplay. It requires social skills and consistency [to stream on schedule]. However, if you succeed in both aspects, you have a chance in building your own community who will subscribe or even donate to you for making their day.
 
-One thing for sure, I don't think esports at the moment is as stable as real sports especially during these pandemic times. A team recently [released all of their players](https://twitter.com/TeamGeekFam/status/1303649355736346624) due to the uncertainty of the DotA 2 tournaments. Also, usually Valve held a lot of DotA 2 major on-site tournaments in a year. However, due to this COVID-19 situation, there are only online tournaments and their prize pools are not as big as official Valve’s DotA 2 major tournaments.
+One thing for sure, I don't think esports at the moment is as stable as real sports especially during these pandemic times. A team recently [released all of their players](https://twitter.com/TeamGeekFam/status/1303649355736346624) due to the uncertainty of the DotA 2 tournaments. Also, usually Valve held a lot of DotA 2 major on-site tournaments in a year. However, due to this COVID-19 situation, there are only online tournaments and their prize pools are not as big as official Valve's DotA 2 major tournaments.
 
 ## Now, I am...
 
 The year is 2020. Currently, I am working as a front-end engineer at [Tetrate.io](https://www.tetrate.io/) and I am quite happy with it. I have flexible working hours, I am getting experience working with people around the globe, I am getting good amounts of money, and again, my stress level is not as high as when I am competing in a tournament.
 
-One day, I hope esports will become on-par with real sports. I hope families and society will adapt to this industry and accept that playing games can be a career. Now, I’m working on another dream. A dream to build a healthy family -- physically and emotionally.
+One day, I hope esports will become on-par with real sports. I hope families and society will adapt to this industry and accept that playing games can be a career. Now, I'm working on another dream. A dream to build a healthy family -- physically and emotionally.
