@@ -44,7 +44,7 @@ In my case, thankfully my platelet count didn't drop too low to the extent that 
 
 I went back to the Mayo Clinic's article and figured out that viral infection can also contribute to lower platelet production. This aligns with what my doctor said, which led to the next question: _"How did the virus infect my body if I had an immune system?"_
 
-I know that when we are healthy viruses can't break through our body's immune system, so I searched for possible factors that may weaken the immune system. I discovered this article ["Stress, Illness and the Immune System"](https://www.simplypsychology.org/stress-immune.html), which its writer claimed, _"When we’re stressed, the immune system’s ability to fight off antigens is reduced. That is why we are more susceptible to infections"_.
+I know that when we are healthy viruses can't break through our body's immune system, so I searched for possible factors that may weaken the immune system. I discovered this article ["Stress, Illness and the Immune System"](https://www.simplypsychology.org/stress-immune.html), which its writer claimed, _"When we're stressed, the immune system's ability to fight off antigens is reduced. That is why we are more susceptible to infections"_.
 
 I also discovered a similar fact from Healthline, ["Effects of Anxiety on the Body"](https://www.healthline.com/health/anxiety/effects-on-body#Immune-system). The following is a direct quote from the article.
 

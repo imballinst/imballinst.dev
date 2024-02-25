@@ -1,14 +1,23 @@
-import type { JSX } from 'preact/jsx-runtime';
 import type { Heading } from '../../helpers/markdown';
+import { Link } from '../Links';
 
-export function TableOfContents({ headings }: { headings: Heading[] }) {
-  const elements: JSX.Element[] = [];
-  let previousHeading: Heading | undefined;
+export function TableOfContents({ root }: { root: Heading }) {
+  return <List headings={root.children} />;
+}
 
-  for (const heading of headings) {
-    // TODO
-    previousHeading = heading;
-  }
+// Composing functions.
+function List({ headings }: { headings: Heading[] }) {
+  if (headings.length === 0) return null;
 
-  return <ul>{elements}</ul>;
+  return (
+    <ul>
+      {headings.map((heading) => (
+        <li key={heading.id} className="pl-4">
+          <Link href={`#${heading.id}`}>{heading.text}</Link>
+
+          <List headings={heading.children} />
+        </li>
+      ))}
+    </ul>
+  );
 }

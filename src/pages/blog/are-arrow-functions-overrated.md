@@ -14,7 +14,7 @@ Hello, it's the tech side of me again! It has been awhile, my latest tech-relate
 
 ## What is an arrow function expression?
 
-According to the MDN Docs, arrow functions are _"a compact alternative to a traditional function expression, but is limited and can't be used in all situations"_. So, it **can** replace normal function expression in _some_ conditions. Let’s see some examples of it.
+According to the MDN Docs, arrow functions are _"a compact alternative to a traditional function expression, but is limited and can't be used in all situations"_. So, it **can** replace normal function expression in _some_ conditions. Let's see some examples of it.
 
 ```ts
 // Normal function expression.

@@ -8,6 +8,7 @@ import { Text } from '../components/Typography';
 import { Link } from '../components/Links';
 import { FeedbackModal } from '../components/Modal';
 import { EditIcon } from '../components/Icons';
+import { TableOfContents } from '../components/TableOfContents/TableOfContents';
 import { getAllHeadingIds } from '../helpers/markdown';
 
 const { content = {} } = Astro.props;
@@ -23,7 +24,7 @@ const {
 } = content;
 
 const fileContent = readFileSync(file, 'utf-8')
-const headings = getAllHeadingIds(fileContent)
+const rootHeading = getAllHeadingIds(fileContent)
 
 let slug = Astro.url.pathname;
 if (slug.endsWith('/')) {
@@ -47,7 +48,11 @@ const editPage = `https://github.com/imballinst/imballinst.dev/edit/main/src/pag
     />
 
     <div class="mt-4">
-      
+      <div class="text-black dark:text-gray-200 py-4 border-y border-gray-200 dark:border-gray-600 space-y-4">
+        <div class="text-2xl pl-4">Table of contents</div>
+
+        <TableOfContents root={rootHeading} />
+      </div>
 
       <slot />
     </div>

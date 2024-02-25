@@ -36,7 +36,7 @@ To nurture our inner child, there is this approach called ["reparenting"](https:
 >
 > This process is called reparenting.
 >
-> Reparenting is the act of giving yourself what you didn’t receive as a child.
+> Reparenting is the act of giving yourself what you didn't receive as a child.
 
 We _can_ have a child without having a child (if that makes sense). That child... is ourselves. By learning about parenting skills, we can do more self-talk and try to understand ourselves better. We can try to understand what we want, deep inside.
 

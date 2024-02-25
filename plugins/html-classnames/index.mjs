@@ -86,7 +86,7 @@ export default function htmlClassnamesPlugin() {
         child.type = 'html';
         child.children = undefined;
         child.value = `
-          <${tag} class="${DEFAULT_ATTRS[tag]}">
+          <${tag} class="${DEFAULT_ATTRS[tag]}" id="${convertHeadingToId(str)}">
             ${str}
           </${tag}>
         `;
@@ -321,4 +321,15 @@ function modifyAnchorNode({ node }) {
     node.properties.target = '_blank';
     node.properties.rel = 'noopener';
   }
+}
+
+/**
+ * @param {string} text
+ * @returns
+ */
+function convertHeadingToId(text) {
+  return text
+    .toLowerCase()
+    .replace(/\s/g, '-')
+    .replace(/[^a-zA-Z0-9-]/g, '');
 }
