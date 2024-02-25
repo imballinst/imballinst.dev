@@ -37,9 +37,10 @@ const BLOCKQUOTE_PARAGRAPH_CLASS = DEFAULT_ATTRS.p.replace(
 );
 
 export default function htmlClassnamesPlugin() {
-  return (tree) => {
+  return (/** @type {*} */ tree) => {
     for (const child of tree.children) {
       if (child.type === 'paragraph') {
+        /** @type {*} */
         const hast = toHast(child);
         hast.properties.class = DEFAULT_ATTRS.p;
 
@@ -82,15 +83,18 @@ export default function htmlClassnamesPlugin() {
       } else if (child.type === 'heading') {
         const str = toString(child);
         const tag = `h${child.depth}`;
+        const tagClass =
+          DEFAULT_ATTRS[/** @type {keyof typeof DEFAULT_ATTRS} */ (tag)];
 
         child.type = 'html';
         child.children = undefined;
         child.value = `
-          <${tag} class="${DEFAULT_ATTRS[tag]}" id="${convertHeadingToId(str)}">
+          <${tag} class="${tagClass}" id="${convertHeadingToId(str)}">
             ${str}
           </${tag}>
         `;
       } else if (child.type === 'list') {
+        /** @type {*} */
         const hast = toHast(child);
         hast.properties.class = `${TEXT_COLOR} list-decimal pl-8`;
 
@@ -122,6 +126,7 @@ export default function htmlClassnamesPlugin() {
         child.value = html;
         child.children = undefined;
       } else if (child.type === 'blockquote') {
+        /** @type {*} */
         const hast = toHast(child);
 
         const pureTextArray = [];
@@ -152,9 +157,11 @@ export default function htmlClassnamesPlugin() {
         }
 
         const pureHast = [];
+        /** @type {*} */
         let lastParagraph;
 
         for (const el of pureTextArray) {
+          /** @type {Record<string, string | undefined>} */
           const properties = {};
 
           if (el === NEW_LINE) {
@@ -197,6 +204,7 @@ export default function htmlClassnamesPlugin() {
         child.value = html;
         child.children = undefined;
       } else if (child.type === 'thematicBreak') {
+        /** @type {*} */
         const hast = toHast(child);
         hast.properties.class = `border-gray-200 dark:border-gray-600`;
 
@@ -206,10 +214,13 @@ export default function htmlClassnamesPlugin() {
         child.value = html;
         child.children = undefined;
       } else if (child.type === 'table') {
+        /** @type {*} */
         const hast = toHast(child);
         hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} border-gray-200 dark:border-gray-600 w-full text-sm`;
 
+        // @ts-ignore
         const head = hast.children.find((e) => e.tagName === 'thead');
+        // @ts-ignore
         const body = hast.children.find((e) => e.tagName === 'tbody');
 
         for (const tr of head.children) {
@@ -264,9 +275,17 @@ export default function htmlClassnamesPlugin() {
 }
 
 // Function helpers.
+
+/**
+ * @param {string} href
+ * @returns
+ */
 const isExternalLink = (href) =>
   !href.includes('imballinst.netlify.app') && !href.includes('imballinst.dev');
 
+/**
+ * @param {*} obj
+ */
 function modifyAnchorNode({ node }) {
   node.properties.class =
     'text-teal-600 dark:text-teal-300 hover:underline break-words inline';

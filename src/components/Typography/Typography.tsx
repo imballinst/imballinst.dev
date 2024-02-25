@@ -3,9 +3,9 @@ import {
   changeTextColorScheme,
   DEFAULT_ATTRS,
   DEFAULT_MARGINS,
-  TEXT_COLOR,
-  ColorSchemes
+  TEXT_COLOR
 } from '../../helpers/tag-styles';
+import type { ColorSchemes } from '../../helpers/tag-styles';
 
 type Child = JSX.Element | string | undefined;
 

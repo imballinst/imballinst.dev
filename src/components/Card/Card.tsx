@@ -1,10 +1,11 @@
 import { format } from 'date-fns';
-import { JSX } from 'preact';
+import type { JSX } from 'preact';
 
 import { ExternalLinkIcon } from '../Links';
 import { getImageProps } from '../../helpers/image';
 
-import { Text, TextProps } from '../Typography';
+import { Text } from '../Typography';
+import type { TextProps } from '../Typography';
 
 import './Card.css';
 

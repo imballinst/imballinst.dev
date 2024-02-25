@@ -1,4 +1,4 @@
-import { IconsCommonProps } from './common';
+import type { IconsCommonProps } from './common';
 
 // From https://chakra-ui.com/docs/media-and-icons/icon.
 export function CheckIcon(props: IconsCommonProps) {

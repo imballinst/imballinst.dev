@@ -1,5 +1,5 @@
 import { Link } from '../Links';
-import { Page } from '../../helpers/paths';
+import type { Page } from '../../helpers/paths';
 
 export interface BreadcrumbHeaderProps {
   pages: Page[];
