@@ -24,3 +24,4 @@ pnpm-debug.log*
 .netlify
 
 .yarn/install-state.gz
+.yarn/cache
