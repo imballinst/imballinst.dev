@@ -353,4 +353,4 @@ type FunctionReturnTypeWithoutPromise = ExtractTypeFromPromise<FunctionReturnTyp
 // ^ number
 ```
 
-As we can see below, the `infer PromiseType` in `TypeArg extends Promise<infer PromiseType>` means it is extracting the `number` value from `Promise<number>`. This is the same result as the [utility type Awaited](https://www.typescriptlang.org/docs/handbook/utility-types.html#awaitedtype).
+As we can see above, the `infer PromiseType` in `TypeArg extends Promise<infer PromiseType>` means it is extracting the `number` value from `Promise<number>`. This is the same result as the [utility type Awaited](https://www.typescriptlang.org/docs/handbook/utility-types.html#awaitedtype).
