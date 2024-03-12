@@ -34,7 +34,7 @@ a = 'hello';
 // ^ Type 'string' is not assignable to type 'number'.
 ```
 
-Nice and easy. We still use plain JavaScript, we don't need compilation, but we get TypeScript features to at least warn us in our IDE. If you need JavaScript to support a rather complex type, check out my other post: [JSDoc, a Stairway to TypeScript](./jsdoc-stairway-to-typescript.md).
+Nice and easy. We still use plain JavaScript, we don't need compilation, but we get TypeScript features to at least warn us in our IDE. If you need JavaScript to support a rather complex type, check out my other post: [JSDoc, a Stairway to TypeScript](./jsdoc-stairway-to-typescript).
 
 ## TypeScript basics
 
