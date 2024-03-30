@@ -22,6 +22,7 @@ export function getAllHeadingIds(content: string) {
 // Helper functions.
 function convertHeadingToId(text: string) {
   return text
+    .trim()
     .toLowerCase()
     .replace(/\s/g, '-')
     .replace(/[^a-zA-Z0-9-]/g, '');
