@@ -96,29 +96,7 @@ export default function htmlClassnamesPlugin() {
       } else if (child.type === 'list') {
         /** @type {*} */
         const hast = toHast(child);
-        hast.properties.class = `${TEXT_COLOR} list-decimal pl-8`;
-
-        for (const el of hast.children) {
-          el.properties = { class: 'pl-1' };
-
-          if (el.children) {
-            for (const listChild of el.children) {
-              if (
-                listChild.tagName === 'a' &&
-                listChild.children?.length === 1 &&
-                listChild.children?.[0].type === 'text'
-              ) {
-                modifyAnchorNode({ node: listChild });
-              } else if (
-                listChild.tagName === 'code' &&
-                listChild.children?.length === 1 &&
-                listChild.children?.[0].type === 'text'
-              ) {
-                listChild.children[0].value = `\`${listChild.children[0].value}\``;
-              }
-            }
-          }
-        }
+        addListStyle(hast);
 
         const html = toHtml(hast);
 
@@ -351,4 +329,36 @@ function convertHeadingToId(text) {
     .toLowerCase()
     .replace(/\s/g, '-')
     .replace(/[^a-zA-Z0-9-]/g, '');
+}
+
+/**
+ *
+ * @param {*} element
+ */
+function addListStyle(element) {
+  element.properties.class = `${TEXT_COLOR} list-decimal pl-8`;
+
+  for (const el of element.children) {
+    el.properties = { class: 'pl-1' };
+
+    if (el.children) {
+      for (const listChild of el.children) {
+        if (
+          listChild.tagName === 'a' &&
+          listChild.children?.length === 1 &&
+          listChild.children?.[0].type === 'text'
+        ) {
+          modifyAnchorNode({ node: listChild });
+        } else if (
+          listChild.tagName === 'code' &&
+          listChild.children?.length === 1 &&
+          listChild.children?.[0].type === 'text'
+        ) {
+          listChild.children[0].value = `\`${listChild.children[0].value}\``;
+        } else if (listChild.tagName === 'ul') {
+          addListStyle(listChild);
+        }
+      }
+    }
+  }
 }
