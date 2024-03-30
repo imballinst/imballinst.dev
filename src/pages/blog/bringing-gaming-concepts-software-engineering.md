@@ -48,7 +48,7 @@ However, the same rules in speedruns apply here, too. The first runs of an encou
 If we don't know the whole process, we won't be able to determine the parts that we can optimize.
 :::
 
-There is also another term, usually called "greed". Let's take the example of taking a train. Your train departs at 13:30 and at the moment it's 10:00. The travel time between your home and the train station is around 30 minutes. At the moment, you are busy doing work. You can bring your laptop to the train station and continue the work there, but the surroundings aren't as optimal compared to your home. So, we will be torn between 2 choices. Guarantee our train ride while sacrificing our productivity, or risk our train ride while maintaining our productivity? 
+There is also another term, usually called "greed". Let's take the example of taking a train. Your train departs at 13:30 and at the moment it's 10:00. The travel time between your home and the train station is around 30 minutes. At the moment, you are busy doing work. You can bring your laptop to the train station and continue the work there, but the surroundings aren't as optimal compared to your home. So, we will be torn between 2 choices. Guarantee our train ride while sacrificing our productivity, or risk our train ride while maintaining our productivity?
 
 That is the analogy for "greed" in gaming. It's all about risk management. When your character's HP is low, do you want to heal yourself, or can you somehow optimize not getting hit by the enemy's actions so you can do more DPS?
 
@@ -82,7 +82,7 @@ export function LoginPage() {
 
       <SSOLogin />
     </div>
-  )
+  );
 }
 
 // Components used in the login page ONLY.
