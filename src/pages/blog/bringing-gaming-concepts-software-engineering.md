@@ -14,7 +14,7 @@ Hello there! Hope you are doing OK. Time flies kinda super fast these days. I fe
 
 ## What is an "encounter"?
 
-As we know, there are a lot of games that involve a lot of encounters (or fights), such as those with genre Action and Role Playing Games (RPG). Usually, the encounters consist of trash mobs (the minions of the antagonists) and bosses (the antagonists).
+As we know, there are a lot of games that involve a lot of encounters (or fights), such as those with genre Action and Role-Playing Game (RPG). Usually, the encounters consist of trash mobs (the minions of the antagonists) and bosses (the antagonists).
 
 Each enemy _may_ have different strengths and weaknesses, for example, maybe some enemies are weak to physical attacks whereas some others are weak to magical attacks. Magical attacks may have different "aspects" (or "elements"), such as fire, water, wind, and lightning. Some enemies may be weak to one, absorb another, and resistant/normal to the rest.
 
@@ -32,7 +32,7 @@ Don't ask me about the first run. I think it was around 8 hours or something. Th
 
 ## Logging and parsing
 
-In the context of MMORPG, we have this term called "log parsing". It works by reading the game's combat log and transforming it into metrics. Some common metrics include:
+In the context of Massive(ly) Multiplayer Online Role-Playing Game (MMORPG), we have this term called "log parsing". It works by reading the game's combat log and transforming it into metrics. Some common metrics include:
 
 - Damage Per Second (DPS): how much damage are you doing per second during the encounter.
 - Damage Done: how much damage you do over the encounter.
