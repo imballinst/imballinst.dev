@@ -168,7 +168,7 @@ const db = {
 
 However, for `calculator.js`, it's a bit tricky, because function overloading and TypeScript aren't exactly the best friends.
 
-```ts
+```ts {14, 24-30, 42}
 function sum2Numbers(a: number, b: number) {
   return a + b;
 }
@@ -182,7 +182,6 @@ function sum(...numbers: number[]) {
   } else if (arguments.length === 1 && Array.isArray(arguments[0])) {
     array = numbers;
   } else {
-    // highlight-next-line
     array = arguments as any;
   }
 
@@ -193,7 +192,6 @@ function sum(...numbers: number[]) {
   return total;
 }
 
-// highlight-start
 interface SumOverload {
   sum: {
     (a: number, b: number): number;
@@ -201,7 +199,6 @@ interface SumOverload {
     (...numbers: number[]): number;
   };
 }
-// highlight-end
 
 const sumOverload: SumOverload = {
   sum(numbers: any): any {
@@ -213,7 +210,6 @@ const sumOverload: SumOverload = {
     } else if (arguments.length === 1 && Array.isArray(arguments[0])) {
       array = numbers;
     } else {
-      // highlight-next-line
       array = arguments as any;
     }
 
@@ -230,8 +226,7 @@ For the `sum` function, we need to cast `arguments` to `any` because `number[]` 
 
 Lastly, the `test.js` is just the same, except the function definition for `assertEqual`.
 
-```ts
-// highlight-next-line
+```ts {1}
 function assertEqual(a: any, b: any) {
   if (a != b) {
     throw new Error(`${a} not equal ${b}`);
