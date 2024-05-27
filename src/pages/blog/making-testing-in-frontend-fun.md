@@ -12,7 +12,7 @@ layout: '../../layouts/BlogPost.astro'
 
 Heya! Hope you are doing well. This will be rather a short post. Well, hopefully, anyway. Recently I have been trying to be more diligent in writing tests in my daily work, be it for frontend (unit, component, or page) and backend (functions that are called by controllers, I guess they fall to "unit" as well?).
 
-Building this habit is not easy, not sure why, maybe because I have this habit of testing locally during the development time? So, if it works, then it's all good. There are a lot of reasons not to write tests, such as, "There will be Quality Assurance (QA) engineers who test them", "There is no time to write tests", and "There is no one to maintain the tests".
+Building this habit is not easy, not sure why, maybe because I have this habit of testing locally during the development time? So, if it works, then it's all good. There are a lot of reasons not to write tests, such as, _"There will be Quality Assurance (QA) engineers who test them"_, _"There is no time to write tests"_, and _"There is no one to maintain the tests"_.
 
 Well, I'm here to debunk those questions. Here goes!
 
@@ -40,11 +40,11 @@ With all of the explanations in the previous answers, I think we don't have a re
 
 1. We can confidently ship new features, bug fixes, and improvements without having to do regression tests _that_ often.
 2. We can sleep peacefully at night knowing bugs and/or incidents happen less often.
-3. We help our QAs (or those with similar responsibilities) reduce their load, allowing them to be more focused and explorative.
+3. We help our QAs (or those with similar responsibilities) by reducing their load, allowing them to be more focused and explorative.
 
-One thing is for sure, we _do not_ want to disable tests when they fail unless absolutely necessary. When tests fail, ask ourselves this: "What is the worst that could happen if I turn it off?"
+One thing is for sure, we _do not_ want to disable tests when they fail unless absolutely necessary. When tests fail, ask ourselves this: _"What is the worst that could happen if I turn it off?"_
 
-Imagine if we update our codebase and then the tests related to the Login feature fail. Do we still to bring our changes to production? Speaking for myself, absolutely not.
+Imagine if we update a random part in our codebase and then the tests related to the Login feature fail. Do we still want to bring our changes to production? Speaking for myself, absolutely not.
 
 ## How to make it fun
 
@@ -52,21 +52,21 @@ As I wrote above, testing isn't fun at first, because making that habit is not e
 
 ### Track the effort
 
-Firstly, metrics! There is no better way to prove that all tests that you have written are worth it without the data. Check out how many bugs (maybe focus on regression) that happened during past development cycles and see if the numbers are reduced as we add more tests.
+Firstly, metrics! There is no better way to prove that all tests that you have written are worth it. Check out how many bugs (maybe focus on regression) that happened during past development cycles and see if the numbers are reduced as we add more tests.
 
-For example, maybe previously every time we implemented something, we introduced an unrelated bug. However, with the tests guarding our development cycle, we could catch the regression in PRs, ensuring that we have both more robust software and a faster development cycle.
+For example, maybe previously every time we implemented something, we introduced an unrelated bug. However, with the tests guarding our development cycle, we can catch the regression in PRs, ensuring we have more robust software and faster development cycle.
 
-This could be great proof that we are not only building good software but also a good culture. Get your name shining with those shining numbers.
+This could be great proof that we are not only building quality software but also a good culture. Get your name shining with those sparkling numbers.
 
 ### Know how to test
 
-Imagine if we are implementing a feature, but we don't know how to manually test it. It's as frustrating as not knowing how to write an automated test. _Usually_, what makes something hard to test is because it is too complex. For example, module B depends on module A, which is a very big module in itself, so when we want to test module B, we also have to set up module A, which can't be done because of one or other reasons (e.g. maybe module A is using framework-specific variables).
+Imagine if we are implementing a feature, but we don't know how to manually test it. It's as frustrating as not knowing how to write an automated test. _Usually_, what makes something hard to test is because it is too complex. For example, module B depends on module A, which is a very big module in itself, so when we want to test module B, we also have to set up module A, which can't be done because of one or other reasons (e.g. maybe module A is using framework-specific variables, so that is another dependency that we have to set up).
 
 In that case, what we can do is that, we "extract the core" functionality of module B that doesn't require module A. Let's imagine that the flow is like this:
 
 1. Module A instantiates module B
 2. Module B does the initialization and all that
-3. Module B fetches a list of repositories from a service
+3. Module B fetches a list of repositories from GitHub
 4. Module A uses the fetched list and stores it in a variable
 
 If we want to test module B, we can test from step 1, or we can start smaller, for example at step 2 or step 3. _If_ at step 2 we require framework-specific stuff that is not available in the test environment, then we may have to refactor how module B is instantiated. For example:
@@ -82,20 +82,20 @@ class ModuleA {
 }
 ```
 
-In the case above, we want to use `context.username` to be passed to `ModuleB`'s constructor. We will only be using the `context.username` because it will determine the URL that we will be using to fetch the list of repositories. This is unnecessary, why? Because we only need `context.username`, we don't need the whole `context`. If we refactor it to the following:
+In the case above, we want to use `context.username` to be passed to `ModuleB`'s constructor. The value `context.username` will be part of the URL that we will be using to fetch the list of repositories. This is unnecessary, why? Because we only need `context.username`, we don't need the whole `context`. If we refactor it to the following:
 
 ```diff
- class ModuleA {
- moduleB: ModuleB
+  class ModuleA {
+    moduleB: ModuleB
 
- constructor(context: SomeFrameworkContext) {
+    constructor(context: SomeFrameworkContext) {
 -     this.moduleB = new ModuleB(context)
 +     this.moduleB = new ModuleB(context.username)
- }
- }
+    }
+  }
 ```
 
-By changing the `ModuleB`'s API that way, we don't have to construct the whole `context` variable in our tests.
+By changing the `ModuleB`'s API that way, we don't have to construct the whole `context` variable in our tests, making it easier to set up.
 
 ### Know what to test
 
@@ -108,7 +108,7 @@ test('working', () => {
 });
 ```
 
-If we are using the case above that `ModuleB` will be used to fetch a list of repositories, we want to fetch if the URL to fetch from is correct. There are a lot of tools that can help with this, and one of them is [MSW (Mock Service Worker)](https://mswjs.io). It can be used in a browser environment and Node.js environment, so we can easily mock endpoints that will be hit by `ModuleB`. The test flow can be something like this:
+Let's use the our example case above, where `ModuleB` will be used to fetch a list of repositories. One way to test it is by making sure that the module sends a HTTP request to the correct URL. There are a lot of tools that can help with this, and one of them is [MSW (Mock Service Worker)](https://mswjs.io). It can be used in a browser environment and Node.js environment, so we can easily mock endpoints that will be hit by `ModuleB`. The test flow can be something like this:
 
 ```ts
 afterEach(() => {
@@ -140,7 +140,7 @@ The above may look simple, but we are testing both happy and non-happy cases. Th
 
 ### Treat tests as a way to verify a bug
 
-I read somewhere that once, there was this person who's actively contributing to Open-Source Software (OSS). They noticed a bug in a certain repository and on top of opening an issue, what did they do? They open a PR with an added test reflecting the bug. Needless to say, the PR's build failed. However, the value brought by that PR was immense. Maintainers usually expect some kind of reproduction, usually in the form of an online sandbox or a repository with very minimal content. With that "failing PR", they do not have to look far: just fix the test and they will fix the issue as well.
+I read somewhere that once, there was this person who was actively contributing to Open-Source Software (OSS). They noticed a bug in a certain repository and on top of opening an issue, what did they do? They opened a PR with an added test reflecting the bug. Needless to say, the PR's build failed. However, the value brought by that PR was immense. Maintainers usually expect some kind of bug reproduction, usually in the form of an online sandbox or a repository with very minimal content. With that "failing PR", they do not have to look far: just fix the test and they will fix the issue as well.
 
 The same can be applied when we want to fix a bug. Start with a test, confirm that the bug can be reproduced programmatically, then work on the fix. Then, feel how good that is to see the previously failing test, now successful.
 
