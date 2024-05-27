@@ -22,15 +22,15 @@ Well, I'm here to debunk those questions. Here goes!
 
 Okay, let's say that we have QA folks who will help us test the stuff after we have finished developing them. This feature is called "Feature A". They will write test cases around the thing that we have developed, both positive and negative test cases. Afterward, they do manual QA, confirm the functionality and the feature gets shipped. All is well and good.
 
-...until the feature breaks. For some reasons. Turns out, the feature breaks because we updated certain helper functions that are completely unrelated to Feature A since we need to update it for other features, say, Feature B.
+...until the feature breaks. For some reasons. Turns out, the feature breaks because we updated certain helper functions that are used in Feature A during the development of, say, Feature B.
 
-It is very, very uncomfortable for QAs to do regression testing every time something gets added, updated, or deleted. Put our place in theirs. Do we want, as software engineers, to test all functionalities when we implement a new one? That gives the impression that the software is not robust.
+It is very, very uncomfortable for QAs to do regression testing every time something gets added, updated, or deleted. Put our place in theirs. Do we want, as software engineers, to test all functionalities when we implement a new one? That gives the impression that the software is flaky.
 
 At the end of the day, QAs are still human. We software engineers are still human. We both are capable of making mistakes. So, it is not fair if we rely on the whole "system stability" to them. If there is a way to help them ease their burden, we should do it.
 
 ### "There is no time to write tests"
 
-This is very understandable. We don't always have the luxury of time when developing something. However, let's count the number of times when you need to wake up at night to be "activated" to fix a bug in production. Would you trade those "awkward hours" for the burden of writing tests? I would definitely do it. There is no better feeling than knowing that you can sleep peacefully at night. You sleep better and you can be productive the next day.
+This is very understandable. We don't always have the luxury of time when developing something. However, let's count the number of times when you were "activated" at night to fix a bug in production. Would you trade those "awkward hours" for the burden of writing tests? I would definitely do it. There is no better feeling than knowing that you can sleep peacefully at night. You get a better quality sleep and you can be productive the next day.
 
 Think of testing as an investment. There is no time to write tests, why? Is writing tests too hard? Then, get used to it. For sure it will be tough when we're not used to it. However, as we get familiar with the inside and out, all will be worth it. We will be faster in writing tests when the muscle memory has been built. On top of that, who doesn't love seeing checklists in the terminal log? We can also taste that sweet green Continuous Integration (CI) status in our branches and Pull Requests (PRs). Nothing is cooler than confidently shipping new stuff without breaking anything.
 
@@ -152,4 +152,4 @@ Alright, let's wrap it up with the list of benefits that we get from writing tes
 2. We can sleep peacefully at night knowing bugs and/or incidents happen less often.
 3. We help our QAs (or those with similar responsibilities) reduce their load, allowing them to be more focused and explorative.
 
-_"W-wait, those are the same bullet points written in one of the sections above!"_ Well, yeah, that's the point. Let's keep those 3 points in mind so that hopefully, we all can create awesome stuff without having to wake up at night to fix some bugs 😄
+_"W-wait, those are the same bullet points written in one of the sections above!"_ Well, yeah, that's the point. Let's deeply root those 3 points above in our mind, so that hopefully, we all can create awesome stuff without having to wake up at night to fix some bugs 😄
