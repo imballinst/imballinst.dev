@@ -10,9 +10,9 @@ function List({ headings }: { headings: Heading[] }) {
   if (headings.length === 0) return null;
 
   return (
-    <ul>
+    <ul className="pl-4 list-disc">
       {headings.map((heading) => (
-        <li key={heading.id} className="pl-4">
+        <li key={heading.id}>
           <Link href={`#${heading.id}`}>{heading.text}</Link>
 
           <List headings={heading.children} />
