@@ -336,7 +336,7 @@ function convertHeadingToId(text) {
  * @param {*} element
  */
 function addListStyle(element) {
-  element.properties.class = `${TEXT_COLOR} list-decimal pl-8`;
+  element.properties.class = `${TEXT_COLOR} list-decimal pl-8 mb-4`;
 
   for (const el of element.children) {
     el.properties = { class: 'pl-1' };
