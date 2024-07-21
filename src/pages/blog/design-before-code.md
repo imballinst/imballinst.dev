@@ -49,7 +49,7 @@ From the questions above, we will have a clearer process (which we usually call 
     <label htmlFor="email">Email</label>
 
     <input id="email" type="email" placeholder="hello@example.com" />
- <div>
+  <div>
 
   <div className="flex flex-col">
     <label htmlFor="password">Password</label>
