@@ -24,8 +24,8 @@ That's problem-solving, right? We have a problem (input) and we need a solution 
 
 Now, with that in mind that "process" is the bridge between "input" and "output", what do we do? That depends. If the process is simple enough, maybe we can just start coding right away. However, if the process is not that straightforward, I recommend writing in human language first. For example, consider this scenario:
 
-- **Input (problem):** the user cannot log in because there is no interface to do it
-- **Output (solution):** a login page
+- **Input (problem):** the user cannot log in because there is no interface to do it.
+- **Output (solution):** a login page.
 
 It is clear what we should do: implement a login page. Now, here comes the process definition.
 
