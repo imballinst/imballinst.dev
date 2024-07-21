@@ -45,19 +45,19 @@ From the questions above, we will have a clearer process (which we usually call 
 
 ```jsx
 <form className="flex flex-col gap-y-2" method="post" action="/iam/authenticate">
- <div className="flex flex-col">
- <label htmlFor="email">Email</label>
+  <div className="flex flex-col">
+    <label htmlFor="email">Email</label>
 
- <input id="email" type="email" placeholder="hello@example.com" />
+    <input id="email" type="email" placeholder="hello@example.com" />
  <div>
 
- <div className="flex flex-col">
- <label htmlFor="password">Password</label>
+  <div className="flex flex-col">
+    <label htmlFor="password">Password</label>
 
- <InputPassword id="password" />
- <div>
+    <InputPassword id="password" />
+  <div>
 
- <button>Log in</button>
+  <button>Log in</button>
 </form>
 ```
 
