@@ -1,10 +1,10 @@
 ---
-title: 'Lead Engineer: Year One'
+title: 'Lead Software Engineer: Year One'
 description: I had the chance to become a Lead Software Engineer in 2023. This post reflects the things that I learned across the past 1 year.
 publishDate: 2024-05-26T15:43:16.123Z
 image: /assets/blog/lead-engineer-year-one/lead-engineer-year-one.png
-imageAlt: 'An image containing the text, "Lead Engineer: Year One"'.
-imageCaption: 'An image containing the text, "Lead Engineer: Year One"'.
+imageAlt: An image containing the text, "Lead Software Engineer: Year One".
+imageCaption: An image containing the text, "Lead Software Engineer: Year One".
 tags: software engineering
 visibility: public
 layout: '../../layouts/BlogPost.astro'
@@ -12,7 +12,9 @@ layout: '../../layouts/BlogPost.astro'
 
 Hello! Hope you are doing well. Things were pretty rocky for me past few weeks, mostly was super drained with interpersonal activities. If there is one thing to learn, I should have brought my trusty True Wireless Stereo (TWS) with me everywhere, so I can block out unpleasant noises.
 
-Anyway, in this post, I am going to write down what I have learned from my past year's experience being a Lead Software Engineer in a company with remote work scheme. I will try to be as anonymous as I can in describing situations. If you happen to know the context, then maybe you know, maybe you don't. Let's start!
+Anyway, in this post, I am going to write down what I have learned from my past year's experience being a Lead Software Engineer in a company with remote work scheme. This role covers mostly the Web area, so mostly frontend (UI) area and just only a bit about backend.
+
+I will try to be as anonymous as I can in describing situations. If you happen to know the context, then maybe you know, maybe you don't. Let's start!
 
 ## The beginning: people pleasing
 
