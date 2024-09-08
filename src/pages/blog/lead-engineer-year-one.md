@@ -1,10 +1,10 @@
 ---
 title: 'Lead Software Engineer: Year One'
 description: I had the chance to become a Lead Software Engineer in 2023. This post reflects the things that I learned across the past 1 year.
-publishDate: 2024-05-26T15:43:16.123Z
+publishDate: 2024-09-08T10:51:22.220Z
 image: /assets/blog/lead-engineer-year-one/lead-engineer-year-one.png
-imageAlt: An image containing the text, "Lead Software Engineer: Year One".
-imageCaption: An image containing the text, "Lead Software Engineer: Year One".
+imageAlt: An image containing the text, "Lead Software Engineer&colon; Year One".
+imageCaption: An image containing the text, "Lead Software Engineer&colon; Year One".
 tags: software engineering
 visibility: public
 layout: '../../layouts/BlogPost.astro'
