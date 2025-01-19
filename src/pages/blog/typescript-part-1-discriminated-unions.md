@@ -1,16 +1,16 @@
 ---
-title: 'TypeScript: Part 1, Discriminated Union'
-description: This post contains examples of how we can utilize the concept of discriminated union in TypeScript.
+title: 'TypeScript: Part 1, Discriminated Unions'
+description: This post contains examples of how we can utilize the concept of discriminated unions in TypeScript.
 publishDate: 2025-01-19T01:07:00.000Z
 image: /assets/blog/typescript-part-1-discriminated-unions/typescript-part-1-discriminated-unions.png
-imageAlt: 'An image containing the text, "TypeScript: Part 1, Discriminated Union".'
-imageCaption: 'An image containing the text, "TypeScript: Part 1, Discriminated Union".'
+imageAlt: 'An image containing the text, "TypeScript: Part 1, Discriminated Unions".'
+imageCaption: 'An image containing the text, "TypeScript: Part 1, Discriminated Unions".'
 tags: software engineering, typescript
 visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Hi! Hope you are doing well. This post is a continuation of the previous [Speedrunning TypeScript](./speedrunning-typescript.md) post. If you haven't read that yet, I recommend checking that out, especially the part about TypeScript generics. Let's start it out by revisiting discriminated unions.
+Hi! Hope you are doing well. This post is a continuation of the previous [Speedrunning TypeScript](./speedrunning-typescript) post. If you haven't read that yet, I recommend checking that out, especially the part about TypeScript generics. Let's start it out by revisiting discriminated unions.
 
 ## Discriminated union
 
