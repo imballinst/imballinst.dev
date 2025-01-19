@@ -12,7 +12,7 @@ async function main() {
     .use(htmlClassnamesPlugin)
     .process(
       `
-[\`Test link with code outside list\`](https://example1.com)
+[hello \`Test link with code outside list\` world](https://example1.com)
 
 - [Test link](https://example2.com)
 - [\`Test link with code\`](https://example3.com)

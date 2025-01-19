@@ -63,7 +63,6 @@ export default function htmlClassnamesPlugin() {
             // Process others.
             if (
               paragraphChild.tagName === 'a' &&
-              paragraphChild.children?.length === 1 &&
               shouldModifyAnchorNode(paragraphChild.children?.[0])
             ) {
               modifyAnchorNode({ node: paragraphChild });
@@ -345,7 +344,6 @@ function addListStyle(element) {
       for (const listChild of el.children) {
         if (
           listChild.tagName === 'a' &&
-          listChild.children?.length === 1 &&
           shouldModifyAnchorNode(listChild.children?.[0])
         ) {
           modifyAnchorNode({ node: listChild });
