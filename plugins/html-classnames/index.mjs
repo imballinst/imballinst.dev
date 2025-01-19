@@ -64,7 +64,7 @@ export default function htmlClassnamesPlugin() {
             if (
               paragraphChild.tagName === 'a' &&
               paragraphChild.children?.length === 1 &&
-              paragraphChild.children?.[0].type === 'text'
+              shouldModifyAnchorNode(paragraphChild.children?.[0])
             ) {
               modifyAnchorNode({ node: paragraphChild });
             } else if (
@@ -346,7 +346,7 @@ function addListStyle(element) {
         if (
           listChild.tagName === 'a' &&
           listChild.children?.length === 1 &&
-          listChild.children?.[0].type === 'text'
+          shouldModifyAnchorNode(listChild.children?.[0])
         ) {
           modifyAnchorNode({ node: listChild });
         } else if (
@@ -361,4 +361,15 @@ function addListStyle(element) {
       }
     }
   }
+}
+
+/**
+ *
+ * @param {*} element
+ */
+function shouldModifyAnchorNode(element) {
+  return (
+    element.type === 'text' ||
+    (element.type === 'element' && element.tagName === 'code')
+  );
 }
