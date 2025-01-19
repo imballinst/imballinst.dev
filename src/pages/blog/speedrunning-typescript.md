@@ -96,10 +96,11 @@ In the above example, notice that we are using `interface`. You might also know 
 There is no real difference in normal usage. _However_, `type` is typically used when we are using utility types (which is going to be explained in the next section). Consider this example:
 
 ```ts
-type SampleType = Pick<{ hello: string, test?: string }, 'hello'>; // this will pick the "hello" field only.
+type SampleType = Pick<{ hello: string; test?: string }, 'hello'>; // this will pick the "hello" field only.
 
 // If we want to "force" use the interface, it's going to be longer.
-interface SampleInterface extends Pick<{ hello: string, test?: string }, 'hello'> {}
+interface SampleInterface
+  extends Pick<{ hello: string; test?: string }, 'hello'> {}
 ```
 
 Another difference is that, if we hover over `SampleType`, it will show the list of fields that we can use for `SampleType`, whereas for `SampleInterface`, it will only show `interface SampleInterface`. This means, if we are using `interface`, we can get a rather "cleaner" hover view compared to `type`.
@@ -113,15 +114,15 @@ Okay, so let's say that we want to "combine" two or more types together. How can
 The syntax of union is `|`. It might be easier to express the usage with examples.
 
 ```ts
-type TestUnion = string | number | boolean
+type TestUnion = string | number | boolean;
 // ^ type TestUnion = string | number | boolean
 
-const isValidTestUnionType = (value: TestUnion) => true
+const isValidTestUnionType = (value: TestUnion) => true;
 
-isValidTestUnionType('') // no error
-isValidTestUnionType(123) // no error
-isValidTestUnionType(true) // no error
-isValidTestUnionType({})
+isValidTestUnionType(''); // no error
+isValidTestUnionType(123); // no error
+isValidTestUnionType(true); // no error
+isValidTestUnionType({});
 // ^ Argument of type '{}' is not assignable to parameter of type 'TestUnion'.
 ```
 
@@ -129,15 +130,15 @@ In the above example, we could see that in our IDE there is a TypeError when we 
 
 ```ts
 interface StructOne {
-  hello: string
+  hello: string;
 }
 
 interface StructTwo {
-  world: string
+  world: string;
 }
 
 function isValidStruct(value: StructOne | StructTwo) {
-  //The `value` here will not have an autocomplete
+  // The `value` here will not have an autocomplete
 }
 ```
 
@@ -145,21 +146,21 @@ In the `isValidStruct` function, if we type `value.`, then it will not provide f
 
 ```ts
 interface StructOne {
-  kind: "struct-one"
-  hello: string
+  kind: 'struct-one';
+  hello: string;
 }
 
 interface StructTwo {
-  kind: "struct-two"
-  world: string
+  kind: 'struct-two';
+  world: string;
 }
 
 function isValidStruct(value: StructOne | StructTwo) {
-  if (value.kind === "struct-one") {
-    return value.hello
+  if (value.kind === 'struct-one') {
+    return value.hello;
   }
 
-  return value.world
+  return value.world;
 }
 ```
 
@@ -169,15 +170,15 @@ Now, let's get to type intersection. Type intersection can be done by using `&`.
 
 ```ts
 interface StructOne {
-  hello: string
+  hello: string;
 }
 
 interface StructTwo {
-  world: string
+  world: string;
 }
 
 function isValidStruct(value: StructOne & StructTwo) {
-  return value.hello
+  return value.hello;
   // or return value.world
 }
 ```
@@ -200,8 +201,8 @@ TypeScript has built-in utility types that can be useful. Let's explore them! Fo
 `Exclude` is used to remove a union value. This is useful if you want to narrow down a union type from a union.
 
 ```ts
-type SampleUnion = "hello" | "world";
-type OmittedWorld = Exclude<SampleUnion, "world">;
+type SampleUnion = 'hello' | 'world';
+type OmittedWorld = Exclude<SampleUnion, 'world'>;
 // ^ type OmittedWorld = "hello"
 ```
 
@@ -214,7 +215,7 @@ interface SampleObject {
   hello: string;
   world: string;
 }
-type SampleObjectWithoutWorld = Omit<SampleObject, "world">;
+type SampleObjectWithoutWorld = Omit<SampleObject, 'world'>;
 // ^ type SampleObjectWithoutWorld = {
 //     hello: string;
 //   }
@@ -229,7 +230,7 @@ interface SampleObject {
   hello: string;
   world: string;
 }
-type SampleObjectWithoutWorld = Pick<SampleObject, "hello">;
+type SampleObjectWithoutWorld = Pick<SampleObject, 'hello'>;
 // ^ type SampleObjectWithoutWorld = {
 //     hello: string;
 //   }
@@ -322,10 +323,10 @@ The `extends` keyword can also be used to detect parts of an object type. Take t
 type IsFish<TypeArg> = TypeArg extends { swim(): void } ? true : false;
 
 interface Fish {
-  swim(): void
+  swim(): void;
 }
 interface Cat {
-  walk(): void
+  walk(): void;
 }
 
 type TestValue = IsFish<Fish>;
@@ -341,7 +342,11 @@ In the above example, we want to check if `TypeArg` is of type `Fish` or not. We
 With the `extends` keyword, we can also take advantage of the `infer` keyword. What is `infer`, exactly? The `infer` syntax is used to "extract" a value from another extended generic type. Take the following example.
 
 ```ts
-type ExtractTypeFromPromise<TypeArg> = TypeArg extends Promise<infer PromiseType> ? PromiseType : never;
+type ExtractTypeFromPromise<TypeArg> = TypeArg extends Promise<
+  infer PromiseType
+>
+  ? PromiseType
+  : never;
 
 async function test() {
   return 123;
@@ -349,7 +354,8 @@ async function test() {
 
 type FunctionReturnType = ReturnType<typeof test>;
 // ^ Promise<number>
-type FunctionReturnTypeWithoutPromise = ExtractTypeFromPromise<FunctionReturnType>;
+type FunctionReturnTypeWithoutPromise =
+  ExtractTypeFromPromise<FunctionReturnType>;
 // ^ number
 ```
 

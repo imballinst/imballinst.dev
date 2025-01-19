@@ -14,11 +14,11 @@ const ALTERNATIVE_TEXT_COLORS = {
 
 const DEFAULT_ATTRS = {
   h1: `${TEXT_COLOR} text-3xl font-bold my-6`,
-  h2: `${TEXT_COLOR} text-2xl font-bold my-4`,
-  h3: `${TEXT_COLOR} text-xl font-medium mt-4 my-2`,
-  h4: `${TEXT_COLOR} text-lg`,
-  h5: `${TEXT_COLOR} text-base`,
-  h6: `${TEXT_COLOR} text-sm`,
+  h2: `${TEXT_COLOR} text-2xl font-bold my-6`,
+  h3: `${TEXT_COLOR} text-xl font-medium my-6`,
+  h4: `${TEXT_COLOR} text-lg my-6`,
+  h5: `${TEXT_COLOR} text-base my-6`,
+  h6: `${TEXT_COLOR} text-sm my-6`,
   p: `${TEXT_COLOR} mt-3 mb-4 first:mt-0 last:mb-0`,
   strong: `${TEXT_COLOR} font-semibold`
 };
@@ -63,8 +63,7 @@ export default function htmlClassnamesPlugin() {
             // Process others.
             if (
               paragraphChild.tagName === 'a' &&
-              paragraphChild.children?.length === 1 &&
-              paragraphChild.children?.[0].type === 'text'
+              shouldModifyAnchorNode(paragraphChild.children?.[0])
             ) {
               modifyAnchorNode({ node: paragraphChild });
             } else if (
@@ -345,8 +344,7 @@ function addListStyle(element) {
       for (const listChild of el.children) {
         if (
           listChild.tagName === 'a' &&
-          listChild.children?.length === 1 &&
-          listChild.children?.[0].type === 'text'
+          shouldModifyAnchorNode(listChild.children?.[0])
         ) {
           modifyAnchorNode({ node: listChild });
         } else if (
@@ -361,4 +359,15 @@ function addListStyle(element) {
       }
     }
   }
+}
+
+/**
+ *
+ * @param {*} element
+ */
+function shouldModifyAnchorNode(element) {
+  return (
+    element.type === 'text' ||
+    (element.type === 'element' && element.tagName === 'code')
+  );
 }

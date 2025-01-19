@@ -12,15 +12,12 @@ async function main() {
     .use(htmlClassnamesPlugin)
     .process(
       `
-- [Indonesian Dota 2 Tournaments List](https://github.com/imballinst/d2l): This was a website that "scrapes" from Ligagame forums, where people usually posted tournaments and events. I built it with jQuery, Bootstrap, and Angular.
-- [RTD Dota 2 Team Profile](https://github.com/imballinst/rtdota2): This was a website that I built for fun, so on top of the Facebook fan page (back then), my team could have a somewhat poor man's landing page.
+[hello \`Test link with code outside list\` world](https://example1.com)
 
-- If a component is referred by other components (more than once), then most likely we want to split it.
-- If a component is referred to by other components only once, then it may depend on how logic-heavy is the component.
-  - If the logic is heavy, then it may be better to split it into a separate file.
-  - If not, then perhaps it's better to split the component, but still localize it in the same file.
+- [Test link](https://example2.com)
+- [\`Test link with code\`](https://example3.com)
 `.trim()
     );
 
-  console.error(String(file));
+  console.info(String(file));
 }
