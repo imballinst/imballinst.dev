@@ -1,11 +1,11 @@
 ---
 title: 'TypeScript: Part 1, Discriminated Union'
-description: Let's do a quick review of TypeScript basics and some bits beyond that you might use often.
+description: This post contains examples on how we can utilize the concept of discriminated union in TypeScript.
 publishDate: 2025-01-19T01:07:00.000Z
-image: /assets/blog/speedrunning-typescript/speedrunning-typescript.png
-imageAlt: An image containing the text, "Speedrunning TypeScript".
-imageCaption: An image containing the text, "Speedrunning TypeScript".
-tags: software engineering, javascript, typescript
+image: /assets/blog/typescript-part-1-discriminated-union/typescript-part-1-discriminated-union.png
+imageAlt: 'An image containing the text, "TypeScript: Part 1, Discriminated Union".'
+imageCaption: 'An image containing the text, "TypeScript: Part 1, Discriminated Union".'
+tags: software engineering, typescript
 visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -78,7 +78,32 @@ const value = testFunction(TypeToReturn.NUMBER);
 // ^ string | number | { hello: number; }
 ```
 
-The above is just not good, right? Because despite we pass `TypeToReturn.NUMBER` as the function argument and we **know** that it _should_ return a `number`, but TypeScript thinks that all the values are of equal union. So, how do we make sure TypeScript returns the expected type? The clue is inside a very good post by Kent C. Dodds: [Inversion of Control](https://kentcdodds.com/blog/inversion-of-control).
+The above is just not good, right? Because despite we pass `TypeToReturn.NUMBER` as the function argument and we **know** that it _should_ return a `number`, but TypeScript thinks that all the values are of equal union. So, how do we make sure TypeScript returns the expected type? The first clue is to force TypeScript derive type as-is.
+
+## Making TypeScript derive type as-is
+
+By default, TypeScript will try to "generalize" the type of the variables we defined. Take this example, which you can access in this [Playground link](https://www.typescriptlang.org/play/?target=7#code/MYewdgzgLgBAhgJwXAnjAvDA2gRgDQwDkOhBA3jABYCmANrSAFww4BMAzDAL4C6AsACgA9EJgA9GAApoCAJZgA5jAA+MMAFcAtgCNqCFTACCSVAB4KNekzVbdCANzcAfAEogA):
+
+```ts
+const array = [1, '1', { hello: 123 }];
+// ^ (string | number | Array<{ hello: number; }>)
+```
+
+Notice that TypeScript derives the values to be the most common type possible. What if we want TypeScript to derive the types as-is and not generalize it? We can use `as const` when defining the variable. Here's the [Playground link](https://www.typescriptlang.org/play/?target=7#code/MYewdgzgLgBAhgJwXAnjAvDA2gRgDQwDkOhBA3jABYCmANrSAFww4BMAzDAL4C68EMUJCgBYAFAB6CTAB6MABTQEASzABzGAB8YYAK4BbAEbUEWmAEEkqADwUa9JjoPGEAbm4A+AJTjxQ6NgAbnC0utQAcs4mBMGh1ADKUCrqMSFhAPKGAFbUwFB8mIjIKEA).
+
+```ts
+const array = [1, '1', { hello: 123 }] as const;
+// ^ const array: readonly [1, "1", {
+//     readonly hello: 123;
+//   }]
+
+const [valueNumber, valueString, valueObject] = array;
+// ^ The type is 1, '1', and { hello: 123 }, respectively.
+```
+
+So, based on what we learned above, our objective is to make TypeScript "not generalize" the types returned from `testFunction`, so that each `testFunction` will return the the type that we want it to be, depending on the passed function arguments.
+
+That's the first clue, but that's not enough. There is a second one, which you can explore in this very good post by Kent C. Dodds: [Inversion of Control](https://kentcdodds.com/blog/inversion-of-control).
 
 ## What does this inversion thing do, anyway?
 
@@ -110,7 +135,7 @@ const value3 = testFunction(() => ({ hello: 123 }));
 // ^ { hello: number; }
 ```
 
-As we see above, using TypeScript generics, we can have TypeScript to detect the correct return type according to what we "feed" to the function. I know, I know, the example above is a very contrived one. I have an example of what we might use pretty often. Check this out! Also, again, here's the [playground link](https://www.typescriptlang.org/play/?target=7#code/GYUwLgxgFgSiDOB7ArgJwggFASgLACgCBDeATwDsIACYZSsAS0XJvGjiTQ3hyoG8CVKhGbwwVANoA3IgBtkIAMphUDcgHMANFRnyQAOWQBbAEYhU23QoDyJgFYgIYALpUAvFSIB3Ig3EAFVEQjBngQADo5WUVwMFkQABNMCUEhVkgoAEFZWQ4UdARrYAAVUgAHEExQDLyuJRU1dWxNVKFq6GzchHzuItKKqrZYbrrDU3Nm1vSOnNqC+D7yyvbhzgLbBydJ-CFnbABuAlSRciR48NlEdUwretUNSzkFMbMLHSeQDccwPHwAXyO+DUYHMwCIGCoADEhhwyqIQP0QAAeAAiRDARERAD5+KkEuiiAAuKhojGIiTOQ47KhlIjqRrEvhUcggAAeYCKwDCYGJ5GMr32VCgJH0bJ5VBMiEQ8SILD+VIBhHwJAo1Fo9CYLBWnTmvRKSyRqVJmKWLWpcDAaHIiKoYpA5AS8ChMIQcNOCINxuxBCxmAgJmJmEQwC54F5-Im7hxgWCoWRFqt2OwuOpJzEnhyxuJXqWFPckkpqXi4mF8FF7PzKgUVKExeZYs53PzAAYqakvFAGPEqJhS+Wfim0sJROImfiMdpafSNFQ-vnvL5xP7MCz2Y3wAcpmnpRE1MBEJhx0RJ3TGr8h1MosbwmVkPAoJhwk+j5vqUI+2L81PGuEP+ya2kq4ciGTYeN+GjhEB65gABiqpKg4BWhmsjGgqgLqk4mrTKsPR3I0QYgWGzIRqg2DEjGIRhEi0I1K68KIkiYj3OoWI4gI1IIZaqAsCyXhUBRcaYJgCHwMmbhsVM3LFAwRggCgYBCWJElvmkaYliKn4eMGobiEiVAAMyAkOQgiZgfBHsSEgAOQAIwAEz6VZzgntO6iMvWa6EeKf7iAA-FQ2lNgA1FQNlUMSgXgNoPmzn8r5Dn82gAKzNs28Wzq+cH4BhjDMNhuoGCRBE6eG4ykeRQSUciNHsHR7oMXyZWsYOVCcUhvH8ZVgnCQgSktUIUkyXJyAKbw4n9apI5ChpFZaV5VB6YZSrGa1WDmQSln2fpzk0qeGjuVBXnEjF-mReIIVhRFXnRTN4h-HFAFCIlVApWlsGZehdCYXlKwFV8TjFdypWvGRnWxlRNWrG6YQMUyUAgDkiDA+Ys7NexJmIdx9Z8QJYRCSJfXo2kg2yfJilRhNQhqdNZaaQF82LUZxmmetGKWXDCOXMSW2zjt4FufwHnASVNP9lQp3zRd4X0zpN20xW93pU9yWpelD0EH8QA).
+As we see above, using TypeScript generics, we can have TypeScript to detect the correct return type according to what we "feed" to the function. I know, I know, the example above is a very contrived one. I have an example of what we might use pretty often. Check this out! Also, again, here's the [playground link](https://www.typescriptlang.org/play/?target=7#code/GYUwLgxgFgSiDOB7ArgJwggFASgNwFgAoIgQ3gE8A7CAAmGWrAEtFK7xo4k0N4caA3kRo0IreGBoBtAG4kANshABlMKiaUA5gBoacxSAByyALYAjEKl36lAeTMArEBDABdGgF4aJAO4kmkgAKqIgmTPAgAHQK8srgYPIgACaYUsIi7JBQAILy8lwo6Ai2wAAq5AAOIJigWQU8Kmoamtja6SK10Ln5CIW8JeVVNRywvQ3G5pat7ZldefVF8AOV1Z2j3EX2Ti7Y6a54ROlilEiJkfKImpg2jepa1gpKExZWeo8gW85gB4QAvoeEDRgSzAEgYGgAMRGXAq4hAgxAAB4ACIkMAkBEAPkE6SSaJIAC4aKj0QipK4CIQRBUSJpmkSBDRKCAAB5gErACJgImUUwvXA0KBkQys7k0MyIRCJEhsX6U-7EQhkKi0eiMFhsNbdBb9MorRHpEkYlZtKk0OBgNCUBE0UUgShJeCQ6EIWEneH6o1YoiYzAQMxEzCIYCc8A8vlTTzY4KhcJIi1WrHYHFm44Sbx5I1EhOoa0rKQAcjx6IL7i85MpIkSkiF8BFbM8NDUSkrNGrTNFHK5jYADJT0j4oExEjRMLX698UxlROJJIziyRdDS6VoaL9G75-JJ-ZhmWyu+AfjMYkbIhVkPAoJhIjeFz9p+PRY3l81Io+2a2RHv2SHu14X1okTfgeYCtgq6SoOAVoZvIRrygCaouBqszrH0tzNJg6TBqGYq8pMqBENgRIxmEESIlCdSunCCKIhIdyaJi2JCGakGWrmHY+DQJFxpgmCQfAyYeExMxcqUTAmCAKBgLxgnCWa05pjWwpPl42HdoiNAAMz9vJGT8ZgzHTtOC5EoWACMABMmmlqaRkZABmgMh2+6-mGgrKQ2AD8NBqeANAANQ0GZNBEr5YC6O+kgKnZvz3hkvy6AArD2PZxbF8GKohzCsChOpGBGqCYWaYXhvhhHESEpFIhRnBUe6NF4S8jFTjQrHQcynHcREvH8bJLUiKJ4mScg0n8EJ-UZIp7l1ipPmuZIGnaQCdn6YZdk0CZ0iWZpri2etDlOcB81EpFNDeWFAVBSFc04RFHlRTMIjpTMCU0MlqVgT84GEFlyFrHlnwuEVIglUyBXlVxlVxuRLrwG6EQ0YyUAgHkiClS8a7NWtbXsR1kOxt1fEIH1a0DeAYkSVJMlRhNIhTadqnzTQi06StWCk0Zm1SEjKMXES21rrtj32bS9KCM5P44Sd91nTd3aBcFoXzXdM0NtFRnPbpr3vWlX1AA).
 
 ```ts
 fetchResources();
@@ -134,13 +159,12 @@ async function fetchAllResourcesOfType<
   DataType,
   ReturnType extends FetchResponseType<DataType>
 >(cb: (offset: number) => Promise<ReturnType>) {
-  const allData: DataType[] = [];
+  const allData: ReturnType['data'] = [];
   let hasNext = true;
   let nextOffset = 0;
 
   while (hasNext) {
     const { data, paging } = await cb(nextOffset);
-    console.info(data, paging);
 
     allData.push(...data);
     hasNext = paging.hasNext;
@@ -195,3 +219,42 @@ function fetchResourceObject(
   });
 }
 ```
+
+The long snippet above simulates the case where we want to fetch all entries from 3 different resources. Without inversion of control, the result will be like this:
+
+```ts
+const [valueString, valueNumber, valueObject] = await Promise.allSettled([
+  // ^ PromiseSettledResult<string[] | number[] | { hello: number }[]>
+  fetchAllResourcesOfType(fetchResourceString),
+  fetchAllResourcesOfType(fetchResourceNumber),
+  fetchAllResourcesOfType(fetchResourceObject)
+]);
+```
+
+Whereas, with inversion of control, it is now a tuple:
+
+```ts
+const [valueString, valueNumber, valueObject] = await Promise.allSettled([
+  // ^ [PromiseSettledResult<string[]>, PromiseSettledResult<number[]>, PromiseSettledResult<{
+  //     hello: number;
+  //   }[]>]
+  fetchAllResourcesOfType(fetchResourceString),
+  fetchAllResourcesOfType(fetchResourceNumber),
+  fetchAllResourcesOfType(fetchResourceObject)
+]);
+```
+
+The tuple here is important, because we know the first array element's promise settled value contains `string[]`, the second contains `number[]` and the third one contains `Array<{ hello: number }>`.
+
+By doing this, you do not need weird dances such as `as unknown as SomeType` or `as any`. The best part of not using `any`? You don't have to redeclare the type somewhere else and you know it's surely type-safe (during build time, anyway).
+
+## Summary
+
+Alright, let's recap what we learn:
+
+1. Discriminated union is used to "force" TypeScript create a distinction between 2 or more types by creating a "common literal field".
+2. TypeScript will generalize a variable's type, unless the variable definition is suffixed with `as const` which then its type will be inferred as-is.
+3. Inversion of control is used to "lift up" the logic inside a function to the function argument, where the caller has more control.
+4. By combining the concepts of as-is type inferring and inversion of control, we can achieve safer typing in our codebase.
+
+Hopefully that's useful, thank you for reading this far and I'll see you on the next post!
