@@ -83,3 +83,10 @@ h6 {
     scroll-margin-top: 64px;
   }
 }
+
+:not(.dark) :not(pre) > code:not([class*='language']) {
+  @apply text-sm rounded text-red-600;
+}
+.dark :not(pre) > code:not([class*='language']) {
+  @apply text-sm rounded text-red-300;
+}
