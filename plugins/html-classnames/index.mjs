@@ -3,6 +3,7 @@ import { toString } from 'mdast-util-to-string';
 
 import { toHast } from 'mdast-util-to-hast';
 import { toHtml } from 'hast-util-to-html';
+import path from 'path';
 
 // TODO(imballinst): ensure these are consistent.
 const TEXT_COLOR = 'text-black dark:text-gray-200';
@@ -266,6 +267,13 @@ const isExternalLink = (href) =>
 function modifyAnchorNode({ node }) {
   node.properties.class =
     'text-teal-600 dark:text-teal-300 hover:underline break-words inline';
+
+  if (!path.isAbsolute(node.properties.href)) {
+    const href = node.properties.href;
+    const idx = href.lastIndexOf(path.extname(href));
+
+    node.properties.href = node.properties.href.slice(0, idx);
+  }
 
   if (
     (node.properties.href.includes('https://') ||
