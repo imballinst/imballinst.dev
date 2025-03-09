@@ -12,7 +12,7 @@ layout: '../../layouts/BlogPost.astro'
 
 Hello, there! I hope you are doing well.
 
-So, recently I have been watching [Grubby's videos on YouTube](https://www.youtube.com/channel/UCCF6pCTGMKdo9r_kFQS-H3Q). For those who don't know, Grubby was a former professional Warcraft III player. Ah, that brings back childhood. Playing Real-Time Strategy (RTS) games such as Red Alert 2, Warcraft III, and so on... I was not _that_ good back then, but I guess in my circle back then I was pretty OK.
+So, recently I have been watching [Grubby's videos on YouTube](http://www.youtube.com/@FollowGrubby). For those who don't know, Grubby was a former professional Warcraft III player. Ah, that brings back childhood. Playing Real-Time Strategy (RTS) games such as Red Alert 2, Warcraft III, and so on... I was not _that_ good back then, but I guess in my circle back then I was pretty OK.
 
 ## So, what is this "ranked anxiety" all about?
 
