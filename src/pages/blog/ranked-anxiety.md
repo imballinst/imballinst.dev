@@ -1,7 +1,7 @@
 ---
 title: Ranked Anxiety
 description: This post was brought to you by a random Twitch user in Twitch chat.
-publishDate: 2025-02-23T06:17:20.801Z
+publishDate: 2025-03-09T05:28:59.046Z
 image: /assets/blog/ranked-anxiety/ranked-anxiety.png
 imageAlt: An image containing the text, "Ranked Anxiety".
 imageCaption: An image containing the text, "Ranked Anxiety".
