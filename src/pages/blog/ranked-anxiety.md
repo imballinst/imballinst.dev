@@ -46,7 +46,7 @@ I figured it was because of the nature of the games. RTS games tend to be so muc
 
 Finally, I faced my fear and found my first league placement match in 2 years. The game plan that I usually was able to execute against AI? Gone. My opponent played Zerg and I _did not_ wall properly. In the first few minutes, a handful of Zerglings came to my base, skipped past the Zealot and Sentry that I planned to use as the "wall" and I ended up needing Probes to kill the early aggression.
 
-I was on the back foot since then. I did not know what to build because that early aggression set the tone for the entire game. I was afraid. He went with Mutalisks and while I had my carriers, my opponent countered it with Corruptors and that was the game.
+I was on the back foot since then. I did not know what to build because that early aggression set the tone for the entire game. I was afraid. He went with Mutalisks and while I had my Carriers, my opponent countered it with Corruptors and that was the game.
 
 Now, the hard part. In RTS games, usually, there is a Replay feature. Replay is important to see where things go wrong, but again, in 1v1, there is no one to blame but ourselves. So, seeing my own mistakes in the replay and finding where I can improve, sounds simple, but I need to reduce my ego to do so. I can't improve if I always make an excuse for myself. That said, if you have some unresolved pasts around "having your mistakes pointed out", this might be pretty tough. It's okay, but just don't make it an excuse to not improve yourself. Seek professional help and see if you can work that out, you can do it!
 
