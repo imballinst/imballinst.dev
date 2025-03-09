@@ -30,13 +30,13 @@ I bought Warcraft III Reforged back in 2019, but I immediately refunded it becau
 
 ## Ranked anxiety is real
 
-[!Elite AI achieved and beaten](../../../public/assets/blog/ranked-anxiety/elite-ai.png)
+![Elite AI achieved and beaten](../../../public/assets/blog/ranked-anxiety/elite-ai.png)
 
 AI grind... was mostly okay. There were times I got humiliated by the AI because either I was too greedy, I did not [wall my base](https://liquipedia.net/starcraft/Walling) properly, I did not [scout the enemy base](https://liquipedia.net/starcraft2/Scouting), I screwed up my build order, or not having a clear game plan. But I was still feeling fine. I learned, and then I went on again to another match.
 
 I beat the Elite AI and then I decided it was time to hit the [ranked] ladder. I should have taken the picture before I took my first league placement match, but this will do (it should be 5 matches left instead of 4).
 
-[!The most intimidating button: "Ranked"](../../../public/assets/blog/ranked-anxiety/ranked-match.png)
+![The most intimidating button: "Ranked"](../../../public/assets/blog/ranked-anxiety/ranked-match.png)
 
 But _oof_, once the text showed _"Finding match..."_, I was already feeling the pressure. I _actually_ canceled it a few times. The nervousness was real. Then, I wondered why I did not feel this way when playing other 1v1 games (or games that eventually boil down to 1v1), such as Fall Guys or Hearthstone.
 
