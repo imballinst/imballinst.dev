@@ -34,7 +34,7 @@ I bought Warcraft III Reforged back in 2019, but I immediately refunded it becau
 
 AI grind... was mostly okay. There were times I got humiliated by the AI because either I was too greedy, I did not [wall my base](https://liquipedia.net/starcraft/Walling) properly, I did not [scout the enemy base](https://liquipedia.net/starcraft2/Scouting), I screwed up my build order, or not having a clear game plan. But I was still feeling fine. I learned, and then I went on again to another match.
 
-I beat the Elite AI and then I decided it was time to hit the [ranked] ladder. I should have taken the picture before I took my first league placement match, but this will do (it should be 5 matches left instead of 4).
+I beat the Elite AI and then I decided it was time to hit the ranked ladder. I should have taken the picture before I took my first league placement match, but this will do (it should be 5 matches remaining instead of 4).
 
 ![The most intimidating button: "Ranked"](/assets/blog/ranked-anxiety/ranked-match.png)
 
