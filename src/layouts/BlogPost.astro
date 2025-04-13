@@ -8,7 +8,6 @@ import { Text } from '../components/Typography';
 import { Link } from '../components/Links';
 import { FeedbackModal } from '../components/Modal';
 import { EditIcon } from '../components/Icons';
-import { TableOfContents } from '../components/TableOfContents/TableOfContents';
 import { getAllHeadingIds } from '../helpers/markdown';
 
 const { content = {} } = Astro.props;
@@ -23,8 +22,8 @@ const {
   file
 } = content;
 
-const fileContent = readFileSync(file, 'utf-8')
-const rootHeading = getAllHeadingIds(fileContent)
+const fileContent = readFileSync(file, 'utf-8');
+const rootHeading = getAllHeadingIds(fileContent);
 
 let slug = Astro.url.pathname;
 if (slug.endsWith('/')) {
@@ -48,24 +47,15 @@ const editPage = `https://github.com/imballinst/imballinst.dev/edit/main/src/pag
     />
 
     <div class="mt-4">
-      <div class="text-black dark:text-gray-200 space-y-4 pb-4 mb-8 border-b border-dotted border-b-gray-500">
-        <div class="text-2xl">Table of contents</div>
-
-        <TableOfContents root={rootHeading} />
-      </div>
-
       <slot />
     </div>
 
-    <hr class="border-gray-200 dark:border-gray-600 mt-6" />
+    <hr class="border-gray-200 dark:border-gray-600 border-dotted mt-6" />
 
-    <Text
-      as="div"
-      className="flex flex-col justify-between sm:flex-row mt-6 p-2"
-    >
+    <Text as="div" className="flex flex-col justify-between sm:flex-row mt-6">
       <Link
         href={editPage}
-        className="flex flex-row items-center ml-1"
+        className="flex flex-row items-center"
         isExternal
         disableExternalIcon
       >

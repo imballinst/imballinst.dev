@@ -24,7 +24,7 @@ export interface CardProps {
 export function Card(props: CardProps) {
   const className = props.className || '';
   const cardImage =
-    props.img !== undefined && props.imgAlt !== undefined ? (
+    props.img && props.imgAlt ? (
       <img
         {...getImageProps({ src: props.img, alt: props.imgAlt })}
         className="object-cover rounded-t-lg lg:pl-[40%] w-full h-full"
