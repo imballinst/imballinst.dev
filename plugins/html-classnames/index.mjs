@@ -17,7 +17,7 @@ const DEFAULT_ATTRS = {
   h1: `${TEXT_COLOR} text-3xl font-bold my-6`,
   h2: `${TEXT_COLOR} text-2xl font-bold my-6`,
   h3: `${TEXT_COLOR} text-xl font-medium my-6`,
-  h4: `${TEXT_COLOR} text-lg my-6`,
+  h4: `${TEXT_COLOR} text-lg font-medium my-6`,
   h5: `${TEXT_COLOR} text-base my-6`,
   h6: `${TEXT_COLOR} text-sm my-6`,
   p: `${TEXT_COLOR} mt-3 mb-4 first:mt-0 last:mb-0`,
@@ -39,7 +39,9 @@ const BLOCKQUOTE_PARAGRAPH_CLASS = DEFAULT_ATTRS.p.replace(
 
 export default function htmlClassnamesPlugin() {
   return (/** @type {*} */ tree) => {
-    for (const child of tree.children) {
+    for (let i = 0; i < tree.children.length; i++) {
+      const child = tree.children[i];
+
       if (child.type === 'paragraph') {
         /** @type {*} */
         const hast = toHast(child);
@@ -83,9 +85,16 @@ export default function htmlClassnamesPlugin() {
       } else if (child.type === 'heading') {
         const str = toString(child);
         const tag = `h${child.depth}`;
-        const tagClass =
+        let tagClass =
           DEFAULT_ATTRS[/** @type {keyof typeof DEFAULT_ATTRS} */ (tag)];
 
+        const isTableOfContents = isTOC(child);
+        if (!isTableOfContents) {
+          tagClass +=
+            ' pb-2 border-b border-solid border-[#0000001a] dark:border-[#ffffff1a]';
+        }
+
+        child.previous = { ...child };
         child.type = 'html';
         child.children = undefined;
         child.value = `
@@ -96,7 +105,9 @@ export default function htmlClassnamesPlugin() {
       } else if (child.type === 'list') {
         /** @type {*} */
         const hast = toHast(child);
-        addListStyle(hast);
+        const isPreviousChildTOC = isTOC(tree.children[i - 1].previous);
+
+        addListStyle(hast, child.ordered, false, isPreviousChildTOC);
 
         const html = toHtml(hast);
 
@@ -341,9 +352,16 @@ function convertHeadingToId(text) {
 /**
  *
  * @param {*} element
+ * @param {boolean} isOrdered
+ * @param {boolean} isNested
+ * @param {boolean} isTOC
  */
-function addListStyle(element) {
-  element.properties.class = `${TEXT_COLOR} list-decimal pl-8 mb-4`;
+function addListStyle(element, isOrdered, isNested, isTOC) {
+  const listType = isOrdered ? 'list-decimal' : 'list-disc';
+  const marginBottom = isNested ? '' : 'mb-4';
+  const paddingLeft = isTOC ? 'pl-4' : 'pl-8';
+
+  element.properties.class = `${TEXT_COLOR} ${listType} ${paddingLeft} ${marginBottom}`;
 
   for (const el of element.children) {
     el.properties = { class: 'pl-1' };
@@ -362,7 +380,7 @@ function addListStyle(element) {
         ) {
           listChild.children[0].value = `\`${listChild.children[0].value}\``;
         } else if (listChild.tagName === 'ul') {
-          addListStyle(listChild);
+          addListStyle(listChild, false, true, false);
         }
       }
     }
@@ -378,4 +396,13 @@ function shouldModifyAnchorNode(element) {
     element.type === 'text' ||
     (element.type === 'element' && element.tagName === 'code')
   );
+}
+
+/**
+ *
+ * @param {*} child
+ * @returns
+ */
+function isTOC(child) {
+  return child?.value === 'Table of Contents';
 }

@@ -32,17 +32,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^1.5.5":
-  version: 1.8.2
-  resolution: "@astrojs/compiler@npm:1.8.2"
-  checksum: 1d55879f8f7aadcad02f19353c085d4e74d5f9cd0d873c600e31ad58928e80d6ab7d6e80b997e2fecabd697f69b0ae166acac58178b833d2d8051a2e35800dc2
-  languageName: node
-  linkType: hard
-
 "@astrojs/compiler@npm:^2.1.0, @astrojs/compiler@npm:^2.4.0":
   version: 2.6.0
   resolution: "@astrojs/compiler@npm:2.6.0"
   checksum: 946e23f25dc93935c09c7cd9cbafb75fc7c3a4bdaaee6e92c6c3d20d9ec6233f6cd117b87f6e31bb7d286c862a9847e0ac41a8419742dc1464cb24f36961da08
+  languageName: node
+  linkType: hard
+
+"@astrojs/compiler@npm:^2.9.1":
+  version: 2.11.0
+  resolution: "@astrojs/compiler@npm:2.11.0"
+  checksum: 759d9bbae4acc7a2d8928f980cebe5ab235c6ff5acd5c23f381f139105c1590e9f5922346dd9ec794ada5f19b70ba6f5f84834c37fa4491d5958be72e8345ccf
   languageName: node
   linkType: hard
 
@@ -3641,6 +3641,13 @@ __metadata:
   version: 1.3.5
   resolution: "@types/triple-beam@npm:1.3.5"
   checksum: 519b6a1b30d4571965c9706ad5400a200b94e4050feca3e7856e3ea7ac00ec9903e32e9a10e2762d0f7e472d5d03e5f4b29c16c0bd8c1f77c8876c683b2231f1
+  languageName: node
+  linkType: hard
+
+"@types/ungap__structured-clone@npm:^1.0.0":
+  version: 1.2.0
+  resolution: "@types/ungap__structured-clone@npm:1.2.0"
+  checksum: 5399cfc129ecae2986fbe223fdf8f443c27a628e0d24e1be0fd3d041d643e9a041be54d9b9511fdf36279e7a3cb4c9d72493f30d75fdcde52efa3ac9dc0ebb1e
   languageName: node
   linkType: hard
 
@@ -8834,8 +8841,10 @@ __metadata:
     mdast-util-to-string: 4.0.0
     netlify-cli: 16.9.3
     preact: 10.19.6
-    prettier-plugin-astro: 0.12.1
+    prettier: 3.5.3
+    prettier-plugin-astro: 0.14.1
     remark: 15.0.1
+    remark-toc: 9.0.0
     sharp: 0.32.6
     tailwindcss: 3.0.24
     typescript: 5.2.2
@@ -10434,6 +10443,21 @@ __metadata:
   dependencies:
     "@types/mdast": ^3.0.0
   checksum: dc40b544d54339878ae2c9f2b3198c029e1e07291d2126bd00ca28272ee6616d0d2194eb1c9828a7c34d412a79a7e73b26512a734698d891c710a1e73db1e848
+  languageName: node
+  linkType: hard
+
+"mdast-util-toc@npm:^7.0.0":
+  version: 7.1.0
+  resolution: "mdast-util-toc@npm:7.1.0"
+  dependencies:
+    "@types/mdast": ^4.0.0
+    "@types/ungap__structured-clone": ^1.0.0
+    "@ungap/structured-clone": ^1.0.0
+    github-slugger: ^2.0.0
+    mdast-util-to-string: ^4.0.0
+    unist-util-is: ^6.0.0
+    unist-util-visit: ^5.0.0
+  checksum: f3f9f1c856548f685f798357bb362ad01a8fc9bb585644c3198a5adcfa42b5712b185d7d86f4360f1b1ca1e8c6781f5e55f8cab5052282b5594ed829c26c1fca
   languageName: node
   linkType: hard
 
@@ -12899,14 +12923,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-astro@npm:0.12.1":
-  version: 0.12.1
-  resolution: "prettier-plugin-astro@npm:0.12.1"
+"prettier-plugin-astro@npm:0.14.1":
+  version: 0.14.1
+  resolution: "prettier-plugin-astro@npm:0.14.1"
   dependencies:
-    "@astrojs/compiler": ^1.5.5
+    "@astrojs/compiler": ^2.9.1
     prettier: ^3.0.0
     sass-formatter: ^0.7.6
-  checksum: 2c1d1c67b97c32eac707291d74f59e37341dcd564a81ac4e4a012211201632e655b90e7f2d190b5bd2ef88e8480b3ba73082584f1a56b3127e2ae0072749447b
+  checksum: 7cd6b03c65fac8329328a7f56168b596c846dfd282e4b2dbf597d2e731bcf463a2fba73ef0f0c8196713d96c3a04b744dd5e89f185028951e0354150202b3870
+  languageName: node
+  linkType: hard
+
+"prettier@npm:3.5.3":
+  version: 3.5.3
+  resolution: "prettier@npm:3.5.3"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 61e97bb8e71a95d8f9c71f1fd5229c9aaa9d1e184dedb12399f76aa802fb6fdc8954ecac9df25a7f82ee7311cf8ddbd06baf5507388fc98e5b44036cc6a88a1b
   languageName: node
   linkType: hard
 
@@ -13516,6 +13549,16 @@ __metadata:
     mdast-util-to-markdown: ^2.0.0
     unified: ^11.0.0
   checksum: 59e07460eb629d6c3b3c0f438b0b236e7e6858fd5ab770303078f5a556ec00354d9c7fb9ef6d5f745a4617ac7da1ab618b170fbb4dac120e183fecd9cc86bce6
+  languageName: node
+  linkType: hard
+
+"remark-toc@npm:9.0.0":
+  version: 9.0.0
+  resolution: "remark-toc@npm:9.0.0"
+  dependencies:
+    "@types/mdast": ^4.0.0
+    mdast-util-toc: ^7.0.0
+  checksum: 2d167713ac1a064990296aece847a387ea79b998383ab64c455c05672403ed51574bbbd079aa967d904170dfee4035dd7b84b0eb28a01f9c7e93778a0e57c3c9
   languageName: node
   linkType: hard
 
