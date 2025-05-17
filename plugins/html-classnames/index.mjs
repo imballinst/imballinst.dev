@@ -359,7 +359,7 @@ function convertHeadingToId(text) {
 function addListStyle(element, isOrdered, isNested, isTOC) {
   const listType = isOrdered ? 'list-decimal' : 'list-disc';
   const marginBottom = isNested ? '' : 'mb-4';
-  const paddingLeft = isTOC ? 'pl-4' : 'pl-8';
+  const paddingLeft = isTOC || isNested ? 'pl-4' : 'pl-8';
 
   element.properties.class = `${TEXT_COLOR} ${listType} ${paddingLeft} ${marginBottom}`;
 
@@ -381,6 +381,8 @@ function addListStyle(element, isOrdered, isNested, isTOC) {
           listChild.children[0].value = `\`${listChild.children[0].value}\``;
         } else if (listChild.tagName === 'ul') {
           addListStyle(listChild, false, true, false);
+        } else if (listChild.tagName === 'ol') {
+          addListStyle(listChild, true, true, false);
         }
       }
     }

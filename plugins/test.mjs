@@ -16,17 +16,10 @@ async function main() {
     .use(htmlClassnamesPlugin)
     .process(
       `
-## Hello
-
-asdf
-
-## World
-
-[hello \`Test link with code outside list\` world](https://example1.com) and [Test markdown link](./hello.md)
-
-- [Test link](https://example2.com)
-- [Test markdown link](./hello.md)
-- [\`Test link with code\`](https://example3.com)
+1. Import index.js
+2. Does it have index.d.ts?
+   1. Yes: import it and "map" all types inside it to variables in index.js
+   2. No: do nothing
 `.trim()
     );
 
