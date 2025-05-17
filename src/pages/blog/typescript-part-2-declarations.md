@@ -24,11 +24,11 @@ This is where the TypeScript declarations come in: to provide the types when we 
 
 ```ts
 export function hello() {
-  return 123;
+  return 123;
 }
 
 function test() {
-  return 123;
+  return 123;
 }
 ```
 
@@ -36,10 +36,10 @@ The JS output is as follows:
 
 ```js
 export function hello() {
-  return 123;
+  return 123;
 }
 function test() {
-  return 123;
+  return 123;
 }
 ```
 
@@ -63,10 +63,10 @@ It's very easy these days to output bundles from TypeScript files; [tsup](https:
 
 ```json
 {
-  "name": "sub-module-1",
-  "packageManager": "yarn@4.9.1",
-  "main": "index.js",
-  "types": "index.d.ts"
+  "name": "sub-module-1",
+  "packageManager": "yarn@4.9.1",
+  "main": "index.js",
+  "types": "index.d.ts"
 }
 ```
 
@@ -74,15 +74,15 @@ So, what's the deal with the declaration files sharing the same `index` file? Th
 
 1. Import `index.js`
 2. Does it have `index.d.ts`?
-   1. Yes: import it and "map" all types inside it to variables in `index.js`
-   2. No: do nothing
+   1. Yes: import it and "map" all types inside it to variables in `index.js`
+   2. No: do nothing
 
 This is consistent with the default behavior of `tsc` (which is built-in if you install `typescript` as a dependency in the project). Let's say you have this folder structure:
 
 ```
 <root>
 └──src
-   ├── index.ts 
+   ├── index.ts
    ├── hello.ts
    ├── world.ts
    └── other.ts
@@ -93,8 +93,8 @@ If `index.ts` re-exports all exported stuff from all other `.ts` files, when we 
 ```
 <root>
 ├──dist
-│  ├── index.js 
-│  ├── index.d.ts 
+│  ├── index.js
+│  ├── index.d.ts
 │  ├── hello.js
 │  ├── hello.d.ts
 │  ├── world.js
@@ -102,7 +102,7 @@ If `index.ts` re-exports all exported stuff from all other `.ts` files, when we 
 │  └── other.js
 │  └── other.d.ts
 └──src
-   ├── index.ts 
+   ├── index.ts
    ├── hello.ts
    ├── world.ts
    └── other.ts
@@ -110,7 +110,7 @@ If `index.ts` re-exports all exported stuff from all other `.ts` files, when we 
 
 When `index.js` is imported, it will also be able to find the declarations from other files.
 
-### Via @types/* npm package
+### Via @types/\* npm package
 
 The second approach is using the `@types/*` dependency. This is usually when the original package maintainer(s) do not maintain the source with TypeScript, so folks contribute to a repository called https://github.com/DefinitelyTyped/DefinitelyTyped, which contains the typing for that dependency.
 
@@ -118,9 +118,9 @@ Every folder under the top-level `types` folder will be published to the npm reg
 
 ```json
 {
-  "name": "@types/sub-module-1-without-dts",
-  "packageManager": "yarn@4.9.1",
-  "types": "index.d.ts"
+  "name": "@types/sub-module-1-without-dts",
+  "packageManager": "yarn@4.9.1",
+  "types": "index.d.ts"
 }
 ```
 
@@ -136,12 +136,12 @@ This will import the file `node_modules/vite/client.d.ts`, which contains things
 
 ```ts
 declare module '*.module.css' {
-  const classes: CSSModuleClasses
-  export default classes
+  const classes: CSSModuleClasses;
+  export default classes;
 }
 declare module '*.module.scss' {
-  const classes: CSSModuleClasses
-  export default classes
+  const classes: CSSModuleClasses;
+  export default classes;
 }
 // and so on...
 ```
@@ -153,9 +153,9 @@ This allows importing file extensions without needing to set up loaders or linte
 You can see the example in this file: https://github.com/imballinst/typescript-declaration-playground/blob/main/packages/main-module/index.js.
 
 ```ts
-import { withdts } from "sub-module-1";
-import { withoutdts } from "sub-module-1-without-dts";
-import { hellotsc, worldtsc, othertsc } from "sub-module-2-tsc";
+import { withdts } from 'sub-module-1';
+import { withoutdts } from 'sub-module-1-without-dts';
+import { hellotsc, worldtsc, othertsc } from 'sub-module-2-tsc';
 ```
 
 The first import contains both `main` and `types` in the `package.json`, which means the IDE can infer the types.
@@ -225,29 +225,29 @@ If it is either a bit long process for you or if the maintainers are not as acti
 Let's say that we want to add a field to the `Request` object from Node.js. We can do so by using `declare module`, or officially called as [module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation). [Example is as follows](https://github.com/imballinst/typescript-declaration-playground/tree/main/packages/server).
 
 ```ts
-import Koa from "koa";
+import Koa from 'koa';
 
 const app = new Koa();
 
-declare module "http" {
-  interface IncomingMessage {
-    // Add a new field called `hello`.
-    hello: {
-      world: string;
+declare module 'http' {
+  interface IncomingMessage {
+    // Add a new field called `hello`.
+    hello: {
+      world: string;
     };
   }
 }
 
 // The `hello` references below will be strongly typed.
 app.use(async (ctx, next) => {
-  ctx.req.hello = {
-    world: "123",
+  ctx.req.hello = {
+    world: '123'
   };
-  return next();
+  return next();
 });
 app.use(async (ctx) => {
-  console.info(ctx.req.hello);
-  ctx.body = "Hello World";
+  console.info(ctx.req.hello);
+  ctx.body = 'Hello World';
 });
 
 app.listen(3000);
