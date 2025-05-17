@@ -14,9 +14,11 @@ Yo! How is it going? I hope you are doing well. In this post, I am going to shar
 
 ## What are TypeScript declarations?
 
-As we know, TypeScript allows us to define types where otherwise we would need to rely on [JSDoc](https://jsdoc.app). We can define `type`, `interface`, and assign those types to variables. But, all that happens in _our_ source code is within our control. How about the dependencies that reside in `node_modules`?
+As we know, TypeScript allows us to define types where otherwise we would need to rely on [JSDoc](https://jsdoc.app). We can define `type`, `interface`, and assign those types to variables. But, all that happens in the codebase that is within our control. How about the dependencies that reside in `node_modules`?
 
-At the moment, source code that contains logic inside `node_modules` is expected to only contain JavaScript files: `.js` or sometimes, `.cjs`. By "logic", it means the files have exported variables, functions, or classes. We can't import `.ts` files inside `node_modules`, because that would mean the module needs transpilation. If you were around when `babel-jest` was a thing, it was [something like this](https://github.com/jestjs/jest/issues/11753#issuecomment-900595695), where `import` and `export` were still the "next gen" and needed to be transpiled first to `require`. The same thing with TypeScript here--even more so because Node.js can't run TypeScript... [until recently... in Node 22](https://nodejs.org/en/learn/typescript/run-natively). Then again, it's still experimental.
+At the moment, source code that contains logic inside `node_modules` is expected to only contain JavaScript files: `.js` or sometimes, `.cjs`. "Logic" here means variables, functions, or classes. We can't import `.ts` files located inside `node_modules`, because that would mean the module needs transpilation.
+
+If you were around when `babel-jest` was a thing, it was [something like this](https://github.com/jestjs/jest/issues/11753#issuecomment-900595695), where `import` and `export` were still the "next gen" and needed to be transpiled first to `require`. The same thing with TypeScript here—even more so because Node.js can't run TypeScript by default... [until recently in Node.js 22](https://nodejs.org/en/learn/typescript/run-natively). Then again, it's still experimental.
 
 This is where the TypeScript declarations come in: to provide the types when we import the dependency. Consider this [example in TypeScript playground](https://www.typescriptlang.org/play/?#code/KYDwDg9gTgLgBAMwK4DsDGMCWEVwBbAA2hEAFAJQBccKSAtgEbBRwDeAsAFBw9xTAwkUXAEYATAGYA3FwC+XLsnRYccGMADOMCtVqNmbLrz4ChoyTM6ygA):
 
@@ -41,7 +43,7 @@ function test() {
 }
 ```
 
-Whereas the declaration--the `.d.ts` output--is as follows:
+Whereas the declaration—the `.d.ts` output—is as follows:
 
 ```ts
 export declare function hello(): number;
@@ -72,21 +74,21 @@ So, what's the deal with the declaration files sharing the same `index` file? Th
 
 1. Import `index.js`
 2. Does it have `index.d.ts`?
-  1. Yes: import it and "map" all types inside it to variables in `index.js`
-  2. No: do nothing
+   1. Yes: import it and "map" all types inside it to variables in `index.js`
+   2. No: do nothing
 
 This is consistent with the default behavior of `tsc` (which is built-in if you install `typescript` as a dependency in the project). Let's say you have this folder structure:
 
 ```
 <root>
 └──src
- ├── index.ts 
- ├── hello.ts
- ├── world.ts
- └── other.ts
+   ├── index.ts 
+   ├── hello.ts
+   ├── world.ts
+   └── other.ts
 ```
 
-If `index.ts` re-exports all exported stuff from all other `.ts` files, when we do `tsc index.ts --outDir dist --declaration` (and assuming it outputs it to `dist`), this will be the result:
+If `index.ts` re-exports all exported stuff from all other `.ts` files, when we do `tsc index.ts --outDir dist --declaration`, this will be the result:
 
 ```
 <root>
@@ -100,13 +102,13 @@ If `index.ts` re-exports all exported stuff from all other `.ts` files, when we 
 │  └── other.js
 │  └── other.d.ts
 └──src
- ├── index.ts 
- ├── hello.ts
- ├── world.ts
- └── other.ts
+   ├── index.ts 
+   ├── hello.ts
+   ├── world.ts
+   └── other.ts
 ```
 
-It will also behave the same. When `index.js` [that re-exports all other files] is imported, it will also be able to find the declarations from other files.
+When `index.js` is imported, it will also be able to find the declarations from other files.
 
 ### Via @types/* npm package
 
@@ -130,7 +132,7 @@ Lastly, types can also be imported with a `.d.ts` file. An example is the file t
 /// <reference types="vite/client" />
 ```
 
-This will import the file `node_modules/vite/client.d.ts`, which contains things like the following, which allows importing file extensions without needing to set up loaders or linters (because otherwise IDE/TypeScript will complain TypeError as we are importing something from a non-JS file).
+This will import the file `node_modules/vite/client.d.ts`, which contains things like the following.
 
 ```ts
 declare module '*.module.css' {
@@ -143,6 +145,8 @@ declare module '*.module.scss' {
 }
 // and so on...
 ```
+
+This allows importing file extensions without needing to set up loaders or linters. Without this, IDE/TypeScript will complain because we are importing something from a non-JS file.
 
 ## Comparison of the ways above
 
