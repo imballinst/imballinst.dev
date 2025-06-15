@@ -29,7 +29,7 @@ export default function imageCaptionPlugin() {
                   href: altChild.attribs.href,
                   text: $(altChild).text()
                 });
-              } else {
+              } else if (altChild.type === 'text') {
                 let appendedTextContent = altChild.data;
                 const matches = Array.from(
                   appendedTextContent.matchAll(URL_REGEX)
