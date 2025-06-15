@@ -5,6 +5,8 @@ const TEXT_COLOR = 'text-gray-600 dark:text-gray-400';
 const COMPRESSED_EXTS = ['.jpeg', '.jpg', '.png'];
 const IMAGE_WIDTHS = [512, 1024, 2048];
 
+const URL_REGEX = /(https:\/\/[\w.\+/_-]+)/g;
+
 export default function imageCaptionPlugin() {
   return (tree) => {
     for (const firstChild of tree.children) {
@@ -28,7 +30,18 @@ export default function imageCaptionPlugin() {
                   text: $(altChild).text()
                 });
               } else {
-                htmlString += altChild.data;
+                let appendedTextContent = altChild.data;
+                const matches = Array.from(
+                  appendedTextContent.matchAll(URL_REGEX)
+                );
+                for (const match of matches) {
+                  appendedTextContent = appendedTextContent.replace(
+                    URL_REGEX,
+                    generateAnchorTag({ href: match[0], text: match[0] })
+                  );
+                }
+
+                htmlString += appendedTextContent;
               }
             }
           });

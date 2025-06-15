@@ -16,11 +16,15 @@ async function main() {
     .use(htmlClassnamesPlugin)
     .process(
       `
-1. Import index.js
-2. Does it have index.d.ts?
-   1. Yes: import it and "map" all types inside it to variables in index.js
-   2. No: do nothing
+![The Sphere Grid in Final Fantasy X. Source: https://finalfantasy.fandom.com/wiki/Sphere_Grid](/assets/blog/sticky-skill-sets/ffx-sphere-grid.webp)
 `.trim()
+      //     .process(
+      //       `
+      // 1. Import index.js
+      // 2. Does it have index.d.ts?
+      //    1. Yes: import it and "map" all types inside it to variables in index.js
+      //    2. No: do nothing
+      // `.trim()
     );
 
   console.info(String(file));
