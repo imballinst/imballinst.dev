@@ -5,7 +5,10 @@ import remarkToc from 'remark-toc';
 import imageCaptionPlugin from './plugins/image/index.mjs';
 import htmlClassnamesPlugin from './plugins/html-classnames/index.mjs';
 import expressiveCode from 'astro-expressive-code';
-import tocInjectorPlugin from './plugins/toc-injector/index.mjs';
+import {
+  tocInjectorPlugin,
+  tocLeadingContentCleanupPlugin
+} from './plugins/toc-injector/index.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,6 +28,7 @@ export default defineConfig({
       imageCaptionPlugin,
       tocInjectorPlugin,
       remarkToc,
+      tocLeadingContentCleanupPlugin,
       htmlClassnamesPlugin
     ],
     rehypePlugins: []
