@@ -29,5 +29,11 @@ export function tocLeadingContentCleanupPlugin() {
     if (idx > -1) {
       tree.children.splice(idx, 1);
     }
+
+    const tocIdx = tree.children.findIndex((child) => child.id === TOC_ID);
+    if (tocIdx > -1 && tree.children[tocIdx + 1].type === 'list') {
+      // The first list after TOC heading is the TOC itself.
+      tree.children[tocIdx + 1].children.splice(0, 1);
+    }
   };
 }
