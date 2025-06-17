@@ -25,10 +25,10 @@ export default defineConfig({
       : process.env.DEPLOY_PRIME_URL,
   markdown: {
     remarkPlugins: [
-      imageCaptionPlugin,
       tocInjectorPlugin,
       remarkToc,
       tocLeadingContentCleanupPlugin,
+      imageCaptionPlugin,
       htmlClassnamesPlugin
     ],
     rehypePlugins: []

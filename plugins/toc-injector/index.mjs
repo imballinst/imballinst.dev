@@ -1,11 +1,14 @@
 const LEADING_CONTENT_ID = '__leading-content__';
 
+export const TOC_ID = 'table-of-contents';
+
 export function tocInjectorPlugin() {
   return (/** @type {*} */ tree) => {
     tree.children.unshift(
       {
         type: 'heading',
         depth: 2,
+        id: TOC_ID,
         children: [{ type: 'text', value: 'Table of Contents' }]
       },
       {
