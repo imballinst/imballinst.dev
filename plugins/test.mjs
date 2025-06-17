@@ -1,7 +1,10 @@
 import { remark } from 'remark';
 import htmlClassnamesPlugin from './html-classnames/index.mjs';
 import imageCaptionPlugin from './image/index.mjs';
-import tocInjectorPlugin from './toc-injector/index.mjs';
+import {
+  tocInjectorPlugin,
+  tocLeadingContentCleanupPlugin
+} from './toc-injector/index.mjs';
 import remarkToc from 'remark-toc';
 
 process.env.NODE_ENV = 'production';
@@ -12,14 +15,16 @@ async function main() {
   const file = await remark()
     .use(tocInjectorPlugin)
     .use(remarkToc)
+    .use(tocLeadingContentCleanupPlugin)
     .use(imageCaptionPlugin)
     .use(htmlClassnamesPlugin)
     .process(
       `
-1. Import index.js
-2. Does it have index.d.ts?
-   1. Yes: import it and "map" all types inside it to variables in index.js
-   2. No: do nothing
+Test
+
+## hehe
+
+haha
 `.trim()
     );
 

@@ -4,6 +4,7 @@ import { toString } from 'mdast-util-to-string';
 import { toHast } from 'mdast-util-to-hast';
 import { toHtml } from 'hast-util-to-html';
 import path from 'path';
+import { TOC_ID } from '../toc-injector/index.mjs';
 
 // TODO(imballinst): ensure these are consistent.
 const TEXT_COLOR = 'text-black dark:text-gray-200';
@@ -86,13 +87,8 @@ export default function htmlClassnamesPlugin() {
         const str = toString(child);
         const tag = `h${child.depth}`;
         let tagClass =
-          DEFAULT_ATTRS[/** @type {keyof typeof DEFAULT_ATTRS} */ (tag)];
-
-        const isTableOfContents = isTOC(child);
-        if (!isTableOfContents) {
-          tagClass +=
-            ' pb-2 border-b border-solid border-[#0000001a] dark:border-[#ffffff1a]';
-        }
+          DEFAULT_ATTRS[/** @type {keyof typeof DEFAULT_ATTRS} */ (tag)] +
+          ' pb-2 border-b border-solid border-[#0000001a] dark:border-[#ffffff1a]';
 
         child.previous = { ...child };
         child.type = 'html';
@@ -358,10 +354,17 @@ function convertHeadingToId(text) {
  */
 function addListStyle(element, isOrdered, isNested, isTOC) {
   const listType = isOrdered ? 'list-decimal' : 'list-disc';
-  const marginBottom = isNested ? '' : 'mb-4';
   const paddingLeft = isTOC || isNested ? 'pl-4' : 'pl-8';
+  let listCommonStyle = '';
 
-  element.properties.class = `${TEXT_COLOR} ${listType} ${paddingLeft} ${marginBottom}`;
+  if (isTOC) {
+    listCommonStyle =
+      'border-b border-dotted border-[#0000001a] dark:border-[#ffffff1a] pb-8 mb-8';
+  } else if (!isNested) {
+    listCommonStyle = 'mb-4';
+  }
+
+  element.properties.class = `${TEXT_COLOR} ${listType} ${paddingLeft} ${listCommonStyle}`;
 
   for (const el of element.children) {
     el.properties = { class: 'pl-1' };
@@ -406,5 +409,5 @@ function shouldModifyAnchorNode(element) {
  * @returns
  */
 function isTOC(child) {
-  return child?.value === 'Table of Contents';
+  return child?.id === TOC_ID;
 }
