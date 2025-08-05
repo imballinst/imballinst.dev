@@ -2,10 +2,12 @@ export const DEFAULT_BG = 'bg-gray-50 dark:bg-gray-800';
 
 export const TEXT_COLOR = 'text-black dark:text-gray-200';
 const ALTERNATIVE_TEXT_COLORS = {
-  black: 'text-black dark:text-gray-200',
+  black: TEXT_COLOR,
   gray: 'text-gray-600 dark:text-gray-400',
   teal: 'text-teal-600 dark:text-teal-300',
-  red: 'text-red-600 dark:text-red-400'
+  red: 'text-red-600 dark:text-red-400',
+  staticTeal: 'text-teal-300',
+  staticGray: 'text-gray-200'
 };
 
 export const BUTTON_COLOR_SCHEMES = {
@@ -42,19 +44,10 @@ export const DEFAULT_MARGINS = {
 export type ColorSchemes = 'black' | keyof typeof ALTERNATIVE_TEXT_COLORS;
 export type ButtonColorSchemes = keyof typeof BUTTON_COLOR_SCHEMES;
 
-export function changeTextColorScheme(
-  classnames: string,
-  colorScheme: ColorSchemes
-) {
+export function changeTextColorScheme(classnames: string, colorScheme: ColorSchemes) {
   return classnames.replace(TEXT_COLOR, ALTERNATIVE_TEXT_COLORS[colorScheme]);
 }
 
-export function changeButtonColorScheme(
-  classnames: string,
-  colorScheme: ButtonColorSchemes
-) {
-  return classnames.replace(
-    BUTTON_COLOR_SCHEMES.white,
-    BUTTON_COLOR_SCHEMES[colorScheme]
-  );
+export function changeButtonColorScheme(classnames: string, colorScheme: ButtonColorSchemes) {
+  return classnames.replace(BUTTON_COLOR_SCHEMES.white, BUTTON_COLOR_SCHEMES[colorScheme]);
 }

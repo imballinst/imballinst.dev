@@ -3,7 +3,9 @@ const LEADING_CONTENT_ID = '__leading-content__';
 export const TOC_ID = 'table-of-contents';
 
 export function tocInjectorPlugin() {
-  return (/** @type {*} */ tree) => {
+  return (/** @type {*} */ tree, file) => {
+    if (file.history[0].endsWith('about.md')) return;
+
     tree.children.unshift(
       {
         type: 'heading',
@@ -23,9 +25,7 @@ export function tocInjectorPlugin() {
 
 export function tocLeadingContentCleanupPlugin() {
   return (/** @type {*} */ tree) => {
-    const idx = tree.children.findIndex(
-      (child) => child.id === LEADING_CONTENT_ID
-    );
+    const idx = tree.children.findIndex((child) => child.id === LEADING_CONTENT_ID);
     if (idx > -1) {
       tree.children.splice(idx, 1);
     }

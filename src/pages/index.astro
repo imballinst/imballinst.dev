@@ -2,39 +2,25 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
+import { getAllContents } from '../helpers/files';
 
-let allPosts = await Astro.glob('./blog/*.md');
-allPosts = allPosts
+const blogPostsGlob = import.meta.glob('./blog/*.md');
+const rawBlogPosts = await getAllContents(blogPostsGlob);
+const filteredPosts = rawBlogPosts
   .filter((p) => p.frontmatter.visibility === 'public')
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.publishDate).valueOf() -
-      new Date(a.frontmatter.publishDate).valueOf()
-  );
+  .sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
-let allProjects = await Astro.glob('./projects/*.md');
-allProjects = allProjects
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.publishDate).valueOf() -
-      new Date(a.frontmatter.publishDate).valueOf()
-  )
+const projectsGlob = import.meta.glob('./projects/*.md');
+const rawProjects = await getAllContents(projectsGlob);
+const filteredProjects = rawProjects
+  .sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf())
   .slice(0, 3);
 ---
 
-<BaseLayout
-  title="Home"
-  description="The home page of my personal site."
-  currentMenu="/"
-  disableWidthLimitation
->
-  <Text as="h1" className="text-center mt-0 mb-0"
-    >Hello, my name is Try Ajitiono!</Text
-  >
+<BaseLayout title="Home" description="The home page of my personal site." currentMenu="/" disableWidthLimitation>
+  <Text as="h1" className="text-center mt-0 mb-0">Hello, my name is Try Ajitiono!</Text>
 
-  <Text as="p" className="text-xl text-center">
-    I write about software development, real life, and gaming stuff.
-  </Text>
+  <Text as="p" className="text-xl text-center"> I write about software development, real life, and gaming stuff. </Text>
 
   <section class="mt-8">
     <Text as="h2">Latest posts</Text>
@@ -42,20 +28,20 @@ allProjects = allProjects
     <div>
       <div class="mt-8 grid grid-cols-1">
         <Card
-          title={allPosts[0].frontmatter.title}
+          title={filteredPosts[0].frontmatter.title}
           titleHeadingElement="h3"
-          date={allPosts[0].frontmatter.publishDate}
-          text={allPosts[0].frontmatter.description}
-          img={allPosts[0].frontmatter.image}
-          imgAlt={allPosts[0].frontmatter.imageAlt}
-          href={allPosts[0].url}
+          date={filteredPosts[0].frontmatter.publishDate}
+          text={filteredPosts[0].frontmatter.description}
+          img={filteredPosts[0].frontmatter.image}
+          imgAlt={filteredPosts[0].frontmatter.imageAlt}
+          href={filteredPosts[0].url}
           className="h-full"
         />
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 mt-4 gap-4">
         {
-          allPosts
+          filteredPosts
             .slice(1, 3)
             .map((post) => (
               <Card
@@ -79,10 +65,10 @@ allProjects = allProjects
       <div class="relative flex-1">
         <Card
           titleHeadingElement="h3"
-          title={allProjects[0].frontmatter.title}
-          date={allProjects[0].frontmatter.publishDate}
-          text={allProjects[0].frontmatter.description}
-          href={allProjects[0].url}
+          title={filteredProjects[0].frontmatter.title}
+          date={filteredProjects[0].frontmatter.publishDate}
+          text={filteredProjects[0].frontmatter.description}
+          href={filteredProjects[0].url}
           className="h-full"
         />
       </div>

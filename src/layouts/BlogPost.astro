@@ -1,29 +1,13 @@
 ---
-import { readFileSync } from 'fs';
-
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPostHeader from '../components/BlogPostHeader.astro';
 
 import { Text } from '../components/Typography';
 import { Link } from '../components/Links';
-import { FeedbackModal } from '../components/Modal';
 import { EditIcon } from '../components/Icons';
-import { getAllHeadingIds } from '../helpers/markdown';
 
 const { content = {} } = Astro.props;
-const {
-  title,
-  description,
-  publishDate,
-  author,
-  image,
-  imageAlt,
-  imageCaption,
-  file
-} = content;
-
-const fileContent = readFileSync(file, 'utf-8');
-const rootHeading = getAllHeadingIds(fileContent);
+const { title, description, publishDate, author, image, imageAlt, imageCaption } = content;
 
 let slug = Astro.url.pathname;
 if (slug.endsWith('/')) {
@@ -35,16 +19,7 @@ const editPage = `https://github.com/imballinst/imballinst.dev/edit/main/src/pag
 
 <BaseLayout {title} {description} {image} currentMenu="/blog">
   <article class="content">
-    <FeedbackModal slug={slug} client:visible>test</FeedbackModal>
-
-    <BlogPostHeader
-      {image}
-      {imageAlt}
-      {imageCaption}
-      {title}
-      {author}
-      {publishDate}
-    />
+    <BlogPostHeader {image} {imageAlt} {imageCaption} {title} {author} {publishDate} />
 
     <div class="mt-4">
       <slot />
@@ -53,12 +28,7 @@ const editPage = `https://github.com/imballinst/imballinst.dev/edit/main/src/pag
     <hr class="border-gray-200 dark:border-gray-600 border-dotted mt-6" />
 
     <Text as="div" className="flex flex-col justify-between sm:flex-row mt-6">
-      <Link
-        href={editPage}
-        className="flex flex-row items-center"
-        isExternal
-        disableExternalIcon
-      >
+      <Link href={editPage} className="flex flex-row items-center" isExternal disableExternalIcon>
         <EditIcon className="h-4 w-4" />
 
         <span class="ml-2">Edit this post</span>

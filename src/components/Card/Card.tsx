@@ -35,10 +35,7 @@ export function Card(props: CardProps) {
   let titleChildren: JSX.Element | undefined = undefined;
   let cardContent: JSX.Element | undefined = undefined;
 
-  if (
-    props.href !== undefined &&
-    (props.href.includes('http://') || props.href.includes('https://'))
-  ) {
+  if (props.href !== undefined && (props.href.includes('http://') || props.href.includes('https://'))) {
     anchorProps.target = '_blank';
     anchorProps.rel = 'noopener';
 
@@ -50,9 +47,7 @@ export function Card(props: CardProps) {
       <>
         <div className="lg:mr-[-10%] h-[300px] lg:h-[200px]">{cardImage}</div>
 
-        <div
-          className={`absolute bottom-0 p-4 pt-12 lg:pr-16 lg:pt-4 w-full lg:w-1/2 lg:h-full card-detail flex flex-col justify-end md:justify-center`}
-        >
+        <div className="absolute bottom-0 p-4 pt-12 lg:pr-16 lg:pt-4 w-full lg:w-1/2 lg:h-full card-detail flex flex-col justify-end md:justify-center">
           <CardDetail
             title={props.title}
             text={props.text}
@@ -65,7 +60,7 @@ export function Card(props: CardProps) {
     );
   } else {
     cardContent = (
-      <div className="p-4 bg-white dark:bg-transparent h-full">
+      <div className="p-4 bg-white dark:bg-transparent h-full card-detail-without-image">
         <CardDetail
           title={props.title}
           text={props.text}
@@ -103,21 +98,19 @@ function CardDetail({
 }) {
   return (
     <>
-      <Text
-        className="font-semibold leading-tight truncate text-lg my-0"
-        as={titleHeadingElement}
-        colorScheme="teal"
-      >
+      <Text className="font-semibold leading-tight truncate text-lg my-0" as={titleHeadingElement} colorScheme="staticTeal">
         {title}
         {titleChildren}
       </Text>
 
-      <div className="flex flex-row items-center mb-1 text-sm text-gray-600 dark:text-gray-400">
+      <div className="flex flex-row items-center mb-1 text-sm text-gray-400">
         {format(new Date(date), 'MMM dd, yyyy')}
       </div>
 
-      <div className={`flex mt-2 items-center flex-col card-text`}>
-        <Text className="text-base">{text}</Text>
+      <div className="flex mt-2 items-center flex-col card-text">
+        <Text className="text-base" colorScheme="staticGray">
+          {text}
+        </Text>
       </div>
     </>
   );

@@ -2,27 +2,21 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Text } from '../components/Typography';
 import { Card } from '../components/Card';
+import { getAllContents } from '../helpers/files';
 
-let allPosts = await Astro.glob('./blog/*.md');
-allPosts = allPosts
+const blogPostsGlob = import.meta.glob('./blog/*.md');
+const rawPosts = await getAllContents(blogPostsGlob);
+const filteredPosts = rawPosts
   .filter((p) => p.frontmatter.visibility === 'public')
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.publishDate).valueOf() -
-      new Date(a.frontmatter.publishDate).valueOf()
-  );
+  .sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 ---
 
-<BaseLayout
-  title="Blog"
-  description="List of blog posts written by me."
-  currentMenu="/blog"
->
+<BaseLayout title="Blog" description="List of blog posts written by me." currentMenu="/blog">
   <Text as="h1" className="mb-4">Blog</Text>
 
   <ul class="grid grid-cols-1 gap-8">
     {
-      allPosts.map((post) => (
+      filteredPosts.map((post) => (
         <li>
           <Card
             titleHeadingElement="h2"

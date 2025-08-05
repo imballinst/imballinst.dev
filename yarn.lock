@@ -4051,7 +4051,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/vite@npm:^4.1.11":
+"@tailwindcss/vite@npm:latest":
   version: 4.1.11
   resolution: "@tailwindcss/vite@npm:4.1.11"
   dependencies:
@@ -9486,7 +9486,7 @@ __metadata:
     "@astrojs/check": 0.9.4
     "@astrojs/preact": 4.1.0
     "@astrojs/tailwind": 6.0.2
-    "@tailwindcss/vite": ^4.1.11
+    "@tailwindcss/vite": latest
     "@types/node": 20.8.9
     astro: 5.12.8
     astro-expressive-code: 0.41.3
@@ -9503,7 +9503,7 @@ __metadata:
     remark: 15.0.1
     remark-toc: 9.0.0
     sharp: 0.32.6
-    tailwindcss: ^4.1.11
+    tailwindcss: latest
     typescript: 5.2.2
   languageName: unknown
   linkType: soft
@@ -15491,7 +15491,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.1.11, tailwindcss@npm:^4.1.11":
+"tailwindcss@npm:4.1.11, tailwindcss@npm:latest":
   version: 4.1.11
   resolution: "tailwindcss@npm:4.1.11"
   checksum: db5883219aa7b4192aa13a028547867c5d6c18b3438b99c25ac7af64c3f9475d1b96970cb27f52f6f53789bb91d8fc4ed8e7f181c73ba7dda721cf5a44983804
