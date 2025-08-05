@@ -10,6 +10,8 @@ import {
   tocLeadingContentCleanupPlugin
 } from './plugins/toc-injector/index.mjs';
 
+import tailwindcss from '@tailwindcss/vite';
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -19,10 +21,12 @@ export default defineConfig({
     }),
     expressiveCode()
   ],
+
   site:
     process.env.CONTEXT === 'production'
       ? process.env.URL
       : process.env.DEPLOY_PRIME_URL,
+
   markdown: {
     remarkPlugins: [
       tocInjectorPlugin,
@@ -32,5 +36,9 @@ export default defineConfig({
       htmlClassnamesPlugin
     ],
     rehypePlugins: []
+  },
+
+  vite: {
+    plugins: [tailwindcss()]
   }
 });
