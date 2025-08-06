@@ -103,7 +103,7 @@ function CardDetail({
         {titleChildren}
       </Text>
 
-      <div className="flex flex-row items-center mb-1 text-sm text-gray-400">
+      <div className="mb-1 text-sm text-gray-300 dark:text-gray-400">
         {format(new Date(date), 'MMM dd, yyyy')}
       </div>
 

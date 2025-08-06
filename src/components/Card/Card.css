@@ -12,12 +12,12 @@
 }
 
 html:not(.dark) .card-detail {
-  background: linear-gradient(to right, rgba(30, 30, 30, 1) 0%, rgba(30, 30, 30, 1) 90%, rgba(30, 30, 30, 0));
+  background: linear-gradient(to right, rgba(75, 75, 75, 1) 0%, rgba(75, 75, 75, 1) 90%, rgba(75, 75, 75, 0));
 }
 
 @media (max-width: 1024px) {
   html:not(.dark) .card-detail {
-    background: linear-gradient(to top, rgba(30, 30, 30, 1) 0%, rgba(30, 30, 30, 1) 80%, rgba(30, 30, 30, 0));
+    background: linear-gradient(to top, rgba(75, 75, 75, 1) 0%, rgba(75, 75, 75, 1) 80%, rgba(75, 75, 75, 0));
   }
 }
 
@@ -32,7 +32,7 @@ html.dark .card-detail {
 }
 
 html:not(.dark) .card-detail-without-image {
-  background: rgb(30, 30, 30);
+  background: rgb(75, 75, 75);
 }
 
 html.dark .card-detail-without-image {
