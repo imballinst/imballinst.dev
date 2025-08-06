@@ -2,21 +2,9 @@
 import BaseLayout from './BaseLayout.astro';
 import { HOME_BREADCRUMBS } from '../helpers/paths';
 import { Text } from '../components/Typography';
-
-/*
-allPosts = allPosts.sort(
-  (a, b) =>
-    new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
-);
-*/
 ---
 
-<BaseLayout
-  pages={HOME_BREADCRUMBS}
-  title="Home"
-  description="The home page of Try Ajitiono's personal site."
-  currentMenu="/about"
->
+<BaseLayout pages={HOME_BREADCRUMBS} title="About" description="The page containing information about Try Ajitiono." currentMenu="/about">
   <Text as="h1" className="mb-4">About</Text>
 
   <slot />

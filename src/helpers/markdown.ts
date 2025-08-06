@@ -5,20 +5,6 @@ export interface Heading {
   children: Heading[];
 }
 
-export function getAllHeadingIds(content: string) {
-  const root: Heading = {
-    id: '',
-    text: '',
-    level: 1,
-    children: []
-  };
-
-  const lines = content.split('\n').filter((line) => line.match(/^#+\s/));
-  recursivelyAddToPreviousHeading(lines, root);
-
-  return root;
-}
-
 // Helper functions.
 function convertHeadingToId(text: string) {
   return text

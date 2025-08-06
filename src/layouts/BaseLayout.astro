@@ -8,8 +8,7 @@ import { Link as ComponentLink } from '../components/Links';
 const { title, description, currentMenu, image } = Astro.props;
 const permalink = Astro.url.href;
 
-const effectiveDescription =
-  description || 'The personal site of Try Ajitiono.';
+const effectiveDescription = description || 'The personal site of Try Ajitiono.';
 
 const pageTitlePrefix = title ? `${title} | ` : '';
 const pageTitle = pageTitlePrefix + 'imballinst.dev';
@@ -36,9 +35,7 @@ const NAVS = [
 ];
 const NAVS_WITH_CLASSES = NAVS.map((nav) => ({
   ...nav,
-  className: `${BASE_NAV_CLASSES} ${
-    currentMenu === nav.path ? 'border-b-2' : 'hover:border-b-2'
-  }`
+  className: `${BASE_NAV_CLASSES} ${currentMenu === nav.path ? 'border-b-2' : 'hover:border-b-2'}`
 }));
 
 const SOCIAL_LINKS = [
@@ -60,23 +57,12 @@ const CURRENT_YEAR = new Date().getFullYear();
 
 <html lang="en">
   <head>
-    <BaseHead
-      title={pageTitle}
-      description={effectiveDescription}
-      permalink={permalink}
-      {image}
-    />
+    <BaseHead title={pageTitle} description={effectiveDescription} permalink={permalink} {image} />
   </head>
 
-  <body
-    class="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-800 transition-colors"
-  >
-    <nav
-      class="shadow-sm flex flex-row justify-center fixed top-0 w-full z-10 bg-gray-50 dark:bg-gray-800"
-    >
-      <div
-        class="-ml-2 flex flex-row justify-between items-center px-3 py-2 w-full md:w-wmd lg:w-wlg"
-      >
+  <body class="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-800 transition-colors">
+    <nav class="shadow-sm flex flex-row justify-center fixed top-0 w-full z-10 bg-gray-50 dark:bg-gray-800">
+      <div class="-ml-2 flex flex-row justify-between items-center px-3 py-2 w-full md:w-(--max-width-md) lg:w-(--max-width-lg)">
         <div class="flex flex-row font-semibold">
           {
             NAVS_WITH_CLASSES.map((nav) => (
@@ -94,17 +80,15 @@ const CURRENT_YEAR = new Date().getFullYear();
     </nav>
 
     <main class="flex flex-1 py-4 flex-row justify-center">
-      <div class="w-full md:w-wmd lg:w-wlg flex flex-col">
+      <div class="w-full md:w-(--max-width-md) lg:w-(--max-width-lg) flex flex-col">
         <div class="flex-1 pb-2 px-4">
           <slot />
         </div>
       </div>
     </main>
 
-    <footer
-      class="flex flex-initial flex-col p-2 mt-4 justify-center items-center w-full"
-    >
-      <Text as="div" colorScheme="gray" className="sm:w-full md:w-wmd lg:w-wlg">
+    <footer class="flex flex-initial flex-col p-2 mt-4 justify-center items-center w-full">
+      <Text as="div" colorScheme="gray" className="sm:w-full md:w-(--max-width-md) lg:w-(--max-width-lg)">
         <small class="block w-full font-bold text-center text-xs">
           &copy; 2020-{CURRENT_YEAR} Try Ajitiono
         </small>
