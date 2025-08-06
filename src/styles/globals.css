@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+:root {
+  --max-width-md: 48rem;
+  --max-width-lg: 60rem;
+}
+
 /* Tailwind. */
 @theme {
   --color-teal-50: #e6fffa;
@@ -12,9 +17,6 @@
   --color-teal-700: #285e61;
   --color-teal-800: #234e52;
   --color-teal-900: #1d4044;
-
-  --w-wmd: 48rem;
-  --w-wlg: 60rem;
 }
 @custom-variant dark (&:where(.dark, .dark *));
 
