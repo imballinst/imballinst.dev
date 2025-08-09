@@ -113,3 +113,12 @@ h6 {
 .dark :not(pre) > code:not([class*='language']) {
   @apply text-sm rounded text-red-300;
 }
+
+/* External stuff. */
+.twitter-tweet {
+  @apply !max-w-full justify-center;
+}
+
+.twitter-tweet > iframe {
+  @apply !max-w-[550px];
+}

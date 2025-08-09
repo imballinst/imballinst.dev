@@ -1,10 +1,10 @@
 ---
-title: Let's Talk About Context Switch
+title: Managing Context Switch
 description: Context switch can be a scary thing, because it can impact your productivity. However, is it absolute? Is there absolutely nothing we can do about it? Let's discuss it in this post!
 publishDate: 2025-06-15T14:17:04.269Z
-image: /assets/blog/lets-talk-context-switch/lets-talk-context-switch.png
-imageAlt: 'An image containing the text, "Let\'s Talk About Context Switch".'
-imageCaption: 'An image containing the text, "Let\'s Talk About Context Switch".'
+image: /assets/blog/managing-context-switch/managing-context-switch.png
+imageAlt: An image containing the text, "Managing Context Switch".
+imageCaption: An image containing the text, "Managing Context Switch".
 tags: life, software engineering, typescript
 visibility: public
 layout: '../../layouts/BlogPost.astro'
@@ -36,6 +36,8 @@ As a healer, there are 3 things that I mostly look out for:
 
 The DPS part in healer role isn't that complex, because there are no "combo attacks". So, if I mess up the DPS rotation as a healer, it is not the end of the world.
 
+![My Red Mage hotbar in Final Fantasy XIV. Don't judge my awkward hotkeys.](/assets/blog/managing-context-switch/ff14-rdm-hotbar-size500w.png)
+
 Enter DPS role. I remember when I did the DPS role in higher-level dungeons and trials when the stakes were higher and it was super messy. As a DPS role, I need to:
 
 1. Do DPS (of course) and to deal the most optimal DPS, I need to do optimal rotation. On top of the combo attacks, I need to also keep track of the ability cooldowns as well as the active buff durations. Some melee characters even have to adjust positioning when to attack from the rear and when to attack from the side.
@@ -53,6 +55,8 @@ A little bit about football, so while I'm not an expert whatsoever in terms of f
 > When Arsène Wenger gave a lecture at the Barça Innovation Hub’s Sports Tomorrow Congress in 2020, he found himself on the perfect stage to explain what he valued most in a football player: scanning, the visual exploration of the environment; the glances a footballer takes before or after touching the ball, the frequency of head and eye movements to gather information about their surroundings, whether when receiving a ball or when it moves away from the player.
 
 It is a very interesting action, which of course, before I knew about it, I never thought about it. As someone who never plays competitive football, I think I would be overwhelmed when I need to at least scan, remember the tactics, and walk/jog/run at the same time.
+
+<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">Playmaking under pressure and in the traffic is a key concept for central midfielders. Schouten is a player that even though still having lots of potential in hus scanning process, can secure and retain the possession in quite decent way.<br><br>via <a href="https://twitter.com/mfbnTV?ref_src=twsrc%5Etfw">@mfbnTV</a><a href="https://t.co/BVvO1g6qkZ">pic.twitter.com/BVvO1g6qkZ</a></p>&mdash; Mindfootballness (@mfbnvideos) <a href="https://twitter.com/mfbnvideos/status/1950829800488083707?ref_src=twsrc%5Etfw">July 31, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 What does that remind us of? Yes, multitasking! Although, similar like the previous section, if all of the other things is already stored as "muscle memory", then scanning will not reduce the player's productivity.
 

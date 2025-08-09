@@ -21,16 +21,15 @@ export function Link({
 }: LinkProps) {
   const anchorProps: JSX.HTMLAttributes<HTMLAnchorElement> = {
     href,
-    className: `text-teal-600 dark:text-teal-300 ${
-      disableUnderline ? '' : 'hover:underline'
-    } break-all ${className}`
+    className: `text-teal-600 dark:text-teal-300 ${disableUnderline ? '' : 'hover:underline'
+      } break-all ${className}`
   };
   let additionalChildren: JSX.Element | undefined;
 
   if (isExternal) {
     anchorProps.target = ADDITIONAL_EXTERNAL_PROPS.target;
     anchorProps.rel = ADDITIONAL_EXTERNAL_PROPS.rel;
-    anchorProps.className = `${anchorProps.className} inline`;
+    anchorProps.className = `${anchorProps.className} inline-flex`;
 
     if (!disableExternalIcon) {
       additionalChildren = <ExternalLinkIcon />;

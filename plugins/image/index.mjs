@@ -31,14 +31,9 @@ export default function imageCaptionPlugin() {
                 });
               } else if (altChild.type === 'text') {
                 let appendedTextContent = altChild.data;
-                const matches = Array.from(
-                  appendedTextContent.matchAll(URL_REGEX)
-                );
+                const matches = Array.from(appendedTextContent.matchAll(URL_REGEX));
                 for (const match of matches) {
-                  appendedTextContent = appendedTextContent.replace(
-                    URL_REGEX,
-                    generateAnchorTag({ href: match[0], text: match[0] })
-                  );
+                  appendedTextContent = appendedTextContent.replace(URL_REGEX, generateAnchorTag({ href: match[0], text: match[0] }));
                 }
 
                 htmlString += appendedTextContent;
@@ -46,13 +41,27 @@ export default function imageCaptionPlugin() {
             }
           });
 
+          /** @type {RegExpMatchArray | null} */
+          const fixedSizeResult = url.match(/-size(\d+)w/);
+          // The ratio is 16:9.
+          let width = 800;
+          let imgClass = 'border border-gray-200 dark:border-gray-600';
+
+          if (fixedSizeResult) {
+            width = fixedSizeResult[1];
+          } else {
+            imgClass += ' w-full';
+          }
+
+          const height = (width * 9) / 16;
+
           const imgProps = {
             alt: altString,
             loading: 'lazy',
             src: url,
-            height: '450',
-            width: '800',
-            class: 'w-full border border-gray-200 dark:border-gray-600'
+            height,
+            width,
+            class: imgClass
           };
 
           if (process.env.NODE_ENV === 'production') {
@@ -61,9 +70,7 @@ export default function imageCaptionPlugin() {
             if (COMPRESSED_EXTS.includes(ext)) {
               const withoutExt = url.slice(0, -ext.length);
 
-              imgProps.srcset = IMAGE_WIDTHS.map(
-                (width) => `${withoutExt}--${width}w${ext} ${width}w`
-              ).join(', ');
+              imgProps.srcset = IMAGE_WIDTHS.map((width) => `${withoutExt}--${width}w${ext} ${width}w`).join(', ');
               // Set the effective URL to the biggest image.
               imgProps.src = `${withoutExt}--${IMAGE_WIDTHS[2]}w${ext}`;
             }
