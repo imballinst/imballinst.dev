@@ -9131,7 +9131,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hast-util-to-html@npm:9.0.0, hast-util-to-html@npm:^9.0.0":
+"hast-util-to-html@npm:9.0.5, hast-util-to-html@npm:^9.0.5":
+  version: 9.0.5
+  resolution: "hast-util-to-html@npm:9.0.5"
+  dependencies:
+    "@types/hast": ^3.0.0
+    "@types/unist": ^3.0.0
+    ccount: ^2.0.0
+    comma-separated-tokens: ^2.0.0
+    hast-util-whitespace: ^3.0.0
+    html-void-elements: ^3.0.0
+    mdast-util-to-hast: ^13.0.0
+    property-information: ^7.0.0
+    space-separated-tokens: ^2.0.0
+    stringify-entities: ^4.0.0
+    zwitch: ^2.0.4
+  checksum: 1ebd013ad340cf646ea944100427917747f69543800e79b2186521dc29c205b4fe75d8062f3eddedf6d66f6180ca06fe127b9e53ff15a8f3579e36637ca43e16
+  languageName: node
+  linkType: hard
+
+"hast-util-to-html@npm:^9.0.0":
   version: 9.0.0
   resolution: "hast-util-to-html@npm:9.0.0"
   dependencies:
@@ -9168,25 +9187,6 @@ __metadata:
     stringify-entities: ^4.0.0
     zwitch: ^2.0.4
   checksum: a43a8cdc8472c2a2c80674bccfcc424eb0ab7ae9646b3807249ba07c07bf080ac6a4cd5db4388d97478ce3558c9ad91bc467fcc6ddfc673c96c62a26c402e583
-  languageName: node
-  linkType: hard
-
-"hast-util-to-html@npm:^9.0.5":
-  version: 9.0.5
-  resolution: "hast-util-to-html@npm:9.0.5"
-  dependencies:
-    "@types/hast": ^3.0.0
-    "@types/unist": ^3.0.0
-    ccount: ^2.0.0
-    comma-separated-tokens: ^2.0.0
-    hast-util-whitespace: ^3.0.0
-    html-void-elements: ^3.0.0
-    mdast-util-to-hast: ^13.0.0
-    property-information: ^7.0.0
-    space-separated-tokens: ^2.0.0
-    stringify-entities: ^4.0.0
-    zwitch: ^2.0.4
-  checksum: 1ebd013ad340cf646ea944100427917747f69543800e79b2186521dc29c205b4fe75d8062f3eddedf6d66f6180ca06fe127b9e53ff15a8f3579e36637ca43e16
   languageName: node
   linkType: hard
 
@@ -9493,7 +9493,7 @@ __metadata:
     cheerio: 1.0.0-rc.12
     date-fns: 2.30.0
     domhandler: 5.0.3
-    hast-util-to-html: 9.0.0
+    hast-util-to-html: 9.0.5
     mdast-util-to-hast: 13.0.2
     mdast-util-to-string: 4.0.0
     netlify-cli: 16.9.3
