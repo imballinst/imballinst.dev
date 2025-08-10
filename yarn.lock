@@ -5040,9 +5040,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.12.8":
-  version: 5.12.8
-  resolution: "astro@npm:5.12.8"
+"astro@npm:5.12.9":
+  version: 5.12.9
+  resolution: "astro@npm:5.12.9"
   dependencies:
     "@astrojs/compiler": ^2.12.2
     "@astrojs/internal-helpers": 0.7.1
@@ -5112,7 +5112,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 53e97b675b6da82a051a8b0da572b6f0e19aea679af6fa12640fa7077958d9a52bee3d7b02c7ab6e4c01ecf149107e3d2530da9540a95cbaecd804ff276a3a75
+  checksum: 63697eb50bf6887cf42eb55e04d7b5063409d047409ea9783673074c86fd7a01a18ad0556c3982cc95e9563c4f399d2090ee7d52e4f52c41135be295f2b6d6ca
   languageName: node
   linkType: hard
 
@@ -9488,7 +9488,7 @@ __metadata:
     "@astrojs/tailwind": 6.0.2
     "@tailwindcss/vite": 4.1.11
     "@types/node": 20.8.9
-    astro: 5.12.8
+    astro: 5.12.9
     astro-expressive-code: 0.41.3
     cheerio: 1.0.0-rc.12
     date-fns: 2.30.0
