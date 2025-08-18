@@ -55,10 +55,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/internal-helpers@npm:0.7.1":
-  version: 0.7.1
-  resolution: "@astrojs/internal-helpers@npm:0.7.1"
-  checksum: 6e1e442d2e3f6139ddf7efc027053d872cb5ba2945271cfff07af859d6f3660f9922582dab95b6eebeea589fade019a9899c94775643bcbe72ddb8b0757c0fb5
+"@astrojs/internal-helpers@npm:0.7.2":
+  version: 0.7.2
+  resolution: "@astrojs/internal-helpers@npm:0.7.2"
+  checksum: 70e11b51eca9999414c52706a20f8bf0a892d5d54cb2f2350e1c40af563a010f834939cefc603b076e0abf5067a1b128e07085aed484770714359da756ee5828
   languageName: node
   linkType: hard
 
@@ -98,11 +98,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:6.3.5":
-  version: 6.3.5
-  resolution: "@astrojs/markdown-remark@npm:6.3.5"
+"@astrojs/markdown-remark@npm:6.3.6":
+  version: 6.3.6
+  resolution: "@astrojs/markdown-remark@npm:6.3.6"
   dependencies:
-    "@astrojs/internal-helpers": 0.7.1
+    "@astrojs/internal-helpers": 0.7.2
     "@astrojs/prism": 3.3.0
     github-slugger: ^2.0.0
     hast-util-from-html: ^2.0.3
@@ -123,7 +123,7 @@ __metadata:
     unist-util-visit: ^5.0.0
     unist-util-visit-parents: ^6.0.1
     vfile: ^6.0.3
-  checksum: ecb76a45a82be4d0d1bae56519955bd2aea3fd93725d0d083c31f85deb3593cf66126c654d5bd72f1ee4ec9f1d770a3b49ba774398724a19617249d461830912
+  checksum: 3ccdbea7eb3f5f9348c93b83807c6e139ea58678222391ab9e5d72c8fcb7961ee5df0aab2afd006de55ef20147b8e85510ab71d50196466be12ef1e5fd27a97c
   languageName: node
   linkType: hard
 
@@ -5040,13 +5040,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.12.8":
-  version: 5.12.8
-  resolution: "astro@npm:5.12.8"
+"astro@npm:5.13.2":
+  version: 5.13.2
+  resolution: "astro@npm:5.13.2"
   dependencies:
     "@astrojs/compiler": ^2.12.2
-    "@astrojs/internal-helpers": 0.7.1
-    "@astrojs/markdown-remark": 6.3.5
+    "@astrojs/internal-helpers": 0.7.2
+    "@astrojs/markdown-remark": 6.3.6
     "@astrojs/telemetry": 3.3.0
     "@capsizecss/unpack": ^2.4.0
     "@oslojs/encoding": ^1.1.0
@@ -5112,7 +5112,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 53e97b675b6da82a051a8b0da572b6f0e19aea679af6fa12640fa7077958d9a52bee3d7b02c7ab6e4c01ecf149107e3d2530da9540a95cbaecd804ff276a3a75
+  checksum: 5862b36fe7018158ab8449710c03f41147a56fbbac195a2c637572a7d5d8e743c0e29292b569445818b29646789ad768e18288105c116f5780a8e350c9dd6055
   languageName: node
   linkType: hard
 
@@ -9488,7 +9488,7 @@ __metadata:
     "@astrojs/tailwind": 6.0.2
     "@tailwindcss/vite": 4.1.11
     "@types/node": 20.8.9
-    astro: 5.12.8
+    astro: 5.13.2
     astro-expressive-code: 0.41.3
     cheerio: 1.0.0-rc.12
     date-fns: 2.30.0
