@@ -88,17 +88,43 @@ Remember the list of John Doe names in the table above? How do we differentiate 
 | John       | Doe       | sold the lands to foreign countries cheaply                    |
 | John       | Doe       | destroyed the country's environments                           |
 | John       | Doe       | shielded ministers who did corruption, collution, and nepotism |
-| John       | Doe       | replaced sidewalk with roads for cars                          |
+| John       | Doe       | replaced sidewalk for pedestrian with roads for cars           |
 
 Now, added with the `deeds` column above, even if we do not know the `id` or the `regnal_number`, we can do a "guesstimate" on which John Doe is which. Easy example is our country leaders. What did our previous country leaders do that they are famous (or infamous) of? That's what people will associate them with for a long time.
 
 Let's apply the above in the context of work. Take maybe 5 examples of your coworkers. How do you identify them if you do not know their names (e.g. we cannot see their Slack name/photo/profile)? Could you describe them based on their activities and what they have done?
 
-Finished? Now let's go to the last stretch of this post.
-
-> How will you identify yourself?
+Finished? Now, let's go to the last stretch of this post.
 
 ## Identifying yourself
+
+How will you identify yourself in work setting? Let's say you are a Senior Software Engineer (or Senior title in something). Will you identify yourself by that, or will you identify yourself by what you are doing? Be careful, the difference is subtle but once you see it, you can't unsee it.
+
+Next, how will others identify you? Similar like what we are doing for John Doe above, imagine you are faceless, nameless, titleless. What makes you different than others? The answer is the same: by your deeds.
+
+:::
+Just for my peace of mind, I'm not implying title means nothing. Of course it means something, because usually title relates to salary and we want to be paid fairly.
+:::
+
+It all comes down to one thing: it will be easier for others to identify you if you have "unique" capabilities. For example: in the case of software engineers, _every_ software engineer is _expected_ to be able to write code. If you and everyone else can write code, how can you stand out amongst other faceless, nameless, titleless shades? From my experience, here are the options.
+
+### Communication
+
+Let's admit it, some (if not most) of software engineers do not excel at communicating with humans. They are good at communicating with machine, yes, but if you are only good at communicating with machine, I _think_ a "developer" title is more fitting rather than "engineer".
+
+I see developer as more a "coder" whereas engineer as more a "thinker+coder". Ultimately, creating software is all about solving problems. Whose problems are we going to solve again? None other than humans. So, human interaction is _kinda_ inevitable at some point. You may not be exposed as much in early software engineer level, but as you level up, you will be expected more to "drive" and "think" more on top of writing code. This was my mistake too back then, actually. _"Why communicate with humans when I could just communicate with machine?"_ I couldn't be further away from the truth.
+
+If you can hone your communication skill, opportunities will come because communication is key to everything. You can quicken a discussion that would otherwise take ages and you can mentor others, to name a few.
+
+### Proactiveness
+
+Have you ever felt your days go by and you are just working on your assigned tasks? There are no issues with that, especially if you complete them with good quality. However, remember, all software engineers are _expected_ to finish their tasks. If all engineers finish their tasks, what makes you different with them?
+
+As the sub-section title goes, proactiveness can go a long way. Try to figure out something that may benefit the team that weren't previously considered. Propose them to your lead, discuss about the pros/cons, and plan it as the next work item.
+
+If you can hone your proactiveness, there are at least 2 benefits. The first benefit is that you will be familiar with thinking outside the box (because the thing that you are doing is from yourself instead of from others). The second one is you will be able to provide additional value, depending on the recipient. For example, let's say that you volunteered to optimize the build pipeline, which previously took quite a while and you sped it up by 50% (e.g. from 20 minutes to 10 minutes). That's big and the benefit will be felt by the entire team since they will be able to deliver faster.
+
+### Domain knowledge
 
 - Employee may outgrow company or company may outgrow employee
 - How to make sure that we have a "unique" impact?
