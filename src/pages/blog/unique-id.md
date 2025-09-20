@@ -1,7 +1,7 @@
 ---
 title: Unique ID
-description: 'In this post, let's explore the unique ID and translate it to a question: "What makes us unique?"'
-publishDate: 2024-01-16T01:01:35.585Z
+description: 'In this post, let''s explore the unique ID and translate it to a question: "What makes us unique?"'
+publishDate: 2025-09-20T09:12:50.686Z
 image: /assets/blog/unique-id/unique-id.png
 imageAlt: An image containing the text, "Unique ID".
 imageCaption: An image containing the text, "Unique ID".
