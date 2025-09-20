@@ -114,6 +114,10 @@ h6 {
   @apply text-sm rounded text-red-300;
 }
 
+th {
+  text-align: left;
+}
+
 /* External stuff. */
 .twitter-tweet {
   @apply !max-w-full justify-center;
