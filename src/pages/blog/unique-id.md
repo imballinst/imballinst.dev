@@ -103,7 +103,7 @@ How will you identify yourself in work setting? Let's say you are a Senior Softw
 Next, how will others identify you? Similar like what we are doing for John Doe above, imagine you are faceless, nameless, titleless. What makes you different than others? The answer is the same: by your deeds.
 
 :::
-Just for my peace of mind, I'm not implying title means nothing. Of course it means something, because usually title relates to salary and we want to be paid fairly.
+Just for my peace of mind, I'm not saying title means nothing. Of course it means something, because usually title relates to salary and we want to be paid fairly.
 :::
 
 It all comes down to one thing: it will be easier for others to identify you if you have "unique" capabilities. For example: in the case of software engineers, _every_ software engineer is _expected_ to be able to write code. If you and everyone else can write code, how can you stand out amongst other faceless, nameless, titleless shades? From my experience, here are the options.
@@ -126,7 +126,33 @@ If you can hone your proactiveness, there are at least 2 benefits. The first ben
 
 ### Domain knowledge
 
-- Employee may outgrow company or company may outgrow employee
-- How to make sure that we have a "unique" impact?
-- How it translates to CV/resume
-- Engineer vs. developer
+If your team is working on a service (or some services), there are 2 ways (at least) to enhance your domain knowledge:
+
+- **Dive deeper:** learn more about the behavior of your service. What happens when on X, Y, Z scenarios, which code it will execute? What kind of edge case that the code is possibly missing? Which part of the code is redundant or has inconsistent behavior with other services?
+- **Jump higher:** learn more about how your service _interacts_ with other services. What are the things that your service depends on from other services (and vice versa)? What is the implication? What that could be improved?
+
+By improving your domain knowledge, you will be able to participate in more cross-team discussions and thus, getting more visibility. Applying the above examples, when there is a need to trace the root cause of a bug, you can utilize your deep knowledge and when there is a need to engineer a solution, you can utilize your vast knowledge.
+
+## How it can be applicable for career resume
+
+Career resume is key when applying for jobs. Needless to say, it's not a silver bullet, but I'd say it's worth it to try. Back then, I heard someone mentioned about "adding metrics" in the resume so recruiters could identify your impact in your previous roles. That is a solid advice and I do agree.
+
+_However_, numbers have to be applied with context, too. Let's say I have a $1 revenue, then I increased it to $10. I could just say _"My engineering effort multiplied the revenue by 10 times"_... and yet, does that sound convincing? Another example is improving performance. If my website loads faster by 30%, there are 2 ways to do it. The first one is to optimize the SEO tidbits (e.g. Time To First Byte, Time To Load), which should be the correct way to do so. The second way is just to simply reduce the content of the site. Less content means less things to process, right? So, _technically_ it should load faster.
+
+In any case, I highly recommend to expand the "how" as brief as possible (because resumes are meant to be brief). For example: _"I proposed and owned (an engineering solution) that went down as one of the most used features by customers, resulting in (X%) ARR improvement"_. See the "proposed" and "owned" keyword here? _That_ is what makes you different than others. Every software engineer can write _"I developed (an engineering solution) that went down as one of the most used features by customers, resulting in (X%) ARR improvement"_, because that's their core work. However, not everyone can propose and own a big effort.
+
+Lastly, it's not always about numbers. Numbers are valid for output that is based on quantity, yes. But how about quality? How do you measure "good communication"? I mean, sure, you can write _"I communicated with the design team, project manager, and product manager to ensure a smooth development"_, but isn't that what every software engineer does? Here are the example ways to showcase this:
+
+- **Making the team more proactive in communication to other teams:** maybe your team members were shy in the first place, so they had to ask a "gatekeeper" to reach out to other teams. However, with your guidance, by the time you left, they can handle them on their own.
+- **Making the team capable to debug a service on their own:** maybe your team members were only capable of debugging browser (UI) specific issues but couldn't debug an already deployed backend services without assistance from Site Reliability Engineers (SREs). However, with your guidance, by the time you left, they can debug backend services on their own.
+- **Making the team comfortable writing long text when needed:** maybe your team members were more accustomed to writing short texts, which at times, is fine. However, sometimes it requires longer texts to explain something so the explanation could be "whole" and less back-and-forth. With your guidance, they can be more confident in writing long pieces.
+
+## Closing words
+
+That should be all! As a closing word, I want to share this term called "squad player" (in football or maybe other sports). The following is from ChatGPT, which also aligns with my understanding:
+
+> A squad player is not a regular first-team star, but is a dependable member of the team who ensures the club can handle injuries, fixture congestion, and tactical changes across a long season.
+
+I _do_ think it is fine to decide to be a squad player in a team or organization. They help share the team's load so their contribution is appreciated. _However_, if you are aiming to climb up the career ladder, I suggest to start asking, _"What makes me unique?"_
+
+Hopefully, this post useful. Let me know if you have thoughts. Take care!
