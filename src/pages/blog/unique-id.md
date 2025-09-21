@@ -1,7 +1,7 @@
 ---
 title: Unique ID
 description: 'In this post, let''s explore the unique ID and translate it to a question: "What makes us unique?"'
-publishDate: 2025-09-20T09:12:50.686Z
+publishDate: 2025-09-21T02:39:51.586Z
 image: /assets/blog/unique-id/unique-id.png
 imageAlt: An image containing the text, "Unique ID".
 imageCaption: An image containing the text, "Unique ID".
@@ -10,7 +10,7 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Hello! How are you doing? I hope you are doing well. In this post, I am writing about a unique ID. So, in software engineering, we know what a unique ID is, yes? Some take it even further and make it a Universally Unique Identifier (UUID), whose ID string will have a very small likelihood of clashing with other UUIDs in other services. Let's explore that a bit.
+Hello! How are you doing? I hope you are doing well. In this post, let's talk about a unique ID. So, in software engineering, we know what a unique ID is, yes? It may take form in an incremental integer, where in the same set of data, each number may only appear once. A more complex form is Universally Unique Identifier (UUID), where each ID string will have a very small likelihood of clashing with other UUIDs, be it from the same service from other services. Let's explore that a bit.
 
 ## Uniqueness
 
@@ -44,7 +44,7 @@ If we want to update the data for a certain "John Doe", how do we do it? We can 
 | John       | Doe       | IX             |
 | John       | Doe       | X              |
 
-How do we know which "John Doe" is which? Well, we can still know from the `regnal_number` column. Let's try removing the `regnal_number`.
+How do we know which "John Doe" is which? Well, we can still know from the `regnal_number` column, which determines their year of ruling. Let's try removing the `regnal_number` column.
 
 | first_name | last_name |
 | ---------- | --------- |
@@ -59,17 +59,17 @@ How do we know which "John Doe" is which? Well, we can still know from the `regn
 | John       | Doe       |
 | John       | Doe       |
 
-Now, they all look the same! Sure, you may assume that it is ordered from I to X, but what if the order is shuffled? That's the tricky part! We have to discover uniqueness not by "status", but by "expression".
+Now, they all look the same. Sure, you may assume that it is ordered from I to X, but what if the order is shuffled? That's the tricky part! We have to discover uniqueness not by "status", but by "expression".
 
 ## Imagine everyone is but a shade, faceless
 
-Everyone that we are acquainted with, whether in real life or on the internet, has some sort of "identifier". In real life, we identify people by their faces and voices. Maybe by their name tag, if we are in an office setting. On the internet, we identify people by their name, such as phone contacts or their identifiable name, such as ones in a WhatsApp Group where they go along with `~John Doe`.
+Everyone who we are acquainted with, whether in real life or on the internet, has some sort of "identifier". In real life, we identify people by their faces and voices. Maybe by their name tag, if we are in an office setting. On the internet, we identify people by their name, such as phone contacts or their identifiable name. In a WhatsApp Group, we can see something like `~John Doe` if we haven't added them to our contacts yet.
 
 Let's make this harder. How do you identify people in real life without their faces and voices? How do you identify people on the internet without their identifiable names?
 
-In real life, we may identify people by their physical attributes. Some people are tall, some might not be. Some people have a proportional weight/height, some might not. Some people might have a certain way to walk. Some people might have certain postures, different than the others.
+In real life, we can identify people by their physical attributes. Some people are tall, some might not be. Some people have a proportional weight/height, some might not. Some people might have a certain way to walk. Some people might have certain postures.
 
-On the internet, let's say we are in an office setting. We may identify people by how they write their sentences. Some people are straightforward, some might not. Some people care too much about grammar and structure, while others might be more carefree. Some people like to incorporate emojis in their sentences, while others might not use them so much. I find it quite fascinating—now that I think about it—that we can identify people we know by seeing a text (without seeing their names).
+On the internet, let's say we are in an office setting, communicating with Slack (for example). We can identify people by how they write their sentences. Some people are straightforward, some might not. Some people care too much about grammar and structure, while others might be more carefree. Some people like to incorporate emojis in their sentences, while others might not use them so much. I find it quite fascinating—now that I think about it—that we can identify people we know just by seeing a text (without seeing their names).
 
 Still with me? Let's go further.
 
@@ -77,22 +77,22 @@ Still with me? Let's go further.
 
 Remember the list of John Doe names in the table above? How do we differentiate them again? We differentiate them by their deeds. Someone's deeds _can_ be considered a unique identifier.
 
-| first_name | last_name | deeds                                                                |
-| ---------- | --------- | -------------------------------------------------------------------- |
-| John       | Doe       | led the fight against imperials                                      |
-| John       | Doe       | leeched off citizen's coffers                                        |
-| John       | Doe       | created dictatorship                                                 |
-| John       | Doe       | did ok, nothing majorly good and nothing majorly bad                 |
-| John       | Doe       | improved economic growth by 10%                                      |
-| John       | Doe       | reworked the government's successful yearly targets                  |
-| John       | Doe       | sold the lands to foreign countries cheaply                          |
-| John       | Doe       | destroyed the country's environments                                 |
-| John       | Doe       | shielded ministers who committed corruption, collusion, and nepotism |
-| John       | Doe       | replaced sidewalk for pedestrians with roads for cars                |
+| first_name | last_name | deeds                                                                           |
+| ---------- | --------- | ------------------------------------------------------------------------------- |
+| John       | Doe       | led the fight against imperials                                                 |
+| John       | Doe       | leeched off citizen's coffers                                                   |
+| John       | Doe       | created dictatorship                                                            |
+| John       | Doe       | did ok, nothing majorly good and nothing majorly bad                            |
+| John       | Doe       | improved economic growth by 10%                                                 |
+| John       | Doe       | forced the government to build a healthy KPIs                                   |
+| John       | Doe       | sold the lands in a rather cheap value to foreign countries                     |
+| John       | Doe       | destroyed the country's environments                                            |
+| John       | Doe       | shielded ministers who committed corruption, collusion, and nepotism            |
+| John       | Doe       | replaced sidewalk for pedestrians with roads for cars                           |
 
-Now, added with the `deeds` column above, even if we do not know the `id` or the `regnal_number`, we can do a "guesstimate" on where John Doe is. An easy example is our country leaders. What did our previous country leaders do that they are famous (or infamous) for? That's what people will associate them with for a long time.
+Now, added with the `deeds` column above, even if we do not know the `id` or the `regnal_number` of a particular John Doe, we can do a "guesstimate" on which John Doe in the row refers to. An easy example is our country leaders. What did our previous country leaders do that they are famous (or infamous) for? That's what people will associate them with for a long time.
 
-Let's apply the above in the context of work. Take maybe 5 examples of your coworkers. How do you identify them if you do not know their names (e.g., we cannot see their Slack name/photo/profile)? Could you describe them based on their activities and what they have done?
+Let's apply the above in the context of work. Take maybe 5 examples of your coworkers. How do you identify them if you do not know their names (e.g., we cannot see their Slack name/photo/profile)? Could you describe them based on their activities and what they are doing?
 
 Finished? Now, let's go to the last stretch of this post.
 
@@ -110,15 +110,15 @@ It all comes down to one thing: it will be easier for others to identify you if 
 
 ### Communication
 
-Let's admit it, some (if not most) of the software engineers do not excel at communicating with humans. I was once that way, too. They are good at communicating with machines, yes, but if you are only good at communicating with machines, I _think_ a "developer" title is more fitting than "engineer".
+Let's admit it, some (if not most) of the software engineers do not excel at communicating with humans. I was once that way, too. We are good at communicating with machines, yes, but if we are only good at that, I _think_ a "developer" title is more fitting than "engineer".
 
-I see a developer as more of a "coder", whereas an engineer as more of a "thinker+coder". Ultimately, creating software is all about solving problems. Whose problems are we going to solve again? None other than humans. So, human interaction is _kinda_ inevitable at some point. You may not be exposed as much as an early software engineer level, but as you level up, you will be expected more to "drive" and "think" more, on top of writing code. This was also my mistake back then, actually. _"Why communicate with humans when I could just communicate with a machine?"_ I couldn't be further away from the truth.
+I see a developer as more of a "coder", whereas an engineer as more of a "thinker+coder". Ultimately, creating software is all about solving problems. Whose problems are we going to solve again? None other than humans. So, human interaction is _kinda_ inevitable at some point. You may not be exposed that much during the earlier stage of a software engineer, but as you level up, you will be expected more to "drive" and "think" more, on top of writing code. This was also my mistake back then, actually. _"Why communicate with humans when I could just communicate with a machine?"_ I couldn't be further away from the truth.
 
 If you can hone your communication skills, opportunities will come because communication is key to everything. You can quicken a discussion that would otherwise take ages, and you can mentor others, to name a few.
 
 ### Proactiveness
 
-Have you ever felt your days go by, and you are just working on your assigned tasks? There are no issues with that, especially if you complete them with good quality. However, remember, if all software engineers _do_ finish their tasks, what makes you different from them?
+Have you ever felt your days gone by, and you are just working on your assigned tasks? There are no issues with that, especially if you complete them with good quality. However, remember, if all software engineers _do_ finish their tasks, what makes you different from them?
 
 As the sub-section title goes, proactiveness can go a long way. Try to figure out something that may benefit the team that wasn't previously considered. Propose it to your lead, discuss the pros/cons, and plan it as the next work item.
 
@@ -126,33 +126,33 @@ If you can hone your proactiveness, there are at least 2 benefits. The first ben
 
 ### Domain knowledge
 
-If your team is working on a service (or some services), there are 2 ways (at least) to enhance your domain knowledge:
+If your team is working on a service (or some services), there are at least 2 ways to enhance your domain knowledge:
 
-- **Dive deeper:** learn more about the behavior of your service. What happens when on X, Y, Z scenarios, which code will execute? What kind of edge case is the code possibly missing? Which part of the code is redundant or has inconsistent behavior with other services?
-- **Jump higher:** learn more about how your service _interacts_ with other services. What are the things that your service depends on from other services (and vice versa)? What is the implication? What could be improved?
+- **Dive deeper:** learn more about the behavior of your service. What happens during X, Y, Z scenarios, which code will execute? What kind of edge case the code possibly doesn't handle yet? Which part of the code is redundant or has inconsistent behavior with other services?
+- **Jump higher:** learn more about how your service _interacts_ with other services. What are the things that your service depends on from other services (and vice versa)? What are the implications? What could be improved?
 
 By improving your domain knowledge, you will be able to participate in more cross-team discussions and thus get more visibility. Applying the above examples, when there is a need to trace the root cause of a bug, you can utilize your deep knowledge, and when there is a need to engineer a solution, you can utilize your vast knowledge.
 
 ## How can it be applicable for a career resume?
 
-A career resume is key when applying for jobs. Needless to say, it's not a silver bullet, but I'd say it's worth it to try. Back then, I heard someone mention "adding metrics" in the resume so recruiters could identify your impact in your previous roles. That is solid advice, and I do agree.
+A career resume is key when applying for jobs. Back then, I heard someone mention "adding metrics" in the resume so recruiters could identify your impact in your previous roles. That is solid advice, and I do agree.
 
-_However_, numbers have to be applied with context, too. Let's say I have a $1 revenue, then I increased it to $10. I could just say _"My engineering effort multiplied the revenue by 10 times"_... and yet, does that sound convincing? Another example is improving performance. If my website loads faster by 30%, there are 2 ways to do it. The first one is to optimize the SEO tidbits (e.g., Time To First Byte, Time To Load), which should be the correct way to do so. The second way is just to simply reduce the content of the site. Less content means fewer things to process, right? So, _technically_ it should load faster.
+_However_, I also believe numbers have to be applied with context. Let's say I have a $1 ARR, then I increased it to $10. I could just say _"My engineering effort multiplied the ARR by 10 times"_... and yet, does that sound convincing? Another example is improving performance. If my website loads faster by 30%, there are 2 ways to do it. The first one is to optimize the SEO tidbits (e.g., Time To First Byte, Time To Load), which should be the correct way to do so. The second way is just to simply reduce the content of the site. Less content means fewer things to process, right? So, _technically_ it should load faster.
 
-In any case, I highly recommend expanding the "how" as briefly as possible (because resumes are meant to be brief). For example: _"I proposed and owned (an engineering solution) that went down as one of the most used features by customers, resulting in (X%) ARR improvement"_. See the "proposed" and "owned" keywords here? _That_ is what makes you different than others. Every software engineer can write _"I developed (an engineering solution) that went down as one of the most used features by customers, resulting in (X%) ARR improvement"_, because that's their core work. However, not everyone can propose and own a big effort.
+In any case, I highly recommend expanding the "how" as briefly as possible (because resumes are meant to be brief). For example: _"I proposed and owned ((an engineering solution)) that went down as one of the most used features by customers, resulting in (X%) ARR improvement"_. See the "proposed" and "owned" keywords here? _That_ is what makes you different than others. Every software engineer can claim they developed the solution, because that's their responsibility. However, not everyone can propose and own a big effort.
 
-Lastly, it's not always about numbers. Numbers are valid for output that is based on quantity, yes. But how about quality? How do you measure "good communication"? I mean, sure, you can write _"I communicated with the design team, project manager, and product manager to ensure a smooth development"_, but isn't that what every software engineer does? From my perspective, here are the examples to showcase this:
+Lastly, it's not always about numbers. Numbers are valid for output that is based on quantity, yes. But how about quality? How do you measure "good communication"? I mean, sure, you can write _"I communicated with the design team, project manager, and product manager to ensure a smooth development"_, but isn't that... what every software engineer does? From my perspective, here are the examples to showcase this:
 
-- **Making the team more proactive in communication to other teams:** maybe your team members were shy in the first place, so they had to ask a "gatekeeper" to reach out to other teams. However, with your guidance, by the time you left, they can handle them on their own.
-- **Making the team capable of debugging a service on their own:** maybe your team members were only capable of debugging browser (UI) specific issues, but couldn't debug already deployed backend services without assistance from Site Reliability Engineers (SREs). However, with your guidance, by the time you left, they were able to debug backend services on their own because you provided documentation for them to learn.
-- **Making the team comfortable writing long text when needed:** maybe your team members were more accustomed to writing short texts, which at times, is fine. However, sometimes it requires longer texts to explain something, so the explanation could be "whole", reducing back-and-forth between all parties. With your guidance, by the time you left, they were more confident in writing long pieces.
+- **Making the team more proactive in communication to other teams:** my team members were shy in the first place, so they had to rely on the team leads to reach out to other teams. With my guidance, by the time I left, they could reach other teams on their own.
+- **Making the team capable of debugging a service on their own:** my team members were only capable of debugging browser (UI) specific issues, but couldn't debug already deployed backend services without assistance from Site Reliability Engineers (SREs). With my guidance, by the time I left, they were able to debug backend services on their own because I provided documentation for them to learn.
+- **Making the team comfortable writing long text when needed:** my team members were more accustomed to writing short texts, which at times, is fine. However, sometimes it requires longer texts to explain something, so the explanation could be "whole", leading to less back-and-forth between all parties. With my guidance, by the time I left, they were more confident in writing long pieces in a discussion.
 
 ## Closing words
 
-That should be all! As a closing word, I want to share this term called "squad player" (in football or maybe other sports). The following is from ChatGPT, which also aligns with my understanding:
+That should be all! As a closing word, I want to share this term called "squad player" (in football, which maybe also applicable for other sports, too). The following is from ChatGPT, which also aligns with my understanding:
 
 > A squad player is not a regular first-team star, but is a dependable member of the team who ensures the club can handle injuries, fixture congestion, and tactical changes across a long season.
 
-I _do_ think it is fine to decide "just" to be a squad player in a team or organization. They help share the team's load so their contribution is as important. _However_, if you are aiming to climb up the career ladder, I suggest to start asking, _"What makes me unique?"_
+I _do_ think it is fine to decide "just" to be a squad player in a team or organization. They help share the team's load so their contribution is equally important. _However_, if you are aiming to climb up the career ladder, I suggest to start asking, _"What makes me unique?"_
 
 Hopefully, this post is useful. Let me know if you have thoughts. Take care!

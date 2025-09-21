@@ -33,10 +33,7 @@ const NEW_LINE = {
   type: '__token__',
   value: '__NEW_LINE__'
 };
-const BLOCKQUOTE_PARAGRAPH_CLASS = DEFAULT_ATTRS.p.replace(
-  `${TEXT_COLOR} `,
-  ''
-);
+const BLOCKQUOTE_PARAGRAPH_CLASS = DEFAULT_ATTRS.p.replace(`${TEXT_COLOR} `, '');
 
 export default function htmlClassnamesPlugin() {
   return (/** @type {*} */ tree) => {
@@ -54,10 +51,7 @@ export default function htmlClassnamesPlugin() {
           const lastChild = hast.children[hast.children.length - 1];
 
           // Process `:::` for centered, gray texts.
-          if (
-            firstChild.value?.startsWith(':::') &&
-            lastChild.value?.endsWith(':::')
-          ) {
+          if (firstChild.value?.startsWith(':::') && lastChild.value?.endsWith(':::')) {
             hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} text-center italic py-2 mt-3 mb-4 first:mt-0 last:mb-0 border-y border-gray-200 dark:border-gray-600`;
             firstChild.value = firstChild.value.slice(3);
             lastChild.value = lastChild.value.slice(0, -3);
@@ -65,10 +59,7 @@ export default function htmlClassnamesPlugin() {
 
           for (const paragraphChild of hast.children) {
             // Process others.
-            if (
-              paragraphChild.tagName === 'a' &&
-              shouldModifyAnchorNode(paragraphChild.children?.[0])
-            ) {
+            if (paragraphChild.tagName === 'a' && shouldModifyAnchorNode(paragraphChild.children?.[0])) {
               modifyAnchorNode({ node: paragraphChild });
             } else if (
               paragraphChild.tagName === 'code' &&
@@ -164,8 +155,7 @@ export default function htmlClassnamesPlugin() {
 
           if (el === NEW_PARAGRAPH) {
             // New paragraph token.
-            properties.class =
-              numberOfParagraphs > 1 ? BLOCKQUOTE_PARAGRAPH_CLASS : undefined;
+            properties.class = numberOfParagraphs > 1 ? BLOCKQUOTE_PARAGRAPH_CLASS : undefined;
 
             lastParagraph = {
               type: 'element',
@@ -180,7 +170,7 @@ export default function htmlClassnamesPlugin() {
           }
         }
 
-        hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} italic p-4 border-l-5 border-gray-200 dark:border-gray-600 rounded`;
+        hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} italic p-4 border-l-5 border-gray-200 dark:border-gray-600`;
         hast.children = pureHast;
         // TODO(imballinst): ensure there is a way to create a proper newlines in blockquotes.
         const html = toHtml(hast);
@@ -215,8 +205,7 @@ export default function htmlClassnamesPlugin() {
             tr.properties = {};
           }
 
-          tr.properties.class =
-            'font-bold border-b-2 border-gray-200 dark:border-gray-600';
+          tr.properties.class = 'font-bold border-b-2 border-gray-200 dark:border-gray-600';
 
           for (const th of tr.children) {
             if (th.tagName !== 'th') continue;
@@ -265,15 +254,13 @@ export default function htmlClassnamesPlugin() {
  * @param {string} href
  * @returns
  */
-const isExternalLink = (href) =>
-  !href.includes('imballinst.netlify.app') && !href.includes('imballinst.dev');
+const isExternalLink = (href) => !href.includes('imballinst.netlify.app') && !href.includes('imballinst.dev');
 
 /**
  * @param {*} obj
  */
 function modifyAnchorNode({ node }) {
-  node.properties.class =
-    'text-teal-600 dark:text-teal-300 hover:underline break-words inline';
+  node.properties.class = 'text-teal-600 dark:text-teal-300 hover:underline break-words inline';
 
   if (!path.isAbsolute(node.properties.href)) {
     const href = node.properties.href;
@@ -282,11 +269,7 @@ function modifyAnchorNode({ node }) {
     node.properties.href = node.properties.href.slice(0, idx);
   }
 
-  if (
-    (node.properties.href.includes('https://') ||
-      node.properties.href.includes('http://')) &&
-    isExternalLink(node.properties.href)
-  ) {
+  if ((node.properties.href.includes('https://') || node.properties.href.includes('http://')) && isExternalLink(node.properties.href)) {
     node.children.push({
       type: 'element',
       tagName: 'svg',
@@ -358,8 +341,7 @@ function addListStyle(element, isOrdered, isNested, isTOC) {
   let listCommonStyle = '';
 
   if (isTOC) {
-    listCommonStyle =
-      'border-b border-dotted border-[#0000001a] dark:border-[#ffffff1a] pb-8 mb-8';
+    listCommonStyle = 'border-b border-dotted border-[#0000001a] dark:border-[#ffffff1a] pb-8 mb-8';
   } else if (!isNested) {
     listCommonStyle = 'mb-4';
   }
@@ -371,16 +353,9 @@ function addListStyle(element, isOrdered, isNested, isTOC) {
 
     if (el.children) {
       for (const listChild of el.children) {
-        if (
-          listChild.tagName === 'a' &&
-          shouldModifyAnchorNode(listChild.children?.[0])
-        ) {
+        if (listChild.tagName === 'a' && shouldModifyAnchorNode(listChild.children?.[0])) {
           modifyAnchorNode({ node: listChild });
-        } else if (
-          listChild.tagName === 'code' &&
-          listChild.children?.length === 1 &&
-          listChild.children?.[0].type === 'text'
-        ) {
+        } else if (listChild.tagName === 'code' && listChild.children?.length === 1 && listChild.children?.[0].type === 'text') {
           listChild.children[0].value = `\`${listChild.children[0].value}\``;
         } else if (listChild.tagName === 'ul') {
           addListStyle(listChild, false, true, false);
@@ -397,10 +372,7 @@ function addListStyle(element, isOrdered, isNested, isTOC) {
  * @param {*} element
  */
 function shouldModifyAnchorNode(element) {
-  return (
-    element.type === 'text' ||
-    (element.type === 'element' && element.tagName === 'code')
-  );
+  return element.type === 'text' || (element.type === 'element' && element.tagName === 'code');
 }
 
 /**
