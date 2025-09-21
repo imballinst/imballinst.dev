@@ -10,7 +10,9 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Hello! How are you doing? I hope you are doing well. In this post, let's talk about a unique ID. So, in software engineering, we know what a unique ID is, yes? It may take form in an incremental integer, where in the same set of data, each number may only appear once. A more complex form is Universally Unique Identifier (UUID), where each ID string will have a very small likelihood of clashing with other UUIDs, be it from the same service from other services. Let's explore that a bit.
+Hello! How are you doing? I hope you are doing well.
+
+Let's talk about a unique ID. So, in software engineering, we know what a unique ID is, yes? It may take the form of an incremental integer, where in the same set of data, each number may only appear once. A more complex form is Universally Unique Identifier (UUID), where each ID string will have a very small likelihood of clashing with other UUIDs, whether from the same service or other services. Let's explore that a bit.
 
 ## Uniqueness
 
@@ -63,13 +65,13 @@ Now, they all look the same. Sure, you may assume that it is ordered from I to X
 
 ## Imagine everyone is but a shade, faceless
 
-Everyone who we are acquainted with, whether in real life or on the internet, has some sort of "identifier". In real life, we identify people by their faces and voices. Maybe by their name tag, if we are in an office setting. On the internet, we identify people by their name, such as phone contacts or their identifiable name. In a WhatsApp Group, we can see something like `~John Doe` if we haven't added them to our contacts yet.
+Everyone with whom we are acquainted, whether in real life or on the internet, has some sort of "identifier". In real life, we identify people by their faces and voices. Maybe by their name tag, if we are in an office setting. On the internet, we identify people by their names, such as phone contacts or their identifiable names. In a WhatsApp Group, we can see something like `~John Doe` if we haven't added them to our contacts yet.
 
 Let's make this harder. How do you identify people in real life without their faces and voices? How do you identify people on the internet without their identifiable names?
 
 In real life, we can identify people by their physical attributes. Some people are tall, some might not be. Some people have a proportional weight/height, some might not. Some people might have a certain way to walk. Some people might have certain postures.
 
-On the internet, let's say we are in an office setting, communicating with Slack (for example). We can identify people by how they write their sentences. Some people are straightforward, some might not. Some people care too much about grammar and structure, while others might be more carefree. Some people like to incorporate emojis in their sentences, while others might not use them so much. I find it quite fascinating—now that I think about it—that we can identify people we know just by seeing a text (without seeing their names).
+On the internet, let's say we are in an office setting, communicating with Slack (for example). We can identify people by how they write their sentences. Some people are straightforward; some might not. Some people care too much about grammar and structure, while others might be more carefree. Some people like to incorporate emojis in their sentences, while others might not use them so much. I find it quite fascinating—now that I think about it—that we can identify people we know just by seeing a text (without seeing their names).
 
 Still with me? Let's go further.
 
@@ -84,8 +86,8 @@ Remember the list of John Doe names in the table above? How do we differentiate 
 | John       | Doe       | created dictatorship                                                            |
 | John       | Doe       | did ok, nothing majorly good and nothing majorly bad                            |
 | John       | Doe       | improved economic growth by 10%                                                 |
-| John       | Doe       | forced the government to build a healthy KPIs                                   |
-| John       | Doe       | sold the lands in a rather cheap value to foreign countries                     |
+| John       | Doe       | forced the government to build healthy KPIs                                     |
+| John       | Doe       | sold the lands at a rather cheap price to foreign countries                     |
 | John       | Doe       | destroyed the country's environments                                            |
 | John       | Doe       | shielded ministers who committed corruption, collusion, and nepotism            |
 | John       | Doe       | replaced sidewalk for pedestrians with roads for cars                           |
@@ -112,13 +114,13 @@ It all comes down to one thing: it will be easier for others to identify you if 
 
 Let's admit it, some (if not most) of the software engineers do not excel at communicating with humans. I was once that way, too. We are good at communicating with machines, yes, but if we are only good at that, I _think_ a "developer" title is more fitting than "engineer".
 
-I see a developer as more of a "coder", whereas an engineer as more of a "thinker+coder". Ultimately, creating software is all about solving problems. Whose problems are we going to solve again? None other than humans. So, human interaction is _kinda_ inevitable at some point. You may not be exposed that much during the earlier stage of a software engineer, but as you level up, you will be expected more to "drive" and "think" more, on top of writing code. This was also my mistake back then, actually. _"Why communicate with humans when I could just communicate with a machine?"_ I couldn't be further away from the truth.
+I see a developer as more of a "coder", whereas an engineer as more of a "thinker+coder". Ultimately, creating software is all about solving problems. Whose problems are we going to solve again? None other than humans. So, human interaction is _kinda_ inevitable at some point. You may not be exposed that much during the earlier stages of being a software engineer, but as you level up, you will be expected more to "drive" and "think" more, on top of writing code. This was also my mistake back then, actually. _"Why communicate with humans when I could just communicate with a machine?"_ I couldn't be further away from the truth.
 
 If you can hone your communication skills, opportunities will come because communication is key to everything. You can quicken a discussion that would otherwise take ages, and you can mentor others, to name a few.
 
 ### Proactiveness
 
-Have you ever felt your days gone by, and you are just working on your assigned tasks? There are no issues with that, especially if you complete them with good quality. However, remember, if all software engineers _do_ finish their tasks, what makes you different from them?
+Have you ever felt your days go by, and you are just working on your assigned tasks? There are no issues with that, especially if you complete them with good quality. However, remember, if all software engineers _do_ finish their tasks, what makes you different from them?
 
 As the sub-section title goes, proactiveness can go a long way. Try to figure out something that may benefit the team that wasn't previously considered. Propose it to your lead, discuss the pros/cons, and plan it as the next work item.
 
@@ -128,7 +130,7 @@ If you can hone your proactiveness, there are at least 2 benefits. The first ben
 
 If your team is working on a service (or some services), there are at least 2 ways to enhance your domain knowledge:
 
-- **Dive deeper:** learn more about the behavior of your service. What happens during X, Y, Z scenarios, which code will execute? What kind of edge case the code possibly doesn't handle yet? Which part of the code is redundant or has inconsistent behavior with other services?
+- **Dive deeper:** learn more about the behavior of your service. What happens during X, Y, Z scenarios, which code will execute? What kind of edge case does the code possibly not handle yet? Which part of the code is redundant or has inconsistent behavior with other services?
 - **Jump higher:** learn more about how your service _interacts_ with other services. What are the things that your service depends on from other services (and vice versa)? What are the implications? What could be improved?
 
 By improving your domain knowledge, you will be able to participate in more cross-team discussions and thus get more visibility. Applying the above examples, when there is a need to trace the root cause of a bug, you can utilize your deep knowledge, and when there is a need to engineer a solution, you can utilize your vast knowledge.
@@ -145,14 +147,14 @@ Lastly, it's not always about numbers. Numbers are valid for output that is base
 
 - **Making the team more proactive in communication to other teams:** my team members were shy in the first place, so they had to rely on the team leads to reach out to other teams. With my guidance, by the time I left, they could reach other teams on their own.
 - **Making the team capable of debugging a service on their own:** my team members were only capable of debugging browser (UI) specific issues, but couldn't debug already deployed backend services without assistance from Site Reliability Engineers (SREs). With my guidance, by the time I left, they were able to debug backend services on their own because I provided documentation for them to learn.
-- **Making the team comfortable writing long text when needed:** my team members were more accustomed to writing short texts, which at times, is fine. However, sometimes it requires longer texts to explain something, so the explanation could be "whole", leading to less back-and-forth between all parties. With my guidance, by the time I left, they were more confident in writing long pieces in a discussion.
+- **Making the team comfortable writing long text when needed:** my team members were more accustomed to writing short texts, which, at times, is fine. However, sometimes it requires longer texts to explain something, so the explanation could be "whole", leading to less back-and-forth between all parties. With my guidance, by the time I left, they were more confident in writing long pieces in a discussion.
 
 ## Closing words
 
-That should be all! As a closing word, I want to share this term called "squad player" (in football, which maybe also applicable for other sports, too). The following is from ChatGPT, which also aligns with my understanding:
+That should be all! As a closing word, I want to share this term called "squad player" (in football, which may also apply to other sports, too). The following is from ChatGPT, which also aligns with my understanding:
 
 > A squad player is not a regular first-team star, but is a dependable member of the team who ensures the club can handle injuries, fixture congestion, and tactical changes across a long season.
 
-I _do_ think it is fine to decide "just" to be a squad player in a team or organization. They help share the team's load so their contribution is equally important. _However_, if you are aiming to climb up the career ladder, I suggest to start asking, _"What makes me unique?"_
+I _do_ think it is fine to decide "just" to be a squad player in a team or organization. They help share the team's load, so their contribution is equally important. _However_, if you are aiming to climb up the career ladder, I suggest starting by asking, _"What makes me unique?"_
 
 Hopefully, this post is useful. Let me know if you have thoughts. Take care!
