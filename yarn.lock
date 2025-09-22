@@ -8318,7 +8318,7 @@ __metadata:
     hast-util-to-html: 9.0.5
     mdast-util-to-hast: 13.0.2
     mdast-util-to-string: 4.0.0
-    netlify-cli: 23.5.1
+    netlify-cli: 23.6.0
     preact: 10.19.6
     prettier: 3.5.3
     prettier-plugin-astro: 0.14.1
@@ -10518,9 +10518,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:23.5.1":
-  version: 23.5.1
-  resolution: "netlify-cli@npm:23.5.1"
+"netlify-cli@npm:23.6.0":
+  version: 23.6.0
+  resolution: "netlify-cli@npm:23.6.0"
   dependencies:
     "@fastify/static": 7.0.4
     "@netlify/api": 14.0.4
@@ -10619,7 +10619,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 6208c6bb7ba367063e0ebd9a68649ec6f1ceef342ca325ef598204dffc740785153c873707dfb5f18a28c3ecada3f3c6db58e805517335c9628d7919a938125b
+  checksum: ae0c89782942efaddb8f5aedc742913783bde3b24a6c670fcbf21d8c753b8d268be0a5594aa0f6ad17477dda3cb19772a6bfd9265d2b7e29f383d13a1d68ce83
   languageName: node
   linkType: hard
 
