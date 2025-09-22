@@ -8316,7 +8316,7 @@ __metadata:
     date-fns: 4.1.0
     domhandler: 5.0.3
     hast-util-to-html: 9.0.5
-    mdast-util-to-hast: 13.0.2
+    mdast-util-to-hast: 13.2.0
     mdast-util-to-string: 4.0.0
     netlify-cli: 23.5.1
     preact: 10.19.6
@@ -9627,9 +9627,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdast-util-to-hast@npm:13.0.2":
-  version: 13.0.2
-  resolution: "mdast-util-to-hast@npm:13.0.2"
+"mdast-util-to-hast@npm:13.2.0":
+  version: 13.2.0
+  resolution: "mdast-util-to-hast@npm:13.2.0"
   dependencies:
     "@types/hast": ^3.0.0
     "@types/mdast": ^4.0.0
@@ -9639,7 +9639,8 @@ __metadata:
     trim-lines: ^3.0.0
     unist-util-position: ^5.0.0
     unist-util-visit: ^5.0.0
-  checksum: 8fef6c3752476461d9c00b1dea4f141bc7d980e1b3bac7bd965bc68f532b6d30fb1c9e810433327c167176e68e071b8f4ab5a45355954857dc095c878421f35e
+    vfile: ^6.0.0
+  checksum: 7e5231ff3d4e35e1421908437577fd5098141f64918ff5cc8a0f7a8a76c5407f7a3ee88d75f7a1f7afb763989c9f357475fa0ba8296c00aaff1e940098fe86a6
   languageName: node
   linkType: hard
 
