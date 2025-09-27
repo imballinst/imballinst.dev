@@ -14,7 +14,7 @@ const ALTERNATIVE_TEXT_COLORS = {
   teal: 'text-teal-600 dark:text-teal-300'
 };
 
-const DEFAULT_ATTRS = {
+export const DEFAULT_ATTRS = {
   h1: `${TEXT_COLOR} text-3xl font-bold my-6`,
   h2: `${TEXT_COLOR} text-2xl font-bold my-6`,
   h3: `${TEXT_COLOR} text-xl font-medium my-6`,
@@ -22,7 +22,9 @@ const DEFAULT_ATTRS = {
   h5: `${TEXT_COLOR} text-base my-6`,
   h6: `${TEXT_COLOR} text-sm my-6`,
   p: `${TEXT_COLOR} mt-3 mb-4 first:mt-0 last:mb-0`,
-  strong: `${TEXT_COLOR} font-semibold`
+  strong: `${TEXT_COLOR} font-semibold`,
+  admonition: `${ALTERNATIVE_TEXT_COLORS.gray} text-center italic py-2 mt-3 mb-4 first:mt-0 last:mb-0 border-y border-gray-200 dark:border-gray-600`,
+  a: 'text-teal-600 dark:text-teal-300 hover:underline break-words inline'
 };
 
 const NEW_PARAGRAPH = {
@@ -52,7 +54,7 @@ export default function htmlClassnamesPlugin() {
 
           // Process `:::` for centered, gray texts.
           if (firstChild.value?.startsWith(':::') && lastChild.value?.endsWith(':::')) {
-            hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} text-center italic py-2 mt-3 mb-4 first:mt-0 last:mb-0 border-y border-gray-200 dark:border-gray-600`;
+            hast.properties.class = DEFAULT_ATTRS.admonition;
             firstChild.value = firstChild.value.slice(3);
             lastChild.value = lastChild.value.slice(0, -3);
           }
@@ -260,9 +262,9 @@ const isExternalLink = (href) => !href.includes('imballinst.netlify.app') && !hr
  * @param {*} obj
  */
 function modifyAnchorNode({ node }) {
-  node.properties.class = 'text-teal-600 dark:text-teal-300 hover:underline break-words inline';
+  node.properties.class = DEFAULT_ATTRS.a;
 
-  if (!path.isAbsolute(node.properties.href)) {
+  if (!isAbsoluteURL(node.properties.href)) {
     const href = node.properties.href;
     const idx = href.lastIndexOf(path.extname(href));
 
@@ -382,4 +384,19 @@ function shouldModifyAnchorNode(element) {
  */
 function isTOC(child) {
   return child?.id === TOC_ID;
+}
+
+/**
+ *
+ * @param {string} href
+ * @returns
+ */
+function isAbsoluteURL(href) {
+  try {
+    const url = new URL(href);
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch (err) {
+    // Not a URL.
+    return path.isAbsolute(href);
+  }
 }
