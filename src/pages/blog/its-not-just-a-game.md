@@ -22,7 +22,7 @@ Or maybe I just don't like games where heavy communication is required anymore, 
 
 > But, but, but, Final Fantasy XIV is an MMORPG! How come it doesn't need heavy communication?
 
-True, but the "multiplayer" aspect in FFXIV has different difficulties as well, ranging from casual, midcore, and hardcore. Of course, I took the casual one. I only subscribe for 1 month after a major patch, do the MSQ, some/most of the side stories, level up crafters/gatherers, and maybe revisit some other fighting jobs that haven't been leveled up to maximum. The casual content is, as written, very casual. I do not need to hyper-focus; it's too tiring after a day of hard work. No heavy communication is required, as long as I do the bare minimum.
+True, but the "multiplayer" aspect in FFXIV has different difficulties as well, ranging from casual, midcore, and hardcore. Of course, I took the casual one. I only subscribe for 1 month after a major patch, do the Main Scenario Quests (MSQ), some/most of the side stories, level up crafters/gatherers, and maybe revisit some other fighting jobs that haven't been leveled up to maximum. The casual content is, as written, very casual. I do not need to hyper-focus; it's too tiring after a day of hard work. No heavy communication is required, as long as I do the bare minimum.
 
 Now, before we jump to how each game impacted me, I'll share a bit about how I internalize the essence of a game. All of the games mentioned below are very heavy in terms of story. Each helped me in their own way, and it's because, I think, I internalized the game's essence into myself. So, that's why, for those games, I don't want to say, _"It's just a game!"_
 
