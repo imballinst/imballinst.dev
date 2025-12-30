@@ -10,7 +10,7 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Hey, how is it going? Time surely flew; blink, and you will miss the majority of 2025. Hopefully, your body, mind, and soul are in a good condition. In this last post of the year, we are going to talk about authority in this post. Let's get started!
+Hey, how is it going? Time surely flew; blink, and you will miss the majority of 2025. Hopefully, your body, mind, and soul are in a good condition. In this last post of the year, we are going to talk about authority. Let's get started!
 
 ## What is authority
 
