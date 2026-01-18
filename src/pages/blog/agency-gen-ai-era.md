@@ -1,7 +1,7 @@
 ---
 title: The Power of Agency in a World Driven by Generated Content
 description: When we defer a decision to an LLM instead of ourselves, we no longer have agency, and that is probably a bad thing.
-publishDate: 2025-12-30T11:44:54.556Z
+publishDate: 2026-01-18T14:31:30.641Z
 image: /assets/blog/agency-gen-ai-era/agency-gen-ai-era.png
 imageAlt: An image containing the text, "The Power of Agency in a World Driven by Generated Contents".
 imageCaption: An image containing the text, "The Power of Agency in a World Driven by Generated Contents".
@@ -80,4 +80,4 @@ To recap what was written above:
 2. **Do not take what LLM says at face value.** Even though LLM may know a lot more than us, it is not always correct. We are humans, and we should have more agency rather than just being a "yes person" to LLM.
 3. **The quality of LLM's response is determined by the quality of the prompt.** A general prompt will result in a general response. Always verify and clarify further to obtain an optimal result.
 
-That's all for this post. I hope this is useful and take care!
+That's all for this post, I hope this is useful. Stay safe, stay healthy, and stay human!
