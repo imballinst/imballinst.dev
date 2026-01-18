@@ -3,8 +3,8 @@ title: The Power of Agency in a World Driven by Generated Content
 description: When we defer a decision to an LLM instead of ourselves, we no longer have agency, and that is probably a bad thing.
 publishDate: 2026-01-18T14:31:30.641Z
 image: /assets/blog/agency-gen-ai-era/agency-gen-ai-era.png
-imageAlt: An image containing the text, "The Power of Agency in a World Driven by Generated Contents".
-imageCaption: An image containing the text, "The Power of Agency in a World Driven by Generated Contents".
+imageAlt: An image illustrating someone with an umbrella representing agency amidst of generated content rain.
+imageCaption: An image illustrating someone with an umbrella representing agency amidst of generated content rain.
 tags: software engineering, life
 visibility: public
 layout: '../../layouts/BlogPost.astro'
