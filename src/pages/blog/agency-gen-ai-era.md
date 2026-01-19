@@ -36,7 +36,7 @@ _"AI democratizes knowledge"_ is correct, but if the power levels differ based o
 
 It reminds me of when someone bought a fully-geared character account in an MMORPG.
 
-Players with worse gear _can_ still beat them, but it is an uphill battle by default. The worst thing is, it's not a well-deserved uphill battle. It's **"pay to win"**. Imagine you are a fresh graduate. Not only do you have to compete with other experienced people, but you also have to compete with their crazy AI subscription, too (which, you may not have the money for). It's a vicious cycle: you need money to earn money.
+Players with worse gear _can_ still beat them, but it is an uphill battle by default. The worst thing is, it's not a well-deserved uphill battle. It's **"pay to win"**. Imagine you are a fresh graduate. Not only do you have to compete with other experienced people, but you also have to compete with their crazy AI subscription, too (which, you may not have the money for). It's a vicious cycle: you need _more_ money to earn money.
 
 **Unfortunately, this is not something that we can really control. Internet availability varies per region/government, and AI availability varies per provider.**
 
