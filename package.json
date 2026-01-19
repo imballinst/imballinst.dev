@@ -23,7 +23,7 @@
     "mdast-util-to-hast": "13.2.1",
     "mdast-util-to-string": "4.0.0",
     "preact": "10.19.6",
-    "tailwindcss": "4.1.11"
+    "tailwindcss": "4.1.18"
   },
   "packageManager": "yarn@3.6.4",
   "devDependencies": {
