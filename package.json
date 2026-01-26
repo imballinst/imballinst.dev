@@ -16,7 +16,7 @@
     "@tailwindcss/vite": "4.1.11",
     "astro": "5.15.9",
     "astro-expressive-code": "0.41.5",
-    "cheerio": "1.0.0-rc.12",
+    "cheerio": "1.1.2",
     "date-fns": "4.1.0",
     "domhandler": "5.0.3",
     "hast-util-to-html": "9.0.5",
