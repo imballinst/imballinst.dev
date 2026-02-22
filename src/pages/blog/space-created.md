@@ -1,7 +1,7 @@
 ---
 title: Space Created
 description: Creating space in real life is not that much different than creating space in games.
-publishDate: 2026-01-18T14:31:30.641Z
+publishDate: 2026-02-22T05:24:12.119Z
 image: /assets/blog/space-created/space-created.png
 imageAlt: An image with the text, "> Space Created".
 imageCaption: An image with the text, "> Space Created".
