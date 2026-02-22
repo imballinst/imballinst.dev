@@ -7,7 +7,7 @@ imageAlt: An image with the text, "> Space Created".
 imageCaption: An image with the text, "> Space Created".
 tags: software engineering, life
 visibility: public
-layout: "../../layouts/BlogPost.astro"
+layout: '../../layouts/BlogPost.astro'
 ---
 
 Hello, fellow readers! This post will be a rather short one (hopefully for real this time, because every time I wrote that, it usually ended up being a long post). This post is about "space creation". Let's get started!
@@ -18,7 +18,9 @@ Hello, fellow readers! This post will be a rather short one (hopefully for real 
 
 No, not that "space galaxy". The space that will be discussed in this post is more around "opportunity" or "opening". I follow Premier League football, and I support Arsenal (yeah, I love torturing myself). I have seen a lot of goals over the years (about [~1400 goals](https://www.statmuse.com/fc/ask/how-many-goals-arsenal-scored-last-20-seasons?l=pl), it would seem). Out of all those goals, one goal stands out to me about space creation.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LK1Aj-USB4Y?si=c3A5M62Ue-qUciN5&amp;start=48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/LK1Aj-USB4Y?si=c3A5M62Ue-qUciN5&amp;start=48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 At 0:54, Nasri and Walcott occupied the same area. However, immediately after, Walcott ran to another area, pulling Vidic (I think) out of position and thus, _creating space_ for Nasri to take a shot. It's a beautiful sequence of play.
 
@@ -26,7 +28,9 @@ At 0:54, Nasri and Walcott occupied the same area. However, immediately after, W
 
 In Multiplayer Online Battle Arena (MOBA), the term "space" is also common. Similar to the one in football, it involves "tricking" your opponents into moving into certain parts of the map, so that your teammates can capitalize on the empty regions that your opponents left. On top of my head, this was one of those.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bv4CqIxqTMA?si=uPk_q4hvzVkeNCBi&amp;start=2261" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Bv4CqIxqTMA?si=uPk_q4hvzVkeNCBi&amp;start=2261" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 In Dota 2, there are certain structures that, when all of them are destroyed, your team will have a "Mega creeps" advantage. In the video above, Topson baited most (if not all) of the PSG.LGD team into the bottom lane, leaving the top barracks undefended. This allowed JerAx and ana to use a skill called "Relocate" to teleport and destroy the top barracks, getting them the mega creeps.
 
