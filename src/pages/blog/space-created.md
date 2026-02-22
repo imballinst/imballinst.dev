@@ -7,7 +7,7 @@ imageAlt: An image with the text, "> Space Created".
 imageCaption: An image with the text, "> Space Created".
 tags: software engineering, life
 visibility: public
-layout: '../../layouts/BlogPost.astro'
+layout: "../../layouts/BlogPost.astro"
 ---
 
 Hello, fellow readers! This post will be a rather short one (hopefully for real this time, because every time I wrote that, it usually ended up being a long post). This post is about "space creation". Let's get started!
@@ -22,7 +22,7 @@ No, not that "space galaxy". The space that will be discussed in this post is mo
   <iframe width="560" height="315" src="https://www.youtube.com/embed/LK1Aj-USB4Y?si=c3A5M62Ue-qUciN5&amp;start=48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-At 0:54, Nasri and Walcott occupied the same area. However, immediately after, Walcott ran to another area, pulling Vidic (I think) out of position and thus, _creating space_ for Nasri to take a shot. It's a beautiful sequence of play.
+At 0:54, Nasri and Walcott overloaded the same area. However, immediately after, Walcott sprinted to opposite area, pulling Vidic (I think) out of position and thus, _creating space_ for Nasri to take a shot. Goal. It's a beautiful sequence of play.
 
 ## Space in gaming
 
@@ -32,7 +32,7 @@ In Multiplayer Online Battle Arena (MOBA), the term "space" is also common. Simi
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Bv4CqIxqTMA?si=uPk_q4hvzVkeNCBi&amp;start=2261" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-In Dota 2, there are certain structures that, when all of them are destroyed, your team will have a "Mega creeps" advantage. In the video above, Topson baited most (if not all) of the PSG.LGD team into the bottom lane, leaving the top barracks undefended. This allowed JerAx and ana to use a skill called "Relocate" to teleport and destroy the top barracks, getting them the mega creeps.
+In Dota 2, there are certain structures that, when all of them are destroyed, your team will have a "Mega creeps" advantage. In the video above, Topson baited most (if not all) of the PSG.LGD team into the bottom lane, leaving the top barracks undefended. This allowed JerAx and ana to use a skill called "Relocate" to teleport and destroy the top barracks, giving them the Mega creeps.
 
 ## Space in the workplace
 
