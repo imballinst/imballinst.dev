@@ -42,7 +42,8 @@ Now, how does it get translated into a workplace setting? I can recall a few exa
 - The times when my lead took their time to join a boring meeting so I could just get "the gist",
 - The times when my team members could own and carry out a task themselves,
 - The times when my team members who weren't as busy as others were making internal improvements,
-- The times when my peers covered up my mistakes.
+- The times when my peers covered up my mistakes,
+- The times when my peers prepared all the administrational stuff so I could focus on technical stuff.
 
 ...and many more! All that is to say, don't take them for granted. At least, that's what I'm trying to. When my team members do a good job, I always count it as them making space for me, because I don't have to put as much focus as I should have, hence I can spend my time elsewhere, occupying the space that they give me.
 
