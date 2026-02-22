@@ -4,7 +4,7 @@ export const TOC_ID = 'table-of-contents';
 
 export function tocInjectorPlugin() {
   return (/** @type {*} */ tree, file) => {
-    if (file.history[0].endsWith('about.md')) return;
+    if (file.history[0]?.endsWith('about.md')) return;
 
     tree.children.unshift(
       {

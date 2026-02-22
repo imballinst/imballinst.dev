@@ -1,10 +1,7 @@
 import { remark } from 'remark';
 import htmlClassnamesPlugin from './html-classnames/index.mjs';
 import imageCaptionPlugin from './image/index.mjs';
-import {
-  tocInjectorPlugin,
-  tocLeadingContentCleanupPlugin
-} from './toc-injector/index.mjs';
+import { tocInjectorPlugin, tocLeadingContentCleanupPlugin } from './toc-injector/index.mjs';
 import remarkToc from 'remark-toc';
 
 process.env.NODE_ENV = 'production';
@@ -25,6 +22,8 @@ Test
 ## hehe
 
 haha
+
+![The FF7 Safer Sephiroth Supernova animation. Source: https://www.youtube.com/watch?v=hTc9sLmOR0A](/assets/blog/space-created/ff7-supernova.png)
 `.trim()
     );
 
