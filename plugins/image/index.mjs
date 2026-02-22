@@ -5,7 +5,7 @@ const TEXT_COLOR = 'text-gray-600 dark:text-gray-400';
 const COMPRESSED_EXTS = ['.jpeg', '.jpg', '.png'];
 const IMAGE_WIDTHS = [512, 1024, 2048];
 
-const URL_REGEX = /(https:\/\/[\w.\+/_-]+)/g;
+const URL_REGEX = /(https:\/\/[\w.\+/\?=&_-]+)/g;
 
 export default function imageCaptionPlugin() {
   return (tree) => {
@@ -24,6 +24,7 @@ export default function imageCaptionPlugin() {
 
           $('body').each((_i, el) => {
             for (const altChild of el.children) {
+              console.info(altChild);
               if (altChild.type === 'tag' && altChild.name === 'a') {
                 htmlString += generateAnchorTag({
                   href: altChild.attribs.href,
