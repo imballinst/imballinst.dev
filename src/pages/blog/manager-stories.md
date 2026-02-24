@@ -3,8 +3,8 @@ title: Manager Stories
 description: After my first year in managerial role, I thought I had seen all facets of it. I didn't. So much more in store for me since then...
 publishDate: 2026-02-24T12:01:56.593Z
 image: /assets/blog/manager-stories/manager-stories.png
-imageAlt: An image illustrating the manager in pilot seat and in copilot seat, side-by-side.
-imageCaption: An image illustrating the manager in pilot seat and in copilot seat, side-by-side.
+imageAlt: An image illustrating the manager in pilot seat and in copilot seat, side-by-side. Credit to my wife who drew this for me.
+imageCaption: An image illustrating the manager in pilot seat and in copilot seat, side-by-side. Credit to my wife who drew this for me.
 tags: software engineering, life
 visibility: public
 layout: "../../layouts/BlogPost.astro"
