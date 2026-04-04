@@ -4,7 +4,20 @@ export const TOC_ID = 'table-of-contents';
 
 export function tocInjectorPlugin() {
   return (/** @type {*} */ tree, file) => {
-    if (file.history[0]?.endsWith('about.md')) return;
+    let shouldSkipCreateTOC = false;
+
+    if (file.history[0]?.endsWith('about.md')) {
+      shouldSkipCreateTOC = true;
+    }
+
+    if (tree.children.find((child) => child.type === 'heading') === undefined) {
+      shouldSkipCreateTOC = true;
+    }
+
+    if (shouldSkipCreateTOC) {
+      file.shouldSkipCreateTOC = true;
+      return;
+    }
 
     tree.children.unshift(
       {
@@ -24,7 +37,11 @@ export function tocInjectorPlugin() {
 }
 
 export function tocLeadingContentCleanupPlugin() {
-  return (/** @type {*} */ tree) => {
+  return (/** @type {*} */ tree, file) => {
+    if (file.shouldSkipCreateTOC) {
+      return;
+    }
+
     const idx = tree.children.findIndex((child) => child.id === LEADING_CONTENT_ID);
     if (idx > -1) {
       tree.children.splice(idx, 1);

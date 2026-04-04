@@ -24,7 +24,6 @@ export default function imageCaptionPlugin() {
 
           $('body').each((_i, el) => {
             for (const altChild of el.children) {
-              console.info(altChild);
               if (altChild.type === 'tag' && altChild.name === 'a') {
                 htmlString += generateAnchorTag({
                   href: altChild.attribs.href,
