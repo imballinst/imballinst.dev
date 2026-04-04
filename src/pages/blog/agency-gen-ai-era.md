@@ -5,7 +5,7 @@ publishDate: 2026-01-18T14:31:30.641Z
 image: /assets/blog/agency-gen-ai-era/agency-gen-ai-era.png
 imageAlt: An image illustrating someone with an umbrella representing agency amidst of generated content rain.
 imageCaption: An image illustrating someone with an umbrella representing agency amidst of generated content rain.
-tags: software engineering, life
+tags: software engineering, life, ai
 visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---

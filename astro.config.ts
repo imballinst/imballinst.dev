@@ -19,7 +19,10 @@ export default defineConfig({
       tocInjectorPlugin,
       () => {
         return (tree, file) => {
-          if (file.history[0].endsWith('about.md')) return;
+          if ((file as any).shouldSkipCreateTOC) {
+            return;
+          }
+
           return remarkToc()(tree);
         };
       },
