@@ -1,6 +1,6 @@
 ---
-title: Managing Agent vs Managing Human
-description: Software engineers (individual contributors) shifted from writing code to managing agents. Managers, on the other hand, may now have double jobs.
+title: Managing Agents vs Managing Humans
+description: As software engineers spend more time steering AI tools, the gap between managing agents and managing people becomes more important.
 publishDate: 2026-04-04T05:16:56.276Z
 image: /assets/blog/managing-ai-agent-vs-human/managing-ai-agent-vs-human.png
 imageAlt: An image illustrating a joystick connected to a human (or rather, cat) and a robot. My wife drew this for me!
@@ -10,54 +10,63 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Hey, there! Back again with the most saturated topic nowadays: AI stuff! But luckily, I won't be writing about lines of code, the number of PRs I open per day, or how I no longer look at my IDE when I develop. Instead, I'll be writing about the differences between managing humans and managing agents. I think it's often overlooked these days when people are more focused on "the output" and not "the process", whereas it may be more nuanced than that.
+Hey, there! Back again with the most saturated topic nowadays: Artificial Intelligence (AI) stuff! But luckily, I won't be writing about lines of code, the number of Pull Requests (PRs) I open per day, or how I no longer look at my Integrated Development Environment (IDE) when I develop. Instead, I'll be writing about the differences between managing humans and managing agents. I think it's often overlooked these days when people are more focused on "the output" and not "the process", whereas it may be more nuanced than that.
+
+To me, the 2 look similar on the surface because both involve delegation, review, and feedback—but the differences matter more than they first appear.
 
 ## The "traditional" way
 
-Before AI-assisted development became popular, it was all (or perhaps, still is) _quite_ simple. Individual contributors (ICs) contribute, managers manage. It isn't only these 2 spectrums, though, as there are also some opting to be the middle of it (either by necessity or by their own choosing), such as managers that still do individual contribution.
+Before AI-assisted development became popular, it was all (or perhaps, still is) more familiar. Individual Contributors (ICs) contribute, managers manage. It isn't only these 2 spectrums, though, as there are also some opting to be in the middle of it (either by necessity or by their own choosing), such as managers that still do individual contribution.
 
-Managers will help individual contributors by guiding them to a path where they can grow, as well as platforming their work so it is visible to the higher-ups (you can read more here: [#](manager-stories.md)). In doing so, the individual contributors become more experienced, and then they can choose whether they want to stay on the IC track or change into the managerial track.
-That's how the "knowledge passing" happens, rinse and repeat.
+A manager helps ICs grow by giving direction, creating room for ownership, and making sure good work is visible to the right people (you can read more here: [#](manager-stories.md)). In doing so, the individual contributors become more experienced, and then they can choose whether they want to stay on the IC track or move toward management. That's how capability compounds inside a team: not just through delivery, but through repeated coaching, trust, and decision-making.
 
 ## The "nowadays" way
 
-Now, ICs can utilize AI to assist the development (for better or worse). The same goes for managers who still contribute. I have experienced both spectrums, so here is what I _think_. Oh, just to add, I am not going to discuss that AI can output code faster than humans, because that's a given, provided that the human and the AI agent start with the same context.
+Now, ICs can use AI to assist with development, and the same goes for managers who still contribute technically. I have experienced both spectrums, so here is what I think; though the comparison is only useful if we are precise about where the analogy breaks.
+
+As a rough starting point, current AI agents can usually generate and scan code faster than humans, while humans still bring something agents do not: motivation, accountability, and independent judgment. That asymmetry is what makes the comparison interesting to me.
 
 ### Management style
 
-When managing humans, it depends on the person. Some people can be trusted with their work, and when they challenge the current idea, it is usually a pleasant discussion. However, some others require micromanaging every now and then.
+When managing humans, it depends on the person. Some people need very little oversight because they have the judgment and context to move well on their own. Others need more structure, either because the task is ambiguous, the stakes are high, or they are still developing.
 
-On the other hand, when managing agents, it _hovers_ more towards micromanaging. How could we not? The AI models are trained using vast amounts of data, and we have to "propel" them to our needs. The Markdown files are the representation of it, and we "force" the AI agent to read them (either by default or conditionally). Despite the fact that this is a manual process, it's only done once.
+On the other hand, managing agents tends to look much closer to task design and constraint-setting. You are not coaching a mind that grows through reflection; you are packaging context, defining guardrails, and checking whether the output is actually aligned with your intent.
 
-So, if we want to take some major differences, they would be these:
+In practice, that often means instructions, repository conventions, tool access, and repeated feedback loops. Unlike with humans, this setup is not really a one-time investment. It has to be maintained as the codebase, tools, and expectations change.
 
-- Humans can (or often) forget, so the worst case is that micromanagement needs to happen often. However, for those with excellent skills and attitude, we can delegate with peace of mind, so no micromanagement is needed.
-- AI agents start from 0, so if you care about the codebase, you have to micromanage by initially setting up the Markdown files to ensure the code output is consistent, regardless of who runs it and when it runs. As the codebase grows, we will need to regularly micromanage by updating the Markdown files to the latest state-of-the-art condition of the codebase. It doesn't mean that you'll be able to one-shot a complex case in the future, but it would _reduce_ the amount of back-and-forth that you need to get the result just right.
+So, if I had to simplify the difference, it would be this:
 
-Both have the same common pattern: if you don't know the fundamentals of what your direct reports/AI agents are doing, you can't really manage them. You just let them do what they think is right. Are the things they are doing right? You never know.
+- Humans may forget details, but they accumulate judgment, trust, and context over time. The best ones eventually need less supervision, not more.
+- Agents usually arrive with broad prior knowledge but very little project-specific context. If you care about consistency, you have to supply that context explicitly and keep it current as the codebase evolves. That does not guarantee one-shot success on complex work, but it does reduce the amount of back-and-forth needed to get usable output.
 
-When you do, though, you have the right to micromanage... although I do recommend refraining from doing so to humans unless absolutely necessary. Micromanage prevents mistakes, yes, but growth more often than not comes from failures.
+Both still have one shared pattern: if you do not understand the underlying work, you cannot evaluate the output well. At that point, you are not really directing anything. You are just approving whatever comes back.
 
-I can understand people who prefer to manage AI agents rather than humans. I was once, too (or probably I still am). But I wouldn't be able to manage AI agents if not for those who helped me grow. So, I kinda think that this is my chance to "give back".
+Once you do understand the work, you are in a better position to intervene precisely. With humans, though, I still recommend using that carefully. Too much control may reduce mistakes in the short term, but it can also reduce ownership, confidence, and growth.
+
+I can understand why some people would rather steer agents than manage humans. I was once, too (or probably I still am). But I would not even be good at steering agents if other people had not helped me build judgment first. So, I kinda think this is also my chance to give back.
 
 ### Experience
 
-Experience allows people to make better decisions in the future. When a task is completed, the assignee _usually_ gains experience. Just like an RPG, right? Finish a quest, get experience. But, keep in mind, when someone in a group finishes a quest, _not everyone will get the same amount of experience_. The most experience will be gained by the person who pulls their weight the most.
+Experience matters because it shapes future judgment. When a task gets done, someone usually learns from it. But the learning is not evenly distributed. The person doing the hardest thinking, making the tradeoffs, and dealing with the consequences tends to gain the most.
 
 Let's compare them (the example below assumes the human pulls their weight):
 
 - In terms of "getting" experience
-  - When a human completes a task that is challenging, they get experience. That experience is _shareable_ in both work and personal projects, interchangeably. That means, you can utilize the knowledge you gained from personal projects in work and vice versa, which I think is very good.
-  - When an AI agent does the same, the best case is that the knowledge is shared _ONLY in your account_. Say, you have multiple AI provider accounts. Unless you agreed that your work can be used as training data, you can be sure that the knowledge will not persist across accounts (even then, it would still take a while). This is very different compared to if the experience is obtained on the human-level instead of the tool-level.
+  - When a human completes difficult work, the learning becomes part of their own judgment and can often transfer across jobs, projects, and domains.
+  - When an agent completes similar work, whatever was learned is usually much more limited. It may persist in the current conversation, workspace setup, or product-specific memory, but it is not the same thing as a person internalizing judgment.
 - In terms of "applying" experience
-  - When a human applies their experience, they express it based on their memory and pattern matching, _"Oh, back then I did this, and it worked, so let's do this approach."_
-  - When an AI agent applies their experience, it is based on its (1) training data, (2) conversation history, and (3) Markdown file inputs. This means that their "usefulness" is just as good as these 3 are. Additionally, it all comes down to token inputs. How many files does it need to search before it says _"Now I have full context"_?
+  - Humans apply experience through memory, pattern recognition, and judgment under ambiguity.
+  - Agents apply experience through a mix of pretrained patterns, current context, available tools, and whatever instructions or examples they are given. Their usefulness depends heavily on the quality and completeness of those inputs.
 
-I daresay that humans and AI agents _can be_ on the same level in terms of expressing experience, given the same initial context. Under normal conditions, I believe humans can be better decision makers. However, if the human has a lot of things to juggle, which prevents them from effectively switching context, I like to think an AI agent has an edge (because it is very fast in "recalling context").
+I do think agents can sometimes approximate the surface expression of experience, especially when the task is narrow and the relevant context is easy to retrieve, but that is not the same thing as having human judgment. Under ordinary conditions, I still trust humans more as decision-makers, especially when the work is ambiguous or the tradeoffs are social, organizational, or long-term.
+
+Where agents may have an edge is rapid context retrieval: they can scan a repository for relevant patterns, trace interoperability across multiple codebases, or pick up a previous conversation thread faster than a human who is juggling multiple priorities at once.
 
 ## Bottom line
 
-As all other things do, upsides and downsides are imminent. So, I present these rhetorical questions to close this post:
+The core tradeoff is this: agents can absorb and recall context faster than most humans, but humans accumulate judgment in a way agents do not. Leaning too far toward agents speeds up execution while quietly eroding the depth of understanding on the team.
 
-- One of the manager's dreams is to make a team able to self-operate. Is that easier or harder to achieve in the AI era when speed is an [S-tier](https://en.wikipedia.org/wiki/Tier_list) aspect?
-- When your direct report finishes a task with an AI agent, how much experience do they gain from it? Do they get more experience than the AI agent, or is it the other way around?
+So, I'll end with a few questions:
+
+- One of a manager's long-term goals is to help a team operate well without constant intervention. Does AI make that easier by reducing execution cost, or harder by weakening how judgment gets built?
+- When a direct report finishes a task with heavy AI assistance, where does the real learning happen? In the person, in the surrounding workflow, or mostly in the prompt and review loop?
