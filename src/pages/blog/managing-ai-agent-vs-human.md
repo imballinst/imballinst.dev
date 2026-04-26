@@ -16,13 +16,13 @@ To me, the 2 look similar on the surface because both involve delegation, review
 
 ## The "traditional" way
 
-Before AI-assisted development became popular, it was all (or perhaps, still is) more familiar. Individual Contributors (ICs) contribute, managers manage. It isn't only these 2 spectrums, though, as there are also some opting to be in the middle of it (either by necessity or by their own choosing), such as managers that still do individual contribution.
+Before AI-assisted development became popular, it was all (or perhaps, still is) more familiar. Individual Contributors (ICs) contribute, managers manage. It isn't only these 2 spectrums, though, as there are also some opting to do both (either by necessity or by their own choosing), such as managers that still do individual contribution.
 
-A manager helps ICs grow by giving direction, creating room for ownership, and making sure good work is visible to the right people (you can read more here: [#](manager-stories.md)). In doing so, the individual contributors become more experienced, and then they can choose whether they want to stay on the IC track or move toward management. That's how capability compounds inside a team: not just through delivery, but through repeated coaching, trust, and decision-making.
+A manager helps ICs grow by giving direction, creating room for ownership, and making sure good work is visible to the right people (you can read more here: [#](manager-stories.md)). In doing so, the individual contributors become more experienced, and then they can choose whether they want to stay on the IC track or move toward management. That is how capability compounds inside a team: not just through delivery, but through repeated coaching, trust, and decision-making.
 
 ## The "nowadays" way
 
-Now, ICs can use AI to assist with development, and the same goes for managers who still contribute technically. I have experienced both spectrums, so here is what I think; though the comparison is only useful if we are precise about where the analogy breaks.
+Now, ICs can use AI to assist with development, and the same goes for managers who still contribute technically. I have experienced both spectrums, so here is what I think, though the comparison is only useful if we are precise about where the analogy breaks.
 
 As a rough starting point, current AI agents can usually generate and scan code faster than humans, while humans still bring something agents do not: motivation, accountability, and independent judgment. That asymmetry is what makes the comparison interesting to me.
 
@@ -68,5 +68,5 @@ The core tradeoff is this: agents can absorb and recall context faster than most
 
 So, I'll end with a few questions:
 
-- One of a manager's long-term goals is to help a team operate well without constant intervention. Does AI make that easier by reducing execution cost, or harder by weakening how judgment gets built?
-- When a direct report finishes a task with heavy AI assistance, where does the real learning happen? In the person, in the surrounding workflow, or mostly in the prompt and review loop?
+1. One of a manager's long-term goals is to help a team operate well without constant intervention. Does AI make that easier by reducing execution cost, or harder by weakening how judgment gets built?
+2. When a direct report finishes a task with heavy AI assistance, where does the real learning happen? In the person, in the surrounding workflow, or mostly in the prompt and review loop?
