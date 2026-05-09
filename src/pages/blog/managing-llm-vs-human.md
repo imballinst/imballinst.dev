@@ -30,7 +30,7 @@ As a rough starting point, for first-pass drafting and code search in well-scope
 
 When managing humans, it depends on the person. Some people need very little supervision because they have the judgment and context to move well on their own. Others need more structure, either because the task is ambiguous or the stakes are high, which is to say they are still developing.
 
-On the other hand, managing agents tends to look much closer to task design and constraint-setting. Instead of coaching a person who grows through reflection, you are packaging context, defining guardrails, and checking whether the output is actually aligned with your intent. In practice, that often means instructions, repository conventions, tool access, and repeated feedback loops.
+On the other hand, managing agents tends to look much closer to task design and constraint-setting. Instead of coaching a "living thing" that grows through reflection, you are packaging context, defining guardrails, and checking whether the output is actually aligned with your intent. In practice, that often means instructions, repository conventions, tool access, and repeated feedback loops.
 
 The gross simplification would be this:
 
@@ -64,13 +64,11 @@ Under ordinary conditions, I still trust humans more as decision-makers, especia
 
 ### Availability and affordability
 
-Humans _usually_ only work 8 hours a day, while some go beyond that. I am not going to discuss right or wrong; it depends on the situation. LLMs, like any software, do not need rest. They are available 24/7 unless the platform is down. For example, [Claude](https://status.claude.com) has had visible uptime issues before, and [GitHub Status](https://www.githubstatus.com/) has had rough periods too... but I digress.
+Humans _usually_ only work 8 hours a day, while some go beyond that. I am not going to discuss right or wrong; it depends on the situation. LLMs, like any software, do not need rest. They are available 24/7 unless the platform is down. For example, [Claude](https://status.claude.com) has had visible uptime issues before, and [GitHub's uptime](https://mrshu.github.io/github-statuses) has had rough periods too... but I digress.
 
 Compared to humans, who may have many availability constraints (health, family matters, life matters), LLM availability from the user point of view is mainly reduced by two things: platform incidents and rate limits.
 
-On top of that, using LLMs is often affordable in direct spend today, which is why small teams, especially solo founders, may choose them instead of hiring immediately. But I think the real cost comparison should include review time, retries, and rework whenever quality misses the mark.
-
-That is where this ties back to the core tradeoff in this article: faster execution can look cheap in the short term, while underinvesting in human judgment can become expensive later. Whether this cost balance holds in the long run, I do not know. This article from Ed Zitron is also interesting: [AI's Economics Don't Make Sense](https://www.wheresyoured.at/ais-economics-dont-make-sense/#the-economics-of-ai-data-centers-and-compute-do-not-make-sense).
+On top of that, currently the LLM is very affordable in terms of cost. It is understandable for small teams, especially solo-founders to opt for that instead of hiring humans. Whether that will hold in the long run, I do not know. This article from Ed Zitron is also interesting: [AI's Economics Don't Make Sense](https://www.wheresyoured.at/ais-economics-dont-make-sense/#the-economics-of-ai-data-centers-and-compute-do-not-make-sense).
 
 ## Bottom line
 
