@@ -24,13 +24,13 @@ A manager helps ICs grow by giving direction, creating room for ownership, and m
 
 Now, ICs can use LLMs to assist with development, and the same goes for managers who still contribute technically. I have been on both sides, so here's what I think.
 
-As a rough starting point, current LLM agents can usually generate and scan code faster than humans, while humans still bring things agents do not: motivation, accountability, and independent judgment. Those differences make this comparison interesting to me.
+As a rough starting point, for first-pass drafting and code search in well-scoped tasks, current LLM agents can usually generate and scan code faster than humans. Humans still bring things agents do not: motivation, accountability, and independent judgment. Those differences make this comparison interesting to me.
 
 ### Management style
 
 When managing humans, it depends on the person. Some people need very little supervision because they have the judgment and context to move well on their own. Others need more structure, either because the task is ambiguous or the stakes are high, which is to say they are still developing.
 
-On the other hand, managing agents tends to look much closer to task design and constraint-setting. Instead of coaching a "living thing" that grows through reflection, you are packaging context, defining guardrails, and checking whether the output is actually aligned with your intent. In practice, that often means instructions, repository conventions, tool access, and repeated feedback loops.
+On the other hand, managing agents tends to look much closer to task design and constraint-setting. Instead of coaching a person who grows through reflection, you are packaging context, defining guardrails, and checking whether the output is actually aligned with your intent. In practice, that often means instructions, repository conventions, tool access, and repeated feedback loops.
 
 The gross simplification would be this:
 
@@ -64,17 +64,19 @@ Under ordinary conditions, I still trust humans more as decision-makers, especia
 
 ### Availability and affordability
 
-Humans _usually_ only work 8 hours a day, while some go beyond that. I am not going to discuss right or wrong; it depends on the situation. LLMs, like any software, do not need rest. They are available 24/7 unless the platform is down. For example, [Claude](https://status.claude.com) has had visible uptime issues before, and [GitHub's uptime](https://mrshu.github.io/github-statuses) has had rough periods too... but I digress.
+Humans _usually_ only work 8 hours a day, while some go beyond that. I am not going to discuss right or wrong; it depends on the situation. LLMs, like any software, do not need rest. They are available 24/7 unless the platform is down. For example, [Claude](https://status.claude.com) has had visible uptime issues before, and [GitHub Status](https://www.githubstatus.com/) has had rough periods too... but I digress.
 
 Compared to humans, who may have many availability constraints (health, family matters, life matters), LLM availability from the user point of view is mainly reduced by two things: platform incidents and rate limits.
 
-On top of that, currently the LLM is very affordable in terms of cost. It is understandable for small teams, especially solo-founders to opt for that instead of hiring humans. Whether that will hold in the long run, I do not know. This article from Ed Zitron is also interesting: [AI's Economics Don't Make Sense](https://www.wheresyoured.at/ais-economics-dont-make-sense/#the-economics-of-ai-data-centers-and-compute-do-not-make-sense).
+On top of that, using LLMs is often affordable in direct spend today, which is why small teams, especially solo founders, may choose them instead of hiring immediately. But I think the real cost comparison should include review time, retries, and rework whenever quality misses the mark.
+
+That is where this ties back to the core tradeoff in this article: faster execution can look cheap in the short term, while underinvesting in human judgment can become expensive later. Whether this cost balance holds in the long run, I do not know. This article from Ed Zitron is also interesting: [AI's Economics Don't Make Sense](https://www.wheresyoured.at/ais-economics-dont-make-sense/#the-economics-of-ai-data-centers-and-compute-do-not-make-sense).
 
 ## Bottom line
 
 The core tradeoff is this: agents can absorb and recall context faster than most humans, but humans accumulate judgment in a way agents do not. Leaning too far toward agents speeds up execution while quietly eroding the depth of understanding on the team.
 
-Speaking about understanding, just recently I saw someone say something along the lines of, _"Delegate your thinking, not your understanding"_. I am sorry? From my experience in playing games, even if I understand something, I still have to think because things are happening dynamically and I have to react. There will be times when you understand something but since you don't think, it becomes an oversight instead. I believe the same for software engineering. You may think you understand something, but you actually don't unless you think about it. Unless you have a galaxy brain, that is.
+Speaking about understanding, just recently I saw someone say something along the lines of, _"Delegate your thinking, not your understanding"_. I am sorry? From my experience in playing games, even if I understand something, I still have to think because things are happening dynamically and I have to react. There will be times when you understand something, but if you do not think through it, it becomes an oversight. I believe the same for software engineering. You may think you understand something, but you actually don't unless you think about it. Unless you have a galaxy brain, that is.
 
 So, I'll end with a few questions:
 
