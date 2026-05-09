@@ -262,7 +262,7 @@ const isExternalLink = (href) => !href.includes('imballinst.netlify.app') && !hr
 function modifyAnchorNode({ node }) {
   node.properties.class = 'text-teal-600 dark:text-teal-300 hover:underline break-words inline';
 
-  if (!path.isAbsolute(node.properties.href)) {
+  if (!path.isAbsolute(node.properties.href) && !isURL(node.properties.href)) {
     const href = node.properties.href;
     const idx = href.lastIndexOf(path.extname(href));
 
@@ -382,4 +382,17 @@ function shouldModifyAnchorNode(element) {
  */
 function isTOC(child) {
   return child?.id === TOC_ID;
+}
+
+/**
+ *
+ * @param {string} href
+ */
+function isURL(href) {
+  try {
+    new URL(href);
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
