@@ -17,13 +17,7 @@ async function main() {
     .use(htmlClassnamesPlugin)
     .process(
       `
-Test
-
-## hehe
-
-haha
-
-![The FF7 Safer Sephiroth Supernova animation. Source: https://www.youtube.com/watch?v=hTc9sLmOR0A](/assets/blog/space-created/ff7-supernova.png)
+For example, [Claude](https://status.claude.com)
 `.trim()
     );
 
