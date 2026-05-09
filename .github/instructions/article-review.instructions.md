@@ -20,6 +20,9 @@ applyTo: 'src/pages/blog/**/*.md'
 - Keep paragraph structure natural: avoid one-sentence paragraph suggestions by default unless clearly intentional for rhetorical effect.
 - Split or merge paragraphs only when it materially improves readability, argument progression, or topic separation.
 - Prioritize high-impact issues first: weak claims, unsupported assertions, logical jumps, unclear comparisons, and repetitive points.
+- Prioritize thesis-level and reader-impact issues before sentence-level nits.
+- Challenge broad claims and ask for scope or evidence when precision materially affects credibility.
+- Do not spend review budget on single-word substitutions (for example replacing "just") unless they fix correctness, clarity, or argument strength.
 - Label suggestions by impact (High, Medium, Low) and include a short reason for why each change matters.
 - Limit review output to the most useful issues (typically 5-8 items) to avoid noisy, low-value edits.
 - Skip cosmetic rewrites that do not improve meaning, argument quality, factual precision, or reader comprehension.

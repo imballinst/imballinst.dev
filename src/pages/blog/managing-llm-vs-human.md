@@ -62,11 +62,13 @@ I do think agents can sometimes approximate the surface expression of experience
 
 Under ordinary conditions, I still trust humans more as decision-makers, especially when the work is ambiguous or the tradeoffs are social, organizational, or long-term. On the other hand, agents may have an edge in rapid context retrieval: they can scan a repository for relevant patterns, trace interoperability across multiple codebases, or pick up a previous conversation thread faster than a human who is juggling multiple priorities at once.
 
-### Availability
+### Availability and affordability
 
 Humans _usually_ only work 8 hours a day, while some go beyond that. I am not going to discuss right or wrong; it depends on the situation. LLMs, like any software, do not need rest. They are available 24/7 unless the platform is down. For example, [Claude](https://status.claude.com) has had visible uptime issues before, and [GitHub's uptime](https://mrshu.github.io/github-statuses) has had rough periods too... but I digress.
 
 Compared to humans, who may have many availability constraints (health, family matters, life matters), LLM availability from the user point of view is mainly reduced by two things: platform incidents and rate limits.
+
+On top of that, currently the LLM is very affordable in terms of cost. It is understandable for small teams, especially solo-founders to opt for that instead of hiring humans. Whether that will hold in the long run, I do not know. This article from Ed Zitron is also interesting: [AI's Economics Don't Make Sense](https://www.wheresyoured.at/ais-economics-dont-make-sense/#the-economics-of-ai-data-centers-and-compute-do-not-make-sense).
 
 ## Bottom line
 
@@ -78,4 +80,4 @@ So, I'll end with a few questions:
 
 1. One of a manager's long-term goals is to help a team operate well without constant intervention. Do LLMs make that easier by reducing execution cost, or harder by weakening how judgment gets built?
 2. When a direct report finishes a task with heavy LLM assistance, where does the real learning happen? In the person, in the surrounding workflow, or mostly in the prompt and review loop?
-3. Considering LLMs are _generally_ more affordable than humans right now, will that hold in the long run? When does the cost of using LLMs hit a break-even point, and at that point, is it still a worthwhile tradeoff to go all-in on LLMs instead of humans?
+3. Considering LLMs are _generally_ more affordable than humans right now (with _arguably_ better availability), will that hold in the long run? When does the cost of using LLMs hit a break-even point, and at that point, is it still a worthwhile tradeoff to go all-in on LLMs instead of humans?
