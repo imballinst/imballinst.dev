@@ -1,7 +1,7 @@
 ---
 title: Managing LLMs vs Managing Humans
 description: As software engineers spend more time steering LLM tools, the gap between managing agents and managing people becomes more important.
-publishDate: 2026-04-04T05:16:56.276Z
+publishDate: 2026-05-09T02:47:14.718Z
 image: /assets/blog/managing-llm-vs-human/managing-llm-vs-human.png
 imageAlt: An image illustrating a joystick connected to a human (or rather, bunny) and a robot. My wife drew this for me!
 imageCaption: An image illustrating a joystick connected to a human (or rather, bunny) and a robot. My wife drew this for me!
