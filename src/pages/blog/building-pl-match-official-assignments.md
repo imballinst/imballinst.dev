@@ -2,7 +2,7 @@
 title: Building Premier League Match Official Assignments
 description: In this post, I am sharing my experience building the Premier League Match Official Assignments feature.
 publishDate: 2026-06-30T06:34:35.744Z
-image: /assets/blog/building-pl-match-official-assignments/building-pl-match-official-assignments.png
+image: /assets/blog/building-pl-match-official-assignments/hero.png
 imageAlt: An image showing one of the screenshots of the Premier League Match Official Assignments page.
 imageCaption: An image showing one of the screenshots of the Premier League Match Official Assignments page.
 tags: software engineering, football
