@@ -9,16 +9,11 @@ export interface Props {
   image?: string;
 }
 
-const {
-  title,
-  description,
-  permalink,
-  image = '/assets/common-images/imballinst-dev-metadata.jpg'
-} = Astro.props;
+const { title, description, permalink, image = '/assets/common-images/imballinst-dev-metadata.jpg' } = Astro.props;
 
 let url = Astro.site?.href || '';
 if (url.endsWith('/')) {
-  url = url.slice(0, -1)
+  url = url.slice(0, -1);
 }
 
 const isProd = import.meta.env.PROD;
@@ -61,20 +56,8 @@ if (isProd) {
 
 <!-- Fonts -->
 {
-  [
-    'Barlow-Regular.woff2',
-    'Barlow-Italic.woff2',
-    'Barlow-Medium.woff2',
-    'Barlow-Bold.woff2',
-    'IBMPlexMono-Regular.woff2'
-  ].map((font) => (
-    <link
-      rel="preload"
-      href={`/fonts/${font}`}
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+  ['Barlow-Regular.woff2', 'Barlow-Italic.woff2', 'Barlow-Medium.woff2', 'Barlow-Bold.woff2', 'IBMPlexMono-Regular.woff2'].map((font) => (
+    <link rel="preload" href={`/fonts/${font}`} as="font" type="font/woff2" crossorigin />
   ))
 }
 
@@ -82,10 +65,7 @@ if (isProd) {
 <script>
   const root = document.documentElement;
   const theme = localStorage.getItem('theme');
-  if (
-    theme === 'dark' ||
-    (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
+  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     root.classList.add('dark');
   } else {
     root.classList.remove('dark');
@@ -93,9 +73,17 @@ if (isProd) {
 </script>
 
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NKT4KWQK');</script>
+<script>
+  // @ts-nocheck
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-NKT4KWQK');
+</script>
 <!-- End Google Tag Manager -->
