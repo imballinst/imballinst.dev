@@ -4107,12 +4107,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:25.3.3":
-  version: 25.3.3
-  resolution: "@types/node@npm:25.3.3"
+"@types/node@npm:26.1.0":
+  version: 26.1.0
+  resolution: "@types/node@npm:26.1.0"
   dependencies:
-    undici-types: ~7.18.0
-  checksum: 9186aae36f8ddb0b3630dba446e5c16e5f3e6c5e7a4708d117a394d3e3b6f41db2dd83a6127adf4567826776a732ca9e2561594667bce74bb18ea4d59ee1e06a
+    undici-types: ~8.3.0
+  checksum: bbced3378635cb48e739e384e53ff4c7d3e18194a2e003fb5240fc4f6c18fdc9f2452539a9f6fa608ca7b510a40f844d483c23f5d8bd2cf2c245b16d43ce4236
   languageName: node
   linkType: hard
 
@@ -8571,7 +8571,7 @@ __metadata:
     "@astrojs/preact": 4.1.0
     "@astrojs/tailwind": 6.0.2
     "@tailwindcss/vite": 4.1.11
-    "@types/node": 25.3.3
+    "@types/node": 26.1.0
     astro: 5.18.1
     astro-expressive-code: 0.44.0
     cheerio: 1.0.0-rc.12
@@ -14539,10 +14539,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~7.18.0":
-  version: 7.18.2
-  resolution: "undici-types@npm:7.18.2"
-  checksum: 23da306c8366574adec305b06a8519ab5c7d09e3f5d16c1a98709a34fae17da09ec95198f30f86c00055e02efa8bfcc843e84e8aebeb9b8d6bb3e06afccae07a
+"undici-types@npm:~8.3.0":
+  version: 8.3.0
+  resolution: "undici-types@npm:8.3.0"
+  checksum: bdc1d54d8b48f3f2a801f7707a2ad53b76711039dd9a276382d4bdbbded79355574309425096127a42313731bde7a76cc299855fc06872797edd0acbfcef5bc0
   languageName: node
   linkType: hard
 
