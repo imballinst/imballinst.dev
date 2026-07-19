@@ -34,9 +34,9 @@ The same case with reviewing code from LLMs. If I just review the diff, I learn 
 
 Let's assume that the LLM is a cook, and you ask it to cook food. The result: it looks good, and it tastes good on the surface. On the inside? How do you know if it uses too much of a certain ingredient? You won't know _unless_ you supervise it _and_ you know what you are doing. It's like what they say: an LLM may _feel_ amazing at a job that we aren't familiar with.
 
-Anyway, if you still want to (or are forced to) only review LLM code, one way to reduce that learning concern is to keep asking the LLM about the part that you don't understand (or that is not aligned with your understanding). As the LLM clarifies the intent, you can provide feedback and re-align as needed. This is actually the same as the Pull Request (PR) review in real world. If you see PR only as a gatekeeping mechanism, you won't learn much from what your peers do. However, if you actively trying to learn, it may actually benefit you and your peers! That's probably also the case with the LLMs as our peers. If they do something wrong, we can ask why, and from there, we can "fine tune" the context to prevent the same issue from happening again.
+Anyway, if you still want to (or are forced to) only review LLM code, one way to reduce that learning concern is to keep asking the LLM about the part that you don't understand (or that is not aligned with your understanding). As the LLM clarifies the intent, you can provide feedback and re-align as needed. Although, you have to spare more "token usage," which requires you to be lucky... as in, not being "on the clock 24/7", because if you are always expected to build, you won't have time to stop, ask, and learn.
 
-Although, you have to spare more "token usage," which requires you to be lucky... as in, not being "on the clock 24/7", because if you are always expected to build, you won't have time to stop, ask, and learn.
+This is actually the same as the Pull Request (PR) review in the real world. If you see PR only as a gatekeeping mechanism, you won't learn much from what your peers do. However, if you're actively trying to learn, it may actually benefit you and your peers! That's probably also the case with the LLMs as our peers. If they do something wrong, we can ask why, and from there, we can "fine-tune" the context to prevent the same issue from happening again.
 
 ## Taking more control
 
@@ -116,7 +116,7 @@ By having these 2 sources, I can look up some numbers and _maybe_ derive some de
 
 The HTTP endpoints used to fetch those stats, though, I had to take more control so that the monitoring capabilities wouldn't end up hurting the server's performance (if the traffic ever skyrockets at some point).
 
-## Post-release: adding a staging environment
+## Adding a staging environment
 
 Initially, I only had production environments. However, as I iterated, I realized that I would need a staging environment, especially to test out migrations. I don't want a migration to break production accidentally, even though it works fine on my machine. So, I updated my GitHub workflow so that it would build a Docker image with different tags:
 
@@ -132,9 +132,9 @@ That's all for this post. To recap:
 - Took more control by prioritizing features and mixing some manual code writing with AI-assisted development
 - Used OVHcloud as hosting because it was cheaper than Hetzner
 - GitHub Free plan's private repository GitHub Actions minutes are generous, which allows building the Docker image in CI and pushing it to the Coolify Docker registry
-- Google Analytics were used to capture user interactions whereas dashboard are used to see the latest state of the data in the database
+- Google Analytics was used to capture user interactions, whereas the dashboard is used to see the latest state of the data in the database
 - Separation between staging and production was done via a tag split: `staging` and `latest`
 
-Also, after adjusting my workflow to be a mix of AI-assisted development and manually writing code, I got my excitement over the project back. I know it's not really attracting _that_ many numbers, but I learned a lot from this project and that was what mattered to me, because this could be a very good momentum for me to build onwards towards a healthier software engineering (personally, at least).
+I also mentioned about my lack of "appetite" for software engineering. After adjusting my workflow to be a mix of AI-assisted development and manually writing code, I got my excitement over the project back. I know it's not really attracting _that_ many numbers, but I learned a lot from this project and that was what mattered to me, because this could be a very good momentum for me to build onwards towards a healthier software engineering (personally, at least).
 
 So, yeah. Hopefully this post is useful, and see you on the next one!
