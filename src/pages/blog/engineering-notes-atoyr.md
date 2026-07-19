@@ -54,9 +54,9 @@ For the backend, I was (and still am) using Go+Gin+GORM. Initially, I was using 
 
 Communication between client/server is via HTTP with JSON as the primary format. I found that "synchronizing" the request/response payload between the UI and server was painful. So, I decided to use [oapi-codegen](https://github.com/oapi-codegen/oapi-codegen/) to codegen the OpenAPI 3.0 spec into [Go (Gin)](https://github.com/oapi-codegen/oapi-codegen/tree/main/examples/minimal-server/gin) and [TypeScript fetch](https://openapi-ts.dev/openapi-fetch/). It was pretty cool, and I added [openapi-react-query](https://openapi-ts.dev/openapi-react-query/) as a cherry on top, which builds on top of `openapi-fetch`.
 
-In addition to "normal" send request and receive response, session timers exclusively use Server Sent-Events (SSE), because wrong answers have to be resolved in the server and the server takes care of the timer. Why SSE instead of WebSocket? Because I don't want to handle the WebSocket complexity, especially around reconnection. If submitting an answer is handled inside a WebSocket, my understanding is that I have to handle cases where the submitted answer is "lost" in the process and has to be retried after reconnection. With SSE handling the tick only, I have far fewer things to worry about if the connection drops. For the record, currently I handle this by checking if the SSE is inactive (the client doesn't receive `tick` events) and re-establishing it if that is the case.
+In addition to "normal" send request and receive response, session timers exclusively use Server-Sent Events (SSE), because wrong answers have to be resolved in the server and the server takes care of the timer. Why SSE instead of WebSocket? Because I don't want to handle the WebSocket complexity, especially around reconnection. If submitting an answer is handled inside a WebSocket, my understanding is that I have to handle cases where the submitted answer is "lost" in the process and has to be retried after reconnection. With SSE handling the tick only, I have far fewer things to worry about if the connection drops. For the record, currently I handle this by checking if the SSE is inactive (the client doesn't receive `tick` events) and re-establishing it if that is the case.
 
-## CI/CD and release
+## Hosting, CI/CD, and release
 
 The planned release day swiftly approached. I felt like the thing was ready to be deployed; the question was just about where. I was thinking of using Hetzner, but Hetzner has raised their server prices a few times already this year [[1](https://www.hetzner.com/pressroom/statement-price-adjustment/), [2](https://www.hetzner.com/pressroom/standardization-and-price-adjustment-of-our-server-products/)]. Previously, the cheapest Shared Cloud Server (CX class) started from $4 per month. Now, it starts from $6.5 per month, more than a 50% price hike, all because of this AI hyperscale stuff.
 
@@ -118,6 +118,15 @@ The HTTP endpoints used to fetch those stats, though, I had to take more control
 
 ## Closing words
 
-I mentioned that I began to feel lack of "appetite" for software engineering. After adjusting my workflow to be a mix of AI-assisted development and manually writing code, I got my excitement over the project back. I know it's not really attracting _that_ many numbers, but I learned a lot from this project and that was what mattered to me, because this could be very good momentum for me to build onwards towards a healthier software engineering (personally, at least).
+After adjusting my workflow to be a mix of AI-assisted development and manually writing code, I got my excitement over the project back. I know it's not really attracting _that_ many numbers, but I learned a lot from this project and that was what mattered to me, because this could be very good momentum for me to build onwards towards a healthier software engineering (personally, at least).
 
-So, yeah. Hopefully this post is useful, and see you on the next one!
+As for the post itself, to recap:
+
+- Went back and forth between Koa, NestJS, and Go for the backend options with the help of LLMs during initial development
+- Ended up with React Router (SPA) for the frontend and Go (Gin, GORM) for the backend
+- Took more control by prioritizing features and mixing some manual code writing with AI-assisted development
+- Used OVHcloud as hosting because it was cheaper than Hetzner
+- GitHub Free plan's private repository GitHub Actions minutes are generous, which allows building the Docker image in CI and pushing it to the Coolify Docker registry
+- Google Analytics was used to capture user interactions, whereas the dashboard is used to see the latest state of the data in the database
+
+Hopefully this post is useful, and see you on the next one!
