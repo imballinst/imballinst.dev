@@ -46,6 +46,10 @@ These were the headaches that I think would prevent the "launch" from happening 
 
 I also started mixing coding manually with AI-assisted development. The latter was just because so that I could keep up with the "industry norms". It was pretty fun. When I wrote code manually, I would ask the LLM to review my code; and vice versa. By writing code manually, I got some grasp on "where some things are", which allowed me to give better feedback to the LLM. _"Haha, you still do that manually?"_ I'm sorry, I was trying to keep being a human and I don't have unlimited token usage.
 
+In addition to that, since I was (and still am) using GORM, I stopped using the [auto migration tool](https://gorm.io/docs/migration.html), which I had been using during the development. This was so that I could know what exists in the database and what not, because with the auto migration, based on the docs, it is only able to "append" and won't be able to "modify" or "delete".
+
+Lastly, since "synchronizing" the payload/response was painful, I decided to use [oapi-codegen](https://github.com/oapi-codegen/oapi-codegen/) to codegen OpenAPI 3.0 spec into [Go (Gin)](https://github.com/oapi-codegen/oapi-codegen/tree/main/examples/minimal-server/gin) and [TypeScript fetch](https://openapi-ts.dev/openapi-fetch/). It was pretty cool and I added [openapi-react-query](https://openapi-ts.dev/openapi-react-query/) as cherry-on-top, which builds on top of `openapi-fetch`.
+
 ## Overall architecture
 
 <!-- Architecture image -->
@@ -54,22 +58,63 @@ The planned release day swiftly approached. I felt like the thing was ready to b
 
 Man, it makes me want to rant a bit about the prices. The good old days when I was able to buy 16x2 DDR4 RAM sticks for just under $100... now it is 3-4 times pricier. Good thing I upgraded my PC's SSD before it went crazy.
 
-This is why I think the market for PC gamers will not grow for now, because the PC part prices are crazy. If someone already struggles to fulfill their primary needs, with the PC parts being that big, they can kiss goodbye building a PC. Console and smartphone prices also got bumped, although I don't think it's as big as PC's. So, I think there is _still_ hope to console and mobile gaming. If you are reading this and in the near future AI is still hyperscaling but PC gamers community _seemingly_ becomes bigger than before, please kindly remind me about this post and I'll post an update that I was wrong!
+This is why I think the market for PC gamers will not grow for now, because the PC part prices are crazy. If someone already struggles to fulfill their primary needs, with the PC parts being that big, they can kiss goodbye building a PC. Console and smartphone prices also got bumped, although I don't think it's as big as PC's. So, I think there is _still_ hope to console and mobile gaming. If you are reading this and in the near future AI is still hyperscaling but PC gamers community _seemingly_ becomes bigger than before, please kindly remind me about this post and I'll write an update that I was wrong!
 
-Back to topic. I ended up with [OVHcloud with their VPS package](https://www.ovhcloud.com/asia/vps/). With $5.35 per month (or $4.54 if you take the 1-year commitment), you get the same specification as Hetzner does, in addition to located in Singapore, which will help in reducing latency a bit to my stuff.
+Back to topic. I ended up with [OVHcloud with their VPS package](https://www.ovhcloud.com/asia/vps/). With $5.35 per month (or $4.54 if you take the 1-year commitment), you get the same specification as Hetzner does, in addition to located in Singapore, which will help in reducing latency a bit to my stuff. As for the DNS, I used the subdomain of `.imballinst.dev`, a domain that I already have in Squarespace Domains (used to be Google Domains, again, 🕊️). In the process, I forgot that `imballinst.dev` used Netlify's name servers, so it took me a bit back and forth before realizing that I had to add A and CNAME records in Netlify instead of in the Squarespace Domains.
 
 I had an experience setting up HTTPS and stuff myself back then in a VPS (and it was painful). I think it was in 2017/18. Fast forward to now, there is a thing called [Coolify](https://coolify.io/) (which I wanted to try for so long but haven't had the chance). Coolify came out-of-the-box with the routing stuff ([Traefik](https://doc.traefik.io/traefik/)), which I see as a "better Nginx" so I don't have to manually configure the reverse proxy and all that myself inside a config file.
 
-<!-- Setting up the CI: GitHub Actions -->
+Next one is Continuous Integration (CI). There were 2 options with Coolify: Git mode (build in VPS) or Doker image mode (build in any CI outside of VPS and then pull the Docker image). I really wanted for the VPS to just pull a Docker image so it doesn't cause CPU/memory spike during the build, so I went with GitHub Actions, considering my repository is hosted in GitHub anyway. Additionally, GitHub Actions is pretty generous for private repositories, with 2000 CI-minutes per month.
 
-<!-- Setting up the CD: registry + webhook -->
+Up next, the Continuous Deployment (CD). I had several registry options:
+
+- **GitHub Packages:** https://docs.github.com/en/billing/concepts/product-billing/github-packages. The egress limit is quite low for private repositories, so it's a bit of no-go.
+- **Docker Hub:** https://hub.docker.com. There is only 1 private repository limit, so if I want to host another app, I have to think about an alternative, anyway.
+- **Harbor:** https://github.com/goharbor/harbor. It caught my eye around March/April and it was pretty nice in terms of feature set (seems easy to toggle some optional features like Trivy for image scanning, too), but I had trouble setting that up in the VPS.
+- **Registry (from inside Coolify):** https://coolify.io/docs/services/docker-registry. From what I understand, this is the baseline of Harbor. It doesn't have other rich features like the image scanning, but for my case, it should be enough.
+
+So, I ended up with using Coolify Docker Registry service, set up my CI to push it there, and then point my app to use Docker Image that points to that Docker Registry URL. Mind that Docker auths have to be in HTTPS, so I had to set up the HTTPS first (alongside the Docker Registry domain). Other than that, it was pretty smooth. GitHub Actions push Docker image to Coolify Docker Registry, then GitHub Actions trigger the deployment of the said app, which will pull the `latest` image.
+
+There you have it, a commit is pushed to the repository, then GitHub Actions will test, build, push Docker image to Coolify registry, and then trigger the Coolify deployment.
 
 ## Analytics and dashboard
 
 <!-- Setting up GTM, simple dashboard -->
 
+The CI/CD is ready, the domain is ready, I already did some tests... but there were still some missing things. How would I know if the game was played? How many users visited only the home page, only end up not playing the game? I decided to split up into 2 key sources:
+
+- **User interactions:** from Google Analytics via Google Tag Manager. Metrics being tracked:
+  - Button clicks and labels
+  - Number of visitors
+  - Page views
+- **Game data:** from the server. Metrics being tracked:
+  - Currently active sessions
+  - Sessions today
+  - Sessions this week
+  - Sessions this month
+  - Total number of sessions (fetched on-demand)
+  - All other observability metrics, like response time, throughput, error rate, and memory usage
+
+This way, I can look up some numbers and _maybe_ derive some decisions based on them. I had some improvements based on the Google Analytics' numbers, which I will share in another post (this post is already quite long!). To protect the dashboard, I used a simple Google auth, so only certain users with certain Google auth token can see the dashboard. The UI is kind of "throwaway feature" that I almost fully relied on LLMs to create. I didn't need it to be fancy, I needed it to "just work".
+
+The HTTP endpoints used to fetch those stats though, I had to take more careful look so that the monitoring capabilities won't end up hurting the server's performance (if the traffic ever skyrockets at some point).
+
 ## Final touches
 
 <!-- Separating staging and production environments -->
 
+Initially, I only had production environments. However, as I iterated, I realized that I would need a staging environment, especially to test out migrations. I don't want a migration to break production accidentally despite that it works fine in my machine. So, I updated my GitHub workflows so it would build Docker image with different tags:
+
+- **Normal `main` branch pushes:** build `staging` Docker image tags.
+- **Tag pushes:** build tag AND `latest` Docker image tags. These tags are to be created via GitHub Releases and then it goes to the usual CI/CD flow. This way, I can still "time" my releases.
+
 ## Closing words
+
+That's all for this post. To recap:
+
+- Went back and forth between Koa, NestJS, and Go for the backend options with the help of LLMs during initial development
+- Ended up with React Router (SPA) for the frontend and Go (Gin, GORM) for the backend
+- Took more control by prioritizing features and mixing some manual code writing with AI-assisted development
+- 
+
+That's all for this post. Hopefully it is useful and see you on the next one!
