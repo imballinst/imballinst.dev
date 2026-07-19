@@ -95,7 +95,7 @@ So, I ended up using the Coolify Docker Registry service, set up my CI to push i
 
 ![Atoyr overall CI/CD setup.](/assets/blog/engineering-notes-atoyr/01-atoyr-architecture.png)
 
-It is said that I don't really need to trigger the webhook, but I need something like [Watchtower](https://github.com/nicholas-fedor/watchtower). But... that is more of a toy for me to play with, and for every toy I play with, the release is delayed. So, I kept it simple. There you have it: a commit is pushed to the repository, then GitHub Actions will test, build, push the Docker image to the Coolify registry, and then trigger the Coolify deployment.
+It is said that I don't really need to trigger the webhook, but I will require something like [Watchtower](https://github.com/nicholas-fedor/watchtower). But... that is more of a toy for me to play with, and for every toy I play with, the release is delayed. So, I kept it simple. There you have it: a commit is pushed to the repository, then GitHub Actions will test, build, push the Docker image to the Coolify registry, and then trigger the Coolify deployment.
 
 ## Analytics and dashboard
 
