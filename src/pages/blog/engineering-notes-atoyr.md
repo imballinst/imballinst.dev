@@ -10,7 +10,7 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Hello, hello! Welcome to this post, in which I will be sharing my experience in building a _simple_ (hopefully) word arcade game called "Atoyr". It is an abbreviation of "A test of your reflexes", which is a homage to a Final Fantasy XIV character when he casts a spell with a long cast time (ironically). The mechanic is quite simple: given a scrambled word [and a definition], guess the word. Repeat this every 30 seconds, get as many correct guesses as you can.
+Hello, hello! Welcome to this post, in which I will be sharing my experience in building a _simple_ (hopefully) word arcade game called "Atoyr". It is an abbreviation of "A test of your reflexes", which is a homage to a Final Fantasy XIV character when he casts a spell with a long cast time (ironically). The mechanic is quite simple: given a scrambled word [and a definition], guess the word. Repeat this every 30 seconds, get as many correct guesses as you can. You can play it here: https://atoyr.imballinst.dev/.
 
 I originally started developing this early this year (January-ish) but only managed to release it properly just last week... because reasons. Mostly because I lost my spark for building software and am currently on track to revive it. So, yeah, let's get started!
 
@@ -23,6 +23,8 @@ Needless to say, the development itself was pretty fast. I was initially opting 
 Anyway, finally I decided just to go with an SPA (prerendered) React Router and Go (Gin) as the backend. I didn't want to use TypeScript for the backend because I wanted to keep honing my skills in another language.
 
 ## Tasting AI-assisted development
+
+There were 2 things that I faced during the earlier phases of the development: overscoping and not learning as much as I would've hoped.
 
 As probably every other person who first touched LLMs for software engineering, we _want_ everything. Like, everything. So, I cast a very wide net for the requirements. _"Hey, I think it should be possible to do this. Let's add this to the requirements, migration schema, etc., etc."_ 
 
@@ -42,7 +44,7 @@ This is actually the same as the Pull Request (PR) review in the real world. If 
 
 I didn't really progress on the project for a good while. When I got back to it recently, I made a resolution to release it in a few weeks. This required me to... wait for it... _ruthlessly prioritize_ the requirements and adjust my workflow.
 
-There were 2 features that I scoped out: the first one is the user account, and the second one is itemization, both of which were technically "one package". An item has to be granted and persisted to "something", which is the user account, but to create a user account, I have to think about the authentication/authorization. Do I want username/password only, or do I want it to be exclusively third-party auth (e.g., Google)? What's the difference between a session with an account and without in the leaderboard? Will it show the username instead of the last 4 characters of the session ID? Should I prevent bad words when creating the username? How to prevent abuse in username creation?
+There were 2 features that I scoped out: the first one was the user account, and the second one was itemization, both of which were technically "one package". An item has to be granted and persisted to "something", which is the user account, but to create a user account, I have to think about the authentication/authorization. Do I want username/password only, or do I want it to be exclusively third-party auth (e.g., Google)? What's the difference between a session with an account and without in the leaderboard? Will it show the username instead of the last 4 characters of the session ID? Should I prevent bad words when creating the username? How to prevent abuse in username creation?
 
 These were the headaches that I think would prevent the "launch" from happening earlier. So, I got rid of them. Looking back, I was grateful I did so, because I was able to learn how to iteratively grow rather than "waiting for perfection".
 
@@ -56,7 +58,7 @@ Communication between client/server is via HTTP with JSON as the primary format.
 
 In addition to "normal" send request and receive response, session timers exclusively use Server-Sent Events (SSE), because wrong answers have to be resolved in the server and the server takes care of the timer. Why SSE instead of WebSocket? Because I don't want to handle the WebSocket complexity, especially around reconnection. If submitting an answer is handled inside a WebSocket, my understanding is that I have to handle cases where the submitted answer is "lost" in the process and has to be retried after reconnection. With SSE handling the tick only, I have far fewer things to worry about if the connection drops. For the record, currently I handle this by checking if the SSE is inactive (the client doesn't receive `tick` events) and re-establishing it if that is the case.
 
-## Hosting, CI/CD, and release
+## Hosting and CI/CD
 
 The planned release day swiftly approached. I felt like the thing was ready to be deployed; the question was just about where. I was thinking of using Hetzner, but Hetzner has raised their server prices a few times already this year [[1](https://www.hetzner.com/pressroom/statement-price-adjustment/), [2](https://www.hetzner.com/pressroom/standardization-and-price-adjustment-of-our-server-products/)]. Previously, the cheapest Shared Cloud Server (CX class) started from $4 per month. Now, it starts from $6.50 per month, more than a 50% price hike, all because of this AI hyperscale stuff.
 
@@ -79,7 +81,7 @@ Next one is Continuous Integration (CI). There were 2 options with Coolify: Git 
 Up next, the Continuous Deployment (CD). I had several registry options:
 
 - **GitHub Packages:** https://docs.github.com/en/billing/concepts/product-billing/github-packages. The egress limit is quite low for private repositories, so it's a bit of a no-go.
-- **Docker Hub:** https://hub.docker.com. There is only 1 private repository limit, so if I want to host another app, I have to think about an alternative anyway.
+- **Docker Hub:** https://hub.docker.com. There is only a 1-private-repository limit, so if I want to host another app, I have to think about an alternative anyway.
 - **Harbor:** https://github.com/goharbor/harbor. It caught my eye around March/April, and it was pretty nice in terms of feature set (seems easy to toggle some optional features like Trivy for image scanning, too), but I had trouble setting that up on the VPS.
 - **Registry (from inside Coolify):** https://coolify.io/docs/services/docker-registry. From what I understand, this is the baseline of Harbor. It doesn't have other rich features like image scanning, but for my case, it should be enough.
 
@@ -91,7 +93,7 @@ It is said that I don't really need to trigger the webhook, but I need something
 
 ## Analytics and dashboard
 
-The CI/CD is ready, the domain is ready, I already did some tests... but there were still some missing things. How would I know if the game was played? How many users visited only the home page, only to end up not playing the game? I decided to split up into 2 key sources.
+The CI/CD is ready, the domain is ready, I already did some tests... but there were still some missing things. How would I know if the game was played? How many users visited only the home page, only to end up not playing the game? I decided to split this into 2 key sources.
 
 ![Atoyr Google Analytics "home numbers". It's still rookie numbers, for now!](/assets/blog/engineering-notes-atoyr/03-google-analytics.png)
 
@@ -118,15 +120,6 @@ The HTTP endpoints used to fetch those stats, though, I had to take more control
 
 ## Closing words
 
-After adjusting my workflow to be a mix of AI-assisted development and manually writing code, I got my excitement over the project back. I know it's not really attracting _that_ many numbers, but I learned a lot from this project and that was what mattered to me, because this could be very good momentum for me to build onwards towards a healthier software engineering (personally, at least).
-
-As for the post itself, to recap:
-
-- Went back and forth between Koa, NestJS, and Go for the backend options with the help of LLMs during initial development
-- Ended up with React Router (SPA) for the frontend and Go (Gin, GORM) for the backend
-- Took more control by prioritizing features and mixing some manual code writing with AI-assisted development
-- Used OVHcloud as hosting because it was cheaper than Hetzner
-- GitHub Free plan's private repository GitHub Actions minutes are generous, which allows building the Docker image in CI and pushing it to the Coolify Docker registry
-- Google Analytics was used to capture user interactions, whereas the dashboard is used to see the latest state of the data in the database
+So, yeah, that's all for this post. After adjusting my workflow to be a mix of AI-assisted development and manually writing code, I got my excitement over the project back. I know it's not really attracting _that_ many numbers, but I learned a lot from this project and that was what mattered to me, because this could be very good momentum for me to build onwards towards a healthier software engineering (personally, at least).
 
 Hopefully this post is useful, and see you on the next one!

@@ -27,9 +27,10 @@ Do not paste either deliverable into the chat — the in-place edits and the rev
 
 1. **Read the entire article once** before forming any opinions. Note the central claim, the intended audience, and the narrative arc the author seems to be going for.
 2. **Grammar pass.** Re-read for mechanical errors: typos, subject-verb agreement, articles, tense, punctuation, capitalization, dangling modifiers, run-ons, comma splices, clear word choice errors. **Apply each fix with the `edit` tool directly in the article, and add a row to the "Grammar fixes" table in `possible-improvements.md` for every edit you apply.** Preserve the author's voice, dialect, and stylistic choices (e.g. Oxford comma preference, contractions, italics for emphasis). Do not "improve" prose that is already grammatical. See "Grammar scope" below for the boundary.
-3. **Structure pass.** Track: section promises vs. section delivery, tangents, bundled points, cause-effect splits, placeholders/TODOs, and whether the closing recap actually covers the body. These become entries in the "Flow and content suggestions" section of `possible-improvements.md`.
-4. **Validate each structural criticism against the article's actual purpose.** Before including a point, ask: "Does this serve the reader, or am I applying a generic checklist?" Drop anything that's generic best-practice noise with no concrete handle in this article.
-5. **End the review file with a "What's working well" section** listing 2–4 things the author should not touch. This is non-negotiable — a review that only lists problems is demoralizing and unbalanced.
+3. **Structure pass (triage before formatting).** Draft every candidate as a one-liner: `<Issue> (high|medium?)`. Track only: section promises vs. section delivery, tangents, bundled points, cause-effect splits, placeholders/TODOs, and whether the closing recap actually covers the body. Do **not** format any candidate yet — collect raw one-liners first.
+4. **Severity cut.** For each candidate, assign High or Medium against the definitions in "Anti-nitpick guardrails." If a candidate cannot honestly earn High or Medium, drop it — do not add a Low tier. Then rank the survivors against each other and cut the weakest until the list is sharp top-to-bottom. Only survivors get expanded into the full Issue / Impact / Suggestions format.
+5. **Validate each surviving structural criticism against the article's actual purpose.** Before expanding, ask: "Does this serve the reader, or am I applying a generic checklist?" If it's generic best-practice noise with no concrete handle, cut it now — even if it earned a severity tag.
+6. **End the review file with a "What's working well" section** listing 2–4 things the author should not touch. This is non-negotiable — a review that only lists problems is demoralizing and unbalanced.
 
 ## Review file format
 
@@ -58,12 +59,16 @@ These are structural and flow-level suggestions, not line-edits. The goal is to 
 
 ### TL;DR of the suggestions
 
-1. <one-line per suggestion, ordered by impact>
+1. <one-line per suggestion, ordered by severity (High first), then impact>
 
-### 1. <suggestion heading — describes the problem, not the fix>
+### 1. <issue heading — describes the problem, not the fix> (high|medium)
 
-<2–4 sentences explaining the problem, with concrete paragraph/section references>
-**Concrete options to fix it**, as a short bulleted list of 2–3 alternatives.
+- **Issue:** <2–4 sentences explaining the problem, with concrete paragraph/section references>
+- **Impact:** <1–2 sentences naming what is damaged and how badly — the cost to the reader, not a restatement of the issue>
+- **Suggestions:**
+  1. <fix option>
+  2. <fix option>
+  3. <fix option, optional — only if materially distinct from 1 and 2>
 
 (Repeat for each suggestion, numbered.)
 
@@ -128,13 +133,17 @@ These govern the **Flow and content suggestions** section of `possible-improveme
 
 - **Never** list prose-level concerns (word choice, sentence rhythm) as their own flow suggestions. If wording breaks comprehension in a way that is a grammar error, fix it directly and log it in the "Grammar fixes" table; if it's a structural/clarity issue, fold it into a structural point in the flow suggestions.
 - **Never** suggest rewrites of specific sentences in the suggestions file. Describe the structural problem and let the author write the fix.
-- **Never** include more than ~8 flow/content suggestions. If you have more, you're nitpicking — cut the low-impact ones. Quality over quantity.
+- **Severity floor — only High and Medium.** Every flow suggestion must be tagged `high` or `medium` in its heading. If you cannot assign one of those two in good conscience, **drop it** — do not invent a `low` tier to keep the point.
+  - **High:** the article's central claim or main thread is materially weakened — a reader will misunderstand, miss, or disengage from the point because of this. Tag at most 2–3 items High.
+  - **Medium:** a real load-bearing issue (broken section promise, bundled topics, missing anchor, recap that skips the body) that a careful reader will notice but that doesn't break the article's central thrust. Cap the section at ~5 Medium items.
+- **Rank against siblings, not the checklist.** Before adding a new item, ask: "is this stronger than the weakest item already in the list?" If no, cut the weaker one. The list should get sharper as you go, not longer.
+- **Triage before formatting.** Draft every candidate as a one-liner first (Issue + severity). Only items that survive that cut get expanded into the full Issue / Impact / Suggestions format. Do not let template richness lower the inclusion bar — an item that reads well in full format but weak as a one-liner is a Low and is dropped.
 - **Never** include a flow/content suggestion without a concrete paragraph or section reference, and without at least two fix options. Vague advice ("could be tighter") is useless.
 - Do not editorialize about the author's voice or personality unless it directly affects the argument landing.
 
 ## Tone
 
-Direct, specific, opinionated. Name the strongest 3–5 problems clearly. The author asked for critique, not flattery — but balance it with the "working well" section so they know what to preserve.
+Direct, specific, opinionated. Aim for 3–5 High/Medium issues — fewer is better than more. The author asked for critique, not flattery — but balance it with the "working well" section so they know what to preserve. When in doubt between including a point and cutting it, cut it.
 
 ## After writing the file
 
