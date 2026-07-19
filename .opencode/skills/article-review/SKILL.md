@@ -1,16 +1,16 @@
 ---
 name: article-review
-description: Use when the user asks for a structural/flow review of a blog post or article (e.g. "review this post", "what can be improved here", "critique this article"). Fixes grammar directly in the article and writes flow/content improvements to a markdown file. Use ONLY for prose/article critique, not for code reviews.
+description: Use when the user asks for a structural/flow review of a blog post or article (e.g. "review this post", "what can be improved here", "critique this article"). Fixes grammar directly in the article, logs every grammar change with before/after and reason in the same review file as flow suggestions. Use ONLY for prose/article critique, not for code reviews.
 ---
 
 # Article structural review
 
-Produce a review of a long-form article or blog post with two tracks:
+Produce a review of a long-form article or blog post with two tracks, both delivered in a single review file:
 
-- **Grammar — apply directly.** Use the `edit` tool to fix grammar, typos, and obvious mechanical errors in the article file itself. Do not list these in the suggestions file.
-- **Flow and overall content — write as suggestions.** Structural and flow-level critique goes into `possible-improvements.md`. The goal is to make the article's point land harder, **not** to rewrite prose. Suggestions describe the problem and offer fix options; the author writes the fix.
+- **Grammar — apply directly, and log in the review file.** Use the `edit` tool to fix grammar, typos, and obvious mechanical errors in the article file itself. Also record every change (before / after / line / reason) in a "Grammar fixes" section of `possible-improvements.md` so the author can learn from the pattern of mistakes.
+- **Flow and overall content — write as suggestions, in the same review file.** Structural and flow-level critique goes in the "Flow and content suggestions" section of `possible-improvements.md`. The goal is to make the article's point land harder, **not** to rewrite prose. Suggestions describe the problem and offer fix options; the author writes the fix.
 
-The two tracks have different bar standards (see "Anti-nitpick guardrails"): grammar can be nitpicked, flow cannot.
+The two tracks have different bar standards (see "Anti-nitpick guardrails"): grammar can be nitpicked, flow cannot. They live in the same file but as distinct sections so the author can scan them separately.
 
 ## Input
 
@@ -19,32 +19,48 @@ A single markdown file (the article). The user will typically attach it with `@`
 ## Output
 
 1. **Grammar fixes:** applied directly to the article file using the `edit` tool, one edit per change.
-2. **Flow/content suggestions:** written to `possible-improvements.md` at the repository root (or the path the user specifies).
+2. **Review file:** written to `possible-improvements.md` at the repository root (or the path the user specifies). It contains two sections: "Grammar fixes" (a table of every edit, with before/after/category/reason) and "Flow and content suggestions" (structural entries). The grammar-fixes table comes first; the flow suggestions follow; the "What's working well" section closes the file.
 
-Do not paste either deliverable into the chat — the edits and the file are the deliverables. Summaries go in the closing message only (see "After writing the file").
+Do not paste either deliverable into the chat — the in-place edits and the review file are the deliverables. Summaries go in the closing message only (see "After writing the file").
 
 ## Method
 
 1. **Read the entire article once** before forming any opinions. Note the central claim, the intended audience, and the narrative arc the author seems to be going for.
-2. **Grammar pass.** Re-read for mechanical errors: typos, subject-verb agreement, articles, tense, punctuation, capitalization, dangling modifiers, run-ons, comma splices, clear word choice errors. **Apply each fix with the `edit` tool directly in the article.** Preserve the author's voice, dialect, and stylistic choices (e.g. Oxford comma preference, contractions, italics for emphasis). Do not "improve" prose that is already grammatical. See "Grammar scope" below for the boundary.
-3. **Structure pass.** Track: section promises vs. section delivery, tangents, bundled points, cause-effect splits, placeholders/TODOs, and whether the closing recap actually covers the body. These become entries in `possible-improvements.md`.
+2. **Grammar pass.** Re-read for mechanical errors: typos, subject-verb agreement, articles, tense, punctuation, capitalization, dangling modifiers, run-ons, comma splices, clear word choice errors. **Apply each fix with the `edit` tool directly in the article, and add a row to the "Grammar fixes" table in `possible-improvements.md` for every edit you apply.** Preserve the author's voice, dialect, and stylistic choices (e.g. Oxford comma preference, contractions, italics for emphasis). Do not "improve" prose that is already grammatical. See "Grammar scope" below for the boundary.
+3. **Structure pass.** Track: section promises vs. section delivery, tangents, bundled points, cause-effect splits, placeholders/TODOs, and whether the closing recap actually covers the body. These become entries in the "Flow and content suggestions" section of `possible-improvements.md`.
 4. **Validate each structural criticism against the article's actual purpose.** Before including a point, ask: "Does this serve the reader, or am I applying a generic checklist?" Drop anything that's generic best-practice noise with no concrete handle in this article.
-5. **End the suggestions file with a "What's working well" section** listing 2–4 things the author should not touch. This is non-negotiable — a review that only lists problems is demoralizing and unbalanced.
+5. **End the review file with a "What's working well" section** listing 2–4 things the author should not touch. This is non-negotiable — a review that only lists problems is demoralizing and unbalanced.
 
 ## Review file format
 
 ```markdown
 # Possible Improvements — "<article title>"
 
-These are structural and flow-level suggestions, not line-edits. The goal is to make the article's point land harder, not to polish prose.
+## Grammar fixes
 
-## TL;DR of the suggestions
+Applied directly to the article in place via the `edit` tool. Logged here so the pattern of mistakes is visible and learnable. Quotes are kept short — just enough to identify the change in the article.
 
-1. <one-line per suggestion, ordered by impact>
+| # | Line | Category | Before → After | Reason |
+|---|------|----------|---------------|--------|
+| 1 | L37 | Article | "in real world" → "in the real world" | Missing article "the" before singular noun phrase. |
+| 2 | L135 | Subject-verb agreement | "Google Analytics were used" → "Google Analytics was used" | "Google Analytics" treated as a singular service, not a countable plural. |
+
+(If no grammar edits were needed, write "No grammar fixes applied — the article was mechanically clean." and skip the table.)
+
+**Notes for the author** (optional, only when a pattern is worth surfacing):
+- <1–3 bullets calling out repeated patterns, e.g. "Several subject-verb agreement slips around collective-noun services (Google Analytics, the dashboard) — worth watching for in future drafts.">
 
 ---
 
-## 1. <suggestion heading — describes the problem, not the fix>
+## Flow and content suggestions
+
+These are structural and flow-level suggestions, not line-edits. The goal is to make the article's point land harder, not to polish prose.
+
+### TL;DR of the suggestions
+
+1. <one-line per suggestion, ordered by impact>
+
+### 1. <suggestion heading — describes the problem, not the fix>
 
 <2–4 sentences explaining the problem, with concrete paragraph/section references>
 **Concrete options to fix it**, as a short bulleted list of 2–3 alternatives.
@@ -57,6 +73,13 @@ These are structural and flow-level suggestions, not line-edits. The goal is to 
 
 - <2–4 bullets calling out the strongest writing/structure, with concrete references>
 ```
+
+Notes:
+
+- The "Grammar fixes" section comes first so the author sees the mechanical changes up front; the "Flow and content suggestions" section follows; "What's working well" closes the file.
+- Grammar-log Category values come from the list in "Grammar scope" below (typo, subject-verb agreement, article, tense, punctuation, capitalization, dangling modifier, preposition, conjunction, repeated word, etc.). Reason is one short sentence — it teaches the rule, it doesn't justify the edit.
+- Do not include paragraphs of analysis per grammar row. The point of the table is scan-ability: the author sees their recurring mistake categories at a glance.
+- When a prior review round led to author edits, start the "Grammar fixes" section with a one-line note acknowledging fixes already applied in earlier rounds (e.g. "Several fixes from the prior round are now visible in the article and not re-listed here."), so the user understands why this round's table is shorter than expected.
 
 ## What to look for (use only the ones that apply)
 
@@ -101,9 +124,9 @@ When in doubt about whether something is a stylistic choice or an error, **leave
 
 ## Anti-nitpick guardrails
 
-These govern the **flow/content suggestions file** — grammar, by contrast, is allowed to be nitpicked (see "Grammar scope"). Keep these two tracks separate.
+These govern the **Flow and content suggestions** section of `possible-improvements.md` — grammar, by contrast, is allowed to be nitpicked (see "Grammar scope") and has its own "Grammar fixes" section in the same file. Keep grammar critique in the grammar table and structural critique in the flow suggestions; don't mix the two.
 
-- **Never** list prose-level concerns (word choice, sentence rhythm) as their own suggestions in `possible-improvements.md`. If wording breaks comprehension in a way that is a grammar error, fix it directly; if it's a structural/clarity issue, fold it into a structural point.
+- **Never** list prose-level concerns (word choice, sentence rhythm) as their own flow suggestions. If wording breaks comprehension in a way that is a grammar error, fix it directly and log it in the "Grammar fixes" table; if it's a structural/clarity issue, fold it into a structural point in the flow suggestions.
 - **Never** suggest rewrites of specific sentences in the suggestions file. Describe the structural problem and let the author write the fix.
 - **Never** include more than ~8 flow/content suggestions. If you have more, you're nitpicking — cut the low-impact ones. Quality over quantity.
 - **Never** include a flow/content suggestion without a concrete paragraph or section reference, and without at least two fix options. Vague advice ("could be tighter") is useless.
@@ -117,7 +140,7 @@ Direct, specific, opinionated. Name the strongest 3–5 problems clearly. The au
 
 Tell the user concisely:
 
-1. How many grammar fixes were applied directly to the article (a one-line count, e.g. "Applied 6 grammar fixes to the article in place").
-2. Where the flow/content suggestions file was written, and the 2–3 highest-impact suggestions, in a single sentence each.
+1. How many grammar fixes were applied directly to the article, and where the review file was written (one line, e.g. "Applied 6 grammar fixes in place; review file at `possible-improvements.md`.").
+2. The 2–3 highest-impact flow/content suggestions, in a single sentence each.
 
-Do not paste the suggestions file contents into the chat. Do not enumerate every grammar edit — the diffs in the article speak for themselves.
+Do not paste the contents of the review file into the chat. Do not enumerate every grammar edit in the chat — the grammar-fixes table in the file and the diffs in the article speak for themselves. If a short "Notes for the author" pattern observation is worth surfacing (e.g. "you consistently slipped on subject-verb agreement around collective-noun services"), one sentence in the closing message is fine; the full table stays in the file.

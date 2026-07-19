@@ -52,9 +52,9 @@ I also started mixing manual coding with AI-assisted development. I did the latt
 
 For the backend, I was (and still am) using Go+Gin+GORM. Initially, I was using GORM's [auto migration tool](https://gorm.io/docs/migration.html) during development. However, since it contained a lot of "magic" and "constraints", I changed it to manual migrations (with SQL files). This was so that I could know what exists in the database and what doesn't, because with the auto migration, based on the docs, it is only able to "append" and won't be able to "modify" or "delete".
 
-Lastly, since "synchronizing" the request/response payload between the UI and server was painful, I decided to use [oapi-codegen](https://github.com/oapi-codegen/oapi-codegen/) to codegen the OpenAPI 3.0 spec into [Go (Gin)](https://github.com/oapi-codegen/oapi-codegen/tree/main/examples/minimal-server/gin) and [TypeScript fetch](https://openapi-ts.dev/openapi-fetch/). It was pretty cool, and I added [openapi-react-query](https://openapi-ts.dev/openapi-react-query/) as a cherry on top, which builds on top of `openapi-fetch`.
+Communication between client/server is via HTTP with JSON as the primary format. I found that "synchronizing" the request/response payload between the UI and server was painful. So, I decided to use [oapi-codegen](https://github.com/oapi-codegen/oapi-codegen/) to codegen the OpenAPI 3.0 spec into [Go (Gin)](https://github.com/oapi-codegen/oapi-codegen/tree/main/examples/minimal-server/gin) and [TypeScript fetch](https://openapi-ts.dev/openapi-fetch/). It was pretty cool, and I added [openapi-react-query](https://openapi-ts.dev/openapi-react-query/) as a cherry on top, which builds on top of `openapi-fetch`.
 
-Communication between client/server is mostly via HTTP, whereas timers exclusively use SSE (because wrong answers have to be resolved in the server and the server takes care of the timer). Why SSE instead of WebSocket? Because I don't want to handle the WebSocket complexity, especially around reconnection. If submitting an answer is handled inside a WebSocket, my understanding is that I have to handle cases where the submitted answer is "lost" in the process and has to be retried after reconnection. With SSE handling the tick only, I have far fewer things to worry about if the connection drops. For the record, currently I handle this by checking if the SSE is inactive (the client doesn't receive `tick` events); and re-establish it if that is the case.
+In addition to "normal" send request and receive response, session timers exclusively use Server Sent-Events (SSE), because wrong answers have to be resolved in the server and the server takes care of the timer. Why SSE instead of WebSocket? Because I don't want to handle the WebSocket complexity, especially around reconnection. If submitting an answer is handled inside a WebSocket, my understanding is that I have to handle cases where the submitted answer is "lost" in the process and has to be retried after reconnection. With SSE handling the tick only, I have far fewer things to worry about if the connection drops. For the record, currently I handle this by checking if the SSE is inactive (the client doesn't receive `tick` events) and re-establishing it if that is the case.
 
 ## CI/CD and release
 
@@ -65,7 +65,7 @@ The planned release day swiftly approached. I felt like the thing was ready to b
 
   Man, it makes me want to rant a bit about the prices. The good old days when I was able to buy 16x2 DDR4 RAM sticks for just under $100... now it is 3-4 times pricier. Good thing I also upgraded my PC's SSD before it went crazy.
 
-  This is why I think the market for PC gamers will not grow for now, because the PC parts' price is absurd. If someone already struggles to fulfill their primary needs, with the PC parts being that big, they can kiss goodbye to building a PC. Console and smartphone prices also got bumped, although I don't think it's as big as PC's. So, I think there is _still_ hope for console and mobile gaming. If you are reading this and in the near future AI is still hyperscaling but the PC gamers community _seemingly_ is still consistently growing, please kindly remind me about this post, and I'll write an update that I was wrong!
+  This is why I think the market for PC gamers will not grow for now, because the PC parts' price is absurd. If someone already struggles to fulfill their primary needs, with the PC parts being that big, they can kiss goodbye to building a PC. Console and smartphone prices also got bumped, although I don't think it's as big as the PC's. So, I think there is _still_ hope for console and mobile gaming. If you are reading this and in the near future AI is still hyperscaling but the PC gamers community _seemingly_ is still consistently growing, please kindly remind me about this post, and I'll write an update that I was wrong!
 
   Just to be clear, I _still_ use LLMs (maybe not as _extensively_ as you). I find value in it. But, I don't like how it destroys the PC parts' prices and how the big startup companies do fearmongering-based marketing (which resulted in many layoffs in the name of AI, by the way). This is why I am _personally_ subscribed to OpenCode instead of Codex and Claude, even though the latter two may have the better models and "value-for-money". Unless it is forced on me (e.g., because of work), I won't pay OpenAI and Anthropic. Maybe the companies behind the open-weight models also have "sins" that I don't know about yet. But, until I do, this will be my personal stance.
 </details>
@@ -74,7 +74,7 @@ Back to the topic. I ended up with [OVHcloud with their VPS package](https://www
 
 I had an experience setting up a deployment with HTTPS myself back then on a VPS (and it was painful). I think it was in 2017/18. Fast forward to now, there is a thing called [Coolify](https://coolify.io/) (which I wanted to try for so long but haven't had the chance). Coolify came out of the box with the routing stuff ([Traefik](https://doc.traefik.io/traefik/)), which I see as a "better Nginx" so I don't have to manually configure the reverse proxy and all that for everything that I want to expose.
 
-Next one is Continuous Integration (CI). There were 2 options with Coolify: Git mode (build on the VPS) or Docker image mode (build in any CI outside of the VPS and then pull the Docker image). I really wanted the VPS to just pull a Docker image so it doesn't cause a CPU/memory spike during the build, so I went with GitHub Actions, considering my repository is hosted on GitHub anyway. Additionally, GitHub Actions is pretty generous for private repositories, with 2000 CI minutes per month.
+Next one is Continuous Integration (CI). There were 2 options with Coolify: Git mode (build on the VPS) or Docker image mode (build in any CI outside of the VPS and then pull the Docker image). I really wanted the VPS to just pull a Docker image so it wouldn't cause a CPU/memory spike during the build, so I went with GitHub Actions, considering my repository is hosted on GitHub anyway. Additionally, GitHub Actions is pretty generous for private repositories, with 2000 CI minutes per month.
 
 Up next, the Continuous Deployment (CD). I had several registry options:
 
@@ -83,7 +83,7 @@ Up next, the Continuous Deployment (CD). I had several registry options:
 - **Harbor:** https://github.com/goharbor/harbor. It caught my eye around March/April, and it was pretty nice in terms of feature set (seems easy to toggle some optional features like Trivy for image scanning, too), but I had trouble setting that up on the VPS.
 - **Registry (from inside Coolify):** https://coolify.io/docs/services/docker-registry. From what I understand, this is the baseline of Harbor. It doesn't have other rich features like image scanning, but for my case, it should be enough.
 
-So, I ended up using the Coolify Docker Registry service, set up my CI to push it there, and then pointed my app to use a Docker Image that points to that Docker Registry URL. Mind that Docker auths have to be over HTTPS (so IP addresses are a no-go), so I had to set up the DNS and HTTPS first for the Docker Registry. Other than that, it was pretty smooth. A GitHub Actions job pushes the Docker image to the Coolify Docker Registry, then it triggers the deployment of the said app, which will cause Coolify to pull the `latest` image.
+So, I ended up using the Coolify Docker Registry service, set up my CI to push it there, and then pointed my app to use a Docker Image that points to that Docker Registry URL. Mind that Docker auths have to be over HTTPS (so IP addresses are a no-go), so I had to set up the DNS and HTTPS first for the Docker Registry. Other than that, it was pretty smooth. A GitHub Actions job pushes the Docker image to the Coolify Docker Registry, and then it triggers the deployment of the said app, which will cause Coolify to pull the `latest` image.
 
 ![Atoyr overall CI/CD setup.](/assets/blog/engineering-notes-atoyr/01-atoyr-architecture.png)
 
@@ -116,25 +116,8 @@ By having these 2 sources, I can look up some numbers and _maybe_ derive some de
 
 The HTTP endpoints used to fetch those stats, though, I had to take more control so that the monitoring capabilities wouldn't end up hurting the server's performance (if the traffic ever skyrockets at some point).
 
-## Adding a staging environment
-
-Initially, I only had production environments. However, as I iterated, I realized that I would need a staging environment, especially to test out migrations. I don't want a migration to break production accidentally, even though it works fine on my machine. So, I updated my GitHub workflow so that it would build a Docker image with different tags:
-
-- **Normal `main` branch pushes:** build `staging` Docker image tags.
-- **Tag pushes:** build tag AND `latest` Docker image tags. These tags are to be created via GitHub Releases, and then they go through the usual CI/CD flow. This way, I can still "time" my releases.
-
 ## Closing words
 
-That's all for this post. To recap:
-
-- Went back and forth between Koa, NestJS, and Go for the backend options with the help of LLMs during initial development
-- Ended up with React Router (SPA) for the frontend and Go (Gin, GORM) for the backend
-- Took more control by prioritizing features and mixing some manual code writing with AI-assisted development
-- Used OVHcloud as hosting because it was cheaper than Hetzner
-- GitHub Free plan's private repository GitHub Actions minutes are generous, which allows building the Docker image in CI and pushing it to the Coolify Docker registry
-- Google Analytics was used to capture user interactions, whereas the dashboard is used to see the latest state of the data in the database
-- Separation between staging and production was done via a tag split: `staging` and `latest`
-
-I also mentioned about my lack of "appetite" for software engineering. After adjusting my workflow to be a mix of AI-assisted development and manually writing code, I got my excitement over the project back. I know it's not really attracting _that_ many numbers, but I learned a lot from this project and that was what mattered to me, because this could be a very good momentum for me to build onwards towards a healthier software engineering (personally, at least).
+I mentioned that I began to feel lack of "appetite" for software engineering. After adjusting my workflow to be a mix of AI-assisted development and manually writing code, I got my excitement over the project back. I know it's not really attracting _that_ many numbers, but I learned a lot from this project and that was what mattered to me, because this could be very good momentum for me to build onwards towards a healthier software engineering (personally, at least).
 
 So, yeah. Hopefully this post is useful, and see you on the next one!
