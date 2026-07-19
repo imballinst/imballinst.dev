@@ -3,8 +3,8 @@ title: Engineering Notes from Building Atoyr
 description: "In this post, I am sharing my experience building the Atoyr, a word arcade game."
 publishDate: 2026-07-19T13:08:30.630Z
 image: /assets/blog/engineering-notes-atoyr/00-hero.png
-imageAlt: An image showing one of the screenshots of the game Atoyr.
-imageCaption: An image showing one of the screenshots of the game Atoyr.
+imageAlt: An image showing screenshots of the game Atoyr.
+imageCaption: An image showing screenshots of the game Atoyr.
 tags: software engineering
 visibility: public
 layout: '../../layouts/BlogPost.astro'
@@ -20,7 +20,7 @@ Initially, I used this project to get myself familiarized with AI-assisted devel
 
 Needless to say, the development itself was pretty fast. I was initially opting for the entire thing being in TypeScript for easier end-to-end integration and typing consistency between the client and server, with [NestJS](https://nestjs.com/) as the backend. But goodness me, I _think_ NestJS was so painful to learn, as I wasn't a fan of decorator-based annotations. I have been learning TypeScript for 7 years, but I was more comfortable in Go (which I only had 4 years of experience with) than TypeScript-based NestJS.
 
-Anyway, finally I decided just to go with a SPA (prerendered) React Router and Go (Gin) as the backend. I didn't want to use TypeScript for the backend because I wanted to keep honing my skills in another language.
+Anyway, finally I decided just to go with an SPA (prerendered) React Router and Go (Gin) as the backend. I didn't want to use TypeScript for the backend because I wanted to keep honing my skills in another language.
 
 ## Tasting AI-assisted development
 
@@ -58,7 +58,7 @@ In addition to "normal" send request and receive response, session timers exclus
 
 ## Hosting, CI/CD, and release
 
-The planned release day swiftly approached. I felt like the thing was ready to be deployed; the question was just about where. I was thinking of using Hetzner, but Hetzner has raised their server prices a few times already this year [[1](https://www.hetzner.com/pressroom/statement-price-adjustment/), [2](https://www.hetzner.com/pressroom/standardization-and-price-adjustment-of-our-server-products/)]. Previously, the cheapest Shared Cloud Server (CX class) started from $4 per month. Now, it starts from $6.5 per month, more than a 50% price hike, all because of this AI hyperscale stuff.
+The planned release day swiftly approached. I felt like the thing was ready to be deployed; the question was just about where. I was thinking of using Hetzner, but Hetzner has raised their server prices a few times already this year [[1](https://www.hetzner.com/pressroom/statement-price-adjustment/), [2](https://www.hetzner.com/pressroom/standardization-and-price-adjustment-of-our-server-products/)]. Previously, the cheapest Shared Cloud Server (CX class) started from $4 per month. Now, it starts from $6.50 per month, more than a 50% price hike, all because of this AI hyperscale stuff.
 
 <details>
   <summary>Rant about AI hyperscale that you may or may not read</summary>
