@@ -40,7 +40,9 @@ export default function htmlClassnamesPlugin() {
     for (let i = 0; i < tree.children.length; i++) {
       const child = tree.children[i];
 
-      if (child.type === 'paragraph') {
+      if (child.type === 'html' && child.value.includes('<details>')) {
+        child.value = child.value.replace('<details>', `<details className="${ALTERNATIVE_TEXT_COLORS.gray} p-4 border border-solid border-[#0000001a] dark:border-[#ffffff1a]">`)
+      } else if (child.type === 'paragraph') {
         /** @type {*} */
         const hast = toHast(child);
         hast.properties.class = DEFAULT_ATTRS.p;

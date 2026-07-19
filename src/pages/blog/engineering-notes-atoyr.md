@@ -1,8 +1,8 @@
 ---
-title: Building a Word Arcade Game
-description: "In this post, I am sharing my experience building the Atoyr: a word arcade game".
-publishDate: 2026-06-30T06:34:35.744Z
-image: /assets/blog/building-word-arcade-game/hero.png
+title: Engineering Notes from Building Atoyr
+description: "In this post, I am sharing my experience building the Atoyr, a word arcade game."
+publishDate: 2026-07-19T13:08:30.630Z
+image: /assets/blog/engineering-notes-atoyr/00-hero.png
 imageAlt: An image showing one of the screenshots of the game Atoyr.
 imageCaption: An image showing one of the screenshots of the game Atoyr.
 tags: software engineering
@@ -10,9 +10,9 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Hello, hello! Welcome to this post, in which I will be sharing my experience in building a _simple_ (hopefully) word arcade game. I originally started this early this year (January-ish) but only managed to release it properly just last week... because reasons. Mostly because I lost my spark for building software and am currently on track to revive it.
+Hello, hello! Welcome to this post, in which I will be sharing my experience in building a _simple_ (hopefully) word arcade game called "Atoyr". It is an abbreviation of "A test of your reflexes", which is a homage to a Final Fantasy XIV character when he casts a spell with a long cast time (ironically). The mechanic is quite simple: given a scrambled word [and a definition], guess the word. Repeat this every 30 seconds, get as many correct guesses as you can.
 
-So, yeah, let's get started!
+I originally started developing this early this year (January-ish) but only managed to release it properly just last week... because reasons. Mostly because I lost my spark for building software and am currently on track to revive it. So, yeah, let's get started!
 
 ## The beginning
 
@@ -26,7 +26,7 @@ Anyway, finally I decided just to go with a SPA (prerendered) React Router and G
 
 As probably every other person who first touched LLMs for software engineering, we _want_ everything. Like, everything. So, I cast a very wide net for the requirements. _"Hey, I think it should be possible to do this. Let's add this to the requirement, migration schema, etc., etc."_ 
 
-Fast forward, I lost my appetite for developing it. I got the "joy" of finishing it according to my prompt, but it was... bland. What did I learn? Probably not much, but one thing is for sure: it did make experimentation faster. I would've never gone back and forth from normal [Koa](https://koajs.com/) to NestJS to [Gin](https://gin-gonic.com/) while keeping the features intact without the help of LLMs.
+Fast forward, I lost my appetite for developing it. I got the "joy" of finishing it according to my prompt, but it was... bland. It wasn't because of the requirements, it was because of the process. What did I learn? Probably not much, but one thing is for sure: it did make experimentation faster. I would've never gone back and forth from normal [Koa](https://koajs.com/) to NestJS to [Gin](https://gin-gonic.com/) while keeping the features intact without the help of LLMs.
 
 Just reviewing code outputted by LLMs took me back to my college years. It was exactly like what I did back then: you know the "tutorial books" of previous year's exams that were sold by the student union? I only read the question, the step-by-step formulas, and finally the answer. Guess what? I scored (almost always) badly in exams, if not just enough.
 
@@ -46,19 +46,27 @@ These were the headaches that I think would prevent the "launch" from happening 
 
 I also started mixing coding manually with AI-assisted development. I did the latter just so that I could keep up with the "industry norms". It was pretty fun. When I wrote code manually, I would ask the LLM to review my code, and vice versa. By writing code manually, I got some grasp on "where some things are", which allowed me to give better feedback to the LLM. _"Haha, you still do that manually?"_ I'm sorry, I was trying to keep being a human, and I don't have unlimited token usage (I personally am using [OpenCode Go](https://opencode.ai/docs/go/), and I gotta say it's pretty good).
 
-In addition to that, since I was (and still am) using GORM, I changed the [auto migration tool](https://gorm.io/docs/migration.html), which I had been using during the development, to manual migrations (with SQL files). This was so that I could know what exists in the database and what doesn't, because with the auto migration, based on the docs, it is only able to "append" and won't be able to "modify" or "delete".
+## Locking the stack
+
+For the backend, I was (and still am) using Go+Gin+GORM. Initially, the GORM used [auto migration tool](https://gorm.io/docs/migration.html), which I had been using during the development. However, since it contained a lot of "magic" and "constraints", I changed it to manual migrations (with SQL files). This was so that I could know what exists in the database and what doesn't, because with the auto migration, based on the docs, it is only able to "append" and won't be able to "modify" or "delete".
 
 Lastly, since "synchronizing" the request/response payload between the UI and server was painful, I decided to use [oapi-codegen](https://github.com/oapi-codegen/oapi-codegen/) to codegen the OpenAPI 3.0 spec into [Go (Gin)](https://github.com/oapi-codegen/oapi-codegen/tree/main/examples/minimal-server/gin) and [TypeScript fetch](https://openapi-ts.dev/openapi-fetch/). It was pretty cool, and I added [openapi-react-query](https://openapi-ts.dev/openapi-react-query/) as a cherry on top, which builds on top of `openapi-fetch`.
 
-## Overall architecture
+To rehash, the stack is React Router (SPA prerendered) and Go (Gin + SQLite). Communication is mostly via HTTP and timers are using SSE. Why SSE instead of WebSocket? Because I don't want to handle the WebSocket complexity, especially around reconnection. If submitting answer is handled inside WebSocket, my understanding is that I have to handle cases where the submitted answer is "lost" in the process and have to be retried after reconnection. With SSE handling the tick only, I have much less things to worry about if the connection drops. For the record, currently I handle this by checking if the SSE is inactive (the client doesn't receive `tick` events); and re-establish it if that is the case.
 
-<!-- Architecture image -->
+## CI/CD and release
 
 The planned release day swiftly approached. I felt like the thing was ready to be deployed; the question was just about where. I was thinking of using Hetzner, but Hetzner raised their server prices a few times already this year [[1](https://www.hetzner.com/pressroom/statement-price-adjustment/), [2](https://www.hetzner.com/pressroom/standardization-and-price-adjustment-of-our-server-products/)]. Previously, the cheapest Shared Cloud Server (CX class) started from $4 per month. Now, it started from $6.5 per month, more than a 50% price hike, all because of this AI hyperscale stuff.
 
-Man, it makes me want to rant a bit about the prices. The good old days when I was able to buy 16x2 DDR4 RAM sticks for just under $100... now it is 3-4 times pricier. Good thing I also upgraded my PC's SSD before it went crazy.
+<details>
+  <summary>Rant about AI hyperscale that you may or may not read</summary>
 
-This is why I think the market for PC gamers will not grow for now, because the PC parts' price is absurd. If someone already struggles to fulfill their primary needs, with the PC parts being that big, they can kiss goodbye to building a PC. Console and smartphone prices also got bumped, although I don't think it's as big as PC's. So, I think there is _still_ hope for console and mobile gaming. If you are reading this and in the near future AI is still hyperscaling but the PC gamers community _seemingly_ still consistently growing, please kindly remind me about this post, and I'll write an update that I was wrong!
+  Man, it makes me want to rant a bit about the prices. The good old days when I was able to buy 16x2 DDR4 RAM sticks for just under $100... now it is 3-4 times pricier. Good thing I also upgraded my PC's SSD before it went crazy.
+
+  This is why I think the market for PC gamers will not grow for now, because the PC parts' price is absurd. If someone already struggles to fulfill their primary needs, with the PC parts being that big, they can kiss goodbye to building a PC. Console and smartphone prices also got bumped, although I don't think it's as big as PC's. So, I think there is _still_ hope for console and mobile gaming. If you are reading this and in the near future AI is still hyperscaling but the PC gamers community _seemingly_ still consistently growing, please kindly remind me about this post, and I'll write an update that I was wrong!
+
+  Just to be clear, I _still_ use LLM (maybe not as _extensively_ as you). I find value in it. But, I don't like how it destroys the PC parts' prices and how the big startup companies do fearmongering-based marketing (which resulted in many layoffs in the name of AI, by the way). This is why I am _personally_ subscribed to OpenCode instead of Codex and Claude, despite that the latter two may have the better models and "value-for-money". Unless it is forced to me (e.g., because of work), I won't pay OpenAI and Anthropic. Maybe the companies behind the open-weight models also have "sins" that I don't know yet. But, until I do, this will be my personal stance.
+</details>
 
 Back to the topic. I ended up with [OVHcloud with their VPS package](https://www.ovhcloud.com/asia/vps/). With $5.35 per month (or $4.54 if you take the 1-year commitment), you get the same specification as Hetzner does, in addition to being located in Singapore, which will help in reducing latency a bit for my stuff. As for the DNS, I used the subdomain of `.imballinst.dev`, a domain that I already have in Squarespace Domains (used to be Google Domains, again, 🕊️). In the process, I forgot that `imballinst.dev` used Netlify's name servers, so it took me a bit of back and forth before realizing that I had to add A and CNAME records in Netlify instead of in the Squarespace Domains.
 
@@ -75,33 +83,40 @@ Up next, the Continuous Deployment (CD). I had several registry options:
 
 So, I ended up using the Coolify Docker Registry service, set up my CI to push it there, and then pointed my app to use a Docker Image that points to that Docker Registry URL. Mind that Docker auths have to be in HTTPS (so IP addresses are a no-go), so I had to set up the DNS and HTTPS first for the Docker Registry. Other than that, it was pretty smooth. GitHub Action job pushes the Docker image to Coolify Docker Registry, then it triggers the deployment of the said app, which will cause Coolify to pull the `latest` image.
 
-There you have it: a commit is pushed to the repository, then GitHub Actions will test, build, push the Docker image to the Coolify registry, and then trigger the Coolify deployment.
+![Atoyr overall CI/CD setup.](/assets/blog/engineering-notes-atoyr/01-atoyr-architecture.png)
+
+It is said that I don't really need to trigger the webhook, but I need something like [Watchtower](https://github.com/nicholas-fedor/watchtower). But... that is more toy for me to play, and for every toy I play, the release is delayed. So, I kept it simple. There you have it: a commit is pushed to the repository, then GitHub Actions will test, build, push the Docker image to the Coolify registry, and then trigger the Coolify deployment.
 
 ## Analytics and dashboard
 
-<!-- Setting up GTM, simple dashboard -->
+The CI/CD is ready, the domain is ready, I already did some tests... but there were still some missing things. How would I know if the game was played? How many users visited only the home page, only to end up not playing the game? I decided to split up into 2 key sources.
 
-The CI/CD is ready, the domain is ready, I already did some tests... but there were still some missing things. How would I know if the game was played? How many users visited only the home page, only to end up not playing the game? I decided to split up into 2 key sources:
+![Atoyr Google Analytics "home numbers". It's still rookie numbers, for now!](/assets/blog/engineering-notes-atoyr/03-google-analytics.png)
 
-- **User interactions:** from Google Analytics via Google Tag Manager. Metrics being tracked:
-  - Button clicks and labels
-  - Number of visitors
-  - Page views
-- **Game data:** from the server. Metrics being tracked:
-  - Currently active sessions
-  - Sessions today
-  - Sessions this week
-  - Sessions this month
-  - Total number of sessions (fetched on-demand)
-  - All other observability metrics, like response time, throughput, error rate, and memory usage
+The first one is user interactions, which are retrieved from Google Analytics via Google Tag Manager. Metrics being tracked:
 
-This way, I can look up some numbers and _maybe_ derive some decisions based on them. I had some improvements based on the Google Analytics numbers, which I will share in another post (this post is already quite long!). To protect the dashboard, I used a simple Google auth, so only certain users with a certain Google auth token can see the dashboard. The UI is kind of a "throwaway feature" that I almost fully relied on LLMs to create. I didn't need it to be fancy; I needed it to "just work".
+- Button clicks and labels
+- Number of visitors
+- Page views
+
+![Atoyr server data.](/assets/blog/engineering-notes-atoyr/02-dashboard.png)
+
+The second one is sessions data, which are retrieved from the server. Metrics being tracked:
+
+- Currently active sessions
+- Sessions today
+- Sessions this week
+- Sessions this month
+- Total number of sessions (fetched on-demand)
+- All other observability metrics, like response time, throughput, error rate, and memory usage
+
+### Objective
+
+By having these 2 sources, I can look up some numbers and _maybe_ derive some decisions based on them. I had some improvements based on the Google Analytics numbers, which I will share in another post (this post is already quite long!). To protect the dashboard, I used a simple Google auth, so only certain users with a certain Google auth token can see the dashboard. The UI is kind of a "throwaway feature" that I almost fully relied on LLMs to create. I didn't need it to be fancy; I needed it to "just work".
 
 The HTTP endpoints used to fetch those stats, though, I had to take more control so that the monitoring capabilities wouldn't end up hurting the server's performance (if the traffic ever skyrockets at some point).
 
 ## Final touches
-
-<!-- Separating staging and production environments -->
 
 Initially, I only had production environments. However, as I iterated, I realized that I would need a staging environment, especially to test out migrations. I don't want a migration to break production accidentally, even though it works fine on my machine. So, I updated my GitHub workflow so that it would build a Docker image with different tags:
 
@@ -115,6 +130,5 @@ That's all for this post. To recap:
 - Went back and forth between Koa, NestJS, and Go for the backend options with the help of LLMs during initial development
 - Ended up with React Router (SPA) for the frontend and Go (Gin, GORM) for the backend
 - Took more control by prioritizing features and mixing some manual code writing with AI-assisted development
-- 
 
 That's all for this post. Hopefully it is useful, and see you on the next one!
