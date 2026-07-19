@@ -38,8 +38,6 @@ Let's assume that the LLM is a cook, and you ask it to cook food. The result: it
 
 Anyway, if you still want to (or are forced to) only review LLM code, one way to reduce that learning concern is to keep asking the LLM about the part that you don't understand (or that is not aligned with your understanding). As the LLM clarifies the intent, you can provide feedback and re-align as needed. Although, you have to spare more "token usage," which requires you to be lucky... as in, not being "on the clock 24/7", because if you are always expected to build, you won't have time to stop, ask, and learn.
 
-This is actually the same as the Pull Request (PR) review in the real world. If you see PR only as a gatekeeping mechanism, you won't learn much from what your peers do. However, if you're actively trying to learn, it may actually benefit you and your peers! That's probably also the case with the LLMs as our peers. If they do something wrong, we can ask why, and from there, we can "fine-tune" the context to prevent the same issue from happening again.
-
 ## Taking more control
 
 I didn't really progress on the project for a good while. When I got back to it recently, I made a resolution to release it in a few weeks. This required me to... wait for it... _ruthlessly prioritize_ the requirements and adjust my workflow.
@@ -50,6 +48,8 @@ These were the headaches that I think would prevent the "launch" from happening 
 
 I also started mixing manual coding with AI-assisted development. I did the latter just so that I could keep up with the "industry norms". It was pretty fun. When I wrote code manually, I would ask the LLM to review my code, and vice versa. By writing code manually, I got some grasp on "where some things are", which allowed me to give better feedback to the LLM. _"Haha, you still do that manually?"_ I'm sorry, I was trying to keep being a human, and I don't have unlimited token usage (I personally am using [OpenCode Go](https://opencode.ai/docs/go/), and I gotta say it's pretty good).
 
+It's the same mindset as a Pull Request (PR) review. If you see PR only as a gatekeeping mechanism, you won't learn much from what your peers do. However, if you're actively trying to learn, the review benefits both sides. That's also the case with LLMs as our peers, I believe. If they do something wrong, we can ask why and fine-tune the context to prevent the same issue from happening again.
+
 ## Locking the stack
 
 For the backend, I was (and still am) using Go+Gin+GORM. Initially, I was using GORM's [auto migration tool](https://gorm.io/docs/migration.html) during development. However, since it contained a lot of "magic" and "constraints", I changed it to manual migrations (with SQL files). This was so that I could know what exists in the database and what doesn't, because with the auto migration, based on the docs, it is only able to "append" and won't be able to "modify" or "delete".
@@ -59,6 +59,8 @@ Communication between client/server is via HTTP with JSON as the primary format.
 In addition to "normal" send request and receive response, session timers exclusively use Server-Sent Events (SSE), because wrong answers have to be resolved in the server and the server takes care of the timer. Why SSE instead of WebSocket? Because I don't want to handle the WebSocket complexity, especially around reconnection. If submitting an answer is handled inside a WebSocket, my understanding is that I have to handle cases where the submitted answer is "lost" in the process and has to be retried after reconnection. With SSE handling the tick only, I have far fewer things to worry about if the connection drops. For the record, currently I handle this by checking if the SSE is inactive (the client doesn't receive `tick` events) and re-establishing it if that is the case.
 
 ## Hosting and CI/CD
+
+### Choosing a host
 
 The planned release day swiftly approached. I felt like the thing was ready to be deployed; the question was just about where. I was thinking of using Hetzner, but Hetzner has raised their server prices a few times already this year [[1](https://www.hetzner.com/pressroom/statement-price-adjustment/), [2](https://www.hetzner.com/pressroom/standardization-and-price-adjustment-of-our-server-products/)]. Previously, the cheapest Shared Cloud Server (CX class) started from $4 per month. Now, it starts from $6.50 per month, more than a 50% price hike, all because of this AI hyperscale stuff.
 
@@ -76,7 +78,11 @@ Back to the topic. I ended up with [OVHcloud with their VPS package](https://www
 
 I had an experience setting up a deployment with HTTPS myself back then on a VPS (and it was painful). I think it was in 2017/18. Fast forward to now, there is a thing called [Coolify](https://coolify.io/) (which I wanted to try for so long but haven't had the chance). Coolify came out of the box with the routing stuff ([Traefik](https://doc.traefik.io/traefik/)), which I see as a "better Nginx" so I don't have to manually configure the reverse proxy and all that for everything that I want to expose.
 
+### CI build mode
+
 Next one is Continuous Integration (CI). There were 2 options with Coolify: Git mode (build on the VPS) or Docker image mode (build in any CI outside of the VPS and then pull the Docker image). I really wanted the VPS to just pull a Docker image so it wouldn't cause a CPU/memory spike during the build, so I went with GitHub Actions, considering my repository is hosted on GitHub anyway. Additionally, GitHub Actions is pretty generous for private repositories, with 2000 CI minutes per month.
+
+### CD: choosing a registry
 
 Up next, the Continuous Deployment (CD). I had several registry options:
 
