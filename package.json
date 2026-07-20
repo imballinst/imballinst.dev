@@ -18,7 +18,7 @@
     "astro-expressive-code": "0.44.0",
     "cheerio": "1.0.0-rc.12",
     "date-fns": "4.4.0",
-    "domhandler": "5.0.3",
+    "domhandler": "6.0.1",
     "hast-util-to-html": "9.0.5",
     "mdast-util-to-hast": "13.2.1",
     "mdast-util-to-string": "4.0.0",
