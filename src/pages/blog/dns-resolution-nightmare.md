@@ -12,7 +12,7 @@ layout: '../../layouts/BlogPost.astro'
 
 Hello! This post is special. Let's try a heading-less post, a free-style format, so to speak.
 
-Yesterday (August 3rd) was a bit of a nightmare. Kinda. So, what happened was that, on August 2nd, I scheduled [Buffer](https://buffer.com/) content (for my Twitter and LinkedIn accounts) about a new feature of my word-based game, Atoyr, which now includes a new topic on top of the existing English words: Indonesian Politician Quotes. The motivation behind this feature was that, often (if not very often), those who have power in the country don't use their power for the greater good, so this feature serves as a "hall of fame" of sorts.
+Yesterday (August 3rd) was a bit of a nightmare. Kinda. So, what happened was that, on August 2nd, I scheduled [Buffer](https://buffer.com/) content (for my Twitter and LinkedIn accounts) about a new feature of my word-based game, [Atoyr](https://atoyr.imballinst.dev/), which now includes a new topic on top of the existing English words: Indonesian Politician Quotes. The motivation behind this feature was that, often (if not very often), those who have power in the country don't use their power for the greater good, so this feature serves as a "hall of fame" of sorts.
 
 <details>
   <summary>Atoyr gameplay with Indonesian Politician Quotes</summary>
@@ -27,7 +27,7 @@ On August 3rd, the day after I published those updates on my platforms, I resear
 - Update the nameserver in Squarespace from Netlify's nameservers to Cloudflare's (I might be ridiculed for using Squarespace instead of Cloudflare for domains because most people choose the latter, but in my defense, this domain is cheaper there than in Cloudflare's, not by a lot, but still).
 - Pray for a quick DNS propagation, because DNS propagation means downtime for anyone visiting via the internet.
 
-After I changed the nameservers, I recalled that it was only yesterday that I published my content updates... and that was the time that I regretted my decision. But what was done, was done.
+After I changed the nameservers, I recalled that it was only yesterday that I published my content updates... and that was the time that I regretted my decision. This migration meant some visitors wouldn't be able to visit the Atoyr website from the social links I shared, even if only briefly. But what was done, was done.
 
 Ten minutes later, I could visit Atoyr's website and some other subdomains under `imballinst.dev` (which are all hosted in a VPS), but I still couldn't visit _this site_ (which is hosted on Netlify). I checked again in the Cloudflare dashboard and tell you what, there were mistakes in the CNAME records.
 
