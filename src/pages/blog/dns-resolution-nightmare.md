@@ -25,7 +25,7 @@ On August 3rd, the day after I published those updates on my platforms, I resear
 - Download records from Netlify (the format is CSV).
 - Convert the DNS records CSV format into BIND format (since Cloudflare's importer only supports that format).
 - Update the nameserver in Squarespace from Netlify's nameservers to Cloudflare's (I might be ridiculed for using Squarespace instead of Cloudflare for domains because most people choose the latter, but in my defense, this domain is cheaper there than in Cloudflare's, not by a lot, but still).
-- Pray for a quick DNS resolution, because DNS resolution means downtime for anyone visiting via the internet.
+- Pray for a quick DNS propagation, because DNS propagation means downtime for anyone visiting via the internet.
 
 After I changed the nameservers, I recalled that it was only yesterday that I published my content updates... and that was the time that I regretted my decision. But what was done, was done.
 
