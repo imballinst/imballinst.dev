@@ -41,7 +41,10 @@ export default function htmlClassnamesPlugin() {
       const child = tree.children[i];
 
       if (child.type === 'html' && child.value.includes('<details>')) {
-        child.value = child.value.replace('<details>', `<details className="${ALTERNATIVE_TEXT_COLORS.gray} p-4 border border-solid border-[#0000001a] dark:border-[#ffffff1a]">`)
+        child.value = child.value.replace(
+          '<details>',
+          `<details className="${ALTERNATIVE_TEXT_COLORS.gray} p-4 border border-solid border-[#0000001a] dark:border-[#ffffff1a]">`
+        );
       } else if (child.type === 'paragraph') {
         /** @type {*} */
         const hast = toHast(child);
@@ -256,7 +259,14 @@ export default function htmlClassnamesPlugin() {
  * @param {string} href
  * @returns
  */
-const isExternalLink = (href) => !href.includes('imballinst.netlify.app') && !href.includes('imballinst.dev');
+const isExternalLink = (href) => {
+  try {
+    const url = new URL(href);
+    return url.host !== 'imballinst.netlify.app' && url.host !== 'imballinst.dev';
+  } catch {
+    return !href.includes('imballinst.netlify.app') && !href.includes('imballinst.dev');
+  }
+};
 
 /**
  * @param {*} obj
