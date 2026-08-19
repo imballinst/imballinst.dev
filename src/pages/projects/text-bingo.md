@@ -11,4 +11,6 @@ Nowadays, a bingo can be used for a prediction, e.g. to predict how a story will
 
 By the way, have you heard of the critically acclaimed MMORPG Final Fantasy XIV? With an expanded free trial which you can play through the entirety of A Realm Reborn and the award-winning Shadowbringers expansion up to level 80 for free with no restrictions on playtime! ([reference](https://knowyourmeme.com/memes/the-critically-acclaimed-mmorpg))
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0Gkhkfx9ACY?si=VCxPqzONgo35XiKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/0Gkhkfx9ACY?si=VCxPqzONgo35XiKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
