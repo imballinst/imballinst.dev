@@ -7,20 +7,28 @@ export interface Props {
   title: string;
   publishDate: string;
   githubLink: string;
+  websiteLink: string;
 }
 
-const { title, publishDate, githubLink } = Astro.props;
+const { title, publishDate, githubLink, websiteLink } = Astro.props;
 ---
 
 <header class="header">
   <Text as="h1" className="text-xl text-center my-0">{title}</Text>
 
-  <div class="text-center my-0">
+  <div class="text-center my-0 text-sm">
     {
       githubLink && (
-        <Link href={githubLink} className="inline-flex">View on GitHub</Link>
+        <Link href={githubLink} className="inline-flex">GitHub</Link>
     
-        <Text as="span" colorScheme="gray" className="mx-2">&bull;</Text>
+        <Text as="span" colorScheme="gray" className="mx-1">&bull;</Text>
+      )
+    }
+    {
+      websiteLink && (
+        <Link href={websiteLink} className="inline-flex">Website</Link>
+    
+        <Text as="span" colorScheme="gray" className="mx-1">&bull;</Text>
       )
     }
 

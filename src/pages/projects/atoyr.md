@@ -2,6 +2,7 @@
 title: A Test of Your Reflexes (Atoyr)
 description: A word-based game, similar to Wordle, but arcade-based instead of just one-time-per-day based.
 publishDate: 2026-08-04T00:00:00.000Z
+websiteLink: https://atoyr.imballinst.dev
 layout: '../../layouts/Project.astro'
 ---
 

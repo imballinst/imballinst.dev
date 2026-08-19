@@ -2,6 +2,8 @@
 title: Text Bingo
 description: A text-based Bingo that you can create, update, delete, share, and download. All data are stored in the device only.
 publishDate: 2026-08-19T02:44:23.615Z
+githubLink: https://github.com/imballinst/bingo
+websiteLink: https://bingo.imballinst.dev
 layout: '../../layouts/Project.astro'
 ---
 

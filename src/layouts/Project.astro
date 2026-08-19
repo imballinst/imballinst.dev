@@ -3,12 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectHeader from '../components/ProjectHeader.astro';
 
 const { content = {} } = Astro.props;
-const { title, description, publishDate, githubLink } = content;
+const { title, description, publishDate, githubLink, websiteLink } = content;
 ---
 
 <BaseLayout {title} {description} currentMenu="/projects">
   <article class="project">
-    <ProjectHeader {title} {publishDate} {githubLink} />
+    <ProjectHeader {title} {publishDate} {githubLink} {websiteLink} />
 
     <div class="mt-8">
       <slot />

@@ -3,6 +3,7 @@ title: bekind
 description: bekind is a story site to encourage people to act kinder to each other.
 publishDate: 2020-10-12T12:53:00.000Z
 githubLink: https://github.com/imballinst/bekind
+websiteLink: https://bekind.imballinst.dev
 layout: '../../layouts/Project.astro'
 ---
 

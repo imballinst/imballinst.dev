@@ -3,6 +3,7 @@ title: pl-form-comparison
 description: A website containing Premier League related information, originally used to provide stats for each teram.
 publishDate: 2026-06-29T00:00:00.000Z
 githubLink: https://github.com/imballinst/pl-form-comparison
+websiteLink: https://imballinst.github.io/pl-form-comparison
 layout: '../../layouts/Project.astro'
 ---
 
