@@ -1,7 +1,7 @@
 ---
 title: Trust the Process
 description: In the Gen AI era, we hear the saying, "Output/outcome is the goal". Is it, though?
-publishDate: 2026-07-19T13:08:30.630Z
+publishDate: 2026-08-20T15:31:12.172Z
 image: /assets/blog/trust-the-process/00-hero.png
 imageAlt: An image with the text, "Trust the Process".
 imageCaption: An image with the text, "Trust the Process".
