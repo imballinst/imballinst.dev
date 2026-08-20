@@ -88,6 +88,180 @@ These are structural and flow-level suggestions, not line-edits. The goal is to 
 
 ---
 
+## Implementation examples (concrete)
+
+Drafts for each suggestion's options, written close to the article's voice. Treat these as starting points, not final prose — the call to keep things in your own voice still applies.
+
+### 1. Football/thesis disconnection
+
+**Option A — Framing paragraph before "The beginning"** (insert between the current intro paragraph and `## The beginning`):
+
+```markdown
+_"Trust the process"_, they said. Not so much in software engineering, nowadays. I heard
+that "good code is relative" and what matters is the end product, so most people just
+overlook it to achieve faster speed in building software. What might we miss from this
+philosophy? I present to you: the Arsenal's journey in the past 6 years.
+
+Before the recap, here's the lens: I want to show what "trust the process" actually looks
+like when short-term outcomes are ugly, when the noise is loud, and when the easy move
+is to bail. This isn't a story about a manager winning a trophy. It's a story about
+ownership, patience, and what gets built when you refuse to optimize only for the next
+headline.
+
+## The beginning
+```
+
+**Option B — Inline callback after the 2021-22 bottom-of-the-table moment** (append after L45's "9 goals conceded."):
+
+```markdown
+...putting them at the bottom of the table with 0 points, 0 goals scored, 9 goals conceded.
+
+This is the moment an outcome-oriented leader would normally panic. Josh didn't.
+```
+
+**Option C — Inline callback after the 2023-24 final-day collapse** (append after L71's "...3-2 against Bayern Munich."):
+
+```markdown
+...they were knocked out in the quarter-finals 3-2 against Bayern Munich.
+
+If we'd been measuring only by outcomes, this is where the story would have ended.
+The process kept going.
+```
+
+### 2. Bundled takeaway section
+
+**Option A — Split into two subheadings** (replace the existing `## What's the takeaway?!` with this structure):
+
+```markdown
+## What's the takeaway?!
+
+All that blabber above, for what?! For this: lately, I saw posts in the software engineering
+industry that say things like (paraphrased): _"Software engineers have a hard time using
+AI agents because they are not accustomed to outcome-oriented (building a product)"_.
+I think it's bulls****. If you are always outcome-oriented, then you'd fire Arteta before
+he won the Premier League title, because you only look at the results and not at the
+details. You won't trust the process, because you only see what trophies were there at
+the end of the season and not how each match progressed in its own circumstances.
+
+I don't disagree that the goal of a software engineer is to build a good product. Good
+here meaning good UX-wise, humane to its users, and reliable. That is why I am not
+entirely opposed to AI-assisted development, because I see value in it and I _can_ feel
+empowered because of it. At least, in software engineering.
+
+Here's a small example of what I'm talking about.
+
+[existing code block + explanation stays here]
+
+### What this costs engineers
+
+People always say that AI makes us more productive in software engineering. But we rarely
+talk about _how much brain work_ we have to do in a day. All that contributes to this...
+"outcome-oriented" product. But at what cost? Sure, there are a lot of people who are
+"outcome-oriented" and can withstand years of compacted 9-5 work. But it's not realistic
+if that expectation is applied to everyone in an instant, especially without proper
+incentives.
+
+[existing rhetorical questions about space and recovery stay here]
+
+So, yeah, that should be all. In summary:
+```
+
+**Option B — Delete the "AI art is ass" line** (drop L109's last sentence):
+
+```markdown
+I don't disagree that the goal of a software engineer is to build a good product. Good
+here meaning good UX-wise, humane to its users, and reliable. That is why I am not
+entirely opposed to AI-assisted development, because I see value in it and I _can_ feel
+empowered because of it. At least, in software engineering.
+```
+
+**Option C — One-sentence transition before the code example** (insert before L113):
+
+```markdown
+...Have we given them the space they need to take a step back, rest, and recover?
+
+Here's a small example of what I'm talking about.
+
+Let's say we have these code blocks. Both have the same result, and theoretically,
+the same outcome.
+```
+
+### 3. "In summary" doesn't cover the threads
+
+**Option A — Add a fourth bullet for the burnout argument** (append to the summary list):
+
+```markdown
+- Thank you Josh Kroenke for not giving in to media narratives about Mikel Arteta. Arsenal
+  finally won their first Premier League title in 22 years.
+- I believe that trusting in the process should be a thing in every aspect of life. AI
+  empowers us to seemingly make everything instant, but in real life, it's not healthy if
+  we eat instant noodles every day. At the very least, we have to "juggle" the days where
+  we do AI-assisted development and when we hand-write code.
+- Leaders see AI as a shortcut for their product (and rightfully so, since it's their
+  business). However, I'd like to see them talk more about the process and the people.
+  It's not good to tunnel vision on outcome, because we lose sight of things that made
+  it happen.
+- AI makes us ship faster, but the brain work that gets pushed to humans — the
+  context-switching, the review burden, the architectural decisions AI can't make —
+  is its own form of grind. Outcome-oriented leaders tend to forget this is where the
+  actual product gets made.
+```
+
+**Option B — Reference the code example by name** (revise the second bullet):
+
+```markdown
+- I believe that trusting in the process should be a thing in every aspect of life. AI
+  empowers us to seemingly make everything instant, but in real life, it's not healthy if
+  we eat instant noodles every day. At the very least, we have to "juggle" the days where
+  we do AI-assisted development and when we hand-write code — as the `console.log` vs.
+  `split` example showed, the same outcome can come from very different processes, and
+  only one of them scales.
+```
+
+**Option C — Retitle to scope the bullets intentionally:**
+
+```markdown
+## Two things I want you to take from this
+
+- Thank you Josh Kroenke...
+- I believe that trusting in the process...
+- Leaders see AI as a shortcut...
+```
+
+### 4. 2024-25 Spurs tangent
+
+**Option A — Delete L89-91 entirely.** Use the freed space to expand the 2024-25 season itself (more on the Merino substitution, the Real Madrid CL run, the second-place finish) before the 2025-26 payoff.
+
+**Option B — Rewrite the Spurs block so the thesis connection is explicit** (replace L89-91):
+
+```markdown
+The punditry also didn't help with this, especially since Arsenal's city rival Spurs won
+Europa League 1-0 against Manchester United despite finishing 16th-17th in the league —
+a reminder that an outcome-only lens can flip either way: sometimes you get a trophy
+and the noise is still loud. Spurs' owner sacked Postecoglou anyway. The following
+season, Spurs finished 17th and only escaped relegation on the final day.
+```
+
+This cuts the "spoiler: it didn't get better" framing and lands on a clean pivot into the next season.
+
+**Option C — Reframe the L77 meta-commentary:**
+
+Replace:
+```markdown
+I didn't really want to talk about this season because there was so much bull**** in it.
+```
+
+With:
+```markdown
+This season had plenty of moments that tested the process — the kind that make fans
+and pundits reach for the panic button.
+```
+
+Same information, but the "bull****" framing now does the work of "look, even when the
+process throws ugly stuff at you, you keep going" — which is the whole article.
+
+---
+
 ## What's working well (don't touch)
 
 - The season-by-season structure is genuinely well organized — each section has a clear arc (setback → response → outcome) that mirrors the "trust the process" theme even before it's named, and the recurring "yet again, fans voiced their concerns" / "yet again, Josh still backed Mikel" cadence gives the body a satisfying rhythm.
