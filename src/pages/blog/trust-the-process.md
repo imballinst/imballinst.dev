@@ -92,7 +92,7 @@ Arsenal won the home leg 3-0 and the away leg 1-2. Unfortunately, they fell to P
 
 The punditry also didn't help with this, especially since Arsenal's city rival, Spurs, won Europa League 1-0 against Manchester United in the final. For the record, the Europa League finalists placed 16th and 17th in the Premier League table. Let that sink in for a bit. The best two teams in the Europa League were so close to relegation. No noise whatsoever from the media. Spurs' owner, though, wasn't satisfied with this and they went with sacking their manager, Ange Postecoglou.
 
-Spoiler: it didn't get better for Spurs, because the following season, they also placed 17th in the table. They would have been relegated had they not won their game against West Ham, who ranked 18th. It served as an example that, what seemingly a success in a short term didn't necessarily translate into success in the long term if the foundations weren't laid well.
+Spoiler: it didn't get better for Spurs, because the following season, they also placed 17th in the table. They would have been relegated had they not won their game against West Ham, who ranked 18th. It served as an example that what seemingly was a success in a short term didn't necessarily translate into success in the long term if the foundations weren't laid well.
 
 ### 2025-26 season
 
@@ -113,9 +113,6 @@ All that blabber above, for what?! For this: lately, I saw posts in the software
 I don't disagree that the goal of a software engineer is to build a good product. Good here meaning good UX-wise, humane to its users, and reliable. That is why I am not entirely opposed to AI-assisted development, because I see value in it and I _can_ feel empowered because of it. At least, in software engineering.
 
 However, when a leader says something-something "outcome-oriented", it just leaves a bad taste in my mouth. We always talk about the result, the outcome, yada-yada. But we often forget about the process — and the people who do it. Have we given them a good example? Have we given them the incentives and space to grow so they can be "outcome-oriented"? Have we given them the space they need to take a step back, rest, and recover?
-
-One argument that I hear for AI-assisted development for an area that we don't excel at is that, _"Good code is relative"_. If we are too outcome oriented and don't care about the process, we will probably be whatever to the differences above. But, at some point, those small decisions that we have been ignoring will come to bite us back at some point. _"Why did we do it using X instead of Y?"_ I'm sure every one of us who has tried AI-assisted development and cares about the process has already experienced this before, and in turn, 
-adds rules/instructions to a Markdown file so that agents won't repeat it again in the future. Those who don't care about the process won't care, as long as the outcome is correct. Until we realize there are blind spots on the current implementation of outcome, which we missed because we don't have enough expertise and understanding.
 
 So, yeah, that should be all. In summary:
 

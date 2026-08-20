@@ -4,20 +4,17 @@
 
 Applied directly to the article in place via the `edit` tool. Logged here so the pattern of mistakes is visible and learnable. Quotes are kept short — just enough to identify the change in the article.
 
-Three of the four suggestions from the prior round were applied to the article (the framing paragraphs at L15-17, the removal of the "AI art is ass" aside, and the new 4th summary bullet on SME burnout). This round's table covers what was still mechanical after those changes.
+Two of the prior round's suggestions were applied to the article (the explicit thesis tie-in to the Spurs tangent at L95, and the rewrite of the code-example block into prose at L117-118). The "Bundled takeaway section" suggestion is still outstanding. This round's grammar table covers the three mechanical errors that came in (or stayed) with those edits.
 
 | # | Line | Category | Before → After | Reason |
 |---|------|----------|----------------|--------|
-| 1 | L15 | Article | "but then same fate" → "but then the same fate" | The author is referencing the previously-mentioned sacking; back-reference to a specific fate needs "the". |
-| 2 | L17 | Article | "at the end of 2025-26 season" → "at the end of the 2025-26 season" | A specific referenced season needs the definite article. |
-| 3 | L53 | Punctuation | "I too, had mine" → "I, too, had mine" | A sentence-level adverbial parenthetical like "too" must be set off by commas on both sides. |
-| 4 | L141 | Subject-verb agreement | "every one of us... and in turn, add rules" → "every one of us... and in turn, adds rules" | "Every one of us" is singular; the surrounding verbs ("cares", "has done", "has already experienced") all agree with it, but "add" slipped into plural. |
-| 5 | L163 | Preposition | "puts more burden to the software engineers" → "puts more burden on the software engineers" | "Burden on" is the standard collocation; "burden to" doesn't exist. |
-| 6 | L163 | Subject-verb agreement | "all that contributes to the 'process' have to be" → "...has to be" | "All that contributes" is a singular relative construction; the verb must agree. |
+| 1 | L95 | Comma + missing verb | "It served as an example that, what seemingly a success" → "It served as an example that what seemingly was a success" | The "that" introduces a content clause; a comma after "that" wrongly splits the clause from its complement, and "what seemingly a success" needs the verb "was" to form the relative clause. |
+| 2 | L117 | Punctuation | "is that, _'Good code is relative'_" → "is that: _'Good code is relative'_" | A comma between the complementizer "that" and its quoted content is ungrammatical; a colon introduces the quote cleanly. |
+| 3 | L118 | Preposition | "blind spots on the current implementation" → "blind spots in the current implementation" | "Blind spots in" is the standard collocation; "blind spots on" doesn't exist. |
 
 **Notes for the author:**
-- Three of the six fixes (rows 4, 5, 6) sit in the same paragraph — one was a pre-existing issue from the prior version that escaped review (row 4), and two came in fresh with the new summary bullet (rows 5, 6). Worth treating any newly added prose with the same self-check pass the rest of the article got, not skipping it because it "just got added."
-- Rows 1 and 2 are both missing definite articles in the new framing paragraphs — "the same fate" and "the 2025-26 season" — which is the same article pattern the prior round already flagged in other places. Worth a targeted pass for "Xth fate / Xth season / Xth [back-referenced noun]" constructions in any future draft.
+- Two of the three fixes (rows 1, 3) sit in the same line — both came in fresh with the new L95 / L118 sentences you added this round. This matches the pattern from the prior round's note: newly added prose skipped the self-check pass the rest of the article got. Worth a "new prose = same proofreading bar" rule going forward.
+- Row 1 is the same kind of broken clause-attachment structure as the prior round's rows 6, 10, 17 — long sentences where the connective tissue (a comma, a "that") is in the wrong place and the surrounding clauses don't parse. If you do one targeted pass on long sentences with a comma or "that" in them, you'll catch most of these.
 
 ---
 
@@ -27,28 +24,18 @@ These are structural and flow-level suggestions, not line-edits. The goal is to 
 
 ### TL;DR of the suggestions
 
-1. "What's the takeaway?!" still bundles five-to-six distinct sub-arguments under one heading despite the prior trim. (medium)
-2. The 2024-25 Spurs tangent (Europa League win + near-relegation) still doesn't tie back to the main thread. (medium)
+1. "What's the takeaway?!" still bundles four distinct sub-arguments under one heading with thin transitions between them, even after the prior round's trim and this round's code-example rewrite. (medium)
 
-The prior round's High-severity "football/thesis disconnected until the end" item is no longer a separate issue — the new framing paragraphs at L15-17 give the recap its "trust the process" lens upfront, and the SE/AI bridge in the takeaway now reads as a deliberate payoff rather than an abrupt pivot. The prior "summary doesn't cover threads" item is also resolved — the 4th bullet on SME burnout closes the gap.
+The prior round's two Medium items have been addressed. The 2024-25 Spurs tangent now has an explicit thesis tie-in at L95 ("foundations weren't laid well"), which closes the structural gap. The summary's coverage gap is fully closed.
 
 ### 1. "What's the takeaway?!" still bundles several distinct sub-arguments (medium)
 
-- **Issue:** Even after removing the "AI art is ass" aside, the section still moves through: the Arteta/firing analogy (L111), a personal stance on AI-assisted development (L113), the "outcome-oriented" critique with rhetorical questions about incentives and space (L115), the code example (L117-125), the burnout/brain-work argument (L127), and the AI-rules-in-markdown aside (L141) — six sub-topics under one heading with only light connective tissue between them.
-- **Impact:** The core claim (leaders should value process, not just outcome) still gets diluted across too many threads in a single block, making the section feel like a stream-of-consciousness rather than a structured argument.
+- **Issue:** Even after the "AI art is ass" trim and the rewrite of the code-example block into prose, the section still moves through four distinct blocks under one heading: the Arteta/firing analogy (L111), a personal stance on AI-assisted development (L113), the "outcome-oriented" critique with rhetorical questions about incentives and space (L115), and a four-part sub-argument covering "good code is relative", small-decision regret, the markdown-rules pattern, and "blind spots in the implementation" (L117-118) — with only light connective tissue between them.
+- **Impact:** The core claim (leaders should value process, not just outcome) still gets diluted across too many threads in a single block, and the new prose rewrite at L117-118 actually *increases* the count of sub-topics inside that block (it absorbed the code example and added the "blind spots" point), making the bundling slightly worse, not better.
 - **Suggestions:**
-  1. Split the section into two subheadings — one for the process argument itself (Arteta analogy + code example) and one for its cost to engineers (burnout + AI-rules-in-markdown aside) — so the two threads don't compete for the reader's attention in one block.
-  2. Add a one-sentence transition before the code example explicitly linking it back to the "outcome-oriented" critique, so the example arrives as a demonstration of the prior paragraph's point rather than as a fresh thought.
-  3. Consider folding the rhetorical questions about incentives (L115's "Have we given them...") into the new 4th summary bullet about SME burnout, since both are about the human cost of process-ignoring leadership — keeping one clear place in the body for that argument.
-
-### 2. The 2024-25 Spurs tangent still doesn't tie back to the main thread (medium)
-
-- **Issue:** L93-95 is a three-paragraph excursion about Spurs winning the Europa League while finishing 16th-17th, then nearly getting relegated the following season. The point seems to be "even winning a trophy didn't satisfy the owner; they sacked the manager anyway, and it got worse" — but this connection to the "trust the process" thesis is left implicit, and the "spoiler" near-relegation aside adds another sentence of Spurs content that doesn't cash in either.
-- **Impact:** The Spurs tangent sits between the 2024-25 trophyless season and the climactic 2025-26 title run-in, pushing the payoff farther away and forcing the reader to do extra work to connect it to anything. Now that the framing paragraphs at L15-17 have made the "trust the process" lens explicit upfront, this orphaned tangent reads even more starkly.
-- **Suggestions:**
-  1. Cut the entire Spurs tangent and use that space to give the 2024-25 season itself more breathing room — the season's injuries, red cards, and Merino-substitution goals deserve more narrative weight before the title win anyway.
-  2. If the Spurs material is kept, make the connection to the thesis explicit in one sentence (e.g., "And yet the Spurs example shows the opposite failure mode: an owner who looked at the trophy and forgot the league position still ended up sacked when the league position kept slipping") so the reader doesn't have to infer it.
-  3. Either remove the "I didn't really want to talk about this season" meta-commentary (L81) or reframe it as part of the process argument — e.g., "this season had plenty of moments that tested the process" — instead of authorial dissatisfaction that breaks the narrative voice.
+  1. Split the section into two subheadings — one for the process argument itself (Arteta analogy + "good code is relative" + small-decision regret) and one for its cost to engineers (blind spots + markdown-rules pattern + SME burnout from the 4th summary bullet) — so the two threads don't compete for the reader's attention in one block.
+  2. Move the rhetorical questions about incentives and space (L115's "Have we given them...") out of the body and into the existing 4th summary bullet on SME burnout, since both are about the human cost of process-ignoring leadership — keeping one clear place in the piece for that argument instead of two.
+  3. Add a one-sentence bridge at the top of L117 ("Here's a small example of what I'm talking about" or similar) so the four-part sub-argument reads as a demonstration of the outcome-oriented critique in L115, not as a fresh thought arriving from nowhere.
 
 ---
 
@@ -76,40 +63,32 @@ here meaning good UX-wise, humane to its users, and reliable. That is why I am n
 entirely opposed to AI-assisted development, because I see value in it and I _can_ feel
 empowered because of it. At least, in software engineering.
 
-Here's a small example of what I'm talking about.
-
-[existing code block + explanation stays here]
+One argument that I hear for AI-assisted development for an area that we don't excel at
+is that: _"Good code is relative"_. If we are too outcome oriented and don't care about
+the process, we will probably be whatever to the differences above. But, at some point,
+those small decisions that we have been ignoring will come to bite us back at some point.
+_"Why did we do it using X instead of Y?"_
 
 ### What this costs engineers
 
-People always say that AI makes us more productive in software engineering. But we rarely
-talk about _how much brain work_ we have to do in a day. All that contributes to this...
-"outcome-oriented" product. But at what cost? Sure, there are a lot of people who are
-"outcome-oriented" and can withstand years of compacted 9-5 work. But it's not realistic
-if that expectation is applied to everyone in an instant, especially without proper
-incentives.
+I'm sure every one of us who has tried AI-assisted development and cares about the
+process has already experienced this before, and in turn, adds rules/instructions to a
+Markdown file so that agents won't repeat it again in the future. Those who don't care
+about the process won't care, as long as the outcome is correct.
 
-It's a very simplified and out-of-the-world example, I'm sure, but I think every one of
-us who cares about the process and has done AI-assisted development has already
-experienced this before, and in turn, adds rules/instructions to a Markdown file so
-that future agents won't repeat it again. Those who don't care about the process won't
-care, as long as the outcome is correct.
+Until we realize there are blind spots in the current implementation of outcome, which
+we missed because we don't have enough expertise and understanding.
 
 So, yeah, that should be all. In summary:
 ```
 
-**Option B — Add a one-sentence transition before the code example** (insert before L117):
+This pulls the "rules-in-markdown" and "blind spots" sub-points out of the same
+paragraph as the "good code is relative" argument, giving the cost-to-engineers thread
+its own heading instead of competing for attention inside a single block.
 
-```markdown
-...Have we given them the space they need to take a step back, rest, and recover?
+**Option B — Fold the rhetorical questions into the 4th summary bullet** (trim L115 and beef up the existing 4th bullet):
 
-Here's a small example of what I'm talking about.
-
-Let's say we have these code blocks. Both have the same result, and theoretically,
-the same outcome.
-```
-
-**Option C — Fold the rhetorical questions into the 4th summary bullet** (replace L115 with a short bridge, and beef up the existing 4th bullet):
+Replace L115:
 
 ```markdown
 However, when a leader says something-something "outcome-oriented", it just leaves a bad
@@ -130,46 +109,23 @@ Then expand the 4th bullet:
 ```
 
 This pulls the rhetorical questions down into the bullet where the SME/burnout argument
-already lives, giving the body one clear place for the human-cost thread.
+already lives, giving the body one clear place for the human-cost thread instead of two.
 
-### 2. 2024-25 Spurs tangent
-
-**Option A — Delete L93-95 entirely.** Use the freed space to expand the 2024-25 season itself (more on the Merino substitution, the Real Madrid CL run, the second-place finish) before the 2025-26 payoff.
-
-**Option B — Rewrite the Spurs block so the thesis connection is explicit** (replace L93-95):
+**Option C — One-sentence bridge before the L117 sub-argument** (insert just before L117):
 
 ```markdown
-The punditry also didn't help with this, especially since Arsenal's city rival Spurs won
-Europa League 1-0 against Manchester United despite finishing 16th-17th in the league —
-a reminder that an outcome-only lens can flip either way: sometimes you get a trophy
-and the noise is still loud. Spurs' owner sacked Postecoglou anyway. The following
-season, Spurs finished 17th and only escaped relegation on the final day.
+...Have we given them the space they need to take a step back, rest, and recover?
+
+Here's a small example of what I'm talking about.
+
+One argument that I hear for AI-assisted development...
 ```
-
-This cuts the "spoiler: it didn't get better" framing and lands on a clean pivot into the next season.
-
-**Option C — Reframe the L81 meta-commentary:**
-
-Replace:
-```markdown
-I didn't really want to talk about this season because there was so much bull**** in it.
-```
-
-With:
-```markdown
-This season had plenty of moments that tested the process — the kind that make fans
-and pundits reach for the panic button.
-```
-
-Same information, but the "bull****" framing now does the work of "look, even when the
-process throws ugly stuff at you, you keep going" — which is the whole article.
 
 ---
 
 ## What's working well (don't touch)
 
-- The new framing paragraphs at L15-17 are a clear upgrade — they now state the "trust the process" lens upfront, compare Arsenal's patience to the sack-the-manager reflex of other clubs, and pre-payoff the title win, which lets the season-by-season recap be read as a demonstration rather than a setup. This was the highest-impact item from the prior round and the fix landed well.
+- The new L95 sentence ("It served as an example that what seemingly was a success in a short term didn't necessarily translate into success in the long term if the foundations weren't laid well") is exactly the explicit thesis tie-in the Spurs tangent needed — it now reads as a deliberate demonstration of "trust the process" instead of an orphaned digression. This was the cleanest single fix from the prior round.
 - The voice is still distinctive and consistent throughout: casual asides ("Now that I glazed Liverpool enough already"), rhetorical fragments, and the occasional profanity all read as intentional and give the piece personality without crowding out the argument.
-- The `console.log("a\nb\nc\nd\ne")` vs. `["abcde"].split("").forEach(...)` code example remains a strong, concrete illustration of "same outcome, different process" — it's the clearest bridge to the software-engineering point in the whole piece and is worth keeping front and center in the takeaway section.
-- The Josh Kroenke thread (introduced quietly in 2020-21, paid off across 2021-22 / 2022-23 / 2025-26) is a well-executed long-range setup and payoff — it gives the recap a throughline beyond just match results and is exactly the kind of "trust the process in the people" structure the article argues for.
-- The new 4th summary bullet (SME burnout, oversight, etc.) closes the prior gap where the body argued the human-cost point but the summary skipped it. With this bullet in place the summary now matches the body for the first time.
+- The new "blind spots in the current implementation of outcome, which we missed because we don't have enough expertise and understanding" sentence at L118 is a sharp, under-discussed insight — it extends the process argument past "trust the people" into "the people also can't see what they don't know", which is exactly the kind of nuance an AI-era tech audience needs.
+- The Josh Kroenke thread (introduced quietly in 2020-21, paid off across 2021-22 / 2022-23 / 2025-26) is still a well-executed long-range setup and payoff — it gives the recap a throughline beyond just match results and is exactly the kind of "trust the process in the people" structure the article argues for.
