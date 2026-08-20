@@ -12,6 +12,10 @@ layout: '../../layouts/BlogPost.astro'
 
 _"Trust the process"_, they said. Not so much in software engineering, nowadays. I heard that "good code is relative" and what matters is the end product, so most people just overlook it to achieve faster speed in building software. What might we miss from this philosophy? I present to you: the Arsenal's journey in the past 6 years.
 
+For me, Arsenal's journey in the past 6 years was one of the best storylines about trusting the process. Not many teams in the Premier League had faith to do so. Some teams spent money to speedrun into success, but upon failure, they sacked their manager. Some managers were able to get a short-term success by winning European cups, but then same fate awaited them at the end of the season: their sacking. As for Arsenal? At some point, the fans called for Arteta's sacking. Media narratives always put Arsenal and Arteta on the back foot. And yet, Arsenal owners put faith into Arteta and his team, even if every season ended in a trophyless one.
+
+Their faith paid off at the end of 2025-26 season, where the owners, Stan Kroenke and Josh Kroenke, brought the Premier League trophy, hand-in-hand, to the podium. This was their story.
+
 ## The beginning
 
 December 20, 2019. Mikel Arteta began his first-ever managerial career at Arsenal, who was in 10th place on the Premier League table. Arteta had this philosophy about "building from the back", which Manchester City at that time also expressed in their games. However, because a lot of Arsenal players were not very technical, this philosophy sometimes became a boomerang. Players considered passing to teammates as a way to "get this danger away from me", which was frustrating to watch as a fan, because passing sideways became the "safe action".
@@ -106,7 +110,7 @@ It was great, but it was almost perfect, had it not been for the loss in the Cha
 
 All that blabber above, for what?! For this: lately, I saw posts in the software engineering industry that say things like (paraphrased): _"Software engineers have a hard time using AI agents because they are not accustomed to outcome-oriented (building a product)"_. I think it's bulls\*\*\*. If you are always outcome-oriented, then you'd fire Arteta before he won the Premier League title, because you only look at the results and not at the details. You won't trust the process, because you only see what trophies were there at the end of the season and not how each match progressed in its own circumstances.
 
-I don't disagree that the goal of a software engineer is to build a good product. Good here meaning good UX-wise, humane to its users, and reliable. That is why I am not entirely opposed to AI-assisted development, because I see value in it and I _can_ feel empowered because of it. At least, in software engineering. I still hold my ground that AI art is ass.
+I don't disagree that the goal of a software engineer is to build a good product. Good here meaning good UX-wise, humane to its users, and reliable. That is why I am not entirely opposed to AI-assisted development, because I see value in it and I _can_ feel empowered because of it. At least, in software engineering.
 
 However, when a leader says something-something "outcome-oriented", it just leaves a bad taste in my mouth. We always talk about the result, the outcome, yada-yada. But we often forget about the process — and the people who do it. Have we given them a good example? Have we given them the incentives and space to grow so they can be "outcome-oriented"? Have we given them the space they need to take a step back, rest, and recover?
 
@@ -127,3 +131,4 @@ So, yeah, that should be all. In summary:
 - Thank you Josh Kroenke for not giving in to media narratives about Mikel Arteta. Arsenal finally won their first Premier League title in 22 years.
 - I believe that trusting in the process should be a thing in every aspect of life. AI empowers us to seemingly make everything instant, but in real life, it's not healthy if we eat instant noodles every day. At the very least, we have to "juggle" the days where we do AI-assisted development and when we hand-write code.
 - Leaders see AI as a shortcut for their product (and rightfully so, since it's their business). However, I'd like to see them talk more about the process and the people. It's not good to tunnel vision on outcome, because we lose sight of things that made it happen.
+- We often see arguments of using AI to increase productivity in software engineering. It speeds things up, yes. Unfortunately, it also puts more burden to the software engineers who act as Subject Matter Experts (SMEs). When we put too much emphasis on the outcome (the product, what it looks like from the outside), what's inside may quickly become an oversight. Burnout, oversight, exhaustion, stress... all that contributes to the "process" have to be taken care of, not only the "outcome".
