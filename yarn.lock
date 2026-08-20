@@ -8799,7 +8799,7 @@ __metadata:
     remark: 15.0.1
     remark-toc: 9.0.0
     sharp: 0.35.3
-    tailwindcss: 4.3.2
+    tailwindcss: 4.3.3
     typescript: 6.0.3
   languageName: unknown
   linkType: soft
@@ -14205,10 +14205,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.3.2":
-  version: 4.3.2
-  resolution: "tailwindcss@npm:4.3.2"
-  checksum: 705bcf3952a6dbc472cd1d941eb311d84dff51b496f4efd9aff701745175b23fbe9cc4ac79d95a889783696944169bb9270d056a3c868efe0a4567bc93725d7e
+"tailwindcss@npm:4.3.3":
+  version: 4.3.3
+  resolution: "tailwindcss@npm:4.3.3"
+  checksum: 26ed481f922a700e9f7b48de29d7d6ad07d1457a475d14391f9fca676b72e1aded478a60640e4104e8b04508659af0141f6ffbb14fe482eac7d418c511c7fa08
   languageName: node
   linkType: hard
 
