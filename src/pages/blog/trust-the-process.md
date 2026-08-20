@@ -12,9 +12,9 @@ layout: '../../layouts/BlogPost.astro'
 
 _"Trust the process"_, they said. Not so much in software engineering, nowadays. I heard that "good code is relative" and what matters is the end product, so most people just overlook it to achieve faster speed in building software. What might we miss from this philosophy? I present to you: the Arsenal's journey in the past 6 years.
 
-For me, Arsenal's journey in the past 6 years was one of the best storylines about trusting the process. Not many teams in the Premier League had faith to do so. Some teams spent money to speedrun into success, but upon failure, they sacked their manager. Some managers were able to get a short-term success by winning European cups, but then same fate awaited them at the end of the season: their sacking. As for Arsenal? At some point, the fans called for Arteta's sacking. Media narratives always put Arsenal and Arteta on the back foot. And yet, Arsenal owners put faith into Arteta and his team, even if every season ended in a trophyless one.
+For me, Arsenal's journey in the past 6 years was one of the best storylines about trusting the process. Not many teams in the Premier League had faith to do so. Some teams spent money to speedrun into success, but upon failure, they sacked their manager. Some managers were able to get a short-term success by winning European cups, but then the same fate awaited them at the end of the season: their sacking. As for Arsenal? At some point, the fans called for Arteta's sacking. Media narratives always put Arsenal and Arteta on the back foot. And yet, Arsenal owners put faith into Arteta and his team, even if every season ended in a trophyless one.
 
-Their faith paid off at the end of 2025-26 season, where the owners, Stan Kroenke and Josh Kroenke, brought the Premier League trophy, hand-in-hand, to the podium. This was their story.
+Their faith paid off at the end of the 2025-26 season, where the owners, Stan Kroenke and Josh Kroenke, brought the Premier League trophy, hand-in-hand, to the podium. This was their story.
 
 ## The beginning
 
@@ -50,7 +50,7 @@ Despite the signings, Arsenal's luck turned out to be the same as before. Gettin
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Trust the process💔😟</p>&mdash; Mesut Özil (@M10) <a href="https://x.com/M10/status/1431614541130080257?ref_src=twsrc%5Etfw">August 28, 2021</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script> 
 
-Again, fans voiced their discomfort. I too, had mine. I had never seen my team sitting at the bottom of the table after 3 games. It was preposterous. Seeing this, behind the scenes, Josh Kroenke, instead of submitting to what fans wanted, did the opposite: giving support to Mikel. Ignore the noise, continue the work.
+Again, fans voiced their discomfort. I, too, had mine. I had never seen my team sitting at the bottom of the table after 3 games. It was preposterous. Seeing this, behind the scenes, Josh Kroenke, instead of submitting to what fans wanted, did the opposite: giving support to Mikel. Ignore the noise, continue the work.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cFJ2nxrM0D8?si=yvxuhtKe-RvekJO5&amp;start=264" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -92,7 +92,7 @@ Arsenal won the home leg 3-0 and the away leg 1-2. Unfortunately, they fell to P
 
 The punditry also didn't help with this, especially since Arsenal's city rival, Spurs, won Europa League 1-0 against Manchester United in the final. For the record, the Europa League finalists placed 16th and 17th in the Premier League table. Let that sink in for a bit. The best two teams in the Europa League were so close to relegation. No noise whatsoever from the media. Spurs' owner, though, wasn't satisfied with this and they went with sacking their manager, Ange Postecoglou.
 
-Spoiler: it didn't get better for Spurs, because the following season, they also placed 17th in the table. They would have been relegated had they not won their game against West Ham, who ranked 18th.
+Spoiler: it didn't get better for Spurs, because the following season, they also placed 17th in the table. They would have been relegated had they not won their game against West Ham, who ranked 18th. It served as an example that, what seemingly a success in a short term didn't necessarily translate into success in the long term if the foundations weren't laid well.
 
 ### 2025-26 season
 
@@ -114,21 +114,12 @@ I don't disagree that the goal of a software engineer is to build a good product
 
 However, when a leader says something-something "outcome-oriented", it just leaves a bad taste in my mouth. We always talk about the result, the outcome, yada-yada. But we often forget about the process — and the people who do it. Have we given them a good example? Have we given them the incentives and space to grow so they can be "outcome-oriented"? Have we given them the space they need to take a step back, rest, and recover?
 
-Let's say we have these code blocks. Both have the same result, and theoretically, the same outcome.
-
-```js
-console.log("a\nb\nc\nd\ne")
-
-["abcde"].split("").forEach(c => console.log(c))
-```
-
-If we are too outcome oriented and don't care about the process, we will probably be whatever to the differences above. But, at some point, those past processes that we have been ignoring will come to bite us back at some point. _"Why did we decide on using split when we can just simply log one time with newlines?"_ It's a very simplified and out-of-the-world example, I'm sure, but I think every one of us who cares about the process and has done AI-assisted development has already experienced this before, and in turn, add rules/instructions to a Markdown file so that future agents won't repeat it again. Those who don't care about the process won't care, as long as the outcome is correct.
-
-People always say that AI makes us more productive in software engineering. But we rarely talk about _how much brain work_ we have to do in a day. All that contributes to this... "outcome-oriented" product. But at what cost? Sure, there are a lot of people who are "outcome-oriented" and can withstand years of compacted 9-5 work. But it's not realistic if that expectation is applied to everyone in an instant, especially without proper incentives.
+One argument that I hear for AI-assisted development for an area that we don't excel at is that, _"Good code is relative"_. If we are too outcome oriented and don't care about the process, we will probably be whatever to the differences above. But, at some point, those small decisions that we have been ignoring will come to bite us back at some point. _"Why did we do it using X instead of Y?"_ I'm sure every one of us who has tried AI-assisted development and cares about the process has already experienced this before, and in turn, 
+adds rules/instructions to a Markdown file so that agents won't repeat it again in the future. Those who don't care about the process won't care, as long as the outcome is correct. Until we realize there are blind spots on the current implementation of outcome, which we missed because we don't have enough expertise and understanding.
 
 So, yeah, that should be all. In summary:
 
 - Thank you Josh Kroenke for not giving in to media narratives about Mikel Arteta. Arsenal finally won their first Premier League title in 22 years.
 - I believe that trusting in the process should be a thing in every aspect of life. AI empowers us to seemingly make everything instant, but in real life, it's not healthy if we eat instant noodles every day. At the very least, we have to "juggle" the days where we do AI-assisted development and when we hand-write code.
 - Leaders see AI as a shortcut for their product (and rightfully so, since it's their business). However, I'd like to see them talk more about the process and the people. It's not good to tunnel vision on outcome, because we lose sight of things that made it happen.
-- We often see arguments of using AI to increase productivity in software engineering. It speeds things up, yes. Unfortunately, it also puts more burden to the software engineers who act as Subject Matter Experts (SMEs). When we put too much emphasis on the outcome (the product, what it looks like from the outside), what's inside may quickly become an oversight. Burnout, oversight, exhaustion, stress... all that contributes to the "process" have to be taken care of, not only the "outcome".
+- We often see arguments of using AI to increase productivity in software engineering. It speeds things up, yes. Unfortunately, it also puts more burden on the software engineers who act as Subject Matter Experts (SMEs). When we put too much emphasis on the outcome (the product, what it looks like from the outside), what's inside may quickly become an oversight. Burnout, oversight, exhaustion, stress... all that contributes to the "process" has to be taken care of, not only the "outcome".
