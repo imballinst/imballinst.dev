@@ -30,7 +30,7 @@ Against the odds, he beat Manchester City and Chelsea, both 2-1, in the semi-fin
 
 ### 2020-21 season
 
-Arsenal started their 2020/21 season with a Community Shield match against Liverpool, who won the previous Premier League season in a flashy way, blitzing and clinching the title with just 7 games to go (86 points: 31 played, 28 won, 2 drawn, 1 lost). One could have thought they would be able to score 100 points, but they came close with just 99 points. Keep in mind that was the season they got 97+ points in the league—**second time in a row**. The previous season, they got 97 points _and still lost_ the title to Manchester City, who got 98 points.
+Arsenal started their 2020/21 season with a Community Shield match against Liverpool, who won the previous Premier League season in a flashy way, blitzing and clinching the title with just 7 games to go (86 points: 31 played, 28 won, 2 drawn, 1 lost). One could have thought they would be able to score 100 points, but they came close with just 99 points. Keep in mind that was the **second time in a row** they got 97+ points in the league. The previous season, they got 97 points _and still lost_ the title to Manchester City, who got 98 points.
 
 Now that I glazed Liverpool enough already, let's get back to the Community Shield. Long story short, Arsenal won the Community Shield via a penalty shootout after the match ended with a 1-1 draw after extra time.
 
