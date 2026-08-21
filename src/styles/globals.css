@@ -86,3 +86,7 @@ th {
 .twitter-tweet > iframe {
   @apply !max-w-[550px];
 }
+
+.iframe-wrapper {
+  @apply flex justify-center mb-4;
+}

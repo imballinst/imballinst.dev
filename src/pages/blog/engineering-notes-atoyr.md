@@ -1,6 +1,6 @@
 ---
 title: Engineering Notes from Building Atoyr
-description: "In this post, I am sharing my experience building the Atoyr, a word arcade game."
+description: "In this post, I am sharing my experience building Atoyr, a word arcade game."
 publishDate: 2026-07-19T13:08:30.630Z
 image: /assets/blog/engineering-notes-atoyr/00-hero.png
 imageAlt: An image showing screenshots of the game Atoyr.
