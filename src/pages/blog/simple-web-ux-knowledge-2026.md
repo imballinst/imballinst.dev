@@ -1,7 +1,7 @@
 ---
 title: Simple Web UX Knowledge in 2026
-description: With agentic development, it's all too easy to skip the details. But you shouldn't in case you care about your users.
-publishDate: 2026-08-21T01:55:47.227Z
+description: Let's learn (or re-learn) simple web UX so that we can identify and fix UX issues better and by extension, steer LLM agents to do better.
+publishDate: 2026-08-27T09:31:15.564Z
 image: /assets/blog/simple-web-ux-knowledge-2026/00-hero.png
 imageAlt: An image with text "Simple Web UX Knowledge in 2026", plus gauge icon, calendar icon, form icon, and link icon.
 imageCaption: An image with text "Simple Web UX Knowledge in 2026", plus gauge icon, calendar icon, form icon, and link icon.
@@ -22,7 +22,7 @@ Anyway, let's get started identifying the above issues one-by-one! Hopefully, th
 
 ## Landing pages being CPU-heavy
 
-First things first: the objective of a landing page is to convert the visitor into a customer, right? If the customer feels unpleasant when opening your landing page, they will bounce out. For context, the landing page that I mentioned above (I won't name and shame since it's not built by the government), despite being more text-heavy, uses 60% of CPU when **idle**. I think it's unacceptable.
+First things first: the objective of a landing page is to convert the visitor into a customer, right? If the customer feels unpleasant when opening your landing page, they will bounce out. For context, the landing page that I mentioned above (I won't name and shame since it's not built by the government), despite being more text-heavy, uses 60% of CPU when **idle**. This means that _a lot_ is running in the background, be it unnecessary animations or any kind of JavaScript runtime. I think it's unacceptable.
 
 Below is the list of what _may_ make them unpleasant and how to reduce them:
 
