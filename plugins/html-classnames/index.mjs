@@ -39,7 +39,7 @@ export default function htmlClassnamesPlugin() {
       if (child.type === 'html' && child.value.includes('<details>')) {
         child.value = child.value.replace(
           '<details>',
-          `<details className="${ALTERNATIVE_COLOR} p-4 border border-solid border-[#0000001a] dark:border-[#ffffff1a]">`
+          `<details class="${ALTERNATIVE_COLOR} p-4 border border-solid border-[#0000001a] dark:border-[#ffffff1a]">`
         );
       } else if (child.type === 'paragraph') {
         /** @type {*} */

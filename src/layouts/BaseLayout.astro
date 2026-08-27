@@ -14,7 +14,7 @@ const pageTitlePrefix = title ? `${title} | ` : '';
 const pageTitle = pageTitlePrefix + 'imballinst.dev';
 
 // TODO(imballinst): add toggle format.
-const BASE_NAV_CLASSES = 'border-teal-600 dark:border-teal-300';
+const BASE_NAV_CLASSES = 'border-b-2 border-teal-600 dark:border-teal-300';
 const NAVS = [
   {
     path: '/',
@@ -35,8 +35,8 @@ const NAVS = [
 ];
 const NAVS_WITH_CLASSES = NAVS.map((nav) => ({
   ...nav,
-  anchorClassName: `border-b-2 ${currentMenu === nav.path ? '' : 'not-hover:border-transparent'}`,
-  className: BASE_NAV_CLASSES
+  anchorClassName: `${BASE_NAV_CLASSES} ${currentMenu === nav.path ? '' : 'not-hover:border-transparent'}`,
+  className: ''
 }));
 
 const SOCIAL_LINKS = [
@@ -73,7 +73,7 @@ const CURRENT_YEAR = new Date().getFullYear();
           {
             NAVS_WITH_CLASSES.map((nav) => (
               <ComponentLink href={nav.path} className={`p-2 ${nav.anchorClassName}`} disableUnderline>
-                <div class={nav.className}>{nav.title}</div>
+                <div>{nav.title}</div>
               </ComponentLink>
             ))
           }

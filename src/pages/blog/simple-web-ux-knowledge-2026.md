@@ -10,26 +10,26 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-The year is 2026. You would have thought that with the rise of agentic engineering, the UX of websites (and by extent, apps in our phones) would be better in terms of UX, but nope.
+The year is 2026. You would have thought that with the rise of agentic engineering, the UX of websites (and by extension, apps in our phones) would be better in terms of UX, but nope.
 
-- Landing pages are CPU-heavy because too many animations and moving parts.
-- Forms are hard to use because of small clickable area.
-- Navigations are not power-user friendly because we decide to put events on non-interactive elements because of using an anchor links.
+- Landing pages are CPU-heavy because of too many animations and moving parts.
+- Forms are hard to use because of a small clickable area.
+- Navigations are not power-user friendly because we decide to put events on non-interactive elements because of using anchor links.
 
-These were my observations from using various web/native apps in the past week or so, with one of them being created in recent times. Now, I'll admit that my creation is not perfect, I still sometimes (if not often) fell into some silly mistakes like usability issues in smaller phones, which I only realized after using my wife's phone, which has smaller screen size than the one I have.
+These were my observations from using various web/native apps in the past week or so, with one of them being created in recent times. Now, I'll admit that my creation is not perfect, but I still sometimes (if not often) fall into some silly mistakes like usability issues in smaller phones, which I only realized after using my wife's phone, which has smaller screen size than the one I have.
 
 Anyway, let's get started identifying above issues one-by-one! I'll admit that each solution doesn't warrant a section, but I'll do it just so it's nice and tidy.
 
 ## Landing pages being CPU-heavy
 
-First things first: the objective of a landing page is to convert the visitor into a customer, right? If the customer feels unpleasant when opening your landing page, they will bounce out. For context, the landing page that I mentioned above, despite is more text-heavy, has 50% more CPU usage compared to [Apple's Macbook Air page](https://www.apple.com/macbook-air/) **when idle**. I think it's unacceptable.
+First things first: the objective of a landing page is to convert the visitor into a customer, right? If the customer feels unpleasant when opening your landing page, they will bounce out. For context, the landing page that I mentioned above, despite being more text-heavy, has 50% more CPU usage compared to [Apple's Macbook Air page](https://www.apple.com/macbook-air/) **when idle**. I think it's unacceptable.
 
-Below are the list of what _may_ make them unpleasant and how to reduce them:
+Below is the list of what _may_ make them unpleasant and how to reduce them:
 
-- **Too many animations**: ask yourself, _"Are these animation required? Do they represent the product? How much performance do we gain if we don't use them?"_ If they turn out not being a "must have" for the landing page, then we can reduce them (or even remove them completely).
-- **Heavy JavaScript bundle**: ask yourself, _"What do I lose if I don't include some of the JavaScript libraries? Will the page still be usable?"_ If after some reduction/removal the information you want to convey is still visible, then maybe you don't need them at all. But there are cases where you might still need it, such as JavaScript library for handling cookies (although arguably, you can inline it in your HTML, like with [Cookie Consent](https://www.cookieconsent.com/)).
+- **Too many animations**: ask yourself, _"Are these animation required? Do they represent the product? How much performance do we gain if we don't use them?"_ If they turn out not to be a "must have" for the landing page, then we can reduce them (or even remove them completely).
+- **Heavy JavaScript bundle**: ask yourself, _"What do I lose if I don't include some of the JavaScript libraries? Will the page still be usable?"_ If after some reduction/removal the information you want to convey is still visible, then maybe you don't need them at all. But there are cases where you might still need it, such as a JavaScript library for handling cookies (although arguably, you can inline it in your HTML, like with [Cookie Consent](https://www.cookieconsent.com/)).
 
-What's the morale of the story? It's _"don't add something just because."_ Now, let's get to the second one.
+What's the moral of the story? It's _"don't add something just because."_ Now, let's get to the second one.
 
 ## Forms being hard to use
 
@@ -55,7 +55,7 @@ Consider these simplified checkboxes.
   </div>
 </div>
 
-Try clicking he "Show me the difference" button above. It will show the click area. Why is this a big deal? Because imagine as a user you have to click a very small checkbox. On PCs, you have to move your mouse to click that small box. On tablets/phones, you have to tap _that_ very small box. Not a good UX. You can see this Nielsen Norman Group reference [Checkboxes: Design Guidelines](https://www.nngroup.com/articles/checkboxes-design-guidelines/).
+Try clicking the "Show me the difference" button above. It will show the click area. Why is this a big deal? Because imagine as a user you have to click a very small checkbox. On PCs, you have to move your mouse to click that small box. On tablets/phones, you have to tap _that_ very small box. Not a good UX. You can see this Nielsen Norman Group reference [Checkboxes: Design Guidelines](https://www.nngroup.com/articles/checkboxes-design-guidelines/).
 
 > Don’t force users to click or tap on a too-small box to make their selection. Include a perimeter around the checkbox and make the label clickable to allow for adequate touch-target size (at least 1 cm x 1 cm).
 
@@ -68,7 +68,7 @@ I think it's very rare that it occurs _nowadays_ but as usual, Indonesian govern
 <div class="flex flex-col gap-2 base-text-variant-gray max-w-sm demo-wrapper" id="dropdown-demo">
   <div class="flex justify-between" id="dropdown-trigger-wrapper">
     <div class="relative cursor-default w-full">
-      <div id="dropdown-trigger" class="w-[200px] px-2" onclick={onDropdownClick()}>Select an option...</div>
+      <div id="dropdown-trigger" class="w-[200px] px-2" onclick="onDropdownClick()">Select an option...</div>
       <div class="absolute top-6 left-0 p-2 border border-black dark:border-gray-200 bg-gray-50 dark:bg-gray-800 w-full hidden rounded" id="manual-dropdown-options">
         <div>Value A</div>
         <div>Value B</div>
@@ -90,7 +90,7 @@ I think it's very rare that it occurs _nowadays_ but as usual, Indonesian govern
   </div>
 </div>
 
-It's similar like above: don't mislead your users. If a select dropdown border has certain width, **the clickable area should also be equal to that width**. You'd say the same for sidebar dropdown if the menu have to be clicked _exactly_ on the text instead of the "container" that wraps the text. Another reference from Norman Nielsen Group: [Beyond Blue Links: Making Clickable Elements Recognizable](https://www.nngroup.com/articles/clickable-elements/).
+It's similar like above: don't mislead your users. If a select dropdown border has certain width, **the clickable area should also be equal to that width**. You'd say the same for sidebar dropdown if the menu has to be clicked _exactly_ on the text instead of the "container" that wraps the text. Another reference from Norman Nielsen Group: [Beyond Blue Links: Making Clickable Elements Recognizable](https://www.nngroup.com/articles/clickable-elements/).
 
 > Signaling clickability with cues such as borders, color, size, consistency, placement, and adherence to web standards can give interactive components the proper look. 
 
@@ -102,7 +102,7 @@ Unfortunately no demo for this one, so I'll just provide an image right away.
 
 ![Scrollable date picker, where you have to scroll for each date component.](/assets/blog/simple-web-ux-knowledge-2026/scrollable-datepicker.jpg)
 
-This one is the... absurd variation of date pickers from my perspective, because this "interaction" mostly only happens in mobile apps. See, if I have to scroll many years before, I'd just scroll the year _really fast_. This behavior is _rarely_ precise, which can be annoying. From my perspective, here are my tier list of date pickers:
+This one is the... absurd variation of date pickers from my perspective, because this "interaction" mostly only happens in mobile apps. See, if I have to scroll back many years, I'd just scroll through the years _really fast_. This behavior is _rarely_ precise, which can be annoying. From my perspective, here are my tier list of date pickers:
 
 - **Combo**: combine text input AND date pickers. This allows power users to just type their date/time of choice, while the rest of the users can use the date pickers (preferably a calendar-like).
 - **Date picker**: in cases where a combination of text input and date pickers may be confusing, we should just leave the user with just a calendar picker. The **calendar**, I said, because it allows us to be more precise. Select current month? Just pick right away. Select previous/next month? Navigate using the arrows. Select certain month in this year? Click the month. Zoom-out into year ranges? Click the year.
@@ -130,7 +130,7 @@ As a user, which one do you trust more to click? _Ideally_, the first one. Why? 
 
 The second reason is that, "Open in a new tab" is pretty much a mainstream feature now. Why, if it's not a mainstream feature, everyone and their mother would have a harder time having 100 browser tabs open, but I digress. The idea is that, with a normal navigation link, I can simply middle-mouse click, or Ctrl/Cmd + left-mouse click, or right-mouse click + open in a new tab. This is not possible with buttons. With button, I have to click the button first, and then Ctrl/Cmd + left-mouse click the Back browser button so I can continue my previous state.
 
-You may ask a question: _"Are there cases where buttons can be used for naviation?"_ Yes! But the navigation is the _side effect_. Take a registration or login page, for example. You use button to register or sign in. If the process is successful, then _ideally_ you will be redirected to the dashboard (for example: using HTTP response 301 or the client-side JavaScript `window.location.replace`).
+You may ask a question: _"Are there cases where buttons can be used for navigation?"_ Yes! But the navigation is the _side effect_. Take a registration or login page, for example. You use button to register or sign in. If the process is successful, then _ideally_ you will be redirected to the dashboard (for example: using HTTP response 301 or the client-side JavaScript `window.location.replace`).
 
 In some cases, if you really want the link to have a button presentation, you can style the link in a way so that it has a button styling. You shouldn't (although technically, you could) wrap a `<button>` with an `<a>`, because it doesn't adhere to the HTML spec ([MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#technical_summary)).
 
@@ -144,9 +144,9 @@ So, yeah, that's all that I have to share. So, takeaways, like usual:
 
 - Using agentic development doesn't guarantee you UX best practices, especially if you aren't aware of them. "Make no mistakes" can only do so much.
 - If certain animations and JavaScript libraries aren't integral to your landing page, consider removing them so it's not making your visitors' machine work overtime.
-- Ensure clickable areas are What You See is What You Get (WYSWYG). Having a clear indicator of a clickable area is a nice feedback for users, which is partly why I don't agree with the Tailwind v4 decision that buttons shouldn't have a [pointer cursor](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor).
-- Choose date pickers wisely. Use a combo of text input and calendar selection as a default, or restrict it to only calendar if you don't want to deal with the validation. But whatever happens, _avoid_ scrollable date pickers when you are able to, especially if the user may pick a date far from now (e.g. birth date).
-- 
+- Ensure clickable areas are What You See Is What You Get (WYSIWYG). Having a clear indicator of a clickable area is a nice feedback for users, which is partly why I don't agree with the Tailwind v4 decision that buttons shouldn't have a [pointer cursor](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor).
+  - Choose date pickers wisely. Use a combo of text input and calendar selection as a default, or restrict it to only calendar if you don't want to deal with the validation. But whatever happens, _avoid_ scrollable date pickers when you are able to, especially if the user may pick a date far from now (e.g. birth date).
+
 
 <script>
   function showDifference() {
