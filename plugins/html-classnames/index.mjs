@@ -7,12 +7,8 @@ import path from 'path';
 import { TOC_ID } from '../toc-injector/index.mjs';
 
 // TODO(imballinst): ensure these are consistent.
-const TEXT_COLOR = 'text-black dark:text-gray-200';
-const ALTERNATIVE_TEXT_COLORS = {
-  black: 'text-black dark:text-gray-200',
-  gray: 'text-gray-600 dark:text-gray-400',
-  teal: 'text-teal-600 dark:text-teal-300'
-};
+const TEXT_COLOR = 'base-text-default';
+const ALTERNATIVE_COLOR = 'base-text-variant-gray'
 
 const DEFAULT_ATTRS = {
   h1: `${TEXT_COLOR} text-3xl font-bold my-6`,
@@ -43,7 +39,7 @@ export default function htmlClassnamesPlugin() {
       if (child.type === 'html' && child.value.includes('<details>')) {
         child.value = child.value.replace(
           '<details>',
-          `<details className="${ALTERNATIVE_TEXT_COLORS.gray} p-4 border border-solid border-[#0000001a] dark:border-[#ffffff1a]">`
+          `<details class="${ALTERNATIVE_COLOR} p-4 border border-solid border-[#0000001a] dark:border-[#ffffff1a]">`
         );
       } else if (child.type === 'paragraph') {
         /** @type {*} */
@@ -57,7 +53,7 @@ export default function htmlClassnamesPlugin() {
 
           // Process `:::` for centered, gray texts.
           if (firstChild.value?.startsWith(':::') && lastChild.value?.endsWith(':::')) {
-            hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} text-center italic py-2 mt-3 mb-4 first:mt-0 last:mb-0 border-y border-gray-200 dark:border-gray-600`;
+            hast.properties.class = `${ALTERNATIVE_COLOR} text-center italic py-2 mt-3 mb-4 first:mt-0 last:mb-0 border-y border-gray-200 dark:border-gray-600`;
             firstChild.value = firstChild.value.slice(3);
             lastChild.value = lastChild.value.slice(0, -3);
           }
@@ -84,7 +80,7 @@ export default function htmlClassnamesPlugin() {
         const tag = `h${child.depth}`;
         let tagClass =
           DEFAULT_ATTRS[/** @type {keyof typeof DEFAULT_ATTRS} */ (tag)] +
-          ' pb-2 border-b border-solid border-[#0000001a] dark:border-[#ffffff1a]';
+          ' pb-2 border-b border-solid border-[#0000001a] dark:border-[#ffffff5a]';
 
         child.previous = { ...child };
         child.type = 'html';
@@ -175,7 +171,7 @@ export default function htmlClassnamesPlugin() {
           }
         }
 
-        hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} italic p-4 border-l-5 border-gray-200 dark:border-gray-600`;
+        hast.properties.class = `${ALTERNATIVE_COLOR} italic p-4 border-l-5 border-gray-200 dark:border-gray-600`;
         hast.children = pureHast;
         // TODO(imballinst): ensure there is a way to create a proper newlines in blockquotes.
         const html = toHtml(hast);
@@ -196,7 +192,7 @@ export default function htmlClassnamesPlugin() {
       } else if (child.type === 'table') {
         /** @type {*} */
         const hast = toHast(child);
-        hast.properties.class = `${ALTERNATIVE_TEXT_COLORS.gray} border-gray-200 dark:border-gray-600 w-full text-sm`;
+        hast.properties.class = `${ALTERNATIVE_COLOR} border-gray-200 dark:border-gray-600 w-full text-sm`;
 
         // @ts-ignore
         const head = hast.children.find((e) => e.tagName === 'thead');
@@ -353,7 +349,7 @@ function addListStyle(element, isOrdered, isNested, isTOC) {
   let listCommonStyle = '';
 
   if (isTOC) {
-    listCommonStyle = 'border-b border-dotted border-[#0000001a] dark:border-[#ffffff1a] pb-8 mb-8';
+    listCommonStyle = 'border-b border-dotted border-[#0000001a] dark:border-[#ffffff1a] mb-8';
   } else if (!isNested) {
     listCommonStyle = 'mb-4';
   }

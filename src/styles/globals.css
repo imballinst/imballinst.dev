@@ -53,6 +53,7 @@ h5,
 h6 {
   scroll-margin-top: 64px;
   scroll-snap-margin-top: 64px; /* iOS 11 and older */
+  font-family: "Fira Sans", sans-serif;
 }
 
 /* If the browser supports the property... */
@@ -89,4 +90,15 @@ th {
 
 .iframe-wrapper {
   @apply flex justify-center mb-4;
+}
+
+.base-text-default {
+  @apply text-black dark:text-gray-200;
+}
+.base-text-variant-gray {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+.base-button-default {
+  @apply text-black dark:text-gray-200 border border-black dark:border-gray-200 bg-gray-50 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 px-3 py-2 rounded-lg transition-colors;
 }
