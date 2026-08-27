@@ -18,7 +18,7 @@ The following were my observations from using various web/native apps in the pas
 - Forms are hard to use because of a small clickable area, misleading dropdowns, and awkward date pickers.
 - Navigations are not power-user friendly because we decide to put events on non-interactive elements because of using anchor links.
 
-Now, I'll admit that my creation is not perfect, but I still sometimes (if not often) make some silly mistakes like usability issues in smaller phones, which I only realized after using my wife's phone, which has a smaller screen size than the one I have.
+Now, I'll admit that my creation is not perfect. I still sometimes (if not often) miss some silly mistakes like usability issues in smaller phones, which I only realized after using my wife's phone (her phone's screen is smaller than mine).
 
 Anyway, let's get started identifying the above issues one-by-one! Hopefully, this can be useful so that the products that we develop can be better in terms of UX and we can steer LLMs to do a better job.
 
