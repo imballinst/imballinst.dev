@@ -13,16 +13,16 @@ layout: '../../layouts/BlogPost.astro'
 The year is 2026. You would have thought that with the rise of agentic engineering, the UX of websites (and by extension, apps on our phones) would be better, but nope. It doesn't mean that LLMs produce bad UX, no, but rather, with these kinds of tools existing, suboptimal UX should be able to be easily detected and fixed.
 
 - Landing pages are CPU-heavy because of too many animations and moving parts.
-- Forms are hard to use because of a small clickable area, misleading clickable area, and awkward date pickers.
+- Forms are hard to use because of a small clickable area, misleading dropdowns, and awkward date pickers.
 - Navigations are not power-user friendly because we decide to put events on non-interactive elements because of using anchor links.
 
 These were my observations from using various web/native apps in the past week or so, with one of them being created in recent times. Now, I'll admit that my creation is not perfect, but I still sometimes (if not often) make some silly mistakes like usability issues in smaller phones, which I only realized after using my wife's phone, which has a smaller screen size than the one I have.
 
-Anyway, let's get started identifying the above issues one-by-one! Hopefully, this can be useful so that the products that we develop can be more optimal in terms of UX and we can steer LLMs to do a better job.
+Anyway, let's get started identifying the above issues one-by-one! Hopefully, this can be useful so that the products that we develop can be better in terms of UX and we can steer LLMs to do a better job.
 
 ## Landing pages being CPU-heavy
 
-First things first: the objective of a landing page is to convert the visitor into a customer, right? If the customer feels unpleasant when opening your landing page, they will bounce out. For context, the landing page that I mentioned above (I won't name and shame since it's not built by the government), despite being more text-heavy, uses 60% of CPU when **when idle**. I think it's unacceptable.
+First things first: the objective of a landing page is to convert the visitor into a customer, right? If the customer feels unpleasant when opening your landing page, they will bounce out. For context, the landing page that I mentioned above (I won't name and shame since it's not built by the government), despite being more text-heavy, uses 60% of CPU when **idle**. I think it's unacceptable.
 
 Below is the list of what _may_ make them unpleasant and how to reduce them:
 
