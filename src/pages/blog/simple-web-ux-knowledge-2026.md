@@ -10,7 +10,7 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-The year is 2026. You would have thought that with the rise of agentic engineering, the UX of websites (and by extension, apps in our phones) would be better in terms of UX, but nope.
+The year is 2026. You would have thought that with the rise of agentic engineering, the UX of websites (and by extension, apps in our phones) would be better in terms of UX, but nope. It doesn't mean that LLMs produce bad UX, no, but rather, with these kind of tools existing, suboptimal UX should be able to be swept on.
 
 - Landing pages are CPU-heavy because of too many animations and moving parts.
 - Forms are hard to use because of a small clickable area.
@@ -22,7 +22,7 @@ Anyway, let's get started identifying above issues one-by-one! I'll admit that e
 
 ## Landing pages being CPU-heavy
 
-First things first: the objective of a landing page is to convert the visitor into a customer, right? If the customer feels unpleasant when opening your landing page, they will bounce out. For context, the landing page that I mentioned above, despite being more text-heavy, has 50% more CPU usage compared to [Apple's Macbook Air page](https://www.apple.com/macbook-air/) **when idle**. I think it's unacceptable.
+First things first: the objective of a landing page is to convert the visitor into a customer, right? If the customer feels unpleasant when opening your landing page, they will bounce out. For context, the landing page that I mentioned above, despite being more text-heavy, uses way more CPU usage compared to [Apple's Macbook Air page](https://www.apple.com/macbook-air/) **when idle**. I think it's unacceptable.
 
 Below is the list of what _may_ make them unpleasant and how to reduce them:
 
@@ -145,8 +145,8 @@ So, yeah, that's all that I have to share. So, takeaways, like usual:
 - Using agentic development doesn't guarantee you UX best practices, especially if you aren't aware of them. "Make no mistakes" can only do so much.
 - If certain animations and JavaScript libraries aren't integral to your landing page, consider removing them so it's not making your visitors' machine work overtime.
 - Ensure clickable areas are What You See Is What You Get (WYSIWYG). Having a clear indicator of a clickable area is a nice feedback for users, which is partly why I don't agree with the Tailwind v4 decision that buttons shouldn't have a [pointer cursor](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor).
-  - Choose date pickers wisely. Use a combo of text input and calendar selection as a default, or restrict it to only calendar if you don't want to deal with the validation. But whatever happens, _avoid_ scrollable date pickers when you are able to, especially if the user may pick a date far from now (e.g. birth date).
-
+- Choose date pickers wisely. Use a combo of text input and calendar selection as a default, or restrict it to only calendar if you don't want to deal with the validation. But whatever happens, _avoid_ scrollable date pickers when you are able to, especially if the user may pick a date far from now (e.g. birth date).
+- Use anchor links for navigation, so users can open in a new tab. Use button for actions that may, or may not produce navigation as side-effect. Style a link in a way so it looks like a button CTA, if desired.
 
 <script>
   function showDifference() {
