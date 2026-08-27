@@ -10,19 +10,19 @@ visibility: public
 layout: '../../layouts/BlogPost.astro'
 ---
 
-The year is 2026. You would have thought that with the rise of agentic engineering, the UX of websites (and by extension, apps in our phones) would be better in terms of UX, but nope. It doesn't mean that LLMs produce bad UX, no, but rather, with these kinds of tools existing, suboptimal UX should be able to be swept on.
+The year is 2026. You would have thought that with the rise of agentic engineering, the UX of websites (and by extension, apps on our phones) would be better, but nope. It doesn't mean that LLMs produce bad UX, no, but rather, with these kinds of tools existing, suboptimal UX should be able to be easily detected and fixed.
 
 - Landing pages are CPU-heavy because of too many animations and moving parts.
-- Forms are hard to use because of a small clickable area.
+- Forms are hard to use because of a small clickable area, misleading clickable area, and awkward date pickers.
 - Navigations are not power-user friendly because we decide to put events on non-interactive elements because of using anchor links.
 
-These were my observations from using various web/native apps in the past week or so, with one of them being created in recent times. Now, I'll admit that my creation is not perfect, but I still sometimes (if not often) fall into some silly mistakes like usability issues in smaller phones, which I only realized after using my wife's phone, which has smaller screen size than the one I have.
+These were my observations from using various web/native apps in the past week or so, with one of them being created in recent times. Now, I'll admit that my creation is not perfect, but I still sometimes (if not often) make some silly mistakes like usability issues in smaller phones, which I only realized after using my wife's phone, which has a smaller screen size than the one I have.
 
-Anyway, let's get started identifying above issues one-by-one! I'll admit that each solution doesn't warrant a section, but I'll do it just so it's nice and tidy.
+Anyway, let's get started identifying the above issues one-by-one! Hopefully, this can be useful so that the products that we develop can be more optimal in terms of UX and we can steer LLMs to do a better job.
 
 ## Landing pages being CPU-heavy
 
-First things first: the objective of a landing page is to convert the visitor into a customer, right? If the customer feels unpleasant when opening your landing page, they will bounce out. For context, the landing page that I mentioned above, despite being more text-heavy, uses way more CPU compared to [Apple's Macbook Air page](https://www.apple.com/macbook-air/) **when idle**. I think it's unacceptable.
+First things first: the objective of a landing page is to convert the visitor into a customer, right? If the customer feels unpleasant when opening your landing page, they will bounce out. For context, the landing page that I mentioned above (I won't name and shame since it's not built by the government), despite being more text-heavy, uses 60% of CPU when **when idle**. I think it's unacceptable.
 
 Below is the list of what _may_ make them unpleasant and how to reduce them:
 
@@ -33,7 +33,7 @@ What's the moral of the story? It's _"don't add something just because."_ Now, l
 
 ## Forms being hard to use
 
-This one is easier to explain using demos. Let's start from checkboxes.
+Some forms become hard to use because of tiny click targets, misleading dropdowns, and awkward date pickers. I'll explain some sections using demos. Let's start from checkboxes.
 
 ### Checkboxes
 
@@ -104,9 +104,9 @@ Unfortunately no demo for this one, so I'll just provide an image right away.
 
 This one is the... absurd variation of date pickers from my perspective, because this "interaction" mostly only happens in mobile apps. See, if I have to scroll back many years, I'd just scroll through the years _really fast_. This behavior is _rarely_ precise, which can be annoying. From my perspective, here is my tier list of date pickers:
 
-- **Combo**: combine text input AND date pickers. This allows power users to just type their date/time of choice, while the rest of the users can use the date pickers (preferably a calendar-like).
-- **Date picker**: in cases where a combination of text input and date pickers may be confusing, we should just leave the user with just a calendar picker. The **calendar**, I said, because it allows us to be more precise. Select current month? Just pick right away. Select previous/next month? Navigate using the arrows. Select certain month in this year? Click the month. Zoom-out into year ranges? Click the year.
-- **Scrollable date picker**: this is probably the lowest tier in my book because of reasons above. Even more so if you have to input time. I recall customer feedback in my previous work that they were a bit frustrated because they had to select date using calendar, but time using scrollable time picker. They would rather just input directly without being "constrained". This is the reason why I rank combo so high above.
+- **Combo**: combine text input AND date pickers. This allows power users to just type their date/time of choice, while the rest of the users can use the date pickers (preferably a calendar-like picker).
+- **Date picker**: in cases where a combination of text input and date pickers may be confusing, we should leave the user with just a calendar picker. The **calendar**, I said, because it allows us to be more precise. Select current month? Just pick right away. Select previous/next month? Navigate using the arrows. Select a certain month in this year? Click the month. Zoom out into year ranges? Click the year.
+- **Scrollable date picker**: this is probably the lowest tier in my book because of the reasons above. Even more so if you have to input time. I recall customer feedback from my previous work where customers were a bit frustrated because they had to select a date using a calendar, but time using a scrollable time picker. They would rather just input directly without being "constrained". This is the reason why I rank combo so high above.
 
 Again, you can find another Nielsen Norman Group reference regarding date/time pickers here: [Date-Input Form Fields: UX Design Guidelines](https://www.nngroup.com/articles/date-input/).
 
@@ -140,12 +140,12 @@ Finally, as I have been doing in this post, here's another Nielsen Norman Group 
 
 ## Closing words
 
-So, yeah, that's all that I have to share. So, takeaways, like usual:
+So, yeah, that's all that I have to share. So, takeaways, as usual:
 
 - Using agentic development doesn't guarantee you UX best practices, especially if you aren't aware of them. "Make no mistakes" can only do so much.
 - If certain animations and JavaScript libraries aren't integral to your landing page, consider removing them so it's not making your visitors' machine work overtime.
-- Ensure clickable areas are What You See Is What You Get (WYSIWYG). Having a clear indicator of a clickable area is a nice feedback for users, which is partly why I don't agree with the Tailwind v4 decision that buttons shouldn't have a [pointer cursor](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor).
-- Choose date pickers wisely. Use a combo of text input and calendar selection as a default, or restrict it to only calendar if you don't want to deal with the validation. But whatever happens, _avoid_ scrollable date pickers when you are able to, especially if the user may pick a date far from now (e.g. birth date).
+- Ensure clickable areas are What You See Is What You Get (WYSIWYG). Having a clear indicator of a clickable area is nice feedback for users, which is partly why I don't agree with the Tailwind v4 decision that buttons shouldn't have a [pointer cursor](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor).
+- Choose date pickers wisely. Use a combo of text input and calendar selection as a default, or restrict it to only a calendar if you don't want to deal with the validation. But whatever happens, _avoid_ scrollable date pickers when you are able to, especially if the user may pick a date far from now (e.g. birth date).
 - Use anchor links for navigation, so users can open in a new tab. Use a button for actions that may, or may not, produce navigation as a side-effect. Style a link in a way so it looks like a button CTA, if desired.
 
 <script>
