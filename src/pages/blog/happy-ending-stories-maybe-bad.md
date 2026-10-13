@@ -14,9 +14,11 @@ layout: '../../layouts/BlogPost.astro'
 Before you begin reading this post, please take a moment to pray for people who live in Indonesia who are affected by forest wildfires, earthquakes, and flash floods. I appreciate it.
 :::
 
-When I was a kid, one of my favorite shows was [Doraemon](https://doraemon.fandom.com/wiki/Doraemon). I watched it every Sunday morning, I believe it was from 8am until 8.30am. I also had the privilege to read the weekly Donald Duck magazine. Additionally, who can forget about Captain Tsubasa and Yu-Gi-Oh shows? I enjoyed them all when I was still a kid, but I only enjoy some of them now that I have tasted the spice of life.
+When I was a kid, one of my favorite shows was [Doraemon](https://doraemon.fandom.com/wiki/Doraemon). I watched it every Sunday morning—I believe it was from 8am until 8.30am. I also had the privilege to read the weekly Donald Duck magazine. Additionally, who can forget about Captain Tsubasa and Yu-Gi-Oh shows? I enjoyed them all when I was still a kid, but I only enjoy some of them now that I have tasted the spice of life.
 
-Every kid/preteen story (with General Audience age rating) usually revolves around 2 themes: hero and discrete (non-continuation). Both themes tend to end with happy endings and aren't preparing them for reality. Or maybe our community just sucks? Or maybe I just say this because my perspective comes with age? Well, all three can be true at once. Let's dissect each of the themes.
+In this post, I will use the [age rating from PEGI (Pan European Game Information)](https://pegi.info/what-do-the-labels-mean). For example: PEGI 3 (suitable for all age groups), PEGI 7 (may contain mild/non-realistic violence), and PEGI 12 (features more graphic fantasy violence).
+
+Every kid/preteen story (with PEGI 3) usually revolves around 2 themes: hero and discrete (non-continuation). Both themes tend to end with happy endings and aren't preparing them for reality. Or maybe our community just sucks? Or maybe I just say this because my perspective comes with age? Well, all three can be true at once. Let's dissect each of the themes.
 
 ## Story themes
 
@@ -42,7 +44,7 @@ All that is to say, I think, consuming too many hero-themed stories (without pro
 
 Discrete is the opposite of continuation. Both of the examples in the previous section, Captain Tsubasa and Yu-Gi-Oh, are "continued" stories. They have seasons, they have episodes. What happened in the prior episodes will be used as a foundation for future episodes, and so on, and so forth. Discrete stories, on the other hand, tell the story as if the characters are on a closed time-loop. How?
 
-Take Doraemon as an example. Every comic or show episode is built on the fact that the story _always_ takes place in a snapshot of time. Summer, winter, spring, fall, but it's always when Nobita and friends were still in elementary school. Even the adventure comics/movies were also based on the same snapshot. Yes, they could travel to the future using the time machine, but it's non-consequential.
+Take Doraemon as an example. Every comic or show episode is built on the fact that the story _always_ takes place in a snapshot of time. Summer, winter, spring, fall, but it's always when Nobita and friends were still in elementary school. Even the adventure comics/movies were based on the same snapshot. Yes, they could travel to the future using the time machine, but it's non-consequential.
 
 Whatever Nobita did, it was "isolated" in that episode and that episode alone. It couldn't "leak" into other episodes. Hence, no consequences. Nobita asked Doraemon to pull out a [Tax Bird](https://doraemon.fandom.com/wiki/Tax_Bird_(Gadget))? People were only taxed in that episode alone. In other episodes, that gadget doesn't exist nor is it ever mentioned. Hence, the consequence is just simply a whiplash-like sensation. One second you get a consequence, the following one it's no longer a consequence.
 
@@ -50,22 +52,22 @@ Same thing with Donald Duck. Regardless of the main character in the episode (it
 
 ## My thoughts
 
-Now, there is a reason why I put the "maybe" in parentheses in the post title, because I am not entirely sure of it. My current thought is that we should limit stories with General Audience age rating and make those with Parental Guidance age rating the popular ones.
+Now, there is a reason why I put the "maybe" in parentheses in the post title, because I am not entirely sure of it. My current thought is that we should limit stories with PEGI 3 and make those with Parental Guidance age rating the popular ones.
 
-This is because stories with General Audience are pretty much hero-themed stories or discrete stories with little learnings to extract. Additionally, consuming shows/comics with General Audience rating too much can give them a "skewed" sense of reality. From a "realm" where the main character always wins and little conflicts into real life with a lot of injustice and conflicts. I don't think there is any form of discrimination in any story with General Audience age rating, but in real life, you may see a lot, be it discrimination by race, skin color, or wealth. In Indonesia, speaking from experience, this can start as early as elementary school. Of course, it heavily depends on the community. If the community is built on and familiar with diversity, then I doubt any differences will matter at all.
+This is because stories with PEGI 3 are pretty much hero-themed stories or discrete stories with few learnings to extract. Additionally, consuming shows/comics with PEGI 3 rating too much can give them a "skewed" sense of reality. From a "realm" where the main character always wins and few conflicts into real life with a lot of injustice and conflicts. I don't think there is any form of discrimination in any story with PEGI 3, but in real life, you may see a lot, be it discrimination by race, skin color, or wealth. In Indonesia, speaking from experience, this can start as early as elementary school. Of course, it heavily depends on the community. If the community is built on and familiar with diversity, then I doubt any differences will matter at all.
 
 On the other hand, I don't deny that we shouldn't deny kids/preteens their imagination. Maybe they dream of a world akin to what they see in their favorite shows or comics? Then, let them be. Preemptively restricting their imagination may do more harm than good, at least [based on this article](https://bimontlab.com/why-children-are-imagining-less-and-what-we-can-do-about-it/):
 
 > Experts agree that children do not need more instructions. They need more freedom. Instead of teaching creativity like a step-by-step guide, adults should act as facilitators. The goal is not to provide the answer, but to guide exploration.
 
-So... maybe, kids should consume content with General Audience age rating until 7 years old and after that, parents encourage more Parental Guidance content (where appropriate [depending on age](https://pegi.info/what-do-the-labels-mean))? That way, they are getting acclimated early to the real world and won't have a huge "culture shock" from their fantasy. Probably parents have a big role in this, because what's a "Parental Guidance" without a parent role? It's just the same as playing a story-based game for the gameplay alone.
+So... maybe, kids should consume content with PEGI 3 until 7 years old and after that, parents should encourage more PEGI 7 content (where appropriate)? That way, they are getting acclimated early to a "darker world" and won't have a huge "culture shock" from their sunshine-and-rainbow fantasy. By engaging with heavier stories that their children consume, parents may have better bond with children while also at the same time give insights and perspective to their children.
 
-It's funny, I recall playing Red Alert 2 and Warcraft III campaigns during elementary school and all that I cared about was the gameplay. I didn't really care about the story. I wonder what my response would be if the kid version of me was asked, _"What do you think about Arthas? Was he right or wrong? Why?"_ I think those kinds of questions really help shape nuances that otherwise don't really exist in stories with General Audience age rating.
+It's funny, I recall playing Red Alert 2 and Warcraft III campaigns during elementary school and all that I cared about was the gameplay. I didn't really care about the story. I wonder what my response would be if the kid version of me was asked, _"What do you think about Arthas? Was he right or wrong? Why?"_ I think those kinds of questions really help shape nuances that otherwise don't really exist in stories with PEGI 3.
 
 ## Closing words
 
-So, yeah, that's all I have to share. I am not entirely sure if this is useful, but I hope this can be thought-provoking. I know, I know, we probably don't need to read all of the things above if _all_ parents do their job well in raising their kids so their kids won't bully other kids (physically or mentally).
+So, yeah, that's all I have to share. I am not entirely sure if this is useful, but I hope this can be thought-provoking. I believe it is better to familiarize kids with the dark side of the world via stories rather than having the kids experience it themselves first time. I know, I know, we probably don't need to do that if _all_ parents do their job well in raising their kids so their kids won't bully other kids (physically or mentally).
 
-I also don't like the fact that sometimes, when kids share to their parents that they were being bullied at school, their parents would recommend training martial arts instead to "fight back". For the record, I don't like that. Why should the victim be the one who "do the work"? Why can't it be the perpetrator who do so? It's absurd, one doesn't need to reach adolescent to see impunity.
+I also don't like the fact that sometimes, when kids share with their parents that they were being bullied at school, their parents would recommend training martial arts instead to "fight back". Why should the victim be the one who "does the work"? Why can't it be the perpetrator who does so? It's absurd—one doesn't need to reach adolescence to see impunity.
 
 Anyway, thanks for reading and I'll see you next time!
