@@ -54,18 +54,17 @@ Now, there is a reason why I put the "maybe" in parentheses in the post title, b
 
 This is because hero-themed or discrete stories have very few learnings to extract. The examples above, such as Captain Tsubasa and Yu-Gi-Oh, are full of "main character energy". Hence, consuming shows/comics with those themes too much can give them a "skewed" sense of reality. From a "realm" where the main character always wins and few conflicts into real life with a lot of injustice and conflicts.
 
-I think it's quite rare to find any form of discrimination in hero/discrete-themed stories, but in real life, you may see a lot, be it discrimination by gender, race, skin color, or wealth. Few exceptions are, maybe, these clips from Teen Titans and Johnny Bravo. These kind of examples are the "values" that we should expect more to see in the contents that kids/preteens consume.
+I think it's quite rare to find any form of discrimination in hero/discrete-themed stories, but in real life, you may see a lot, be it discrimination by gender, race, skin color, or wealth. There are few exceptions maybe maybe, such as this clip from [Teen Titans](https://x.com/DC_Animated/status/1266297407072952321).
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Starfire opens up to Cyborg about her experiencing prejudice. 
 
 -
-[Teen Titans - &quot;Troq&quot; (2005)] https://t.co/p9jYpbOZJ0</p>&mdash; DC Animated (@DC_Animated) <a href="https://x.com/DC_Animated/status/1266297407072952321?ref_src=twsrc%5Etfw">May 29, 2020</a></blockquote>
+[Teen Titans - &quot;Troq&quot; (2005)] https://t.co/p9jYpbOZJ0</p>&mdash; DC Animated (@DC_Animated) <a href="https://x.com/DC_Animated/status/1266297407072952321">May 29, 2020</a></blockquote>
 <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Johnny Bravo is turned into a woman by a disgruntled fortuneteller in order to show him what it truly means to be a woman. https://t.co/PqkOo1YMGs</p>&mdash; old toons (@oldtoons_) <a href="https://x.com/oldtoons_/status/1952379949157069290?ref_src=twsrc%5Etfw">August 4, 2025</a></blockquote>
-<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+In the above clip, Starfire expresses her dislike being called "Troq" which means "worthless" to her. Similarly, when she asked Cyborg whether he also got judged negatively because of looks; in which he acknowledges, since he's half robot. This is a nice scene.
 
-In Indonesia, speaking from experience, this can start as early as elementary school (age 6-12). Of course, it heavily depends on the community. If the community is built on and familiar with diversity, then I doubt any differences will matter at all.
+In Indonesia, speaking from experience, this discrimination can start as early as elementary school (age 6-12). Of course, it heavily depends on the community. If the community is built on and familiar with diversity, then I doubt any differences will matter at all.
 
 On the other hand, I don't deny that we shouldn't deny kids/preteens their imagination. Maybe they dream of a world akin to what they see in their favorite shows or comics? Then, let them be. Preemptively restricting their imagination may do more harm than good, at least [based on this article](https://bimontlab.com/why-children-are-imagining-less-and-what-we-can-do-about-it/):
 
