@@ -8765,7 +8765,7 @@ __metadata:
     mdast-util-to-hast: 13.2.1
     mdast-util-to-string: 4.0.0
     netlify-cli: 27.1.2
-    preact: 10.19.6
+    preact: 11.0.1
     prettier: 3.9.6
     prettier-plugin-astro: 0.14.1
     remark: 15.0.1
@@ -12203,10 +12203,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@npm:10.19.6":
-  version: 10.19.6
-  resolution: "preact@npm:10.19.6"
-  checksum: fe697a4ed6c79ec9997496ec735600744fa14495110da2ea40fa4e22429ad4e116dfe0ed786ab8c5c4fd233a479d1e4ac21ffb6748895ac80d3279c5d187b4c1
+"preact@npm:11.0.1":
+  version: 11.0.1
+  resolution: "preact@npm:11.0.1"
+  peerDependencies:
+    preact-render-to-string: ">=6.7.0"
+  peerDependenciesMeta:
+    preact-render-to-string:
+      optional: true
+  checksum: 42a993a0c4a8409949bf184c8f77b5cc1fb5c812752a606f9de985be1ace4b53f2add62c91f74e7baef1565034f3402ed4443a4f230d72475017ab4ee816a4c6
   languageName: node
   linkType: hard
 
