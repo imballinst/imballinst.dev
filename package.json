@@ -15,7 +15,7 @@
     "@astrojs/tailwind": "6.0.2",
     "@tailwindcss/vite": "4.1.11",
     "astro": "5.18.1",
-    "astro-expressive-code": "0.44.0",
+    "astro-expressive-code": "0.44.1",
     "cheerio": "1.0.0-rc.12",
     "date-fns": "4.4.0",
     "domhandler": "6.0.1",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@astrojs/check": "0.9.9",
     "@types/node": "26.1.1",
-    "netlify-cli": "26.0.1",
+    "netlify-cli": "27.1.2",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
     "remark": "15.0.1",
