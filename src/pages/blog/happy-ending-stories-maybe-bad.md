@@ -52,9 +52,9 @@ Same thing with Donald Duck. Regardless of the main character in the episode (it
 
 Now, there is a reason why I put the "maybe" in parentheses in the post title, because I am not entirely sure of it. My current thought is that we should limit stories with hero/discrete themes and introduce heavier content accordingly as a child grows older.
 
-This is because stories with hero-themed or discrete stories have very few learnings to extract. The examples above, such as Captain Tsubasa and Yu-Gi-Oh, are full of "main character energy". Hence, consuming shows/comics with those themes too much can give them a "skewed" sense of reality. From a "realm" where the main character always wins and few conflicts into real life with a lot of injustice and conflicts.
+This is because hero-themed or discrete stories have very few learnings to extract. The examples above, such as Captain Tsubasa and Yu-Gi-Oh, are full of "main character energy". Hence, consuming shows/comics with those themes too much can give them a "skewed" sense of reality. From a "realm" where the main character always wins and few conflicts into real life with a lot of injustice and conflicts.
 
-I think it's quite rare any form of discrimination in hero/discrete-themed story, but in real life, you may see a lot, be it discrimination by gender, race, skin color, or wealth. Few exceptions are maybe these clips from Teen Titans and Johnny Bravo.
+I think it's quite rare to find any form of discrimination in hero/discrete-themed stories, but in real life, you may see a lot, be it discrimination by gender, race, skin color, or wealth. Few exceptions are, maybe, these clips from Teen Titans and Johnny Bravo. These kind of examples are the "values" that we should expect more to see in the contents that kids/preteens consume.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Starfire opens up to Cyborg about her experiencing prejudice. 
 
@@ -71,7 +71,7 @@ On the other hand, I don't deny that we shouldn't deny kids/preteens their imagi
 
 > Experts agree that children do not need more instructions. They need more freedom. Instead of teaching creativity like a step-by-step guide, adults should act as facilitators. The goal is not to provide the answer, but to guide exploration.
 
-So... maybe, what parents can do is that, if their kids are to consume content with hero or discrete themes, let them do that until they hit elementary school. After that, parents should encourage more nuanced discussions around the stories they consume as well as introducing heavier stories. That way, they are getting acclimated early to a "darker world" and won't have a huge "culture shock" from their sunshine-and-rainbow fantasy. By engaging with heavier stories that their children consume, parents may have a better bond with children while also giving insights and perspective to their children.
+So... maybe, a good balance is, if their kids are to consume content with hero or discrete themes, let them do that until they hit elementary school. By this time, they would have gotten enough time to develop their imagination. After that, parents should encourage more nuanced discussions around the stories they consume as well as introducing heavier stories. That way, they are getting acclimated early to a "darker world" and won't have a huge "culture shock" from their sunshine-and-rainbow fantasy. By engaging with heavier stories that their children consume, parents may have a better bond with children while also giving insights and perspective to their children.
 
 It's funny, I recall playing Red Alert 2 and Warcraft III campaigns during elementary school and all that I cared about was the gameplay. I didn't really care about the story. I wonder what my response would be if the kid version of me was asked, _"What do you think about Arthas? Was he right or wrong? Why?"_ I think those kinds of questions really help shape nuances, but unfortunately they are very hard to find.
 
