@@ -54,7 +54,7 @@ Now, there is a reason why I put the "maybe" in parentheses in the post title, b
 
 This is because hero-themed or discrete stories have very few learnings to extract. The examples above, such as Captain Tsubasa and Yu-Gi-Oh, are full of "main character energy". Hence, consuming shows/comics with those themes too much can give them a "skewed" sense of reality. From a "realm" where the main character always wins and few conflicts into real life with a lot of injustice and conflicts.
 
-I think it's quite rare to find any form of discrimination in hero/discrete-themed stories, but in real life, you may see a lot, be it discrimination by gender, race, skin color, or wealth. There are few exceptions maybe maybe, such as this clip from [Teen Titans](https://x.com/DC_Animated/status/1266297407072952321).
+I think it's quite rare to find any form of discrimination in hero/discrete-themed stories, but in real life, you may see a lot, be it discrimination by gender, race, skin color, or wealth. There are few exceptions, maybe this clip from [Teen Titans](https://x.com/DC_Animated/status/1266297407072952321).
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Starfire opens up to Cyborg about her experiencing prejudice. 
 
@@ -62,7 +62,7 @@ I think it's quite rare to find any form of discrimination in hero/discrete-them
 [Teen Titans - &quot;Troq&quot; (2005)] https://t.co/p9jYpbOZJ0</p>&mdash; DC Animated (@DC_Animated) <a href="https://x.com/DC_Animated/status/1266297407072952321">May 29, 2020</a></blockquote>
 <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
-In the above clip, Starfire expresses her dislike being called "Troq" which means "worthless" to her. Similarly, when she asked Cyborg whether he also got judged negatively because of looks; in which he acknowledges, since he's half robot. This is a nice scene.
+In the above clip, Starfire expresses her dislike of being called "Troq", which means "worthless" to her. Similarly, she asked Cyborg whether he also got judged negatively because of his looks, and he acknowledged that he had, since he's half robot. This is a nice scene.
 
 In Indonesia, speaking from experience, this discrimination can start as early as elementary school (age 6-12). Of course, it heavily depends on the community. If the community is built on and familiar with diversity, then I doubt any differences will matter at all.
 
