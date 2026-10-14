@@ -56,15 +56,10 @@ This is because hero-themed or discrete stories have very few learnings to extra
 
 I think it's quite rare to find any form of discrimination in hero/discrete-themed stories, but in real life, you may see a lot, be it discrimination by gender, race, skin color, or wealth. There are few exceptions, maybe this clip from [Teen Titans](https://x.com/DC_Animated/status/1266297407072952321).
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Starfire opens up to Cyborg about her experiencing prejudice. 
-
--
-[Teen Titans - &quot;Troq&quot; (2005)] https://t.co/p9jYpbOZJ0</p>&mdash; DC Animated (@DC_Animated) <a href="https://x.com/DC_Animated/status/1266297407072952321">May 29, 2020</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Starfire opens up to Cyborg about her experiencing prejudice. - [Teen Titans - &quot;Troq&quot; (2005)] https://t.co/p9jYpbOZJ0</p>&mdash; DC Animated (@DC_Animated) <a href="https://x.com/DC_Animated/status/1266297407072952321">May 29, 2020</a></blockquote>
 <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
 In the above clip, Starfire expresses her dislike of being called "Troq", which means "worthless" to her. Similarly, she asked Cyborg whether he also got judged negatively because of his looks, and he acknowledged that he had, since he's half robot. This is a nice scene.
-
-In Indonesia, speaking from experience, this discrimination can start as early as elementary school (age 6-12). Of course, it heavily depends on the community. If the community is built on and familiar with diversity, then I doubt any differences will matter at all.
 
 On the other hand, I don't deny that we shouldn't deny kids/preteens their imagination. Maybe they dream of a world akin to what they see in their favorite shows or comics? Then, let them be. Preemptively restricting their imagination may do more harm than good, at least [based on this article](https://bimontlab.com/why-children-are-imagining-less-and-what-we-can-do-about-it/):
 
@@ -76,8 +71,10 @@ It's funny, I recall playing Red Alert 2 and Warcraft III campaigns during eleme
 
 ## Closing words
 
-So, yeah, that's all I have to share. I am not entirely sure if this is useful, but I hope this can be thought-provoking. I believe it is better to familiarize kids with the dark side of the world via stories rather than having the kids experience it themselves for the first time. For example, how often do we see bullying being unpunished in that content? Never. The bullies are always punished. In real life, justice is not guaranteed, so parents may have to "set expectations" for their children. I know, I know, we probably don't need to do that if _all_ parents do their job well in raising their kids so their kids won't bully other kids (physically or mentally).
+So, yeah, that's all I have to share. I am not entirely sure if this is useful, but I hope this can be thought-provoking. I believe it is better to familiarize kids with the dark side of the world via stories rather than having the kids experience it themselves for the first time. For example, how often do we see bullying being unpunished in that content? Never. The bullies are always punished. In real life, justice is not guaranteed, so parents may have to "set expectations" for their children.
 
-I also don't like the fact that sometimes, when kids share with their parents that they were being bullied at school, their parents would recommend training martial arts instead to "fight back". Why should the victim be the one who "does the work"? Why can't it be the perpetrator who does so? It's absurd—one doesn't need to reach adolescence to see impunity.
+In Indonesia, speaking from experience, injustice can start as early as elementary school (age 6-12). Unfortunately, it's very hard to abolish it. In school environments, teachers technically have the authority to assert order. However, sometimes there are parents who are too permissive and they will protect their children at any cost, regardless of whether their children are right or wrong. Sometimes, the parents are either part of police/military forces or are backed by them, which can easily instill fear in school staff. This further enables impunity to bloom in the school. An elementary school student in Central Java, Indonesia was even bullied to death [after receiving mental and physical abuse](https://www.kompas.id/artikel/elementary-school-student-in-pemalang-suspected-of-being-extorted-and-beaten-before-dying-police-will-examine-the-perpetrator).
+
+I also don't like the fact that sometimes, when kids share with their parents that they were being bullied at school, their parents would recommend training martial arts instead to "fight back". Why should the victim be the one who "does the work"? Why can't it be the perpetrator who does so? It's absurd—one doesn't need to reach adolescence to see impunity. I know, I know, kids probably don't need to work so hard to protect themselves if _all_ parents do their job well in raising their kids so their kids won't bully other kids (physically or mentally).
 
 Anyway, thanks for reading and I'll see you next time!
