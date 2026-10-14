@@ -1,7 +1,7 @@
 ---
 title: Happy ending stories are (maybe) bad
 description: As I am getting older, I feel like happy ending stories aren't that good, especially for kids/preteens.
-publishDate: 2026-08-27T09:31:15.564Z
+publishDate: 2026-10-14T04:12:12.638Z
 image: /assets/blog/happy-ending-stories-maybe-bad/00-hero.png
 imageAlt: "An image with 2 panels: one is a kid watching sunshine and rainbows, one is a kid facing injustice."
 imageCaption: "An image with 2 panels: one is a kid watching sunshine and rainbows, one is a kid facing injustice."
