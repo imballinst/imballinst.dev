@@ -27,7 +27,7 @@
   },
   "packageManager": "yarn@3.6.4",
   "devDependencies": {
-    "@astrojs/check": "0.9.9",
+    "@astrojs/check": "0.9.10",
     "@types/node": "26.6.5",
     "netlify-cli": "27.1.2",
     "prettier": "3.9.6",
