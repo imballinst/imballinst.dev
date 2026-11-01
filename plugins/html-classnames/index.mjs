@@ -93,7 +93,7 @@ export default function htmlClassnamesPlugin() {
       } else if (child.type === 'list') {
         /** @type {*} */
         const hast = toHast(child);
-        const isPreviousChildTOC = isTOC(tree.children[i - 1].previous);
+        const isPreviousChildTOC = isTOC(tree.children[i - 1]?.previous);
 
         addListStyle(hast, child.ordered, false, isPreviousChildTOC);
 
@@ -109,7 +109,6 @@ export default function htmlClassnamesPlugin() {
         const pureTextArray = [];
         let numberOfParagraphs = 0;
 
-        // TODO(imballinst): change \n to <p> tags.
         for (const hastChild of hast.children) {
           if (hastChild.type === 'element' && hastChild.tagName === 'p') {
             pureTextArray.push(NEW_PARAGRAPH);
@@ -138,15 +137,12 @@ export default function htmlClassnamesPlugin() {
         let lastParagraph;
 
         for (const el of pureTextArray) {
-          /** @type {Record<string, string | undefined>} */
-          const properties = {};
-
-          if (el === NEW_LINE) {
-            // New line token.
+          if (el === NEW_LINE || el === NEW_PARAGRAPH) {
+            // Both a new paragraph token and a line-break token start a new paragraph.
             lastParagraph = {
               type: 'element',
               tagName: 'p',
-              properties,
+              properties: {},
               children: []
             };
 
@@ -154,26 +150,20 @@ export default function htmlClassnamesPlugin() {
             continue;
           }
 
-          if (el === NEW_PARAGRAPH) {
-            // New paragraph token.
-            properties.class = numberOfParagraphs > 1 ? BLOCKQUOTE_PARAGRAPH_CLASS : undefined;
+          // Text.
+          lastParagraph.children.push(el);
+        }
 
-            lastParagraph = {
-              type: 'element',
-              tagName: 'p',
-              properties,
-              children: []
-            };
-            pureHast.push(lastParagraph);
-          } else {
-            // Text.
-            lastParagraph.children.push(el);
+        // A blockquote with more than one paragraph gets consistent spacing on every
+        // paragraph, including ones created by line breaks within a single paragraph.
+        if (pureHast.length > 1) {
+          for (const p of pureHast) {
+            p.properties.class = BLOCKQUOTE_PARAGRAPH_CLASS;
           }
         }
 
         hast.properties.class = `${ALTERNATIVE_COLOR} italic p-4 border-l-5 border-gray-200 dark:border-gray-600`;
         hast.children = pureHast;
-        // TODO(imballinst): ensure there is a way to create a proper newlines in blockquotes.
         const html = toHtml(hast);
 
         child.type = 'html';

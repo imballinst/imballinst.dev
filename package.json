@@ -8,7 +8,8 @@
     "build": "astro check && astro build && yarn build:images",
     "preview": "astro preview",
     "astro": "astro",
-    "build:images": "node scripts/optimize-image/sharp.mjs"
+    "build:images": "node scripts/optimize-image/sharp.mjs",
+    "test": "node --test plugins/"
   },
   "dependencies": {
     "@astrojs/preact": "4.1.0",
