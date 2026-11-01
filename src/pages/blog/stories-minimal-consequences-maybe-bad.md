@@ -1,8 +1,8 @@
 ---
-title: Happy ending stories are (maybe) bad
-description: As I am getting older, I feel like happy ending stories aren't that good, especially for kids/preteens.
+title: Stories with minimal consequences are (maybe) bad
+description: As I am getting older, I feel like stories with minimal consequences aren't that good, especially for kids/preteens.
 publishDate: 2026-10-14T04:12:12.638Z
-image: /assets/blog/happy-ending-stories-maybe-bad/00-hero.png
+image: /assets/blog/stories-minimal-consequences-maybe-bad/00-hero.png
 imageAlt: "An image with 2 panels: one is a kid watching sunshine and rainbows, one is a kid facing injustice."
 imageCaption: "An image with 2 panels: one is a kid watching sunshine and rainbows, one is a kid facing injustice."
 tags: life
@@ -14,9 +14,13 @@ layout: '../../layouts/BlogPost.astro'
 Before you begin reading this post, please take a moment to pray for people who live in Indonesia who are affected by forest wildfires, earthquakes, and flash floods. I appreciate it.
 :::
 
+:::
+On November 1st, 2026, I updated this post from "Happy ending stories are (maybe) bad" to "Stories with minimal consequences are (maybe) bad". The spotlight shouldn't be the ending but rather what the focal points in the story are. A happy ending can be good, a bad ending can also be good, as long as there are lessons to be learned; and lessons are usually learned when there are consequences.
+:::
+
 When I was a kid, one of my favorite shows was [Doraemon](https://doraemon.fandom.com/wiki/Doraemon). I watched it every Sunday morning—I believe it was from 8am until 8.30am. I also had the privilege to read the weekly Donald Duck magazine. Additionally, who can forget about Captain Tsubasa and Yu-Gi-Oh shows? I enjoyed them all when I was still a kid, but I only enjoy some of them now that I have tasted the spice of life.
 
-Every kid/preteen story usually revolves around 2 themes: hero and discrete (non-continuation). Both themes tend to end with happy endings and aren't preparing them for reality. Or maybe our community just sucks? Or maybe I just say this because my perspective comes with age? Well, all three can be true at once. Let's dissect each of the themes.
+Every kid/preteen story usually revolves around 2 themes: hero and discrete (non-continuation). Both themes tend to end with happy endings and aren't preparing them for reality. Or maybe our community just sucks? Or maybe I'm just saying this because my perspective comes with age? Well, all three can be true at once. Let's dissect each of the themes.
 
 ## Story themes
 
@@ -32,19 +36,19 @@ Another example is [Yu-Gi-Oh](https://www.imdb.com/title/tt0249327), although I'
   <iframe width="560" height="315" src="https://www.youtube.com/embed/c2FTI0VoPn0?si=bhrid4nZZ81rbBWB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-A bit of context on that one, so it was a "filler arc" (some might say) where there were groups of people who wanted to feed a giant snake "Leviathan". They do so by winning a duel against another person when a field card called "Seal of Orichalcos" is active. When the opponent loses the game, their soul is removed from their body and "locked" in a temple. Yugi/Atem battled against Rafael and Rafael tempted Atem to use Seal of Orichalcos because otherwise, he would lose the match. He eventually succumbed and used it, which gave him a lead in the match, but Rafael turned it around and won the match. Since Seal of Orichalcos was active, Atem's soul was supposed to be captured, but instead, Yugi pushed him out and paid the price.
+A bit of context on that one, so it was a "filler arc" (some might say) where there were groups of people who wanted to feed a giant snake "Leviathan". They did so by winning a duel against another person when a field card called "Seal of Orichalcos" is active. When the opponent loses the game, their soul is removed from their body and "locked" in a temple. Yugi/Atem battled against Rafael and Rafael tempted Atem to use the Seal of Orichalcos because otherwise, he would lose the match. He eventually succumbed and used it, which gave him a lead in the match, but Rafael turned it around and won the match. Since the Seal of Orichalcos was active, Atem's soul was supposed to be captured, but instead, Yugi pushed him out and paid the price.
 
-That was _probably_ the only one time that I can recall where a conscious action in Yu-Gi-Oh led to a proper consequence. Atem even went on a bit of a soul-searching journey to forgive himself. I think that part of the story was beautiful.
+That was _probably_ the only time that I can recall where a conscious action in Yu-Gi-Oh led to a proper consequence. Atem even went on a bit of a soul-searching journey to forgive himself. I think that part of the story was beautiful.
 
-All that is to say, I think, consuming too many hero-themed stories (without proper nuance) will make a kid seemingly... eager to become a "hero". A stalwart of justice. A guiding light. However, we adults know that real life doesn't work that way, so why should we shape kids/preteens' mental model with the hero mental model?
+All that is to say, I think, consuming too many hero-themed stories (without proper nuance) will make a kid seemingly... eager to become a "hero". A stalwart of justice. A guiding light. However, we adults know that real life doesn't work that way, so why should we shape kids/preteens' mental models with the hero mental model?
 
 ### Discrete
 
 Discrete is the opposite of continuation. Both of the examples in the previous section, Captain Tsubasa and Yu-Gi-Oh, are "continued" stories. They have seasons, they have episodes. What happened in the prior episodes will be used as a foundation for future episodes, and so on, and so forth. Discrete stories, on the other hand, tell the story as if the characters are on a closed time-loop. How?
 
-Take [Doraemon](https://www.imdb.com/title/tt0069576/parentalguide/) as an example. Every comic or show episode is built on the fact that the story _always_ takes place in a snapshot of time. Summer, winter, spring, fall, but it's always when Nobita and friends were still in elementary school. Even the adventure comics/movies were based on the same snapshot. Yes, they could travel to the future using the time machine, but it's non-consequential.
+Take [Doraemon](https://www.imdb.com/title/tt0069576/parentalguide/) as an example. Every comic or show episode is built on the fact that the story _always_ takes place in a snapshot of time. Summer, winter, spring, fall, but it's always when Nobita and friends are still in elementary school. Even the adventure comics/movies were based on the same snapshot. Yes, they could travel to the future using the time machine, but it's non-consequential.
 
-Whatever Nobita did, it was "isolated" in that episode and that episode alone. It couldn't "leak" into other episodes. Hence, no consequences. Nobita asked Doraemon to pull out a [Tax Bird](https://doraemon.fandom.com/wiki/Tax_Bird_(Gadget))? People were only taxed in that episode alone. In other episodes, that gadget doesn't exist nor is it ever mentioned. Hence, the consequence is just simply a whiplash-like sensation. One second you get a consequence, the following one it's no longer a consequence.
+Whatever Nobita did, it was "isolated" in that episode and that episode alone. It couldn't "leak" into other episodes. Hence, no consequences. Nobita asked Doraemon to pull out a [Tax Bird](https://doraemon.fandom.com/wiki/Tax_Bird_(Gadget))? People were only taxed in that episode alone. In other episodes, that gadget doesn't exist, nor is it ever mentioned. Hence, the consequence is just simply a whiplash-like sensation. One second you get a consequence, the following one it's no longer a consequence.
 
 Same thing with Donald Duck. Regardless of the main character in the episode (it can vary between Donald/Scrooge/Mickey/Goofy/Huey-Dewey-Louie/Gyro/others), whatever actions they do in that episode, they only happen in that episode. Scrooge's money bin got demolished by the Beagle Boys? The next episode, it's back to normal. Yes, again, there may be consequences in the episode, but if they only happen in a short time and are never mentioned again in the future, who cares?
 
@@ -52,7 +56,7 @@ Same thing with Donald Duck. Regardless of the main character in the episode (it
 
 Now, there is a reason why I put the "maybe" in parentheses in the post title, because I am not entirely sure of it. My current thought is that we should limit stories with hero/discrete themes and introduce heavier content accordingly as a child grows older.
 
-This is because hero-themed or discrete stories have very few learnings to extract. The examples above, such as Captain Tsubasa and Yu-Gi-Oh, are full of "main character energy". Hence, consuming shows/comics with those themes too much can give them a "skewed" sense of reality. From a "realm" where the main character always wins and few conflicts into real life with a lot of injustice and conflicts.
+This is because hero-themed or discrete stories have very few learnings to extract. The examples above, such as Captain Tsubasa and Yu-Gi-Oh, are full of "main character energy". Hence, consuming shows/comics with those themes too much can give them a "skewed" sense of reality. From a "realm" where the main character always wins and encounters few conflicts into real life with a lot of injustice and conflicts.
 
 I think it's quite rare to find any form of discrimination in hero/discrete-themed stories, but in real life, you may see a lot, be it discrimination by gender, race, skin color, or wealth. There are few exceptions, maybe this clip from [Teen Titans](https://x.com/DC_Animated/status/1266297407072952321).
 
@@ -65,9 +69,9 @@ On the other hand, I don't deny that we shouldn't deny kids/preteens their imagi
 
 > Experts agree that children do not need more instructions. They need more freedom. Instead of teaching creativity like a step-by-step guide, adults should act as facilitators. The goal is not to provide the answer, but to guide exploration.
 
-So... maybe, a good balance is, if their kids are to consume content with hero or discrete themes, let them do that until they hit elementary school. By this time, they would have gotten enough time to develop their imagination. After that, parents should encourage more nuanced discussions around the stories they consume as well as introducing heavier stories. That way, they are getting acclimated early to a "darker world" and won't have a huge "culture shock" from their sunshine-and-rainbow fantasy. By engaging with heavier stories that their children consume, parents may have a better bond with children while also giving insights and perspective to their children.
+So... maybe, a good balance is, if their kids are to consume content with hero or discrete themes, let them do that until they hit elementary school. By this time, they would have gotten enough time to develop their imagination. After that, parents should encourage more nuanced discussions around the stories they consume as well as introducing heavier stories. That way, they are getting acclimated early to a "darker world" and won't have a huge "culture shock" from their sunshine-and-rainbow fantasy. By engaging with heavier stories that their children consume, parents may have a better bond with their children while also giving insights and perspective to their children.
 
-It's funny, I recall playing Red Alert 2 and Warcraft III campaigns during elementary school and all that I cared about was the gameplay. I didn't really care about the story. I wonder what my response would be if the kid version of me was asked, _"What do you think about Arthas? Was he right or wrong? Why?"_ I think those kinds of questions really help shape nuances, but unfortunately they are very hard to find.
+It's funny, I recall playing Red Alert 2 and Warcraft III campaigns during elementary school, and all that I cared about was the gameplay. I didn't really care about the story. I wonder what my response would be if the kid version of me was asked, _"What do you think about Arthas? Was he right or wrong? Why?"_ I think those kinds of questions really help shape nuances, but unfortunately they are very hard to find.
 
 ## Closing words
 
