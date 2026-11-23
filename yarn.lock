@@ -8918,7 +8918,7 @@ __metadata:
     mdast-util-to-string: 4.0.0
     netlify-cli: 27.1.2
     preact: 10.19.6
-    prettier: 3.9.6
+    prettier: 3.10.1
     prettier-plugin-astro: 1.1.1
     remark: 15.0.1
     remark-toc: 9.0.0
@@ -12407,12 +12407,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.9.6":
-  version: 3.9.6
-  resolution: "prettier@npm:3.9.6"
+"prettier@npm:3.10.1":
+  version: 3.10.1
+  resolution: "prettier@npm:3.10.1"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 3fb6a3b6462b05afb825697a3fdcdd9bd1480c11d10d655b7ddbcaf2560beb695caffbe155b5020466005aa06bff74a61ba9c16e602bff849331b62f5db26cdf
+  checksum: 2695a99d0918ccea3ea643fb2788e8bd61e40e0544561c2674b91645f3f658e7402f4479a6af195de4537616982b5ae29105ec1b5021b1b43f1a3c3b9b92d805
   languageName: node
   linkType: hard
 
