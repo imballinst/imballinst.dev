@@ -1,6 +1,6 @@
 ---
 title: The joy of learning
-description: As I am getting older, I feel like happy ending stories aren't that good, especially for kids/preteens.
+description: In the current era where we are expected to move extra fast, are we still able to learn and are we still able to find joy in learning?
 publishDate: 2026-11-23T10:33:46.391Z
 image: /assets/blog/joy-of-learning/00-hero.png
 imageAlt: 'An image with the text: "The joy of learning".'
@@ -18,7 +18,7 @@ Learning is a process of knowing something. There are levels to it: knowing, doi
 
 Not everything can be learned while having fun. Of course, it is best to have both. It is better if the learning is painful but you can still have fun; it may be annoying if the learning is easy but you aren't having fun. Yes, yes, it is a nightmare if the learning process is hard AND you aren't having fun. I find mathematics fun but only if I see someone explaining it to me. If I have to do it alone, it will be a disaster.
 
-I find learning fun when the dopamine hits. Solving a problem, identifying root causes, finding common threads, detecting patterns. If there is no "end", unfortunately that is when it stops providing fun to me, if there is any to begin with.
+I find learning fun when the dopamine hits. Solving a problem, identifying root causes, finding common threads, detecting patterns. If there is no "end", unfortunately that is when it stops providing fun to me, if there is any to begin with. There are, however, instances where the dopamine hits are just simply "delayed", as goes with my latest hobby: gardening. But before we get to that, I want to share first about the learnings that I think are memorable.
 
 ## Memorable things learned
 
@@ -58,7 +58,9 @@ Last but not least, I also recently started learning about gardening and compost
 
 ## Expectations in Generative AI era
 
-Back then, when we wanted to do research, we _still_ had the time to do the research. However, now, with Generative AI making everything faster, that research time is reduced _significantly_. The existence of Generative AI raises expectations that everything has to be done faster [in terms of speed] and bigger [in terms of volume]. In software engineering, we could see how a lot of people "gloat" over their 1000 commits/PRs in a week.
+Back then, when we wanted to do research, we _still_ had the time to do the research. When we discovered the thing that we looked for, that was when the dopamine hit. We felt excited, we felt satisfied.
+
+However, now, with Generative AI making everything faster, that research time is reduced _significantly_. The dopamine hits no longer happens when solving something on code-level, but rather on product level (for better or worse). We no longer get the "reward" from deep focus in _translating_ what we think into code, seeing the tests passing, and the functionality working. The existence of Generative AI also raises expectations that everything has to be done faster [in terms of speed] and bigger [in terms of volume]. In software engineering, we could see how a lot of people "gloat" over their 1000 commits/PRs in a week.
 
 <details>
   <summary>Why commit and PR numbers are bad metrics</summary>
