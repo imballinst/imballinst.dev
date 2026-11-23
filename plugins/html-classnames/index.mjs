@@ -8,7 +8,7 @@ import { TOC_ID } from '../toc-injector/index.mjs';
 
 // TODO(imballinst): ensure these are consistent.
 const TEXT_COLOR = 'base-text-default';
-const ALTERNATIVE_COLOR = 'base-text-variant-gray'
+const ALTERNATIVE_COLOR = 'base-text-variant-gray';
 
 const DEFAULT_ATTRS = {
   h1: `${TEXT_COLOR} text-3xl font-bold my-6`,
@@ -339,7 +339,7 @@ function addListStyle(element, isOrdered, isNested, isTOC) {
   let listCommonStyle = '';
 
   if (isTOC) {
-    listCommonStyle = 'border-b border-dotted border-[#0000001a] dark:border-[#ffffff1a] mb-8';
+    listCommonStyle = 'mb-8';
   } else if (!isNested) {
     listCommonStyle = 'mb-4';
   }
