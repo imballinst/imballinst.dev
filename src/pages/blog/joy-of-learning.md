@@ -74,7 +74,7 @@ Software engineering is often called out because we don't care about performance
 
 For folks who have been at it for years, maybe it is fine, because we have the experience for it. But if you ask a "fresh me" going through this era and my job is to prompt LLMs to complete a task, I will get the impression of using [an answer key](https://en.wiktionary.org/wiki/answer_key). I might understand it _when I read it_, but I don't fully internalize it. How could I internalize it when the demand to go faster is more than ever?
 
-For perspective, usually in MMORPG world-first race (e.g. World of Warcraft, Final Fantasy 14), raid groups will have additional people (let's call them "analysts") on top of their core player group who usually streams their point of view (PoV). This is needed because players are actually required to not only do the mechanics, but they also need to do damage to beat the encounter.
+For perspective, usually in MMORPG world-first race (e.g. World of Warcraft, Final Fantasy XIV), raid groups will have additional people (let's call them "analysts") on top of their core player group who usually streams their point of view (PoV). This is needed because players are actually required to not only do the mechanics, but they also need to do damage to beat the encounter.
 
 Based on players' PoV, the analysts will collect as much information as possible and provide it to the group, usually when the group is currently hitting a wall (e.g. a complex mechanic). Sometimes, maybe the analysts aren't needed since the players can already put two and two together on how to solve the mechanics, but still, _it is very rare_ that they can beat a difficult fight on their first try. After the group has collected vital information about a mechanic, they usually take a step back and discuss on how to resolve it. This is how they _internalize_ what is going to happen, and this is also how they get so good at the game, that if a similar mechanic happens in the future in another encounter, their mind will ring a bell.
 
@@ -113,6 +113,6 @@ So, yeah, there's that. Personally, I still enjoy learning things that I can be 
 > "Your kind is always so preoccupied with what lies ahead, and so we muddle your vision with fog and glamour. But such trickery is easy to see through.
 > Stand very, very still. Think not of where you need to go, but where you are right now at this moment. At this time, in this place..."
 >
-> Feo Ul, Final Fantasy 14, Shadowbringers
+> Feo Ul, Final Fantasy XIV, Shadowbringers
 
 My hope for the future: hopefully we are still capable of learning instead of fully relying on LLMs. Going fast with LLMs is good but just like boosters in real life, we shouldn't be fully relying on them at all times because we have to maintain our body's natural health.
