@@ -18,7 +18,7 @@ Learning is a process of knowing something. There are levels to it: knowing, doi
 
 Not everything can be learned while having fun. Of course, it is best to have both. It is better if the learning is painful but you can still have fun; it may be annoying if the learning is easy but you aren't having fun. Yes, yes, it is a nightmare if the learning process is hard AND you aren't having fun. I find mathematics fun but only if I see someone explaining it to me. If I have to do it alone, it will be a disaster.
 
-I find learning fun when the dopamine hits. Solving a problem, identifying root causes, finding common threads, detecting patterns. If there is no "end", unfortunately that is when it stops providing fun to me, if there is any to begin with. There are, however, instances where the dopamine hits are just simply "delayed", as goes with my latest hobby: gardening. But before we get to that, I want to share first about the learnings that I think are memorable.
+I find learning fun when the dopamine hits. Solving a problem, identifying root causes, finding common threads, detecting patterns. If there is no "end", unfortunately that is when it stops providing fun to me, if there is any to begin with. There are, however, instances where the dopamine hits are just simply "delayed", as with my latest hobby: gardening. But before we get to that, I want to first share the learnings that I think are memorable.
 
 ## Memorable things learned
 
@@ -40,7 +40,7 @@ I _think_ my social skills have improved a bit as well since I became a manager.
 
 ### Learning software engineering
 
-This was probably what shaped me the most into the person I am today (for better or worse). I initially chose [Informatics](https://stei.itb.ac.id/redesign/en/program-sarjana/sarjana-informatika/) because I liked playing games (foolish thought, I know). I was only able to get a bit of a grip when I reached 4th year where I did my internship at eFishery (🕊️). It was tough, but thankfully my mentor gave me the chance to improve, which I then continued as a part-time and eventually a full-time employee.
+This was probably what shaped me the most into the person I am today (for better or worse). I initially chose [Informatics](https://stei.itb.ac.id/redesign/en/program-sarjana/sarjana-informatika/) because I liked playing games (foolish thought, I know). I was only able to get a bit of a grip when I reached my 4th year where I did my internship at eFishery (🕊️). It was tough, but thankfully my mentor gave me the chance to improve, which I then continued as a part-time and eventually a full-time employee.
 
 ### Learning family dynamics
 
@@ -56,16 +56,16 @@ I used to be apathetic (I am not proud of it). I thought every government was ju
 
 Last but not least, I also recently started learning about gardening and composting! I planted some spinach, basil, mustard greens, and peppers. The first 2 are currently on their last legs (I wanted to save the seeds) and the last 2 are still ongoing. But, how does it really relate to the overall theme of this post, really?
 
-## Expectations in Generative AI era
+## The importance of slowing down
 
-Back then, when we wanted to do research, we _still_ had the time to do the research. When we discovered the thing that we looked for, that was when the dopamine hit. We felt excited, we felt satisfied.
+Back then, when we wanted to do research, we _still_ had the time to do the research. When we discovered the thing that we looked for, that was when the dopamine hit. We felt excited; we felt satisfied.
 
-However, now, with Generative AI making everything faster, that research time is reduced _significantly_. The dopamine hits no longer happens when solving something on code-level, but rather on product level (for better or worse). We no longer get the "reward" from deep focus in _translating_ what we think into code, seeing the tests passing, and the functionality working. The existence of Generative AI also raises expectations that everything has to be done faster [in terms of speed] and bigger [in terms of volume]. In software engineering, we could see how a lot of people "gloat" over their 1000 commits/PRs in a week.
+However, now, with Generative AI making everything faster, that research time is reduced _significantly_. The dopamine hit no longer happens when solving something at the code level, but rather at the product level (for better or worse). We no longer get the "reward" from deep focus on _translating_ what we think into code, seeing the tests passing, and the functionality working. The existence of Generative AI also raises expectations that everything has to be done faster [in terms of speed] and bigger [in terms of volume]. In software engineering, we could see how a lot of people "gloat" over their 1000 commits/PRs in a week.
 
 <details>
   <summary>Why commit and PR numbers are bad metrics</summary>
 
-Back then, before Generative AI, there was often discourses about "what makes a software engineer considered productive". We used all kinds of measures: how long they were in the office, how long they were being "active" in applications such as Slack/Teams, how many pull requests they produced daily, and so on. The majority agreed that these metrics were vanity at best.
+Back then, before Generative AI, there were often discourses about "what makes a software engineer considered productive". We used all kinds of measures: how long they were in the office, how long they were being "active" in applications such as Slack/Teams, how many pull requests they produced daily, and so on. The majority agreed that these metrics were vanity at best.
 
 But now, with Generative AI, people somehow bring this discourse again. The difference is, it's not them who push the pull requests, but rather agents. Tokenmaxxers (including top folks in frontier AI labs) learned how review becomes the bottleneck, so they came up with "bandaids", such as agents reviewing agents. Here lie my other 2 concerns: (1) not everyone has "unlimited" tokens to review that volume of contributions, and (2) not everyone has "unlimited" compute/money to cover the CI which ensures the pull request won't cause build-time or even runtime errors.
 
@@ -78,7 +78,7 @@ For perspective, usually in MMORPG world-first race (e.g. World of Warcraft, Fin
 
 Based on players' PoV, the analysts will collect as much information as possible and provide it to the group, usually when the group is currently hitting a wall (e.g. a complex mechanic). Sometimes, maybe the analysts aren't needed since the players can already put two and two together on how to solve the mechanics, but still, _it is very rare_ that they can beat a difficult fight on their first try. After the group has collected vital information about a mechanic, they usually take a step back and discuss on how to resolve it. This is how they _internalize_ what is going to happen, and this is also how they get so good at the game, that if a similar mechanic happens in the future in another encounter, their mind will ring a bell.
 
-Unfortunately, the same doesn't apply to tech nowadays. The popular mantra "it depends" doesn't apply when it comes to the discussion around Generative AI. When do we use Generative AI? When do we not use it? What happens if we use it blindly? What is the impact to other industries? What is the impact on those working informal jobs?
+Unfortunately, the same doesn't apply to tech nowadays. The popular mantra "it depends" doesn't apply when it comes to the discussion around Generative AI. When do we use Generative AI? When do we not use it? What happens if we use it blindly? What is the impact on other industries? What is the impact on those working informal jobs?
 
 <div class="tenor-gif-embed m-auto" data-postid="16558003" data-share-method="host" data-aspect-ratio="1.77778" data-width="75%"><a href="https://tenor.com/view/we-dont-do-that-here-black-panther-tchalla-bruce-gif-16558003">We Dont Do That Here Black Panther GIF</a>from <a href="https://tenor.com/search/we+dont+do+that+here-gifs">We Dont Do That Here GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
