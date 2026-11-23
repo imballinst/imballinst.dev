@@ -1,4 +1,5 @@
-import cheerio from 'cheerio';
+// @ts-check
+import { load } from 'cheerio';
 import path from 'path';
 
 const TEXT_COLOR = 'text-gray-600 dark:text-gray-400';
@@ -8,7 +9,7 @@ const IMAGE_WIDTHS = [512, 1024, 2048];
 const URL_REGEX = /(https:\/\/[\w.\+/\?=&_-]+)/g;
 
 export default function imageCaptionPlugin() {
-  return (tree) => {
+  return (/** @type {*} */ tree) => {
     for (const firstChild of tree.children) {
       if (firstChild.type !== 'paragraph') {
         continue;
@@ -21,8 +22,10 @@ export default function imageCaptionPlugin() {
         continue;
       }
 
-      const { url, alt } = firstChild.children[0];
-      const $ = cheerio.load(alt);
+      const { url, alt, title } = firstChild.children[0];
+      const presentationWidthMatch = /size=(\d+)w/.exec(title)?.[1];
+
+      const $ = load(alt);
       // Need to strip the quotes otherwise it will break the anchor tag.
       const altString = $('body').text().replace(/['"]+/g, '');
       let htmlString = '';
@@ -53,13 +56,16 @@ export default function imageCaptionPlugin() {
       let imgClass = 'border border-gray-200 dark:border-gray-600';
 
       if (fixedSizeResult) {
-        width = fixedSizeResult[1];
+        width = Number(fixedSizeResult[1]);
+      } else if (presentationWidthMatch) {
+        width = Number(presentationWidthMatch);
       } else {
         imgClass += ' w-full';
       }
 
       const height = (width * 9) / 16;
 
+      /** @type {*} */
       const imgProps = {
         alt: altString,
         loading: 'lazy',
@@ -84,7 +90,7 @@ export default function imageCaptionPlugin() {
       const imgTag = generateImageTag(imgProps);
 
       // Previous Gatsby output:
-      // 
+      //
       //   <figure class="gatsby-resp-image-figure" style="">
       //     <span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 2048px; ">
       //       <a class="gatsby-resp-image-link" href="/static/8856679454fc6f00e35c4312f8fb00d1/7baff/npm-package.jpg" style="display: block" target="_blank" rel="noopener">
@@ -99,7 +105,7 @@ export default function imageCaptionPlugin() {
       //     </span>
       //     <figcaption class="gatsby-resp-image-figcaption"><p class="text-base">A cardboard with the npm logo. Also, yes, hopefully, I don't hurt your eyes with my photo editing skills.</p></figcaption>
       //   </figure>
-      // 
+      //
       // The current one is good enough. Later we will think about viewports stuff.
       // Another good reference: https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/.
       firstChild.value = `
@@ -115,7 +121,7 @@ export default function imageCaptionPlugin() {
   };
 }
 
-function generateImageTag(props) {
+function generateImageTag(/** @type {*} */ props) {
   let attrs = '';
 
   for (const prop in props) {
@@ -125,7 +131,7 @@ function generateImageTag(props) {
   return `<img ${attrs}/>`;
 }
 
-function generateAnchorTag({ href, text }) {
+function generateAnchorTag(/** @type {*} */ { href, text }) {
   let icon = '';
 
   if (href.includes('https://')) {

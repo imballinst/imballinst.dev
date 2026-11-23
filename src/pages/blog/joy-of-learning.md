@@ -78,13 +78,13 @@ Based on players' PoV, the analysts will collect as much information as possible
 
 Unfortunately, the same doesn't apply to tech nowadays. The popular mantra "it depends" doesn't apply when it comes to discussion around Generative AI. When do we use Gen AI? When do we not use it? What happens if we use it blindly? What is the impact to other industries? What is the impact to those working informal jobs?
 
-<div class="tenor-gif-embed" data-postid="16558003" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/we-dont-do-that-here-black-panther-tchalla-bruce-gif-16558003">We Dont Do That Here Black Panther GIF</a>from <a href="https://tenor.com/search/we+dont+do+that+here-gifs">We Dont Do That Here GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<div class="tenor-gif-embed m-auto" data-postid="16558003" data-share-method="host" data-aspect-ratio="1.77778" data-width="75%"><a href="https://tenor.com/view/we-dont-do-that-here-black-panther-tchalla-bruce-gif-16558003">We Dont Do That Here Black Panther GIF</a>from <a href="https://tenor.com/search/we+dont+do+that+here-gifs">We Dont Do That Here GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 As an aside, I don't really rate the Web3/cryptocurrency boom because folks who work in it [that I know] _didn't_ call out the bad actors. Scams? Next. Rug pulls? Next. Like, come on. Just because you work in an industry, it doesn't prohibit you from calling out the bad things. Similarly, you _can_ at the same time use Gen AI while calling out its bullshits. It doesn't make you a hypocrite. Well, maybe it does _a little bit_ if you are tokenmaxxing with multiple max subscriptions. But yeah, the idea is, we can have nuances.
 
 ## My latest learning: gardening
 
-![My basil plant, before it flowered.](/assets/blog/joy-of-learning/basil.jpeg)
+![My basil plant, before it flowered.](/assets/blog/joy-of-learning/basil.jpeg "size=400w")
 
 I mentioned that I learned gardening recently. I have to say, if you told me in the past that I would learn gardening in the future, I'd say, _"it's fake news"_. I have soft spot for pets (rabbits and cats), but plants... not really. See, before that, I had this wild idea to take a vacation to a mountain-ish area (which I haven't yet realized until now). I thought it would be cool to, you know, touch grass, reconnect with nature, and so on. I always thought that soil was dirty and I am a bit averse to dirtying my hands. Hell, even when cooking I wash my hands every few steps 😅. That is, until I learned how to grow a new plant from kitchen scraps.
 
@@ -96,9 +96,9 @@ From there, it was straight up rabbit hole. I found some great YouTube channels 
 
 As a software engineer whose life wrestles with basically binary numbers, gardening is almost the opposite side of it. Sure, there are "formulas" on how to [min-max](https://www.dictionary.com/browse/min-max) the yield, but at the end of the day, every gardener's approach may differ from one another. The climate may be different, wind level may be different, temperature level may be different, planting space may be different... all that comes down to problem solving with constraints. The last one is the most interesting one for me. Since I live in an apartment (with a balcony), I don't have _that_ much space like the YouTube gardeners with tons of garden spaces. So, I have to make up the most of my balcony space to plant the things... I think people usually call it "urban farming".
 
-![My basil plant's flowers, which when pollinated, it will turn brown and the seeds can be extracted.](/assets/blog/joy-of-learning/basil-flower.jpeg)
+![My basil plant's flowers, which when pollinated, it will turn brown and the seeds can be extracted.](/assets/blog/joy-of-learning/basil-flower.jpeg "size=400w")
 
-![My indoor plants, where I showered it with a grow light.](/assets/blog/joy-of-learning/indoor-grow-light.jpeg)
+![My indoor plants, where I showered it with a grow light.](/assets/blog/joy-of-learning/indoor-grow-light.jpeg "size=400w")
 
 How does this correlate to learning? So I happened to also learn about [grow lights](https://en.wikipedia.org/wiki/Grow_light), which I also use for seedlings before they are transplanted outside on the balcony. Since my apartment unit only effectively gets direct sunlight from like 1pm to 5pm, I need to compensate it, because from what I learned, it seems like peppers are in particular, really need light to grow strong especially when it's still a seedling. That brings us to another rabbit hole!
 

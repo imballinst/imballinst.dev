@@ -159,10 +159,7 @@ describe('toc-injector cleanup', () => {
     /** @type {*} */
     const tree = {
       type: 'root',
-      children: [
-        { type: 'heading', depth: 2, id: TOC_ID, children: [{ type: 'text', value: 'Table of Contents' }] },
-        paragraph
-      ]
+      children: [{ type: 'heading', depth: 2, id: TOC_ID, children: [{ type: 'text', value: 'Table of Contents' }] }, paragraph]
     };
 
     runPlugin(tocLeadingContentCleanupPlugin, tree);
@@ -187,7 +184,10 @@ describe('image', () => {
     const html = await processWithImagePlugin('![A caption](https://example.com/my-image.png)');
 
     // Non-fixed-size images take up the whole container width and default to 800x450.
-    assert.match(html, /<img alt="A caption" loading="lazy" src="https:\/\/example\.com\/my-image\.png" height="450" width="800" class="border border-gray-200 dark:border-gray-600 w-full" \/>/);
+    assert.match(
+      html,
+      /<img alt="A caption" loading="lazy" src="https:\/\/example\.com\/my-image\.png" height="450" width="800" class="border border-gray-200 dark:border-gray-600 w-full" \/>/
+    );
     assert.match(html, /<figcaption class="text-sm text-center mt-1 text-gray-600 dark:text-gray-400">A caption<\/figcaption>/);
   });
 
@@ -225,13 +225,19 @@ describe('image', () => {
   it('turns anchors in the alt text into caption links', async () => {
     const html = await processWithImagePlugin('![See <a href="https://x.com">the source</a>](https://example.com/my-image.png)');
 
-    assert.match(html, /<figcaption class="text-sm text-center mt-1 text-gray-600 dark:text-gray-400">See \s*<a class="text-teal-600 dark:text-teal-300 hover:underline break-all inline-block" target="_blank" rel="noopener" href="https:\/\/x\.com">\s*the source.*?<\/a>\s*<\/figcaption>/s);
+    assert.match(
+      html,
+      /<figcaption class="text-sm text-center mt-1 text-gray-600 dark:text-gray-400">See \s*<a class="text-teal-600 dark:text-teal-300 hover:underline break-all inline-block" target="_blank" rel="noopener" href="https:\/\/x\.com">\s*the source.*?<\/a>\s*<\/figcaption>/s
+    );
   });
 
   it('auto-links URLs in the alt text', async () => {
     const html = await processWithImagePlugin('![From https://x.com](https://example.com/my-image.png)');
 
-    assert.match(html, /<figcaption class="text-sm text-center mt-1 text-gray-600 dark:text-gray-400">From <a[^>]*href="https:\/\/x\.com"[^>]*>/);
+    assert.match(
+      html,
+      /<figcaption class="text-sm text-center mt-1 text-gray-600 dark:text-gray-400">From <a[^>]*href="https:\/\/x\.com"[^>]*>/
+    );
   });
 
   it('strips quotes from the image alt attribute but keeps them in the caption', async () => {
@@ -255,13 +261,22 @@ describe('image', () => {
     assert.equal(html.includes('<figure'), false);
     assert.equal(html.includes('<img'), false);
   });
+
+  it.only('processes custom CSS for image width', async () => {
+    const html = await processWithImagePlugin('![A dashboard screenshot](/assets/blog/x/dashboard.png "size=400w")');
+
+    console.info(html);
+  });
 });
 
 describe('html-classnames', () => {
   it('adds classes and slug ids to headings', () => {
     const html = processWithHtmlClassnames('# Big Title!\n\n## A Heading, With "Quoted" Text!\n\n### Deep & slow');
 
-    assert.match(html, /<h1 class="base-text-default text-3xl font-bold my-6 pb-2 border-b border-solid border-\[#0000001a\] dark:border-\[#ffffff5a\]" id="big-title">\s*Big Title!\s*<\/h1>/);
+    assert.match(
+      html,
+      /<h1 class="base-text-default text-3xl font-bold my-6 pb-2 border-b border-solid border-\[#0000001a\] dark:border-\[#ffffff5a\]" id="big-title">\s*Big Title!\s*<\/h1>/
+    );
     assert.match(html, /<h2 class="base-text-default text-2xl font-bold my-6[^"]*" id="a-heading-with-quoted-text">/);
     assert.match(html, /<h3 class="base-text-default text-xl font-medium my-6[^"]*" id="deep--slow">/);
   });
@@ -299,7 +314,10 @@ describe('html-classnames', () => {
   it('styles links to the current domain without an icon or target', () => {
     const html = processWithHtmlClassnames('Back to [my site](https://imballinst.dev/blog) or [a local page](/blog).');
 
-    assert.match(html, /<a href="https:\/\/imballinst\.dev\/blog" class="text-teal-600 dark:text-teal-300 hover:underline break-words inline">my site<\/a>/);
+    assert.match(
+      html,
+      /<a href="https:\/\/imballinst\.dev\/blog" class="text-teal-600 dark:text-teal-300 hover:underline break-words inline">my site<\/a>/
+    );
     assert.match(html, /<a href="\/blog" class="text-teal-600 dark:text-teal-300 hover:underline break-words inline">a local page<\/a>/);
     assert.equal(html.includes('target="_blank"'), false);
     assert.equal(html.includes('<svg'), false);
@@ -320,7 +338,9 @@ describe('html-classnames', () => {
   it('anchors links with code text and strips the extension, without extra backticks', () => {
     const html = processWithHtmlClassnames('Run [`npm i`](./docs/getting-started.md).');
 
-    const match = html.match(/<a href="\.\/docs\/getting-started" class="text-teal-600 dark:text-teal-300 hover:underline break-words inline"><code>npm i<\/code><\/a>/);
+    const match = html.match(
+      /<a href="\.\/docs\/getting-started" class="text-teal-600 dark:text-teal-300 hover:underline break-words inline"><code>npm i<\/code><\/a>/
+    );
 
     assert.ok(match);
   });
@@ -383,14 +403,20 @@ describe('html-classnames', () => {
     htmlClassnamesPlugin()(tree);
 
     assert.equal(tree.children[1].type, 'html');
-    assert.match(tree.children[1].value, /<ul class="base-text-default list-disc pl-4 border-b border-dotted border-\[#0000001a\] dark:border-\[#ffffff1a\] mb-8">/);
-    assert.match(tree.children[1].value, /<a href="#a-heading" class="text-teal-600 dark:text-teal-300 hover:underline break-words inline">A heading<\/a>/);
+    assert.match(tree.children[1].value, /<ul class="base-text-default list-disc pl-4 mb-8">/);
+    assert.match(
+      tree.children[1].value,
+      /<a href="#a-heading" class="text-teal-600 dark:text-teal-300 hover:underline break-words inline">A heading<\/a>/
+    );
   });
 
   it('renders single-paragraph blockquotes without an inner paragraph class', () => {
     const html = processWithHtmlClassnames('> Single line quote');
 
-    assert.match(html, /<blockquote class="base-text-variant-gray italic p-4 border-l-5 border-gray-200 dark:border-gray-600"><p>Single line quote<\/p><\/blockquote>/);
+    assert.match(
+      html,
+      /<blockquote class="base-text-variant-gray italic p-4 border-l-5 border-gray-200 dark:border-gray-600"><p>Single line quote<\/p><\/blockquote>/
+    );
   });
 
   it('renders multi-paragraph blockquotes with the blockquote paragraph class', () => {
@@ -447,7 +473,10 @@ describe('html-classnames', () => {
     htmlClassnamesPlugin()(tree);
 
     assert.equal(tree.children[0].type, 'html');
-    assert.match(tree.children[0].value, /^<div class="overflow-x-auto my-4"><table class="base-text-variant-gray border-gray-200 dark:border-gray-600 w-full text-sm">/);
+    assert.match(
+      tree.children[0].value,
+      /^<div class="overflow-x-auto my-4"><table class="base-text-variant-gray border-gray-200 dark:border-gray-600 w-full text-sm">/
+    );
     assert.match(tree.children[0].value, /<tr class="font-bold border-b-2 border-gray-200 dark:border-gray-600">/);
     assert.match(tree.children[0].value, /<th class="p-2">/);
     assert.match(tree.children[0].value, /<td class="p-2">/);
@@ -472,7 +501,10 @@ describe('full remark pipeline (as configured in astro.config.ts)', () => {
 
     // The TOC list links to the document headings, styled with the TOC styling,
     // and the "Leading content" placeholder is fully cleaned up.
-    assert.match(html, /<ul class="base-text-default list-disc pl-4 border-b border-dotted border-\[#0000001a\] dark:border-\[#ffffff1a\] mb-8">/);
+    assert.match(
+      html,
+      /<ul class="base-text-default list-disc pl-4 border-b border-dotted border-\[#0000001a\] dark:border-\[#ffffff1a\] mb-8">/
+    );
     assert.match(html, /<a href="#first-heading"[^>]*>First heading<\/a>/);
     assert.match(html, /<a href="#second-heading"[^>]*>Second heading<\/a>/);
     assert.equal(html.includes('Leading content'), false);
